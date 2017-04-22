@@ -1,0 +1,6 @@
+log.htm
+*.log
+wc-logs
+.htaccess
+*.map
+src/wp-content/uploads/cache/
