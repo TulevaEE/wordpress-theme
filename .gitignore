@@ -3,4 +3,6 @@ log.htm
 wc-logs
 .htaccess
 *.map
+*.sublime-project
+*.sublime-workspace
 src/wp-content/uploads/cache/
