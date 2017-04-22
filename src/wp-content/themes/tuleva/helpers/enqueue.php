@@ -16,6 +16,14 @@ class ThemeEnqueue {
         $assets = [
             // CSS assets
             [
+                'handle' => 'font-style',
+                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,700,700i&amp;subset=latin-ext',
+                'deps' => 'normalize',
+                'ver' => '1.0.0',
+                'media' => 'all',
+                'enqueue' => true
+            ],
+            [
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
