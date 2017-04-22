@@ -1,0 +1,135 @@
+// Breakpoints map
+// @type Map
+$breakpoints: (
+    'mobile': (max-width: $screen-xs-max),
+    'not-mobile': (min-width: $screen-sm-min),
+    'tablet': (min-width: $screen-sm-min, max-width: $screen-sm-max),
+    'desktop': (min-width: $screen-md-min, max-width: $screen-md-max),
+    'desktop-lg': (min-width: $screen-lg-min, max-width: $screen-lg-max),
+    'desktop-xl': (min-width: $screen-xl-min),
+);
+
+// Media query merger
+// Create a single media condition out of a map of queries
+// @param {Map} $queries - Map of media queries
+@mixin media($queries) {
+    @if length($queries) == 0 {
+        @content;
+    }
+
+    @else {
+        $first-key: nth(map-keys($queries), 1);
+        @media ($first-key: map-get($queries, $first-key)) {
+            $queries: map-remove($queries, $first-key);
+            @include media($queries) {
+                @content;
+            }
+        }
+    }
+}
+
+// Responsive breakpoint manager
+// @param {String} $breakpoint - Breakpoint
+// @requires $breakpoints
+@mixin mq($breakpoint) {
+    // Get the query map for $breakpoints map
+    $queries: map-get($breakpoints, $breakpoint);
+
+    // If there is no query called $breakpoint in map, throw an error
+    @if not $queries {
+        @error "No value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+
+    // Include the media mixin with $queries
+    @include media($queries) {
+        @content;
+    }
+}
+
+// Usage:
+// .foo123 {
+//  // @TODO: enable passing multiple values ex: mq('mobile', 'tablet')
+//     @include mq('tablet') {
+//         color: red;
+//     }
+// }
+
+
+/**
+ * Responsive mixins
+ * Usage:
+ * p {
+ *   font-size: 16px;
+ *
+ *   @include tablet {
+ *     font-size: 18px;
+ *   }
+ *
+ *   @include desktop {
+ *     font-size: 20px;
+ *   }
+ * }
+ */
+@mixin mobile {
+    // mobile < 768px
+    @media (max-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+
+@mixin not-mobile {
+    // not-mobile > 768px
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    // 768px < tablet < 992px
+    @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    // 992px < desktop < 1223px
+    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+    // 1224px < desktop-lg < 1599px
+    @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    // 1600px < desktop-xl
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin mobile-and-tablet {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@mixin not-mobile-or-tablet {
+    @media (min-width: #{$screen-sm-max} + 1) {
+        @content;
+    }
+}
+
+/**
+ * Retina mixin
+ */
+@mixin retina {
+    @media (min-resolution: 120dpi) {
+            @content;
+    }
+}
