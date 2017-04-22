@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
     util = require('gulp-util'),
+    exit = require('gulp-exit'),
     cssDir = 'css',
     sassSrc = 'sass/*.scss',
     error = function(err) {
@@ -29,15 +30,14 @@ var gulp = require('gulp'),
                 cascade: false
             }))
             .pipe(gulpif(!isCompressed, sourcemaps.write('.')))
-            .pipe(gulp.dest(cssDir));
+            .pipe(gulp.dest(cssDir))
+            .pipe(exit());
     }
 
 gulp.task('default', function() {
   return buildCss(false);
 });
 
-gulp.task('production', function() {
+gulp.task('pre-commit', function() {
   return buildCss(true);
 });
-
-gulp.task('pre-commit', ['production']);
