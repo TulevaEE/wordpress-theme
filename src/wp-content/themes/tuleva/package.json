@@ -1,0 +1,14 @@
+{
+  "name": "tuleva",
+  "version": "0.0.1",
+  "description": "Tuleva website",
+  "author": "Carl Rannaberg",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
