@@ -19,7 +19,7 @@ var gulp = require('gulp'),
     },
     buildCss = function(isCompressed) {
         return gulp.src(sassSrc)
-            .pipe(watch(sassSrc))
+            .pipe(gulpif(!isCompressed, watch(sassSrc)))
             .pipe(gulpif(!isCompressed, sourcemaps.init()))
             .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'normal' })
                             .on('error', error))
