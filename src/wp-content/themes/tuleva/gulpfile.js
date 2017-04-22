@@ -38,6 +38,6 @@ gulp.task('default', function() {
   return buildCss(false);
 });
 
-gulp.task('pre-commit', function() {
+gulp.task('production', function() {
   return buildCss(true);
 });
