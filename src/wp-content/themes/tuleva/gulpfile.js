@@ -20,7 +20,6 @@ var gulp = require('gulp'),
     },
     buildCss = function(isCompressed) {
         return gulp.src(sassSrc)
-            .pipe(gulpif(!isCompressed, watch(sassSrc)))
             .pipe(gulpif(!isCompressed, sourcemaps.init()))
             .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'normal' })
                             .on('error', error))
@@ -31,13 +30,19 @@ var gulp = require('gulp'),
             }))
             .pipe(gulpif(!isCompressed, sourcemaps.write('.')))
             .pipe(gulp.dest(cssDir))
-            .pipe(exit());
-    }
-
-gulp.task('default', function() {
-  return buildCss(false);
-});
+            .pipe(gulpif(isCompressed, exit()));
+    };
 
 gulp.task('production', function() {
   return buildCss(true);
+});
+
+gulp.task('default', function() {
+    return watch(sassSrc, function() {
+        return buildCss(false);
+    })
+    .on('change', function(path) {
+        util.log('Built after file saved: ' + path);
+    })
+    .on('error', error);
 });
