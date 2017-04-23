@@ -2920,6 +2920,10 @@ hr {
     font-weight: bold;
     font-size: 20px; } }
 
+@media (max-width: 767px) {
+  .navbar-brand {
+    height: 96px; } }
+
 .navbar-brand > img {
   height: 100%; }
 
@@ -2954,5 +2958,79 @@ hr {
       font-size: 20px;
       margin: 16px 0;
       padding: 8px 16px; } }
+
+.navbar-toggle {
+  position: relative;
+  width: 24px;
+  height: 18px; }
+  @media (max-width: 767px) {
+    .navbar-toggle {
+      margin-top: 50px;
+      margin-bottom: 32px; } }
+  .navbar-toggle .burger-icon {
+    background: #002F63;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    bottom: 40%;
+    width: 24px;
+    height: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .navbar-toggle .burger-icon:before {
+      content: ' ';
+      background: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 3px;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      transition: top 0.5s ease, -webkit-transform 0.3s ease 0.3s;
+      transition: top 0.5s ease, transform 0.3s ease 0.3s;
+      transition: top 0.5s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+    .navbar-toggle .burger-icon:after {
+      content: ' ';
+      background: inherit;
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      transition: all 0.5s ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+
+.navbar-toggle.collapsed .burger-icon {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .navbar-toggle.collapsed .burger-icon:before {
+    top: -8px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: top 0.1s ease; }
+  .navbar-toggle.collapsed .burger-icon:after {
+    bottom: -8px;
+    left: 0;
+    opacity: 1;
+    filter: alpha(opacity=1);
+    width: 24px;
+    height: 3px;
+    transition: bottom 0.1s ease; }
+
+.navbar-default .navbar-toggle {
+  border: none; }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent; }
 
 /*# sourceMappingURL=main.css.map */

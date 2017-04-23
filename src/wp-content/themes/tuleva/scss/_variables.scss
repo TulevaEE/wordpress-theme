@@ -18,6 +18,7 @@ $text-hint: rgba(48, 48, 48, 0.32);
 $text-secondary-heading: #2a2c2e;
 
 $blue: #0078ff;
+$navy-blue: #002F63;
 $green: #51c26c;
 $gray-mid: #d8d8d8;
 $gray-washed: #fafafa;
@@ -76,4 +77,5 @@ $navbar-height: 116px !default;
 $navbar-padding-vertical: 25px !default;
 $navbar-default-bg: transparent !default;
 $navbar-default-border: transparent !default;
-$navbar-default-link-color: #002F63 !default;
+$navbar-default-link-color: $navy-blue !default;
+$navbar-toggle-color: $navy-blue !default;

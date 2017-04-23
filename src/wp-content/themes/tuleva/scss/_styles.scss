@@ -8,8 +8,14 @@
     }
 }
 
-.navbar-brand > img {
-    height: 100%;
+.navbar-brand {
+    @include mobile {
+        height: 96px;
+    }
+
+    & > img {
+        height: 100%;
+    }
 }
 
 .navbar-nav {
@@ -54,5 +60,80 @@
             margin: 16px 0;
             padding: 8px 16px;
         }
+    }
+}
+
+.navbar-toggle {
+    position: relative;
+    @include size(24px, 18px);
+
+    @include mobile {
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+
+    .burger-icon {
+        background: $navbar-toggle-color;
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+        bottom: 40%;
+        @include size(24px, 3px);
+        @include rotate(-45deg);
+        @include transition(transform 0.5s ease);
+        @include backface-visibility(hidden);
+
+        &:before {
+            content: ' ';
+            background: inherit;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include size(24px, 3px);
+            @include rotate(90deg);
+            @include transition(top 0.5s ease, transform 0.3s ease 0.3s);
+            @include backface-visibility(hidden);
+        }
+        &:after {
+            content: ' ';
+            background: inherit;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            @include transition(all 0.5s ease);
+            @include backface-visibility(hidden);
+        }
+    }
+}
+
+.navbar-toggle.collapsed {
+    .burger-icon {
+        @include rotate(0deg);
+        @include transition(all 0.5s ease);
+        @include backface-visibility(hidden);
+
+        &:before {
+            top: -8px;
+            @include rotate(0deg);
+            @include transition(top 0.1s ease);
+        }
+        &:after {
+            bottom: -8px;
+            left: 0;
+            opacity: 1;
+            filter: alpha(opacity=1);
+            @include size(24px, 3px);
+            @include transition(bottom 0.1s ease);
+        }
+    }
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
     }
 }
