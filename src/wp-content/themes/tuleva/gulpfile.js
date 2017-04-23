@@ -18,28 +18,29 @@ var gulp = require('gulp'),
             this.emit('end');
         }
     },
+    logFinishedTask = function(name) {
+        return function() {
+            util.log(name + ' task finished.');
+        };
+    },
     buildCss = function(isCompressed) {
         return gulp.src(sassSrc)
             .pipe(gulpif(!isCompressed, sourcemaps.init()))
             .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'normal' })
-                            .on('end', function() {
-                                util.log('SASS task finished.');
-                            })
+                            .on('end', logFinishedTask('SASS'))
                             .on('error', error))
             .pipe(gulpif(isCompressed, cleanCSS({level: 2})
-                            .on('end', function() {
-                                util.log('CleanCSS task finished.');
-                            }).on('error', error)))
+                            .on('end', logFinishedTask('CleanCSS'))
+                            .on('error', error)))
             .pipe(autoprefixer({
                     browsers: ['> 1%', 'last 2 versions', 'safari >= 7'],
                     cascade: false
-                }).on('end', function() {
-                    util.log('Autoprefixer task finished.');
-            }).on('error', error))
+                })
+                .on('end', logFinishedTask('Autoprefixer'))
+                .on('error', error))
             .pipe(gulpif(!isCompressed, sourcemaps.write('.')
-                            .on('end', function() {
-                                    util.log('Sourcemaps task finished.');
-                            }).on('error', error)))
+                            .on('end', logFinishedTask('Sourcemaps'))
+                            .on('error', error)))
             .pipe(gulp.dest(cssDir))
             .pipe(gulpif(isCompressed, exit()));
     };
