@@ -68,6 +68,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 $screen-lg-max:              ($screen-xl-min - 1) !default;
 
 // Navbar
-$navbar-height: 66px;
+$navbar-height: 116px;
+$navbar-padding-vertical: 25px;
 $navbar-default-bg: transparent;
 $navbar-default-border: transparent;

@@ -22,13 +22,24 @@ var gulp = require('gulp'),
         return gulp.src(sassSrc)
             .pipe(gulpif(!isCompressed, sourcemaps.init()))
             .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'normal' })
+                            .on('end', function() {
+                                util.log('SASS task finished.');
+                            })
                             .on('error', error))
-            .pipe(gulpif(isCompressed, cleanCSS({level: 2})))
+            .pipe(gulpif(isCompressed, cleanCSS({level: 2})
+                            .on('end', function() {
+                                util.log('CleanCSS task finished.');
+                            }).on('error', error)))
             .pipe(autoprefixer({
-                browsers: ['> 1%', 'last 2 versions', 'safari >= 7'],
-                cascade: false
-            }))
-            .pipe(gulpif(!isCompressed, sourcemaps.write('.')))
+                    browsers: ['> 1%', 'last 2 versions', 'safari >= 7'],
+                    cascade: false
+                }).on('end', function() {
+                    util.log('Autoprefixer task finished.');
+            }).on('error', error))
+            .pipe(gulpif(!isCompressed, sourcemaps.write('.')
+                            .on('end', function() {
+                                    util.log('Sourcemaps task finished.');
+                            }).on('error', error)))
             .pipe(gulp.dest(cssDir))
             .pipe(gulpif(isCompressed, exit()));
     };
@@ -42,7 +53,7 @@ gulp.task('default', function() {
         return buildCss(false);
     })
     .on('change', function(path) {
-        util.log('Built after file saved: ' + path);
+        util.log('Changed: ' + path);
     })
     .on('error', error);
 });
