@@ -3078,11 +3078,24 @@ hr {
   text-align: center; }
 
 .page-container .page-title {
-  margin: 60px 0 80px; }
+  margin: 60px 0 50px; }
 
-.content h1,
-.content h2,
-.content h3 {
-  color: #303030; }
+.content {
+  padding-top: 30px; }
+  .content h1,
+  .content h2,
+  .content h3 {
+    color: #303030; }
+
+.contacts-block {
+  padding: 100px 0; }
+  .contacts-block__item {
+    text-align: center; }
+  .contacts-block__image {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px; }
+  .contacts-block__row {
+    margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */
