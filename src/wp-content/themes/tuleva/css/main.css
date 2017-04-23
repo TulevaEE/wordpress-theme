@@ -2847,19 +2847,22 @@ button {
   font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
 
 h1, .h1 {
-  font-size: 2em;
-  font-weight: 400;
-  color: #303030; }
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #002F63; }
 
 h2, .h2 {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-size: 1.5em;
   font-weight: 500;
-  color: #303030; }
+  color: #002F63; }
 
 h3, .h3 {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-size: 1.25em;
   font-weight: 500;
-  color: #303030; }
+  color: #002F63; }
 
 p, .p {
   line-height: 1.44;
@@ -3029,5 +3032,18 @@ hr {
   border: none; }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: transparent; }
+
+.content h1,
+.content h2,
+.content h3 {
+  color: #303030; }
+
+.page-container h1, .page-container .h1,
+.page-container h2, .page-container .h2,
+.page-container h3, .page-container .h3 {
+  text-align: center; }
+
+.page-container .page-title {
+  margin: 60px 0 80px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,81 +9,84 @@ button {
 }
 
 h1, .h1 {
-  font-size: 2em;
-  font-weight: 400;
-  color: $text-primary;
+    font-family: $font-family-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: $heading-primary;
 }
 
 h2, .h2 {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: $text-primary;
+    font-family: $font-family-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $heading-primary;
 }
 
 h3, .h3 {
-  font-size: 1.25em;
-  font-weight: 500;
-  color: $text-primary;
+    font-family: $font-family-serif;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: $heading-primary;
 }
 
 p, .p {
-  line-height: 1.44;
-  font-size: 1em;
-  font-weight: normal;
-  color: $text-primary;
+    line-height: 1.44;
+    font-size: 1em;
+    font-weight: normal;
+    color: $text-primary;
 
-  & .lead {
-    font-size: 1.25em;
-  }
+    & .lead {
+        font-size: 1.25em;
+    }
 }
 
 small {
-  font-size: 0.875em;
-  color: $text-primary;
+    font-size: 0.875em;
+    color: $text-primary;
 }
 
 .text-regular {
-  font-weight: medium;
+    font-weight: medium;
 }
 
 .form-control::placeholder {
-  color: $text-hint;
+    color: $text-hint;
 }
 
 .text-muted {
-  color: $text-secondary;
+    color: $text-secondary;
 }
 
 .text-bold {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .brand-logo {
-  max-width: 150px;
+    max-width: 150px;
 }
 
 .control-code {
-  font-size: 5em;
-  font-weight: bold;
+    font-size: 5em;
+    font-weight: bold;
 }
 
 hr {
-  border-color: $gray-mid;
-  background-color: white;
-  margin: 0;
-  padding: 0;
+    border-color: $gray-mid;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .custom-select {
-  width: 100%;
+    width: 100%;
 }
 
 .alert {
-  border: solid 2px $gray-mid;
-  border-radius: 8px;
+    border: solid 2px $gray-mid;
+    border-radius: 8px;
 
-  &-success {
-    background-color: rgba(11, 250, 67, 0.08);
-    border-color: $green;
-  }
+    &-success {
+        background-color: rgba(11, 250, 67, 0.08);
+        border-color: $green;
+    }
 }
