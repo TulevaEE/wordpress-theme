@@ -34,6 +34,7 @@ p, .p {
     font-size: 1em;
     font-weight: normal;
     color: $text-primary;
+    margin: 0 0 2em;
 
     & .lead {
         font-size: 1.25em;
@@ -59,6 +60,12 @@ small {
 
 .text-bold {
     font-weight: 600;
+}
+
+a:hover,
+a:focus {
+    color: $brand-primary;
+    text-decoration: none;
 }
 
 .brand-logo {
