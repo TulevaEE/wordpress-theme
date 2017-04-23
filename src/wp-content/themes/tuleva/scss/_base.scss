@@ -1,0 +1,89 @@
+// Base styles
+
+body {
+  font-size: $font-size-base;
+}
+
+button {
+  font-family: $font-family-sans-serif;
+}
+
+h1, .h1 {
+  font-size: 2em;
+  font-weight: 400;
+  color: $text-primary;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+h3, .h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+p, .p {
+  line-height: 1.44;
+  font-size: 1em;
+  font-weight: normal;
+  color: $text-primary;
+
+  & .lead {
+    font-size: 1.25em;
+  }
+}
+
+small {
+  font-size: 0.875em;
+  color: $text-primary;
+}
+
+.text-regular {
+  font-weight: medium;
+}
+
+.form-control::placeholder {
+  color: $text-hint;
+}
+
+.text-muted {
+  color: $text-secondary;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.brand-logo {
+  max-width: 150px;
+}
+
+.control-code {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+hr {
+  border-color: $gray-mid;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-select {
+  width: 100%;
+}
+
+.alert {
+  border: solid 2px $gray-mid;
+  border-radius: 8px;
+
+  &-success {
+    background-color: rgba(11, 250, 67, 0.08);
+    border-color: $green;
+  }
+}

@@ -11,21 +11,34 @@
 
 <header class="header">
     <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <img alt="Tuleva" src="<?php echo get_template_directory_uri() ?>/img/tuleva-logo.svg">
-          </a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php bloginfo('url') ?>">
+                    <img class="brand-logo" alt="Tuleva" src="<?php echo get_template_directory_uri() ?>/img/tuleva-logo.svg">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="header-menu">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Küsimused ja vastused</a></li>
+                        <li><a href="#">Asutajaliikmed</a></li>
+                        <li><a href="#">Fondid</a></li>
+                        <li><a href="#">Blogi</a></li>
+                        <li><a href="#">Kontaktid</a></li>
+                        <li><a href="#" class="nav-lang">In English</a></li>
+                    </ul>
+                    <div class="navbar-buttons">
+                        <a href="#" class="btn btn-default navbar-btn">Logi sisse</a>
+                        <a href="#" class="btn btn-primary navbar-btn">Astu liikmeks</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
-
-    <!-- <a href="#" class="header__logo">Tuleva</a>
-    <nav class="header__nav">
-        <ul class="menu">
-            <li class="menu__item">
-                <a href="#">Küsimused ja vastused</a>
-            </li>
-        </ul>
-    </nav> -->
 </header>

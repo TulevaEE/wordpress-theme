@@ -6,6 +6,7 @@ $font-family-sans-serif: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-ser
 $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
+$font-size-base: 16px !default;
 
 /**
  * Colors
@@ -29,6 +30,9 @@ $very-light-gray: rgba(48, 48, 48, 0.32);
 $brand-primary: $blue !default;
 $brand-success: $green !default;
 $body-color: $text-primary !default;
+
+// Buttons
+$btn-font-weight: 500 !default;
 
 //== Media queries breakpoints
 //
@@ -68,7 +72,8 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 $screen-lg-max:              ($screen-xl-min - 1) !default;
 
 // Navbar
-$navbar-height: 116px;
-$navbar-padding-vertical: 25px;
-$navbar-default-bg: transparent;
-$navbar-default-border: transparent;
+$navbar-height: 116px !default;
+$navbar-padding-vertical: 25px !default;
+$navbar-default-bg: transparent !default;
+$navbar-default-border: transparent !default;
+$navbar-default-link-color: #002F63 !default;

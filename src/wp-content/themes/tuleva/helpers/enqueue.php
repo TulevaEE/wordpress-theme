@@ -17,7 +17,7 @@ class ThemeEnqueue {
             // CSS assets
             [
                 'handle' => 'font-style',
-                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,700,700i&amp;subset=latin-ext',
+                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i&amp;subset=latin-ext',
                 'deps' => 'normalize',
                 'ver' => '1.0.0',
                 'media' => 'all',
@@ -36,6 +36,14 @@ class ThemeEnqueue {
                 'handle' => 'jquery',
                 'src' => $js_path . 'vendor/jquery-1.12.4.min.js',
                 'ver' => '1.12.4',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'bootstrap',
+                'src' => $js_path . 'vendor/bootstrap.min.js',
+                'deps' => 'jquery',
+                'ver' => '3.3.7',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
