@@ -3095,6 +3095,9 @@ hr {
     border-radius: 50%;
     width: 160px;
     height: 160px; }
+  .contacts-block__title {
+    margin-top: 42px;
+    margin-bottom: 18px; }
   .contacts-block__row {
     margin-bottom: 10px; }
 

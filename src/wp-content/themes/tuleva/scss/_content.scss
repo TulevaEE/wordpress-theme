@@ -33,6 +33,11 @@
         @include square(160px);
     }
 
+    &__title {
+        margin-top: 42px;
+        margin-bottom: 18px;
+    }
+
     &__row {
         margin-bottom: 10px;
     }
