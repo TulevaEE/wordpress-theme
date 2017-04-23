@@ -1,3 +1,15 @@
+.page-container {
+    h1, .h1,
+    h2, .h2,
+    h3, .h3 {
+        text-align: center;
+    }
+
+    .page-title {
+        margin: 60px 0 80px;
+    }
+}
+
 .content {
     h1,
     h2,

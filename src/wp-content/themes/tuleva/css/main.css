@@ -3033,11 +3033,6 @@ hr {
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: transparent; }
 
-.content h1,
-.content h2,
-.content h3 {
-  color: #303030; }
-
 .page-container h1, .page-container .h1,
 .page-container h2, .page-container .h2,
 .page-container h3, .page-container .h3 {
@@ -3045,5 +3040,10 @@ hr {
 
 .page-container .page-title {
   margin: 60px 0 80px; }
+
+.content h1,
+.content h2,
+.content h3 {
+  color: #303030; }
 
 /*# sourceMappingURL=main.css.map */
