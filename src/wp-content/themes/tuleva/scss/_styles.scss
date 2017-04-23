@@ -10,7 +10,8 @@
 
 .navbar-brand {
     @include mobile {
-        height: 96px;
+        height: 72px;
+        padding: 13px 15px;
     }
 
     & > img {
@@ -66,11 +67,6 @@
 .navbar-toggle {
     position: relative;
     @include size(24px, 18px);
-
-    @include mobile {
-        margin-top: 50px;
-        margin-bottom: 32px;
-    }
 
     .burger-icon {
         background: $navbar-toggle-color;

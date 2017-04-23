@@ -2922,7 +2922,8 @@ hr {
 
 @media (max-width: 767px) {
   .navbar-brand {
-    height: 96px; } }
+    height: 72px;
+    padding: 13px 15px; } }
 
 .navbar-brand > img {
   height: 100%; }
@@ -2963,10 +2964,6 @@ hr {
   position: relative;
   width: 24px;
   height: 18px; }
-  @media (max-width: 767px) {
-    .navbar-toggle {
-      margin-top: 50px;
-      margin-bottom: 32px; } }
   .navbar-toggle .burger-icon {
     background: #002F63;
     position: absolute;
