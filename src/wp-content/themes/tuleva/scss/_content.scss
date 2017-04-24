@@ -1,3 +1,15 @@
+.row-spacing {
+    margin: 100px 0;
+}
+
+.row-spacing-top {
+    margin: 100px 0 0;
+}
+
+.row-spacing-bottom {
+    margin: 0 0 100px;
+}
+
 .page-title {
     margin: 60px 0 50px;
     text-align: center;
@@ -10,27 +22,5 @@
     h2,
     h3 {
         color: $text-primary;
-    }
-}
-
-.contacts-block {
-    padding: 100px 0;
-
-    &__item {
-        text-align: center;
-    }
-
-    &__image {
-        border-radius: 50%;
-        @include square(160px);
-    }
-
-    &__title {
-        margin-top: 42px;
-        margin-bottom: 18px;
-    }
-
-    &__row {
-        margin-bottom: 10px;
     }
 }
