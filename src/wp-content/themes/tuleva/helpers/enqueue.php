@@ -40,6 +40,14 @@ class ThemeEnqueue {
                 'enqueue' => true
             ],
             [
+                'handle' => 'equalize',
+                'src' => $js_path . 'vendor/equalize.min.js',
+                'deps' => 'jquery',
+                'ver' => '1.0.2',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
                 'handle' => 'bootstrap',
                 'src' => $js_path . 'vendor/bootstrap.min.js',
                 'deps' => 'jquery',

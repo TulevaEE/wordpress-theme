@@ -1,13 +1,6 @@
-.page-container {
-    h1, .h1,
-    h2, .h2,
-    h3, .h3 {
-        text-align: center;
-    }
-
-    .page-title {
-        margin: 60px 0 50px;
-    }
+.page-title {
+    margin: 60px 0 50px;
+    text-align: center;
 }
 
 .content {
@@ -19,7 +12,6 @@
         color: $text-primary;
     }
 }
-
 
 .contacts-block {
     padding: 100px 0;

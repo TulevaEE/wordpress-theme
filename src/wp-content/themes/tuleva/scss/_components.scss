@@ -1,0 +1,28 @@
+.text-box {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 30px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.12);
+    border-radius: 4px;
+    color: #373A3C;
+
+    &__title {
+        font-family: $font-family-sans-serif;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    ul {
+        padding-left: 1.2em;
+
+        li {
+            margin-bottom: 1em;
+        }
+    }
+
+    p {
+        line-height: 1.5;
+        margin-bottom: 1em;
+    }
+}

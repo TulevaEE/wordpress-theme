@@ -13,20 +13,31 @@ h1, .h1 {
     font-size: 2.5em;
     font-weight: bold;
     color: $heading-primary;
+    line-height: 1.5;
+}
+
+.h1-sm {
+    font-size: 2.25em;
+}
+
+.h1-bottom-margin {
+    margin-bottom: 96px;
 }
 
 h2, .h2 {
     font-family: $font-family-serif;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: bold;
     color: $heading-primary;
+    line-height: 1.5;
 }
 
 h3, .h3 {
     font-family: $font-family-serif;
     font-size: 1.25em;
-    font-weight: 500;
+    font-weight: bold;
     color: $heading-primary;
+    line-height: 1.5;
 }
 
 p, .p {
@@ -58,8 +69,16 @@ small {
     color: $text-secondary;
 }
 
+.text-normal {
+    font-weight: normal;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
 .text-bold {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 a:hover,

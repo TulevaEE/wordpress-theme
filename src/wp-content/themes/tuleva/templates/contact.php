@@ -6,7 +6,7 @@
                     <?php if (get_the_title()) { ?>
                         <h1 class="page-title"><?php the_title(); ?></h1>
                     <?php } ?>
-                    <h2>Tuleva üldine kontakttelefon: +372 644 5100</h2>
+                    <h2 class="text-center text-normal">Tuleva üldine kontakttelefon: +372 644 5100</h2>
                     <div class="contacts-block">
                         <div class="col-md-4 contacts-block__item">
                             <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="Tõnu Pekk">
