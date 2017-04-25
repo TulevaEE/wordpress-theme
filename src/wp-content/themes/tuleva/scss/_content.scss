@@ -11,6 +11,11 @@
     h3 {
         color: $text-primary;
     }
+
+    h2,
+    h3 {
+        margin-bottom: $line-height-computed;
+    }
 }
 
 .single-post {
@@ -50,12 +55,30 @@
         }
     }
 
-    .content {
-        font-size: 1.2em;
-        padding-top: 0;
+    .post-social {
+        margin-top: 7px;
 
-        p:first-child {
-            font-size: 1.25em;
+        img {
+            margin-bottom: 16px;
+        }
+    }
+
+    .content {
+        padding-top: 0;
+        border-bottom: 4px solid $border-gray;
+        margin-bottom: 64px;
+
+        p {
+            font-size: 1.2em;
+
+            &:first-child {
+                font-size: 1.5em;
+            }
+        }
+
+        ul,
+        ol {
+            font-size: 1.2em;
         }
     }
 }

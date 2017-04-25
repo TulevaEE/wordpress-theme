@@ -103,6 +103,37 @@
     }
 }
 
+.recent-articles {
+    margin-bottom: 60px;
+
+    &__heading {
+        color: $brand-primary;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            font-size: 1.25em;
+            border-top: 1px solid $border-gray;
+            padding: 1.5em 0;
+
+            &:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            a {
+                color: $navy-blue;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
 .media {
     // color: #303030;
 
