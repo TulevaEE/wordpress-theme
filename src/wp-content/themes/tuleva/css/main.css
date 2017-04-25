@@ -3103,11 +3103,14 @@ hr {
 .row-spacing-bottom {
   margin: 0 0 100px; }
 
-@media (max-width: 767px) {
-  .header .navbar {
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px; } }
+.header .navbar {
+  margin-bottom: 0;
+  border: none; }
+  @media (max-width: 767px) {
+    .header .navbar {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px; } }
 
 @media (max-width: 767px) {
   .navbar-brand {
@@ -3118,7 +3121,7 @@ hr {
   height: 100%; }
 
 .navbar-nav {
-  padding: 23px 0; }
+  padding: 23px 0 0; }
   @media (min-width: 768px) {
     .navbar-nav {
       margin-top: 20px; }
@@ -3140,6 +3143,7 @@ hr {
 
 .navbar-buttons .navbar-btn {
   margin-left: 12px;
+  margin-bottom: 0;
   padding: 4px 16px;
   font-size: 16px; }
   @media (max-width: 767px) {

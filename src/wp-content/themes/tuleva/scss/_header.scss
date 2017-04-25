@@ -1,4 +1,7 @@
 .header .navbar {
+    margin-bottom: 0;
+    border: none;
+
     @include mobile {
         text-align: center;
         font-weight: bold;
@@ -18,7 +21,7 @@
 }
 
 .navbar-nav {
-    padding: 23px 0;
+    padding: 23px 0 0;
 
     @include not-mobile {
         margin-top: 20px;
@@ -50,6 +53,7 @@
 
     .navbar-btn {
         margin-left: 12px;
+        margin-bottom: 0;
         padding: 4px 16px;
         font-size: 16px;
 
