@@ -50,6 +50,27 @@
     }
 }
 
+.statistics-box {
+    text-align: center;
+    color: $navy-blue;
+    font-size: 1.25em;
+    padding: 100px 0;
+    margin-bottom: -2.25em;
+
+    &__row {
+        line-height: 1;
+        margin-bottom: 1.8em;
+    }
+
+    &__number {
+        background-image: linear-gradient($yellow, $yellow);
+        background-position: 0 0.7em;
+        background-repeat: repeat-x;
+        background-size: 8px 8px;
+        padding: 0 2px;
+    }
+}
+
 .media {
     // color: #303030;
 

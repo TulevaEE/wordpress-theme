@@ -20,6 +20,7 @@ $text-secondary-heading: #2a2c2e;
 
 $blue: #0078ff;
 $navy-blue: #002F63;
+$yellow: #FFCD00;
 $green: #51c26c;
 $gray-mid: #d8d8d8;
 $gray-washed: #fafafa;
@@ -34,9 +35,10 @@ $heading-primary: $navy-blue;
 $brand-primary: $blue !default;
 $brand-success: $green !default;
 $body-color: $text-primary !default;
+$body-color-alt: #ebf7ff !default;
 
 $body-gradient-start: #fff !default;
-$body-gradient-stop: #ebf7ff !default;
+$body-gradient-stop: $body-color-alt !default;
 
 // Buttons
 $btn-font-weight: 500 !default;

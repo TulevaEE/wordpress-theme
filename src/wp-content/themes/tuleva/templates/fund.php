@@ -1,6 +1,6 @@
 <div class="page-container">
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container">
-        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="row row-spacing-bottom">
             <div class="col-md-12">
                 <h1 class="h1-sm text-center">Tuleva Fondid AS on Eesti esimene ja ainus inimeste endi pensionifondi valitseja. Tee meie edulugu enda omaks!</h1>
@@ -62,6 +62,19 @@
                 </div>
             </div>
         </div>
-        <?php endwhile; ?>
     </div>
+    <div class="bg-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="statistics-box">
+                        <div class="statistics-box__row">Tuleva fondidega on liitunud <strong class="statistics-box__number">3398</strong> inimest.</div>
+                        <div class="statistics-box__row">Tuleva maailma aktsiaturu pensionifondi maht on <strong class="statistics-box__number">35 654 848</strong> eurot.</div>
+                        <div class="statistics-box__row">Tuleva maailma võlakirjade pensionifondi maht on <strong class="statistics-box__number">6 548 121</strong> eurot.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endwhile; ?>
 </div>

@@ -2990,6 +2990,9 @@ hr {
 .page-template-page_fund {
   background: linear-gradient(to bottom, #fff 130px, #ebf7ff 530px, #fff 530px); }
 
+.bg-alt {
+  background-color: #ebf7ff; }
+
 .contacts-block {
   padding: 100px 0; }
   .contacts-block__item {
@@ -3024,6 +3027,22 @@ hr {
     line-height: 1.5;
     margin-bottom: 1.5em; }
 
+.statistics-box {
+  text-align: center;
+  color: #002F63;
+  font-size: 1.25em;
+  padding: 100px 0;
+  margin-bottom: -2.25em; }
+  .statistics-box__row {
+    line-height: 1;
+    margin-bottom: 1.8em; }
+  .statistics-box__number {
+    background-image: linear-gradient(#FFCD00, #FFCD00);
+    background-position: 0 0.7em;
+    background-repeat: repeat-x;
+    background-size: 8px 8px;
+    padding: 0 2px; }
+
 .media .media-right {
   padding-left: 6em; }
 
@@ -3038,6 +3057,15 @@ hr {
   line-height: 1.5; }
   .media .media-body ul li {
     margin-bottom: 1em; }
+
+.row-spacing {
+  margin: 100px 0; }
+
+.row-spacing-top {
+  margin: 100px 0 0; }
+
+.row-spacing-bottom {
+  margin: 0 0 100px; }
 
 @media (max-width: 767px) {
   .header .navbar {
@@ -3187,15 +3215,6 @@ hr {
     padding: 16px 0; }
     .footer__social a {
       margin-right: 12px; }
-
-.row-spacing {
-  margin: 100px 0; }
-
-.row-spacing-top {
-  margin: 100px 0 0; }
-
-.row-spacing-bottom {
-  margin: 0 0 100px; }
 
 .page-title {
   margin: 60px 0 50px;
