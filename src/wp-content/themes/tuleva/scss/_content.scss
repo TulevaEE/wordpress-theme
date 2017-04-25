@@ -12,3 +12,25 @@
         color: $text-primary;
     }
 }
+
+.single-post {
+    .page-title {
+        line-height: 1.25;
+        margin: 30px 0;
+    }
+    .post-meta {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+        @extend .text-muted;
+    }
+
+    .content {
+        font-size: 1.2em;
+        padding-top: 0;
+
+        p:first-child {
+            font-size: 1.25em;
+        }
+    }
+}

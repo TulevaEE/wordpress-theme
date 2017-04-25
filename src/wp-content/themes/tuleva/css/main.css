@@ -467,7 +467,7 @@ mark,
 .text-capitalize {
   text-transform: capitalize; }
 
-.text-muted {
+.text-muted, .single-post .post-meta {
   color: #777777; }
 
 .text-primary {
@@ -2944,7 +2944,7 @@ small {
 .form-control::placeholder {
   color: rgba(48, 48, 48, 0.32); }
 
-.text-muted {
+.text-muted, .single-post .post-meta {
   color: rgba(48, 48, 48, 0.64); }
 
 .text-normal {
@@ -3265,5 +3265,20 @@ hr {
   .content h2,
   .content h3 {
     color: #303030; }
+
+.single-post .page-title {
+  line-height: 1.25;
+  margin: 30px 0; }
+
+.single-post .post-meta {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 70px; }
+
+.single-post .content {
+  font-size: 1.2em;
+  padding-top: 0; }
+  .single-post .content p:first-child {
+    font-size: 1.25em; }
 
 /*# sourceMappingURL=main.css.map */
