@@ -77,6 +77,32 @@
     }
 }
 
+.single-quote-box {
+    padding: 110px 0;
+    margin-bottom: -2em;
+    @extend .clearfix;
+
+    &__media {
+        text-align: center;
+        font-style: italic;
+    }
+
+    &__image {
+        margin-bottom: 10px;
+        border-radius: 50%;
+        @include square(192px);
+    }
+
+    blockquote {
+        font-family: $font-family-serif;
+        font-size: 1.25em;
+        line-height: 1.6;
+        border: none;
+        padding: 0;
+        margin: .6em 0 1.6em;
+    }
+}
+
 .media {
     // color: #303030;
 

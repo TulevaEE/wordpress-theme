@@ -1,6 +1,6 @@
 <div class="page-container">
     <div class="container">
-        <div class="row">
+        <div class="row row-spacing-bottom">
             <div class="col-md-12">
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     <?php if (get_the_title()) { ?>

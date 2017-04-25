@@ -132,5 +132,63 @@
             </div>
         </div>
     </div>
+    <div class="bg-alt">
+        <div class="container">
+            <div class="row">
+                <div class="single-quote-box">
+                    <div class="col-md-4 single-quote-box__media">
+                        <img class="single-quote-box__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" alt="Tõnu Pekk">
+                        <h3>Tõnu Pekk</h3>
+                    </div>
+                    <div class="col-md-8 single-quote-box__body">
+                        <blockquote>
+                            “Lähtun Vanguardi indeksifondide asutaja Jack Bogle’i põhimõttest: hoia pensionivara madalate kuludega fondis ja “ära piilu”, ehk keskendu lõppeesmärgile ja ära kuluta raha ega aega lühiajaliste kõikumiste pärast muretsemisele. Ootasin kaua, et keegi ka Eestis sellise fondi teeks. Lõpuks tuli ise teha.”
+                        </blockquote>
+                        <p>Tõnu on investeerimisalal tegutsenud üle 20 aasta. Enne Tuleva asutamist juhtis ta oma kaasosalusega investeerimisettevõtet Karu Capital. Varem on Tõnu muuhulgas vedanud Euroopa Rekonstruktsiooni- ning Arengupangas Ida-Euroopa finantssektori arendusprojekte ning töötanud Hansapangas investeerimispanganduse juhina.  Tõnu sai finantsteaduste magistriks London Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu Ülikoolis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-spacing">
+            <div class="contacts-block">
+                <div class="col-md-3 contacts-block__item">
+                    <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/loit-linnupold.png" alt="Loit Linnupõld">
+                    <h2 class="contacts-block__title">Loit Linnupõld</h2>
+                    <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
+                    <div class="contacts-block__row">Nõukogu</div>
+                    <div class="contacts-block__row">Nõukogu esimees</div>
+                </div>
+                <div class="col-md-3 contacts-block__item">
+                    <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/heikko-mae.png" alt="Heikko Mäe">
+                    <h2 class="contacts-block__title">Heikko Mäe</h2>
+                    <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
+                    <div class="contacts-block__row">Nõukogu</div>
+                    <div class="contacts-block__row">Siseaudiitor</div>
+                </div>
+                <div class="col-md-3 contacts-block__item">
+                    <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/annika-uudelepp.png" alt="Annika Uudelepp">
+                    <h2 class="contacts-block__title">Annika Uudelepp</h2>
+                    <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
+                    <div class="contacts-block__row">Nõukogu</div>
+                    <div class="contacts-block__row">Nõukogu liige</div>
+                </div>
+                <div class="col-md-3 contacts-block__item">
+                    <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/priit-lepasepp.png" alt="Priit Lepasepp">
+                    <h2 class="contacts-block__title">Priit Lepasepp</h2>
+                    <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
+                    <div class="contacts-block__row">Juhatus</div>
+                    <div class="contacts-block__row">Vastavus- ja riskikontroll</div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-spacing">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <p>Tuleva Fondid AS on TÜ Tuleva ainuomandis olev varahaldusfirma, mis tegutseb Finantsinspektsiooni <a href="#">tegevusloa</a> alusel.</p>
+                <p>Tuleva fondide depositoorium in Swedbank AS.</p>
+            </div>
+        </div>
+    </div>
     <?php endwhile; ?>
 </div>

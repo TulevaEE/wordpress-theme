@@ -2648,11 +2648,11 @@ select[multiple].input-lg {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .single-quote-box:before, .clearfix:after, .single-quote-box:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .single-quote-box:after {
   clear: both; }
 
 .center-block {
@@ -3060,6 +3060,25 @@ hr {
 .comparison-box .list-arrow {
   line-height: 2; }
 
+.single-quote-box {
+  padding: 110px 0;
+  margin-bottom: -2em; }
+  .single-quote-box__media {
+    text-align: center;
+    font-style: italic; }
+  .single-quote-box__image {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 192px;
+    height: 192px; }
+  .single-quote-box blockquote {
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    font-size: 1.25em;
+    line-height: 1.6;
+    border: none;
+    padding: 0;
+    margin: .6em 0 1.6em; }
+
 .media .media-right {
   padding-left: 6em; }
 
@@ -3202,8 +3221,7 @@ hr {
 
 .footer {
   background-color: #EFF4F7;
-  padding: 70px 0;
-  margin-top: 70px; }
+  padding: 70px 0; }
   .footer__title {
     text-transform: uppercase;
     color: #002F63;
