@@ -32,8 +32,7 @@
                         <li><a href="#" class="nav-lang">In English</a></li>
                     </ul>
                     <div class="navbar-buttons">
-                        <a href="#" class="btn btn-default navbar-btn">Logi sisse</a>
-                        <a href="#" class="btn btn-primary navbar-btn">Astu liikmeks</a>
+                        <a href="#" class="btn btn-primary navbar-btn">Sisene Tuleva äppi</a>
                     </div>
                 </div>
             </div>
