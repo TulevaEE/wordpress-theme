@@ -467,7 +467,7 @@ mark,
 .text-capitalize {
   text-transform: capitalize; }
 
-.text-muted, .single-post .post-meta {
+.text-muted, .post-list__item__meta, .single-post .post-meta {
   color: #777777; }
 
 .text-primary {
@@ -2944,7 +2944,7 @@ small {
 .form-control::placeholder {
   color: rgba(48, 48, 48, 0.32); }
 
-.text-muted, .single-post .post-meta {
+.text-muted, .post-list__item__meta, .single-post .post-meta {
   color: rgba(48, 48, 48, 0.64); }
 
 .text-normal {
@@ -3099,11 +3099,72 @@ hr {
         color: #002F63;
         font-weight: 500; }
 
+.submenu__list {
+  list-style: none;
+  padding: 0;
+  display: inline-block; }
+
+.submenu__item {
+  display: inline-block; }
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .post-list__item {
+    width: 50%;
+    margin-bottom: 48px; }
+    .post-list__item:nth-child(odd) {
+      padding-left: 15px; }
+    .post-list__item:nth-child(even) {
+      padding-right: 15px; }
+    .post-list__item__image {
+      overflow: hidden;
+      max-height: 350px;
+      border-radius: 4px; }
+      .post-list__item__image img {
+        width: 100%; }
+    .post-list__item__title {
+      margin-bottom: 5px; }
+      .post-list__item__title a {
+        color: #002F63; }
+    .post-list__item__meta {
+      margin-bottom: 1em;
+      font-size: .875em; }
+    .post-list__item__author {
+      margin-right: 5px; }
+    .post-list__item.post-list__item--wide {
+      width: 100%;
+      padding: 0; }
+    @media (max-width: 767px) {
+      .post-list__item.post-list__item {
+        width: 100%;
+        padding: 0; } }
+
 .media .media-right {
   padding-left: 6em; }
 
 .media .media-left {
   padding-right: 6em; }
+
+@media (max-width: 767px) {
+  .media .media-right,
+  .media .media-left {
+    text-align: center;
+    display: block;
+    padding: 0; }
+  .media .media-object {
+    display: inline-block; } }
+
+@media (max-width: 767px) {
+  .media .media-body {
+    display: block; } }
 
 .media .media-body .media-heading {
   margin-bottom: 1em; }
@@ -3122,6 +3183,23 @@ hr {
 
 .row-spacing-bottom {
   margin: 0 0 100px; }
+
+.content-area,
+.widget-area {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media (min-width: 768px) {
+  .content-area {
+    width: 69%;
+    margin-right: 4%; } }
+
+@media (min-width: 768px) {
+  .widget-area {
+    width: 27%; } }
 
 .header .navbar {
   margin-bottom: 0;

@@ -9,3 +9,25 @@
 .row-spacing-bottom {
     margin: 0 0 100px;
 }
+
+.content-area,
+.widget-area {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content-area {
+    @include not-mobile {
+        width: 69%;
+        margin-right: 4%;
+    }
+}
+
+.widget-area {
+    @include not-mobile {
+        width: 27%;
+    }
+}

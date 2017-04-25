@@ -153,28 +153,28 @@
     <div class="container">
         <div class="row row-spacing">
             <div class="contacts-block">
-                <div class="col-md-3 contacts-block__item">
+                <div class="col-md-3 col-sm-4 col-xs-6 contacts-block__item">
                     <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/loit-linnupold.png" alt="Loit Linnupõld">
                     <h2 class="contacts-block__title">Loit Linnupõld</h2>
                     <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
                     <div class="contacts-block__row">Nõukogu</div>
                     <div class="contacts-block__row">Nõukogu esimees</div>
                 </div>
-                <div class="col-md-3 contacts-block__item">
+                <div class="col-md-3 col-sm-4 col-xs-6 contacts-block__item">
                     <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/heikko-mae.png" alt="Heikko Mäe">
                     <h2 class="contacts-block__title">Heikko Mäe</h2>
                     <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
                     <div class="contacts-block__row">Nõukogu</div>
                     <div class="contacts-block__row">Siseaudiitor</div>
                 </div>
-                <div class="col-md-3 contacts-block__item">
+                <div class="col-md-3 col-sm-4 col-xs-6 contacts-block__item">
                     <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/annika-uudelepp.png" alt="Annika Uudelepp">
                     <h2 class="contacts-block__title">Annika Uudelepp</h2>
                     <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
                     <div class="contacts-block__row">Nõukogu</div>
                     <div class="contacts-block__row">Nõukogu liige</div>
                 </div>
-                <div class="col-md-3 contacts-block__item">
+                <div class="col-md-3 col-sm-4 col-xs-6 contacts-block__item">
                     <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/priit-lepasepp.png" alt="Priit Lepasepp">
                     <h2 class="contacts-block__title">Priit Lepasepp</h2>
                     <div class="contacts-block__row"><strong>Tuleva Fondid AS</strong></div>
