@@ -2956,6 +2956,22 @@ small {
 .text-bold {
   font-weight: bold; }
 
+.text-highlight {
+  background-image: linear-gradient(#FFCD00, #FFCD00);
+  background-position: 0 0.7em;
+  background-repeat: repeat-x;
+  background-size: 8px 8px;
+  padding: 0 2px; }
+
+.list-arrow {
+  list-style: none;
+  padding-left: 30px; }
+  .list-arrow li {
+    padding-left: 2em;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center; }
+
 a:hover,
 a:focus {
   color: #0078ff;
@@ -3036,12 +3052,13 @@ hr {
   .statistics-box__row {
     line-height: 1;
     margin-bottom: 1.8em; }
-  .statistics-box__number {
-    background-image: linear-gradient(#FFCD00, #FFCD00);
-    background-position: 0 0.7em;
-    background-repeat: repeat-x;
-    background-size: 8px 8px;
-    padding: 0 2px; }
+
+.comparison-box .list-unstyled {
+  margin-bottom: 50px;
+  line-height: 2; }
+
+.comparison-box .list-arrow {
+  line-height: 2; }
 
 .media .media-right {
   padding-left: 6em; }

@@ -68,10 +68,66 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="statistics-box">
-                        <div class="statistics-box__row">Tuleva fondidega on liitunud <strong class="statistics-box__number">3398</strong> inimest.</div>
-                        <div class="statistics-box__row">Tuleva maailma aktsiaturu pensionifondi maht on <strong class="statistics-box__number">35 654 848</strong> eurot.</div>
-                        <div class="statistics-box__row">Tuleva maailma võlakirjade pensionifondi maht on <strong class="statistics-box__number">6 548 121</strong> eurot.</div>
+                        <div class="statistics-box__row">Tuleva fondidega on liitunud <strong class="text-highlight">3398</strong> inimest.</div>
+                        <div class="statistics-box__row">Tuleva maailma aktsiaturu pensionifondi maht on <strong class="text-highlight">35 654 848</strong> eurot.</div>
+                        <div class="statistics-box__row">Tuleva maailma võlakirjade pensionifondi maht on <strong class="text-highlight">6 548 121</strong> eurot.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-spacing">
+            <div class="comparison-box">
+                <div class="col-md-6">
+                    <h2 class="comparison-box__heading">Tuleva Maailma Aktsiate Pensionifond</h2>
+                    <ul class="list-unstyled">
+                        <li>ISIN: EE3600109435</li>
+                        <li>Valuuta: EUR</li>
+                        <li>Moodustamise kuupäev: 27. märts 2017</li>
+                        <li>Fondi maht: 966 271 EUR</li>
+                        <li>NAV: 0,63815 EUR</li>
+                        <li>Puhasväärtuse muutus: 0%</li>
+                        <li>Valitsemistasu: 0,34%</li>
+                        <li>Väljalasketasu ja tagasivõtmistasu: 0%</li>
+                        <li>Fondivalitseja osalus fondis: 1 171 875 osakut</li>
+                        <li>Riskiprofiil: agressiivne</li>
+                        <li>Võrdlusindeks: 73% MSCI ACWI (EUR) ja 27% Bloomberg Barclays Global Aggregate Index (EUR)</li>
+                    </ul>
+                    <ul class="list-arrow">
+                        <li><a href="#">Prospekt</a> ja <a href="#">tingimused</a></li>
+                        <li><a href="#">Mudelportfell</a></li>
+                        <li><a href="#">Põhiteave</a></li>
+                        <li class="text-muted">Fondi kasumiaruanne</li>
+                        <li>Investeeringute aruanne <a href="#">03.17</a></li>
+                        <li class="text-muted">Poolaasta aruanne</li>
+                        <li class="text-muted">Aastaaruanne</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="comparison-box__heading">Tuleva Maailma Võlakirjade Pensionifond</h2>
+                    <ul class="list-unstyled">
+                        <li>ISIN: EE3600109443</li>
+                        <li>Valuuta: EUR</li>
+                        <li>Moodustamise kuupäev: 27. märts 2017</li>
+                        <li>Fondi maht: 106 058 EUR</li>
+                        <li>NAV: 0,64078 EUR</li>
+                        <li>Puhasväärtuse muutus: 0%</li>
+                        <li>Valitsemistasu: 0,34%</li>
+                        <li>Väljalasketasu ja tagasivõtmistasu: 0%</li>
+                        <li>Fondivalitseja osalus fondis: 156 250 osakut</li>
+                        <li>Riskiprofiil: konservatiivne</li>
+                        <li>Võrdlusindeks: 50% Bloomberg Barclays Global Aggregate Index (EUR) ja 50% Bloomberg Barclays Euro Aggregate Bond Index (EUR)</li>
+                    </ul>
+                    <ul class="list-arrow">
+                        <li><a href="#">Prospekt</a> ja <a href="#">tingimused</a></li>
+                        <li><a href="#">Mudelportfell</a></li>
+                        <li><a href="#">Põhiteave</a></li>
+                        <li class="text-muted">Fondi kasumiaruanne</li>
+                        <li>Investeeringute aruanne <a href="#">03.17</a></li>
+                        <li class="text-muted">Poolaasta aruanne</li>
+                        <li class="text-muted">Aastaaruanne</li>
+                    </ul>
                 </div>
             </div>
         </div>

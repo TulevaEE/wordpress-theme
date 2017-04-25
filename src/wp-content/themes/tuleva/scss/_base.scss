@@ -81,6 +81,26 @@ small {
     font-weight: bold;
 }
 
+.text-highlight {
+    background-image: linear-gradient($yellow, $yellow);
+    background-position: 0 0.7em;
+    background-repeat: repeat-x;
+    background-size: 8px 8px;
+    padding: 0 2px;
+}
+
+.list-arrow {
+    list-style: none;
+    padding-left: 30px;
+
+    li {
+        padding-left: 2em;
+        background-image: url('../img/icon-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: 0 center;
+    }
+}
+
 a:hover,
 a:focus {
     color: $brand-primary;
