@@ -2648,11 +2648,11 @@ select[multiple].input-lg {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-.clearfix:before, .single-quote-box:before, .pagination:before, .clearfix:after, .single-quote-box:after, .pagination:after {
+.clearfix:before, .single-quote-box:before, .quotes-box:before, .pagination:before, .clearfix:after, .single-quote-box:after, .quotes-box:after, .pagination:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .single-quote-box:after, .pagination:after {
+.clearfix:after, .single-quote-box:after, .quotes-box:after, .pagination:after {
   clear: both; }
 
 .center-block {
@@ -2906,6 +2906,9 @@ h1, .h1 {
 .h1-sm {
   font-size: 2.25em; }
 
+.h1-xs {
+  font-size: 2em; }
+
 .h1-bottom-margin {
   margin-bottom: 96px; }
 
@@ -2922,6 +2925,9 @@ h3, .h3 {
   font-weight: bold;
   color: #002F63;
   line-height: 1.5; }
+
+.heading-bottom-spacing {
+  margin-bottom: 1em; }
 
 p, .p {
   line-height: 1.44;
@@ -2948,7 +2954,7 @@ small {
 .text-bold {
   font-weight: bold; }
 
-.text-large {
+.text-lg {
   font-size: 20px; }
 
 .text-highlight {
@@ -3034,6 +3040,9 @@ hr {
 .no-margin {
   margin: 0 !important; }
 
+.no-padding {
+  padding: 0 !important; }
+
 .contacts-block {
   padding: 100px 0; }
   .contacts-block__item {
@@ -3117,6 +3126,52 @@ hr {
     border: none;
     padding: 0;
     margin: .6em 0 1.6em; }
+
+.quotes-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 110px 0; }
+  .quotes-box__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+  .quotes-box__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%; }
+  .quotes-box__text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    font-size: 1.25em;
+    margin-bottom: 1em; }
+  .quotes-box__author__image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 1em; }
+  .quotes-box__author__info {
+    font-size: 18px; }
 
 .recent-articles {
   margin-bottom: 60px; }
