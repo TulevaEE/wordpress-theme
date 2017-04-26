@@ -20,9 +20,9 @@
                 <ul class="post-list">
                     <li class="post-list__item post-list__item--wide">
                         <div class="post-list__item__image">
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image-big.jpg" alt=""></a>
+                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image-big.jpg" alt=""></a>
                         </div>
-                        <h2 class="post-list__item__title"><a href="#">Kelle finantskirjaoskus peab paranema?</a></h2>
+                        <h2 class="post-list__item__title"><a href="/tuleva20/hello-world">Kelle finantskirjaoskus peab paranema?</a></h2>
                         <div class="post-list__item__meta">
                             <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
                         </div>
@@ -32,9 +32,9 @@
                     </li>
                     <li class="post-list__item">
                         <div class="post-list__item__image">
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
+                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">Valmis tegime! Tuleva käivitab II samba pensionifondid valitsemistasuga 0,34%</a></h3>
+                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Valmis tegime! Tuleva käivitab II samba pensionifondid valitsemistasuga 0,34%</a></h3>
                         <div class="post-list__item__meta">
                             <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
                         </div>
@@ -44,9 +44,9 @@
                     </li>
                     <li class="post-list__item">
                         <div class="post-list__item__image">
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
+                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">Õiguskantsler: II samba paindlikkust tuleks suurendada kindlustusfirmade kasumi arvel</a></h3>
+                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Õiguskantsler: II samba paindlikkust tuleks suurendada kindlustusfirmade kasumi arvel</a></h3>
                         <div class="post-list__item__meta">
                             <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
                         </div>
@@ -56,9 +56,9 @@
                     </li>
                     <li class="post-list__item">
                         <div class="post-list__item__image">
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
+                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">Tuleva pensionifondid: kuhu me investeerime ja milline fond sobib sulle?</a></h3>
+                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Tuleva pensionifondid: kuhu me investeerime ja milline fond sobib sulle?</a></h3>
                         <div class="post-list__item__meta">
                             <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
                         </div>
@@ -68,9 +68,9 @@
                     </li>
                     <li class="post-list__item">
                         <div class="post-list__item__image">
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
+                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">4. peatükk. Kas indeksifondid on riskantsemad kui käsitsi juhitud fondid? II osa</a></h3>
+                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">4. peatükk. Kas indeksifondid on riskantsemad kui käsitsi juhitud fondid? II osa</a></h3>
                         <div class="post-list__item__meta">
                             <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
                         </div>
