@@ -97,7 +97,7 @@
         <div class="row row-spacing-half">
             <div class="media-box-list">
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/annika-uudelepp.png" alt="">
                     </div>
                     <div class="media-box__body">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/daniel-vaarik.jpg" alt="">
                     </div>
                     <div class="media-box__body">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/priit-lepasepp.png" alt="">
                     </div>
                     <div class="media-box__body">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="">
                     </div>
                     <div class="media-box__body">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/henrik-karmo.jpg" alt="">
                     </div>
                     <div class="media-box__body">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/taavi-lepmets.jpg" alt="">
                     </div>
                     <div class="media-box__body">
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/indrek-kasela.jpg" alt="">
                     </div>
                     <div class="media-box__body">
@@ -160,7 +160,7 @@
                     </div>
                 </div>
                 <div class="media-box">
-                    <div class="media-box__left">
+                    <div class="media-box__media">
                         <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/taavet-hinrikus.jpg" alt="">
                     </div>
                     <div class="media-box__body">

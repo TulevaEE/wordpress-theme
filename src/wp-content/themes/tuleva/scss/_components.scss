@@ -170,8 +170,9 @@
 .media-box {
     display: flex;
 
-    &__left {
+    &__media {
         width: 25%;
+        min-width: 100px;
     }
 
     &__body {
@@ -192,8 +193,10 @@
     display: flex;
     flex-wrap: wrap;
 
-    .media-box {
-        width: 50%;
+    @include not-mobile {
+        .media-box {
+            width: 50%;
+        }
     }
 }
 
