@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <nav class="submenu">
                     <ul class="submenu__list">
-                        <li class="submenu__item">
+                        <li class="submenu__item submenu__item--current">
                             <a href="#">Kõik artiklid</a>
                         </li>
                         <li class="submenu__item">
