@@ -58,9 +58,9 @@
                         <div class="post-list__item__image">
                             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">Kelle finantskirjaoskus peab paranema?</a></h3>
+                        <h3 class="post-list__item__title"><a href="#">Tuleva pensionifondid: kuhu me investeerime ja milline fond sobib sulle?</a></h3>
                         <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
+                            <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
                         </div>
                         <div class="post-list__item__description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iusto maxime ipsam hic expedita modi rerum, doloribus perspiciatis, dolore, ex explicabo possimus autem laudantium eius.
@@ -70,15 +70,19 @@
                         <div class="post-list__item__image">
                             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
                         </div>
-                        <h3 class="post-list__item__title"><a href="#">Kelle finantskirjaoskus peab paranema?</a></h3>
+                        <h3 class="post-list__item__title"><a href="#">4. peatükk. Kas indeksifondid on riskantsemad kui käsitsi juhitud fondid? II osa</a></h3>
                         <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
+                            <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
                         </div>
                         <div class="post-list__item__description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto eveniet quidem, culpa quas pariatur! Non, minima, sequi!
                         </div>
                     </li>
                 </ul>
+                <div class="pagination">
+                    <a class="pagination__previous" href="#">Uuemad artiklid</a>
+                    <a class="pagination__next" href="#">Vanemad artiklid</a>
+                </div>
             </div>
             <div class="widget-area">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ab nihil qui blanditiis nemo dolorum porro laboriosam aut cupiditate nesciunt natus, itaque aliquid culpa inventore fugit maiores ad temporibus repudiandae!
