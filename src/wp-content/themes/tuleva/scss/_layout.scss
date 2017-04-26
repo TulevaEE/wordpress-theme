@@ -21,13 +21,13 @@
 
 .content-area {
     @include not-mobile {
-        width: 69%;
+        width: 66%;
         margin-right: 4%;
     }
 }
 
 .widget-area {
     @include not-mobile {
-        width: 27%;
+        width: 30%;
     }
 }

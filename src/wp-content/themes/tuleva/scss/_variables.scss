@@ -18,8 +18,9 @@ $text-hint: rgba(48, 48, 48, 0.32);
 $text-secondary-heading: #2a2c2e;
 
 
-$blue: #0078ff;
+$blue: #0081EE;
 $navy-blue: #002F63;
+$blue-light: #ebf7ff;
 $yellow: #FFCD00;
 $green: #51c26c;
 $gray-mid: #d8d8d8;
@@ -36,13 +37,29 @@ $heading-primary: $navy-blue;
 $brand-primary: $blue !default;
 $brand-success: $green !default;
 $body-color: $text-primary !default;
-$body-color-alt: #ebf7ff !default;
+$body-color-alt: $blue-light !default;
 
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;
 
 // Buttons
 $btn-font-weight: 500 !default;
+
+// Widgets
+$widget-primary-bg-color: $blue-light !default;
+
+// Navbar
+$navbar-height: 116px !default;
+$navbar-padding-vertical: 25px !default;
+$navbar-default-bg: transparent !default;
+$navbar-default-border: transparent !default;
+$navbar-default-link-color: $navy-blue !default;
+$navbar-toggle-color: $navy-blue !default;
+$navbar-default-brand-hover-color: $brand-primary !default;
+$navbar-default-brand-hover-bg: transparent !default;
+
+// Footer
+$footer-bg-color: #EFF4F7 !default;
 
 //== Media queries breakpoints
 //
@@ -83,14 +100,4 @@ $screen-lg-max:              ($screen-xl-min - 1) !default;
 
 // Navbar
 $grid-float-breakpoint: $screen-lg !default;
-$navbar-height: 116px !default;
-$navbar-padding-vertical: 25px !default;
-$navbar-default-bg: transparent !default;
-$navbar-default-border: transparent !default;
-$navbar-default-link-color: $navy-blue !default;
-$navbar-toggle-color: $navy-blue !default;
-$navbar-default-brand-hover-color: $brand-primary !default;
-$navbar-default-brand-hover-bg: transparent !default;
 
-// Footer
-$footer-bg-color: #EFF4F7 !default;

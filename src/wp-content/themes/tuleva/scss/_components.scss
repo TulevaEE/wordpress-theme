@@ -254,6 +254,47 @@
     }
 }
 
+.cta-widget {
+    border-radius: 4px;
+    padding: 0 1.5em;
+    margin-bottom: 1.5em;
+
+    &--primary {
+        background-color: $widget-primary-bg-color;
+        border: 2px solid $brand-primary;
+    }
+
+    &--secondary {
+        border: 1px solid $border-gray;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: $line-height-computed;
+
+        &--link {
+            display: inline-block;
+            text-align: left;
+            font-weight: 500;
+            font-family: $font-family-sans-serif;
+            padding-right: 1.5em;
+            background-image: url('../img/icon-arrow-right.svg');
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .btn {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+    }
+}
+
 .media {
     // color: #303030;
 

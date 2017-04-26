@@ -85,7 +85,15 @@
                 </div>
             </div>
             <div class="widget-area">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ab nihil qui blanditiis nemo dolorum porro laboriosam aut cupiditate nesciunt natus, itaque aliquid culpa inventore fugit maiores ad temporibus repudiandae!
+                <div class="cta-widget cta-widget--primary">
+                    <h3 class="cta-widget__title">Kuidas saad sina Tulevast kasu?</h3>
+                    <a href="#" class="btn btn-primary btn-lg">Sisene Tuleva äppi</a>
+                    <p>Näitame sulle, kui palju sa säästaksid Tuleva pensioni-fondi kliendina ja/või Tuleva liikmena.</p>
+                </div>
+                <div class="cta-widget cta-widget--secondary">
+                    <h3 class="cta-widget__title--link"><a href="#">Too pension Tulevasse</a></h3>
+                    <p>Juhend, kuidas vahetada fondi internetipangas või pensionikeskuses.</p>
+                </div>
             </div>
         </div>
     </div>
