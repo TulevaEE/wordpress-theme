@@ -2937,7 +2937,7 @@ small {
   color: #303030; }
 
 .text-regular {
-  font-weight: medium; }
+  font-weight: 500; }
 
 .form-control::-webkit-input-placeholder {
   color: rgba(48, 48, 48, 0.32); }
@@ -2960,12 +2960,15 @@ small {
 .text-bold {
   font-weight: bold; }
 
+.text-large {
+  font-size: 20px; }
+
 .text-highlight {
   background-image: linear-gradient(#FFCD00, #FFCD00);
   background-position: 0 0.7em;
   background-repeat: repeat-x;
-  background-size: 8px 8px;
-  padding: 0 2px; }
+  background-size: 0.4em 0.4em;
+  padding: 0 0.1em; }
 
 .list-arrow {
   list-style: none;
@@ -3004,14 +3007,11 @@ hr {
     background-color: rgba(11, 250, 67, 0.08);
     border-color: #51c26c; }
 
-.page-template-page_contact {
-  background: linear-gradient(to bottom, #fff 130px, #ebf7ff 560px, #fff 560px); }
-
-.page-template-page_fund {
-  background: linear-gradient(to bottom, #fff 130px, #ebf7ff 530px, #fff 530px); }
-
-.bg-alt {
-  background-color: #ebf7ff; }
+.btn-xl {
+  padding: 16px 60px;
+  font-size: 24px;
+  line-height: 1.2;
+  border-radius: 8px; }
 
 .contacts-block {
   padding: 100px 0; }
@@ -3244,6 +3244,9 @@ hr {
 .row-spacing {
   margin: 100px 0; }
 
+.row-spacing-half {
+  margin: 50px 0; }
+
 .row-spacing-top {
   margin: 100px 0 0; }
 
@@ -3266,6 +3269,18 @@ hr {
 @media (min-width: 768px) {
   .widget-area {
     width: 30%; } }
+
+.page-template-page_contact {
+  background: linear-gradient(to bottom, #fff 130px, #ebf7ff 560px, #fff 560px); }
+
+.page-template-page_fund {
+  background: linear-gradient(to bottom, #fff 130px, #ebf7ff 530px, #fff 530px); }
+
+.page-template-page_front {
+  background: linear-gradient(to bottom, #fff 130px, #ebf7ff 610px, #fff 530px); }
+
+.bg-alt {
+  background-color: #ebf7ff; }
 
 .header .navbar {
   margin-bottom: 0;

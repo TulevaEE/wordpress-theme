@@ -63,7 +63,7 @@ small {
 }
 
 .text-regular {
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .form-control::placeholder {
@@ -86,12 +86,16 @@ small {
     font-weight: bold;
 }
 
+.text-large {
+    font-size: floor(($font-size-base * 1.25));
+}
+
 .text-highlight {
     background-image: linear-gradient($yellow, $yellow);
     background-position: 0 0.7em;
     background-repeat: repeat-x;
-    background-size: 8px 8px;
-    padding: 0 2px;
+    background-size: 0.4em 0.4em;
+    padding: 0 0.1em;
 }
 
 .list-arrow {
@@ -140,5 +144,9 @@ hr {
         background-color: rgba(11, 250, 67, 0.08);
         border-color: $green;
     }
+}
+
+.btn-xl {
+  @include button-size($padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
 }
 

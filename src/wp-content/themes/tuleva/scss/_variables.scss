@@ -7,6 +7,8 @@ $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !de
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 $font-size-base: 16px !default;
+$font-size-xl: floor(($font-size-base * 1.5)) !default; // ~24px !default;
+$line-height-xl: 1.2 !default;
 
 /**
  * Colors
@@ -44,6 +46,9 @@ $body-gradient-stop: $body-color-alt !default;
 
 // Buttons
 $btn-font-weight: 500 !default;
+$btn-border-radius-xl: 8px !default;
+$padding-xl-horizontal: 60px !default;
+$padding-xl-vertical: 16px !default;
 
 // Widgets
 $widget-primary-bg-color: $blue-light !default;

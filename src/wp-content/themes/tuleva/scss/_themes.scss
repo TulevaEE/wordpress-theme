@@ -6,6 +6,10 @@
     background: linear-gradient(to bottom, $body-gradient-start 130px, $body-gradient-stop 530px, $body-gradient-start 530px);
 }
 
+.page-template-page_front {
+    background: linear-gradient(to bottom, $body-gradient-start 130px, $body-gradient-stop 610px, $body-gradient-start 530px);
+}
+
 .bg-alt {
     background-color: $body-color-alt;
 }
