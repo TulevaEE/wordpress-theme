@@ -94,7 +94,7 @@
                         <li>Riskiprofiil: agressiivne</li>
                         <li>Võrdlusindeks: 73% MSCI ACWI (EUR) ja 27% Bloomberg Barclays Global Aggregate Index (EUR)</li>
                     </ul>
-                    <ul class="list-arrow">
+                    <ul class="list-style-arrow">
                         <li><a href="#">Prospekt</a> ja <a href="#">tingimused</a></li>
                         <li><a href="#">Mudelportfell</a></li>
                         <li><a href="#">Põhiteave</a></li>
@@ -119,7 +119,7 @@
                         <li>Riskiprofiil: konservatiivne</li>
                         <li>Võrdlusindeks: 50% Bloomberg Barclays Global Aggregate Index (EUR) ja 50% Bloomberg Barclays Euro Aggregate Bond Index (EUR)</li>
                     </ul>
-                    <ul class="list-arrow">
+                    <ul class="list-style-arrow">
                         <li><a href="#">Prospekt</a> ja <a href="#">tingimused</a></li>
                         <li><a href="#">Mudelportfell</a></li>
                         <li><a href="#">Põhiteave</a></li>

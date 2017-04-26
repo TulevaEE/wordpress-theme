@@ -22,8 +22,9 @@ $text-secondary-heading: #2a2c2e;
 
 $blue: #0081EE;
 $navy-blue: #002F63;
-$blue-light: #ebf7ff;
-$yellow: #FFCD00;
+$blue-light: #00AEEA;
+$blue-washed: #ebf7ff;
+$yellow: #FCE228;
 $green: #51c26c;
 $gray-mid: #d8d8d8;
 $gray-washed: #fafafa;
@@ -39,7 +40,7 @@ $heading-primary: $navy-blue;
 $brand-primary: $blue !default;
 $brand-success: $green !default;
 $body-color: $text-primary !default;
-$body-color-alt: $blue-light !default;
+$body-color-alt: $blue-washed !default;
 
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;

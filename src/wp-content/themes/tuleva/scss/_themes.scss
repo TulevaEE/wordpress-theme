@@ -1,13 +1,28 @@
 .page-template-page_contact {
-    background: linear-gradient(to bottom, $body-gradient-start 130px, $body-gradient-stop 560px, $body-gradient-start 560px);
+    background: linear-gradient(
+        to bottom,
+        $body-gradient-start 130px,
+        $body-gradient-stop 560px,
+        $body-gradient-start 560px
+    );
 }
 
 .page-template-page_fund {
-    background: linear-gradient(to bottom, $body-gradient-start 130px, $body-gradient-stop 530px, $body-gradient-start 530px);
+    background: linear-gradient(
+        to bottom,
+        $body-gradient-start 130px,
+        $body-gradient-stop 530px,
+        $body-gradient-start 530px
+    );
 }
 
 .page-template-page_front {
-    background: linear-gradient(to bottom, $body-gradient-start 130px, $body-gradient-stop 610px, $body-gradient-start 530px);
+    background: linear-gradient(
+        to bottom,
+        $body-gradient-start 130px,
+        $body-gradient-stop 725px,
+        $body-gradient-start 725px
+    );
 }
 
 .bg-alt {

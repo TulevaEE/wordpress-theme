@@ -66,14 +66,6 @@ small {
     font-weight: 500;
 }
 
-.form-control::placeholder {
-    color: $text-hint;
-}
-
-.text-muted {
-    color: $text-secondary;
-}
-
 .text-normal {
     font-weight: normal;
 }
@@ -98,7 +90,15 @@ small {
     padding: 0 0.1em;
 }
 
-.list-arrow {
+.text-muted {
+    color: $text-secondary;
+}
+
+.text-navy {
+    color: $navy-blue;
+}
+
+.list-style-arrow {
     list-style: none;
     padding-left: 30px;
 
@@ -108,6 +108,25 @@ small {
         background-repeat: no-repeat;
         background-position: 0 center;
     }
+}
+
+.list-style-checkmark,
+.list-style-plussign {
+    list-style: none;
+
+    li {
+        padding-left: 2em;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+    }
+}
+
+.list-style-checkmark li {
+    background-image: url('../img/icon-checkmark.svg');
+}
+
+.list-style-plussign li {
+    background-image: url('../img/icon-plussign.svg');
 }
 
 a:hover,
@@ -136,6 +155,10 @@ hr {
     width: 100%;
 }
 
+.form-control::placeholder {
+    color: $text-hint;
+}
+
 .alert {
     border: solid 2px $gray-mid;
     border-radius: 8px;
@@ -148,5 +171,9 @@ hr {
 
 .btn-xl {
   @include button-size($padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
+}
+
+.no-margin {
+    margin: 0 !important;
 }
 
