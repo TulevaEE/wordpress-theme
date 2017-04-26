@@ -3135,7 +3135,8 @@ hr {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 110px 0; }
+  padding: 110px 0;
+  margin-bottom: -2em; }
   .quotes-box__item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3145,7 +3146,8 @@ hr {
     -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    margin-bottom: 2em; }
   .quotes-box__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3172,6 +3174,33 @@ hr {
     margin-right: 1em; }
   .quotes-box__author__info {
     font-size: 18px; }
+
+.media-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .media-box__left {
+    width: 25%; }
+  .media-box__body {
+    width: 75%; }
+  .media-box__image {
+    border-radius: 50%;
+    width: 96px;
+    height: 96px; }
+  .media-box__title {
+    margin-top: 0; }
+
+.media-box-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .media-box-list .media-box {
+    width: 50%; }
 
 .recent-articles {
   margin-bottom: 60px; }

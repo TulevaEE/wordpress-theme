@@ -132,11 +132,13 @@
     display: flex;
     flex-wrap: wrap;
     padding: 110px 0;
+    margin-bottom: -2em;
     @extend .clearfix;
 
     &__item {
         display: flex;
         flex-flow: row wrap;
+        margin-bottom: 2em;
     }
 
     &__content {
@@ -162,6 +164,36 @@
         &__info {
             font-size: 18px;
         }
+    }
+}
+
+.media-box {
+    display: flex;
+
+    &__left {
+        width: 25%;
+    }
+
+    &__body {
+        width: 75%;
+    }
+
+    &__image {
+        border-radius: 50%;
+        @include square(96px);
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+}
+
+.media-box-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .media-box {
+        width: 50%;
     }
 }
 
