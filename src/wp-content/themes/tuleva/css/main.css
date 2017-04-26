@@ -2886,6 +2886,10 @@ select[multiple].input-lg {
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
 body {
   font-size: 16px; }
 
