@@ -177,6 +177,10 @@
 
     &__body {
         width: 75%;
+
+        @include not-mobile {
+            padding-right: 2em;
+        }
     }
 
     &__image {
@@ -420,6 +424,53 @@
     p {
         margin-bottom: 1.5em;
     }
+}
+
+.tabs {
+    padding-top: 130px;
+
+    .nav-tabs {
+        text-align: center;
+        font-size: 1.25em;
+        border-bottom: none;
+        margin-top: 100px;
+
+        > li {
+            float: none;
+            margin: 0;
+            background: rgba(5,147,252,0.08);
+
+            @include not-mobile {
+                display:inline-block;
+                margin: 0 0.5em;
+            }
+
+            &.active {
+                background: #fff;
+                font-weight: bold;
+            }
+
+            a {
+                color: $navy-blue;
+                border: none;
+                border-radius: 0;
+                margin: 0;
+                padding: 20px 40px;
+
+                &:hover,
+                &:focus {
+                    color: $navy-blue;
+                    border: none;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.tab-content {
+    padding: 70px 0;
+    @extend .clearfix;
 }
 
 .media {

@@ -416,5 +416,87 @@
             </div>
         </div>
     </div>
+    <div class="bg-alt">
+        <div class="container tabs">
+            <h2 class="h1-xs text-center">Vastused korduma kippuvatele küsimustele</h2>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#story" role="tab" data-toggle="tab">Tuleva lugu</a></li>
+                <li><a href="#fonds" role="tab" data-toggle="tab">Tuleva fondid</a></li>
+                <li><a href="#second-pillar" role="tab" data-toggle="tab">Mis on II sammas?</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="story">
+                <div class="col-md-6">
+                    <h2>Mis on Tuleva?</h2>
+                    <p>Tulundusühistu Tuleva on liikmetele kuuluv varahaldusettevõte. Tuleva eesmärgiks on kasvatada liikmete vara, luues paremaid võimalusi säästude pikaajaliseks investeerimiseks.</p>
+                    <h2>Miks Tuleva loodi?</h2>
+                    <p>Tuleva asutasid 2016. aasta kevadel 22 inimest, kes polnud rahul pankade pensionifondide kõrgete teenustasudega ja madalate tootlustega.</p>
+                    <span>Asutajate suur idee oli tegelikult lihtne:</span>
+                    <ul>
+                        <li>Kutsume endaga ühinema algatuseks veel 3000 ärksat inimest. Kui umbes nii palju inimesi oma pensionivara kokku paneb, saame vabaneda vahemeestest, kes meie vara kasvule kaasa ei aita, aga kulutavad raha turundusele ja muudele tegevustele, mis meile väärtust ei loo.</li>
+                        <li>Teeme ise paremad pensionifondid, et panna koos oma vara parematel tingimustel tulu teenima. Alustame teise samba fondidest. Hiljem teeme ka Tuleva kolmanda samba fondid ja muud pikaajalise investeerimise tooted.</li>
+                    </ul>
+                    <p>Loe ka näiteks asutajaliikmete Indrek Kasela, Daniel Vaariku, Rain Rannu, Annika Uudelepa ja Jaak Roosaare mõtteid, miks nad sellist algatust tähtsaks pidasid.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Miks Tuleva tegutseb tulundusühistuna?</h2>
+                    <p>Tulundusühistu on üks ettevõtlusvorm.</p>
+                    <p>Kõige olulisem erinevus teistest levinumatest ettevõtlusvormidest (näiteks aktsiaselts, osaühing) on see, et tulundusühistus on otsuste tegemisel igal liikmel üks hääl sõltumata sellest, kui suur on tema varade maht. Tuleva asutajad leidsid, et just selline tegevusvorm on paljusid inimesi ühendavale ettevõttele kõige sobivam, sest igal inimesel on õigus oma varade juhtimises kaasa rääkida.</p>
+                    <p>Tulundusühistu ei ole mittetulundusühistu.</p>
+                    <h2>Mis on Tuleva eesmärk?</h2>
+                    <p>Tuleva ühistu põhikirjaline eesmärk on kasvatada oma liikmete vara, tehes meile kõigile kättesaadavaks paremad pikaajalise investeerimise tooted, alustades teise ja kolmanda samba pensionifondidega.</p>
+                    <p>Seda saavutame kahel moel: esiteks loome ise paremaid investeerimistooteid. Teiseks seisame liikmete huvide eest, et Eesti pensionisüsteem tervikuna muutuks pensionikogujale soodsamaks.</p>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="fonds">
+                <div class="col-md-6">
+                    <h2>Miks Tuleva tegutseb tulundusühistuna?</h2>
+                    <p>Tulundusühistu on üks ettevõtlusvorm.</p>
+                    <p>Kõige olulisem erinevus teistest levinumatest ettevõtlusvormidest (näiteks aktsiaselts, osaühing) on see, et tulundusühistus on otsuste tegemisel igal liikmel üks hääl sõltumata sellest, kui suur on tema varade maht. Tuleva asutajad leidsid, et just selline tegevusvorm on paljusid inimesi ühendavale ettevõttele kõige sobivam, sest igal inimesel on õigus oma varade juhtimises kaasa rääkida.</p>
+                    <p>Tulundusühistu ei ole mittetulundusühistu.</p>
+                    <h2>Mis on Tuleva eesmärk?</h2>
+                    <p>Tuleva ühistu põhikirjaline eesmärk on kasvatada oma liikmete vara, tehes meile kõigile kättesaadavaks paremad pikaajalise investeerimise tooted, alustades teise ja kolmanda samba pensionifondidega.</p>
+                    <p>Seda saavutame kahel moel: esiteks loome ise paremaid investeerimistooteid. Teiseks seisame liikmete huvide eest, et Eesti pensionisüsteem tervikuna muutuks pensionikogujale soodsamaks.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Mis on Tuleva?</h2>
+                    <p>Tulundusühistu Tuleva on liikmetele kuuluv varahaldusettevõte. Tuleva eesmärgiks on kasvatada liikmete vara, luues paremaid võimalusi säästude pikaajaliseks investeerimiseks.</p>
+                    <h2>Miks Tuleva loodi?</h2>
+                    <p>Tuleva asutasid 2016. aasta kevadel 22 inimest, kes polnud rahul pankade pensionifondide kõrgete teenustasudega ja madalate tootlustega.</p>
+                    <span>Asutajate suur idee oli tegelikult lihtne:</span>
+                    <ul>
+                        <li>Kutsume endaga ühinema algatuseks veel 3000 ärksat inimest. Kui umbes nii palju inimesi oma pensionivara kokku paneb, saame vabaneda vahemeestest, kes meie vara kasvule kaasa ei aita, aga kulutavad raha turundusele ja muudele tegevustele, mis meile väärtust ei loo.</li>
+                        <li>Teeme ise paremad pensionifondid, et panna koos oma vara parematel tingimustel tulu teenima. Alustame teise samba fondidest. Hiljem teeme ka Tuleva kolmanda samba fondid ja muud pikaajalise investeerimise tooted.</li>
+                    </ul>
+                    <p>Loe ka näiteks asutajaliikmete Indrek Kasela, Daniel Vaariku, Rain Rannu, Annika Uudelepa ja Jaak Roosaare mõtteid, miks nad sellist algatust tähtsaks pidasid.</p>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="second-pillar">
+                <div class="col-md-6">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt magnam provident id quod aspernatur voluptatem perspiciatis unde, consequatur. Maxime obcaecati dolorum ea.</p>
+                    <h2>Lorem ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reprehenderit, ipsam esse ex blanditiis facere?</p>
+                    <span>Asutajate suur idee oli tegelikult lihtne:</span>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, obcaecati illum nobis eaque. Laborum aperiam, nobis, aspernatur odit molestias temporibus nulla accusamus quidem consectetur quo veritatis placeat aliquid tenetur, vero officia suscipit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum tenetur, alias iure. In eligendi, fuga voluptatibus nam quasi aperiam veritatis quos. Porro, quaerat pariatur voluptatibus.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat harum enim, sapiente, possimus maxime aut totam. Placeat, laborum minima ab?</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat a adipisci odio eaque quibusdam, placeat numquam ea sed distinctio, rerum maxime! Fugit modi soluta, et eius, dolore aspernatur tempore neque voluptatum aliquam excepturi, culpa necessitatibus.</p>
+                    <h2>Lorem ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis culpa molestiae quaerat voluptatum possimus dolorem, earum minima perferendis, rerum sunt laboriosam facere. Delectus, neque cumque ab.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corrupti laborum voluptatem, aliquid unde amet sit ex neque aspernatur ipsam minus voluptas, sed distinctio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php endwhile; ?>
 </div>
