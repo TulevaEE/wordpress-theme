@@ -198,6 +198,36 @@
             width: 50%;
         }
     }
+
+    &.media-box-slider {
+        display: block;
+
+        > ul > li {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.unslider-arrow {
+    display: none;
+}
+
+.unslider-nav {
+    padding: 30px 0;
+
+    ol li {
+        background: rgba(38,41,44,0.32);
+        border: none;
+        height: 1em;
+        width: 1em;
+        border-radius: 1em;
+        margin: 0 0.5em;
+
+        &.unslider-active {
+            background: #0081EE;
+        }
+    }
 }
 
 .recent-articles {

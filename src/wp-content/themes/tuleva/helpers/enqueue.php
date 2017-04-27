@@ -40,18 +40,34 @@ class ThemeEnqueue {
                 'enqueue' => true
             ],
             [
-                'handle' => 'equalize',
-                'src' => $js_path . 'vendor/equalize.min.js',
-                'deps' => 'jquery',
-                'ver' => '1.0.2',
-                'js_in_header' => false,
-                'enqueue' => true
-            ],
-            [
                 'handle' => 'bootstrap',
                 'src' => $js_path . 'vendor/bootstrap.min.js',
                 'deps' => 'jquery',
                 'ver' => '3.3.7',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'jquery.event.move',
+                'src' => $js_path . 'vendor/jquery.event.move.js',
+                'deps' => 'jquery',
+                'ver' => '2.0.0',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'jquery.event.swipe',
+                'src' => $js_path . 'vendor/jquery.event.swipe.js',
+                'deps' => 'jquery',
+                'ver' => '0.5.0',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'unslider',
+                'src' => $js_path . 'vendor/unslider.js',
+                'deps' => 'jquery',
+                'ver' => '2.0.0',
                 'js_in_header' => false,
                 'enqueue' => true
             ],

@@ -1,2 +1,3 @@
-// Equalize text boxes
-// $('.text-boxes').equalize({children: '.text-box'});
+$(document).ready(function($) {
+    $('.media-box-slider').unslider();
+});
