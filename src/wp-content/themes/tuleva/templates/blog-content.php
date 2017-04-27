@@ -5,7 +5,7 @@
                 <nav class="submenu">
                     <ul class="submenu__list">
                         <li class="submenu__item submenu__item--current">
-                            <a href="#">Kõik artiklid</a>
+                            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Kõik artiklid</a>
                         </li>
                         <li class="submenu__item">
                             <a href="#">Olulisemad artiklid</a>
@@ -17,72 +17,44 @@
         </div>
         <div class="row">
             <div class="content-area">
-                <ul class="post-list">
-                    <li class="post-list__item post-list__item--wide">
-                        <div class="post-list__item__image">
-                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image-big.jpg" alt=""></a>
-                        </div>
-                        <h2 class="post-list__item__title"><a href="/tuleva20/hello-world">Kelle finantskirjaoskus peab paranema?</a></h2>
+                <ul class="post-list <?php if ($paged > 1) { echo ' post-list--paged'; } ?>">
+                    <?php
+                    $temp = $wp_query; $wp_query= null;
+                    $isPaged = $paged > 1;
+                    $posts_number = $isPaged ? 6 : 5;
+                    $i = 0;
+                    $wp_query = new WP_Query(); $wp_query->query('posts_per_page=' . $posts_number . '&paged='.$paged);
+                    while ($wp_query->have_posts()) : $wp_query->the_post();
+                    $i++;
+                    $isFeatured = !$isPaged && $i === 1;
+                    ?>
+                    <li class="post-list__item<?php if ($isFeatured) { echo ' post-list__item--wide'; } ?>">
+                        <?php if (has_post_thumbnail()) { ?>
+                            <div class="post-list__item__image">
+                                <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'large' ); ?>" alt="<?php the_title(); ?>"></a>
+                            </div>
+                        <?php } ?>
+                        <h3 class="post-list__item__title<?php if ($isFeatured) { echo ' h2'; } ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
+                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="post-list__item__author"><?php echo get_the_author(); ?></a> <?php the_date(); ?>
                         </div>
-                        <div class="post-list__item__description">
-                            Kas see, et kolmveerand Eesti inimestest ei saa aru, kuidas nende pension kujuneb, näitab seda, et me oleme “muutunud rumalamaks”, või pigem hoopis seda, et Eesti pensionisüsteem on liiga keeruline ja pole kedagi, kes inimestele asjatundlikku ning arusaadavat nõu jagaks?
-                        </div>
+                        <div class="post-list__item__description"><?php the_excerpt(); ?></div>
                     </li>
-                    <li class="post-list__item">
-                        <div class="post-list__item__image">
-                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
-                        </div>
-                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Valmis tegime! Tuleva käivitab II samba pensionifondid valitsemistasuga 0,34%</a></h3>
-                        <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Tõnu Pekk</a> 12. aprill 2017
-                        </div>
-                        <div class="post-list__item__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur inventore ad enim perspiciatis, dolorem tempore molestiae earum nemo sint explicabo.
-                        </div>
-                    </li>
-                    <li class="post-list__item">
-                        <div class="post-list__item__image">
-                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
-                        </div>
-                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Õiguskantsler: II samba paindlikkust tuleks suurendada kindlustusfirmade kasumi arvel</a></h3>
-                        <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
-                        </div>
-                        <div class="post-list__item__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quas ipsum adipisci vero quod nihil, a reiciendis similique fuga repudiandae maiores, ducimus, animi labore ab optio soluta asperiores libero sequi beatae cupiditate explicabo! Tenetur, officiis.
-                        </div>
-                    </li>
-                    <li class="post-list__item">
-                        <div class="post-list__item__image">
-                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image2.jpg" alt=""></a>
-                        </div>
-                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">Tuleva pensionifondid: kuhu me investeerime ja milline fond sobib sulle?</a></h3>
-                        <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
-                        </div>
-                        <div class="post-list__item__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iusto maxime ipsam hic expedita modi rerum, doloribus perspiciatis, dolore, ex explicabo possimus autem laudantium eius.
-                        </div>
-                    </li>
-                    <li class="post-list__item">
-                        <div class="post-list__item__image">
-                            <a href="/tuleva20/hello-world"><img src="<?php echo get_template_directory_uri() ?>/img/blog-image.jpg" alt=""></a>
-                        </div>
-                        <h3 class="post-list__item__title"><a href="/tuleva20/hello-world">4. peatükk. Kas indeksifondid on riskantsemad kui käsitsi juhitud fondid? II osa</a></h3>
-                        <div class="post-list__item__meta">
-                            <a href="#" class="post-list__item__author">Kristi Saare</a> 12. aprill 2017
-                        </div>
-                        <div class="post-list__item__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto eveniet quidem, culpa quas pariatur! Non, minima, sequi!
-                        </div>
-                    </li>
+                    <?php endwhile; ?>
                 </ul>
-                <div class="pagination">
-                    <a class="pagination__previous" href="#">Uuemad artiklid</a>
-                    <a class="pagination__next" href="#">Vanemad artiklid</a>
-                </div>
+
+                <?php if ($paged > 1) { ?>
+                    <div class="pagination">
+                        <div class="pagination__previous"><?php next_posts_link('Vanemad artiklid'); ?></div>
+                        <div class="pagination__next"><?php previous_posts_link('Uuemad artiklid'); ?></div>
+                    </div>
+                <?php } else { ?>
+                    <div class="pagination">
+                        <div class="pagination__previous"><?php next_posts_link('Vanemad artiklid'); ?></div>
+                    </div>
+                <?php } ?>
+
+                <?php wp_reset_postdata(); ?>
             </div>
             <div class="widget-area">
                 <div class="cta-widget cta-widget--primary">
