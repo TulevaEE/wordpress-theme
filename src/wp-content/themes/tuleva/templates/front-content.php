@@ -94,8 +94,8 @@
                 <p>Tuleva Tulundusühistu asutasid 22 Eesti ettevõtjat, rahanduseksperti ja ühiskonnategelast, kes leidsid, et Eesti inimesed väärivad paremat tulevikku.</p>
             </div>
         </div>
-        <div class="row row-spacing-half">
-            <div class="media-box-list media-box-slider">
+        <div class="row row-spacing-half media-box-slider-responsive">
+            <div class="media-box-list media-box-slider hidden-xs">
                 <ul>
                     <li>
                         <div class="media-box">
@@ -318,6 +318,99 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias earum doloribus voluptatum ullam delectus, ab minima amet, placeat fugiat aliquam quasi, ipsam! Illum fuga ullam cupiditate nobis, ipsa.</p>
                             </div>
                         </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="media-box-list media-box-slider visible-xs">
+                <ul>
+                    <li>
+                        <div class="media-box">
+                            <div class="media-box__media">
+                                <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/annika-uudelepp.png" alt="">
+                            </div>
+                            <div class="media-box__body">
+                                <h2 class="media-box__title">Annika Uudelepp</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eum quisquam reprehenderit, illo, saepe facere. Odio aspernatur rerum nobis, dicta.</p>
+                            </div>
+                        </div>
+                    </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/daniel-vaarik.jpg" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Daniel Vaarik</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aperiam, dolorem tempora quibusdam nostrum est at voluptate deserunt deleniti omnis, laborum mollitia id perspiciatis, vero excepturi a odit rem sunt, dolore eaque blanditiis.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/priit-lepasepp.png" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Priit Lepasepp</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequuntur maiores possimus quod, necessitatibus ullam tempora eius ipsa amet, architecto soluta quis? Alias illo labore error architecto fuga fugit, enim dolore nam. Atque, unde, est.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Tõnu Pekk</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi iusto ipsa eligendi eos quidem necessitatibus unde incidunt quas maiores. Obcaecati ipsa eos dolorum modi ut!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/henrik-karmo.jpg" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Henrik Karmo</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum culpa, laboriosam quam eos suscipit, impedit ex, qui sed nemo, eligendi dolorem nam. Ipsa quas ullam, repudiandae eum quasi voluptatum illo impedit reiciendis a unde! Earum aut molestiae unde eius est expedita aliquid nostrum pariatur culpa.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/taavi-lepmets.jpg" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Taavi Lepmets</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias earum doloribus voluptatum ullam delectus, ab minima amet, placeat fugiat aliquam quasi, ipsam! Illum fuga ullam cupiditate nobis, ipsa.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/indrek-kasela.jpg" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Indrek Kasela</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum culpa, laboriosam quam eos suscipit, impedit ex, qui sed nemo, eligendi dolorem nam. Ipsa quas ullam, repudiandae eum quasi voluptatum illo impedit reiciendis a unde! Earum aut molestiae unde eius est expedita aliquid nostrum pariatur culpa.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media-box">
+                                <div class="media-box__media">
+                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/taavet-hinrikus.jpg" alt="">
+                                </div>
+                                <div class="media-box__body">
+                                    <h2 class="media-box__title">Taavet Hinrikus</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias earum doloribus voluptatum ullam delectus, ab minima amet, placeat fugiat aliquam quasi, ipsam! Illum fuga ullam cupiditate nobis, ipsa.</p>
+                                </div>
+                            </div>
+                        </li>
                     </li>
                 </ul>
             </div>
