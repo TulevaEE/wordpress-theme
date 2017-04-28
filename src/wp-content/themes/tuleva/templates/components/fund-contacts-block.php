@@ -2,7 +2,7 @@
     <div class="row">
         <div class="contacts-block">
             <?php for( $i = 1; $i < 5; $i++ ) { ?>
-                <div class="col-md-3 col-sm-4 col-xs-6 contacts-block__item">
+                <div class="col-md-3 col-sm-6 col-xs-12 contacts-block__item">
                     <img class="contacts-block__image" src="<?php the_sub_field('image_' . $i); ?>" alt="<?php the_sub_field('name_' . $i); ?>">
                     <h2 class="contacts-block__title"><?php the_sub_field('name_' . $i); ?></h2>
                     <div class="contacts-block__row"><strong><?php the_sub_field('company_' . $i); ?></strong></div>
