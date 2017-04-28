@@ -5,7 +5,7 @@
  * @return string
  */
 function get_meta_description() {
-    $meta_desc = get_post_meta( get_queried_object_id(), '_pm_meta_desc', true );
+    $meta_desc = get_post_meta( get_queried_object_id(), '_tu_meta_desc', true );
 
     return $meta_desc;
 }
@@ -23,7 +23,10 @@ function print_meta_description_tag() {
 }
 add_action('wp_head', 'print_meta_description_tag');
 
-// Add WPML body class
+
+/**
+ *  Add WPML body class
+ */
 add_filter('body_class', 'wpml_body_class');
 function wpml_body_class($classes) {
     if(defined('ICL_LANGUAGE_CODE')) {
@@ -46,7 +49,7 @@ function get_template_post($template, $object = false) {
                 'meta_value' => $template,
                 'meta_compare' => '=='
             );
-    $template_query= null;
+    $template_query = null;
     $template_query = new WP_Query();
     $template_query->query( $args );
     $posts = $template_query->get_posts();

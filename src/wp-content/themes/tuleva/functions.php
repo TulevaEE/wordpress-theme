@@ -16,6 +16,7 @@ $theme_includes = [
     'helpers/acf/init.php', // Init Advanced Custom Fields
     'helpers/post-types/init.php', // Init custom post types
     'widgets/init.php', // Init widgets
+    'helpers/editor.php', // Editor customizations
     'helpers/setup.php', // Enqueue scripts & styles
 ];
 

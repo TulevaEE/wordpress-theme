@@ -3112,19 +3112,20 @@ hr {
 .no-padding {
   padding: 0 !important; }
 
-.contacts-block {
-  padding: 100px 0; }
-  .contacts-block__item {
-    text-align: center; }
-  .contacts-block__image {
-    border-radius: 50%;
-    width: 160px;
-    height: 160px; }
-  .contacts-block__title {
-    margin-top: 42px;
-    margin-bottom: 18px; }
-  .contacts-block__row {
-    margin-bottom: 10px; }
+.contacts-block__item {
+  text-align: center; }
+
+.contacts-block__image {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px; }
+
+.contacts-block__title {
+  margin-top: 42px;
+  margin-bottom: 18px; }
+
+.contacts-block__row {
+  margin-bottom: 10px; }
 
 .text-box {
   background: #fff;
@@ -3160,22 +3161,24 @@ hr {
     line-height: 1.5;
     margin-bottom: 1.5em; }
 
-.statistics-box {
+.text-rows-box {
   text-align: center;
   color: #002F63;
   font-size: 1.25em;
   padding: 100px 0;
   margin-bottom: -2.25em; }
-  .statistics-box__row {
+  .text-rows-box__row {
     line-height: 1;
     margin-bottom: 1.8em; }
 
-.comparison-box .list-unstyled {
-  margin-bottom: 50px;
+.columns-block .list-unstyled {
   line-height: 2; }
 
-.comparison-box .list-style-arrow {
+.columns-block .list-style-arrow {
   line-height: 2; }
+
+.comparison-component .list-unstyled {
+  margin-bottom: 50px; }
 
 .single-quote-box {
   padding: 110px 0;
@@ -3498,16 +3501,24 @@ hr {
     margin-bottom: 1em; }
 
 .row-spacing {
-  margin: 100px 0; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 .row-spacing-half {
-  margin: 60px 0; }
+  margin-top: 60px;
+  margin-bottom: 60px; }
 
 .row-spacing-top {
-  margin: 100px 0 0; }
+  margin-top: 100px; }
+
+.row-spacing-top-half {
+  margin-top: 60px; }
 
 .row-spacing-bottom {
-  margin: 0 0 100px; }
+  margin-bottom: 100px; }
+
+.row-spacing-bottom-half {
+  margin-bottom: 60px; }
 
 .content-area,
 .widget-area {

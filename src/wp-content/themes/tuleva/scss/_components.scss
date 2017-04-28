@@ -1,6 +1,4 @@
 .contacts-block {
-    padding: 100px 0;
-
     &__item {
         text-align: center;
     }
@@ -75,7 +73,7 @@
     }
 }
 
-.statistics-box {
+.text-rows-box {
     text-align: center;
     color: $navy-blue;
     font-size: 1.25em;
@@ -88,18 +86,18 @@
     }
 }
 
-.comparison-box {
-    &__heading {
-
-    }
+.columns-block {
     .list-unstyled {
-        margin-bottom: 50px;
         line-height: 2;
     }
 
     .list-style-arrow {
         line-height: 2;
     }
+}
+
+.comparison-component .list-unstyled {
+    margin-bottom: 50px;
 }
 
 .single-quote-box {

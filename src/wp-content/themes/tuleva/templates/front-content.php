@@ -42,10 +42,10 @@
         </div>
         <div class="row row-spacing-half">
             <div class="col-md-12">
-                <div class="statistics-box no-padding">
-                    <div class="statistics-box__row">Tuleva fondidega on liitunud <strong class="text-highlight">3398</strong> inimest.</div>
-                    <div class="statistics-box__row">Tuleva maailma aktsiaturu pensionifondi maht on <strong class="text-highlight">35 654 848</strong> eurot.</div>
-                    <div class="statistics-box__row">Tuleva maailma võlakirjade pensionifondi maht on <strong class="text-highlight">6 548 121</strong> eurot.</div>
+                <div class="text-rows-box no-padding">
+                    <div class="text-rows-box__row">Tuleva fondidega on liitunud <strong class="text-highlight">3398</strong> inimest.</div>
+                    <div class="text-rows-box__row">Tuleva maailma aktsiaturu pensionifondi maht on <strong class="text-highlight">35 654 848</strong> eurot.</div>
+                    <div class="text-rows-box__row">Tuleva maailma võlakirjade pensionifondi maht on <strong class="text-highlight">6 548 121</strong> eurot.</div>
                 </div>
             </div>
         </div>

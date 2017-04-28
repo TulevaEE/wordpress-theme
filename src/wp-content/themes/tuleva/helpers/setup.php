@@ -6,7 +6,7 @@
 define('THEME_URL', get_template_directory_uri());
 define('CAT', 'product_cat');
 define('PRODUCTS_POST_TYPE', 'products');
-define('TEXT_DOMAIN', 'ss');
+define('TEXT_DOMAIN', 'tu');
 
 /**
  * Theme setup

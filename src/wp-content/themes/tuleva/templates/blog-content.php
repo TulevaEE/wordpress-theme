@@ -11,7 +11,7 @@
                             <a href="#">Olulisemad artiklid</a>
                         </li>
                     </ul>
-                    <a class="pull-right" href="<?php bloginfo('url'); ?>/feed/rss2/">RSS voog</a>
+                    <a class="pull-right hidden-xs" href="<?php bloginfo('url'); ?>/feed/rss2/">RSS voog</a>
                 </nav>
             </div>
         </div>

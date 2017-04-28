@@ -1,12 +1,16 @@
 <div class="page-container">
-    <div class="container">
-        <div class="row row-spacing-bottom">
-            <div class="col-md-12">
-                <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        <div class="container">
+            <div class="row row-spacing-bottom">
+                <div class="col-md-12">
                     <?php if (get_the_title()) { ?>
                         <h1 class="page-title"><?php the_title(); ?></h1>
                     <?php } ?>
                     <h2 class="text-center text-normal">Tuleva üldine kontakttelefon: +372 644 5100</h2>
+                </div>
+            </div>
+            <div class="row row-spacing">
+                <div class="col-md-12">
                     <div class="contacts-block">
                         <div class="col-md-4 contacts-block__item">
                             <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="Tõnu Pekk">
@@ -33,8 +37,8 @@
                             <div class="contacts-block__row">+372 5558 8178</div>
                         </div>
                     </div>
-                <?php endwhile; ?>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endwhile; ?>
 </div>

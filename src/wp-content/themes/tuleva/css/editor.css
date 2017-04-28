@@ -1,0 +1,167 @@
+/**
+ * Fonts customization
+ */
+/**
+ * Colors
+ */
+/**
+ * Brand definitions
+ */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-size: 16px; }
+
+button {
+  font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+
+h1, .h1 {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #002F63;
+  line-height: 1.5; }
+
+.h1-sm {
+  font-size: 2.25em; }
+
+.h1-xs {
+  font-size: 2em; }
+
+.h1-bottom-margin {
+  margin-bottom: 96px; }
+
+h2, .h2 {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #002F63;
+  line-height: 1.5; }
+
+h3, .h3 {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #002F63;
+  line-height: 1.5; }
+
+.heading-bottom-spacing {
+  margin-bottom: 1em; }
+
+p, .p {
+  line-height: 1.44;
+  font-size: 1em;
+  font-weight: normal;
+  color: #303030;
+  margin: 0 0 2em; }
+  p .lead, .p .lead {
+    font-size: 1.25em; }
+
+small {
+  font-size: 0.875em;
+  color: #303030; }
+
+.text-regular {
+  font-weight: 500; }
+
+.text-normal {
+  font-weight: normal; }
+
+.text-medium {
+  font-weight: 500; }
+
+.text-bold {
+  font-weight: bold; }
+
+.text-lg {
+  font-size: 20px; }
+
+.text-highlight {
+  background-image: linear-gradient(#FCE228, #FCE228);
+  background-position: 0 0.7em;
+  background-repeat: repeat-x;
+  background-size: 0.4em 0.4em;
+  padding: 0 0.1em; }
+
+.text-muted {
+  color: rgba(48, 48, 48, 0.64); }
+
+.text-navy {
+  color: #002F63; }
+
+.list-style-arrow {
+  list-style: none;
+  padding-left: 30px; }
+  .list-style-arrow li {
+    padding-left: 2em;
+    background-image: url("../img/icon-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center; }
+
+.list-style-checkmark,
+.list-style-plussign {
+  list-style: none; }
+  .list-style-checkmark li,
+  .list-style-plussign li {
+    padding-left: 2em;
+    background-repeat: no-repeat;
+    background-position: 0 center; }
+
+.list-style-checkmark li {
+  background-image: url("../img/icon-checkmark.svg"); }
+
+.list-style-plussign li {
+  background-image: url("../img/icon-plussign.svg"); }
+
+a:hover,
+a:focus {
+  color: #0081EE;
+  text-decoration: none; }
+
+.brand-logo {
+  max-width: 150px; }
+
+.control-code {
+  font-size: 5em;
+  font-weight: bold; }
+
+hr {
+  border-color: #d8d8d8;
+  background-color: white;
+  margin: 0;
+  padding: 0; }
+
+.custom-select {
+  width: 100%; }
+
+.form-control::-webkit-input-placeholder {
+  color: rgba(48, 48, 48, 0.32); }
+
+.form-control:-ms-input-placeholder {
+  color: rgba(48, 48, 48, 0.32); }
+
+.form-control::placeholder {
+  color: rgba(48, 48, 48, 0.32); }
+
+.alert {
+  border: solid 2px #d8d8d8;
+  border-radius: 8px; }
+  .alert-success {
+    background-color: rgba(11, 250, 67, 0.08);
+    border-color: #51c26c; }
+
+.btn-xl {
+  padding: 16px 60px;
+  font-size: 24px;
+  line-height: 1.2;
+  border-radius: 8px; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+/*# sourceMappingURL=editor.css.map */

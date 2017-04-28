@@ -1,17 +1,27 @@
 .row-spacing {
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .row-spacing-half {
-    margin: 60px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .row-spacing-top {
-    margin: 100px 0 0;
+    margin-top: 100px;
+}
+
+.row-spacing-top-half {
+    margin-top: 60px;
 }
 
 .row-spacing-bottom {
-    margin: 0 0 100px;
+    margin-bottom: 100px;
+}
+
+.row-spacing-bottom-half {
+    margin-bottom: 60px;
 }
 
 .content-area,
