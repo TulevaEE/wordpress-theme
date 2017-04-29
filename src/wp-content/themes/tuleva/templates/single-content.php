@@ -2,7 +2,7 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="post-cover">
         <div class="post-cover__image" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/cover.jpg');"></div>
-        <img class="post-cover__author" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" alt="Tõnu Pekk">
+        <?php echo get_avatar(get_the_author_meta('ID'), 80, 'mm', get_the_author_meta('user_nicename'), ['class' => 'post-cover__author']); ?>
     </div>
     <div class="container">
         <div class="row">
@@ -11,7 +11,8 @@
                     <h1 class="page-title"><?php the_title(); ?></h1>
                 <?php } ?>
                 <div class="post-meta">
-                    <a href="#" class="post-meta__author">Tõnu Pekk</a>  11. aprill 2017
+                    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>" class="post-meta__author"><?php echo get_the_author(); ?></a>
+                    <?php the_date(); ?>
                 </div>
             </div>
         </div>
@@ -32,13 +33,7 @@
                         <?php the_content(); ?>
                     </div>
                 <?php } ?>
-                <div class="recent-articles">
-                    <h5 class="recent-articles__heading">Eelmised artiklid</h5>
-                    <ul class="recent-articles__list">
-                        <li><a href="#">Valmis tegime! Tuleva käivitab II samba pensionifondid valitsemistasuga 0,34%</a></li>
-                        <li><a href="#">Õiguskantsler: II samba paindlikkust tuleks suurendada kindlustusfirmade kasumi arvel</a></li>
-                    </ul>
-                </div>
+                <?php get_template_part('templates/blog/recent-articles'); ?>
             </div>
         </div>
     </div>
