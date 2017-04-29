@@ -1,16 +1,25 @@
-<div class="container row-spacing">
+<div class="container<?php
+    if (get_sub_field('spacing') === 'half') {
+        echo ' row-spacing-half';
+    } else {
+        echo ' row-spacing';
+    } ?>">
     <div class="row text-boxes">
-        <div class="col-md-6">
-            <div class="text-box">
-                <h2 class="text-box__title"><?php the_sub_field('title_1'); ?></h2>
-                <?php the_sub_field('text_1'); ?>
+        <?php for( $i = 1; $i < 3; $i++ ) { ?>
+            <div class="col-md-6">
+                <div class="text-box<?php
+                    if (get_sub_field('box_border_radius') == 8) {
+                        echo ' text-box--rounder';
+                    } ?>">
+                    <h2 class="text-box__title<?php
+                        if (get_sub_field('title_' . $i . '_border') === 'blue') {
+                            echo ' text-box__title--border-blue';
+                        } elseif (get_sub_field('title_' . $i . '_border') === 'lightblue') {
+                            echo ' text-box__title--border-lightblue';
+                        } ?>"><?php the_sub_field('title_' . $i); ?></h2>
+                    <?php the_sub_field('text_' . $i); ?>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="text-box">
-                <h2 class="text-box__title"><?php the_sub_field('title_2'); ?></h2>
-                <?php the_sub_field('text_2'); ?>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 </div>

@@ -9,23 +9,23 @@
     </div>
 
     <?php
-        if (have_rows('fund_components')):
-            while (have_rows('fund_components')) : the_row();
-                if (get_row_layout() === 'text_boxes'):
+        if (have_rows('fund_components')) {
+            while (have_rows('fund_components')) { the_row();
+                if (get_row_layout() === 'text_boxes') {
                     get_template_part('templates/components/text-boxes');
-                elseif (get_row_layout() === 'media'):
+                } elseif (get_row_layout() === 'media') {
                     get_template_part('templates/components/media');
-                elseif (get_row_layout() === 'statistics_block'):
+                } elseif (get_row_layout() === 'statistics_block') {
                     get_template_part('templates/components/statistics-block');
-                elseif (get_row_layout() === 'comparison_block'):
+                } elseif (get_row_layout() === 'comparison_block') {
                     get_template_part('templates/components/comparison-block');
-                elseif (get_row_layout() === 'single_quote_block'):
+                } elseif (get_row_layout() === 'single_quote_block') {
                     get_template_part('templates/components/single-quote-block');
-                elseif (get_row_layout() === 'fund_contacts_block'):
+                } elseif (get_row_layout() === 'fund_contacts_block') {
                     get_template_part('templates/components/fund-contacts-block');
-                endif;
-            endwhile;
-        endif;
+                }
+            }
+        }
     ?>
 
     <?php endwhile; ?>

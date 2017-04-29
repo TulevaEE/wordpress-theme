@@ -1,4 +1,9 @@
-<div class="bg-alt row-spacing">
+<div class="bg-alt<?php
+    if (get_sub_field('spacing') === 'half') {
+        echo ' row-spacing-half';
+    } else {
+        echo ' row-spacing';
+    } ?>">
     <div class="container">
         <div class="row">
             <div class="single-quote-box">

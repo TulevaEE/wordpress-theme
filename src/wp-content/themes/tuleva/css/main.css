@@ -3129,10 +3129,9 @@ hr {
 
 .text-box {
   background: #fff;
-  padding: 30px;
+  padding: 30px 30px 10px;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  margin-bottom: 20px; }
+  border-radius: 4px; }
   .text-box--rounder {
     border-radius: 8px; }
   .text-box__title {

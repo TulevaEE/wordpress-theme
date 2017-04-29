@@ -1,4 +1,9 @@
-<div class="container row-spacing">
+<div class="container<?php
+    if (get_sub_field('spacing') === 'half') {
+        echo ' row-spacing-half';
+    } else {
+        echo ' row-spacing';
+    } ?>">
     <div class="row">
         <div class="col-md-12">
             <div class="media">

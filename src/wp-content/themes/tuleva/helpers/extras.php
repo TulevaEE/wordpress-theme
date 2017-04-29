@@ -23,11 +23,28 @@ function print_meta_description_tag() {
 }
 add_action('wp_head', 'print_meta_description_tag');
 
+/**
+ * Adds custom logo to login page
+ * @return void
+ */
+function custom_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a,
+        .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/tuleva-logo.svg);
+            background-size: 200px;
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+<?php }
+add_action('login_enqueue_scripts', 'custom_login_logo');
 
 /**
- *  Add WPML body class
+ * Adds WPML body class
+ * @param  array $classes Default WPML body classes
+ * @return array          Modified WPML body classes
  */
-add_filter('body_class', 'wpml_body_class');
 function wpml_body_class($classes) {
     if(defined('ICL_LANGUAGE_CODE')) {
         $classes[] = 'lang-' . ICL_LANGUAGE_CODE;
@@ -35,6 +52,7 @@ function wpml_body_class($classes) {
 
     return $classes;
 }
+add_filter('body_class', 'wpml_body_class');
 
 /**
  * Returns object or id which uses provided template

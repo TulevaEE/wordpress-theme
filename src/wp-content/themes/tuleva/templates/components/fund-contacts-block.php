@@ -1,4 +1,9 @@
-<div class="container row-spacing-half">
+<div class="container<?php
+    if (get_sub_field('spacing') === 'half') {
+        echo ' row-spacing-half';
+    } else {
+        echo ' row-spacing';
+    } ?>">
     <div class="row">
         <div class="contacts-block">
             <?php for( $i = 1; $i < 5; $i++ ) { ?>
