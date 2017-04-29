@@ -37,17 +37,35 @@
     }
 }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $navbar-default-link-color;
+    font-weight: bold;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      left: 10px;
+      right: 10px;
+      bottom: 20px;
+      border-bottom: 2px solid $brand-primary;
+    }
+}
+
 .nav-lang {
     font-weight: normal;
 }
 
 .navbar-buttons {
     @include not-mobile {
-        margin-top: 20px;
+        margin-top: 10px;
         display: inline-block;
     }
 
     .navbar-btn {
+        margin-top: 32px;
         margin-left: 12px;
         margin-bottom: 0;
         padding: 4px 16px;
@@ -59,6 +77,12 @@
             margin: 16px 0;
             padding: 8px 16px;
         }
+    }
+
+    .nav-lang.hidden-xs {
+        display: block;
+        text-align: right;
+        font-size: 0.875em;
     }
 }
 

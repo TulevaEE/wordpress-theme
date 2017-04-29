@@ -24,6 +24,45 @@ function print_meta_description_tag() {
 add_action('wp_head', 'print_meta_description_tag');
 
 /**
+ * Prints language links
+ * @param  boolean $isMobile Is visible in mobile or desktop
+ * @return void
+ */
+function language_picker($isMobile = false) {
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    $visibility_class = $isMobile ? 'visible-xs' : 'hidden-xs';
+
+    if (!empty($languages)) {
+        foreach($languages as $l) {
+            $link = '<a href="'.$l['url'].'" class="nav-lang ' . $visibility_class;
+
+            if ($l['active']) {
+                $link .= ' active">';
+            } else {
+                $link .='">';
+            }
+
+            if ($l['code'] === 'en') {
+                $link .= 'In ';
+            }
+
+            $link .= icl_disp_language($l['native_name']);
+
+            if ($l['code'] === 'et') {
+                $link .= ' keeles';
+            }
+
+            $link .= '</a>';
+
+            if (!$l['active']) {
+                echo $link;
+            }
+        }
+    }
+
+    unset($languages);
+}
+/**
  * Adds custom logo to login page
  * @return void
  */

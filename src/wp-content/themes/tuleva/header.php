@@ -24,8 +24,9 @@
             <div class="collapse navbar-collapse" id="header-menu">
                 <div class="navbar-right">
                     <?php get_template_part('templates/header/menu'); ?>
-                    <?php get_template_part('templates/header/language-switch'); ?>
+                    <?php language_picker(true); ?>
                     <div class="navbar-buttons">
+                        <?php language_picker(); ?>
                         <a href="#" class="btn btn-primary navbar-btn">Sisene Tuleva äppi</a>
                     </div>
                 </div>

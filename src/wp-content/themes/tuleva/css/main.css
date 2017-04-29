@@ -3577,15 +3577,32 @@ hr {
         padding-top: 20px;
         padding-bottom: 20px; } }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #002F63;
+  font-weight: bold; }
+  .navbar-default .navbar-nav > .active > a:before,
+  .navbar-default .navbar-nav > .active > a:hover:before,
+  .navbar-default .navbar-nav > .active > a:focus:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+    border-bottom: 2px solid #0081EE; }
+
 .nav-lang {
   font-weight: normal; }
 
 @media (min-width: 768px) {
   .navbar-buttons {
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block; } }
 
 .navbar-buttons .navbar-btn {
+  margin-top: 32px;
   margin-left: 12px;
   margin-bottom: 0;
   padding: 4px 16px;
@@ -3596,6 +3613,11 @@ hr {
       font-size: 20px;
       margin: 16px 0;
       padding: 8px 16px; } }
+
+.navbar-buttons .nav-lang.hidden-xs {
+  display: block;
+  text-align: right;
+  font-size: 0.875em; }
 
 .navbar-toggle {
   position: relative;
