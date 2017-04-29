@@ -45,6 +45,7 @@ $(document).ready(function($) {
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
+        .not('[data-toggle="tab"]')
         .on('click', function(ev) {
             // Figure out element to scroll to
             var target = $(this.hash),
