@@ -25,10 +25,6 @@
 
     @include not-mobile {
         margin-top: 20px;
-
-        .nav-lang {
-            display: none;
-        }
     }
 
     @include mobile {
@@ -39,10 +35,10 @@
             padding-bottom: 20px;
         }
     }
+}
 
-    .nav-lang {
-        font-weight: normal;
-    }
+.nav-lang {
+    font-weight: normal;
 }
 
 .navbar-buttons {

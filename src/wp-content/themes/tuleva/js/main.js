@@ -39,4 +39,51 @@ $(document).ready(function($) {
     $(window).resize(function() {
         handleResponsiveSlidesNav();
     });
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .on('click', function(ev) {
+            // Figure out element to scroll to
+            var target = $(this.hash),
+                $target = $(target),
+                result = true;
+
+            // On-page links
+            if (
+              location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+              &&
+              location.hostname === this.hostname
+            ) {
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    ev.preventDefault();
+
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        $target.focus();
+
+                        // Checking if the target was focused
+                        if ($target.is(":focus")) {
+                          result = false;
+                        } else {
+                          // Adding tabindex for elements not focusable
+                          $target.attr('tabindex', '-1');
+                          // Set focus again
+                          $target.focus();
+                        }
+
+                        return result;
+                    });
+                }
+            }
+        });
 });

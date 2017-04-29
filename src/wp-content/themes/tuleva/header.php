@@ -23,14 +23,8 @@
             </div>
             <div class="collapse navbar-collapse" id="header-menu">
                 <div class="navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="<?php bloginfo('url'); ?>/et/sample-page">Küsimused ja vastused</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/et/sample-page">Asutajaliikmed</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/et/fondid">Fondid</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/et/blog">Blogi</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/et/contacts">Kontaktid</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/en" class="nav-lang">In English</a></li>
-                    </ul>
+                    <?php get_template_part('templates/header/menu'); ?>
+                    <?php get_template_part('templates/header/language-switch'); ?>
                     <div class="navbar-buttons">
                         <a href="#" class="btn btn-primary navbar-btn">Sisene Tuleva äppi</a>
                     </div>

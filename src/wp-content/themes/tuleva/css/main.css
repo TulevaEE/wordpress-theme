@@ -3569,17 +3569,16 @@ hr {
   padding: 23px 0 0; }
   @media (min-width: 768px) {
     .navbar-nav {
-      margin-top: 20px; }
-      .navbar-nav .nav-lang {
-        display: none; } }
+      margin-top: 20px; } }
   @media (max-width: 767px) {
     .navbar-nav {
       padding: 0; }
       .navbar-nav > li > a {
         padding-top: 20px;
         padding-bottom: 20px; } }
-  .navbar-nav .nav-lang {
-    font-weight: normal; }
+
+.nav-lang {
+  font-weight: normal; }
 
 @media (min-width: 768px) {
   .navbar-buttons {

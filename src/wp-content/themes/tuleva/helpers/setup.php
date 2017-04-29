@@ -22,9 +22,7 @@ function theme_setup() {
     // Register wp_nav_menu() menus
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', TEXT_DOMAIN),
-        'footer_nav_1' => __('Footer Navigation 1', TEXT_DOMAIN),
-        'footer_nav_2' => __('Footer Navigation 2', TEXT_DOMAIN)
+        'primary_navigation' => __('Primary Navigation', TEXT_DOMAIN)
     ]);
 
     // Enable post thumbnails
