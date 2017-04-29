@@ -1,7 +1,8 @@
 <?php
 
 $acf_includes = [
-    'helpers/acf/fund.php' // Fund page fields
+    'helpers/acf/fund.php', // Fund page fields
+    'helpers/acf/front.php' // Front page fields
 ];
 
 foreach ($acf_includes as $file) {
