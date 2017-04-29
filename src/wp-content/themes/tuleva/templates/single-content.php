@@ -1,7 +1,7 @@
 <div class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="post-cover">
-        <div class="post-cover__image" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/cover.jpg');"></div>
+        <div class="post-cover__image" style="background-image: url('<?php echo the_post_thumbnail_url('full'); ?>')"></div>
         <?php echo get_avatar(get_the_author_meta('ID'), 80, 'mm', get_the_author_meta('user_nicename'), ['class' => 'post-cover__author']); ?>
     </div>
     <div class="container">
