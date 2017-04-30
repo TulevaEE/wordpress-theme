@@ -2962,6 +2962,9 @@ html {
 body {
   font-size: 16px; }
 
+div:focus {
+  outline: none; }
+
 button {
   font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
 

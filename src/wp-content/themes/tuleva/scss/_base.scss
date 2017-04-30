@@ -9,6 +9,10 @@ body {
   font-size: $font-size-base;
 }
 
+div:focus {
+    outline: none;
+}
+
 button {
   font-family: $font-family-sans-serif;
 }

@@ -5,7 +5,7 @@
  * @return string
  */
 function get_meta_description() {
-    $meta_desc = get_post_meta( get_queried_object_id(), '_tu_meta_desc', true );
+    $meta_desc = get_post_meta(get_queried_object_id(), '_tu_meta_desc', true);
 
     return $meta_desc;
 }
@@ -90,7 +90,7 @@ function get_component_classes($classes = []) {
  * Adds custom logo to login page
  * @return void
  */
-function custom_login_logo() { ?>
+function customize_login_page_logo() { ?>
     <style type="text/css">
         #login h1 a,
         .login h1 a {
@@ -101,7 +101,7 @@ function custom_login_logo() { ?>
         }
     </style>
 <?php }
-add_action('login_enqueue_scripts', 'custom_login_logo');
+add_action('login_enqueue_scripts', 'customize_login_page_logo');
 
 /**
  * Adds WPML body class

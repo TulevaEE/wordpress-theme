@@ -1,4 +1,4 @@
-<div class="<?php echo get_component_classes('bg-alt'); ?>">
+<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('bg-alt'); ?>">
     <div class="container tabs">
         <h2 class="h1-xs text-center"><?php the_sub_field('title'); ?></h2>
         <ul class="nav nav-tabs" role="tablist">

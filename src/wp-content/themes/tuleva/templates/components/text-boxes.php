@@ -1,4 +1,4 @@
-<div class="<?php echo get_component_classes('container'); ?>">
+<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
     <div class="row text-boxes">
         <?php for( $i = 1; $i < 3; $i++ ) { ?>
             <div class="col-md-6">

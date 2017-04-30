@@ -1,4 +1,4 @@
-<div class="<?php echo get_component_classes('container'); ?>">
+<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
     <div class="row media-box-slider-responsive">
         <div class="media-box-list media-box-slider hidden-xs">
             <ul>
