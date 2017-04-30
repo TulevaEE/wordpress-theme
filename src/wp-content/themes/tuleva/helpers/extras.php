@@ -124,18 +124,18 @@ add_filter('body_class', 'wpml_body_class');
  * @return int/object           Post ID or object is returned
  */
 function get_template_post($template, $object = false) {
-    $args = array(
+    $args = [
                 'post_type' => 'page',
                 'meta_key' => '_wp_page_template',
                 'meta_value' => $template,
                 'meta_compare' => '=='
-            );
+            ];
     $template_query = null;
     $template_query = new WP_Query();
     $template_query->query( $args );
     $posts = $template_query->get_posts();
     $post = false;
-    $return = false;
+    $return = null;
 
     if (!empty($posts)) {
         $post = $posts[0];

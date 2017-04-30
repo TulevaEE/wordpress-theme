@@ -2,17 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <nav class="submenu">
-                    <ul class="submenu__list">
-                        <li class="submenu__item submenu__item--current">
-                            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Kõik artiklid</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="#">Olulisemad artiklid</a>
-                        </li>
-                    </ul>
-                    <a class="pull-right hidden-xs" href="<?php bloginfo('url'); ?>/feed/rss2/">RSS voog</a>
-                </nav>
+                <?php get_template_part('templates/blog/submenu'); ?>
             </div>
         </div>
         <div class="row">
