@@ -1,9 +1,4 @@
-<div class="bg-alt<?php
-    if (get_sub_field('spacing') === 'half') {
-        echo ' row-spacing-half';
-    } else {
-        echo ' row-spacing';
-    } ?>">
+<div class="<?php echo get_component_classes('bg-alt'); ?>">
     <div class="container tabs">
         <h2 class="h1-xs text-center"><?php the_sub_field('title'); ?></h2>
         <ul class="nav nav-tabs" role="tablist">
@@ -22,12 +17,7 @@
     </div>
 </div>
 
-<div class="container<?php
-    if (get_sub_field('spacing') === 'half') {
-        echo ' row-spacing-half';
-    } else {
-        echo ' row-spacing';
-    } ?>">
+<div class="<?php echo get_component_classes('container'); ?>">
     <div class="tab-content">
         <?php if (have_rows('tabs')) { $i = 0;
             while (have_rows('tabs')) { $i++; the_row(); ?>

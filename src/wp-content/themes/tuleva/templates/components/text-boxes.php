@@ -1,9 +1,4 @@
-<div class="container<?php
-    if (get_sub_field('spacing') === 'half') {
-        echo ' row-spacing-half';
-    } else {
-        echo ' row-spacing';
-    } ?>">
+<div class="<?php echo get_component_classes('container'); ?>">
     <div class="row text-boxes">
         <?php for( $i = 1; $i < 3; $i++ ) { ?>
             <div class="col-md-6">

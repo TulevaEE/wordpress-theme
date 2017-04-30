@@ -1,12 +1,4 @@
-<div class="<?php
-    if (get_sub_field('has_background_color')) {
-        echo 'bg-alt ';
-    }
-    if (get_sub_field('spacing') === 'half') {
-        echo 'row-spacing-half';
-    } else {
-        echo 'row-spacing';
-    } ?>">
+<div class="<?php echo get_component_classes(); ?>">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

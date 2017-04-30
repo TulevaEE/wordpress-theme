@@ -1,9 +1,4 @@
-<div class="container<?php
-    if (get_sub_field('spacing') === 'half') {
-        echo ' row-spacing-half';
-    } else {
-        echo ' row-spacing';
-    } ?>">
+<div class="<?php echo get_component_classes('container'); ?>">
     <div class="row">
         <div class="col-md-12 text-center">
             <h2 class="h1-xs heading-bottom-spacing"><?php the_sub_field('heading'); ?></h2>

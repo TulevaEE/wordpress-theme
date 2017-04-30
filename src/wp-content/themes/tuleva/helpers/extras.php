@@ -62,6 +62,30 @@ function language_picker($isMobile = false) {
 
     unset($languages);
 }
+
+/**
+ * Returns string of classes for component container
+ * @param  array/string  $classes Array or string of classes to be joined
+ * @return string                 String of classes joined together
+ */
+function get_component_classes($classes = []) {
+    if (!empty($classes) && is_string($classes)) {
+        $classes = [$classes];
+    }
+
+    if (get_sub_field('has_background_color')) {
+        $classes[] = 'bg-alt';
+    }
+
+    if (get_sub_field('spacing') === 'half') {
+        $classes[] = 'row-spacing-half';
+    } else {
+        $classes[] = 'row-spacing';
+    }
+
+    return implode($classes, ' ');
+}
+
 /**
  * Adds custom logo to login page
  * @return void
