@@ -26,7 +26,6 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <a href="<?php bloginfo('url'); ?>/en" class="footer__language">In English</a>
                 <div class="footer__social">
                     <a href="#">
                         <img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook.svg" alt="Facebook">
