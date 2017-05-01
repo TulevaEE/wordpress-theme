@@ -3306,6 +3306,73 @@ hr {
     .unslider-nav ol li.unslider-active {
       background: #0081EE; }
 
+#hs-beacon div iframe:first-child {
+  display: none; }
+
+.beacon-toggle {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: block;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  font-size: 1.125em;
+  line-height: 1;
+  border-radius: 64px;
+  background-color: #FF4800;
+  padding: 24px 34px;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 64px;
+  width: 230px;
+  transition: all .4s ease; }
+  .beacon-toggle:hover, .beacon-toggle:focus {
+    color: #fff; }
+  .beacon-toggle__icon {
+    background: #002F63;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 48%;
+    width: 18px;
+    height: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: opacity .2s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0; }
+    .beacon-toggle__icon::before {
+      content: ' ';
+      background: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 2px;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      transition: opacity .2s ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      opacity: 0; }
+  .beacon-toggle--open {
+    background-color: #fff;
+    width: 64px;
+    height: 64px; }
+    .beacon-toggle--open .beacon-toggle__icon {
+      opacity: 1;
+      transition: opacity .1s;
+      transition-delay: .3s; }
+      .beacon-toggle--open .beacon-toggle__icon::before {
+        opacity: 1;
+        transition: opacity .1s;
+        transition-delay: .3s; }
+    .beacon-toggle--open .beacon-toggle__text {
+      visibility: hidden; }
+
 .recent-articles {
   margin-bottom: 60px; }
   .recent-articles__heading {

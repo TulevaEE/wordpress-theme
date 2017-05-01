@@ -40,6 +40,12 @@ $(document).ready(function($) {
         handleResponsiveSlidesNav();
     });
 
+    $('.beacon-toggle').on('click', function(ev) {
+        ev.preventDefault();
+        $(this).toggleClass('beacon-toggle--open');
+        window.HS.beacon.toggle();
+    });
+
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything

@@ -24,6 +24,16 @@ function print_meta_description_tag() {
 add_action('wp_head', 'print_meta_description_tag');
 
 /**
+ * Changes default excerpt more
+ * @param  string $more Current "more" string
+ * @return string       Returns modified "more" string
+ */
+function custom_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+/**
  * Prints language links
  * @param  boolean $isMobile Is visible in mobile or desktop
  * @return void

@@ -39,12 +39,17 @@
         </div>
         <div class="row">
             <div class="col-md-12 footer__text">
-                <p>Enne kui otsustad, millisesse pensionifondi oma II samba osakud ja tulevased sissemaksed suunata, tutvu kindlasti olulise infoga. Meie pensionifondide tingimused on <a href="#">siin</a>, võrdluseks leiad kõigi Eesti pensionifondide info <a href="#">pensionikeskusest</a>. Palun pane tähele, et Tuleva ühistu, Tuleva fondivalitseja ega Tuleva töötajad ei anna sinule investeerimisnõu ega saakski anda, sest me ei ole taotlenud Investeerimisnõustamise tegevusluba. Anname alati endast parima, et jagada sinuga ausalt ja arusaadavalt infot, mida arvesse võttes saad ise otsustada. Kui sul on küsimusi, võta meiega ühendust või konsulteeri erapooletute asjatundjatega Pensionikeskusese <a href="#">infotelefonil</a> või Finantsinspektsiooni <a href="#">rahatarkuse lehel</a>.</p>
+                <p>Enne kui otsustad, millisesse pensionifondi oma II samba osakud ja tulevased sissemaksed suunata, tutvu kindlasti olulise infoga. Meie pensionifondide tingimused on <a href="<?php bloginfo('url'); ?>/fondid">siin</a>, võrdluseks leiad kõigi Eesti pensionifondide info <a href="#">pensionikeskusest</a>. Palun pane tähele, et Tuleva ühistu, Tuleva fondivalitseja ega Tuleva töötajad ei anna sinule investeerimisnõu ega saakski anda, sest me ei ole taotlenud Investeerimisnõustamise tegevusluba. Anname alati endast parima, et jagada sinuga ausalt ja arusaadavalt infot, mida arvesse võttes saad ise otsustada. Kui sul on küsimusi, võta meiega ühendust või konsulteeri erapooletute asjatundjatega Pensionikeskusese <a href="#">infotelefonil</a> või Finantsinspektsiooni <a href="#">rahatarkuse lehel</a>.</p>
                 <p>Tuleva kodulehe <a href="#">kasutustingimused</a>.</p>
             </div>
         </div>
     </div>
 </footer>
+
+<a href="#" class="beacon-toggle">
+    <span class="beacon-toggle__icon"></span>
+    <span class="beacon-toggle__text">Tekkis küsimus?</span>
+</a>
 
 <?php wp_footer(); ?>
 
