@@ -40,7 +40,7 @@ $(document).ready(function($) {
         handleResponsiveSlidesNav();
     });
 
-    $('.beacon-toggle').on('click', function(ev) {
+    $('.beacon-toggle').show().on('click', function(ev) {
         ev.preventDefault();
         $(this).toggleClass('beacon-toggle--open');
         window.HS.beacon.toggle();
