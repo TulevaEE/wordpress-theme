@@ -10,14 +10,14 @@
             <li class="submenu__item<?php if ($page_id === $current_object_id) {
                     echo ' submenu__item--current';
                 } ?>">
-                <a href="<?php echo get_permalink($page_id); ?>">Kõik artiklid</a>
+                <a href="<?php echo get_permalink($page_id); ?>"><?php _e('All articles', TEXT_DOMAIN); ?></a>
             </li>
             <li class="submenu__item<?php if ($term_id === $current_object_id) {
                     echo ' submenu__item--current';
                 } ?>">
-                <a href="<?php echo get_term_link($term_id); ?>">Olulisemad artiklid</a>
+                <a href="<?php echo get_term_link($term_id); ?>"><?php _e('Featured articles', TEXT_DOMAIN); ?></a>
             </li>
         </ul>
-        <a class="pull-right hidden-xs" href="<?php bloginfo('url'); ?>/feed/rss2/">RSS voog</a>
+        <a class="pull-right hidden-xs" href="<?php bloginfo('url'); ?>/feed/rss2/"><?php _e('RSS feed', TEXT_DOMAIN); ?></a>
     </nav>
 <?php } ?>
