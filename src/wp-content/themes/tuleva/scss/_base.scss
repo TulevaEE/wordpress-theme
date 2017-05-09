@@ -1,4 +1,5 @@
 // Base styles
+@import 'media-queries';
 
 html {
     text-rendering: optimizeLegibility;
@@ -23,14 +24,29 @@ h1, .h1 {
     font-weight: bold;
     color: $heading-primary;
     line-height: 1.5;
+
+    @include mobile {
+        font-size: 1.5em;
+        line-height: 1.3;
+    }
 }
 
 .h1-sm {
     font-size: 2.25em;
+
+    @include mobile {
+        font-size: 1.5em;
+        line-height: 1.3;
+    }
 }
 
 .h1-xs {
     font-size: 2em;
+
+    @include mobile {
+        font-size: 1.25em;
+        line-height: 1.3;
+    }
 }
 
 .h1-bottom-margin {
@@ -130,6 +146,11 @@ small {
         padding-left: 2em;
         background-repeat: no-repeat;
         background-position: 0 center;
+
+        @include mobile {
+            padding-left: 1.5em;
+            background-position: 0 .5em;
+        }
     }
 }
 
@@ -182,7 +203,11 @@ hr {
 }
 
 .btn-xl {
-  @include button-size($padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
+    @include button-size($padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
+    @include mobile {
+        padding: $padding-xl-vertical;
+        width: 100%;
+    }
 }
 
 .no-margin {

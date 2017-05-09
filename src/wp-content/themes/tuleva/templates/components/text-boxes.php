@@ -12,7 +12,9 @@
                         } elseif (get_sub_field('title_' . $i . '_border') === 'lightblue') {
                             echo ' text-box__title--border-lightblue';
                         } ?>"><?php the_sub_field('title_' . $i); ?></h2>
-                    <?php the_sub_field('text_' . $i); ?>
+                    <div class="text-box__content">
+                        <?php the_sub_field('text_' . $i); ?>
+                    </div>
                 </div>
             </div>
         <?php } ?>

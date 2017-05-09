@@ -319,6 +319,24 @@ address {
   font-style: normal;
   line-height: 1.42857; }
 
+/**
+ * Responsive mixins
+ * Usage:
+ * p {
+ *   font-size: 16px;
+ *
+ *   @include tablet {
+ *     font-size: 18px;
+ *   }
+ *
+ *   @include desktop {
+ *     font-size: 20px;
+ *   }
+ * }
+ */
+/**
+ * Retina mixin
+ */
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
@@ -338,12 +356,24 @@ h1, .h1 {
   font-weight: bold;
   color: #002F63;
   line-height: 1.5; }
+  @media (max-width: 767px) {
+    h1, .h1 {
+      font-size: 1.5em;
+      line-height: 1.3; } }
 
 .h1-sm {
   font-size: 2.25em; }
+  @media (max-width: 767px) {
+    .h1-sm {
+      font-size: 1.5em;
+      line-height: 1.3; } }
 
 .h1-xs {
   font-size: 2em; }
+  @media (max-width: 767px) {
+    .h1-xs {
+      font-size: 1.25em;
+      line-height: 1.3; } }
 
 .h1-bottom-margin {
   margin-bottom: 96px; }
@@ -423,6 +453,11 @@ small {
     padding-left: 2em;
     background-repeat: no-repeat;
     background-position: 0 center; }
+    @media (max-width: 767px) {
+      .list-style-checkmark li,
+      .list-style-plussign li {
+        padding-left: 1.5em;
+        background-position: 0 .5em; } }
 
 .list-style-checkmark li {
   background-image: url("../img/icon-checkmark.svg"); }
@@ -472,6 +507,10 @@ hr {
   font-size: 24px;
   line-height: 1.2;
   border-radius: 8px; }
+  @media (max-width: 767px) {
+    .btn-xl {
+      padding: 16px;
+      width: 100%; } }
 
 .no-margin {
   margin: 0 !important; }

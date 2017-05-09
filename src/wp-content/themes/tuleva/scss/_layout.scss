@@ -1,27 +1,60 @@
+$row-spacing: 100px;
+$row-spacing-half: 60px;
+$row-spacing-mobile: $row-spacing / 2;
+$row-spacing-half-mobile: $row-spacing-half / 2;
+
 .row-spacing {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: $row-spacing;
+    margin-bottom: $row-spacing;
 }
 
 .row-spacing-half {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: $row-spacing-half;
+    margin-bottom: $row-spacing-half;
 }
 
 .row-spacing-top {
-    margin-top: 100px;
+    margin-top: $row-spacing;
 }
 
 .row-spacing-top-half {
-    margin-top: 60px;
+    margin-top: $row-spacing-half;
 }
 
 .row-spacing-bottom {
-    margin-bottom: 100px;
+    margin-bottom: $row-spacing;
 }
 
 .row-spacing-bottom-half {
-    margin-bottom: 60px;
+    margin-bottom: $row-spacing-half;
+}
+
+@include mobile {
+    .row-spacing {
+        margin-top: $row-spacing-mobile;
+        margin-bottom: $row-spacing-mobile;
+    }
+
+    .row-spacing-half {
+        margin-top: $row-spacing-half-mobile;
+        margin-bottom: $row-spacing-half-mobile;
+    }
+
+    .row-spacing-top {
+        margin-top: $row-spacing-mobile;
+    }
+
+    .row-spacing-top-half {
+        margin-top: $row-spacing-half-mobile;
+    }
+
+    .row-spacing-bottom {
+        margin-bottom: $row-spacing-mobile;
+    }
+
+    .row-spacing-bottom-half {
+        margin-bottom: $row-spacing-half-mobile;
+    }
 }
 
 .content-area,
