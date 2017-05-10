@@ -57,5 +57,25 @@
 
 <?php wp_footer(); ?>
 
+<?php if (ICL_LANGUAGE_CODE === 'et') { ?>
+<script>
+    window.HS.beacon.config({
+        translation: {
+          contactLabel: 'Saada sõnum',
+          attachFileLabel: 'Lisa fail',
+          attachFileError: 'Suurim lubatud faili suurus on 10mb',
+          fileExtensionError: 'Sinu üles laetud failiformaat pole lubatud.',
+          emailLabel: 'E-maili aadress',
+          emailError: 'Palun sisesta korrektne e-maili aadress',
+          messageLabel: 'Kuidas saame sind aidata?',
+          messageError: 'Palun sisesta sõnum',
+          contactSuccessLabel: 'Sõnum saadetud!',
+          contactSuccessDescription: 'Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel võimalusel ühendust!',
+          sendLabel: 'Saada'
+        }
+    });
+</script>
+<?php } ?>
+
 </body>
 </html>
