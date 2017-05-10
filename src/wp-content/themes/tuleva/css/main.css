@@ -3503,6 +3503,19 @@ hr {
     .submenu__item--current a {
       font-weight: bold;
       box-shadow: inset 0 -4px 0 0 #0081EE; }
+  @media (max-width: 767px) {
+    .submenu {
+      box-shadow: none; }
+      .submenu__list {
+        display: block; }
+      .submenu__item {
+        display: block; }
+        .submenu__item a {
+          display: block;
+          margin: 0;
+          padding: 20px;
+          box-shadow: none;
+          border: 2px solid #d6dee6; } }
 
 .post-list {
   display: -webkit-box;
