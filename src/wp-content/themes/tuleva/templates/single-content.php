@@ -22,7 +22,7 @@
                     <a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook-gray.svg" alt="Facebook">
                     </a>
-                    <a href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo urlencode(get_permalink()); ?>">
+                    <a href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo urlencode(get_permalink()); ?>" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/img/icon-twitter-gray.svg" alt="Twitter">
                     </a>
                 </div>
