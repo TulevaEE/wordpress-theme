@@ -11,7 +11,6 @@
                         <div class="text-rows-box__row"><?php the_sub_field('text'); ?></div>
                     <?php  }
                     } ?>
-
                 </div>
             </div>
         </div>

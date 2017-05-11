@@ -3,39 +3,38 @@
         <div class="container">
             <div class="row row-spacing-bottom">
                 <div class="col-md-12">
-                    <?php if (get_the_title()) { ?>
-                        <h1 class="page-title"><?php the_title(); ?></h1>
+                    <?php if (get_field('heading')) { ?>
+                        <h1 class="page-title"><?php the_field('heading'); ?></h1>
                     <?php } ?>
-                    <h2 class="text-center text-normal"><?php _e('Tuleva’s phone number', TEXT_DOMAIN); ?>: +372 644 5100</h2>
+                    <?php if (get_field('subheading')) { ?>
+                        <h2 class="text-center text-normal"><?php the_field('subheading'); ?></h2>
+                    <?php } ?>
                 </div>
             </div>
             <div class="row row-spacing">
                 <div class="col-md-12">
                     <div class="contacts-block">
-                        <div class="col-md-4 contacts-block__item">
-                            <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="Tõnu Pekk">
-                            <h2 class="contacts-block__title">Tõnu Pekk</h2>
-                            <div class="contacts-block__row">
-                                <a href="mailto:tonu.pekk@tuleva.ee">tonu.pekk@tuleva.ee</a>
-                            </div>
-                            <div class="contacts-block__row">+372 5304 4744</div>
-                        </div>
-                        <div class="col-md-4 contacts-block__item">
-                            <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/priit-lepasepp.png" alt="Priit Lepasepp">
-                            <h2 class="contacts-block__title">Priit Lepasepp</h2>
-                            <div class="contacts-block__row">
-                                <a href="mailto:priit.lepasepp@tuleva.ee">priit.lepasepp@tuleva.ee</a>
-                            </div>
-                            <div class="contacts-block__row">+372 5626 4164</div>
-                        </div>
-                        <div class="col-md-4 contacts-block__item">
-                            <img class="contacts-block__image" src="<?php echo get_template_directory_uri() ?>/img/kristi-saare.png" alt="Kristi Saare">
-                            <h2 class="contacts-block__title">Kristi Saare</h2>
-                            <div class="contacts-block__row">
-                                <a href="mailto:kristi.saare@tuleva.ee">kristi.saare@tuleva.ee</a>
-                            </div>
-                            <div class="contacts-block__row">+372 5558 8178</div>
-                        </div>
+                        <?php if (have_rows('contacts')) {
+                            while (have_rows('contacts')) { the_row(); ?>
+                                <div class="col-md-4 contacts-block__item">
+                                    <?php if(get_sub_field('image')) { ?>
+                                        <img class="contacts-block__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
+                                    <?php } ?>
+
+                                    <h2 class="contacts-block__title"><?php the_sub_field('name'); ?></h2>
+
+                                    <?php if(get_sub_field('email')) { ?>
+                                        <div class="contacts-block__row">
+                                            <a href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php if(get_sub_field('phone')) { ?>
+                                        <div class="contacts-block__row"><?php the_sub_field('phone'); ?></div>
+                                    <?php } ?>
+                                </div>
+                        <?php  }
+                        } ?>
                     </div>
                 </div>
             </div>
