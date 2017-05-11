@@ -15,8 +15,8 @@
                     get_template_part('templates/components/text-boxes');
                 } elseif (get_row_layout() === 'media') {
                     get_template_part('templates/components/media');
-                } elseif (get_row_layout() === 'statistics_block') {
-                    get_template_part('templates/components/statistics-block');
+                } elseif (get_row_layout() === 'text_rows_block') {
+                    get_template_part('templates/components/text-rows-block');
                 } elseif (get_row_layout() === 'comparison_block') {
                     get_template_part('templates/components/comparison-block');
                 } elseif (get_row_layout() === 'single_quote_block') {

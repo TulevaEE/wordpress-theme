@@ -17,8 +17,8 @@
                     get_template_part('templates/components/button');
                 } elseif (get_row_layout() === 'text_block') {
                     get_template_part('templates/components/text-block');
-                } elseif (get_row_layout() === 'statistics_block') {
-                    get_template_part('templates/components/statistics-block');
+                } elseif (get_row_layout() === 'text_rows_block') {
+                    get_template_part('templates/components/text-rows-block');
                 } elseif (get_row_layout() === 'quotes_block') {
                     get_template_part('templates/components/quotes-block');
                 } elseif (get_row_layout() === 'hero_block') {

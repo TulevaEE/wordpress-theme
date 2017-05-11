@@ -142,6 +142,13 @@
     &__row {
         line-height: 1;
         margin-bottom: 1.8em;
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            line-height: inherit;
+        }
     }
 }
 

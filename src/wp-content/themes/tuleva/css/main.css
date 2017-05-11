@@ -3250,6 +3250,11 @@ hr {
   .text-rows-box__row {
     line-height: 1;
     margin-bottom: 1.8em; }
+    .text-rows-box__row p {
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit; }
 
 .columns-block .list-unstyled {
   line-height: 2; }
