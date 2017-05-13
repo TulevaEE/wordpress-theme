@@ -282,3 +282,7 @@ function wpb_list_child_pages() {
     return $string;
 }
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+function get_app_url() {
+    return 'https://pension.tuleva.ee/?language=' + ICL_LANGUAGE_CODE;
+}

@@ -16,7 +16,7 @@
                     <?php language_picker(true); ?>
                     <div class="navbar-buttons">
                         <?php language_picker(); ?>
-                        <a href="https://pension.tuleva.ee/" class="btn btn-primary navbar-btn"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
+                        <a href="<?php echo get_app_url(); ?>" class="btn btn-primary navbar-btn"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
                     </div>
                 </div>
             </div>
