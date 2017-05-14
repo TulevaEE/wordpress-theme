@@ -2648,11 +2648,11 @@ select[multiple].input-lg {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-.clearfix:before, .single-quote-box:before, .quotes-box:before, .pagination:before, .tab-content:before, .clearfix:after, .single-quote-box:after, .quotes-box:after, .pagination:after, .tab-content:after {
+.clearfix:before, .single-quote-box:before, .pagination:before, .tab-content:before, .clearfix:after, .single-quote-box:after, .pagination:after, .tab-content:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .single-quote-box:after, .quotes-box:after, .pagination:after, .tab-content:after {
+.clearfix:after, .single-quote-box:after, .pagination:after, .tab-content:after {
   clear: both; }
 
 .center-block {

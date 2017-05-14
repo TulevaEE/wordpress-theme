@@ -197,7 +197,6 @@
     flex-wrap: wrap;
     padding: 110px 0;
     margin-bottom: -2em;
-    @extend .clearfix;
 
     @include mobile {
         padding: 40px 0;
