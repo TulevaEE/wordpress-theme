@@ -3752,6 +3752,19 @@ hr {
 .bg-alt {
   background-color: #ebf7ff; }
 
+.sticky-header-visible .header--sticky {
+  background-color: #fff;
+  top: 0;
+  transition: top 0.4s ease, background-color 0.4s ease; }
+
+.header--sticky {
+  background-color: transparent;
+  width: 100%;
+  z-index: 1080;
+  position: fixed;
+  top: -116px;
+  transition: top 0.1s ease; }
+
 .header .navbar {
   margin-bottom: 0;
   border: none; }
