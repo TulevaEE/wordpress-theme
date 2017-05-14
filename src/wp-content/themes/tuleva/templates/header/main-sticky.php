@@ -12,16 +12,12 @@
             </div>
             <div class="collapse navbar-collapse" id="header-menu-sticky">
                 <div class="navbar-right">
-                    <div class="navbar-buttons hidden-md">
+                    <div class="navbar-buttons">
                         <?php language_picker(); ?>
                         <a href="<?php echo get_app_url(); ?>" class="btn btn-primary navbar-btn"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
                     </div>
                     <?php get_template_part('templates/header/menu'); ?>
                     <?php language_picker(true); ?>
-                    <div class="navbar-buttons visible-md">
-                        <?php language_picker(); ?>
-                        <a href="<?php echo get_app_url(); ?>" class="btn btn-primary navbar-btn"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
-                    </div>
                 </div>
             </div>
         </div>
