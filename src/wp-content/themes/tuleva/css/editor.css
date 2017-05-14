@@ -251,7 +251,7 @@ dd {
 .dl-horizontal dd:after {
   clear: both; }
 
-@media (min-width: 1224px) {
+@media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;

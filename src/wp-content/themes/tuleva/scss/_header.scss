@@ -1,5 +1,6 @@
 .sticky-header-visible {
     .header--sticky {
+        display: block;
         background-color: #fff;
         top: 0;
         @include transition(top 0.4s ease, background-color 0.4s ease);
@@ -7,6 +8,7 @@
 }
 .header {
     &--sticky {
+        display: none;
         background-color: transparent;
         width: 100%;
         z-index: 1080;
@@ -29,6 +31,11 @@
 }
 
 .navbar-brand {
+    @include tablet {
+        height: 96px;
+        margin-top: 16px;
+    }
+
     @include mobile {
         height: 72px;
         padding: 13px 15px;
@@ -40,10 +47,16 @@
 }
 
 .navbar-nav {
-    padding: 23px 0 0;
+    padding: 0;
 
-    @include not-mobile {
+    @include desktop-lg {
         margin-top: 20px;
+        padding: 23px 0 0;
+    }
+
+    @include desktop-xl {
+        margin-top: 20px;
+        padding: 23px 0 0;
     }
 
     @include mobile {
@@ -78,13 +91,15 @@
 }
 
 .navbar-buttons {
-    @include not-mobile {
-        margin-top: 10px;
-        display: inline-block;
+    margin-top: 10px;
+    text-align: right;
+
+    .nav-lang.hidden-xs {
+        font-size: 0.875em;
     }
 
     .navbar-btn {
-        margin-top: 32px;
+        margin-top: 0;
         margin-left: 12px;
         margin-bottom: 0;
         padding: 4px 16px;
@@ -98,10 +113,32 @@
         }
     }
 
-    .nav-lang.hidden-xs {
-        display: block;
-        text-align: right;
-        font-size: 0.875em;
+    @include desktop-lg {
+        text-align: left;
+        display: inline-block;
+
+        .navbar-btn {
+            margin-top: 32px;
+        }
+
+        .nav-lang.hidden-xs {
+            display: block;
+            text-align: right;
+        }
+    }
+
+    @include desktop-xl {
+        text-align: left;
+        display: inline-block;
+
+        .navbar-btn {
+            margin-top: 32px;
+        }
+
+        .nav-lang.hidden-xs {
+            display: block;
+            text-align: right;
+        }
     }
 }
 
