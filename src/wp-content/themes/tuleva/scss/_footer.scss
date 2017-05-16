@@ -15,6 +15,11 @@
         @include mobile {
             margin-bottom: 12px;
         }
+
+        &--light {
+            text-transform: inherit;
+            font-weight: 500;
+        }
     }
 
     &__column {
@@ -46,21 +51,58 @@
         }
     }
 
-    &__language {
-        display: block;
-        font-weight: bold;
-        color: $navy-blue;
-        font-size: 1em;
-        line-height: 1.1;
-        margin-top: ($line-height-computed / 2);
-        margin-bottom: ($line-height-computed / 2);
-    }
-
     &__social {
         padding: 16px 0;
 
         a {
-            margin-right: 12px;
+            margin-right: 10px;
+        }
+
+        &__facebook {
+            width: 62px;
+        }
+
+        &__twitter {
+            width: 80px;
+        }
+    }
+
+    &__subscribe {
+        font-size: 0;
+
+        .mc-field-group {
+            display: inline-block;
+            width: calc(100% - 60px);
+            vertical-align: middle;
+
+            @include tablet {
+                width: 220px;
+            }
+        }
+
+        .email {
+            display: inline-block;
+            width: 100%;
+            height: 38px;
+            padding: 12px;
+            font-size: $font-size-base;
+            outline: none;
+            border: 1px solid rgba(0, 47, 99, 0.16);
+            border-radius: 4px 0 0 4px;
+
+            &::placeholder {
+                color: $very-light-gray;
+            }
+        }
+
+        .button {
+            background: $navy-blue no-repeat url('../img/icon-arrow-right-white.svg') center center;
+            width: 48px;
+            height: 38px;
+            vertical-align: middle;
+            border: none;
+            outline: none;
+            border-radius: 0 4px 4px 0;
         }
     }
 }
