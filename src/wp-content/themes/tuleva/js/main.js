@@ -32,6 +32,24 @@ $(document).ready(function($) {
             }
         });
     },
+    initBeaconToggle = function() {
+        var $beaconToggle = $('.beacon-toggle');
+
+        $beaconToggle.on('click', function(ev) {
+            ev.preventDefault();
+            $(this).toggleClass('beacon-toggle--open');
+            window.HS.beacon.toggle();
+        });
+
+        $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop(),
+                viewportHeight = $(window).height();
+
+            if (scrollPosition > viewportHeight) {
+                $beaconToggle.show();
+            }
+        });
+    },
     showStickyHeader = function() {
         $('body').addClass('sticky-header-visible');
     },
@@ -52,18 +70,13 @@ $(document).ready(function($) {
     };
 
     initStickyHeader();
+    initBeaconToggle();
 
     $('.media-box-slider').unslider();
     handleResponsiveSlidesNav();
 
     $(window).resize(function() {
         handleResponsiveSlidesNav();
-    });
-
-    $('.beacon-toggle').show().on('click', function(ev) {
-        ev.preventDefault();
-        $(this).toggleClass('beacon-toggle--open');
-        window.HS.beacon.toggle();
     });
 
     $('.navbar-nav a').on('click', function() {
