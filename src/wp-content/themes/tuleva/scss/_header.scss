@@ -15,6 +15,37 @@
         position: fixed;
         top: -$navbar-height;
         @include transition(top 0.1s ease);
+
+        .navbar {
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            height: 80px;
+            padding-top: 21px;
+            padding-bottom: 21px;
+        }
+
+        .navbar-nav {
+            margin-top: 0;
+            padding: 4px 0;
+        }
+
+        .navbar-buttons {
+            .nav-lang.hidden-xs,
+            .nav-lang.visible-xs {
+                display: none;
+            }
+
+            .navbar-btn {
+                @include desktop-lg {
+                    margin-top: 14px;
+                }
+                @include desktop-xl {
+                    margin-top: 14px;
+                }
+            }
+        }
     }
 
     .navbar {

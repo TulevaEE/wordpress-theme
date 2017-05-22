@@ -3768,6 +3768,24 @@ hr {
   position: fixed;
   top: -116px;
   transition: top 0.1s ease; }
+  .header--sticky .navbar {
+    min-height: 80px; }
+  .header--sticky .navbar-brand {
+    height: 80px;
+    padding-top: 21px;
+    padding-bottom: 21px; }
+  .header--sticky .navbar-nav {
+    margin-top: 0;
+    padding: 4px 0; }
+  .header--sticky .navbar-buttons .nav-lang.hidden-xs,
+  .header--sticky .navbar-buttons .nav-lang.visible-xs {
+    display: none; }
+  @media (min-width: 1224px) and (max-width: 1599px) {
+    .header--sticky .navbar-buttons .navbar-btn {
+      margin-top: 14px; } }
+  @media (min-width: 1600px) {
+    .header--sticky .navbar-buttons .navbar-btn {
+      margin-top: 14px; } }
 
 .header .navbar {
   margin-bottom: 0;
