@@ -66,6 +66,11 @@ $(document).ready(function($) {
         window.HS.beacon.toggle();
     });
 
+    $('.navbar-nav a').on('click', function() {
+        $(this).closest('.navbar').find('.navbar-toggle').addClass('collapsed');
+        $(this).closest('.navbar-collapse').removeClass('in');
+    });
+
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
