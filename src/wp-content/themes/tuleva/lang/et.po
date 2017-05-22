@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-05-16 22:53+0300\n"
-"PO-Revision-Date: 2017-05-16 22:57+0300\n"
+"POT-Creation-Date: 2017-05-22 23:07+0300\n"
+"PO-Revision-Date: 2017-05-22 23:07+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -27,56 +27,9 @@ msgstr "Reg. kood"
 msgid "Activity license nr"
 msgstr "Tegevusloa nr"
 
-#: footer.php:48
-msgid "Have a question?"
-msgstr "Tekkis küsimus?"
-
-#: footer.php:57
-msgid "Send a Message"
-msgstr "Saada sõnum"
-
-#: footer.php:58
-msgid "Attach a file"
-msgstr "Lisa fail"
-
-#: footer.php:59
-msgid "The maximum file size is 10mb"
-msgstr "Suurim lubatud faili suurus on 10mb"
-
-#: footer.php:60
-msgid "The file format you uploaded is not allowed."
-msgstr "Sinu üles laetud failiformaat pole lubatud."
-
-#: footer.php:61
-msgid "Email address"
-msgstr "E-maili aadress"
-
-#: footer.php:62
-msgid "Please enter a valid email address"
-msgstr "Palun sisesta korrektne e-maili aadress"
-
-#: footer.php:63
-msgid "How can we help you?"
-msgstr "Kuidas saame sind aidata?"
-
-#: footer.php:64
-msgid "Please enter a message"
-msgstr "Palun sisesta sõnum"
-
-#: footer.php:65
-msgid "Message sent!"
-msgstr "Sõnum saadetud!"
-
-#: footer.php:66
-msgid ""
-"Thanks for reaching out! Someone from our team will get back to you soon."
-msgstr ""
-"Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel "
-"võimalusel ühendust!"
-
-#: footer.php:67
-msgid "Send"
-msgstr "Saada"
+#: footer.php:29
+msgid "I’d like to get updates about Tuleva"
+msgstr "Ole kursis Tuleva tegemistega"
 
 #: functions.php:25 helpers/acf/init.php:12 helpers/post-types/init.php:9
 msgid "Error locating %s for inclusion"
@@ -112,8 +65,8 @@ msgid ""
 "We will show you how much money you would save as our pension fund client "
 "and/or Tuleva member."
 msgstr ""
-"Näitame sulle, kui palju sa säästaksid Tuleva pensioni-fondi kliendina ja/"
-"või Tuleva liikmena."
+"Näitame sulle, kui palju sa säästaksid Tuleva pensionifondi kliendina ja/või "
+"Tuleva liikmena."
 
 #: templates/blog-content.php:21
 msgid "Transfer your pension to Tuleva"
@@ -124,6 +77,57 @@ msgid ""
 "A guide how to transfer your pension through your internet bank or the "
 "Pensionikeskus web page."
 msgstr "Juhend, kuidas vahetada fondi internetipangas või pensionikeskuses."
+
+#: templates/footer/beacon-toggle.php:3
+msgid "Have a question?"
+msgstr "Tekkis küsimus?"
+
+#: templates/footer/beacon-translations.php:4
+msgid "Send a Message"
+msgstr "Saada sõnum"
+
+#: templates/footer/beacon-translations.php:5
+msgid "Attach a file"
+msgstr "Lisa fail"
+
+#: templates/footer/beacon-translations.php:6
+msgid "The maximum file size is 10mb"
+msgstr "Suurim lubatud faili suurus on 10mb"
+
+#: templates/footer/beacon-translations.php:7
+msgid "The file format you uploaded is not allowed."
+msgstr "Sinu üles laetud failiformaat pole lubatud."
+
+#: templates/footer/beacon-translations.php:8
+msgid "Email address"
+msgstr "E-maili aadress"
+
+#: templates/footer/beacon-translations.php:9
+msgid "Please enter a valid email address"
+msgstr "Palun sisesta korrektne e-maili aadress"
+
+#: templates/footer/beacon-translations.php:10
+msgid "How can we help you?"
+msgstr "Kuidas saame sind aidata?"
+
+#: templates/footer/beacon-translations.php:11
+msgid "Please enter a message"
+msgstr "Palun sisesta sõnum"
+
+#: templates/footer/beacon-translations.php:12
+msgid "Message sent!"
+msgstr "Sõnum saadetud!"
+
+#: templates/footer/beacon-translations.php:13
+msgid ""
+"Thanks for reaching out! Someone from our team will get back to you soon."
+msgstr ""
+"Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel "
+"võimalusel ühendust!"
+
+#: templates/footer/beacon-translations.php:14
+msgid "Send"
+msgstr "Saada"
 
 #: templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"

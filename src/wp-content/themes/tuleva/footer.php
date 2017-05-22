@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-md-3 footer__column">
-                <h4 class="footer__title footer__title--light">Ole kursis Tuleva tegemistega</h4>
+                <h4 class="footer__title footer__title--light"><?php _e('I’d like to get updates about Tuleva', TEXT_DOMAIN); ?></h4>
                 <div class="footer__subscribe">
                     <?php get_template_part('templates/footer/subscribe-form'); ?>
                 </div>
