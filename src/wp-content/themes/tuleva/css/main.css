@@ -3615,7 +3615,8 @@ hr {
       background-repeat: no-repeat; }
   .cta-widget .btn {
     display: block;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    white-space: pre-line; }
   .cta-widget p {
     margin-bottom: 1.5em; }
 
@@ -3729,7 +3730,8 @@ hr {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  max-width: 100%; }
 
 @media (min-width: 768px) {
   .content-area {
