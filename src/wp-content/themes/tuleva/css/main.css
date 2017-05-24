@@ -4083,7 +4083,8 @@ hr {
   border-bottom: 4px solid #d6dee6;
   margin-bottom: 64px; }
   .single-post .content p {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    line-height: 1.56; }
     .single-post .content p:first-child {
       font-size: 1.5em; }
   .single-post .content ul,

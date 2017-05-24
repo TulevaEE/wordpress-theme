@@ -14,7 +14,7 @@
                 <div class="navbar-right">
                     <div class="navbar-buttons">
                         <?php language_picker(); ?>
-                        <a href="<?php echo get_app_url(); ?>" class="btn btn-primary navbar-btn"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
+                        <a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary navbar-btn"><?php the_field('button_text', 'option'); ?></a>
                     </div>
                     <?php get_template_part('templates/header/menu'); ?>
                     <?php language_picker(true); ?>
