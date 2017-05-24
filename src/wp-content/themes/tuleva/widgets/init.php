@@ -3,6 +3,7 @@
 function tu_register_widgets() {
     $widget_includes = [
         'widgets/subscribe-widget.php',
+        'widgets/text-rows-widget.php',
     ];
 
     foreach ($widget_includes as $file) {
@@ -14,6 +15,7 @@ function tu_register_widgets() {
     }
 
     register_widget( 'Subscribe_Widget' );
+    register_widget( 'Text_Rows_Widget' );
 
 }
 add_action( 'widgets_init', 'tu_register_widgets' );
