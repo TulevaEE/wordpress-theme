@@ -14,11 +14,11 @@
             <div class="widget-area">
                 <div class="cta-widget cta-widget--primary">
                     <h3 class="cta-widget__title"><?php _e('How does Tuleva benefit you?', TEXT_DOMAIN); ?></h3>
-                    <a href="#" class="btn btn-primary btn-lg"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
+                    <a href="<?php echo get_app_url(); ?>" class="btn btn-primary btn-lg"><?php _e('Enter Tuleva app', TEXT_DOMAIN); ?></a>
                     <p><?php _e('We will show you how much money you would save as our pension fund client and/or Tuleva member.', TEXT_DOMAIN); ?></p>
                 </div>
                 <div class="cta-widget cta-widget--secondary">
-                    <h3 class="cta-widget__title--link"><a href="#"><?php _e('Transfer your pension to Tuleva', TEXT_DOMAIN); ?></a></h3>
+                    <h3 class="cta-widget__title--link"><a href="<?php bloginfo('url') ?>/kuidas-tuua-pension-tulevasse/"><?php _e('Transfer your pension to Tuleva', TEXT_DOMAIN); ?></a></h3>
                     <p><?php _e('A guide how to transfer your pension through your internet bank or the Pensionikeskus web page.', TEXT_DOMAIN); ?></p>
                 </div>
             </div>
