@@ -6,6 +6,7 @@
         @include transition(top 0.4s ease, background-color 0.4s ease);
     }
 }
+
 .header {
     &--sticky {
         display: none;
@@ -14,6 +15,7 @@
         z-index: 1080;
         position: fixed;
         top: -$navbar-height;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .24);
         @include transition(top 0.1s ease);
 
         .navbar {
