@@ -14,7 +14,9 @@
                 <div class="navbar-right">
                     <div class="navbar-buttons">
                         <?php language_picker(); ?>
-                        <a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary navbar-btn"><?php the_field('button_text', 'option'); ?></a>
+                        <?php if(get_field('button_text', 'option')) { ?>
+                            <a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary navbar-btn"><?php the_field('button_text', 'option'); ?></a>
+                        <?php } ?>
                     </div>
                     <?php get_template_part('templates/header/menu'); ?>
                     <?php language_picker(true); ?>
