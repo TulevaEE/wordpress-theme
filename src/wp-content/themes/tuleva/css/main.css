@@ -3591,10 +3591,12 @@ hr {
     background-image: url("../img/icon-arrow-right.svg");
     background-position: right center; }
 
+.widget {
+  margin-bottom: 1.5em; }
+
 .cta-widget {
   border-radius: 4px;
-  padding: 0 1.5em;
-  margin-bottom: 1.5em; }
+  padding: 0 1.5em; }
   .cta-widget--primary {
     background-color: #ebf7ff;
     border: 2px solid #0081EE; }

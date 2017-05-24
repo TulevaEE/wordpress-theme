@@ -579,10 +579,13 @@
     }
 }
 
+.widget {
+    margin-bottom: 1.5em;
+}
+
 .cta-widget {
     border-radius: 4px;
     padding: 0 1.5em;
-    margin-bottom: 1.5em;
 
     &--primary {
         background-color: $widget-primary-bg-color;
