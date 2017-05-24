@@ -31,6 +31,9 @@
             <?php endif; ?>
         </div>
         <div class="row">
+            <?php if ( is_active_sidebar( 'footer_bottom_widget_area' ) ) : ?>
+               <?php dynamic_sidebar( 'footer_bottom_widget_area' ); ?>
+            <?php endif; ?>
             <div class="col-md-12 footer__text">
                 <?php get_template_part('templates/footer/text'); ?>
             </div>
