@@ -61,7 +61,7 @@ $(document).ready(function($) {
             var scrollPosition = $(window).scrollTop(),
                 headerHeight = $('.header').outerHeight();
 
-            if(scrollPosition > headerHeight) {
+            if (scrollPosition > headerHeight) {
                 showStickyHeader();
             } else {
                 hideStickyHeader();
@@ -72,7 +72,15 @@ $(document).ready(function($) {
     initStickyHeader();
     initBeaconToggle();
 
-    $('.media-box-slider').unslider();
+    $('.testimonial-slider').unslider({
+        nav: false,
+        arrows: true
+    });
+
+    $('.media-box-slider').unslider({
+        nav: true,
+        arrows: false
+    });
     handleResponsiveSlidesNav();
 
     $(window).resize(function() {
