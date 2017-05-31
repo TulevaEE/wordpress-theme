@@ -1610,4 +1610,57 @@ acf_add_local_field_group(array (
     'description' => '',
 ));
 
+acf_add_local_field_group(array (
+    'key' => 'group_5903b93919ba6',
+    'title' => 'Front heading',
+    'fields' => array (
+        array (
+            'key' => 'field_5903b9392e950',
+            'label' => 'Heading',
+            'name' => 'heading',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_front.php',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'acf_after_title',
+    'style' => 'seamless',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => array (
+        0 => 'the_content',
+        1 => 'excerpt',
+        2 => 'custom_fields',
+        3 => 'discussion',
+        4 => 'comments',
+        5 => 'revisions',
+        6 => 'categories',
+        7 => 'tags',
+        8 => 'send-trackbacks',
+    ),
+    'active' => 1,
+    'description' => '',
+));
+
 endif;
