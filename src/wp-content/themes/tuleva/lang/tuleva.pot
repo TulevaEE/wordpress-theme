@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-05-22 20:07:02+00:00\n"
+"POT-Creation-Date: 2017-05-31 11:42:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,28 +12,25 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: footer.php:5
-msgid "Membership fee account"
-msgstr ""
-
-#: footer.php:17
-msgid "Reg. Code"
-msgstr ""
-
-#: footer.php:25
-msgid "Activity license nr"
-msgstr ""
-
-#: footer.php:29
-msgid "I’d like to get updates about Tuleva"
-msgstr ""
-
-#: functions.php:25 helpers/acf/init.php:12 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:13 helpers/post-types/init.php:9
+#: widgets/init.php:13
 msgid "Error locating %s for inclusion"
 msgstr ""
 
 #: helpers/setup.php:25
 msgid "Primary Navigation"
+msgstr ""
+
+#: templates/404.php:5
+msgid "There is no such page"
+msgstr ""
+
+#: templates/404.php:6
+msgid "Maybe something got mixed up when entering the address?"
+msgstr ""
+
+#: templates/blog/recent-articles.php:8
+msgid "Recent articles"
 msgstr ""
 
 #: templates/blog/submenu.php:13
@@ -46,31 +43,6 @@ msgstr ""
 
 #: templates/blog/submenu.php:21
 msgid "RSS feed"
-msgstr ""
-
-#: templates/blog-content.php:16
-msgid "How does Tuleva benefit you?"
-msgstr ""
-
-#: templates/blog-content.php:17 templates/header/main-sticky.php:17
-#: templates/header/main.php:17
-msgid "Enter Tuleva app"
-msgstr ""
-
-#: templates/blog-content.php:18
-msgid ""
-"We will show you how much money you would save as our pension fund client "
-"and/or Tuleva member."
-msgstr ""
-
-#: templates/blog-content.php:21
-msgid "Transfer your pension to Tuleva"
-msgstr ""
-
-#: templates/blog-content.php:22
-msgid ""
-"A guide how to transfer your pension through your internet bank or the "
-"Pensionikeskus web page."
 msgstr ""
 
 #: templates/footer/beacon-toggle.php:3
@@ -126,35 +98,85 @@ msgstr ""
 msgid "Your e-mail address"
 msgstr ""
 
-#: templates/footer/text.php:6
-msgid ""
-"Before you decide which pension fund you’d like to move your second-pillar "
-"units and future contributions to, be sure to read through the important "
-"information. The terms of our pension funds can be found %1$shere%2$s. "
-"Before you decide which pension fund you’d like to move your second-pillar "
-"units and future contributions to, be sure to read through the important "
-"information. The terms of our pension funds can be found <a href=\"http://"
-"www.pensionikeskus.ee/en/ii-pillar/funds/fund-fees-comparison/\">here.</a> "
-"For comparison, information on all Estonian pension funds is available at "
-"the Pension Centre. Please note that Tuleva cooperative, Tuleva management "
-"company and Tuleva employees do not dispense investment advice, and cannot "
-"do so, because we have not sought an activity licence in the field of "
-"investment advice. However, we do our best to provide you with truthful, "
-"comprehensible information that you can use to make up your own mind. If you "
-"have any questions, don’t hesitate to contact us, or consult impartial "
-"experts via the Pension Centre’s <a href=\"http://www.pensionikeskus.ee/en/"
-"\">information line</a> or the Financial Supervision Authority’s <a href="
-"\"http://minuraha.ee/kontaktandmed/\">money matters page</a>."
-msgstr ""
-
-#: templates/footer/text.php:7
-msgid ""
-"Tuleva website <a href=\"https://tuleva.ee/wp-content/uploads/2017/03/"
-"Kodulehekasutajatingimused.pdf\">terms of service</a>."
-msgstr ""
-
 #: templates/header/main-sticky.php:6 templates/header/main.php:6
 msgid "Toggle navigation"
+msgstr ""
+
+#: templates/header/main-sticky.php:17
+msgid "Enter Tuleva app"
+msgstr ""
+
+#: widgets/cta-primary-widget.php:12
+msgid "Primary CTA widget"
+msgstr ""
+
+#: widgets/cta-primary-widget.php:16
+msgid "Shows primary CTA widget."
+msgstr ""
+
+#: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
+#: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
+msgid "Title:"
+msgstr ""
+
+#: widgets/cta-primary-widget.php:41
+msgid "Button text:"
+msgstr ""
+
+#: widgets/cta-primary-widget.php:45
+msgid "Button URL:"
+msgstr ""
+
+#: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
+msgid "Text:"
+msgstr ""
+
+#: widgets/cta-secondary-widget.php:12
+msgid "Secondary CTA widget"
+msgstr ""
+
+#: widgets/cta-secondary-widget.php:16
+msgid "Shows secondary CTA widget."
+msgstr ""
+
+#: widgets/cta-secondary-widget.php:39
+msgid "Title URL:"
+msgstr ""
+
+#: widgets/subscribe-widget.php:12
+msgid "Subscribe form"
+msgstr ""
+
+#: widgets/subscribe-widget.php:16
+msgid "Shows subscribe form."
+msgstr ""
+
+#: widgets/subscribe-widget.php:39
+msgid "Facebook URL:"
+msgstr ""
+
+#: widgets/subscribe-widget.php:43
+msgid "Twitter URL:"
+msgstr ""
+
+#: widgets/text-rows-widget.php:12
+msgid "Text rows"
+msgstr ""
+
+#: widgets/text-rows-widget.php:16
+msgid "Shows text rows."
+msgstr ""
+
+#: widgets/text-rows-widget.php:41
+msgid "Text row 1:"
+msgstr ""
+
+#: widgets/text-rows-widget.php:45
+msgid "Text row 2:"
+msgstr ""
+
+#: widgets/text-rows-widget.php:49
+msgid "Text row 3:"
 msgstr ""
 
 #. Theme Name of the plugin/theme

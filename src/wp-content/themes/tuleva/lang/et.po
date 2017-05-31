@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-05-22 23:07+0300\n"
-"PO-Revision-Date: 2017-05-22 23:07+0300\n"
+"POT-Creation-Date: 2017-05-31 14:42+0300\n"
+"PO-Revision-Date: 2017-05-31 14:45+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -15,29 +15,26 @@ msgstr ""
 "X-Generator: Poedit 2.0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: footer.php:5
-msgid "Membership fee account"
-msgstr "Liitumistasu Konto"
-
-#: footer.php:17
-msgid "Reg. Code"
-msgstr "Reg. kood"
-
-#: footer.php:25
-msgid "Activity license nr"
-msgstr "Tegevusloa nr"
-
-#: footer.php:29
-msgid "I’d like to get updates about Tuleva"
-msgstr "Ole kursis Tuleva tegemistega"
-
-#: functions.php:25 helpers/acf/init.php:12 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:13 helpers/post-types/init.php:9
+#: widgets/init.php:13
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
 #: helpers/setup.php:25
 msgid "Primary Navigation"
 msgstr "Peamenüü"
+
+#: templates/404.php:5
+msgid "There is no such page"
+msgstr "Pole olemas sellist lehekülge"
+
+#: templates/404.php:6
+msgid "Maybe something got mixed up when entering the address?"
+msgstr "Ehk läks aadressi sisestamisega midagi valesti?"
+
+#: templates/blog/recent-articles.php:8
+msgid "Recent articles"
+msgstr "Eelmised artiklid"
 
 #: templates/blog/submenu.php:13
 msgid "All articles"
@@ -50,33 +47,6 @@ msgstr "Olulisemad artiklid"
 #: templates/blog/submenu.php:21
 msgid "RSS feed"
 msgstr "RSS voog"
-
-#: templates/blog-content.php:16
-msgid "How does Tuleva benefit you?"
-msgstr "Kuidas saad sina Tulevast kasu?"
-
-#: templates/blog-content.php:17 templates/header/main-sticky.php:17
-#: templates/header/main.php:17
-msgid "Enter Tuleva app"
-msgstr "Sisene Tuleva äppi"
-
-#: templates/blog-content.php:18
-msgid ""
-"We will show you how much money you would save as our pension fund client "
-"and/or Tuleva member."
-msgstr ""
-"Näitame sulle, kui palju sa säästaksid Tuleva pensionifondi kliendina ja/või "
-"Tuleva liikmena."
-
-#: templates/blog-content.php:21
-msgid "Transfer your pension to Tuleva"
-msgstr "Too pension Tulevasse"
-
-#: templates/blog-content.php:22
-msgid ""
-"A guide how to transfer your pension through your internet bank or the "
-"Pensionikeskus web page."
-msgstr "Juhend, kuidas vahetada fondi internetipangas või pensionikeskuses."
 
 #: templates/footer/beacon-toggle.php:3
 msgid "Have a question?"
@@ -133,51 +103,86 @@ msgstr "Saada"
 msgid "Your e-mail address"
 msgstr "Sinu e-maili aadress"
 
-#: templates/footer/text.php:6
-msgid ""
-"Before you decide which pension fund you’d like to move your second-pillar "
-"units and future contributions to, be sure to read through the important "
-"information. The terms of our pension funds can be found %1$shere%2$s. "
-"Before you decide which pension fund you’d like to move your second-pillar "
-"units and future contributions to, be sure to read through the important "
-"information. The terms of our pension funds can be found <a href=\"http://"
-"www.pensionikeskus.ee/en/ii-pillar/funds/fund-fees-comparison/\">here.</a> "
-"For comparison, information on all Estonian pension funds is available at "
-"the Pension Centre. Please note that Tuleva cooperative, Tuleva management "
-"company and Tuleva employees do not dispense investment advice, and cannot "
-"do so, because we have not sought an activity licence in the field of "
-"investment advice. However, we do our best to provide you with truthful, "
-"comprehensible information that you can use to make up your own mind. If you "
-"have any questions, don’t hesitate to contact us, or consult impartial "
-"experts via the Pension Centre’s <a href=\"http://www.pensionikeskus.ee/en/"
-"\">information line</a> or the Financial Supervision Authority’s <a href="
-"\"http://minuraha.ee/kontaktandmed/\">money matters page</a>."
-msgstr ""
-"Enne kui otsustad, millisesse pensionifondi oma II samba osakud ja tulevased "
-"sissemaksed suunata, tutvu kindlasti olulise infoga. Meie pensionifondide "
-"tingimused on %1$ssiin%2$s, võrdluseks leiad kõigi Eesti pensionifondide "
-"info <a href=“http://www.pensionikeskus.ee/ii-sammas/fondid/fonditasude-"
-"vordlused/“>pensionikeskusest</a>. Palun pane tähele, et Tuleva ühistu, "
-"Tuleva fondivalitseja ega Tuleva töötajad ei anna sinule investeerimisnõu "
-"ega saakski anda, sest me ei ole taotlenud Investeerimisnõustamise "
-"tegevusluba. Anname alati endast parima, et jagada sinuga ausalt ja "
-"arusaadavalt infot, mida arvesse võttes saad ise otsustada. Kui sul on "
-"küsimusi, võta meiega ühendust või konsulteeri erapooletute asjatundjatega "
-"Pensionikeskusese <a href=“http://www.pensionikeskus.ee/“>infotelefonil</a> "
-"või Finantsinspektsiooni <a href=“http://minuraha.ee/"
-"kontaktandmed/“>rahatarkuse lehel</a>."
-
-#: templates/footer/text.php:7
-msgid ""
-"Tuleva website <a href=\"https://tuleva.ee/wp-content/uploads/2017/03/"
-"Kodulehekasutajatingimused.pdf\">terms of service</a>."
-msgstr ""
-"Tuleva kodulehe <a href=“https://tuleva.ee/wp-content/uploads/2017/03/"
-"Kodulehekasutajatingimused.pdf”>kasutustingimused</a>."
-
 #: templates/header/main-sticky.php:6 templates/header/main.php:6
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
+
+#: templates/header/main-sticky.php:17
+msgid "Enter Tuleva app"
+msgstr "Sisene Tuleva äppi"
+
+#: widgets/cta-primary-widget.php:12
+msgid "Primary CTA widget"
+msgstr "Peamine CTA moodul"
+
+#: widgets/cta-primary-widget.php:16
+msgid "Shows primary CTA widget."
+msgstr "Näita peamist CTA moodulit."
+
+#: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
+#: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
+msgid "Title:"
+msgstr "Pealkiri:"
+
+#: widgets/cta-primary-widget.php:41
+msgid "Button text:"
+msgstr "Nupu tekst:"
+
+#: widgets/cta-primary-widget.php:45
+msgid "Button URL:"
+msgstr "Nupu URL:"
+
+#: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
+msgid "Text:"
+msgstr "Tekst:"
+
+#: widgets/cta-secondary-widget.php:12
+msgid "Secondary CTA widget"
+msgstr "Teisejärguline CTA moodul"
+
+#: widgets/cta-secondary-widget.php:16
+msgid "Shows secondary CTA widget."
+msgstr "Näitab teisejärgulist CTA moodulit."
+
+#: widgets/cta-secondary-widget.php:39
+msgid "Title URL:"
+msgstr "Pealkirja URL:"
+
+#: widgets/subscribe-widget.php:12
+msgid "Subscribe form"
+msgstr "Tellimisvorm"
+
+#: widgets/subscribe-widget.php:16
+msgid "Shows subscribe form."
+msgstr "Näitab tellimisvormi."
+
+#: widgets/subscribe-widget.php:39
+msgid "Facebook URL:"
+msgstr "Facebook URL:"
+
+#: widgets/subscribe-widget.php:43
+msgid "Twitter URL:"
+msgstr "Twitter URL:"
+
+#: widgets/text-rows-widget.php:12
+msgid "Text rows"
+msgstr "Tekstiread"
+
+#: widgets/text-rows-widget.php:16
+msgid "Shows text rows."
+msgstr "Näitab tekstiridu."
+
+#: widgets/text-rows-widget.php:41
+msgid "Text row 1:"
+msgstr "Tekstirida 1:"
+
+#: widgets/text-rows-widget.php:45
+msgid "Text row 2:"
+msgstr "Tekstirida 2:"
+
+#: widgets/text-rows-widget.php:49
+msgid "Text row 3:"
+msgstr "Tekstirida 3:"
 
 #. Theme Name of the plugin/theme
 msgid "Tuleva"
@@ -198,6 +203,77 @@ msgstr "Esileht"
 #. Template Name of the plugin/theme
 msgid "Fund page"
 msgstr "Fondide leht"
+
+#~ msgid "Membership fee account"
+#~ msgstr "Liitumistasu Konto"
+
+#~ msgid "Reg. Code"
+#~ msgstr "Reg. kood"
+
+#~ msgid "Activity license nr"
+#~ msgstr "Tegevusloa nr"
+
+#~ msgid "I’d like to get updates about Tuleva"
+#~ msgstr "Ole kursis Tuleva tegemistega"
+
+#~ msgid "How does Tuleva benefit you?"
+#~ msgstr "Kuidas saad sina Tulevast kasu?"
+
+#~ msgid ""
+#~ "We will show you how much money you would save as our pension fund client "
+#~ "and/or Tuleva member."
+#~ msgstr ""
+#~ "Näitame sulle, kui palju sa säästaksid Tuleva pensionifondi kliendina ja/"
+#~ "või Tuleva liikmena."
+
+#~ msgid "Transfer your pension to Tuleva"
+#~ msgstr "Too pension Tulevasse"
+
+#~ msgid ""
+#~ "A guide how to transfer your pension through your internet bank or the "
+#~ "Pensionikeskus web page."
+#~ msgstr "Juhend, kuidas vahetada fondi internetipangas või pensionikeskuses."
+
+#~ msgid ""
+#~ "Before you decide which pension fund you’d like to move your second-"
+#~ "pillar units and future contributions to, be sure to read through the "
+#~ "important information. The terms of our pension funds can be found "
+#~ "%1$shere%2$s. Before you decide which pension fund you’d like to move "
+#~ "your second-pillar units and future contributions to, be sure to read "
+#~ "through the important information. The terms of our pension funds can be "
+#~ "found <a href=\"http://www.pensionikeskus.ee/en/ii-pillar/funds/fund-fees-"
+#~ "comparison/\">here.</a> For comparison, information on all Estonian "
+#~ "pension funds is available at the Pension Centre. Please note that Tuleva "
+#~ "cooperative, Tuleva management company and Tuleva employees do not "
+#~ "dispense investment advice, and cannot do so, because we have not sought "
+#~ "an activity licence in the field of investment advice. However, we do our "
+#~ "best to provide you with truthful, comprehensible information that you "
+#~ "can use to make up your own mind. If you have any questions, don’t "
+#~ "hesitate to contact us, or consult impartial experts via the Pension "
+#~ "Centre’s <a href=\"http://www.pensionikeskus.ee/en/\">information line</"
+#~ "a> or the Financial Supervision Authority’s <a href=\"http://minuraha.ee/"
+#~ "kontaktandmed/\">money matters page</a>."
+#~ msgstr ""
+#~ "Enne kui otsustad, millisesse pensionifondi oma II samba osakud ja "
+#~ "tulevased sissemaksed suunata, tutvu kindlasti olulise infoga. Meie "
+#~ "pensionifondide tingimused on %1$ssiin%2$s, võrdluseks leiad kõigi Eesti "
+#~ "pensionifondide info <a href=“http://www.pensionikeskus.ee/ii-sammas/"
+#~ "fondid/fonditasude-vordlused/“>pensionikeskusest</a>. Palun pane tähele, "
+#~ "et Tuleva ühistu, Tuleva fondivalitseja ega Tuleva töötajad ei anna "
+#~ "sinule investeerimisnõu ega saakski anda, sest me ei ole taotlenud "
+#~ "Investeerimisnõustamise tegevusluba. Anname alati endast parima, et "
+#~ "jagada sinuga ausalt ja arusaadavalt infot, mida arvesse võttes saad ise "
+#~ "otsustada. Kui sul on küsimusi, võta meiega ühendust või konsulteeri "
+#~ "erapooletute asjatundjatega Pensionikeskusese <a href=“http://www."
+#~ "pensionikeskus.ee/“>infotelefonil</a> või Finantsinspektsiooni <a "
+#~ "href=“http://minuraha.ee/kontaktandmed/“>rahatarkuse lehel</a>."
+
+#~ msgid ""
+#~ "Tuleva website <a href=\"https://tuleva.ee/wp-content/uploads/2017/03/"
+#~ "Kodulehekasutajatingimused.pdf\">terms of service</a>."
+#~ msgstr ""
+#~ "Tuleva kodulehe <a href=“https://tuleva.ee/wp-content/uploads/2017/03/"
+#~ "Kodulehekasutajatingimused.pdf”>kasutustingimused</a>."
 
 #~ msgid "Tuleva’s phone number"
 #~ msgstr "Tuleva üldine kontakttelefon"
