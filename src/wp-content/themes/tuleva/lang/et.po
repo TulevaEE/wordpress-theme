@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-05-31 14:42+0300\n"
-"PO-Revision-Date: 2017-05-31 14:45+0300\n"
+"POT-Creation-Date: 2017-06-01 13:43+0300\n"
+"PO-Revision-Date: 2017-06-01 13:43+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -32,9 +32,18 @@ msgstr "Pole olemas sellist lehekülge"
 msgid "Maybe something got mixed up when entering the address?"
 msgstr "Ehk läks aadressi sisestamisega midagi valesti?"
 
+#: templates/blog/pagination.php:3 templates/blog/pagination.php:8
+#: templates/blog/pagination.php:9
+msgid "Older articles"
+msgstr "Vanemad artiklid"
+
+#: templates/blog/pagination.php:4
+msgid "Newer articles"
+msgstr "Uuemad artiklid"
+
 #: templates/blog/recent-articles.php:8
 msgid "Recent articles"
-msgstr "Eelmised artiklid"
+msgstr "Viimased artiklid"
 
 #: templates/blog/submenu.php:13
 msgid "All articles"
@@ -203,6 +212,12 @@ msgstr "Esileht"
 #. Template Name of the plugin/theme
 msgid "Fund page"
 msgstr "Fondide leht"
+
+#~ msgid "Previous articles"
+#~ msgstr "Eelmised artiklid"
+
+#~ msgid "Next articles"
+#~ msgstr "Järgmised artiklid"
 
 #~ msgid "Membership fee account"
 #~ msgstr "Liitumistasu Konto"

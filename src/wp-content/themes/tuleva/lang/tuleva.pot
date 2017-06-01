@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-05-31 11:42:12+00:00\n"
+"POT-Creation-Date: 2017-06-01 10:43:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,6 +27,15 @@ msgstr ""
 
 #: templates/404.php:6
 msgid "Maybe something got mixed up when entering the address?"
+msgstr ""
+
+#: templates/blog/pagination.php:3 templates/blog/pagination.php:8
+#: templates/blog/pagination.php:9
+msgid "Older articles"
+msgstr ""
+
+#: templates/blog/pagination.php:4
+msgid "Newer articles"
 msgstr ""
 
 #: templates/blog/recent-articles.php:8
