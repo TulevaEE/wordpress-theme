@@ -3,7 +3,7 @@
     <div class="container row-spacing-half">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="text-center"><?php the_field('heading'); ?></h1>
+                <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
                 <?php if ( is_active_sidebar( 'landing_page_widget_area' ) ) : ?>
                     <?php dynamic_sidebar( 'landing_page_widget_area' ); ?>
                 <?php endif; ?>

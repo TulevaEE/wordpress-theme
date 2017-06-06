@@ -116,3 +116,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 .popover-calculation .popover > .arrow:after {
     border-bottom-color: #002F63;
 }
+
+.landing-page-headline {
+    margin-top: 10px;
+}
