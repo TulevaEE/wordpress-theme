@@ -1,4 +1,4 @@
-<h2 class="row-spacing-bottom-quarter text-center"><?php _e('How much would I save in fees?', TEXT_DOMAIN); ?></h2>
+<h2 class="row-spacing-bottom-quarter text-center"><?php _e('Average management fee savings with Tuleva', TEXT_DOMAIN); ?></h2>
 
 <div class="row-spacing-bottom-quarter">
     <div class="row">

@@ -98,7 +98,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     display: inline-block;
     margin: 20px;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 3.5em;
     color: white;
     background-color: #002F63;
     max-width: none;
