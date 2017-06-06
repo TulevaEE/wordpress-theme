@@ -11,7 +11,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <input id="tuleva-calculator-wage" type="range" min="500" max="6000" step="100" value="1000" />
+            <input id="tuleva-calculator-wage" type="range" min="400" max="6000" step="100" value="1000" />
         </div>
     </div>
 </div>
@@ -42,7 +42,8 @@
 </div>
 
 <div class="text-center">
-    <a href="https://docs.google.com/document/d/1IKm6NldgI1lu01X2rvCMy9B78wNANh81z3_wvVEKtM4/edit?pli=1">
+    <a href="https://docs.google.com/document/d/1IKm6NldgI1lu01X2rvCMy9B78wNANh81z3_wvVEKtM4/edit?pli=1"
+       target="_blank" rel="noopener noreferrer">
         <?php _e('See how the pension calculator works.', TEXT_DOMAIN); ?>
     </a>
 </div>
