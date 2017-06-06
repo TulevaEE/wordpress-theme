@@ -31,14 +31,6 @@ class ThemeEnqueue {
                 'media' => 'all',
                 'enqueue' => true
             ],
-            [
-                'handle' => 'rangeslider',
-                'src' => $css_path . 'rangeslider.css',
-                'deps' => 'normalize',
-                'ver' => '06062017',
-                'media' => 'all',
-                'enqueue' => true
-            ],
             // JS assets
             [
                 'handle' => 'jquery',
