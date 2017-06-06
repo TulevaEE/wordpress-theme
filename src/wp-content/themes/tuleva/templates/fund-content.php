@@ -13,6 +13,8 @@
             while (have_rows('fund_components')) { the_row();
                 if (get_row_layout() === 'text_boxes') {
                     get_template_part('templates/components/text-boxes');
+                } elseif (get_row_layout() === 'button') {
+                    get_template_part('templates/components/button');
                 } elseif (get_row_layout() === 'media') {
                     get_template_part('templates/components/media');
                 } elseif (get_row_layout() === 'text_rows_block') {
