@@ -35,7 +35,7 @@ class ThemeEnqueue {
                 'handle' => 'rangeslider',
                 'src' => $css_path . 'rangeslider.css',
                 'deps' => 'normalize',
-                'ver' => '2.3.0',
+                'ver' => '06062017',
                 'media' => 'all',
                 'enqueue' => true
             ],
