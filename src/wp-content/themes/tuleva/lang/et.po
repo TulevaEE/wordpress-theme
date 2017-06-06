@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-06-01 13:43+0300\n"
-"PO-Revision-Date: 2017-06-01 13:43+0300\n"
+"POT-Creation-Date: 2017-06-06 13:38+0300\n"
+"PO-Revision-Date: 2017-06-06 13:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: functions.php:25 helpers/acf/init.php:13 helpers/post-types/init.php:9
-#: widgets/init.php:13
+#: widgets/init.php:14
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
@@ -33,7 +33,6 @@ msgid "Maybe something got mixed up when entering the address?"
 msgstr "Ehk läks aadressi sisestamisega midagi valesti?"
 
 #: templates/blog/pagination.php:3 templates/blog/pagination.php:8
-#: templates/blog/pagination.php:9
 msgid "Older articles"
 msgstr "Vanemad artiklid"
 
@@ -56,6 +55,26 @@ msgstr "Olulisemad artiklid"
 #: templates/blog/submenu.php:21
 msgid "RSS feed"
 msgstr "RSS voog"
+
+#: templates/components/pension-calculator.php:1
+msgid "How much would I save in fees?"
+msgstr "Kui palju võidan tasudelt?"
+
+#: templates/components/pension-calculator.php:6
+msgid "Net wage"
+msgstr "Netopalk"
+
+#: templates/components/pension-calculator.php:22
+msgid "Age"
+msgstr "Vanus"
+
+#: templates/components/pension-calculator.php:25
+msgid "y/o"
+msgstr "a"
+
+#: templates/components/pension-calculator.php:46
+msgid "See how the pension calculator works."
+msgstr "Uuri, kuidas pensionikalkulaator töötab."
 
 #: templates/footer/beacon-toggle.php:3
 msgid "Have a question?"
@@ -120,26 +139,34 @@ msgstr "Navigatsioon"
 msgid "Enter Tuleva app"
 msgstr "Sisene Tuleva äppi"
 
+#: widgets/cta-button-widget.php:12
+msgid "CTA Button widget"
+msgstr "CTA nupu moodul"
+
+#: widgets/cta-button-widget.php:16
+msgid "Shows a CTA Button."
+msgstr "Näitab CTA nuppu."
+
+#: widgets/cta-button-widget.php:33 widgets/cta-primary-widget.php:41
+msgid "Button text:"
+msgstr "Nupu tekst:"
+
+#: widgets/cta-button-widget.php:37 widgets/cta-primary-widget.php:45
+msgid "Button URL:"
+msgstr "Nupu URL:"
+
 #: widgets/cta-primary-widget.php:12
 msgid "Primary CTA widget"
 msgstr "Peamine CTA moodul"
 
 #: widgets/cta-primary-widget.php:16
 msgid "Shows primary CTA widget."
-msgstr "Näita peamist CTA moodulit."
+msgstr "Näitab peamist CTA moodulit."
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
 #: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
 msgid "Title:"
 msgstr "Pealkiri:"
-
-#: widgets/cta-primary-widget.php:41
-msgid "Button text:"
-msgstr "Nupu tekst:"
-
-#: widgets/cta-primary-widget.php:45
-msgid "Button URL:"
-msgstr "Nupu URL:"
 
 #: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
 msgid "Text:"

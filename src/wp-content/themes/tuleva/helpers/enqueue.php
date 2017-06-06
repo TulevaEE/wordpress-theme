@@ -31,6 +31,14 @@ class ThemeEnqueue {
                 'media' => 'all',
                 'enqueue' => true
             ],
+            [
+                'handle' => 'rangeslider',
+                'src' => $css_path . 'rangeslider.css',
+                'deps' => 'normalize',
+                'ver' => '2.3.0',
+                'media' => 'all',
+                'enqueue' => true
+            ],
             // JS assets
             [
                 'handle' => 'jquery',
@@ -76,6 +84,22 @@ class ThemeEnqueue {
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
                 'ver' => '30052017',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'rangeslider',
+                'src' => $js_path . 'vendor/rangeslider.min.js',
+                'deps' => 'jquery',
+                'ver' => '2.3.0',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'slider',
+                'src' => $js_path . 'slider.js',
+                'deps' => ['jquery', 'rangeslider'],
+                'ver' => '23052025',
                 'js_in_header' => false,
                 'enqueue' => true
             ]

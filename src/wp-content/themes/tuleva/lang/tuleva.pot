@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-06-01 10:43:11+00:00\n"
+"POT-Creation-Date: 2017-06-06 10:36:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: functions.php:25 helpers/acf/init.php:13 helpers/post-types/init.php:9
-#: widgets/init.php:13
+#: widgets/init.php:14
 msgid "Error locating %s for inclusion"
 msgstr ""
 
@@ -30,7 +30,6 @@ msgid "Maybe something got mixed up when entering the address?"
 msgstr ""
 
 #: templates/blog/pagination.php:3 templates/blog/pagination.php:8
-#: templates/blog/pagination.php:9
 msgid "Older articles"
 msgstr ""
 
@@ -52,6 +51,26 @@ msgstr ""
 
 #: templates/blog/submenu.php:21
 msgid "RSS feed"
+msgstr ""
+
+#: templates/components/pension-calculator.php:1
+msgid "How much would I save in fees?"
+msgstr ""
+
+#: templates/components/pension-calculator.php:6
+msgid "Net wage"
+msgstr ""
+
+#: templates/components/pension-calculator.php:22
+msgid "Age"
+msgstr ""
+
+#: templates/components/pension-calculator.php:25
+msgid "y/o"
+msgstr ""
+
+#: templates/components/pension-calculator.php:46
+msgid "See how the pension calculator works."
 msgstr ""
 
 #: templates/footer/beacon-toggle.php:3
@@ -115,6 +134,22 @@ msgstr ""
 msgid "Enter Tuleva app"
 msgstr ""
 
+#: widgets/cta-button-widget.php:12
+msgid "CTA Button widget"
+msgstr ""
+
+#: widgets/cta-button-widget.php:16
+msgid "Shows a CTA Button."
+msgstr ""
+
+#: widgets/cta-button-widget.php:33 widgets/cta-primary-widget.php:41
+msgid "Button text:"
+msgstr ""
+
+#: widgets/cta-button-widget.php:37 widgets/cta-primary-widget.php:45
+msgid "Button URL:"
+msgstr ""
+
 #: widgets/cta-primary-widget.php:12
 msgid "Primary CTA widget"
 msgstr ""
@@ -126,14 +161,6 @@ msgstr ""
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
 #: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
 msgid "Title:"
-msgstr ""
-
-#: widgets/cta-primary-widget.php:41
-msgid "Button text:"
-msgstr ""
-
-#: widgets/cta-primary-widget.php:45
-msgid "Button URL:"
 msgstr ""
 
 #: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43

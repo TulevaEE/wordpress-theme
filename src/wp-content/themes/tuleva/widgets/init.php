@@ -6,6 +6,7 @@ function tu_register_widgets() {
         'widgets/text-rows-widget.php',
         'widgets/cta-primary-widget.php',
         'widgets/cta-secondary-widget.php',
+        'widgets/cta-button-widget.php',
     ];
 
     foreach ($widget_includes as $file) {
@@ -20,6 +21,8 @@ function tu_register_widgets() {
     register_widget( 'Text_Rows_Widget' );
     register_widget( 'CTA_Primary_Widget' );
     register_widget( 'CTA_Secondary_Widget' );
+    register_widget( 'CTA_Button_Widget' );
+
 
 }
 add_action( 'widgets_init', 'tu_register_widgets' );
@@ -50,6 +53,13 @@ function tu_widgets_init() {
         'name'          => 'Blog sidebar widget area',
         'id'            => 'blog_sidebar_widget_area',
         'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+    ] );
+
+    register_sidebar( [
+        'name'          => 'Landing page widget area',
+        'id'            => 'landing_page_widget_area',
+        'before_widget' => '<div class="text-center row-spacing-half">',
         'after_widget'  => '</div>',
     ] );
 

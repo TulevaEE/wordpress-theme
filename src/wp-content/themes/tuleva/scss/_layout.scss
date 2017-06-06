@@ -2,6 +2,7 @@ $row-spacing: 100px;
 $row-spacing-half: 60px;
 $row-spacing-mobile: $row-spacing / 2;
 $row-spacing-half-mobile: $row-spacing-half / 2;
+$row-spacing-quarter: 40px;
 
 .row-spacing {
     margin-top: $row-spacing;
@@ -27,6 +28,10 @@ $row-spacing-half-mobile: $row-spacing-half / 2;
 
 .row-spacing-bottom-half {
     margin-bottom: $row-spacing-half;
+}
+
+.row-spacing-bottom-quarter {
+    margin-bottom: $row-spacing-quarter;
 }
 
 @include mobile {

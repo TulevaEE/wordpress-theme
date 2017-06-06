@@ -6,7 +6,7 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "gulp": "node_modules/gulp/bin/gulp.js --development",
+    "gulp": "gulp --development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
