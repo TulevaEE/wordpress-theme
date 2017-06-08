@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-06-06 14:50+0300\n"
-"PO-Revision-Date: 2017-06-06 14:51+0300\n"
+"POT-Creation-Date: 2017-06-08 12:04+0300\n"
+"PO-Revision-Date: 2017-06-08 12:05+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -72,9 +72,17 @@ msgstr "Vanus"
 msgid "y/o"
 msgstr "a"
 
-#: templates/components/pension-calculator.php:47
-msgid "See how the pension calculator works."
-msgstr "Uuri, kuidas pensionikalkulaator töötab."
+#: templates/components/pension-calculator.php:45
+msgid ""
+"<a href=\"https://docs.google.com/document/"
+"d/13GjxPNR3j_m1iZu2XHjhrz7xo8sdr4tTNLEvm4MxqkU/edit?usp=sharing\"\n"
+"       target=\"_blank\" rel=\"noopener noreferrer\">See how the pension "
+"calculator works.</a>"
+msgstr ""
+"<a href=\"https://docs.google.com/document/"
+"d/1IKm6NldgI1lu01X2rvCMy9B78wNANh81z3_wvVEKtM4/edit?usp=sharing\"\n"
+"       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
+"pensionikalkulaator töötab.</a>"
 
 #: templates/footer/beacon-toggle.php:3
 msgid "Have a question?"
@@ -239,6 +247,9 @@ msgstr "Esileht"
 #. Template Name of the plugin/theme
 msgid "Fund page"
 msgstr "Fondide leht"
+
+#~ msgid "See how the pension calculator works."
+#~ msgstr "Uuri, kuidas pensionikalkulaator töötab."
 
 #~ msgid "How much would I save in fees?"
 #~ msgstr "Keskmine sääst Tulevaga"

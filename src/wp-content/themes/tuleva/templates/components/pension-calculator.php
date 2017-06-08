@@ -42,8 +42,6 @@
 </div>
 
 <div class="text-center">
-    <a href="https://docs.google.com/document/d/1IKm6NldgI1lu01X2rvCMy9B78wNANh81z3_wvVEKtM4/edit?pli=1"
-       target="_blank" rel="noopener noreferrer">
-        <?php _e('See how the pension calculator works.', TEXT_DOMAIN); ?>
-    </a>
+    <?php _e('<a href="https://docs.google.com/document/d/13GjxPNR3j_m1iZu2XHjhrz7xo8sdr4tTNLEvm4MxqkU/edit?usp=sharing"
+       target="_blank" rel="noopener noreferrer">See how the pension calculator works.</a>', TEXT_DOMAIN); ?>
 </div>

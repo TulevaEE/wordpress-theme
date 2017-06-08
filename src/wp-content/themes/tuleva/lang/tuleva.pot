@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-06-06 11:50:19+00:00\n"
+"POT-Creation-Date: 2017-06-08 09:04:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,8 +69,12 @@ msgstr ""
 msgid "y/o"
 msgstr ""
 
-#: templates/components/pension-calculator.php:47
-msgid "See how the pension calculator works."
+#: templates/components/pension-calculator.php:45
+msgid ""
+"<a href=\"https://docs.google.com/document/"
+"d/13GjxPNR3j_m1iZu2XHjhrz7xo8sdr4tTNLEvm4MxqkU/edit?usp=sharing\"\n"
+"       target=\"_blank\" rel=\"noopener noreferrer\">See how the pension "
+"calculator works.</a>"
 msgstr ""
 
 #: templates/footer/beacon-toggle.php:3
