@@ -91,7 +91,7 @@ class ThemeEnqueue {
                 'handle' => 'slider',
                 'src' => $js_path . 'slider.js',
                 'deps' => ['jquery', 'rangeslider'],
-                'ver' => '23052025',
+                'ver' => '12062017',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
