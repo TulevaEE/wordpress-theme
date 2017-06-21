@@ -1,0 +1,22 @@
+{
+  "index.css": "static/css/index.c28cc90c.css",
+  "index.css.map": "static/css/index.c28cc90c.css.map",
+  "index.js": "static/js/index.361b3c52.js",
+  "index.js.map": "static/js/index.361b3c52.js.map",
+  "login.css": "static/css/login.8b26d46e.css",
+  "login.css.map": "static/css/login.8b26d46e.css.map",
+  "login.js": "static/js/login.15113820.js",
+  "login.js.map": "static/js/login.15113820.js.map",
+  "polyfills.js": "static/js/polyfills.13ec525a.js",
+  "polyfills.js.map": "static/js/polyfills.13ec525a.js.map",
+  "static/media/Roboto-Bold.ttf": "static/media/Roboto-Bold.d329cc8b.ttf",
+  "static/media/Roboto-Medium.ttf": "static/media/Roboto-Medium.fe13e417.ttf",
+  "static/media/Roboto-Regular.ttf": "static/media/Roboto-Regular.ac3f799d.ttf",
+  "static/media/btn-close.svg": "static/media/btn-close.bd03fb80.svg",
+  "static/media/done.svg": "static/media/done.6acc448f.svg",
+  "static/media/icon-checkmark.svg": "static/media/icon-checkmark.aa251f8d.svg",
+  "static/media/icon-plussign.svg": "static/media/icon-plussign.7ccf3b8c.svg",
+  "static/media/info.svg": "static/media/info.9e58331c.svg",
+  "static/media/logo.svg": "static/media/logo.83d2e0f6.svg",
+  "static/media/success.svg": "static/media/success.c18100c7.svg"
+}
