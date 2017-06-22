@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2017-06-08 12:04+0300\n"
-"PO-Revision-Date: 2017-06-08 12:05+0300\n"
+"PO-Revision-Date: 2017-06-16 15:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: templates/footer/beacon-toggle.php:3
 msgid "Have a question?"
-msgstr "Tekkis küsimus?"
+msgstr "Küsi Kristilt!"
 
 #: templates/footer/beacon-translations.php:4
 msgid "Send a Message"
