@@ -7,6 +7,16 @@
                 <?php if ( is_active_sidebar( 'landing_page_widget_area' ) ) : ?>
                     <?php dynamic_sidebar( 'landing_page_widget_area' ); ?>
                 <?php endif; ?>
+                <?php if (isset($_GET['login'])) { ?>
+                    <div>
+                        <div id="inline-login" class="inline-login"></div>
+                        <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.efe556b6.css" rel="stylesheet">
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.b7298c72.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.9add4524.js"></script>
+<!--                        <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script>-->
+<!--                        <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script>-->
+                    </div>
+                <?php } ?>
             </div>
 			<div class="col-md-5 col-md-offset-1">
 				<?php get_template_part('templates/components/pension-calculator'); ?>
