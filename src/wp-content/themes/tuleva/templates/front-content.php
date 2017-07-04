@@ -17,10 +17,18 @@
 <!--                        <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script>-->
                     </div>
                 <?php //} ?>
+                <?php if (isset($_GET['signup'])) { ?>
+                    <div>
+                        <div id="inline-signup" class="inline-signup"></div>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.567d7aae.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.f6585fb3.js"></script>
+                        <!-- <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script> -->
+                    </div>
+                <?php } ?>
             </div>
-			<div class="col-md-5 col-md-offset-1">
-				<?php get_template_part('templates/components/pension-calculator'); ?>
-			</div>
+            <div class="col-md-5 col-md-offset-1">
+                <?php get_template_part('templates/components/pension-calculator'); ?>
+            </div>
         </div>
     </div>
 
