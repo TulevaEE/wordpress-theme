@@ -51,7 +51,7 @@ function theme_setup() {
     add_image_size('max-height-400', 9999, 400, false);
 
     // Hides ACF menu item in admin
-    add_filter('acf/settings/show_admin', '__return_false');
+    //add_filter('acf/settings/show_admin', '__return_false');
 
     // Hides admin bar in front end
     add_filter('show_admin_bar', '__return_false');

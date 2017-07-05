@@ -5,7 +5,8 @@ $acf_includes = [
     'helpers/acf/front.php', // Front page fields
     'helpers/acf/blog.php', // Blog page fields
     'helpers/acf/contact.php', // Contact page fields
-    'helpers/acf/options.php' // Options page
+    'helpers/acf/options.php', // Options page
+    'helpers/acf/membership.php' // Membership page
 ];
 
 foreach ($acf_includes as $file) {

@@ -237,6 +237,10 @@ msgid "Blog front page"
 msgstr "Blogi esileht"
 
 #. Template Name of the plugin/theme
+msgid "Membership success"
+msgstr "Liikmeks astutud"
+
+#. Template Name of the plugin/theme
 msgid "Contact page"
 msgstr "Kontaktileht"
 
