@@ -9,8 +9,8 @@
                     <div>
                         <div id="inline-login" class="inline-login"></div>
                         <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.efe556b6.css" rel="stylesheet">
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.d3338b5f.js"></script>
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.f6585fb3.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.e6f60d66.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.8b285ffa.js"></script>
                         <!-- <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script> -->
                         <!-- <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script> -->
                     </div>
