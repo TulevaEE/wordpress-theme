@@ -2,16 +2,17 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container row-spacing-half">
         <div>
-            <div>
+          <div><h2><?php the_content(); ?></h2></div>
+          <div>
                 <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
                 <?php //if (isset($_GET['login'])) { ?>
                     <div>
                         <div id="inline-login" class="inline-login"></div>
                         <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.efe556b6.css" rel="stylesheet">
-                        <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.b7298c72.js"></script> -->
-                        <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.9add4524.js"></script> -->
-                        <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script>
-                        <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.d3338b5f.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.f6585fb3.js"></script>
+                        <!-- <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script> -->
+                        <!-- <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script> -->
                     </div>
                 <?php //} ?>
             </div>
