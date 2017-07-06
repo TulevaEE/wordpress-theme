@@ -11,7 +11,7 @@
             <div class="col-md-4 col-md-offset-8">
                 <?php if (isset($_GET['signup'])) { ?>
                     <div id="inline-signup" class="inline-signup well well-xl"></div>
-                    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.cd0c45e3.js"></script>
+                    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.db87bb0e.js"></script>
                     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.8b285ffa.js"></script>
 <!--                    <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script>-->
                 <?php } ?>
