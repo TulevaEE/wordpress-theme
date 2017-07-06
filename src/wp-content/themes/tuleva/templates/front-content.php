@@ -2,32 +2,19 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container row-spacing-half">
         <div class="row">
-            <div class="col-md-6">
-                <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
-                <?php if ( is_active_sidebar( 'landing_page_widget_area' ) ) : ?>
-                    <?php dynamic_sidebar( 'landing_page_widget_area' ); ?>
-                <?php endif; ?>
-                <?php //if (isset($_GET['login'])) { ?>
-                    <div>
-                        <div id="inline-login" class="inline-login"></div>
-                        <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.efe556b6.css" rel="stylesheet">
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.b7298c72.js"></script>
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.9add4524.js"></script>
-<!--                        <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script>-->
-<!--                        <script type="text/javascript" src="http://localhost:3000/static/js/polyfills.js"></script>-->
-                    </div>
-                <?php //} ?>
+            <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
+        </div>
+    </div>
+
+   <div id="text-block-component" class="container row-spacing-half">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
                 <?php if (isset($_GET['signup'])) { ?>
-                    <div>
-                        <div id="inline-signup" class="inline-signup"></div>
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.567d7aae.js"></script>
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.f6585fb3.js"></script>
-                        <!-- <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script> -->
-                    </div>
+                    <div id="inline-signup" class="inline-signup well well-xl"></div>
+                    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.e81f2912.js"></script>
+                    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.7cbc8685.js"></script>
+<!--                    <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script>-->
                 <?php } ?>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-                <?php get_template_part('templates/components/pension-calculator'); ?>
             </div>
         </div>
     </div>
