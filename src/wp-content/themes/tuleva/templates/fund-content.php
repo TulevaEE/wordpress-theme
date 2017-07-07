@@ -24,7 +24,7 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-12 text-center">
-                            <a href="#" class="btn btn-primary btn-lg">
+                            <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg">
                                 <?php _e('Kuidas tuua pension Tulevasse?') ?>
                             </a>
                         </div>
