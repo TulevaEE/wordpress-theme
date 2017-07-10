@@ -19,12 +19,26 @@
         </div>
     </div>
 
-    <?php
+<!--        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseExample"-->
+<!--                aria-expanded="false" aria-controls="collapseExample">-->
+<!--            Button with data-target-->
+<!--        </button>-->
+<!--        <div class="collapse" id="collapseExample">-->
+<!--            <div class="well">-->
+<!--                ...-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        --><?php //get_template_part('templates/components/reasons'); ?>
+<!--        --><?php //get_template_part('templates/components/founders'); ?>
+
+        <?php
 
         if (have_rows('front_components')) {
             while (have_rows('front_components')) { the_row();
                 if (get_row_layout() === 'text_boxes') {
                     get_template_part('templates/components/text-boxes');
+                    get_template_part('templates/components/reasons');
                 } elseif (get_row_layout() === 'button') {
                     get_template_part('templates/components/button');
                 } elseif (get_row_layout() === 'text_block') {
