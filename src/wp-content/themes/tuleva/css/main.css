@@ -4495,6 +4495,37 @@ hr {
   border-color: #4a4c4e;
   color: white; }
 
+.funds-container-hero-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.32) 100%);
+  top: 0;
+  height: 90vh;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.funds-container-hero {
+  background-image: url("/wp-content/themes/tuleva/img/funds-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; }
+
+.funds-container-hero h1 {
+  color: #FFFFFF;
+  font-family: Merriweather;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 56px;
+  text-align: center; }
+
+.funds-container-hero p {
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center; }
+
+.funds-container .top-buffer {
+  margin-top: 20px; }
+
 .mid-headline p {
   color: #0081ED;
   font-size: 32px;
