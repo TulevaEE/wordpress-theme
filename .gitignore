@@ -7,3 +7,4 @@ wc-logs
 *.sublime-workspace
 node_modules
 src/wp-content/uploads/cache/
+.DS_store
