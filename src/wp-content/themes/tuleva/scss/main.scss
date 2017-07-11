@@ -16,25 +16,25 @@
 	background-image: url('/wp-content/themes/tuleva/img/neivelt.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 90vh;	
+	height: 90vh;
 }
 
 .annika-image {
 	background-image: url('/wp-content/themes/tuleva/img/annika.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 90vh;	
+	height: 90vh;
 }
 
 .taavetkristo-image {
 	background-image: url('/wp-content/themes/tuleva/img/taavetkristo.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 90vh;	
+	height: 90vh;
 }
 
 .front-founders {
-	
+
 	background-color: #EBF7FF;
 
 	.col-md-6 {
@@ -80,11 +80,11 @@
 				color: #303030;
 				font-family: Roboto;
 				font-size: 16px;
-				line-height: 25px;			
-			}			
+				line-height: 25px;
+			}
 		}
 
-	}	
+	}
 }
 
 
@@ -137,3 +137,32 @@
     background-repeat: no-repeat;
 }
 
+// INLINE SIGNUP
+.inline-signup__number {
+    width: 32px;
+    height: 32px;
+    color: #0081EE;
+    background-color: rgba(5, 147, 252, 0.24);
+    border: none;
+    display: inline-block;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.inline-signup__title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.inline-signup__content {
+    margin-left: 48px;
+}
+
+.inline-signup__item {
+    margin-bottom: 1em;
+}

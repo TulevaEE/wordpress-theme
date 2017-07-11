@@ -468,7 +468,7 @@ small {
 a:hover,
 a:focus {
   color: #0081EE;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 .brand-logo {
   max-width: 150px; }
