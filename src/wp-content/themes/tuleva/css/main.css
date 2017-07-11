@@ -6489,6 +6489,57 @@ hr {
     background-repeat: repeat-x;
     background-size: 0.8em 0.8em; }
 
+.neivelt-image {
+  background-image: url("/wp-content/themes/tuleva/img/neivelt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; }
+
+.annika-image {
+  background-image: url("/wp-content/themes/tuleva/img/annika.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; }
+
+.taavetkristo-image {
+  background-image: url("/wp-content/themes/tuleva/img/taavetkristo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh; }
+
+.front-founders {
+  background-color: #EBF7FF; }
+  .front-founders .col-md-6 {
+    padding-left: 0;
+    padding-right: 0; }
+    .front-founders .col-md-6 .row {
+      margin-left: 0; }
+    .front-founders .col-md-6 .founders-name-badge {
+      padding: 60px 20px 40px 40px;
+      background-color: #002F63;
+      color: white; }
+      .front-founders .col-md-6 .founders-name-badge .founders-name {
+        font-family: Merriweather;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px; }
+      .front-founders .col-md-6 .founders-name-badge .founders-subtitle {
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 30px; }
+    .front-founders .col-md-6 .founders-content {
+      padding: 40px 40px 40px 40px; }
+      .front-founders .col-md-6 .founders-content .founders-content-title {
+        color: #373A3C;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 30px; }
+      .front-founders .col-md-6 .founders-content .founders-content-text {
+        color: #303030;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 25px; }
+
 .mid-headline p {
   color: #0081ED;
   font-size: 32px;
