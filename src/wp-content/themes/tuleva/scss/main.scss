@@ -8,6 +8,11 @@
 @import 'banks';
 @import 'funds';
 
+.proposal {
+	@import 'proposal';
+}
+ 
+ 
 // TODO: extract to a separate file
 .mid-headline p {
     color: #0081ED;
