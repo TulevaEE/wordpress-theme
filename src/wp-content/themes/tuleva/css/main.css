@@ -3410,7 +3410,7 @@ small {
 a:hover,
 a:focus {
   color: #0081EE;
-  text-decoration: underline; }
+  text-decoration: none; }
 
 .brand-logo {
   max-width: 150px; }
@@ -4524,6 +4524,54 @@ hr {
 .funds-container .top-buffer {
   margin-top: 20px; }
 
+.front-founders {
+  background-color: #EBF7FF; }
+  .front-founders .col-md-6 {
+    padding-left: 0;
+    padding-right: 0; }
+    .front-founders .col-md-6 .row {
+      margin-left: 0; }
+    .front-founders .col-md-6 .founders-name-badge {
+      padding: 60px 20px 40px 40px;
+      background-color: #002F63;
+      color: white; }
+      .front-founders .col-md-6 .founders-name-badge .founders-name {
+        font-family: Merriweather;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px; }
+      .front-founders .col-md-6 .founders-name-badge .founders-subtitle {
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 30px; }
+    .front-founders .col-md-6 .founders-content {
+      padding: 40px 40px 40px 40px; }
+      .front-founders .col-md-6 .founders-content .founders-content-title {
+        color: #373A3C;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 30px; }
+      .front-founders .col-md-6 .founders-content .founders-content-text {
+        color: #303030;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 25px; }
+  .front-founders .neivelt-image {
+    background-image: url("/wp-content/themes/tuleva/img/neivelt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh; }
+  .front-founders .annika-image {
+    background-image: url("/wp-content/themes/tuleva/img/annika.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh; }
+  .front-founders .taavetkristo-image {
+    background-image: url("/wp-content/themes/tuleva/img/taavetkristo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh; }
+
 .proposal {
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
   /**
@@ -4743,6 +4791,25 @@ hr {
   /*
  * Utility classes
  */ }
+  .proposal .tooltip {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    max-width: 400px;
+    border-width: 1px; }
+  .proposal .member-fee-information-button {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8dGl0bGU+MkVBNDY4NUMtQkQyOC00QUNGLUIwOTUtQzg1NTNFREU3NEYwPC90aXRsZT4KICA8cGF0aCBkPSJNOCAwYTcuOTkgNy45OSAwIDAgMC04IDhjMCA0LjQyNyAzLjU3MyA4IDggOHM4LTMuNTczIDgtOC0zLjU3My04LTgtOHptMSAxM0g3VjdoMnY2em0wLThIN1YzaDJ2MnoiCiAgICBmaWxsPSIjMDA3OEZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIG9wYWNpdHk9Ii44Ii8+Cjwvc3ZnPg=="); }
   .proposal .hero {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6488,57 +6555,6 @@ hr {
     background-position: 0 0.7em;
     background-repeat: repeat-x;
     background-size: 0.8em 0.8em; }
-
-.neivelt-image {
-  background-image: url("/wp-content/themes/tuleva/img/neivelt.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh; }
-
-.annika-image {
-  background-image: url("/wp-content/themes/tuleva/img/annika.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh; }
-
-.taavetkristo-image {
-  background-image: url("/wp-content/themes/tuleva/img/taavetkristo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh; }
-
-.front-founders {
-  background-color: #EBF7FF; }
-  .front-founders .col-md-6 {
-    padding-left: 0;
-    padding-right: 0; }
-    .front-founders .col-md-6 .row {
-      margin-left: 0; }
-    .front-founders .col-md-6 .founders-name-badge {
-      padding: 60px 20px 40px 40px;
-      background-color: #002F63;
-      color: white; }
-      .front-founders .col-md-6 .founders-name-badge .founders-name {
-        font-family: Merriweather;
-        font-size: 48px;
-        font-weight: bold;
-        line-height: 60px; }
-      .front-founders .col-md-6 .founders-name-badge .founders-subtitle {
-        font-family: Roboto;
-        font-size: 20px;
-        line-height: 30px; }
-    .front-founders .col-md-6 .founders-content {
-      padding: 40px 40px 40px 40px; }
-      .front-founders .col-md-6 .founders-content .founders-content-title {
-        color: #373A3C;
-        font-family: Roboto;
-        font-size: 20px;
-        line-height: 30px; }
-      .front-founders .col-md-6 .founders-content .founders-content-text {
-        color: #303030;
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 25px; }
 
 .mid-headline p {
   color: #0081ED;

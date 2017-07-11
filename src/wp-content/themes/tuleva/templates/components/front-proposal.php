@@ -1,4 +1,10 @@
     <?php if (isset($_GET['signup'])) { ?>
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+      });
+      </script>
+
       <div class="proposal">
         <div class="hero">
           <div class="intro w-container">
@@ -13,7 +19,7 @@
                 <h4 class="proposal-title"><?php _e('Astu liikmeks ja vali Tuleva pensionifond'); ?></h4>
                 <ul class="benefits w-list-unstyled">
                   <li class="benefit"><?php _e('Kogud pensioni meie ühises madalate kuludega pensionifondis') ?></li>
-                  <li class="benefit"><?php _e('Liikmele on valitsemistasu soodsam — kõigest'); ?>&nbsp;<span class="highlight"><strong>0,29%</strong></span></li>
+                  <li class="benefit"><?php _e('Liikmele on valitsemistasu soodsam — kõigest'); ?>&nbsp;<span class="highlight"><strong>0,29%</strong></span><span class="member-fee-information-button" data-toggle="tooltip" data-placement="bottom" title="Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest. Seega, fondi valitsemise kulude katteks jääb 0,29%."></span></li>
                   <li class="benefit last"><?php _e('Toetad Tuleva arengut ja aitad teha Eesti pensionisüsteemi paremaks'); ?></li>
                 </ul>
               </div>

@@ -7,86 +7,11 @@
 @import 'styles';
 @import 'banks';
 @import 'funds';
+@import 'founders';
 
 .proposal {
 	@import 'proposal';
 }
-
-.neivelt-image {
-	background-image: url('/wp-content/themes/tuleva/img/neivelt.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 90vh;
-}
-
-.annika-image {
-	background-image: url('/wp-content/themes/tuleva/img/annika.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 90vh;
-}
-
-.taavetkristo-image {
-	background-image: url('/wp-content/themes/tuleva/img/taavetkristo.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 90vh;
-}
-
-.front-founders {
-
-	background-color: #EBF7FF;
-
-	.col-md-6 {
-
-		padding-left: 0;
-		padding-right: 0;
-		.row {
-			margin-left: 0;
-		}
-
-		.founders-name-badge {
-
-			padding: 60px 20px 40px 40px;
-
-			.founders-name {
-				font-family: Merriweather;
-				font-size: 48px;
-				font-weight: bold;
-				line-height: 60px;
-			}
-
-			.founders-subtitle {
-				font-family: Roboto;
-				font-size: 20px;
-				line-height: 30px;
-			}
-
-			background-color: #002F63;
-			color: white;
-		}
-
-		.founders-content {
-			padding: 40px 40px 40px 40px;
-
-			.founders-content-title {
-				color: #373A3C;
-				font-family: Roboto;
-				font-size: 20px;
-				line-height: 30px;
-			}
-
-			.founders-content-text {
-				color: #303030;
-				font-family: Roboto;
-				font-size: 16px;
-				line-height: 25px;
-			}
-		}
-
-	}
-}
-
 
 // TODO: extract to a separate file
 .mid-headline p {
