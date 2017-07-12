@@ -1,8 +1,8 @@
 <div class="page-container">
-    <div class="page-container funds-container">    
-        <div class="page-container funds-container-hero">  
+    <div class="page-container funds-container">
+        <div class="page-container funds-container-hero">
 
-            <div class="funds-container-hero-gradient">    
+            <div class="funds-container-hero-gradient">
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <div class="container row-spacing">
                     <!--
@@ -25,7 +25,7 @@
                     <div class="row mt-5">
                         <div class="col-md-12 text-center">
                             <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg">
-                                <?php _e('Kuidas tuua pension Tulevasse?') ?>
+                                <?php _e('Vali Tuleva pensionifond') ?>
                             </a>
                         </div>
                     </div>
