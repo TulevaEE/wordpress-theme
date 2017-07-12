@@ -14,12 +14,12 @@
                     -->
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="h1-sm text-center"><?php _e('Tuleva asutajad ja liikmed koguvad juba II sambasse Tuleva pensionifondis.'); ?></h1>
+                            <h1 class="h1-sm text-center"><?php _e('Vanus 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond.'); ?></h1>
                         </div>
                     </div>
                     <div class="row mt-5 top-buffer">
                         <div class="col-md-12">
-                            <p class="h1-sm text-center"><?php _e('Meiega koos saavad pensioni koguda kõik Eesti inimesed. Pensionifondi vahetus on tasuta ja võtab netipangas 5 minutit.') ?></p>
+                            <p class="h1-sm text-center"><?php _e('Selle fondi on valinud ka Tuleva asutajad ja enamik liikmeid. Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit.') ?></p>
                         </div>
                     </div>
                     <div class="row mt-5">
