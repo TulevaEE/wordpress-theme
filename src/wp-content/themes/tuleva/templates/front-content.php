@@ -28,6 +28,15 @@
             while (have_rows('front_components')) { the_row();
                 if (get_row_layout() === 'text_boxes') {
                     get_template_part('templates/components/text-boxes');
+                    ?>
+                      <div id="button-component" class="container row-spacing-half">
+                          <div class="row">
+                              <div class="col-md-12 text-center">
+                                  <a href="https://pension.tuleva.ee/?utm_source=website_homepage_member" class="btn btn-primary btn-xl"><?php _e('Astu Tuleva liikmeks!'); ?></a>
+                              </div>
+                          </div>
+                      </div>
+                    <?php                    
                     get_template_part('templates/components/reasons');
                     get_template_part('templates/components/front-founders');
                     get_template_part('templates/components/signup');
