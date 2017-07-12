@@ -11,16 +11,6 @@
 
     <?php get_template_part('templates/components/front-proposal'); ?>
 
-<!--        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseExample"-->
-<!--                aria-expanded="false" aria-controls="collapseExample">-->
-<!--            Button with data-target-->
-<!--        </button>-->
-<!--        <div class="collapse" id="collapseExample">-->
-<!--            <div class="well">-->
-<!--                ...-->
-<!--            </div>-->
-<!--        </div>-->
-
 
         <?php
 
@@ -36,8 +26,9 @@
                               </div>
                           </div>
                       </div>
-                    <?php                    
+                    <?php
                     get_template_part('templates/components/reasons');
+                    get_template_part('templates/components/goals');
                     get_template_part('templates/components/front-founders');
                     get_template_part('templates/components/signup');
                 } elseif (get_row_layout() === 'button') {

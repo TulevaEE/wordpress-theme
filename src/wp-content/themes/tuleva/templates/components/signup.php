@@ -1,6 +1,10 @@
 <?php if (isset($_GET['signup'])) { ?>
     <div id="inline-signup-anchor"></div>
-<div id="text-block-component" class="container row-spacing-half">
+
+<div class="container row-spacing-half">
+    <div class="row text-center row-spacing-bottom-quarter">
+        <h1>Liitu Tulevaga</h1>
+    </div>
     <div class="row">
         <div class="col-md-7">
             <div class="inline-signup__item">
@@ -8,14 +12,14 @@
             </div>
             <p class="inline-signup__content">
                 Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat kriminaalkaristust.
-                <!--<a href="#">Mis on minu õigused ja kohustused Tuleva liikmena?</a>-->
+                <a href="#rights-and-obligations">Mis on minu õigused ja kohustused Tuleva liikmena?</a>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">2</span><span class="inline-signup__title">Maksa ühekordne liitumistasu <span class="text-highlight">100 eurot</span></span>
             </div>
             <p class="inline-signup__content">
                 See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br />
-                <!--<a href="#">Milleks kasutame liitumistasusid?</a>-->
+                <a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">3</span><span class="inline-signup__title">Suuna pension Tulevasse</span>
