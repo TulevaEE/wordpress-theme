@@ -3,29 +3,29 @@
 
 <div class="container row-spacing-half">
     <div class="row text-center row-spacing-bottom-quarter">
-        <h1>Liitu Tulevaga</h1>
+        <h1><?php _e('Liitu Tulevaga') ?></h1>
     </div>
     <div class="row">
         <div class="col-md-7">
             <div class="inline-signup__item">
-                <span class="inline-signup__number">1</span><span class="inline-signup__title">Sisesta oma andmed ja saada liitumisavaldus</span>
+                <span class="inline-signup__number">1</span><span class="inline-signup__title"><?php _e('Sisesta oma andmed ja saada liitumisavaldus') ?></span>
             </div>
             <p class="inline-signup__content">
-                Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat kriminaalkaristust.
-                <a href="#rights-and-obligations">Mis on minu õigused ja kohustused Tuleva liikmena?</a>
+                <?php _e('Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat kriminaalkaristust.
+                <a href="#rights-and-obligations">Mis on minu õigused ja kohustused Tuleva liikmena?</a>') ?>
             </p>
             <div class="inline-signup__item">
-                <span class="inline-signup__number">2</span><span class="inline-signup__title">Maksa ühekordne liitumistasu <span class="text-highlight">100 eurot</span></span>
+                <span class="inline-signup__number">2</span><span class="inline-signup__title"><?php _e('Maksa ühekordne liitumistasu <span class="text-highlight">100 eurot</span>') ?></span>
             </div>
             <p class="inline-signup__content">
-                See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br />
-                <a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>
+                <?php _e('See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br />
+                <a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>') ?>
             </p>
             <div class="inline-signup__item">
-                <span class="inline-signup__number">3</span><span class="inline-signup__title">Suuna pension Tulevasse</span>
+                <span class="inline-signup__number">3</span><span class="inline-signup__title"><?php _e('Suuna pension Tulevasse') ?></span>
             </div>
             <p class="inline-signup__content">
-                Kui sinu II sammas pole juba Tuleva pensionifondi suunatud, saad seda kohe mugavalt teha.
+                <?php _e('Kui sinu II sammas pole juba Tuleva pensionifondi suunatud, saad seda kohe mugavalt teha.') ?>
             </p>
         </div>
         <div class="col-md-5">
