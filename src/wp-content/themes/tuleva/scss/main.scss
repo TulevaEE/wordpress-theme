@@ -150,3 +150,44 @@
         flex-direction: column;
     }
 }
+
+.fund-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: $navy-blue;
+
+    &__arrow-wrapper {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+    }
+
+    &__arrow-container {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #0078ff;
+        border-radius: 50%;
+        transition: width 200ms ease, height 200ms ease;
+    }
+
+    &__arrow {
+        transform: rotate(90deg);
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        color: $navy-blue;
+        .fund-navigation__arrow-container {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
