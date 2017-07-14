@@ -4498,20 +4498,21 @@ hr {
   color: white; }
 
 .funds-container-hero-gradient {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.32) 100%);
+  background: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88));
   top: 0;
-  height: 90vh;
+  height: 70vh;
   padding-top: 50px;
   padding-bottom: 50px; }
 
 .funds-container-hero {
-  background-image: url("/wp-content/themes/tuleva/img/funds-hero.jpg");
+  background-position-y: 70%;
+  background-image: url("/wp-content/themes/tuleva/img/plikad.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh; }
+  height: 70vh; }
 
 .funds-container-hero h1 {
-  color: #FFFFFF;
+  color: #002f63;
   font-family: Merriweather;
   font-size: 32px;
   font-weight: bold;
@@ -4519,7 +4520,7 @@ hr {
   text-align: center; }
 
 .funds-container-hero p {
-  color: #FFFFFF;
+  color: #002f63;
   font-family: Roboto;
   font-size: 20px;
   line-height: 30px;
