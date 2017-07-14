@@ -191,3 +191,28 @@
         }
     }
 }
+
+.counter-block {
+    color: $navy-blue;
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        width: 128px;
+        height: 128px;
+        margin-bottom: 21px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: bold;
+        font-size: 72px;
+    }
+    &__text {
+        text-align: left;
+    }
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}

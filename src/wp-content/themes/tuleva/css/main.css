@@ -6761,4 +6761,44 @@ hr {
       width: 48px;
       height: 48px; }
 
+.counter-block {
+  color: #002F63; }
+  .counter-block__icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 128px;
+    height: 128px;
+    margin-bottom: 21px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    font-weight: bold;
+    font-size: 72px; }
+  .counter-block__text {
+    text-align: left; }
+
+.vertical-align {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 /*# sourceMappingURL=main.css.map */

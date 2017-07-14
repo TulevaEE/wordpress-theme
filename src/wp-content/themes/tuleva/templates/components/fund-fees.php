@@ -30,4 +30,12 @@
             <p><?php _e('Suurem osa pankade pensionifondivalitsejate valitsemistasudest läheb emapankade tuluks ning turundus- ja müügikuludeks. Osa läheb ka fondijuhi ja analüütikute ja teiste töötajate palkadeks. Paraku näitab nii Eesti pensionifondide säratu minevik kui ka maailma kogemus, et fondijuhtide katsed turust targemad olla toovad pensionikogujale hoopis turu keskmisest halvema tulemuse.') ?></p>
         </div>
     </div>
+    <!-- TODO
+    <div class="row row-spacing">
+        <div class="col-md-offset-2 col-md-8">
+            <h4><?php _e('Sa ei usu meid?') ?></h4>
+            <p><?php _e('Loe, mida arvab asjast <a href="#" class="inline-link">Warren Buffett</a>. Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a href="#" class="inline-link">artikliseeriat</a>.') ?></p>
+        </div>
+    </div>
+    -->
 </div>

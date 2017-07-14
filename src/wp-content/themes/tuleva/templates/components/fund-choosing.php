@@ -21,11 +21,11 @@
                 <p><hr /></p>
                 <div class="text-center">
                     <p>
-                        <a class="btn btn-link btn-lg" href="#"><?php _e('Vaata fondi infot'); ?>
+                        <a class="btn btn-link btn-lg" href="#comparison-block-component"><?php _e('Vaata fondi infot'); ?>
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
-                    <p><a href="#" class="btn btn-primary btn-lg"><?php _e('Valin selle fondi'); ?></a></p>
+                    <p><a href="/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg"><?php _e('Valin selle fondi'); ?></a></p>
                 </div>
             </div>
         </div>
@@ -46,11 +46,11 @@
                 <p><hr /></p>
                 <div class="text-center">
                     <p>
-                        <a class="btn btn-link btn-lg" href="#"><?php _e('Vaata fondi infot'); ?>
+                        <a class="btn btn-link btn-lg" href="#comparison-block-component"><?php _e('Vaata fondi infot'); ?>
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
-                    <p><a href="#" class="btn btn-primary btn-lg"><?php _e('Valin selle fondi'); ?></a></p>
+                    <p><a href="/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg"><?php _e('Valin selle fondi'); ?></a></p>
                 </div>
             </div>
         </div>
