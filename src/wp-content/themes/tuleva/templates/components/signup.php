@@ -12,7 +12,7 @@
             </div>
             <p class="inline-signup__content">
                 <?php _e('Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat kriminaalkaristust.
-                <a target="_blank" href="https://drive.google.com/open?id=0BxDN-jvgOSUxd1J5LXVKWDlDa1U">Mis on minu õigused ja kohustused Tuleva liikmena?</a>') ?>
+                <a href="#rights-and-obligations">Mis on minu õigused ja kohustused Tuleva liikmena?</a>') ?>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">2</span><span class="inline-signup__title"><?php _e('Maksa ühekordne liitumistasu <span class="text-highlight">100 eurot</span>') ?></span>

@@ -36,7 +36,7 @@
     <div class="popover bottom">
         <div class="arrow"></div>
         <div class="popover-content">
-            <span id="tuleva-calculator-result">20&nbsp;707</span>&nbsp;&euro;
+            <span id="tuleva-calculator-result">20 707</span>&nbsp;&euro;
         </div>
     </div>
 </div>

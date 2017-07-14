@@ -14,12 +14,12 @@
                     -->
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="h1-sm text-center"><?php _e('Vanus 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond.'); ?></h1>
+                            <h1 class="h1-sm text-center"><?php _e('Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond.'); ?></h1>
                         </div>
                     </div>
                     <div class="row mt-5 top-buffer">
                         <div class="col-md-12">
-                            <p class="h1-sm text-center"><?php _e('Selle fondi on valinud ka Tuleva asutajad ja enamik liikmeid. Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit.') ?></p>
+                            <p class="h1-sm text-center"><?php _e('Selle fondi on juba valinud 3669 inimest - nende seas ka Tuleva asutajad ja enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit.') ?></p>
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -50,6 +50,14 @@
         </div>
     </div> -->
 
+    <?php
+    get_template_part('templates/components/fund-navigation');
+    get_template_part('templates/components/fund-choosing');
+    get_template_part('templates/components/security');
+    get_template_part('templates/components/fund-fees');
+    get_template_part('templates/components/fund-calculator');
+    //get_template_part('templates/components/fund-counter');
+    ?>
 
     <?php
         if (have_rows('fund_components')) {
@@ -65,13 +73,7 @@
                 } elseif (get_row_layout() === 'comparison_block') {
                     get_template_part('templates/components/comparison-block');
                 } elseif (get_row_layout() === 'single_quote_block') {
-                    get_template_part('templates/components/fund-navigation');
-                    get_template_part('templates/components/fund-choosing');
-                    get_template_part('templates/components/security');
-                    get_template_part('templates/components/fund-fees');
-                    get_template_part('templates/components/fund-calculator');
                     get_template_part('templates/components/single-quote-block');
-                    get_template_part('templates/components/fund-counter');
     } elseif (get_row_layout() === 'fund_contacts_block') {
                     get_template_part('templates/components/fund-contacts-block');
                 }
