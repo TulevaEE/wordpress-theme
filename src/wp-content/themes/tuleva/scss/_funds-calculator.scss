@@ -1,0 +1,38 @@
+.funds-calculator-block {
+		background-image: url('/wp-content/themes/tuleva/img/kristi.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	.funds-calculator-box {
+	  background-color: white;
+	  border-color: rgba(0, 0, 0, 0.2);
+	  border-style: solid;  
+	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	  border-radius: 5px;
+	  border-width: 0;
+	}
+
+	.funds-calculator-text-box {
+
+		margin-top: 150px;
+		margin-left: 100px;
+
+		font-family: Roboto, sans-serif;
+
+		.name {
+			font-size: 22px;
+			line-height: 40px;
+			font-weight: 500;	
+		}
+
+		.content {
+			font-size: 13px;
+		}
+
+		.saving {
+			font-size: 40px;
+			line-height: 40px;
+			font-weight: 700;
+		}
+	}
+}

@@ -75,6 +75,7 @@
                 }
             }
         }
+        get_template_part('templates/components/fund-calculator');
     ?>
 
     <?php get_template_part('templates/components/fund-qa'); ?>
