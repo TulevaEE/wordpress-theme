@@ -69,13 +69,13 @@
                     get_template_part('templates/components/fund-choosing');
                     get_template_part('templates/components/security');
                     get_template_part('templates/components/fund-fees');
+                    get_template_part('templates/components/fund-calculator');
                     get_template_part('templates/components/single-quote-block');
                 } elseif (get_row_layout() === 'fund_contacts_block') {
                     get_template_part('templates/components/fund-contacts-block');
                 }
             }
         }
-        get_template_part('templates/components/fund-calculator');
     ?>
 
     <?php get_template_part('templates/components/fund-qa'); ?>

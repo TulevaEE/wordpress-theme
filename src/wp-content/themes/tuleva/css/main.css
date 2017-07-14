@@ -4538,7 +4538,9 @@ hr {
     border-style: solid;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    border-width: 0; }
+    border-width: 0;
+    margin: 2em 3em 2em 2em;
+    padding: 2em; }
   .funds-calculator-block .funds-calculator-text-box {
     margin-top: 150px;
     margin-left: 100px;
