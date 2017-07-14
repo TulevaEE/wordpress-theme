@@ -1,4 +1,4 @@
-    <?php if (isset($_GET['signup'])) { ?>
+    <?php //if (isset($_GET['signup'])) { ?>
       <script type="text/javascript">
       $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();   
@@ -47,4 +47,4 @@
           </div>
         </div>
       </div>
-    <?php } ?>
+    <?php //} ?>

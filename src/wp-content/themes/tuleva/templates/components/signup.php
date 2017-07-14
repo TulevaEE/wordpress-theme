@@ -1,4 +1,4 @@
-<?php if (isset($_GET['signup'])) { ?>
+<?php //if (isset($_GET['signup'])) { ?>
     <div id="inline-signup-anchor"></div>
 
 <div class="container row-spacing-half">
@@ -12,14 +12,14 @@
             </div>
             <p class="inline-signup__content">
                 <?php _e('Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat kriminaalkaristust.
-                <a href="#rights-and-obligations">Mis on minu õigused ja kohustused Tuleva liikmena?</a>') ?>
+                <a target="_blank" href="https://drive.google.com/open?id=0BxDN-jvgOSUxd1J5LXVKWDlDa1U">Mis on minu õigused ja kohustused Tuleva liikmena?</a>') ?>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">2</span><span class="inline-signup__title"><?php _e('Maksa ühekordne liitumistasu <span class="text-highlight">100 eurot</span>') ?></span>
             </div>
             <p class="inline-signup__content">
                 <?php _e('See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br />
-                <a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>') ?>
+                <!--<a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>-->') ?>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">3</span><span class="inline-signup__title"><?php _e('Suuna pension Tulevasse') ?></span>
@@ -36,4 +36,4 @@
         </div>
     </div>
 </div>
-<?php } ?>
+<?php //} ?>
