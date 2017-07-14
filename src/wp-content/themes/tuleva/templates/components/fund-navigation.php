@@ -21,7 +21,7 @@
             </a>
         </div>
         <div class="col-sm-4">
-            <a class="fund-navigation" href="#fees">
+            <a class="fund-navigation" href="#fund-fees">
                 <h4><?php _e('Miks kulud loevad?'); ?></h4>
                 <div class="fund-navigation__arrow-wrapper">
                     <div class="fund-navigation__arrow-container">
