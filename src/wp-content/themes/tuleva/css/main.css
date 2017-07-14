@@ -4500,7 +4500,7 @@ hr {
 .funds-container-hero-gradient {
   background: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88));
   top: 0;
-  height: 70vh;
+  min-height: 60vh;
   padding-top: 50px;
   padding-bottom: 50px; }
 
@@ -4509,7 +4509,9 @@ hr {
   background-image: url("/wp-content/themes/tuleva/img/plikad.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh; }
+  min-height: 60vh; }
+  .funds-container-hero .container {
+    margin-top: 0px; }
 
 .funds-container-hero h1 {
   color: #002f63;
