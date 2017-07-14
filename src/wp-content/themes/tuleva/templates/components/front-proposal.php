@@ -8,7 +8,7 @@
       <div class="proposal">
         <div class="hero">
           <div class="intro w-container">
-            <div class="intro-text"><?php _e('3403 eesti inimest tulid kokku ja tegid&nbsp;omale ise pensionifondi. Veel pole hilja nendega liituda.'); ?></div>
+            <div class="intro-text"><?php _e('Tuleva on kodanikualgatusena sündinud kasvav ühistuline ettevõte, millel on täna 3403 omanikku ehk liiget.'); ?></div>
             <p class="lead"><?php _e('Kui sulle Tuleva eesmärgid meeldivad, tahad toetada nende saavutamist ja omanikuna kasu saada kõigest, mida Tuleva edaspidi ette võtab, kutsume ka sind Tuleva liikmeks astuma.'); ?></p>
           </div>
         </div>
