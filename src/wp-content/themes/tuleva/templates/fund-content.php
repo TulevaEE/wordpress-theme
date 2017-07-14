@@ -56,7 +56,6 @@
             while (have_rows('fund_components')) { the_row();
                 if (get_row_layout() === 'text_boxes') {
                     get_template_part('templates/components/text-boxes');
-                    get_template_part('templates/components/security');
                 } elseif (get_row_layout() === 'button') {
                     get_template_part('templates/components/button');
                 } elseif (get_row_layout() === 'media') {
@@ -66,6 +65,10 @@
                 } elseif (get_row_layout() === 'comparison_block') {
                     get_template_part('templates/components/comparison-block');
                 } elseif (get_row_layout() === 'single_quote_block') {
+                    get_template_part('templates/components/fund-navigation');
+                    get_template_part('templates/components/fund-choosing');
+                    get_template_part('templates/components/security');
+                    get_template_part('templates/components/fund-fees');
                     get_template_part('templates/components/single-quote-block');
                 } elseif (get_row_layout() === 'fund_contacts_block') {
                     get_template_part('templates/components/fund-contacts-block');
@@ -73,6 +76,8 @@
             }
         }
     ?>
+
+    <?php get_template_part('templates/components/fund-qa'); ?>
 
     <?php endwhile; ?>
 </div>

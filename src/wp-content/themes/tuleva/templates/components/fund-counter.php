@@ -1,4 +1,4 @@
-<div class="bg-alt row-spacing">
+<div class="bg-alt">
     <div class="container counter-block">
         <div class="row row-spacing-half">
             <div class="col-sm-6 vertical-align">
