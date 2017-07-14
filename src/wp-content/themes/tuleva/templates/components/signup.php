@@ -19,7 +19,7 @@
             </div>
             <p class="inline-signup__content">
                 <?php _e('See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br />
-                <!--<a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>-->') ?>
+                <a href="#membership-fee-usage">Milleks kasutame liitumistasusid?</a>') ?>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">3</span><span class="inline-signup__title"><?php _e('Suuna pension Tulevasse') ?></span>
