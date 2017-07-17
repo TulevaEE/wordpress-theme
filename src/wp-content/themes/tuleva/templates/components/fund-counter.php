@@ -8,7 +8,7 @@
                     </div>
                 </div>
                 <div class="col-sm-8 lead counter-block__text">
-                    <?php _e('Eesti inimest on juba valinud Tuleva pensionifondi.') ?>
+                    <?php _e('people of Estonia have already chosen Tuleva pension fund.') ?>
                 </div>
             </div>
             <div class="col-sm-6 vertical-align">
@@ -18,8 +18,8 @@
                     </div>
                 </div>
                 <div class="col-sm-8 lead counter-block__text">
-                    <?php _e('Sama turvaline kui panga pensionifond.') ?><br />
-                    <a href="#security"><?php _e('Uuri lähemalt') ?></a>
+                    <?php _e('As secure as bank’s pension fund.') ?><br />
+                    <a href="#security"><?php _e('Read more') ?></a>
                 </div>
             </div>
 

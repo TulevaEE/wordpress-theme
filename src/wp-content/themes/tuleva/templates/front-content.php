@@ -1,25 +1,8 @@
 <div class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <!--
-    <div class="container row-spacing-half">
-        <div class="row">
-            <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
-        </div>
-    </div>
-    -->
-
-        <?php get_template_part('templates/components/front-proposal'); ?>
-        <!--
-        <div id="button-component" class="container row-spacing-half">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="https://pension.tuleva.ee/?utm_source=website_homepage_member" class="btn btn-primary btn-xl"><?php _e('Astu Tuleva liikmeks!'); ?></a>
-                </div>
-            </div>
-        </div>
-        -->
         <?php
+        get_template_part('templates/components/front-proposal');
         get_template_part('templates/components/reasons');
         get_template_part('templates/components/goals');
         get_template_part('templates/components/signup');

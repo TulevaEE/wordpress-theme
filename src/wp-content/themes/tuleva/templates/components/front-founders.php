@@ -9,18 +9,18 @@
                         Indrek Neivelt
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva asutaja'); ?>
+                        <?php _e('Tuleva founder'); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II sammas: Tuleva Maailma Aktsiate Pensionifond'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate pensionifondite loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et nojah, eks ta ole; kahjuks endal pole aega appi tulla.'); ?>
+                            <p><?php _e('Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here.'); ?>
                             </p>
-                            <p><?php _e('Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule ja nad otsustasid tegutsema asuda.'); ?>
+                            <p><?php _e('After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working.'); ?>
                             </p>
                         </div>
                     </div>
@@ -36,18 +36,18 @@
                         Annika Uudelepp
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva asutaja'); ?>
+                        <?php _e('Tuleva founder'); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II sammas: Tuleva Maailma Aktsiate Pensionifond'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid 77 eurot.'); ?>
+                            <p><?php _e('One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros.'); ?>
                             </p>
-                            <p><?php _e('Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta.'); ?>
+                            <p><?php _e('When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done.'); ?>
                             </p>
                         </div>
                     </div>
@@ -62,21 +62,21 @@
                 <div class="row"></div>
                 <div class="founders-name-badge">
                     <div class="founders-name">
-                        Kristo Käärmann ja Taavet Hinrikus
+                        <?php _e('Kristo Käärmann and Taavet Hinrikus') ?>
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva asutaja'); ?>
+                        <?php _e('Tuleva founder'); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II sammas: Tuleva Maailma Aktsiate Pensionifond'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest frustratsioonist nagu Tulevagi. Transferwise-i võitleb varjatud tasude vastu, mida pangad võtavad rahavahetuse ja rahvusvaheliste maksete eest. Tuleva võitleb kõrgete valitsemistasude ja pensionifondide varjatud kulude vastu, et meie, Eesti inimesed, saaksime raha koguda endale, mitte pankadele.'); ?>
+                            <p><?php _e('One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks.'); ?>
                             </p>
-                            <p><?php _e('Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles ehitamisel.'); ?>
+                            <p><?php _e('It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves.'); ?>
                             </p>
                         </div>
                     </div>

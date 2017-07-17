@@ -14,18 +14,18 @@
                     -->
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="h1-sm text-center"><?php _e('Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond.'); ?></h1>
+                            <h1 class="h1-sm text-center"><?php _e('Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund.'); ?></h1>
                         </div>
                     </div>
                     <div class="row mt-5 top-buffer">
                         <div class="col-md-12">
-                            <p class="h1-sm text-center"><?php _e('Selle fondi on juba valinud 3669 inimest - nende seas ka Tuleva asutajad ja enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit.') ?></p>
+                            <p class="h1-sm text-center"><?php _e('This fund has been already chosen by 3669 people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.') ?></p>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-12 text-center">
                             <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg">
-                                <?php _e('Vali Tuleva pensionifond') ?>
+                                <?php _e('Choose Tuleva pension fund') ?>
                             </a>
                         </div>
                     </div>
@@ -35,25 +35,10 @@
         </div>
     </div>
 
-
-<!--     <div>
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="h1-sm text-center"><?php _e('Kuidas fondi valida?'); ?></h1>
-            </div>
-            <div class="col-md-4">
-                <h1 class="h1-sm text-center"><?php _e('Kas Tuleva on turvaline?'); ?></h1>
-            </div>
-            <div class="col-md-4">
-                <h1 class="h1-sm text-center"><?php _e('Miks kulud loevad?'); ?></h1>
-            </div>
-        </div>
-    </div> -->
-
     <?php
     get_template_part('templates/components/fund-navigation');
     get_template_part('templates/components/fund-choosing');
-    get_template_part('templates/components/security');
+    get_template_part('templates/components/fund-security');
     get_template_part('templates/components/fund-fees');
     get_template_part('templates/components/fund-calculator');
     //get_template_part('templates/components/fund-counter');

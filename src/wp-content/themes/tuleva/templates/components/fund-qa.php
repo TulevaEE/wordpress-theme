@@ -1,7 +1,7 @@
 <div class="bg-alt">
     <div class="container counter-block">
         <div class="row row-spacing-half">
-            <h2 class="h1-xs text-center"><?php _e('Vastused korduma kippuvatele küsimustele') ?></h2>
+            <h2 class="h1-xs text-center"><?php _e('Answers to frequently asked questions') ?></h2>
         </div>
     </div>
 </div>

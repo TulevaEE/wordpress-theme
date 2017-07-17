@@ -10,13 +10,13 @@
 		                	</div>
 		                	<div class="content">
 		                		<p>
-			                		<?php _e('Vanus: 28'); ?>
+			                		<?php _e('Age: 28'); ?>
 		                		</p>
 		                		<p>
-			                		<?php _e('II sammas: Tuleva Maailma Aktsiate Pensionifond'); ?>
+			                		<?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?>
 		                		</p>
 		                		<p>
-			                		<?php _e('Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule tööelu jooksul kokku'); ?>
+			                		<?php _e('Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life'); ?>
 		                		</p>
 		                	</div>
 		                	<div class="saving">
