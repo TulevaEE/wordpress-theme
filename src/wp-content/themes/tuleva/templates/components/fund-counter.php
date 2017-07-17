@@ -4,11 +4,11 @@
             <div class="col-sm-6 vertical-align">
                 <div class="col-sm-4">
                     <div class="counter-block__icon">
-                        <?php _e('3600') ?>
+                        <?php _e('3600', TEXT_DOMAIN) ?>
                     </div>
                 </div>
                 <div class="col-sm-8 lead counter-block__text">
-                    <?php _e('people of Estonia have already chosen Tuleva pension fund.') ?>
+                    <?php _e('people of Estonia have already chosen Tuleva pension fund.', TEXT_DOMAIN) ?>
                 </div>
             </div>
             <div class="col-sm-6 vertical-align">
@@ -18,8 +18,8 @@
                     </div>
                 </div>
                 <div class="col-sm-8 lead counter-block__text">
-                    <?php _e('As secure as bank’s pension fund.') ?><br />
-                    <a href="#security"><?php _e('Read more') ?></a>
+                    <?php _e('As secure as bank’s pension fund.', TEXT_DOMAIN) ?><br />
+                    <a href="#security"><?php _e('Read more', TEXT_DOMAIN) ?></a>
                 </div>
             </div>
 

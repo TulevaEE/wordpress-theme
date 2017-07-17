@@ -10,13 +10,13 @@
 		                	</div>
 		                	<div class="content">
 		                		<p>
-			                		<?php _e('Age: 28'); ?>
+			                		<?php _e('Age: 28', TEXT_DOMAIN); ?>
 		                		</p>
 		                		<p>
-			                		<?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?>
+			                		<?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
 		                		</p>
 		                		<p>
-			                		<?php _e('Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life'); ?>
+			                		<?php _e('Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life', TEXT_DOMAIN); ?>
 		                		</p>
 		                	</div>
 		                	<div class="saving">

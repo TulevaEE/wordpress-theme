@@ -9,18 +9,18 @@
                         Indrek Neivelt
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva founder'); ?>
+                        <?php _e('Tuleva founder', TEXT_DOMAIN); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here.'); ?>
+                            <p><?php _e('Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here.', TEXT_DOMAIN); ?>
                             </p>
-                            <p><?php _e('After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working.'); ?>
+                            <p><?php _e('After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working.', TEXT_DOMAIN); ?>
                             </p>
                         </div>
                     </div>
@@ -36,18 +36,18 @@
                         Annika Uudelepp
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva founder'); ?>
+                        <?php _e('Tuleva founder', TEXT_DOMAIN); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros.'); ?>
+                            <p><?php _e('One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros.', TEXT_DOMAIN); ?>
                             </p>
-                            <p><?php _e('When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done.'); ?>
+                            <p><?php _e('When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done.', TEXT_DOMAIN); ?>
                             </p>
                         </div>
                     </div>
@@ -62,21 +62,21 @@
                 <div class="row"></div>
                 <div class="founders-name-badge">
                     <div class="founders-name">
-                        <?php _e('Kristo Käärmann and Taavet Hinrikus') ?>
+                        <?php _e('Kristo Käärmann and Taavet Hinrikus', TEXT_DOMAIN) ?>
                     </div>
                     <div class="founders-subtitle">
-                        <?php _e('Tuleva founder'); ?>
+                        <?php _e('Tuleva founder', TEXT_DOMAIN); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="founders-content">
                         <div class="founders-content-title">
-                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund'); ?></p>
+                            <p><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?></p>
                         </div>
                         <div class="founders-content-text">
-                            <p><?php _e('One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks.'); ?>
+                            <p><?php _e('One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks.', TEXT_DOMAIN); ?>
                             </p>
-                            <p><?php _e('It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves.'); ?>
+                            <p><?php _e('It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves.', TEXT_DOMAIN); ?>
                             </p>
                         </div>
                     </div>

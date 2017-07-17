@@ -14,18 +14,18 @@
                     -->
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="h1-sm text-center"><?php _e('Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund.'); ?></h1>
+                            <h1 class="h1-sm text-center"><?php _e('Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund.', TEXT_DOMAIN); ?></h1>
                         </div>
                     </div>
                     <div class="row mt-5 top-buffer">
                         <div class="col-md-12">
-                            <p class="h1-sm text-center"><?php _e('This fund has been already chosen by 3669 people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.') ?></p>
+                            <p class="h1-sm text-center"><?php _e('This fund has been already chosen by 3669 people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.', TEXT_DOMAIN) ?></p>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-12 text-center">
                             <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg">
-                                <?php _e('Choose Tuleva pension fund') ?>
+                                <?php _e('Choose Tuleva pension fund', TEXT_DOMAIN) ?>
                             </a>
                         </div>
                     </div>

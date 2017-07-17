@@ -1,4 +1,4 @@
-<h1 class="h1-sm text-center"><?php _e('Who manages Tuleva funds?'); ?></h1>
+<h1 class="h1-sm text-center"><?php _e('Who manages Tuleva funds?', TEXT_DOMAIN); ?></h1>
 
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes(); ?>">
     <div class="container">
