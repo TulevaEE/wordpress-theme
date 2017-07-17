@@ -4,7 +4,7 @@
 
             <div class="funds-container-hero-gradient">
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-                <div class="container row-spacing">
+                <div class="container">
                     <!--
                     <div class="row">
                         <div class="col-md-12">

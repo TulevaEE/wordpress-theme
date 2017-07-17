@@ -21,7 +21,7 @@
                 <p><hr /></p>
                 <div class="text-center">
                     <p>
-                        <a class="btn btn-link btn-lg" href="#comparison-block-component"><?php _e('Vaata fondi infot'); ?>
+                        <a class="btn btn-link btn-lg" href="#comparison-block"><?php _e('Vaata fondi infot'); ?>
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
@@ -46,7 +46,7 @@
                 <p><hr /></p>
                 <div class="text-center">
                     <p>
-                        <a class="btn btn-link btn-lg" href="#comparison-block-component"><?php _e('Vaata fondi infot'); ?>
+                        <a class="btn btn-link btn-lg" href="#comparison-block"><?php _e('Vaata fondi infot'); ?>
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
