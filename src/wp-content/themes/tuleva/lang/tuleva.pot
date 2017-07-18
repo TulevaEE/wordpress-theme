@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-17 14:41:24+00:00\n"
+"POT-Creation-Date: 2017-07-18 08:56:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -504,61 +504,68 @@ msgstr ""
 msgid ""
 "Tuleva is not a typical service provider. Tuleva is owned by the pension "
 "savers themselves who decided to skip banks’ middlemen and start pension "
-"funds where they personnally would like to put their money."
+"funds where they personally would like to put their money."
 msgstr ""
 
 #: templates/components/reasons.php:25
-msgid ""
-"<strong>Tuleva was started as an initiative by 22 founders who decided that "
-"we deserve better.</strong>"
+msgid "We deserve better"
 msgstr ""
 
 #: templates/components/reasons.php:26
 msgid ""
-"They started an association where every member has an equal decision right."
+"Tuleva was started as an initiative by 22 founders who decided that we "
+"deserve better. They started an association where every member has an equal "
+"decision right."
 msgstr ""
 
 #: templates/components/reasons.php:37
-msgid ""
-"<strong>3403</strong> people have already joined the founders. We invite you "
-"to become a member as well."
+msgid "We are stronger together"
 msgstr ""
 
 #: templates/components/reasons.php:38
-msgid "Together we create better possibilities to save money for our future."
+msgid ""
+"<strong>3403</strong> people have already joined the founders. We invite you "
+"to become a member as well. Together we create better possibilities to save "
+"money for our future."
 msgstr ""
 
 #: templates/components/reasons.php:43
-msgid "Alone it would not be possible for anybody."
+msgid "We earn money for ourselves, not for the banks"
 msgstr ""
 
 #: templates/components/reasons.php:44
 msgid ""
-"But together with the help of smarter technologies we can rid ourselves from "
-"costly middlemen and grow our, not banks’, money."
+"Alone it would not be possible for anybody. But together with the help of "
+"smarter technologies we can rid ourselves from costly middlemen and grow "
+"our, not banks’, money."
 msgstr ""
 
 #: templates/components/reasons.php:55
-msgid "As a first step, we started modern low cost II pillar pension funds."
+msgid "A beginning has been made"
 msgstr ""
 
 #: templates/components/reasons.php:56
 msgid ""
-"All Estonian people can now save for pension together with Tuleva founders "
-"and members."
+"As a first step, we started modern low cost II pillar pension funds. All "
+"Estonian people can now save for pension together with Tuleva founders and "
+"members."
 msgstr ""
 
 #: templates/components/reasons.php:61
+msgid "We have many more good ideas"
+msgstr ""
+
+#: templates/components/reasons.php:62
 msgid ""
 "In the future we will start a voluntary pension fund and will create other "
 "ways to increase our money through long-term savings."
 msgstr ""
 
-#: templates/components/reasons.php:68
+#: templates/components/reasons.php:69
 msgid "This is not all"
 msgstr ""
 
-#: templates/components/reasons.php:72
+#: templates/components/reasons.php:73
 msgid ""
 "As an association of pension savers Tuleva helps to make Estonian laws "
 "better so that pension system would be useful first of all to people not "

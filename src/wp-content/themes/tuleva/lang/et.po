@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-17 17:41+0300\n"
-"PO-Revision-Date: 2017-07-17 17:42+0300\n"
+"POT-Creation-Date: 2017-07-18 11:56+0300\n"
+"PO-Revision-Date: 2017-07-18 11:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -597,65 +597,72 @@ msgstr ""
 msgid ""
 "Tuleva is not a typical service provider. Tuleva is owned by the pension "
 "savers themselves who decided to skip banks’ middlemen and start pension "
-"funds where they personnally would like to put their money."
+"funds where they personally would like to put their money."
 msgstr ""
 "Tuleva ei ole tavaline teenusepakkuja. Tuleva omanikud on pensionikogujad "
 "ise, kes otsustasid pankadest vahemehed kõrvale jätta ja käivitada sellised "
 "pensionifondid, kus nad raha ise koguda tahaksid."
 
 #: templates/components/reasons.php:25
-msgid ""
-"<strong>Tuleva was started as an initiative by 22 founders who decided that "
-"we deserve better.</strong>"
-msgstr ""
-"<strong>Tuleva sündis 22 asutaja initsiatiivil, kes otsustasid, et me "
-"väärime paremat.</strong>"
+msgid "We deserve better"
+msgstr "Me väärime paremat"
 
 #: templates/components/reasons.php:26
 msgid ""
-"They started an association where every member has an equal decision right."
-msgstr "Nad asutasid ühistu, kus igal liikmel on võrdne otsustusõigus."
+"Tuleva was started as an initiative by 22 founders who decided that we "
+"deserve better. They started an association where every member has an equal "
+"decision right."
+msgstr ""
+"Tuleva sündis 22 asutaja initsiatiivil, kes otsustasid, et me väärime "
+"paremat. Nad asutasid ühistu, kus igal liikmel on võrdne otsustusõigus."
 
 #: templates/components/reasons.php:37
-msgid ""
-"<strong>3403</strong> people have already joined the founders. We invite you "
-"to become a member as well."
-msgstr ""
-"Asutajatega on juba ühinenud <strong>3403</strong> inimest. Kutsume ka sind "
-"Tuleva liikmeks."
+msgid "We are stronger together"
+msgstr "Koos oleme tugevamad"
 
 #: templates/components/reasons.php:38
-msgid "Together we create better possibilities to save money for our future."
+msgid ""
+"<strong>3403</strong> people have already joined the founders. We invite you "
+"to become a member as well. Together we create better possibilities to save "
+"money for our future."
 msgstr ""
-"Koos loome omale paremad võimalused oma tuleviku jaoks raha kogumiseks."
+"Asutajatega on juba ühinenud <strong>3403</strong> inimest. Kutsume ka sind "
+"Tuleva liikmeks. Koos loome omale paremad võimalused oma tuleviku jaoks raha "
+"kogumiseks."
 
 #: templates/components/reasons.php:43
-msgid "Alone it would not be possible for anybody."
-msgstr "Üksi poleks see kellelgi võimalik."
+msgid "We earn money for ourselves, not for the banks"
+msgstr "Teenime tulu endale, mitte pangale"
 
 #: templates/components/reasons.php:44
 msgid ""
-"But together with the help of smarter technologies we can rid ourselves from "
-"costly middlemen and grow our, not banks’, money."
+"Alone it would not be possible for anybody. But together with the help of "
+"smarter technologies we can rid ourselves from costly middlemen and grow "
+"our, not banks’, money."
 msgstr ""
-"Aga koos saame tänu tarkadele tehnoloogiatele ahnetest vahemeestest vabaneda "
-"ja kasvatada oma, mitte panga vara."
+"Üksi poleks see kellelgi võimalik. Aga koos saame tänu tarkadele "
+"tehnoloogiatele ahnetest vahemeestest vabaneda ja kasvatada oma, mitte panga "
+"vara."
 
 #: templates/components/reasons.php:55
-msgid "As a first step, we started modern low cost II pillar pension funds."
-msgstr ""
-"Esimese sammuna käivitasime kaasaegsed, madalate kuludega II samba "
-"pensioniifondid."
+msgid "A beginning has been made"
+msgstr "Algus on tehtud"
 
 #: templates/components/reasons.php:56
 msgid ""
-"All Estonian people can now save for pension together with Tuleva founders "
-"and members."
+"As a first step, we started modern low cost II pillar pension funds. All "
+"Estonian people can now save for pension together with Tuleva founders and "
+"members."
 msgstr ""
-"Koos Tuleva asutajate ja liikmetega saavad Tuleva fondides pensioni koguda "
-"kõik Eesti inimesed."
+"Esimese sammuna käivitasime kaasaegsed, madalate kuludega II samba "
+"pensioniifondid. Koos Tuleva asutajate ja liikmetega saavad Tuleva fondides "
+"pensioni koguda kõik Eesti inimesed."
 
 #: templates/components/reasons.php:61
+msgid "We have many more good ideas"
+msgstr "Meil on veel palju ideid"
+
+#: templates/components/reasons.php:62
 msgid ""
 "In the future we will start a voluntary pension fund and will create other "
 "ways to increase our money through long-term savings."
@@ -663,11 +670,11 @@ msgstr ""
 "Edaspidi teeme ka vabatahtliku pensionifondi ja loome muid paremaid "
 "pikaajalise investeerimise võimalusi oma säästude kasvatamiseks."
 
-#: templates/components/reasons.php:68
+#: templates/components/reasons.php:69
 msgid "This is not all"
 msgstr "See pole kõik"
 
-#: templates/components/reasons.php:72
+#: templates/components/reasons.php:73
 msgid ""
 "As an association of pension savers Tuleva helps to make Estonian laws "
 "better so that pension system would be useful first of all to people not "
@@ -907,6 +914,24 @@ msgstr "Fondide leht"
 #. Template Name of the plugin/theme
 msgid "Membership success"
 msgstr "Liikmeks astutud"
+
+#~ msgid ""
+#~ "They started an association where every member has an equal decision "
+#~ "right."
+#~ msgstr "Nad asutasid ühistu, kus igal liikmel on võrdne otsustusõigus."
+
+#~ msgid ""
+#~ "Together we create better possibilities to save money for our future."
+#~ msgstr ""
+#~ "Koos loome omale paremad võimalused oma tuleviku jaoks raha kogumiseks."
+
+#~ msgid "Alone it would not be possible for anybody."
+#~ msgstr "Üksi poleks see kellelgi võimalik."
+
+#~ msgid "As a first step, we started modern low cost II pillar pension funds."
+#~ msgstr ""
+#~ "Esimese sammuna käivitasime kaasaegsed, madalate kuludega II samba "
+#~ "pensioniifondid."
 
 #, fuzzy
 #~ msgid "Astu Tuleva liikmeks!"
