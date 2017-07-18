@@ -1,11 +1,11 @@
-# Copyright (C) 2017 
+# Copyright (C) 2017
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-18 11:56+0300\n"
-"PO-Revision-Date: 2017-07-18 11:59+0300\n"
+"POT-Creation-Date: 2017-07-18 12:23+0300\n"
+"PO-Revision-Date: 2017-07-18 12:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -253,12 +253,12 @@ msgstr "Tuleva Maailma Aktsiate Pensionifond"
 #: templates/components/fund-choosing.php:15
 msgid ""
 "The equity fund with lowest costs in Estonia:<br />management fee <span "
-"class=“text-highlight”><strong>0,34%</strong></span> and total expense ratio "
-"<span class=“text-highlight”><strong>0,5%</strong></span>"
+"class=\"text-highlight\"><strong>0,34%</strong></span> and total expense "
+"ratio <span class=\"text-highlight\"><strong>0,5%</strong></span>"
 msgstr ""
-"Kõige madalamate kuludega aktsiafond Eestis:<br />valitsemistasu <span "
-"class=“text-highlight”><strong>0,34%</strong></span> ja kogukulu <span "
-"class=“text-highlight”><strong>0,5%</strong></span>"
+"Kõige madalamate kuludega aktsiafond Eestis:<br />valitsemistasu <span class="
+"\"text-highlight\"><strong>0,34%</strong></span> ja kogukulu <span class="
+"\"text-highlight\"><strong>0,5%</strong></span>"
 
 #: templates/components/fund-choosing.php:17
 msgid ""
@@ -268,13 +268,13 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:18
 msgid ""
-"Suitable for you if you want <span class=“text-highlight”><strong>best "
+"Suitable for you if you want <span class=\"text-highlight\"><strong>best "
 "expected return</strong></span> over long term and you are not disturbed by "
 "short-term fluctuations of the market"
 msgstr ""
-"Sobib sulle, kui tahad saavutada <span class=“text-"
-"highlight”><strong>parimat võimalikku tootlust</strong></span> pika aja "
-"vältel ja sind ei löö rivist välja turu lühiajalised kõikumised"
+"Sobib sulle, kui tahad saavutada <span class=\"text-highlight"
+"\"><strong>parimat võimalikku tootlust</strong></span> pika aja vältel ja "
+"sind ei löö rivist välja turu lühiajalised kõikumised"
 
 #: templates/components/fund-choosing.php:24
 #: templates/components/fund-choosing.php:49
@@ -297,12 +297,12 @@ msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
 #: templates/components/fund-choosing.php:40
 msgid ""
-"Low cost: management fee <span class=“text-highlight”><strong>0,34%</"
-"strong></span> and total expenses <span class=“text-highlight”><strong>0,5%</"
-"strong></span>"
+"Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</"
+"strong></span> and total expenses <span class=\"text-highlight"
+"\"><strong>0,5%</strong></span>"
 msgstr ""
-"Madalad kulud: valitsemistasu <span class=“text-highlight”><strong>0,34%</"
-"strong></span> ja kogukulu <span class=“text-highlight”><strong>0,5%</"
+"Madalad kulud: valitsemistasu <span class=\"text-highlight\"><strong>0,34%</"
+"strong></span> ja kogukulu <span class=\"text-highlight\"><strong>0,5%</"
 "strong></span>"
 
 #: templates/components/fund-choosing.php:42
@@ -695,25 +695,26 @@ msgstr "Sisesta oma andmed ja saada liitumisavaldus"
 #: templates/components/signup.php:14
 msgid ""
 "Tuleva member can be anybody of legal age who does not have current criminal "
-"record. <a href=“#rights-and-obligations”>What are my rights and obligations "
-"as a Tuleva member?</a>"
+"record. <a href=\"#rights-and-obligations\">What are my rights and "
+"obligations as a Tuleva member?</a>"
 msgstr ""
 "Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat "
-"kriminaalkaristust. <a href=“#rights-and-obligations”>Mis on minu õigused ja "
-"kohustused Tuleva liikmena?</a>"
+"kriminaalkaristust. <a href=\"#rights-and-obligations\">Mis on minu õigused "
+"ja kohustused Tuleva liikmena?</a>"
 
 #: templates/components/signup.php:17
-msgid "Pay one-off joining fee <span class=“text-highlight”>100 euros</span>"
+msgid "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
 msgstr ""
-"Maksa ühekordne liitumistasu <span class=“text-highlight”>100 eurot</span>"
+"Maksa ühekordne liitumistasu <span class=\\\"text-highlight\\\">100 eurot</"
+"span>"
 
 #: templates/components/signup.php:20
 msgid ""
 "This is the contribution of all Tuleva members to our joint entreprise.<br /"
-"><a href=\"\"#membership-fee-usage\">What we do with joining fees?</a>"
+"><a href=\"#membership-fee-usage\">What we do with joining fees?</a>"
 msgstr ""
 "See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br /><a "
-"href=“#membership-fee-usage”>Milleks kasutame liitumistasusid?</a>"
+"href=\"#membership-fee-usage\">Milleks kasutame liitumistasusid?</a>"
 
 #: templates/components/signup.php:23 templates/fund-content.php:28
 msgid "Choose Tuleva pension fund"
