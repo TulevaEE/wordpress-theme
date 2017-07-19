@@ -59,8 +59,10 @@
                     get_template_part('templates/components/comparison-block');
                 } elseif (get_row_layout() === 'single_quote_block') {
                     get_template_part('templates/components/single-quote-block');
-    } elseif (get_row_layout() === 'fund_contacts_block') {
+                } elseif (get_row_layout() === 'fund_contacts_block') {
                     get_template_part('templates/components/fund-contacts-block');
+                } elseif (get_row_layout() === 'qa_block') {
+                    get_template_part('templates/components/qa-block');
                 }
             }
         }

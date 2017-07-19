@@ -6803,4 +6803,15 @@ hr {
   -ms-flex-align: center;
   align-items: center; }
 
+.qa__question {
+  font-size: 20px;
+  color: #002F63;
+  font-weight: 500;
+  margin: 30px 0;
+  padding: 0 30px 0 0;
+  display: block;
+  text-align: left;
+  background: url("../img/icon-plussign.svg") no-repeat right 15px center;
+  white-space: normal; }
+
 /*# sourceMappingURL=main.css.map */

@@ -31,6 +31,8 @@
                     get_template_part('templates/components/people-slider');
                 } elseif (get_row_layout() === 'tabs') {
                     get_template_part('templates/components/tabs');
+                }  elseif (get_row_layout() === 'qa_block') {
+                    get_template_part('templates/components/qa-block');
                 }
             }
         }

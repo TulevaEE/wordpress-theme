@@ -41,7 +41,7 @@ function theme_setup() {
 
     // Use main stylesheet for visual editor
     // To add custom styles edit /assets/styles/layouts/_tinymce.scss
-    add_editor_style(get_template_directory_uri() . 'css/main.css');
+    add_editor_style(get_template_directory_uri() . '/css/main.css');
 
     // Image resize
     add_image_size('max-width-500', 500, 9999, false);
@@ -51,9 +51,9 @@ function theme_setup() {
     add_image_size('max-height-400', 9999, 400, false);
 
     // Hides ACF menu item in admin
-    add_filter('acf/settings/show_admin', '__return_false');
+    //add_filter('acf/settings/show_admin', '__return_false');
 
     // Hides admin bar in front end
-    add_filter('show_admin_bar', '__return_false');
+    //add_filter('show_admin_bar', '__return_false');
 }
 add_action('after_setup_theme', 'theme_setup');
