@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-18 12:23+0300\n"
-"PO-Revision-Date: 2017-07-18 12:24+0300\n"
+"POT-Creation-Date: 2017-07-20 11:06+0300\n"
+"PO-Revision-Date: 2017-07-20 11:06+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -414,7 +414,7 @@ msgstr "Kuidas fondi valida?"
 msgid "Is Tuleva safe?"
 msgstr "Kas Tuleva on turvaline?"
 
-#: templates/components/fund-qa.php:4
+#: templates/components/fund-qa.php:4 templates/components/qa-block.php:4
 msgid "Answers to frequently asked questions"
 msgstr "Vastused korduma kippuvatele küsimustele"
 
@@ -548,13 +548,13 @@ msgstr "a"
 
 #: templates/components/pension-calculator.php:45
 msgid ""
-"<a href=\"https://docs.google.com/document/"
-"d/13GjxPNR3j_m1iZu2XHjhrz7xo8sdr4tTNLEvm4MxqkU/edit?usp=sharing\"\n"
+"<a href=\"https://docs.google.com/spreadsheets/"
+"d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
 "       target=\"_blank\" rel=\"noopener noreferrer\">See how the pension "
 "calculator works.</a>"
 msgstr ""
-"<a href=\"https://docs.google.com/document/"
-"d/1IKm6NldgI1lu01X2rvCMy9B78wNANh81z3_wvVEKtM4/edit?usp=sharing\"\n"
+"<a href=\"https://docs.google.com/spreadsheets/"
+"d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
 "       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
 "pensionikalkulaator töötab.</a>"
 
@@ -601,7 +601,7 @@ msgid ""
 msgstr ""
 "Tuleva ei ole tavaline teenusepakkuja. Tuleva omanikud on pensionikogujad "
 "ise, kes otsustasid pankadest vahemehed kõrvale jätta ja käivitada sellised "
-"pensionifondid, kus nad raha ise koguda tahaksid."
+"pensionifondid, kus nad ise raha koguda tahaksid."
 
 #: templates/components/reasons.php:25
 msgid "We deserve better"
