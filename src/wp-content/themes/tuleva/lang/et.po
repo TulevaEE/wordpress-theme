@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-20 15:55+0300\n"
-"PO-Revision-Date: 2017-07-20 15:57+0300\n"
+"POT-Creation-Date: 2017-07-21 14:33+0300\n"
+"PO-Revision-Date: 2017-07-21 14:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -138,7 +138,7 @@ msgstr ""
 "muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
 "ehitamisel."
 
-#: templates/components/front-proposal.php:27
+#: templates/components/front-proposal.php:26
 msgid ""
 "Tuleva is a growing mutual company. Born as a citizens’s initiative, it has "
 "%s owners or members."
@@ -146,7 +146,7 @@ msgstr ""
 "Tuleva on kodanikualgatusena sündinud kasvav ühistuline ettevõte, millel on "
 "täna %s omanikku ehk liiget."
 
-#: templates/components/front-proposal.php:30
+#: templates/components/front-proposal.php:29
 msgid ""
 "If you like Tuleva’s goals, want to support reaching them and want to "
 "benefit as an owner from everything Tuleva does in the future, then come and "
@@ -156,19 +156,19 @@ msgstr ""
 "omanikuna kasu saada kõigest, mida Tuleva edaspidi ette võtab, kutsume ka "
 "sind Tuleva liikmeks astuma."
 
-#: templates/components/front-proposal.php:37
+#: templates/components/front-proposal.php:36
 msgid "Become a member and choose Tuleva pension fund"
 msgstr "Astu liikmeks ja vali Tuleva pensionifond"
 
-#: templates/components/front-proposal.php:39
+#: templates/components/front-proposal.php:38
 msgid "You accumulate your pension in our joint low-cost pension fund"
 msgstr "Kogud pensioni meie ühises madalate kuludega pensionifondis"
 
-#: templates/components/front-proposal.php:40
+#: templates/components/front-proposal.php:39
 msgid "Management fee is lower for members - just"
 msgstr "Liikmele on valitsemistasu soodsam — kõigest"
 
-#: templates/components/front-proposal.php:40
+#: templates/components/front-proposal.php:39
 msgid ""
 "Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. "
 "Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, "
@@ -178,25 +178,25 @@ msgid ""
 "katteks jääb 0,29%."
 msgstr ""
 
-#: templates/components/front-proposal.php:41
+#: templates/components/front-proposal.php:40
 msgid ""
 "You support Tuleva development plans and help to improve Estonian pension "
 "system"
 msgstr "Toetad Tuleva arengut ja aitad teha Eesti pensionisüsteemi paremaks"
 
-#: templates/components/front-proposal.php:47
+#: templates/components/front-proposal.php:46
 msgid "one-off joining fee"
 msgstr "ühekordne liitumistasu"
 
-#: templates/components/front-proposal.php:49
+#: templates/components/front-proposal.php:48
 msgid "Become a member"
 msgstr "Astu liikmeks"
 
-#: templates/components/front-proposal.php:53
+#: templates/components/front-proposal.php:52
 msgid "Simply choose Tuleva pension fund"
 msgstr "Vali lihtsalt Tuleva pensionifond"
 
-#: templates/components/front-proposal.php:55
+#: templates/components/front-proposal.php:54
 msgid ""
 "Your save for your pension with a low-cost pension fund where owners care "
 "about your returns not bank’s."
@@ -204,25 +204,29 @@ msgstr ""
 "Kogud pensioni madalate kuludega pensionifondis, mille omanikud hoolivad "
 "sinu, mitte panga vara kasvust."
 
-#: templates/components/front-proposal.php:56
+#: templates/components/front-proposal.php:55
 msgid "Three times lower than average management fee"
 msgstr "Keskmisest kolm korda soodsam valitsemistasu"
 
-#: templates/components/front-proposal.php:61
+#: templates/components/front-proposal.php:60
 msgid "FREE"
 msgstr "TASUTA"
 
-#: templates/components/front-proposal.php:62
+#: templates/components/front-proposal.php:61
 msgid "and it takes only 5 minutes"
 msgstr "ja võtab vaid 5 minutit"
 
 #: templates/components/front-proposal.php:63
-msgid "Learn about the funds"
-msgstr "Tutvu fondidega"
+msgid "<a class=\"link\" href=\"/en/funds/\">Learn about the funds</a>"
+msgstr "<a class=\"link\" href=\"/fondid/\">Tutvu fondidega</a>"
 
-#: templates/components/front-proposal.php:63
-msgid "How to change the fund"
-msgstr "Fondivahetuse juhend"
+#: templates/components/front-proposal.php:64
+msgid ""
+"<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the "
+"fund</a>"
+msgstr ""
+"<a class=\"link\" href=\"/kuidas-tuua-pension-tulevasse/\">Fondivahetuse "
+"juhend</a>"
 
 #: templates/components/fund-calculator.php:13
 msgid "Age: 28"
@@ -717,7 +721,7 @@ msgstr ""
 "See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse.<br /><a "
 "href=\"#membership-fee-usage\">Milleks kasutame liitumistasusid?</a>"
 
-#: templates/components/signup.php:23 templates/fund-content.php:28
+#: templates/components/signup.php:23
 msgid "Choose Tuleva pension fund"
 msgstr "Suuna pension Tulevasse"
 
@@ -795,14 +799,22 @@ msgstr ""
 
 #: templates/fund-content.php:22
 msgid ""
-"This fund has been already chosen by 3669 people - including Tuleva founders "
+"This fund has been already chosen by 3420 people - including Tuleva founders "
 "and most of the members. <br> If you are over 55, consider our bond fund."
 "<br> Changing pension fund if free for you and takes only 5 minutes in your "
 "internet bank."
 msgstr ""
-"Selle fondi on juba valinud 3669 inimest - nende seas ka Tuleva asutajad ja "
+"Selle fondi on juba valinud 3420 inimest - nende seas ka Tuleva asutajad ja "
 "enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
 "<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
+
+#: templates/fund-content.php:27
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
+"\">Choose Tuleva pension fund</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
+"\">Suuna pension Tulevasse</a>"
 
 #: templates/header/main-sticky.php:6 templates/header/main.php:6
 msgid "Toggle navigation"
@@ -916,6 +928,12 @@ msgstr "Fondide leht"
 #. Template Name of the plugin/theme
 msgid "Membership success"
 msgstr "Liikmeks astutud"
+
+#~ msgid "Learn about the funds"
+#~ msgstr "Tutvu fondidega"
+
+#~ msgid "How to change the fund"
+#~ msgstr "Fondivahetuse juhend"
 
 #~ msgid ""
 #~ "They started an association where every member has an equal decision "

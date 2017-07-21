@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-20 12:55:15+00:00\n"
+"POT-Creation-Date: 2017-07-21 11:32:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -115,32 +115,32 @@ msgid ""
 "people themselves."
 msgstr ""
 
-#: templates/components/front-proposal.php:27
+#: templates/components/front-proposal.php:26
 msgid ""
 "Tuleva is a growing mutual company. Born as a citizens’s initiative, it has "
 "%s owners or members."
 msgstr ""
 
-#: templates/components/front-proposal.php:30
+#: templates/components/front-proposal.php:29
 msgid ""
 "If you like Tuleva’s goals, want to support reaching them and want to "
 "benefit as an owner from everything Tuleva does in the future, then come and "
 "become a Tuleva member."
 msgstr ""
 
-#: templates/components/front-proposal.php:37
+#: templates/components/front-proposal.php:36
 msgid "Become a member and choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:39
+#: templates/components/front-proposal.php:38
 msgid "You accumulate your pension in our joint low-cost pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:40
+#: templates/components/front-proposal.php:39
 msgid "Management fee is lower for members - just"
 msgstr ""
 
-#: templates/components/front-proposal.php:40
+#: templates/components/front-proposal.php:39
 msgid ""
 "Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. "
 "Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, "
@@ -150,48 +150,50 @@ msgid ""
 "katteks jääb 0,29%."
 msgstr ""
 
-#: templates/components/front-proposal.php:41
+#: templates/components/front-proposal.php:40
 msgid ""
 "You support Tuleva development plans and help to improve Estonian pension "
 "system"
 msgstr ""
 
-#: templates/components/front-proposal.php:47
+#: templates/components/front-proposal.php:46
 msgid "one-off joining fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:49
+#: templates/components/front-proposal.php:48
 msgid "Become a member"
 msgstr ""
 
-#: templates/components/front-proposal.php:53
+#: templates/components/front-proposal.php:52
 msgid "Simply choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:55
+#: templates/components/front-proposal.php:54
 msgid ""
 "Your save for your pension with a low-cost pension fund where owners care "
 "about your returns not bank’s."
 msgstr ""
 
-#: templates/components/front-proposal.php:56
+#: templates/components/front-proposal.php:55
 msgid "Three times lower than average management fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:61
+#: templates/components/front-proposal.php:60
 msgid "FREE"
 msgstr ""
 
-#: templates/components/front-proposal.php:62
+#: templates/components/front-proposal.php:61
 msgid "and it takes only 5 minutes"
 msgstr ""
 
 #: templates/components/front-proposal.php:63
-msgid "Learn about the funds"
+msgid "<a class=\"link\" href=\"/en/funds/\">Learn about the funds</a>"
 msgstr ""
 
-#: templates/components/front-proposal.php:63
-msgid "How to change the fund"
+#: templates/components/front-proposal.php:64
+msgid ""
+"<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the "
+"fund</a>"
 msgstr ""
 
 #: templates/components/fund-calculator.php:13
@@ -597,7 +599,7 @@ msgid ""
 "><a href=\"#membership-fee-usage\">What we do with joining fees?</a>"
 msgstr ""
 
-#: templates/components/signup.php:23 templates/fund-content.php:28
+#: templates/components/signup.php:23
 msgid "Choose Tuleva pension fund"
 msgstr ""
 
@@ -670,10 +672,16 @@ msgstr ""
 
 #: templates/fund-content.php:22
 msgid ""
-"This fund has been already chosen by 3669 people - including Tuleva founders "
+"This fund has been already chosen by 3420 people - including Tuleva founders "
 "and most of the members. <br> If you are over 55, consider our bond fund."
 "<br> Changing pension fund if free for you and takes only 5 minutes in your "
 "internet bank."
+msgstr ""
+
+#: templates/fund-content.php:27
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
+"\">Choose Tuleva pension fund</a>"
 msgstr ""
 
 #: templates/header/main-sticky.php:6 templates/header/main.php:6

@@ -1,4 +1,3 @@
-    <?php //if (isset($_GET['signup'])) { ?>
       <script type="text/javascript">
       $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();
@@ -59,10 +58,12 @@
               <div class="proposal-cta">
                 <div class="fee">
                   <div class="fee-cost secondary"><?php _e('FREE', TEXT_DOMAIN); ?></div>
-                  <div class="fee-helper"><?php _e('and it takes only 5 minutes', TEXT_DOMAIN); ?></div>
-                </div><a class="link" href="https://tuleva.ee/fondid/"><?php _e('Learn about the funds', TEXT_DOMAIN); ?></a><a class="link" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/"><?php _e('How to change the fund', TEXT_DOMAIN); ?></a></div>
+                    <div class="fee-helper"><?php _e('and it takes only 5 minutes', TEXT_DOMAIN); ?></div>
+                </div>
+                  <?php _e('<a class="link" href="/en/funds/">Learn about the funds</a>', TEXT_DOMAIN); ?>
+                  <?php _e('<a class="link" href="/en/transfer-pension-tuleva/">How to change the fund</a>', TEXT_DOMAIN); ?>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    <?php //} ?>

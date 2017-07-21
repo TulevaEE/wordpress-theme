@@ -19,14 +19,12 @@
                     </div>
                     <div class="row mt-5 top-buffer">
                         <div class="col-md-12">
-                            <p class="h1-sm text-center"><?php _e('This fund has been already chosen by 3669 people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.', TEXT_DOMAIN) ?></p>
+                            <p class="h1-sm text-center"><?php _e('This fund has been already chosen by 3420 people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.', TEXT_DOMAIN) ?></p>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-12 text-center">
-                            <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg">
-                                <?php _e('Choose Tuleva pension fund', TEXT_DOMAIN) ?>
-                            </a>
+                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">Choose Tuleva pension fund</a>', TEXT_DOMAIN) ?>
                         </div>
                     </div>
                 </div>
@@ -67,6 +65,8 @@
             }
         }
     ?>
+
+
 
     <?php //get_template_part('templates/components/fund-qa'); ?>
 
