@@ -36,7 +36,7 @@ class ThemeEnqueue {
                 'handle' => 'jquery',
                 'src' => $js_path . 'vendor/jquery-1.12.4.min.js',
                 'ver' => '1.12.4',
-                'js_in_header' => false,
+                'js_in_header' => true,
                 'enqueue' => true
             ],
             [
