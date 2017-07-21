@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-21 14:33+0300\n"
-"PO-Revision-Date: 2017-07-21 14:36+0300\n"
+"POT-Creation-Date: 2017-07-21 14:41+0300\n"
+"PO-Revision-Date: 2017-07-21 14:42+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -288,8 +288,12 @@ msgstr "Vaata fondi infot"
 
 #: templates/components/fund-choosing.php:28
 #: templates/components/fund-choosing.php:53
-msgid "I choose this fund"
-msgstr "Valin selle fondi"
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">I "
+"choose this fund</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
+"\">Valin selle fondi</a>"
 
 #: templates/components/fund-choosing.php:35
 msgid "If you are over 55, the fund better suited for you could be"
@@ -928,6 +932,9 @@ msgstr "Fondide leht"
 #. Template Name of the plugin/theme
 msgid "Membership success"
 msgstr "Liikmeks astutud"
+
+#~ msgid "I choose this fund"
+#~ msgstr "Valin selle fondi"
 
 #~ msgid "Learn about the funds"
 #~ msgstr "Tutvu fondidega"

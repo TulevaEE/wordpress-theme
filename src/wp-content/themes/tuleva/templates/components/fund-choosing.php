@@ -25,7 +25,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
-                    <p><a href="/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg"><?php _e('I choose this fund', TEXT_DOMAIN); ?></a></p>
+                    <p><?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">I choose this fund</a>', TEXT_DOMAIN); ?></p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" />
                         </a>
                     </p>
-                    <p><a href="/kuidas-tuua-pension-tulevasse/" class="btn btn-primary btn-lg"><?php _e('I choose this fund', TEXT_DOMAIN); ?></a></p>
+                    <p><?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">I choose this fund</a>', TEXT_DOMAIN); ?></p>
                 </div>
             </div>
         </div>
