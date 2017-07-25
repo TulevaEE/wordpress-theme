@@ -35,7 +35,7 @@
         </div>
         <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-7">
             <h4><?php _e('We are stronger together', TEXT_DOMAIN) ?></h4>
-            <p><?php _e('<strong>3403</strong> people have already joined the founders. We invite you to become a member as well. Together we create better possibilities to save money for our future.', TEXT_DOMAIN) ?></p>
+            <p><?php _e('<strong>3446</strong> people have already joined the founders. We invite you to become a member as well. Together we create better possibilities to save money for our future.', TEXT_DOMAIN) ?></p>
         </div>
     </div>
     <div class="row row-spacing vertical-align">
