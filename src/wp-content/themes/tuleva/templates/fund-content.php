@@ -96,7 +96,5 @@
         });
     </script>
 
-    <?php //get_template_part('templates/components/fund-qa'); ?>
-
     <?php endwhile; ?>
 </div>
