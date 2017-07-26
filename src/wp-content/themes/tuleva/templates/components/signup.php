@@ -28,8 +28,8 @@
         </div>
         <div class="col-md-5">
                 <div id="inline-signup" class="inline-signup well well-xl"></div>
+            <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.8b285ffa.js"></script>
                 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.fbfcfd48.js"></script>
-                <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.8b285ffa.js"></script>
                 <!--                    <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script>-->
         </div>
     </div>
