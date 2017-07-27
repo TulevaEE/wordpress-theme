@@ -50,6 +50,20 @@ $(document).ready(function($) {
             }
         });
     },
+    initBlogBeacon = function() {
+        var $blogBeacon = $('.blog-beacon');
+        var $beaconToggle = $('.beacon-toggle');
+
+        $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop(),
+                viewportHeight = $(window).height();
+
+            if ($blogBeacon.length && scrollPosition > viewportHeight) {
+                $blogBeacon.show();
+                $beaconToggle.hide();
+            }
+        });
+    },
     showStickyHeader = function() {
         $('body').addClass('sticky-header-visible');
     },
@@ -71,6 +85,7 @@ $(document).ready(function($) {
 
     initStickyHeader();
     initBeaconToggle();
+    initBlogBeacon();
 
     $('.testimonial-slider').unslider({
         nav: false,

@@ -2,6 +2,7 @@
 		background-image: url('/wp-content/themes/tuleva/img/kristi.jpeg');
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position-y: -100px;
 
 	.funds-calculator-box {
 		background-color: white;
@@ -23,7 +24,7 @@
 		.name {
 			font-size: 22px;
 			line-height: 40px;
-			font-weight: 500;	
+			font-weight: 500;
 		}
 
 		.content {

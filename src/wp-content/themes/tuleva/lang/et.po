@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-27 14:31+0300\n"
-"PO-Revision-Date: 2017-07-27 14:31+0300\n"
+"POT-Creation-Date: 2017-07-27 17:34+0300\n"
+"PO-Revision-Date: 2017-07-27 17:37+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -791,6 +791,22 @@ msgstr ""
 #: templates/footer/beacon-translations.php:14
 msgid "Send"
 msgstr "Saada"
+
+#: templates/footer/blog-beacon.php:2
+msgid ""
+"<a class=\"btn btn-primary btn-block\" href=\"/en/#inline-signup-anchor"
+"\">Join Tuleva</a>"
+msgstr ""
+"<a class=\"btn btn-primary btn-block\" href=\"/#inline-signup-anchor\">Liitu "
+"Tulevaga</a>"
+
+#: templates/footer/blog-beacon.php:3
+msgid ""
+"<a class=\"btn btn-link btn-block\" href=\"/en/transfer-pension-tuleva/"
+"\">Transfer pension</a>"
+msgstr ""
+"<a class=\"btn btn-link btn-block\" href=\"/kuidas-tuua-pension-tulevasse/"
+"\">Too pension üle</a>"
 
 #: templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"
