@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-26 15:24+0300\n"
-"PO-Revision-Date: 2017-07-26 15:24+0300\n"
+"POT-Creation-Date: 2017-07-27 10:02+0300\n"
+"PO-Revision-Date: 2017-07-27 10:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -423,10 +423,6 @@ msgstr "Kuidas fondi valida?"
 msgid "Is Tuleva safe?"
 msgstr "Kas Tuleva on turvaline?"
 
-#: templates/components/fund-qa.php:4 templates/components/qa-block.php:4
-msgid "Answers to frequently asked questions"
-msgstr "Vastused korduma kippuvatele küsimustele"
-
 #: templates/components/fund-security.php:6
 msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
 msgstr ""
@@ -566,6 +562,10 @@ msgstr ""
 "d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
 "       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
 "pensionikalkulaator töötab.</a>"
+
+#: templates/components/qa-block.php:4
+msgid "Answers to frequently asked questions"
+msgstr "Vastused korduma kippuvatele küsimustele"
 
 #: templates/components/reasons.php:4
 msgid "Why Tuleva was born and what are our goals?"
@@ -803,12 +803,12 @@ msgstr ""
 
 #: templates/fund-content.php:22
 msgid ""
-"This fund has been already chosen by 3530 people - including Tuleva founders "
+"This fund has been already chosen by 3657 people - including Tuleva founders "
 "and most of the members. <br> If you are over 55, consider our bond fund."
 "<br> Changing pension fund if free for you and takes only 5 minutes in your "
 "internet bank."
 msgstr ""
-"Selle fondi on juba valinud 3530 inimest - nende seas ka Tuleva asutajad ja "
+"Selle fondi on juba valinud 3657 inimest - nende seas ka Tuleva asutajad ja "
 "enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
 "<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
 

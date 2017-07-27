@@ -429,7 +429,7 @@ p {
 .lead {
   margin-bottom: 22px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4; }
   @media (min-width: 768px) {
     .lead {
@@ -3334,6 +3334,9 @@ h3, .h3 {
   color: #002F63;
   line-height: 1.5; }
 
+h4, .h4 {
+  color: #002F63; }
+
 .heading-bottom-spacing {
   margin-bottom: 1em; }
 
@@ -4500,7 +4503,6 @@ hr {
 .funds-container-hero-gradient {
   background: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88));
   top: 0;
-  min-height: 60vh;
   padding-top: 50px;
   padding-bottom: 50px; }
 
@@ -4508,8 +4510,7 @@ hr {
   background-position-y: 70%;
   background-image: url("/wp-content/themes/tuleva/img/plikad.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 60vh; }
+  background-size: cover; }
   .funds-container-hero .container {
     margin-top: 0px; }
 
@@ -4559,54 +4560,58 @@ hr {
       line-height: 40px;
       font-weight: 700; }
 
-.front-founders {
+.front-founders > .row {
   background-color: #EBF7FF; }
-  .front-founders .col-md-6 {
-    padding-left: 0;
-    padding-right: 0; }
-    .front-founders .col-md-6 .row {
-      margin-left: 0; }
-    .front-founders .col-md-6 .founders-name-badge {
-      padding: 60px 20px 40px 40px;
-      background-color: #002F63;
-      color: white; }
-      .front-founders .col-md-6 .founders-name-badge .founders-name {
-        font-family: Merriweather;
-        font-size: 48px;
-        font-weight: bold;
-        line-height: 60px; }
-      .front-founders .col-md-6 .founders-name-badge .founders-subtitle {
-        font-family: Roboto;
-        font-size: 20px;
-        line-height: 30px; }
-    .front-founders .col-md-6 .founders-content {
-      padding: 40px 40px 40px 40px; }
-      .front-founders .col-md-6 .founders-content .founders-content-title {
-        color: #373A3C;
-        font-family: Roboto;
-        font-size: 20px;
-        line-height: 30px; }
-      .front-founders .col-md-6 .founders-content .founders-content-text {
-        color: #303030;
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 25px; }
-  .front-founders .neivelt-image {
-    background-image: url("/wp-content/themes/tuleva/img/neivelt.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh; }
-  .front-founders .annika-image {
-    background-image: url("/wp-content/themes/tuleva/img/annika.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh; }
-  .front-founders .taavetkristo-image {
-    background-image: url("/wp-content/themes/tuleva/img/taavetkristo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    background-position-x: 35%; }
+
+.front-founders .col-md-6 {
+  padding-left: 0;
+  padding-right: 0; }
+  .front-founders .col-md-6 .row {
+    margin-left: 0; }
+  .front-founders .col-md-6 .founders-name-badge {
+    padding: 60px 20px 40px 40px;
+    background-color: #002F63;
+    color: white; }
+    .front-founders .col-md-6 .founders-name-badge .founders-name {
+      font-family: Merriweather;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 60px; }
+    .front-founders .col-md-6 .founders-name-badge .founders-subtitle {
+      font-family: Roboto;
+      font-size: 20px;
+      line-height: 30px; }
+  .front-founders .col-md-6 .founders-content {
+    padding: 40px 40px 40px 40px; }
+    .front-founders .col-md-6 .founders-content .founders-content-title {
+      color: #373A3C;
+      font-family: Roboto;
+      font-size: 20px;
+      line-height: 30px; }
+    .front-founders .col-md-6 .founders-content .founders-content-text {
+      color: #303030;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 25px; }
+
+.front-founders .neivelt-image {
+  background-image: url("/wp-content/themes/tuleva/img/neivelt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px; }
+
+.front-founders .annika-image {
+  background-image: url("/wp-content/themes/tuleva/img/annika.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px; }
+
+.front-founders .taavetkristo-image {
+  background-image: url("/wp-content/themes/tuleva/img/taavetkristo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 680px;
+  background-position-x: 35%; }
 
 .proposal {
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */

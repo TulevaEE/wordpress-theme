@@ -87,7 +87,7 @@ p {
 .lead {
   margin-bottom: 22px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4; }
   @media (min-width: 768px) {
     .lead {
@@ -391,6 +391,9 @@ h3, .h3 {
   font-weight: bold;
   color: #002F63;
   line-height: 1.5; }
+
+h4, .h4 {
+  color: #002F63; }
 
 .heading-bottom-spacing {
   margin-bottom: 1em; }

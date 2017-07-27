@@ -1,6 +1,8 @@
 .front-founders {
-	
-	background-color: #EBF7FF;
+
+	> .row {
+		background-color: #EBF7FF;
+	}
 
 	.col-md-6 {
 
@@ -45,31 +47,31 @@
 				color: #303030;
 				font-family: Roboto;
 				font-size: 16px;
-				line-height: 25px;			
-			}			
+				line-height: 25px;
+			}
 		}
-	}	
+	}
 
 	.neivelt-image {
 		background-image: url('/wp-content/themes/tuleva/img/neivelt.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 90vh;	
+		min-height: 600px;
 	}
 
 	.annika-image {
 		background-image: url('/wp-content/themes/tuleva/img/annika.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 90vh;	
+		min-height: 600px;
 	}
 
 	.taavetkristo-image {
 		background-image: url('/wp-content/themes/tuleva/img/taavetkristo.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 90vh;
+		min-height: 680px;
 		background-position-x: 35%;
 	}
-	
+
 }

@@ -8,7 +8,7 @@
 
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
     <div class="row">
-        <div>
+        <div class="col-md-offset-1 col-md-10">
             <?php if (have_rows('questions')) $i = 0; {
                 while (have_rows('questions')) { $i++; the_row(); ?>
                     <div class="qa__question-wrapper">
