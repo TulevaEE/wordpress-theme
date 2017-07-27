@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-27 07:02:47+00:00\n"
+"POT-Creation-Date: 2017-07-27 11:31:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -115,32 +115,32 @@ msgid ""
 "people themselves."
 msgstr ""
 
-#: templates/components/front-proposal.php:26
+#: templates/components/front-proposal.php:13
 msgid ""
 "Tuleva is a growing mutual company. Born as a citizens’s initiative, it has "
 "%s owners or members."
 msgstr ""
 
-#: templates/components/front-proposal.php:29
+#: templates/components/front-proposal.php:16
 msgid ""
 "If you like Tuleva’s goals, want to support reaching them and want to "
 "benefit as an owner from everything Tuleva does in the future, then come and "
 "become a Tuleva member."
 msgstr ""
 
-#: templates/components/front-proposal.php:36
+#: templates/components/front-proposal.php:23
 msgid "Become a member and choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:38
+#: templates/components/front-proposal.php:25
 msgid "You accumulate your pension in our joint low-cost pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:39
+#: templates/components/front-proposal.php:26
 msgid "Management fee is lower for members - just"
 msgstr ""
 
-#: templates/components/front-proposal.php:39
+#: templates/components/front-proposal.php:26
 msgid ""
 "Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. "
 "Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, "
@@ -150,47 +150,47 @@ msgid ""
 "katteks jääb 0,29%."
 msgstr ""
 
-#: templates/components/front-proposal.php:40
+#: templates/components/front-proposal.php:27
 msgid ""
 "You support Tuleva development plans and help to improve Estonian pension "
 "system"
 msgstr ""
 
-#: templates/components/front-proposal.php:46
+#: templates/components/front-proposal.php:33
 msgid "one-off joining fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:48
+#: templates/components/front-proposal.php:35
 msgid "Become a member"
 msgstr ""
 
-#: templates/components/front-proposal.php:52
+#: templates/components/front-proposal.php:39
 msgid "Simply choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:54
+#: templates/components/front-proposal.php:41
 msgid ""
 "Your save for your pension with a low-cost pension fund where owners care "
 "about your returns not bank’s."
 msgstr ""
 
-#: templates/components/front-proposal.php:55
+#: templates/components/front-proposal.php:42
 msgid "Three times lower than average management fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:60
+#: templates/components/front-proposal.php:47
 msgid "FREE"
 msgstr ""
 
-#: templates/components/front-proposal.php:61
+#: templates/components/front-proposal.php:48
 msgid "and it takes only 5 minutes"
 msgstr ""
 
-#: templates/components/front-proposal.php:63
+#: templates/components/front-proposal.php:50
 msgid "<a class=\"link\" href=\"/en/funds/\">Learn about the funds</a>"
 msgstr ""
 
-#: templates/components/front-proposal.php:64
+#: templates/components/front-proposal.php:51
 msgid ""
 "<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the "
 "fund</a>"
@@ -526,50 +526,50 @@ msgstr ""
 msgid "We are stronger together"
 msgstr ""
 
-#: templates/components/reasons.php:38
+#: templates/components/reasons.php:41
 msgid ""
-"<strong>3446</strong> people have already joined the founders. We invite you "
+"<strong>%s</strong> people have already joined the founders. We invite you "
 "to become a member as well. Together we create better possibilities to save "
 "money for our future."
 msgstr ""
 
-#: templates/components/reasons.php:43
+#: templates/components/reasons.php:48
 msgid "We earn money for ourselves, not for the banks"
 msgstr ""
 
-#: templates/components/reasons.php:44
+#: templates/components/reasons.php:49
 msgid ""
 "Alone it would not be possible for anybody. But together with the help of "
 "smarter technologies we can rid ourselves from costly middlemen and grow "
 "our, not banks’, money."
 msgstr ""
 
-#: templates/components/reasons.php:55
+#: templates/components/reasons.php:60
 msgid "A beginning has been made"
 msgstr ""
 
-#: templates/components/reasons.php:56
+#: templates/components/reasons.php:61
 msgid ""
 "As a first step, we started modern low cost II pillar pension funds. All "
 "Estonian people can now save for pension together with Tuleva founders and "
 "members."
 msgstr ""
 
-#: templates/components/reasons.php:61
+#: templates/components/reasons.php:66
 msgid "We have many more good ideas"
 msgstr ""
 
-#: templates/components/reasons.php:62
+#: templates/components/reasons.php:67
 msgid ""
 "In the future we will start a voluntary pension fund and will create other "
 "ways to increase our money through long-term savings."
 msgstr ""
 
-#: templates/components/reasons.php:69
+#: templates/components/reasons.php:74
 msgid "This is not all"
 msgstr ""
 
-#: templates/components/reasons.php:73
+#: templates/components/reasons.php:78
 msgid ""
 "As an association of pension savers Tuleva helps to make Estonian laws "
 "better so that pension system would be useful first of all to people not "

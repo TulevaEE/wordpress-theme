@@ -9,20 +9,7 @@
           <div class="intro w-container">
             <div class="intro-text">
               <?php
-
-                stream_context_set_default(
-                    array(
-                        'http' => array(
-                            'method' => 'HEAD',
-                            'header' => array(
-                                    "Authorization: Bearer b4adb192-29a8-4861-a697-c704947d0023"
-                            )
-                        )
-                    )
-                );
-                $headers = get_headers('https://onboarding-service.tuleva.ee/v1/members', 1);
-                $memberCount = $headers['X-Total-Count'];
-
+                global $memberCount;
                 printf(__('Tuleva is a growing mutual company. Born as a citizens’s initiative, it has %s owners or members.', TEXT_DOMAIN), $memberCount);
               ?>
             </div>
