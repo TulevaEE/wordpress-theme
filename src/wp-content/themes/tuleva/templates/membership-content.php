@@ -12,7 +12,7 @@
                         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.2bed3082.js"></script>
                         <!-- <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script> -->
                     <script type="text/javascript">
-                        mixpanel.track("Membership success");
+                        mixpanel.track("MEMBERSHIP_SUCCESS_PAGE");
                     </script>
                     </div>
                 </div>
