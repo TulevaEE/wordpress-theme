@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-27 17:34+0300\n"
-"PO-Revision-Date: 2017-07-27 17:37+0300\n"
+"POT-Creation-Date: 2017-07-28 14:07+0300\n"
+"PO-Revision-Date: 2017-07-28 14:08+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -817,18 +817,18 @@ msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
 msgstr ""
 "Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
 
-#: templates/fund-content.php:22
+#: templates/fund-content.php:25
 msgid ""
-"This fund has been already chosen by 3657 people - including Tuleva founders "
+"This fund has been already chosen by %s people - including Tuleva founders "
 "and most of the members. <br> If you are over 55, consider our bond fund."
 "<br> Changing pension fund if free for you and takes only 5 minutes in your "
 "internet bank."
 msgstr ""
-"Selle fondi on juba valinud 3657 inimest - nende seas ka Tuleva asutajad ja "
+"Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja "
 "enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
 "<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
 
-#: templates/fund-content.php:27
+#: templates/fund-content.php:32
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
 "\">Choose Tuleva pension fund</a>"
