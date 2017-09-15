@@ -21,7 +21,7 @@
                         <div class="col-md-12">
                             <p class="h1-sm text-center">
                                 <?php
-                                $fundCount = 4260;
+                                $fundCount = 4337;
                                 printf(__('This fund has been already chosen by %s people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.', TEXT_DOMAIN), $fundCount);
                                 ?>
                             </p>
