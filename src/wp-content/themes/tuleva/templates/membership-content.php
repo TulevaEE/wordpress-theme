@@ -7,9 +7,9 @@
                     <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>
                     <div>
                         <div id="inline-login" class="inline-login"></div>
-                        <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.efe556b6.css" rel="stylesheet">
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.15825c54.js"></script>
-                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.2bed3082.js"></script>
+                        <link href="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/css/login.8f82b241.css" rel="stylesheet">
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.bdeb56ed.js"></script>
+                        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/login.771bcef5.js"></script>
                         <!-- <script type="text/javascript" src="http://localhost:3000/static/js/login.js"></script> -->
                     <script type="text/javascript">
                         mixpanel.track("MEMBERSHIP_SUCCESS_PAGE");

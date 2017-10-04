@@ -23,7 +23,7 @@
                 <h4 class="proposal-title"><?php _e('Become a member and choose Tuleva pension fund', TEXT_DOMAIN); ?></h4>
                 <ul class="benefits w-list-unstyled">
                   <li class="benefit"><?php _e('You accumulate your pension in our joint low-cost pension fund', TEXT_DOMAIN) ?></li>
-                  <li class="benefit"><?php _e('Management fee is lower for members - just', TEXT_DOMAIN); ?>&nbsp;<span class="highlight"><strong>0,29%</strong></span><span class="member-fee-information-button" data-toggle="tooltip" data-placement="bottom" title="<?php _e('Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest. Seega, fondi valitsemise kulude katteks jääb 0,29%.', TEXT_DOMAIN) ?>"></span></li>
+                  <li class="benefit"><?php _e('Members can earn dividends', TEXT_DOMAIN); ?> <span class="member-fee-information-button" data-toggle="tooltip" data-placement="bottom" title="<?php _e('Tuleva liikmed võivad saada liikmeboonust. Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest.', TEXT_DOMAIN) ?>"></span></li>
                   <li class="benefit last"><?php _e('You support Tuleva development plans and help to improve Estonian pension system', TEXT_DOMAIN); ?></li>
                 </ul>
               </div>

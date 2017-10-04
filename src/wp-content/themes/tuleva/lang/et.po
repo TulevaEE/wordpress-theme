@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-07-28 14:07+0300\n"
-"PO-Revision-Date: 2017-07-28 14:08+0300\n"
+"POT-Creation-Date: 2017-10-04 12:31:56+00:00\n"
+"PO-Revision-Date: 2017-10-04 15:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
@@ -165,17 +165,15 @@ msgid "You accumulate your pension in our joint low-cost pension fund"
 msgstr "Kogud pensioni meie ühises madalate kuludega pensionifondis"
 
 #: templates/components/front-proposal.php:26
-msgid "Management fee is lower for members - just"
-msgstr "Liikmele on valitsemistasu soodsam — kõigest"
+msgid "Members can earn dividends"
+msgstr "Liikmel on võimalik saada dividendi"
 
 #: templates/components/front-proposal.php:26
 msgid ""
-"Tuleva liikmed saavad osa valitsemistasust liikmeboonusena tagasi. "
-"Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, "
-"kes on oma II samba vara toonud Tuleva pensionifondidesse. Igal aastal "
-"kanname Tuleva liikme isiklikule kapitalikontole 0,05% tema Tuleva "
-"pensionifondi kogunenud osakute väärtusest. Seega, fondi valitsemise kulude "
-"katteks jääb 0,29%."
+"Tuleva liikmed võivad saada liikmeboonust. Liikmeboonus on omanikutulu, mida "
+"saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud "
+"Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule "
+"kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest."
 msgstr ""
 
 #: templates/components/front-proposal.php:27
@@ -844,6 +842,10 @@ msgstr "Navigatsioon"
 msgid "Enter Tuleva app"
 msgstr "Liikmekonto"
 
+#: templates/header/main.php:19
+msgid "Liikmekonto"
+msgstr ""
+
 #: widgets/cta-button-widget.php:12
 msgid "CTA Button widget"
 msgstr "CTA nupu moodul"
@@ -948,6 +950,9 @@ msgstr "Fondide leht"
 #. Template Name of the plugin/theme
 msgid "Membership success"
 msgstr "Liikmeks astutud"
+
+#~ msgid "Management fee is lower for members - just"
+#~ msgstr "Liikmele on valitsemistasu soodsam — kõigest"
 
 #~ msgid "I choose this fund"
 #~ msgstr "Valin selle fondi"
