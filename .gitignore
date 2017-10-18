@@ -8,3 +8,12 @@ wc-logs
 node_modules
 src/wp-content/uploads/cache/
 .DS_store
+.idea/
+
+!src
+src/*
+!src/wp-content/
+src/wp-content/*
+!src/wp-content/themes/
+src/wp-content/themes/*
+!src/wp-content/themes/tuleva
