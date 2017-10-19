@@ -39,7 +39,7 @@ $row-spacing-quarter: 40px;
     margin-bottom: $row-spacing-quarter;
 }
 
-@include mobile {
+@include media-breakpoint-down(sm) {
     .row-spacing {
         margin-top: $row-spacing-mobile;
         margin-bottom: $row-spacing-mobile;
@@ -78,14 +78,14 @@ $row-spacing-quarter: 40px;
 }
 
 .content-area {
-    @include not-mobile {
+    @include media-breakpoint-up(md) {
         width: 66%;
         margin-right: 4%;
     }
 }
 
 .widget-area {
-    @include not-mobile {
+    @include media-breakpoint-up(md) {
         width: 30%;
     }
 }

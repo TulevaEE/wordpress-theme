@@ -6,7 +6,7 @@ $font-family-sans-serif: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-ser
 $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
-$font-size-base: 16px !default;
+$font-size-base: 1rem !default;
 $font-size-xl: floor(($font-size-base * 1.5)) !default; // ~24px !default;
 $font-size-blockquote: floor(($font-size-base * 2)) !default; // ~24px !default;
 $line-height-xl: 1.2 !default;

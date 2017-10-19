@@ -14,7 +14,7 @@
 
     h2,
     h3 {
-        margin-bottom: $line-height-computed;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -90,12 +90,12 @@
             margin-top: 70px;
             margin-bottom: 70px;
 
-            @include desktop-lg {
+            @include media-breakpoint-only(lg) {
                 margin-left: -125px;
                 margin-right: -125px;
             }
 
-            @include desktop-xl {
+            @include media-breakpoint-only(xl) {
                 margin-left: -125px;
                 margin-right: -125px;
             }

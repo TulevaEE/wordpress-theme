@@ -2,20 +2,20 @@
     &__item {
         text-align: center;
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             margin-bottom: 30px;
         }
     }
 
     &__image {
         border-radius: 50%;
-        @include square(160px);
+        @include size(160px);
     }
 
     &__title {
         margin-bottom: 18px;
 
-        @include not-mobile {
+        @include media-breakpoint-up(md) {
             margin-top: 42px;
         }
     }
@@ -26,7 +26,7 @@
 }
 
 .text-boxes {
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         [class^="col-"] {
             padding: 0;
         }
@@ -40,7 +40,7 @@
     border-radius: 4px;
     // color: #373A3C;
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         padding: 0;
         padding-bottom: 10px;
         margin-bottom: 24px;
@@ -49,7 +49,7 @@
     &--rounder {
         border-radius: 8px;
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             border-radius: 0;
         }
     }
@@ -76,7 +76,7 @@
             border-bottom-color: $blue-light;
         }
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             padding: 24px 30px;
             text-align: center;
             font-size: 1.25em;
@@ -102,7 +102,7 @@
     }
 
     &__content {
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             padding-right: 10px;
             padding-left: 30px;
         }
@@ -135,7 +135,7 @@
     padding: 100px 0;
     margin-bottom: -2.25em;
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         padding: 40px 0;
     }
 
@@ -179,7 +179,7 @@
     &__image {
         margin-bottom: 10px;
         border-radius: 50%;
-        @include square(192px);
+        @include size(192px);
     }
 
     blockquote {
@@ -198,7 +198,7 @@
 
     &__image {
         border-radius: 50%;
-        @include square(160px);
+        @include size(160px);
     }
     &__text {
         position: relative;
@@ -228,7 +228,7 @@
     padding: 110px 0;
     margin-bottom: -2em;
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         padding: 40px 0;
     }
 
@@ -254,10 +254,10 @@
     &__author {
         &__image {
             border-radius: 50%;
-            @include square(40px);
+            @include size(40px);
             margin-right: 1em;
 
-            @include mobile {
+            @include media-breakpoint-down(sm) {
                 float: left;
             }
         }
@@ -275,7 +275,7 @@
         width: 25%;
         min-width: 100px;
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             padding: 0 10px;
         }
     }
@@ -283,16 +283,16 @@
     &__body {
         width: 75%;
 
-        @include not-mobile {
+        @include media-breakpoint-up(md) {
             padding-right: 2em;
         }
     }
 
     &__image {
         border-radius: 50%;
-        @include square(96px);
+        @include size(96px);
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             @include size(100%, auto);
         }
     }
@@ -306,7 +306,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include not-mobile {
+    @include media-breakpoint-up(md) {
         .media-box {
             width: 50%;
         }
@@ -527,7 +527,7 @@
         }
     }
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         box-shadow: none;
 
         &__list {
@@ -604,7 +604,7 @@
             padding: 0;
         }
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             &#{&} {
                 width: 100%;
                 padding: 0;
@@ -625,8 +625,8 @@
 .pagination {
     @extend .clearfix;
     display: block;
-    margin-top: $line-height-computed / 2;
-    margin-bottom: $line-height-computed * 4;
+    margin-top: $spacer;
+    margin-bottom: $spacer * 4;
     text-transform: uppercase;
     font-size: 1.25em;
     font-weight: 500;
@@ -673,7 +673,7 @@
     &__title {
         text-align: center;
         font-size: 1.5em;
-        margin-bottom: $line-height-computed;
+        margin-bottom: $spacer;
 
         &--link {
             display: inline-block;
@@ -701,7 +701,7 @@
 .tabs {
     padding-top: 130px;
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         padding-top: 30px;
     }
 
@@ -712,7 +712,7 @@
         border-bottom: none;
         margin-top: 100px;
 
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             margin-top: 40px;
         }
 
@@ -721,7 +721,7 @@
             margin: 0;
             background: rgba(5,147,252,0.08);
 
-            @include not-mobile {
+            @include media-breakpoint-up(md) {
                 display:inline-block;
                 margin: 0 0.5em;
             }
@@ -752,7 +752,7 @@
 .tab-content {
     @extend .clearfix;
 
-    @include not-mobile {
+    @include media-breakpoint-up(md) {
         padding: 70px 0;
     }
 }
@@ -768,7 +768,7 @@
         padding-right: 6em;
     }
 
-    @include mobile {
+    @include media-breakpoint-down(sm) {
         .media-right,
         .media-left {
             text-align: center;
@@ -783,7 +783,7 @@
     }
 
     .media-body {
-        @include mobile {
+        @include media-breakpoint-down(sm) {
             display: block;
         }
 
