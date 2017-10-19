@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs nav-justified" role="tablist">
     <?php if (have_rows('tabs')) { $i = 0;
         while (have_rows('tabs')) { $i++; the_row(); ?>
             <li<?php

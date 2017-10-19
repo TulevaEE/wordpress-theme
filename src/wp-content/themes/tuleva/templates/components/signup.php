@@ -3,7 +3,9 @@
 
 <div class="container row-spacing-half">
     <div class="row text-center row-spacing-bottom-quarter">
-        <h1><?php _e('Join Tuleva', TEXT_DOMAIN) ?></h1>
+        <div class="col">
+            <h1><?php _e('Join Tuleva', TEXT_DOMAIN) ?></h1>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-7">
@@ -27,7 +29,7 @@
             </p>
         </div>
         <div class="col-md-5">
-                <div id="inline-signup" class="inline-signup well well-xl"></div>
+                <div id="inline-signup" class="inline-signup card p-4 bg-light"></div>
             <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/polyfills.bdeb56ed.js"></script>
                 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/templates/onboarding-client/static/js/signup.ea1a526a.js"></script>
                 <!--                    <script type="text/javascript" src="http://localhost:3000/static/js/signup.js"></script>-->

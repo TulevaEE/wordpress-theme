@@ -1,14 +1,16 @@
 <div class="bg-alt">
     <div class="container counter-block">
         <div class="row row-spacing-half">
-            <h2 class="h1-xs text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
+            <div class="col">
+                <h2 class="h1-xs text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
+            </div>
         </div>
     </div>
 </div>
 
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
     <div class="row">
-        <div class="col-md-offset-1 col-md-10">
+        <div class="mx-md-auto col-lg-10">
             <?php if (have_rows('questions')) $i = 0; {
                 while (have_rows('questions')) { $i++; the_row(); ?>
                     <div class="qa__question-wrapper">
