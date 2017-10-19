@@ -9,6 +9,7 @@ $font-family-base: $font-family-sans-serif !default;
 $font-size-base: 1rem !default;
 $font-size-xl: floor(($font-size-base * 1.5)) !default; // ~24px !default;
 $font-size-blockquote: floor(($font-size-base * 2)) !default; // ~24px !default;
+$font-weight-medium: 500;
 $line-height-xl: 1.2 !default;
 
 /**
@@ -34,6 +35,11 @@ $very-light-gray: rgba(48, 48, 48, 0.32);
 $border-gray: #d6dee6;
 
 $heading-primary: $navy-blue;
+
+// SHADOWS
+
+$shadow-sm: 0 0 48px 0 rgba(0, 0, 0, .08);
+$shadow-md: 0 0 64px 0 rgba(0, 0, 0, .12);
 
 /**
  * Brand definitions

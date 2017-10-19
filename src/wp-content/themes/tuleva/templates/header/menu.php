@@ -6,7 +6,7 @@ if (has_nav_menu('primary_navigation')) {
         'menu_class'      => 'nav navbar-nav',
         'echo'            => true,
         'fallback_cb'     => 'wp_page_menu',
-        'depth'           => 1,
+        'depth'           => 2,
     ];
     wp_nav_menu($args);
 }
