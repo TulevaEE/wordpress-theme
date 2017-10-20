@@ -1,7 +1,7 @@
 <div class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="container row-spacing-half">
-            <div class="col-md-offset-1 col-md-10">
+            <div class="offset-md-1 col-md-10">
                 <div><h2><?php the_content(); ?></h2></div>
                 <div>
                     <h1 class="text-center landing-page-headline"><?php the_field('heading'); ?></h1>

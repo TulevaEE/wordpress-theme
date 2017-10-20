@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="row vertical-align">
-        <div class="mx-md-auto col-lg-5 col-md-7">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <p>
                 <?php _e('We all need pension one day. The earlier you start thinking about it, the better is your life in the future.', TEXT_DOMAIN) ?>
             </p>
@@ -21,19 +21,19 @@
                 <?php _e('Tuleva was started as a civic initiative and is of the most exciting social companies in Estonia today.', TEXT_DOMAIN) ?>
             </p>
         </div>
-        <div class="mx-md-auto col-lg-2 mx-sm-auto col-md-3 text-center">
+        <div class="offset-md-1 col-md-2 offset-sm-1 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/idea.svg" alt="Idea" />
         </div>
     </div>
     <div class="row row-spacing">
-        <div class="mx-md-auto col-lg-8 mid-headline">
+        <div class="offset-md-2 col-md-8 mid-headline">
             <p>
                 <?php _e('Tuleva is not a typical service provider. Tuleva is owned by the pension savers themselves who decided to skip banks’ middlemen and start pension funds where they personally would like to put their money.', TEXT_DOMAIN) ?>
             </p>
         </div>
     </div>
     <div class="row row-spacing vertical-align">
-        <div class="mx-md-auto col-lg-5 col-md-7">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We deserve better', TEXT_DOMAIN) ?>
             </h4>
@@ -41,15 +41,15 @@
                 <?php _e('Tuleva was started as an initiative by 22 founders who decided that we deserve better. They started an association where every member has an equal decision right.', TEXT_DOMAIN) ?>
             </p>
         </div>
-        <div class="mx-md-auto col-lg-2 mx-sm-auto col-md-3 text-center">
+        <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/founders.svg" alt="Founders" />
         </div>
     </div>
     <div class="row row-spacing vertical-align">
-        <div class="mx-md-auto col-lg-2 col-md-3 text-center">
+        <div class="offset-md-2 col-md-2 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/members.svg" alt="Members" />
         </div>
-        <div class="mx-md-auto col-lg-5 mx-sm-auto col-md-7">
+        <div class="offset-md-1 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We are stronger together', TEXT_DOMAIN) ?>
             </h4>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="row row-spacing vertical-align">
-        <div class="mx-md-auto col-lg-5 col-md-7">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We earn money for ourselves, not for the banks', TEXT_DOMAIN) ?>
             </h4>
@@ -70,15 +70,15 @@
                 <?php _e('Alone it would not be possible for anybody. But together with the help of smarter technologies we can rid ourselves from costly middlemen and grow our, not banks’, money.', TEXT_DOMAIN) ?>
             </p>
         </div>
-        <div class="mx-md-auto col-lg-2 mx-sm-auto col-md-3 text-center">
+        <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/global-index.svg" alt="Global Index" />
         </div>
     </div>
     <div class="row row-spacing vertical-align">
-        <div class="mx-md-auto col-lg-2 col-md-3 text-center">
+        <div class="offset-md-2 col-md-2 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/rocket.svg" alt="Rocket" />
         </div>
-        <div class="mx-md-auto col-lg-5 mx-sm-auto col-md-7">
+        <div class="offset-md-1 col-md-5 col-sm-7">
             <h4>
                 <?php _e('A beginning has been made', TEXT_DOMAIN) ?>
             </h4>
@@ -88,7 +88,7 @@
         </div>
     </div>
     <div class="row row-spacing vertical-align">
-        <div class="mx-md-auto col-lg-5 col-md-7">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We have many more good ideas', TEXT_DOMAIN) ?>
             </h4>
@@ -96,7 +96,7 @@
                 <?php _e('In the future we will start a voluntary pension fund and will create other ways to increase our money through long-term savings.', TEXT_DOMAIN) ?>
             </p>
         </div>
-        <div class="mx-md-auto col-lg-2 mx-sm-auto col-md-3 text-center">
+        <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="<?php echo get_template_directory_uri() ?>/img/vacation.svg" alt="Vacation" />
         </div>
     </div>

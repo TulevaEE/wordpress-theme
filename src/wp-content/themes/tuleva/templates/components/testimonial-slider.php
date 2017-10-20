@@ -7,7 +7,7 @@
                         while (have_rows('testimonials')) { the_row(); ?>
                         <li>
                             <div class="testimonial">
-                                <div class="col-sm-2 col-sm-offset-1 hidden-xs testimonial__media">
+                                <div class="col-sm-2 offset-sm-1 hidden-xs testimonial__media">
                                     <img class="testimonial__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
                                 </div>
                                 <div class="col-sm-7 col-xs-10 col-xs-offset-1 testimonial__body">

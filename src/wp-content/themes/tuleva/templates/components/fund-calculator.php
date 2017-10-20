@@ -25,7 +25,7 @@
 	                	</div>
 
 	                </div>
-	                <div class="col-md-offset-3 col-md-5">
+	                <div class="offset-md-3 col-md-5">
                         <div class="funds-calculator-box">
                             <?php get_template_part('templates/components/pension-calculator'); ?>
                         </div>
