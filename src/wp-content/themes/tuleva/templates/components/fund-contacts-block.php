@@ -1,6 +1,5 @@
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
-    <div class="row">
-        <div class="contacts-block">
+    <div class="row contacts-block">
             <?php for( $i = 1; $i < 5; $i++ ) { ?>
                 <div class="col-md-3 col-sm-6 col-xs-12 contacts-block__item">
                     <img class="contacts-block__image" src="<?php the_sub_field('image_' . $i); ?>" alt="<?php the_sub_field('name_' . $i); ?>">
@@ -10,7 +9,6 @@
                     <div class="contacts-block__row"><?php the_sub_field('role_' . $i); ?></div>
                 </div>
             <?php } ?>
-        </div>
     </div>
     <div class="row row-spacing-top-half">
         <div class="col-md-6 offset-md-3 text-center">

@@ -1,7 +1,9 @@
 <div class="container">
     <div id="choose-fund"></div>
     <div class="row row-spacing-half">
+        <div class="col">
             <h1 class="h1-sm text-center"><?php _e('Which Tuleva pension fund to choose?', TEXT_DOMAIN) ?></h1>
+        </div>
     </div>
     <div class="row row-spacing-quarter">
         <div class="col-md-6">

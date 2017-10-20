@@ -1,7 +1,9 @@
 <div class="container">
     <div id="fund-fees"></div>
-    <div class="row row-spacing-half">
-        <h1 class="h1-sm text-center"><?php _e('Why costs matter?', TEXT_DOMAIN) ?></h1>
+    <div class="row row-spacing">
+        <div class="col">
+            <h1 class="h1-sm text-center"><?php _e('Why costs matter?', TEXT_DOMAIN) ?></h1>
+        </div>
     </div>
     <div class="row row-spacing vertical-align">
         <div class="offset-md-2 col-md-2 col-sm-3 text-center">

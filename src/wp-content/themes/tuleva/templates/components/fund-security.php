@@ -1,7 +1,7 @@
 <div class="container">
     <div id="security"></div>
     <div class="row row-spacing-half">
-        <div class="offset-md-1 col-md-10">
+        <div class="mx-md-auto col-md-10">
             <h1 class="h1-sm text-center">
                 <?php _e('Is our money in Tuleva as protected as in bank’s pension fund?', TEXT_DOMAIN) ?>
             </h1>
