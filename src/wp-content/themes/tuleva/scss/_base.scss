@@ -1,13 +1,11 @@
 // Base styles
-@import 'media-queries';
-
 html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-size: $font-size-base;
+    font-size: $font-size-base;
 }
 
 div:focus {
@@ -15,125 +13,12 @@ div:focus {
 }
 
 button {
-  font-family: $font-family-sans-serif;
-}
-
-h1, .h1 {
-    font-family: $font-family-serif;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: $heading-primary;
-    line-height: 1.5;
-
-    @include media-breakpoint-down(sm) {
-        font-size: 1.5em;
-        line-height: 1.3;
-    }
-}
-
-.h1-sm {
-    font-size: 2.25em;
-
-    @include media-breakpoint-down(sm) {
-        font-size: 1.5em;
-        line-height: 1.3;
-    }
-}
-
-.h1-xs {
-    font-size: 2em;
-
-    @include media-breakpoint-down(sm) {
-        font-size: 1.25em;
-        line-height: 1.3;
-    }
-}
-
-.h1-bottom-margin {
-    margin-bottom: 96px;
-}
-
-h2, .h2 {
-    font-family: $font-family-serif;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: $heading-primary;
-    line-height: 1.5;
-}
-
-h3, .h3 {
-    font-family: $font-family-serif;
-    font-size: 1.25em;
-    font-weight: bold;
-    color: $heading-primary;
-    line-height: 1.5;
-}
-
-h4, .h4 {
-    color: $heading-primary;
-}
-
-.heading-bottom-spacing {
-    margin-bottom: 1em;
-}
-
-p, .p {
-    line-height: 1.44;
-    font-size: 1em;
-    font-weight: normal;
-    color: $text-primary;
-    margin: 0 0 2em;
-
-    & .lead {
-        font-size: 1.25em;
-    }
-}
-
-small {
-    font-size: 0.875em;
-    color: $text-primary;
-}
-
-.text-regular {
-    font-weight: 500;
-}
-
-.text-normal {
-    font-weight: normal;
-}
-
-.text-medium {
-    font-weight: 500;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
-.text-lg {
-    font-size: floor(($font-size-base * 1.25));
-}
-
-.text-highlight {
-    background-image: linear-gradient($yellow, $yellow);
-    background-position: 0 0.7em;
-    background-repeat: repeat-x;
-    background-size: 0.4em 0.4em;
-    padding: 0 0.1em;
-}
-
-.text-muted {
-    color: $text-secondary;
-}
-
-.text-navy {
-    color: $navy-blue;
+    font-family: $font-family-sans-serif;
 }
 
 .list-style-arrow {
     list-style: none;
     padding-left: 30px;
-
     li {
         padding-left: 2em;
         background-image: url('../img/icon-arrow-right.svg');
@@ -145,12 +30,10 @@ small {
 .list-style-checkmark,
 .list-style-plussign {
     list-style: none;
-
     li {
         padding-left: 2em;
         background-repeat: no-repeat;
         background-position: 0 center;
-
         @include media-breakpoint-down(sm) {
             padding-left: 1.5em;
             background-position: 0 .5em;
@@ -199,7 +82,6 @@ hr {
 .alert {
     border: solid 2px $gray-mid;
     border-radius: 8px;
-
     &-success {
         background-color: rgba(11, 250, 67, 0.08);
         border-color: $green;
@@ -207,7 +89,11 @@ hr {
 }
 
 .btn-xl {
-    @include button-size($padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
+    @include button-size($padding-xl-vertical,
+    $padding-xl-horizontal,
+    $font-size-xl,
+    $line-height-xl,
+    $btn-border-radius-xl);
     @include media-breakpoint-down(sm) {
         padding: $padding-xl-vertical;
         width: 100%;
@@ -222,3 +108,77 @@ hr {
     padding: 0 !important;
 }
 
+// Modal animations
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+}
+
+// Modal styles
+.modal-full {
+    &-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 16rem;
+        padding: 2rem 1.5rem;
+        background-color: $modal-content-bg;
+        background-clip: padding-box;
+        border: 0;
+    }
+}
+
+[class*="close-button-"] {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2rem;
+    top: 2rem;
+    z-index: 1050;
+    width: 4rem;
+    height: 4rem;
+    background: $white;
+    border-radius: 2rem;
+    box-shadow: $shadow-md;
+    transition: all .25s ease-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}

@@ -1,10 +1,51 @@
 <div class="page-container">
-    
+    <div class="page-container funds-container">
+        <div class="page-container funds-container-hero">
+
+            <div class="funds-container-hero-gradient">
+                <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+                <div class="container">
+                    <!--
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="h1-sm text-center"><?php the_field('heading'); ?></h1>
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="h1-sm text-center"><?php _e('Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund.', TEXT_DOMAIN); ?></h1>
+                        </div>
+                    </div>
+                    <div class="row mt-5 top-buffer">
+                        <div class="col-md-12">
+                            <p class="h1-sm text-center">
+                                <?php
+                                $fundCount = 4337;
+                                printf(__('This fund has been already chosen by %s people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank.', TEXT_DOMAIN), $fundCount);
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-12 text-center">
+                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">Choose Tuleva pension fund</a>', TEXT_DOMAIN) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <?php
     get_template_part('templates/components/funds-header');
+    get_template_part('templates/components/fund-navigation');
     get_template_part('templates/components/fund-choosing');
     get_template_part('templates/components/fund-security');
+    get_template_part('templates/components/fund-fees');
+    get_template_part('templates/components/fund-calculator');
+    //get_template_part('templates/components/fund-counter');
     ?>
 
     <?php
@@ -30,8 +71,6 @@
             }
         }
     ?>
-
-    <?php get_template_part('templates/components/modal-calculator');?>
 
     <?php
 
@@ -62,4 +101,6 @@
             $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
         });
     </script>
+
+    <?php endwhile; ?>
 </div>

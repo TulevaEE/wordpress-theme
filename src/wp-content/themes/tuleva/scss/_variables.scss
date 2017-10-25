@@ -1,117 +1,116 @@
 /**
- * Fonts customization
- */
-
-$font-family-sans-serif: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base: $font-family-sans-serif !default;
-$font-size-base: 1rem !default;
-$font-size-xl: floor(($font-size-base * 1.5)) !default; // ~24px !default;
-$font-size-blockquote: floor(($font-size-base * 2)) !default; // ~24px !default;
-$font-weight-medium: 500;
-$line-height-xl: 1.2 !default;
-
-/**
  * Colors
  */
 
-$text-primary: #303030;
-$text-secondary: rgba(48, 48, 48, 0.64);
-$text-hint: rgba(48, 48, 48, 0.32);
-$text-secondary-heading: #2a2c2e;
-
-
-$blue: #0081EE;
-$navy-blue: #002F63;
-$blue-light: #00AEEA;
-$blue-washed: #ebf7ff;
-$orange: #FF4800;
-$yellow: #FCE228;
-$green: #51c26c;
-$gray-mid: #d8d8d8;
-$gray-washed: #fafafa;
-$very-light-gray: rgba(48, 48, 48, 0.32);
-$border-gray: #d6dee6;
-
-$heading-primary: $navy-blue;
-
-// SHADOWS
-
-$shadow-sm: 0 0 48px 0 rgba(0, 0, 0, .08);
-$shadow-md: 0 0 64px 0 rgba(0, 0, 0, .12);
-
-/**
- * Brand definitions
+ $text-primary: #303030;
+ $text-secondary: rgba(48, 48, 48, 0.64);
+ $text-hint: rgba(48, 48, 48, 0.32);
+ $text-secondary-heading: #2a2c2e;
+ 
+ 
+ $blue: #0081EE;
+ $navy-blue: #002F63;
+ $blue-light: #00AEEA;
+ $blue-washed: #edf7fe;
+ $orange: #FF4800;
+ $yellow: #FCE228;
+ $green: #51c26c;
+ $white: #fff;
+ $black: #000;
+ $blueish-gray: rgb(240, 244, 247);
+ $gray-mid: #d8d8d8;
+ $gray-washed: rgba(0,0,0,.12);
+ $very-light-gray: rgba(48, 48, 48, 0.32);
+ $border-gray: #d6dee6;
+ 
+ $heading-primary: $navy-blue;
+ 
+ // SHADOWS
+ 
+ $shadow-sm: 0 0 48px 0 rgba(0, 0, 0, .08);
+ $shadow-md: 0 0 64px 0 rgba(0, 0, 0, .12);
+ 
+ // SPACING
+ 
+ $spacer: 1rem !default;
+ $spacers: (
+   0: 0,
+   1: ($spacer * .25),
+   2: ($spacer * .5),
+   3: $spacer,
+   4: ($spacer * 1.5),
+   5: ($spacer * 3),
+   6: ($spacer * 5)
+ ) !default;
+ 
+ /**
+  * Brand definitions
+  */
+ 
+ $brand-primary: $blue !default;
+ $brand-success: $green !default;
+ $body-color: $text-primary !default;
+ $body-color-alt: $blue-washed !default;
+ 
+ $body-gradient-start: #fff !default;
+ $body-gradient-stop: $body-color-alt !default;
+ $card-border-width: 0;
+ $dropdown-box-shadow: 0 .5rem 2rem rgba(0,0,0,.16);
+ 
+ $border-radius-md: .5rem;
+ 
+ /**
+ * Fonts customization
  */
-
-$brand-primary: $blue !default;
-$brand-success: $green !default;
-$body-color: $text-primary !default;
-$body-color-alt: $blue-washed !default;
-
-$body-gradient-start: #fff !default;
-$body-gradient-stop: $body-color-alt !default;
-
-// Buttons
-$btn-font-weight: 500 !default;
-$btn-border-radius-xl: 8px !default;
-$padding-xl-horizontal: 60px !default;
-$padding-xl-vertical: 16px !default;
-
-// Widgets
-$widget-primary-bg-color: $blue-washed !default;
-
-// Navbar
-$navbar-height: 116px !default;
-$navbar-padding-vertical: 25px !default;
-$navbar-default-bg: transparent !default;
-$navbar-default-border: transparent !default;
-$navbar-default-link-color: $navy-blue !default;
-$navbar-toggle-color: $navy-blue !default;
-$navbar-default-brand-hover-color: $brand-primary !default;
-$navbar-default-brand-hover-bg: transparent !default;
-
-// Footer
-$footer-bg-color: #EFF4F7 !default;
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-$screen-xs:                  480px !default;
-//** Deprecated `$screen-xs-min` as of v3.2.0
-$screen-xs-min:              $screen-xs !default;
-//** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone:               $screen-xs-min !default;
-
-// Small screen / tablet
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
-
-// Medium screen / desktop
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
-
-// Large screen / wide desktop
-$screen-lg:                  1224px !default;
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
-
-// Extra large screen / extra wide desktop
-$screen-xl:                  1600px !default;
-$screen-xl-min:              $screen-xl !default;
-$screen-xl-desktop:          $screen-xl-min !default;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
-$screen-lg-max:              ($screen-xl-min - 1) !default;
-
-// Navbar
-$grid-float-breakpoint: $screen-sm !default;
-
+ 
+ $font-family-sans-serif: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+ $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
+ $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+ $font-family-base: $font-family-sans-serif !default;
+ $font-size-base: 1rem !default;
+ $font-size-sm: .875rem !default;
+ $font-size-md: 1.25rem !default;
+ $font-size-xl: 1.5rem !default; // ~24px;
+ $font-size-longread: 1.175rem !default; // 19px
+ $font-size-blockquote: 2rem !default; // 32px
+ $font-size-small: 87.5% !default;
+ $font-weight-medium: 500 !default;
+ $line-height-xl: 1.25 !default;
+ $lead-font-weight: normal !default;
+ 
+ $h1-font-size: 2.5rem !default;
+ $h2-font-size: 2rem !default;
+ $h3-font-size: 1.75rem !default;
+ $h4-font-size: 1.5rem !default;
+ $h5-font-size: 1.25rem !default;
+ $h6-font-size: 1rem !default;
+ 
+ // Buttons
+ $btn-font-weight: 500 !default;
+ $btn-border-radius-xl: 8px !default;
+ $padding-xl-horizontal: 60px !default;
+ $padding-xl-vertical: 16px !default;
+ 
+ // Widgets
+ $widget-primary-bg-color: $blue-washed !default;
+ 
+ // Navbar
+ $navbar-height: 72px !default;
+ $navbar-padding-vertical: 25px !default;
+ $navbar-default-bg: transparent !default;
+ $navbar-default-border: transparent !default;
+ $navbar-default-link-color: $navy-blue !default;
+ $navbar-toggle-color: $navy-blue !default;
+ $navbar-default-brand-hover-color: $brand-primary !default;
+ $navbar-default-brand-hover-bg: transparent !default;
+ 
+ // Footer
+ $footer-bg-color: $blueish-gray !default;
+ 
+ // Carousel
+ 
+ $carousel-control-opacity:                    .32 !default;
+ $carousel-control-icon-width:                 48px !default;
+ 
+ $carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
+ $carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");

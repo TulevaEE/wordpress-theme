@@ -16,6 +16,50 @@
     );
 }
 
+// Backgrounds
+
+.bg-hero-main {
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/dog.jpg');
+    background-position: 0px 0px, 50% 0px;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    @include media-breakpoint-up (lg) {
+        height: 100vh;
+        max-height: 720px;
+    }
+}
+
+.bg-hero-mutual {
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad.jpg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+}
+
+.bg-hero-stocks {
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc.jpeg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+}
+
+.bg-blueish-gray {
+    background: $blueish-gray;
+}
+
+.bg-blue-washed {
+    background: $blue-washed;
+}
+
 .bg-alt {
     background-color: $body-color-alt;
+}
+
+// Shadows
+.shadow-sm {
+    box-shadow: $shadow-sm;    
+}
+
+.shadow-md {
+    box-shadow: $shadow-md;    
 }

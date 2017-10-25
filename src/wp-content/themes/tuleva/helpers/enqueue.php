@@ -27,7 +27,7 @@ class ThemeEnqueue {
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '27072017_3',
+                'ver' => '25102017',
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -43,7 +43,7 @@ class ThemeEnqueue {
                 'handle' => 'bootstrap',
                 'src' => $js_path . 'vendor/bootstrap.min.js',
                 'deps' => 'jquery',
-                'ver' => '3.3.7',
+                'ver' => '4.0.0-beta-2',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
@@ -72,10 +72,18 @@ class ThemeEnqueue {
                 'enqueue' => true
             ],
             [
+                'handle' => 'animatedModal',
+                'src' => $js_path . 'vendor/animatedModal.min.js',
+                'deps' => 'jquery',
+                'ver' => '1.0.0',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '27072017',
+                'ver' => '25102017',
                 'js_in_header' => false,
                 'enqueue' => true
             ],

@@ -162,3 +162,28 @@ $(document).ready(function($) {
         }
     });
 });
+
+// Open modals on click
+$("#security").animatedModal({
+    modalTarget:'securityModal',
+    color:'#fff',
+    animatedIn: 'fadeIn',
+    animatedOut: 'fadeOut',
+    animationDuration: '.25s'
+});
+
+$("#calculator").animatedModal({
+    modalTarget:'calculatorModal',
+    color:'#fff',
+    animatedIn: 'fadeIn',
+    animatedOut: 'fadeOut',
+    animationDuration: '.25s'
+});
+
+$("#founders").animatedModal({
+    modalTarget:'foundersModal',
+    color:'#fff',
+    animatedIn: 'fadeIn',
+    animatedOut: 'fadeOut',
+    animationDuration: '.25s'
+});

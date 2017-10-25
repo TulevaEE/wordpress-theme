@@ -3,8 +3,6 @@
 
     <?php
     get_template_part('templates/components/funds-header');
-    get_template_part('templates/components/fund-choosing');
-    get_template_part('templates/components/fund-security');
     ?>
 
     <?php
@@ -30,8 +28,6 @@
             }
         }
     ?>
-
-    <?php get_template_part('templates/components/modal-calculator');?>
 
     <?php
 

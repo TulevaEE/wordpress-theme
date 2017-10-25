@@ -1,0 +1,127 @@
+h1, .h1 {
+  font-family: $font-family-serif;
+  font-size: $h1-font-size;
+  font-weight: bold;
+  color: $heading-primary;
+  line-height: $line-height-xl;
+  margin-bottom: 0.5em;
+
+  @include media-breakpoint-down(sm) {
+      font-size: $h2-font-size;
+      line-height: 1.3;
+  }
+}
+
+h2, .h2 {
+  font-family: $font-family-serif;
+  font-size: $h2-font-size;
+  font-weight: bold;
+  color: $heading-primary;
+  line-height: 1.5;
+}
+
+h3, .h3 {
+  font-family: $font-family-base;
+  font-size: $h3-font-size;
+  font-weight: bold;
+  color: $heading-primary;
+  line-height: 1.5;
+}
+
+h4, .h4 {
+  color: $heading-primary;
+  font-weight: $font-weight-bold;
+  font-size: $h4-font-size;
+  line-height: 1.33;
+}
+
+h5, .h5 {
+  color: $heading-primary;
+  font-weight: $font-weight-bold;
+  font-size: $h5-font-size;
+  line-height: 1.33;
+}
+
+// Type display classes
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+  line-height: $display-line-height;
+}
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+  line-height: $display-line-height;
+}
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+  line-height: $display-line-height;
+}
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+  line-height: $display-line-height;
+}
+
+p, .p {
+  line-height: 1.55;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $text-primary;
+  margin: 0 0 2em;
+
+  & .lead {
+      font-size: $font-size-md;
+  }
+}
+
+small,
+.small {
+  font-size: $font-size-small;
+  font-weight: inherit;
+}
+
+.text-normal {
+  font-weight: $font-weight-normal;
+}
+
+.text-medium {
+  font-weight: $font-weight-medium;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-lg {
+  font-size: floor(($font-size-base * 1.25));
+}
+
+.text-highlight {
+  background-image: linear-gradient($yellow, $yellow);
+  background-position: 0 0.75em;
+  background-repeat: repeat-x;
+  background-size: 0.4em 0.4em;
+  padding: 0 0.1em;
+}
+
+.text-muted {
+  color: $text-secondary;
+}
+
+.text-navy {
+  color: $navy-blue;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-serif {
+  font-family: $font-family-serif;
+}
+
+.text-sans {
+  font-family: $font-family-sans-serif;
+}
