@@ -703,3 +703,41 @@
     color: $navy-blue;
     font-weight: $font-weight-medium;
 }
+
+.card.calculator {
+    input {
+        display: inline-block;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        padding:.125em .5em;
+        color: $blue;
+        background: $gray-100;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid $blue-light;
+        line-height: 1;
+    }
+    input#age {
+        max-width: 3rem;
+    }
+    input#wage {
+        max-width: 4.5rem;
+    }
+    .calculator-heading {
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        line-height: 2;
+    }
+    .savings {
+        color: $blue;
+    }
+}
+
+.eeldus {
+    width: 100%;
+    box-shadow: 0 1px 0px 0 $gray-washed;
+    padding: 1rem 0;
+    &:first-of-type {
+        padding-top: 0;
+    }
+}

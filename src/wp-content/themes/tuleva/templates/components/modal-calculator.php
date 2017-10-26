@@ -1,4 +1,4 @@
-<div id="calculatorModal">
+  <div id="calculatorModal">
     <div class="close-button-calculatorModal">
       <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>

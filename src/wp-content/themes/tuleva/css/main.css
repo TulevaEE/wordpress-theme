@@ -7471,6 +7471,18 @@ div:focus {
 button {
   font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
 
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 .list-style-arrow {
   list-style: none;
   padding-left: 30px; }
@@ -8362,6 +8374,39 @@ small,
   font-size: 3rem;
   color: #002F63;
   font-weight: 500; }
+
+.card.calculator input {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: .125em .5em;
+  color: #0081EE;
+  background: #f8f9fa;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #00AEEA;
+  line-height: 1; }
+
+.card.calculator input#age {
+  max-width: 3rem; }
+
+.card.calculator input#wage {
+  max-width: 4.5rem; }
+
+.card.calculator .calculator-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2; }
+
+.card.calculator .savings {
+  color: #0081EE; }
+
+.eeldus {
+  width: 100%;
+  box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.12);
+  padding: 1rem 0; }
+  .eeldus:first-of-type {
+    padding-top: 0; }
 
 .row-spacing {
   margin-top: 100px;

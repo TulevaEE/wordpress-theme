@@ -2,9 +2,9 @@
     
 
     <?php
-    get_template_part('templates/components/funds-header');
+    get_template_part('templates/components/fund-header');
     get_template_part('templates/components/fund-choosing');
-    get_template_part('templates/components/fund-security');
+    get_template_part('templates/components/tuleva-difference');
     ?>
 
     <?php
@@ -31,7 +31,10 @@
         }
     ?>
 
-    <?php get_template_part('templates/components/modal-calculator');?>
+    <?php 
+    get_template_part('templates/components/modal-calculator');
+    get_template_part('templates/components/modal-security');
+    ?>
 
     <?php
 

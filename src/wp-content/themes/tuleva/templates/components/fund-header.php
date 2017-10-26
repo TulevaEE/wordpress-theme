@@ -13,11 +13,11 @@
               <div class="card-body p-3 text-center">
                 <form class="d-flex flex-row justify-content-center pb-3">
                   <div class="d-inline-block align-items-center text-medium mr-2">
-                    <span>Kui oled</span>
-                    <input class="form-control d-inline-block mx-2" id="age" type="text" value="29">     
-                    <span>ja teenid kuus</span>
-                    <input class="form-control d-inline-block mx-2" id="wage" type="text" value="1800">
-                    <span>eurot neto, <br class="d-none d-lg-inline">kogud <a id="calculator" href="#calculatorModal">eelduslikult</a> pensioniks</span>
+                    <span class="calculator-heading">Kui oled</span>
+                    <input class="form-control d-inline-block mx-2" id="age" type="number" value="29" min="18" max="65"> 
+                    <span class="calculator-heading">ja teenid kuus</span>
+                    <input class="form-control d-inline-block mx-2" id="wage" type="number" value="1800" step="100">
+                    <span class="calculator-heading">eurot neto, <br class="d-none d-lg-inline">kogud <a id="calculator" href="#calculatorModal">eelduslikult</a> pensioniks</span>
                   </div>
                 </form>
                 <div class="d-flex p-3 rounded-top bg-blueish-gray flex-row justify-content-between align-items-center">
