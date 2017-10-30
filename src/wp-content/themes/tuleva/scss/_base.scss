@@ -44,10 +44,11 @@ input::-webkit-contacts-auto-fill-button {
 .list-style-checkmark,
 .list-style-plussign {
     list-style: none;
+    padding-left: 0;
     li {
         padding-left: 2em;
         background-repeat: no-repeat;
-        background-position: 0 center;
+        background-position: 0 .25em;
         @include media-breakpoint-down(sm) {
             padding-left: 1.5em;
             background-position: 0 .5em;
