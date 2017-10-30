@@ -20,7 +20,7 @@
                     <span class="calculator-heading">eurot neto, <br class="d-none d-lg-inline">kogud <a id="calculator" href="#calculatorModal">eelduslikult</a> pensioniks</span>
                   </div>
                 </form>
-                <div class="d-flex p-3 rounded-top bg-blueish-gray flex-row justify-content-between align-items-center">
+                <div class="d-flex p-3 rounded-top bg-blue-washed flex-row justify-content-between align-items-center">
                   <select class="form-control" name="pensionFunds" id="comparisonFund">
                     <option value="">Eesti keskmises pensionifondis</option>
                     <option value="">LHV XS Pensionifond</option>
@@ -36,7 +36,7 @@
                     <small class="text-secondary text-nowrap">Tasud aastas 1,34%</small>
                   </div>
                 </div>
-                <div class="d-flex p-3 rounded-bottom bg-blueish-gray flex-row justify-content-between align-items-center">
+                <div class="d-flex p-3 rounded-bottom bg-blue-washed flex-row justify-content-between align-items-center">
                   <h6>Madala tasuga fondis</h6>
                   <div class="d-flex flex-column align-items-end">
                     <h5 class="mb-0">545 654€</h5>
