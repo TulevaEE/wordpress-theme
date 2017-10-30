@@ -15,8 +15,8 @@ function theme_nav_menu_args($args = '') {
 
 	if (!$args['walker']) {
 		/* Get file that contains NavWalker class */
-		require_once (get_template_directory() . '/lib/nav-walker.php');
-		$nav_menu_args['walker'] = new NavWalker();
+		require_once (get_template_directory() . '/lib/class-wp-bootstrap-navwalker.php');
+		$nav_menu_args['walker'] = new WP_Bootstrap_Navwalker();
 	}
 
 	return array_merge($args, $nav_menu_args);

@@ -3726,8 +3726,10 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
+    -moz-column-count: 3;
     column-count: 3;
     -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -8667,6 +8669,8 @@ section#read-blog .card {
       box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.08);
       padding: 0.5rem 0;
       border-radius: 0.25rem; } }
+  .navbar .dropdown-menu .nav-item {
+    padding: 0; }
   .navbar .dropdown-menu .dropdown-item {
     padding: 1rem 0;
     font-size: 0.875rem;
@@ -8682,9 +8686,9 @@ section#read-blog .card {
         background-color: #fff; }
         .navbar .dropdown-menu .dropdown-item:hover {
           background-color: #edf7fe; } }
-    .navbar .dropdown-menu .dropdown-item.active {
-      font-weight: 500;
-      color: #0081EE; }
+  .navbar .dropdown-menu .active .dropdown-item {
+    font-weight: 500;
+    color: #0081EE; }
   .navbar .dropdown-menu a.btn {
     display: block;
     margin: .5rem 0; }

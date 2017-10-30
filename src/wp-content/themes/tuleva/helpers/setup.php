@@ -54,6 +54,6 @@ function theme_setup() {
     //add_filter('acf/settings/show_admin', '__return_false');
 
     // Hides admin bar in front end
-    //add_filter('show_admin_bar', '__return_false');
+    add_filter('show_admin_bar', '__return_false');
 }
 add_action('after_setup_theme', 'theme_setup');
