@@ -42,32 +42,28 @@ function language_picker($isMobile = false) {
     $languages = icl_get_languages('skip_missing=0&orderby=code');
     $visibility_class = $isMobile ? 'visible-xs' : 'hidden-xs';
 
-    if (!empty($languages)) {
-        foreach($languages as $l) {
-            $link = '<a href="'.$l['url'].'" class="nav-lang ' . $visibility_class;
+    if (!empty($languages)) { ?>
+        <ul class="navbar-nav ml-auto mr-0 pr-0">
+            <?php
+            foreach($languages as $l) {
+                $link = '<li class="nav-item d-block"><a href="'.$l['url'].'" class="nav-lang nav-link text-uppercase ' . $visibility_class;
 
-            if ($l['active']) {
-                $link .= ' active">';
-            } else {
-                $link .='">';
-            }
+                if ($l['active']) {
+                    $link .= ' active"></li>';
+                } else {
+                    $link .='"></li>';
+                }
 
-            if ($l['code'] === 'en') {
-                $link .= 'In ';
-            }
+                $link .= icl_disp_language($l['code']);
 
-            $link .= icl_disp_language($l['native_name']);
+                $link .= '</a>';
 
-            if ($l['code'] === 'et') {
-                $link .= ' keeles';
-            }
-
-            $link .= '</a>';
-
-            if (!$l['active']) {
-                echo $link;
-            }
-        }
+                if (!$l['active']) {
+                    echo $link;
+                }
+            } ?>
+        </ul>
+        <?php
     }
 
     unset($languages);

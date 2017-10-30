@@ -43,7 +43,7 @@ class ThemeEnqueue {
                 'handle' => 'bootstrap',
                 'src' => $js_path . 'vendor/bootstrap.min.js',
                 'deps' => 'jquery',
-                'ver' => '4.0.0-beta-2',
+                'ver' => '4.0.0-beta-20',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
