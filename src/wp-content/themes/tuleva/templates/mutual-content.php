@@ -6,7 +6,7 @@
         get_template_part('templates/components/mutual-proposal');
         get_template_part('templates/components/reasons');
         get_template_part('templates/components/goals');
-        get_template_part('templates/components/cta-mutual');
+        get_template_part('templates/components/cta-join');
         get_template_part('templates/components/founder-stories');
         get_template_part('templates/components/signup');
         ?>

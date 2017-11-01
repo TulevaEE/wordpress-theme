@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row row-spacing-half">
         <div class="col">
-            <h1 class="text-center">
+            <h2 class="text-center">
                 <?php _e('Why Tuleva was born and what are our goals?', TEXT_DOMAIN) ?>
-            </h1>
+            </h2>
         </div>
     </div>
     <div class="row vertical-align">
@@ -102,9 +102,9 @@
     </div>
     <div class="row text-center row-spacing-bottom-quarter">
         <div class="col">
-            <h1 class="text-center">
+            <h2 class="text-center">
                 <?php _e('This is not all', TEXT_DOMAIN) ?>
-            </h1>
+            </h2>
         </div>
     </div>
     <div class="row text-center">

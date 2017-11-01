@@ -772,3 +772,94 @@ section#read-blog {
         }
     }
 }
+
+// Mutual page
+.proposal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: $shadow-md;
+    background: $white;
+    border-radius: $border-radius-md;
+    padding: 2rem 1.5rem;
+    margin-top: -6rem;
+    @include media-breakpoint-up (md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    ul {
+        padding-left: 0;
+        margin-bottom: 2rem;
+        @include media-breakpoint-up (md) {
+            padding-left: 1rem;
+            margin-bottom: 0;
+        }
+        li {
+            padding-left: 2rem;
+        }
+    }
+    &-body {
+        @include media-breakpoint-up (md) {
+            padding-right: 1.5rem;
+        }
+        h1 {
+            font-size: $h1-font-size;
+        }
+    }
+    &-cta {
+        padding-top: 2rem;
+        border-top: 1px solid $gray-300;
+        @include media-breakpoint-up (md) {
+            min-width: 35%;
+            border-left: 1px solid $gray-300;
+            border-top: 0;
+            padding-left: 2.5rem;
+            padding-right: 1rem;
+            padding-top: 0;
+        }
+    }
+}
+
+.fund-info-item {
+    border-bottom: 1px solid $gray-300;
+    padding: .5rem 0;
+}
+
+//Founder stories
+.founder-story {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-md;
+    @include media-breakpoint-up (lg) {
+        flex-direction: row;
+    }
+    &--person {
+        min-width: 45%;
+        min-height: 320px;
+        background-size: cover;
+        background-position: 50% 25%;
+        background-repeat: no-repeat;
+        border-radius: $border-radius-md $border-radius-md 0 0;
+        @include media-breakpoint-up (lg) {
+            border-radius: $border-radius-md 0 0 $border-radius-md;
+            background-position: 45% 50%;
+        }
+    }
+    .indrek {
+        background-image: url('../img/neivelt.jpg');
+    }
+    .annika {
+        background-image: url('../img/annika.jpg');
+    }
+    .taavet-kristo {
+        background-image: url('../img/taavetkristo.jpg');
+    }
+    &--content {
+        padding: 2rem;
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

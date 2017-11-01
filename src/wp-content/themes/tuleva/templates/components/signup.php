@@ -4,7 +4,7 @@
 <div class="container row-spacing-half">
     <div class="row text-center row-spacing-bottom-quarter">
         <div class="col">
-            <h1><?php _e('Join Tuleva', TEXT_DOMAIN) ?></h1>
+            <h2><?php _e('Join Tuleva', TEXT_DOMAIN) ?></h2>
         </div>
     </div>
     <div class="row">
