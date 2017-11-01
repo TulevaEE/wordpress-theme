@@ -3725,8 +3725,10 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
+    -moz-column-count: 3;
     column-count: 3;
     -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -8404,6 +8406,16 @@ small,
 
 .card.calculator .savings {
   color: #0081EE; }
+
+.qa-block--collapsed .qa__question-wrapper:nth-child(n+6),
+.qa-block--collapsed .qa__question-wrapper:nth-child(n+6) + hr {
+  display: none; }
+
+.qa-block__expand {
+  margin: 24px 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase; }
 
 .eeldus {
   width: 100%;
