@@ -733,6 +733,22 @@
     }
 }
 
+.qa-block {
+    &--collapsed {
+        .qa__question-wrapper:nth-child(n+6),
+        .qa__question-wrapper:nth-child(n+6) + hr {
+            display: none;
+        }
+    }
+
+    &__expand {
+        margin: 24px 0;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
 .eeldus {
     width: 100%;
     box-shadow: 0 1px 0px 0 $gray-washed;

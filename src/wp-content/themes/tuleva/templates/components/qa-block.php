@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
+<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('qa-block qa-block--collapsed container'); ?>">
     <div class="row">
         <div class="mx-md-auto col-lg-10">
             <?php if (have_rows('questions')) $i = 0; {
@@ -25,6 +25,11 @@
                     <hr />
                 <?php  }
             } ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mx-md-auto col-lg-10">
+            <a href="#" class="qa-block__expand" data-open-text="<?php _e('More questions'); ?>" data-close-text="<?php _e('Less questions'); ?>"><?php _e('More questions'); ?></a>
         </div>
     </div>
 </div>

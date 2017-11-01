@@ -51,8 +51,8 @@ $(document).ready(function($) {
         });
     },
     initBlogBeacon = function() {
-        var $blogBeacon = $('.blog-beacon');
-        var $beaconToggle = $('.beacon-toggle');
+        var $blogBeacon = $('.blog-beacon'),
+            $beaconToggle = $('.beacon-toggle');
 
         $(window).scroll(function() {
             var scrollPosition = $(window).scrollTop(),
@@ -161,28 +161,44 @@ $(document).ready(function($) {
             return $(this).next('.popper-content').html();
         }
     });
+
+    $('.qa-block__expand').on('click', function(ev) {
+        var currentText = $(this).text(),
+            openText = $(this).data('open-text'),
+            closeText = $(this).data('close-text');
+
+        ev.preventDefault();
+
+        if (currentText === openText) {
+            $(this).closest('.qa-block').removeClass('qa-block--collapsed');
+            $(this).text(closeText);
+        } else {
+            $(this).closest('.qa-block').addClass('qa-block--collapsed');
+            $(this).text(openText);
+        }
+    });
 });
 
 // Open modals on click
 $("#security").animatedModal({
-    modalTarget:'securityModal',
-    color:'#fff',
+    modalTarget: 'securityModal',
+    color: '#fff',
     animatedIn: 'fadeIn',
     animatedOut: 'fadeOut',
     animationDuration: '.25s'
 });
 
 $("#calculator").animatedModal({
-    modalTarget:'calculatorModal',
-    color:'#fff',
+    modalTarget: 'calculatorModal',
+    color: '#fff',
     animatedIn: 'fadeIn',
     animatedOut: 'fadeOut',
     animationDuration: '.25s'
 });
 
 $("#founders").animatedModal({
-    modalTarget:'foundersModal',
-    color:'#fff',
+    modalTarget: 'foundersModal',
+    color: '#fff',
     animatedIn: 'fadeIn',
     animatedOut: 'fadeOut',
     animationDuration: '.25s'
