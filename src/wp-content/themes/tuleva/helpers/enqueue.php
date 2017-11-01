@@ -104,6 +104,18 @@ class ThemeEnqueue {
                 'enqueue' => true
             ]
         ];
+        if (is_front_page()) {
+            array_push($assets,
+            [
+                'handle' => 'calculator',
+                'src' => $js_path . 'calculator.js',
+                'deps' => 'jquery',
+                'ver' => '01112017',
+                'js_in_header' => false,
+                'enqueue' => true
+            ]
+            );
+        }
 
         /* Get file that contains SimplyEnqueue class */
         require_once (get_template_directory() . '/lib/enqueue.php');

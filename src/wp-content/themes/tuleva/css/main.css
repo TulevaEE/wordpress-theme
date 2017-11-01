@@ -8384,22 +8384,22 @@ small,
   font-weight: 700;
   padding: .125em .5em;
   color: #0081EE;
-  background: #f8f9fa;
-  border-radius: 0;
-  border: none;
-  border-bottom: 2px solid #00AEEA;
+  background: #fff;
   line-height: 1; }
 
 .card.calculator input#age {
   max-width: 3rem; }
 
-.card.calculator input#wage {
+.card.calculator input#netWage {
   max-width: 4.5rem; }
 
 .card.calculator .calculator-heading {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2; }
+
+.card.calculator .comparison-row:first-of-type {
+  margin-bottom: 1px; }
 
 .card.calculator .savings {
   color: #0081EE; }

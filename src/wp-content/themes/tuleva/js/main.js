@@ -81,11 +81,23 @@ $(document).ready(function($) {
                 hideStickyHeader();
             }
         });
+    },
+    initModal = function(id, target) {
+        $(id).animatedModal({
+            modalTarget: target,
+            color: '#fff',
+            animatedIn: 'fadeIn',
+            animatedOut: 'fadeOut',
+            animationDuration: '.25s'
+        });
     };
 
     initStickyHeader();
     initBeaconToggle();
     initBlogBeacon();
+    initModal('#security', 'securityModal');
+    initModal('#calculator', 'calculatorModal');
+    initModal('#founders', 'foundersModal');
 
     $('.testimonial-slider').unslider({
         nav: false,
@@ -177,29 +189,4 @@ $(document).ready(function($) {
             $(this).text(openText);
         }
     });
-});
-
-// Open modals on click
-$("#security").animatedModal({
-    modalTarget: 'securityModal',
-    color: '#fff',
-    animatedIn: 'fadeIn',
-    animatedOut: 'fadeOut',
-    animationDuration: '.25s'
-});
-
-$("#calculator").animatedModal({
-    modalTarget: 'calculatorModal',
-    color: '#fff',
-    animatedIn: 'fadeIn',
-    animatedOut: 'fadeOut',
-    animationDuration: '.25s'
-});
-
-$("#founders").animatedModal({
-    modalTarget: 'foundersModal',
-    color: '#fff',
-    animatedIn: 'fadeIn',
-    animatedOut: 'fadeOut',
-    animationDuration: '.25s'
 });
