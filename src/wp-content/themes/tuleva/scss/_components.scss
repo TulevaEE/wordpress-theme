@@ -711,23 +711,29 @@
         font-weight: $font-weight-bold;
         padding:.125em .5em;
         color: $blue;
-        background: $gray-100;
-        border-radius: 0;
-        border: none;
-        border-bottom: 2px solid $blue-light;
+        background: $white;
+        //border-radius: 0;
+        //border: none;
+        //border-bottom: 2px solid $blue-light;
         line-height: 1;
     }
     input#age {
         max-width: 3rem;
     }
-    input#wage {
+    input#netWage {
         max-width: 4.5rem;
     }
     .calculator-heading {
         font-size: $font-size-base;
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-normal;
         line-height: 2;
     }
+    .comparison-row {
+        &:first-of-type {
+            margin-bottom: 1px;
+        }
+    }
+
     .savings {
         color: $blue;
     }
