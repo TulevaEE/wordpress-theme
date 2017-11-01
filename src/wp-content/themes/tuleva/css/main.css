@@ -3725,10 +3725,8 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
-    -moz-column-count: 3;
     column-count: 3;
     -webkit-column-gap: 1.25rem;
-    -moz-column-gap: 1.25rem;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -8540,6 +8538,11 @@ section#read-blog .card {
     padding: 2rem; }
     .founder-story--content p:last-of-type {
       margin-bottom: 0; }
+
+.inline-signup {
+  border: 1px solid #e9ecef; }
+  .inline-signup .custom-control-indicator {
+    display: none; }
 
 .row-spacing {
   margin-top: 100px;

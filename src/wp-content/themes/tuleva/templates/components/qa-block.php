@@ -1,9 +1,7 @@
-<div class="bg-alt">
-    <div class="container counter-block">
-        <div class="row row-spacing-half">
-            <div class="col">
-                <h2 class="h1-xs text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
         </div>
     </div>
 </div>

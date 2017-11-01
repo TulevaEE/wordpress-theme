@@ -788,7 +788,6 @@ section#read-blog {
         }
     }
 }
-<<<<<<< HEAD
 
 // Mutual page
 .proposal {
@@ -880,5 +879,12 @@ section#read-blog {
         }
     }
 }
-=======
->>>>>>> a0567084ff3cec1eca805ba5196764c980cc08b1
+
+//Inline signup override
+.inline-signup {
+    border: 1px solid $gray-200;
+
+    .custom-control-indicator {
+        display: none;
+    }
+}
