@@ -37,7 +37,7 @@ input::-webkit-contacts-auto-fill-button {
         padding-left: 2em;
         background-image: url('../img/icon-arrow-right.svg');
         background-repeat: no-repeat;
-        background-position: 0 center;
+        background-position: 0 .25em;
     }
 }
 
@@ -50,14 +50,13 @@ input::-webkit-contacts-auto-fill-button {
         margin-bottom: 1em;
         background-repeat: no-repeat;
         background-position: 0 .25em;
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-
         @include media-breakpoint-down(sm) {
             padding-left: 1.5em;
             background-position: 0 .5em;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 }
@@ -127,79 +126,4 @@ hr {
 
 .no-padding {
     padding: 0 !important;
-}
-
-// Modal animations
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.animated.infinite {
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fadeIn {
-    animation-name: fadeIn;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.fadeOut {
-    animation-name: fadeOut;
-}
-
-// Modal styles
-.modal-full {
-    &-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    &-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-height: 16rem;
-        padding: 2rem 1.5rem;
-        background-color: $modal-content-bg;
-        background-clip: padding-box;
-        border: 0;
-    }
-}
-
-[class*="close-button-"] {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 2rem;
-    top: 2rem;
-    z-index: 1050;
-    width: 4rem;
-    height: 4rem;
-    background: $white;
-    border-radius: 2rem;
-    box-shadow: $shadow-md;
-    transition: all .25s ease-out;
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
 }

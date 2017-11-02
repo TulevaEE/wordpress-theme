@@ -22,7 +22,7 @@
 
     <?php
     get_template_part('templates/components/featured-articles');
-    get_template_part('templates/components/cta-funds');
+    get_template_part('templates/components/cta-change');
     get_template_part('templates/components/modal-calculator');
     get_template_part('templates/components/modal-security');
     ?>

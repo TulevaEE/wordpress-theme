@@ -10,8 +10,8 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story--person indrek"></div>
-                                    <div class="founder-story--content">
+                                    <div class="founder-story__person indrek"></div>
+                                    <div class="founder-story__content">
                                         <h3 class="mb-0">Indrek Neivelt</h3>
                                         <p class="text-navy mb-4">Tuleva asutaja</p>
                                         <p class="text-navy mb-4">II sammas:
@@ -35,8 +35,8 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story--person annika"></div>
-                                    <div class="founder-story--content">
+                                    <div class="founder-story__person annika"></div>
+                                    <div class="founder-story__content">
                                         <h3 class="mb-0">Annika Ruusalepp</h3>
                                         <p class="text-navy mb-4">Tuleva asutaja</p>
                                         <p class="text-navy mb-4">II sammas:
@@ -58,8 +58,8 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story--person taavet-kristo"></div>
-                                    <div class="founder-story--content">
+                                    <div class="founder-story__person taavet-kristo"></div>
+                                    <div class="founder-story__content">
                                         <h3 class="mb-0">Taavet Hinrikus ja Kristo Käärmann</h3>
                                         <p class="text-navy mb-4">Tuleva asutajad</p>
                                         <p class="text-navy mb-4">II sammas:

@@ -1,4 +1,4 @@
-<section id="read-blog" class="py-6">
+<section id="read-blog" class="read-blog py-6">
     <div class="container">
       <h2 class="mb-5 text-center">Loe meie blogist</h2>
       <div class="card-deck">

@@ -766,13 +766,13 @@
 
 // CTA BAR
 
-section#change-cta {
+.change-cta {
     border-top: 1px solid $gray-200;
 }
 
 // Read blog section
 
-section#read-blog {
+.read-blog {
     .card {
         transition: all 300ms ease;
         &:hover {
@@ -786,6 +786,81 @@ section#read-blog {
             font-weight: $font-weight-medium;
             color: $navy-blue;
         }
+    }
+}
+
+// Modal animations
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+}
+
+// Modal styles
+.modal-full {
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 16rem;
+        padding: 2rem 1.5rem;
+        background-color: $modal-content-bg;
+        background-clip: padding-box;
+        border: 0;
+    }
+}
+
+[class*="close-button-"] {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2rem;
+    top: 2rem;
+    z-index: 1050;
+    width: 4rem;
+    height: 4rem;
+    background: $white;
+    border-radius: 2rem;
+    box-shadow: $shadow-md;
+    transition: all .25s ease-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
     }
 }
 
@@ -815,7 +890,7 @@ section#read-blog {
             padding-left: 2rem;
         }
     }
-    &-body {
+    &__body {
         @include media-breakpoint-up (md) {
             padding-right: 1.5rem;
         }
@@ -823,7 +898,7 @@ section#read-blog {
             font-size: $h1-font-size;
         }
     }
-    &-cta {
+    &__cta {
         padding-top: 2rem;
         border-top: 1px solid $gray-300;
         @include media-breakpoint-up (md) {
@@ -837,7 +912,7 @@ section#read-blog {
     }
 }
 
-.fund-info-item {
+.fund-info__item {
     border-bottom: 1px solid $gray-300;
     padding: .5rem 0;
 }
@@ -851,7 +926,7 @@ section#read-blog {
     @include media-breakpoint-up (lg) {
         flex-direction: row;
     }
-    &--person {
+    &__person {
         min-width: 45%;
         min-height: 320px;
         background-size: cover;
@@ -872,7 +947,7 @@ section#read-blog {
     .taavet-kristo {
         background-image: url('../img/taavetkristo.jpg');
     }
-    &--content {
+    &__content {
         padding: 2rem;
         p:last-of-type {
             margin-bottom: 0;
@@ -886,5 +961,187 @@ section#read-blog {
 
     .custom-control-indicator {
         display: none;
+    }
+}
+
+//REASONS BLOCK
+.mid-headline p {
+    color: #0081ED;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+// INLINE SIGNUP
+.inline-signup__number {
+    width: 32px;
+    height: 32px;
+    color: #0081EE;
+    background-color: rgba(5, 147, 252, 0.24);
+    border: none;
+    display: inline-block;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.inline-signup__title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.inline-signup__content {
+    margin-left: 48px;
+}
+
+.inline-signup__item {
+    margin-bottom: 1em;
+}
+
+.goal-box {
+    min-height: 211px;
+    border: 2px solid rgba(0, 47, 99, 0.16);
+    border-radius: 8px;
+    margin: 16px 0;
+    padding: 28px 24px;
+
+    &--in-progress {
+        background-color: #ebf7ff;
+        border: 0;
+    }
+
+    &__title {
+        border-radius: 4px;
+        padding: 4px 8px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+
+        &--done {
+            background-color: #00C90C;
+        }
+        &--partially-done {
+            background-color: #3FCF7F;
+        }
+        &--in-progress {
+            background-color: #00AEEA;
+        }
+    }
+
+    &__content {
+        margin-top: 23px;
+    }
+}
+
+.color-intense {
+    color: #0078ff;
+}
+
+.security-block {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 48px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-image: linear-gradient(180deg, rgba(5, 147, 252, .08), rgba(5, 147, 252, .08));
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.fund-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: $navy-blue;
+
+    &__arrow-wrapper {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+    }
+
+    &__arrow-container {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #0078ff;
+        border-radius: 50%;
+        transition: width 200ms ease, height 200ms ease;
+    }
+
+    &__arrow {
+        transform: rotate(90deg);
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        color: $navy-blue;
+        .fund-navigation__arrow-container {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.counter-block {
+    color: $navy-blue;
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        width: 128px;
+        height: 128px;
+        margin-bottom: 21px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: bold;
+        font-size: 72px;
+    }
+    &__text {
+        text-align: left;
+    }
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.qa {
+    &__question {
+        font-size: 20px;
+        color: $navy-blue;
+        font-weight: 500;
+        margin: 30px 0;
+        padding: 0 30px 0 0;
+        display: block;
+        text-align: left;
+        background: url("../img/icon-plussign.svg") no-repeat right 15px center;
+        white-space: normal;
     }
 }

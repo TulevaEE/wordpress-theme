@@ -2,10 +2,10 @@
     <div class="close-button-calculatorModal">
       <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>
-    <div class="modal-full-container">
+    <div class="modal-full__container">
 
       <div class="container pt-3 pt-md-6">
-        <div class="modal-full-content">
+        <div class="modal-full__content">
           <div class="row">
             <div class="col">
               <h1 class="text-center mb-1 mb-md-6">Kuidas kalkulaator töötab?</h1>

@@ -2,10 +2,10 @@
     <div class="close-button-securityModal">
       <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>
-    <div class="modal-full-container">
+    <div class="modal-full__container">
 
       <div class="container pt-3 pt-md-6">
-        <div class="modal-full-content">
+        <div class="modal-full__content">
           <div class="row">
             <div class="col-sm-10 m-auto">
               <h2 class="text-center">Kas sinu raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?</h2>

@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-lg-10 m-auto">
           <div class="proposal">
-            <div class="proposal-body">
+            <div class="proposal__body">
               <ul class="list-style-checkmark text-navy">
                 <li>Tuleva ühistu on pensionifondide valitseja omanik</li>
                 <li>Ühistu liikmed osalevad Tuleva <span class="text-highlight">tegevuskasumi</span> jagamisel</li>
@@ -22,7 +22,7 @@
                 <li>Ühistu aitab muuta Eesti pensionisüsteemi paremaks läbi seadusmuudatuste ja avalikkuse teavitamise</li>
               </ul>
             </div>
-            <div class="proposal-cta text-center">
+            <div class="proposal__cta text-center">
               <h1 class="text-sans mb-0">100€</h1>
               <p class="text-navy mb-4">ühekordne liitumistasu</p>
               <a href="#inline-signup-anchor" class="btn btn-primary btn-lg btn-block mb-3">Astu liikmeks</a>
