@@ -13,16 +13,16 @@
                         <div class="card-body p-3 text-center">
                             <form class="d-flex flex-row justify-content-center pb-3">
                                 <div class="d-inline-block align-items-center text-medium mr-2">
-                                    <span class="calculator-heading">Kui oled</span>
+                                    <span class="calculator__heading">Kui oled</span>
                                     <input class="form-control d-inline-block mx-1" id="age" type="number" value="29" min="18" max="65" onchange="calculateSaving()">
-                                    <span class="calculator-heading">ja teenid kuus</span>
+                                    <span class="calculator__heading">ja teenid kuus</span>
                                     <input class="form-control d-inline-block mx-1" id="netWage" type="number" value="1800" step="100" onchange="calculateSaving()">
-                                    <span class="calculator-heading">eurot neto,
+                                    <span class="calculator__heading">eurot neto,
                                         <br class="d-none d-lg-inline">kogud
                                         <a id="calculator" href="#calculatorModal">eelduslikult</a> pensioniks</span>
                                 </div>
                             </form>
-                            <div class="d-flex p-3 rounded-top bg-blue-washed flex-row justify-content-between align-items-center  comparison-row">
+                            <div class="d-flex p-3 rounded-top bg-blue-washed flex-row justify-content-between align-items-center  calculator__comparison-row">
                                 <select class="form-control" name="pensionFunds" id="comparisonFund" onchange="calculateSaving()">
                                     <option value="average">
                                         Eesti keskmises pensionifondis
@@ -93,7 +93,7 @@
                                     <small class="text-secondary text-nowrap" id="fund-fee">Tasud aastas 1,34%</small>
                                 </div>
                             </div>
-                            <div class="d-flex p-3 rounded-bottom bg-blue-washed flex-row justify-content-between align-items-center comparison-row">
+                            <div class="d-flex p-3 rounded-bottom bg-blue-washed flex-row justify-content-between align-items-center calculator__comparison-row">
                                 <h6>Madala tasuga fondis</h6>
                                 <div class="d-flex flex-column align-items-end">
                                     <h5 class="mb-0" id="future-value-tuleva">545 654€</h5>

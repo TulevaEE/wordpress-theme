@@ -8296,12 +8296,12 @@ small,
 .card.calculator input#netWage {
   max-width: 4.5rem; }
 
-.card.calculator .calculator-heading {
+.card.calculator .calculator__heading {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2; }
 
-.card.calculator .comparison-row:first-of-type {
+.card.calculator .calculator__comparison-row:first-of-type {
   margin-bottom: 1px; }
 
 .card.calculator .savings {
@@ -8598,9 +8598,6 @@ small,
       background-color: #00AEEA; }
   .goal-box__content {
     margin-top: 23px; }
-
-.color-intense {
-  color: #0078ff; }
 
 .security-block {
   display: -webkit-box;

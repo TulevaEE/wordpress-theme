@@ -5,7 +5,7 @@
             <h1 class="h1-sm text-center">
                 <?php _e('Is our money in Tuleva as protected as in bank’s pension fund?', TEXT_DOMAIN) ?>
             </h1>
-            <h1 class="text-center color-intense"><?php _e('YES!', TEXT_DOMAIN) ?></h1>
+            <h1 class="text-center text-blue"><?php _e('YES!', TEXT_DOMAIN) ?></h1>
         </div>
     </div>
     <div class="row">

@@ -8,36 +8,34 @@
         <div class="modal-full__content">
           <div class="row">
             <div class="col">
-              <h1 class="text-center mb-1 mb-md-6">Kuidas kalkulaator töötab?</h1>
+              <h1 class="text-center mb-1 mb-md-6"><?php _e('How does the calculator work?', TEXT_DOMAIN) ?></h1>
             </div>
           </div>
           <div class="row mb-5">
             <div class="col-md-7 p-4">
-              <p>Arvutused on tehtud eeldusel, et sinu palk kasvab 3% aastas ja et sa alustasid II samba kogumist 23 aastaselt
-                (või kohe kui II sammas loodi kui oled vanem). Oodatav summa sõltub tegelikult kujunevast tootluse määrast
-                ja meie ega keegi teine ei saa sulle tagada, et fondide tootlus on 5% aastas.</p>
-              <p>Indeksifondis käib sinu vara kasv käsikäes maailmaturgude keskmisega. Seni on see olnud märkimisväärselt parem
-                Eesti pankade pensionifondide pikaajalisest tootlusest, aga minevik pole tuleviku garantiiks.</p>
+              <p><?php _e("The world's leading analysts have determined that fees are the surest predictor of returns: the lower the fees, the better prospects for growth. (And higher fees correlate with poorer results.)", TEXT_DOMAIN) ?></p>
+              <p><?php _e('Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 5% annual return.', TEXT_DOMAIN) ?></p>
+              <p><?php _e('In a low-cost index fund your assets grow hand-in-hand with the average returns of world markets. Low-cost index funds have outperformed Estonian pension funds every year to date, but past performance is no guarantee of future performance.', TEXT_DOMAIN) ?></p>
             </div>
             <div class="col-md-5 p-4 bg-blue-washed rounded">
-              <h3 class="mb-3">Mudeli eeldused</h3>
+              <h3 class="mb-3"><?php _e('Assumptions', TEXT_DOMAIN) ?></h3>
               <div class="d-flex flex-row flex-wrap">
                 <div class="d-flex justify-content-between eeldus">
-                  <p class="mb-0">Pensionifondide keskmine aastatootlus enne valitsemistasu mahaarvamist</p>
+                  <p class="mb-0"><?php _e("Funds' average annual return before management fees", TEXT_DOMAIN) ?></p>
                   <p class="mb-0 text-bold">5%</p>
                 </div>
                 <div class="d-flex justify-content-between eeldus">
-                  <p class="mb-0">Palgakasv aastas</p>
+                  <p class="mb-0"><?php _e('Average annual salary growth', TEXT_DOMAIN) ?></p>
                   <p class="mb-0 text-bold">3%</p>
                 </div>
                 <div class="d-flex justify-content-between eeldus">
-                  <p class="mb-0">Pensionikogumise alustamise vanus</p>
-                  <p class="mb-0 text-bold">23a</p>
+                  <p class="mb-0"><?php _e('Minimum eligible age', TEXT_DOMAIN) ?></p>
+                  <p class="mb-0 text-bold"><?php _e('23yrs', TEXT_DOMAIN) ?></p>
                 </div>
               </div>
             </div>
           </div>
-          <a class="text-uppercase text-center" href="#">Täpsem arvutus google docsis</a>
+          <a class="text-uppercase text-center" href="#"><?php _e('Detailed calculation in Google Docs', TEXT_DOMAIN) ?></a>
         </div>
       </div>
     </div>

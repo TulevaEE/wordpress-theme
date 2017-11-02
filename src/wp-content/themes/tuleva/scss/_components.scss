@@ -723,12 +723,12 @@
     input#netWage {
         max-width: 4.5rem;
     }
-    .calculator-heading {
+    .calculator__heading {
         font-size: $font-size-base;
         font-weight: $font-weight-normal;
         line-height: 2;
     }
-    .comparison-row {
+    .calculator__comparison-row {
         &:first-of-type {
             margin-bottom: 1px;
         }
@@ -1035,10 +1035,6 @@
     &__content {
         margin-top: 23px;
     }
-}
-
-.color-intense {
-    color: #0078ff;
 }
 
 .security-block {
