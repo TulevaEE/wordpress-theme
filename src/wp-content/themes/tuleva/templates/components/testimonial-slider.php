@@ -6,11 +6,11 @@
                     <?php if (have_rows('testimonials')) {
                         while (have_rows('testimonials')) { the_row(); ?>
                         <li>
-                            <div class="testimonial">
-                                <div class="col-sm-2 offset-sm-1 hidden-xs testimonial__media">
+                            <div class="row testimonial">
+                                <div class="col-sm-2 offset-sm-1 d-none d-sm-block testimonial__media">
                                     <img class="testimonial__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
                                 </div>
-                                <div class="col-sm-7 col-xs-10 col-xs-offset-1 testimonial__body">
+                                <div class="col-sm-7 col-xs-10 offset-1 testimonial__body">
                                     <div class="testimonial__text"><?php the_sub_field('text'); ?></div>
                                     <div class="testimonial__author">
                                         <?php if (get_sub_field('url')) { ?>

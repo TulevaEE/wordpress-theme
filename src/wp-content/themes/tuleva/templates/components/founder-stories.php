@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <h2 class="text-center">Asutajaliikmed</h2>
         <!-- CAROUSEL -->
-        <div id="carouselStoriesControls" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story__person indrek"></div>
+                                    <div class="founder-story__person founder-story__person--indrek"></div>
                                     <div class="founder-story__content">
                                         <h3 class="mb-0">Indrek Neivelt</h3>
                                         <p class="text-navy mb-4">Tuleva asutaja</p>
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story__person annika"></div>
+                                    <div class="founder-story__person founder-story__person--annika"></div>
                                     <div class="founder-story__content">
                                         <h3 class="mb-0">Annika Ruusalepp</h3>
                                         <p class="text-navy mb-4">Tuleva asutaja</p>
@@ -58,7 +58,7 @@
                         <div class="row">
                             <div class="col-lg-10 m-auto">
                                 <div class="founder-story">
-                                    <div class="founder-story__person taavet-kristo"></div>
+                                    <div class="founder-story__person founder-story__person--taavet-kristo"></div>
                                     <div class="founder-story__content">
                                         <h3 class="mb-0">Taavet Hinrikus ja Kristo Käärmann</h3>
                                         <p class="text-navy mb-4">Tuleva asutajad</p>
@@ -80,11 +80,11 @@
                 </div>
 
             </div>
-            <a class="carousel-control-prev" href="#carouselStoriesControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselStoriesControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

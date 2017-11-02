@@ -8026,6 +8026,9 @@ small,
         transition-delay: .3s; }
     .beacon-toggle--open .beacon-toggle__text {
       visibility: hidden; }
+    @media (max-width: 767px) {
+      .beacon-toggle--open {
+        display: none; } }
 
 .blog-beacon {
   position: fixed;
@@ -8528,12 +8531,12 @@ small,
       .founder-story__person {
         border-radius: 0.5rem 0 0 0.5rem;
         background-position: 45% 50%; } }
-  .founder-story .indrek {
-    background-image: url("../img/neivelt.jpg"); }
-  .founder-story .annika {
-    background-image: url("../img/annika.jpg"); }
-  .founder-story .taavet-kristo {
-    background-image: url("../img/taavetkristo.jpg"); }
+    .founder-story__person--indrek {
+      background-image: url("../img/neivelt.jpg"); }
+    .founder-story__person--annika {
+      background-image: url("../img/annika.jpg"); }
+    .founder-story__person--taavet-kristo {
+      background-image: url("../img/taavetkristo.jpg"); }
   .founder-story__content {
     padding: 2rem; }
     .founder-story__content p:last-of-type {

@@ -380,6 +380,9 @@
         .beacon-toggle__text {
             visibility: hidden;
         }
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 }
 
@@ -937,16 +940,18 @@
             border-radius: $border-radius-md 0 0 $border-radius-md;
             background-position: 45% 50%;
         }
+
+        &--indrek {
+            background-image: url('../img/neivelt.jpg');
+        }
+        &--annika {
+            background-image: url('../img/annika.jpg');
+        }
+        &--taavet-kristo {
+            background-image: url('../img/taavetkristo.jpg');
+        }
     }
-    .indrek {
-        background-image: url('../img/neivelt.jpg');
-    }
-    .annika {
-        background-image: url('../img/annika.jpg');
-    }
-    .taavet-kristo {
-        background-image: url('../img/taavetkristo.jpg');
-    }
+
     &__content {
         padding: 2rem;
         p:last-of-type {

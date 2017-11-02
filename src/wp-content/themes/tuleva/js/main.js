@@ -125,6 +125,7 @@ $(document).ready(function($) {
         .not('[href="#"]')
         .not('[href="#0"]')
         .not('[data-toggle="tab"]')
+        .not('[href="#carouselControls"]')
         .on('click', function(ev) {
             // Figure out element to scroll to
             var target = $(this.hash),
