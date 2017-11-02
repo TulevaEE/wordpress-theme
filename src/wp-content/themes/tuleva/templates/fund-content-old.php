@@ -39,7 +39,6 @@
     </div>
 
     <?php
-    get_template_part('templates/components/funds-header');
     get_template_part('templates/components/fund-navigation');
     get_template_part('templates/components/fund-choosing');
     get_template_part('templates/components/fund-security');
