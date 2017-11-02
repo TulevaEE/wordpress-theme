@@ -167,11 +167,18 @@ $(document).ready(function($) {
                 }
             }
         });
+
     $('.popper').popover({
         container: 'body',
         html: true,
         content: function () {
             return $(this).next('.popper-content').html();
+        }
+    });
+
+    $('.qa-block').each(function() {
+        if ($(this).find('.qa__question-wrapper').length < 4) {
+            $(this).find('.qa-block__expand').remove();
         }
     });
 
