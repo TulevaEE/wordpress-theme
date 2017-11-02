@@ -380,9 +380,6 @@
         .beacon-toggle__text {
             visibility: hidden;
         }
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
     }
 }
 

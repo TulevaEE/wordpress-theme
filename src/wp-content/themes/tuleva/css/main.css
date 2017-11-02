@@ -8026,9 +8026,6 @@ small,
         transition-delay: .3s; }
     .beacon-toggle--open .beacon-toggle__text {
       visibility: hidden; }
-    @media (max-width: 767px) {
-      .beacon-toggle--open {
-        display: none; } }
 
 .blog-beacon {
   position: fixed;
