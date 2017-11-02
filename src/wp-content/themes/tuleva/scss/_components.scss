@@ -231,6 +231,9 @@
 
 .media-box {
     display: flex;
+    @include media-breakpoint-up (lg) {
+        max-width: 50%;
+    }
     &__media {
         width: 25%;
         min-width: 100px;

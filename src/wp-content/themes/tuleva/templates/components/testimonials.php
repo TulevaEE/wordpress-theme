@@ -1,6 +1,6 @@
 <section id="mentions" class="d-none d-md-block py-6 bg-blue-washed">
     <div class="container text-center">
-        <h2 class="mb-5">Mida meist räägitakse?</h2>
+        <h2 class="mb-5"><?php _e("What others say about us?", TEXT_DOMAIN) ?></h2>
         <!-- CAROUSEL -->
         <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="10000">
             <div class="carousel-inner">

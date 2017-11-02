@@ -22,7 +22,11 @@
                 }
             }
         }
-    ?>
+        ?>
+
+        <?php
+        get_template_part('templates/components/modal-founders');
+        ?>
 
     <?php endwhile; ?>
 </div>
