@@ -17,5 +17,7 @@
             }
         }
 
+        get_template_part('templates/components/modal-founders');
+
     endwhile; ?>
 </div>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-01 11:14:43+00:00\n"
-"PO-Revision-Date: 2017-11-01 13:16+0200\n"
+"POT-Creation-Date: 2017-11-02 21:09:37+00:00\n"
+"PO-Revision-Date: 2017-11-02 23:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -57,12 +57,17 @@ msgstr "Olulisemad artiklid"
 msgid "RSS feed"
 msgstr "RSS voog"
 
+#: templates/components/founder-stories.php:16
+#: templates/components/founder-stories.php:36
 #: templates/components/front-founders.php:12
 #: templates/components/front-founders.php:39
 #: templates/components/front-founders.php:68
 msgid "Tuleva founder"
 msgstr "Tuleva asutaja"
 
+#: templates/components/founder-stories.php:17
+#: templates/components/founder-stories.php:37
+#: templates/components/founder-stories.php:57
 #: templates/components/front-founders.php:18
 #: templates/components/front-founders.php:45
 #: templates/components/front-founders.php:74
@@ -70,6 +75,7 @@ msgstr "Tuleva asutaja"
 msgid "II pillar: Tuleva World Stocks Pension Fund"
 msgstr "II sammas: Tuleva Maailma Aktsiate Pensionifond"
 
+#: templates/components/founder-stories.php:19
 #: templates/components/front-founders.php:21
 msgid ""
 "Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of "
@@ -81,6 +87,7 @@ msgstr ""
 "loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et "
 "nojah, eks ta ole; kahjuks endal pole aega appi tulla."
 
+#: templates/components/founder-stories.php:20
 #: templates/components/front-founders.php:23
 msgid ""
 "After a while, Indrek had a look at his pension account when opening his "
@@ -91,6 +98,7 @@ msgstr ""
 "pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule "
 "ja nad otsustasid tegutsema asuda."
 
+#: templates/components/founder-stories.php:39
 #: templates/components/front-founders.php:48
 msgid ""
 "One day, Annika did a few calculations and found, that she has paid 108 "
@@ -101,6 +109,7 @@ msgstr ""
 "euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid "
 "77 eurot."
 
+#: templates/components/founder-stories.php:40
 #: templates/components/front-founders.php:50
 msgid ""
 "When looking closer, she realised that banks have dealt similar injustice to "
@@ -110,10 +119,16 @@ msgstr ""
 "Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade "
 "tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta."
 
+#: templates/components/founder-stories.php:55
 #: templates/components/front-founders.php:65
 msgid "Kristo Käärmann and Taavet Hinrikus"
 msgstr "Kristo Käärmann ja Taavet Hinrikus"
 
+#: templates/components/founder-stories.php:56
+msgid "Tuleva founders"
+msgstr "Tuleva asutajad"
+
+#: templates/components/founder-stories.php:59
 #: templates/components/front-founders.php:77
 msgid ""
 "One of the world’s most successful start-ups Transferwise was borne from "
@@ -128,6 +143,7 @@ msgstr ""
 "Tuleva võitleb kõrgete valitsemistasude ja pensionifondide varjatud kulude "
 "vastu, et meie, Eesti inimesed, saaksime raha koguda endale, mitte pankadele."
 
+#: templates/components/founder-stories.php:60
 #: templates/components/front-founders.php:79
 msgid ""
 "It was logical that Kristo and Taavet wanted to support the initiative to "
@@ -422,19 +438,23 @@ msgid "Is Tuleva safe?"
 msgstr "Kas Tuleva on turvaline?"
 
 #: templates/components/fund-security.php:6
+#: templates/components/modal-security.php:12
 msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
 msgstr ""
 "Kas meie raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?"
 
 #: templates/components/fund-security.php:8
+#: templates/components/modal-security.php:15
 msgid "YES!"
 msgstr "JAH!"
 
 #: templates/components/fund-security.php:18
+#: templates/components/modal-security.php:28
 msgid "Financial Inspection"
 msgstr "Finantsinspektsioon"
 
 #: templates/components/fund-security.php:19
+#: templates/components/modal-security.php:31
 msgid ""
 "issued a licence to Tuleva fund manager and controls that our everyday "
 "operations comply with regulations."
@@ -443,10 +463,12 @@ msgstr ""
 "tegevus vastaks igati nõudmistele."
 
 #: templates/components/fund-security.php:29
+#: templates/components/modal-security.php:43
 msgid "Swedbank"
 msgstr ""
 
 #: templates/components/fund-security.php:30
+#: templates/components/modal-security.php:46
 msgid ""
 "is Tuleva pension funds’ depositary bank. Depositary bank approves every "
 "transaction with fund’s assets. Exactly like with bank’s own funds."
@@ -455,10 +477,12 @@ msgstr ""
 "Täpselt nii nagu panga enda fondide puhul."
 
 #: templates/components/fund-security.php:40
+#: templates/components/modal-security.php:58
 msgid "State guarantee fund"
 msgstr "Riiklik tagatisfond"
 
 #: templates/components/fund-security.php:41
+#: templates/components/modal-security.php:61
 msgid ""
 "protects all pension fund investors against the worst in case fund manager "
 "causes harm to investors."
@@ -533,6 +557,281 @@ msgstr ""
 "Loome inimestele võimaluse küsida nõu erapooletult asjatundjalt ja nõuame "
 "fondivalitsejate müügiesindajatelt kutseeksamit."
 
+#: templates/components/modal-calculator.php:11
+msgid "How does the calculator work?"
+msgstr "Kuidas pensionikalkulaator töötab?"
+
+#: templates/components/modal-calculator.php:16
+msgid ""
+"The world's leading analysts have determined that fees are the surest "
+"predictor of returns: the lower the fees, the better prospects for growth. "
+"(And higher fees correlate with poorer results.)"
+msgstr ""
+
+#: templates/components/modal-calculator.php:17
+msgid ""
+"Expected returns depend greatly on the evolving rate of return, and neither "
+"we nor anyone else are able to guarantee a 5% annual return."
+msgstr ""
+
+#: templates/components/modal-calculator.php:18
+msgid ""
+"In a low-cost index fund your assets grow hand-in-hand with the average "
+"returns of world markets. Low-cost index funds have outperformed Estonian "
+"pension funds every year to date, but past performance is no guarantee of "
+"future performance."
+msgstr ""
+
+#: templates/components/modal-calculator.php:21
+msgid "Assumptions"
+msgstr "Mudeli eeldused"
+
+#: templates/components/modal-calculator.php:24
+msgid "Funds' average annual return before management fees"
+msgstr ""
+
+#: templates/components/modal-calculator.php:28
+msgid "Average annual salary growth"
+msgstr ""
+
+#: templates/components/modal-calculator.php:32
+msgid "Minimum eligible age"
+msgstr ""
+
+#: templates/components/modal-calculator.php:33
+msgid "23yrs"
+msgstr "23a"
+
+#: templates/components/modal-calculator.php:38
+msgid "Detailed calculation in Google Docs"
+msgstr ""
+
+#: templates/components/modal-founders.php:24
+msgid ""
+"Tõnu Pekk is an investor with 20 years of experience, a good deal of it from "
+"the international financial sector. Having led development projects and "
+"managed investments, he is currently fund manager at Tuleva."
+msgstr ""
+"Tõnu Pekk on 20-aastase kogemusega investor. Tõnu omab rahvusvahelist "
+"kogemust finantssektorist, on vedanud arendusprojekte ning juhtinud "
+"investeeringuid. Praegu on ta Tuleva fondijuht."
+
+#: templates/components/modal-founders.php:34
+msgid ""
+"Priit Lepasepp is an adviser with Nelja Energia AS. His everyday work is "
+"aimed at increasing renewable energy generation, and he also serves as one "
+"of Tuleva’s legal advisers."
+msgstr ""
+"Priit Lepasepp on nõunik Nelja Energia AS-is. Priit tegeleb igapäevaselt "
+"sellega, et aidata suurendada taastuvenergia tootmist. Lisaks on ta ka üks "
+"Tuleva juriidilistest nõustajatest."
+
+#: templates/components/modal-founders.php:44
+msgid ""
+"Indrek Neivelt is the founder of Pocopay. He has been in a leading role at "
+"Hansabank and other large financial institutions in previous decades, and is "
+"now putting his knowledge to work for developing better, simpler payment "
+"solutions."
+msgstr ""
+"Indrek Neivelt on Pocopay asutaja. Indrek on olnud juhtivrollis Hansapangas "
+"ja teistes suurtes finantsinstitutsioonides ning kasutab nüüd oma teadmisi "
+"paremate ja lihtsamate makselahenduste loomiseks."
+
+#: templates/components/modal-founders.php:54
+msgid ""
+"Daniel Vaarik has dedicated his career to ensuring that people get clearer "
+"and better information they need for making important decisions. He is "
+"currently a partner at Akkadian communication agency."
+msgstr ""
+"Daniel on pühendanud oma karjääri sellele, et inimesteni jõuaksid paremad ja "
+"selgemad sõnumid, mille põhjal olulisi otsuseid teha. Täna tegutseb ta "
+"partnerina sõnumiagentuuris Akkadian."
+
+#: templates/components/modal-founders.php:64
+msgid ""
+"Kristo Käärmann is a co-founder of Transferwise. Having witnessed "
+"inefficiency in the financial sector, Kristo is helping to lead a revolution "
+"in the way money is moved, making currency exchange easier, clearer and more "
+"transparent all around the world."
+msgstr ""
+"Kristo Käärmann on Transferwise’i asutaja. Olles näinud ebaefektiivsust "
+"finantssektoris aitab Kristo teha revolutsiooni raha liikumises, tehes "
+"valuutavahetust üle maailma lihtsamaks, selgemaks ja läbipaistvamaks."
+
+#: templates/components/modal-founders.php:74
+msgid ""
+"Mall Hellam is the director of Open Estonia Fund. Mall’s activities are "
+"aimed toward making Estonia more open and tolerant, fostering serious "
+"discussion on key questions and building a robust civil society."
+msgstr ""
+"Mall Hellam juhib Avatud Eesti Fondi. Mall keskendub oma tegevuses sellele, "
+"et Eesti oleks rohkem avatud ja salliv, et ühiskonnas toimuks sisuline "
+"debatt oluliste küsimuste üle ning et meil oleks tõeliselt tugev "
+"kodanikuühiskond."
+
+#: templates/components/modal-founders.php:84
+msgid ""
+"Kirsti Pent is a partner with FORT law offices. Kirsti specializes in "
+"financial regulations, helping clients develop clear, specific solutions for "
+"financial transactions. She is also one of Tuleva’s legal advisers."
+msgstr ""
+"Kirsti Pent on partner FORT advokaadibüroos. Kirsti on spetsialiseerunud "
+"finantsvaldkonna regulatsioonidele, aidates kliente selgete ja korrektsete "
+"lahendustega finantstehingutes ning on ka üks Tuleva juriidilistest "
+"nõustajatest."
+
+#: templates/components/modal-founders.php:94
+msgid ""
+"Indrek Kasela is an entrepreneur and investor. Indrek has longstanding "
+"experience in large corporations and has also been busy developing the "
+"cultural sphere."
+msgstr ""
+"Indrek Kasela on ettevõtja ja investor. Indrek omab pikaajalist "
+"ettevõtluskogemust suurettevõtetest ning on lisaks sellele tegus ka "
+"kultuurivaldkonna arendamises."
+
+#: templates/components/modal-founders.php:104
+msgid ""
+"Annika Uudelepp is a civil society and governance expert with the Praxis "
+"think tank, and has long been spotlighting and helping to address issues of "
+"concern in Estonian society."
+msgstr ""
+"Annika Uudelepp on kodanikuühiskonna ja riigivalitsemise ekspert mõttekojas "
+"Praxis. Annika on pikaajaliselt juhtinud tähelepanu murekohtadele Eesti "
+"ühiskonnas ning aidanud neile lahendusi leida."
+
+#: templates/components/modal-founders.php:114
+msgid ""
+"Henrik Karmo is an investor with a broad set of experiences in building "
+"various investment companies and developing investment strategies."
+msgstr ""
+"Henrik Karmo tegutseb igapäevaselt investorina. Henrikul on laiapõhjaline "
+"kogemus erinevate investeerimisettevõtete üles ehitamisel ja "
+"investeerimisstrateegiate loomisel."
+
+#: templates/components/modal-founders.php:124
+msgid ""
+"Taavi Lepmets is an investor. Since the 1990s, Taavi has been investing into "
+"early-phase technologies, and is still on the lookout for new avenues today. "
+msgstr ""
+"Taavi Lepmets tegutseb investorina. Taavi on on omandanud kogemusi varajases "
+"faasis tehnoloogia investeeringute tegemisel alates eelmisest sajandist, "
+"ning üritab selles vallas uusi elamusi otsida ka tänapäeval."
+
+#: templates/components/modal-founders.php:134
+msgid ""
+"Taavet Hinrikus is a co-founder of Transferwise. Taavet believes in simple, "
+"clear and transparent solutions and is helping to make money transfers and "
+"currency exchange easier and more convenient for everyone."
+msgstr ""
+"Taavet Hinrikus on Transferwise’i asutaja. Taavet usub lihtsatesse, "
+"selgetesse ja läbipaistvatesse lahendustesse, ning aitab igapäevaselt muuta "
+"raha liikumist ja valuutavahetust kõikidele paremaks ja mugavamaks."
+
+#: templates/components/modal-founders.php:144
+msgid ""
+"Loit Linnupõld is the founder of Crowdestate. Boasting longstanding "
+"experiences in the financial sector, he is helping to bring investors and "
+"real estate developers together to develop Estonian investor culture and "
+"develop access to capital."
+msgstr ""
+"Loit Linnupõld on Crowdestate’i asutaja. Loit on pikaajalise kogemusega "
+"finantssektoris ning aitab läbi ühisrahastuse viia kokku investoreid ning "
+"kinnisvaraarendajaid, et selle läbi arendada eesti investorkultuuri ja "
+"arendada ligipääsu kapitalile."
+
+#: templates/components/modal-founders.php:154
+msgid ""
+"Veljo Otsason is a co-founder of Fortumo and Mobi and an angel investor in "
+"more than 15 companies. Veljo’s passion is new technologies: his companies "
+"help create better wireless services and payment and authentication systems. "
+msgstr ""
+"Veljo Otsason on Fortumo ja Mobi kaasasutaja ning ingelinvestor rohkem kui "
+"15 ettevõttes. Veljo kireks on uued tehnoloogilised lahendused, ning tema "
+"ettevõtted aitavad luua paremaid mobiilseid teenuseid, nii maksesüsteeme kui "
+"autentimist."
+
+#: templates/components/modal-founders.php:164
+msgid ""
+"Rain Rannu is a technology entrepreneur and investor, and a founder of "
+"Fortumo and Mobi. Rain’s passion is enterprise and developing new ideas, and "
+"likes projects that would not exist without him."
+msgstr ""
+"Rain Rannu on tehnoloogiaettevõtja ja investor, Fortumo ja Mobi asutaja. "
+"Raini kireks on ettevõtlus ja uute ideede välja töötamine, talle meeldivad "
+"projektid, mida ilma temata ei oleks."
+
+#: templates/components/modal-founders.php:174
+msgid ""
+"Sandor Liive’s passion lies in the energy sector. Sandor served as CEO of "
+"the state energy company Eesti Energia for many years and now is engaged in "
+"developing new solutions in the energy sector."
+msgstr ""
+"Sandor Liive kirg on energiasektoris. Sandor on pikaajaliselt juhtinud Eesti "
+"Energiat ning tegeleb uute lahenduste toomisega energiasektorisse."
+
+#: templates/components/modal-founders.php:184
+msgid ""
+"Heikko Mäe is an auditor with a passion for getting things done in a "
+"meticulous manner. He is now putting his experience and knowledge to work "
+"for Tuleva as an internal auditor."
+msgstr ""
+"Heikko Mäe on audiitor. Tema kireks on, et asjad saaksid tehtud õigesti ja "
+"täpselt. Oma kogemusi ja teadmisi kasutab Heikko olles Tuleva fondide "
+"siseaudiitoriks."
+
+#: templates/components/modal-founders.php:194
+msgid ""
+"Gerd Laub is a legal adviser at Funderbeam. With a background in law, he "
+"specializes in providing consultation to financial companies and helps to "
+"solve complicated problems in the financial technology sector."
+msgstr ""
+"Gerd Laub on Funderbeami juriidiline nõustaja. Gerdi taust on õiguse "
+"valdkonnas, ta on spetsialiseerunud finantsettevõtete nõustamisele ning "
+"aitab lahendada keerukaid probleeme finantstehnoloogia vallas."
+
+#: templates/components/modal-founders.php:204
+msgid ""
+"Triinu Tombak provides financial and business advisory services. She "
+"currently serves on the supervisory boards of the power utility AS Harju "
+"Elekter and the think tank Praxis."
+msgstr ""
+"Triinu Tombak tegeleb finants- ja ärinõustamisega. Praegusel hetkel võib "
+"teda leida AS-i Harju Elekter nõukogust ning mõttekoja Praxis nõukogust."
+
+#: templates/components/modal-founders.php:214
+msgid ""
+"Kadi Lambot is a doctor who has served as CEO of a number of large "
+"enterprises. Kadi believes that the medical system needs comprehensive, user-"
+"friendly solutions and works to that end as member of the supervisory board "
+"of the Cancer Society, Healthy Estonia Foundation, and Tartu University "
+"Foundation."
+msgstr ""
+"Kadi Lambot on arst, kes on olnud mitmete suurettevõtete juht. Kadi usub, et "
+"meditsiinisüsteem vajab terviklikke ning kliendisõbralikke lahendusi ning "
+"töötab selle nimel olles Vähiliidu, Terve Eesti SA, Tartu Ülikooli SA "
+"nõukogu liige."
+
+#: templates/components/modal-founders.php:224
+msgid ""
+"Allan Kaldoja is an entrepreneur. His passion is developing CSOs. As "
+"supervisory board chairman, he was instrumental in getting SA Vaba Lava "
+"(Open Stage Foundation) off the ground."
+msgstr ""
+"Allan Kaldoja tegeleb ettevõtlusega. Allani kireks on kodanikuühenduste "
+"arendamine, olles aidanud käivitada nõukogu esimehena SA Vaba Lava."
+
+#: templates/components/modal-founders.php:234
+msgid ""
+"Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which "
+"translates as a primer on how to get rich. Jaak devotes his time to making "
+"Estonians financially savvier, so they could make better financial decisions "
+"and enjoy a better life."
+msgstr ""
+"Jaak Roosaare on investor ja Rikkaks Saamise Õpiku autor. Jaak pühendab oma "
+"aega sellele, et arendada eestlaste finantsteadlikkust, et inimesed teeksid "
+"paremaid finantsotsuseid ja läbi selle saaksid nautida paremat elu."
+
 #: templates/components/pension-calculator.php:1
 msgid "Average management fee savings with Tuleva"
 msgstr "Keskmine valitsemistasu sääst Tulevaga"
@@ -561,15 +860,15 @@ msgstr ""
 "       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
 "pensionikalkulaator töötab.</a>"
 
-#: templates/components/qa-block.php:5
+#: templates/components/qa-block.php:4
 msgid "Answers to frequently asked questions"
-msgstr "Vastused korduma kippuvatele küsimustele"
+msgstr "Korduvad küsimused"
 
-#: templates/components/qa-block.php:32
+#: templates/components/qa-block.php:30
 msgid "More questions"
 msgstr "Rihkem küsimusi"
 
-#: templates/components/qa-block.php:32
+#: templates/components/qa-block.php:30
 msgid "Less questions"
 msgstr "Vähem küsimusi"
 
@@ -747,6 +1046,60 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
+#: templates/components/testimonials.php:3
+msgid "What others say about us?"
+msgstr "Mida meist räägitakse?"
+
+#: templates/components/testimonials.php:11
+msgid ""
+"If you choose a low-cost index fund you can stop worrying. You don't stare "
+"at graphs every week and you don't think about switching funds. You can "
+"concentrate on growing your other income."
+msgstr ""
+"Kui oled madalate kuludega indeksifondi valinud, ära rohkem muretse. Ära "
+"vahi kord nädalas graafikuid, ära mõtle fondivahetuse peale. Tegele parem "
+"oma muude tulude kasvatamisega!"
+
+#: templates/components/testimonials.php:15
+msgid "Investor and author of the book, The Getting Rich Handbook"
+msgstr "“Rikkaks saamise õpiku” autor"
+
+#: templates/components/testimonials.php:24
+msgid ""
+"Why Tuleva? First, because I like projects where people come together for a "
+"great goal. Second, because I believe Tuleva's people are doing the right "
+"thing. And third, because I want a pension fund with a smaller management "
+"fee!"
+msgstr ""
+"Esiteks mulle sobib ühis(tuline) tegevus. Teiseks sest usun Tuleva inimesi "
+"ajavat õiget asja. Kolmandaks soovin, et minu pensionisambast läheks vähem "
+"teenustasudeks."
+
+#: templates/components/testimonials.php:28
+#: templates/components/testimonials.php:53
+msgid "Tuleva member"
+msgstr "Tuleva liige"
+
+#: templates/components/testimonials.php:37
+msgid ""
+"Äripäev welcomes the pressure fund switchers put on management fees — which "
+"can be accomplished by switching to passive funds."
+msgstr ""
+"Äripäev kiidab fondivahetajate survet pensionifondide valitsemistasudele, "
+"esialgu saabki seda avaldada peamiselt passiivsete fondide valikuga."
+
+#: templates/components/testimonials.php:40
+msgid "Editorial in Äripäev, (Estonia's business daily)"
+msgstr "Äripäeva juhtkiri, 07.09.2017"
+
+#: templates/components/testimonials.php:49
+msgid ""
+"I transferred my pension to Tuleva because it made me feel like I am the "
+"state."
+msgstr ""
+"Mina viisin oma pensioni üle, kuna Tuleva tekitab minus tunde, et mina "
+"olengi riik!"
+
 #: templates/footer/beacon-toggle.php:3
 msgid "Have a question?"
 msgstr "Küsi Kristilt!"
@@ -818,12 +1171,12 @@ msgstr ""
 msgid "Your e-mail address"
 msgstr "Sinu e-maili aadress"
 
-#: templates/fund-content-old.php:17
+#: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
 msgstr ""
 "Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
 
-#: templates/fund-content-old.php:25
+#: templates/fund-content-old.php:25 templates/fund-content.php:25
 msgid ""
 "This fund has been already chosen by %s people - including Tuleva founders "
 "and most of the members. <br> If you are over 55, consider our bond fund."
@@ -834,7 +1187,7 @@ msgstr ""
 "enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
 "<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
 
-#: templates/fund-content-old.php:32
+#: templates/fund-content-old.php:32 templates/fund-content.php:32
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
 "\">Choose Tuleva pension fund</a>"
@@ -957,7 +1310,7 @@ msgstr "Liikmeks astutud"
 
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
-msgstr ""
+msgstr "Ühistu leht"
 
 #~ msgid "Enter Tuleva app"
 #~ msgstr "Liikmekonto"
@@ -995,9 +1348,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Astu Tuleva liikmeks!"
 #~ msgstr "Liikmekonto"
-
-#~ msgid "See how the pension calculator works."
-#~ msgstr "Uuri, kuidas pensionikalkulaator töötab."
 
 #~ msgid "How much would I save in fees?"
 #~ msgstr "Keskmine sääst Tulevaga"

@@ -13,16 +13,11 @@
                                     <div class="founder-story__person founder-story__person--indrek"></div>
                                     <div class="founder-story__content">
                                         <h3 class="mb-0">Indrek Neivelt</h3>
-                                        <p class="text-navy mb-4">Tuleva asutaja</p>
-                                        <p class="text-navy mb-4">II sammas:
-                                            <strong>Tuleva Maailma Aktsiate Pensionifond</strong>
+                                        <p class="text-navy mb-4"><?php _e('Tuleva founder', TEXT_DOMAIN); ?></p>
+                                        <p class="text-navy mb-4"><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                                         </p>
-                                        <p>Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate pensionifondite loomise
-                                            ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et nojah, eks
-                                            ta ole; kahjuks endal pole aega appi tulla.</p>
-                                        <p>Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma pensionikontole.
-                                            See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule ja nad otsustasid
-                                            tegutsema asuda.</p>
+                                        <p><?php _e('Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here.', TEXT_DOMAIN); ?></p>
+                                        <p><?php _e('After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working.', TEXT_DOMAIN); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -38,14 +33,11 @@
                                     <div class="founder-story__person founder-story__person--annika"></div>
                                     <div class="founder-story__content">
                                         <h3 class="mb-0">Annika Ruusalepp</h3>
-                                        <p class="text-navy mb-4">Tuleva asutaja</p>
-                                        <p class="text-navy mb-4">II sammas:
-                                            <strong>Tuleva Maailma Aktsiate Pensionifond</strong>
+                                        <p class="text-navy mb-4"><?php _e('Tuleva founder', TEXT_DOMAIN); ?></p>
+                                        <p class="text-navy mb-4"><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                                         </p>
-                                        <p>Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud euro pealt
-                                            maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid 77 eurot. </p>
-                                        <p>Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade tuhandete
-                                            inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta.</p>
+                                        <p><?php _e('One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros.', TEXT_DOMAIN); ?></p>
+                                        <p><?php _e('When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done.', TEXT_DOMAIN); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -60,18 +52,12 @@
                                 <div class="founder-story">
                                     <div class="founder-story__person founder-story__person--taavet-kristo"></div>
                                     <div class="founder-story__content">
-                                        <h3 class="mb-0">Taavet Hinrikus ja Kristo Käärmann</h3>
-                                        <p class="text-navy mb-4">Tuleva asutajad</p>
-                                        <p class="text-navy mb-4">II sammas:
-                                            <strong>Tuleva Maailma Aktsiate Pensionifond</strong>
+                                        <h3 class="mb-0"><?php _e('Kristo Käärmann and Taavet Hinrikus', TEXT_DOMAIN) ?></h3>
+                                        <p class="text-navy mb-4"><?php _e('Tuleva founders', TEXT_DOMAIN); ?></p>
+                                        <p class="text-navy mb-4"><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                                         </p>
-                                        <p>Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest frustratsioonist
-                                            nagu Tulevagi. Transferwise võitleb varjatud tasude vastu, mida pangad võtavad
-                                            rahavahetuse ja rahvusvaheliste maksete eest. Tuleva võitleb kõrgete valitsemistasude
-                                            ja pensionifondide varjatud kulude vastu, et meie, Eesti inimesed, saaksime raha
-                                            koguda endale, mitte pankadele.</p>
-                                        <p>Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks muutmist
-                                            ja olla osalised Eesti inimestele endile kuuluva idufirma üles ehitamisel.</p>
+                                        <p><?php _e('One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks.', TEXT_DOMAIN); ?></p>
+                                        <p><?php _e('It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves.', TEXT_DOMAIN); ?></p>
                                     </div>
                                 </div>
                             </div>

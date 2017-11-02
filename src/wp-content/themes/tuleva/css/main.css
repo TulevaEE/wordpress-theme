@@ -7887,6 +7887,9 @@ small,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media (min-width: 992px) {
+    .media-box {
+      max-width: 50%; } }
   .media-box__media {
     width: 25%;
     min-width: 100px; }
