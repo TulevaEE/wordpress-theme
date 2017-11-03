@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-02 21:09:37+00:00\n"
-"PO-Revision-Date: 2017-11-02 23:11+0200\n"
+"POT-Creation-Date: 2017-11-03 09:27:06+00:00\n"
+"PO-Revision-Date: 2017-11-03 11:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
-#: functions.php:25 helpers/acf/init.php:14 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:16 helpers/post-types/init.php:9
 #: widgets/init.php:14
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
@@ -242,6 +242,117 @@ msgstr ""
 "<a class=\"link\" href=\"/kuidas-tuua-pension-tulevasse/\">Fondivahetuse "
 "juhend</a>"
 
+#: templates/components/fund-bonds-details.php:7
+#: templates/components/fund-stocks-details.php:7
+msgid "Fund details"
+msgstr "Fondi info"
+
+#: templates/components/fund-bonds-details.php:13
+#: templates/components/fund-stocks-details.php:13
+msgid "Currency"
+msgstr "Valuuta"
+
+#: templates/components/fund-bonds-details.php:17
+#: templates/components/fund-stocks-details.php:17
+msgid "Date of inception"
+msgstr "Moodustamise kuupäev"
+
+#: templates/components/fund-bonds-details.php:18
+#: templates/components/fund-stocks-details.php:18
+msgid "27 March 2017"
+msgstr "27. märts 2017"
+
+#: templates/components/fund-bonds-details.php:21
+#: templates/components/fund-stocks-details.php:21
+msgid "Fund volume"
+msgstr "Fondi maht"
+
+#: templates/components/fund-bonds-details.php:29
+#: templates/components/fund-stocks-details.php:29
+msgid "Change in value"
+msgstr "Puhasväärtuse muutus"
+
+#: templates/components/fund-bonds-details.php:33
+#: templates/components/fund-stocks-details.php:33
+msgid "Management fee"
+msgstr "Valitsemistasu"
+
+#: templates/components/fund-bonds-details.php:37
+#: templates/components/fund-stocks-details.php:37
+msgid "Redemption fee and issue fee"
+msgstr "Väljalasketasu ja tagasivõtmistasu"
+
+#: templates/components/fund-bonds-details.php:41
+#: templates/components/fund-stocks-details.php:41
+msgid "Fund manager's participation rate in fund"
+msgstr "Fondivalitseja osalus fondis"
+
+#: templates/components/fund-bonds-details.php:42
+#: templates/components/fund-stocks-details.php:42
+msgid "units"
+msgstr "osakut"
+
+#: templates/components/fund-bonds-details.php:45
+#: templates/components/fund-stocks-details.php:45
+msgid "Risk profile"
+msgstr "Riskiprofiil"
+
+#: templates/components/fund-bonds-details.php:46
+msgid "Conservative"
+msgstr "Konservatiivne"
+
+#: templates/components/fund-bonds-details.php:49
+#: templates/components/fund-stocks-details.php:49
+msgid "Comparison index"
+msgstr "Võrdlusindeks"
+
+#: templates/components/fund-bonds-details.php:50
+#: templates/components/fund-stocks-details.php:50
+msgid "and"
+msgstr "ja"
+
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-stocks-details.php:57
+msgid "Documents"
+msgstr "Dokumendid"
+
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-stocks-details.php:73
+msgid "Reports"
+msgstr "Aruanded"
+
+#: templates/components/fund-bonds-header.php:5
+#: templates/components/fund-choosing.php:27
+#: templates/components/fund-choosing.php:28
+msgid "Tuleva World Bonds Pension Fund"
+msgstr "Tuleva Maailma Võlakirjade Pensionifond"
+
+#: templates/components/fund-bonds-header.php:17
+#: templates/components/fund-stocks-header.php:17
+msgid "Suitable for you if"
+msgstr "Sobib sulle, kui"
+
+#: templates/components/fund-bonds-header.php:19
+msgid "you have less than 10 years till retirement"
+msgstr ""
+"sul on pensionieani jäänud <span class=\"text-highlight\">vähem kui 10 "
+"aastat</span>"
+
+#: templates/components/fund-bonds-header.php:20
+msgid "you are willing to forgo higher returns in order to avoid losses"
+msgstr "oled nõus kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
+
+#: templates/components/fund-bonds-header.php:24
+#: templates/components/fund-choosing.php:21
+#: templates/components/fund-choosing.php:39
+#: templates/components/fund-stocks-header.php:26
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
+"block\">I choose this fund</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
+"btn-block\">Valin selle fondi</a>"
+
 #: templates/components/fund-calculator.php:13
 msgid "Age: 28"
 msgstr "Vanus: 28"
@@ -266,6 +377,7 @@ msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
 
 #: templates/components/fund-choosing.php:9
 #: templates/components/fund-choosing.php:10
+#: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
@@ -300,23 +412,9 @@ msgstr ""
 msgid "See fund info"
 msgstr "Vaata fondi infot"
 
-#: templates/components/fund-choosing.php:21
-#: templates/components/fund-choosing.php:39
-msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">I "
-"choose this fund</a>"
-msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
-"\">Valin selle fondi</a>"
-
 #: templates/components/fund-choosing.php:26
 msgid "If you are over 55, the fund better suited for you could be"
 msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
-
-#: templates/components/fund-choosing.php:27
-#: templates/components/fund-choosing.php:28
-msgid "Tuleva World Bonds Pension Fund"
-msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
 #: templates/components/fund-choosing.php:29
 msgid ""
@@ -381,7 +479,7 @@ msgstr ""
 
 #: templates/components/fund-fees.php:19
 msgid "Most fund managers’ costs are not justified."
-msgstr "Enamik fondivalitsejate kulutusi pole õigustatud"
+msgstr "Enamik fondivalitsejate kulutusi pole õigustatud."
 
 #: templates/components/fund-fees.php:20
 msgid ""
@@ -428,6 +526,41 @@ msgstr ""
 "Loe, mida arvab asjast <a href=“#” class=“inline-link”>Warren Buffett</a>. "
 "Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a href=“#” "
 "class=“inline-link”>artikliseeriat</a>."
+
+#: templates/components/fund-manager.php:7
+msgid "fund manager"
+msgstr "fondijuht"
+
+#: templates/components/fund-manager.php:11
+msgid ""
+"I follow the principle of Jack Bogle, the founder of Vanguard index funds: "
+"keep the investment in a low-cost fund and “don’t peek” – keep the end goal "
+"in sight and don’t spend time or money worrying about small fluctuations. I "
+"waited for a long time for someone to set up this kind of fund in Estonia. "
+"We finally had to take matters into our own hands."
+msgstr ""
+"“Lähtun Vanguardi indeksifondide asutaja Jack Bogle’i põhimõttest: hoia "
+"pensionivara madalate kuludega fondis ja “ära piilu”, ehk keskendu "
+"lõppeesmärgile ja ära kuluta raha ega aega lühiajaliste kõikumiste pärast "
+"muretsemisele. Ootasin kaua, et keegi ka Eestis sellise fondi teeks. Lõpuks "
+"tuli ise teha.”"
+
+#: templates/components/fund-manager.php:13
+msgid ""
+"Tõnu has been working in the investment field for over 20 years. Before "
+"founding Tuleva, he headed an investment company he part-owned, Karu "
+"Capital. Before that, Tõnu ran Eastern European financial sector development "
+"projects at the European Bank for Reconstruction and Development and worked "
+"as head of investment banking at Hansabank. He holds a master’s degree from "
+"London Business School-and a bachelor’s degree from the University of Tartu."
+msgstr ""
+"Tõnu on investeerimisalal tegutsenud üle 20 aasta. Enne Tuleva asutamist "
+"juhtis ta oma kaasosalusega investeerimisettevõtet Karu Capital. Varem on "
+"Tõnu muuhulgas vedanud Euroopa Rekonstruktsiooni- ning Arengupangas Ida-"
+"Euroopa finantssektori arendusprojekte ning töötanud Hansapangas "
+"investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London "
+"Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu "
+"Ülikoolis."
 
 #: templates/components/fund-navigation.php:5
 msgid "Which fund to choose?"
@@ -496,6 +629,28 @@ msgid ""
 "pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus."
 "ee</a>"
 msgstr " "
+
+#: templates/components/fund-stocks-details.php:46
+msgid "Aggressive"
+msgstr "Agressiivne"
+
+#: templates/components/fund-stocks-header.php:19
+msgid "you are younger than 55 years"
+msgstr "oled noorem kui 55-aastane"
+
+#: templates/components/fund-stocks-header.php:20
+msgid ""
+"you would like to earn <span class=\"text-highlight\"><strong>best expected "
+"return</strong></span> over long term and you are not disturbed by short-"
+"term fluctuations of the market"
+msgstr ""
+"tahad saavutada <span class=\"text-highlight\"><strong>parimat võimalikku "
+"tootlust</strong></span> pika aja vältel ja sind ei löö rivist välja turu "
+"lühiajalised kõikumised"
+
+#: templates/components/fund-stocks-header.php:25
+msgid "of people chose this fund"
+msgstr "pensionikogujate valik"
 
 #: templates/components/goals.php:5
 msgid "Done"
@@ -588,15 +743,15 @@ msgstr "Mudeli eeldused"
 
 #: templates/components/modal-calculator.php:24
 msgid "Funds' average annual return before management fees"
-msgstr ""
+msgstr "Pensionifondide keskmine aastatootlus enne fondi kulude mahaarvamist"
 
 #: templates/components/modal-calculator.php:28
 msgid "Average annual salary growth"
-msgstr ""
+msgstr "Palgakasv aastas"
 
 #: templates/components/modal-calculator.php:32
 msgid "Minimum eligible age"
-msgstr ""
+msgstr "Pensionikogumise alustamise vanus"
 
 #: templates/components/modal-calculator.php:33
 msgid "23yrs"
@@ -604,7 +759,7 @@ msgstr "23a"
 
 #: templates/components/modal-calculator.php:38
 msgid "Detailed calculation in Google Docs"
-msgstr ""
+msgstr "Üksikasjadega mudel Google Docsis"
 
 #: templates/components/modal-founders.php:24
 msgid ""
@@ -1297,8 +1452,16 @@ msgid "Front page"
 msgstr "Esileht"
 
 #. Template Name of the plugin/theme
+msgid "Fund bonds page"
+msgstr "Võlakirja fondi leht"
+
+#. Template Name of the plugin/theme
 msgid "Fund details page"
 msgstr "Fondide leht"
+
+#. Template Name of the plugin/theme
+msgid "Fund stocks page"
+msgstr "Aktsiate fondi leht"
 
 #. Template Name of the plugin/theme
 msgid "Fund page"
@@ -1317,9 +1480,6 @@ msgstr "Ühistu leht"
 
 #~ msgid "Management fee is lower for members - just"
 #~ msgstr "Liikmele on valitsemistasu soodsam — kõigest"
-
-#~ msgid "I choose this fund"
-#~ msgstr "Valin selle fondi"
 
 #~ msgid "Learn about the funds"
 #~ msgstr "Tutvu fondidega"

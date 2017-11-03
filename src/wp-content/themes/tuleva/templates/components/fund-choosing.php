@@ -18,7 +18,7 @@
               <hr class="mb-4">
               <a href="#" class="text-uppercase d-block mb-3"><?php _e('See fund info', TEXT_DOMAIN); ?>
               <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" /></a>
-              <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">I choose this fund</a>', TEXT_DOMAIN); ?>
+              <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block">I choose this fund</a>', TEXT_DOMAIN); ?>
             </div>
           </div>
           <div class="card shadow-sm">
@@ -36,7 +36,7 @@
               <hr class="mb-4">
               <a href="#" class="text-uppercase d-block mb-3"><?php _e('See fund info', TEXT_DOMAIN); ?>
                 <img src="<?php echo get_template_directory_uri() ?>/img/icon-arrow-right.svg" alt="Arrow" /></a>
-                <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg">I choose this fund</a>', TEXT_DOMAIN); ?>
+                <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block">I choose this fund</a>', TEXT_DOMAIN); ?>
             </div>
           </div>
         </div>
