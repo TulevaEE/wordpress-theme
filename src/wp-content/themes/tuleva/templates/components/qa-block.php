@@ -27,7 +27,7 @@
     </div>
     <div class="row">
         <div class="mx-md-auto col-lg-10">
-            <a href="#" class="qa-block__expand" data-open-text="<?php _e('More questions'); ?>" data-close-text="<?php _e('Less questions'); ?>"><?php _e('More questions'); ?></a>
+            <a href="#" class="qa-block__expand" data-open-text="<?php _e('More questions', TEXT_DOMAIN) ?>" data-close-text="<?php _e('Less questions', TEXT_DOMAIN); ?>"><?php _e('More questions', TEXT_DOMAIN) ?></a>
         </div>
     </div>
 </div>
