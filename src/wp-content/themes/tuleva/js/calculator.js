@@ -54,7 +54,7 @@ function calculateSaving() {
     $('#future-value').html(futureValueOfPensionFund + " €");
     $('#future-value-tuleva').html(futureValueWithTuleva + " €");
     $('#tuleva-saving').html(totalSavingWithTuleva + " €");
-    $('#fund-fee').html("Tasud aastas " + comparisonFundPercentage);
+    $('#fund-fee').html(comparisonFundPercentage);
 }
 
 calculateSaving();

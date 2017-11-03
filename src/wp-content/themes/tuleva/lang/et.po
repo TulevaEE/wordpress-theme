@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-03 09:27:06+00:00\n"
-"PO-Revision-Date: 2017-11-03 12:17+0200\n"
+"POT-Creation-Date: 2017-11-03 12:20:09+00:00\n"
+"PO-Revision-Date: 2017-11-03 14:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -153,6 +153,95 @@ msgstr ""
 "Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks "
 "muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
 "ehitamisel."
+
+#: templates/components/front-header.php:6
+msgid "A pension should benefit you. Not your bank."
+msgstr "Kogu pensionit endale, mitte pangale."
+
+#: templates/components/front-header.php:7
+msgid ""
+"Tuleva pension funds belong to their investors — with up to four times lower "
+"fees than bank-run plans."
+msgstr ""
+"Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 4x soodsama "
+"valitsemistasuga."
+
+#: templates/components/front-header.php:8
+msgid ""
+"<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
+"block\">Save on fees</a>"
+msgstr ""
+"<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
+"block\">Säästa tasudelt</a>"
+
+#: templates/components/front-header.php:9
+msgid "Switching funds is free (and takes only five minutes)."
+msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
+
+#: templates/components/front-header.php:16
+msgid "If you're"
+msgstr "Kui oled"
+
+#: templates/components/front-header.php:18
+msgid "years old and earn"
+msgstr "ja teenid kuus"
+
+#: templates/components/front-header.php:20
+msgid "euros per month (net),"
+msgstr "eurot neto,"
+
+#: templates/components/front-header.php:21
+msgid "your second pillar"
+msgstr "kogud"
+
+#: templates/components/front-header.php:22
+msgid "could"
+msgstr "eelduslikult"
+
+#: templates/components/front-header.php:22
+msgid "grow"
+msgstr "pensioniks"
+
+#: templates/components/front-header.php:28
+msgid "Estonian pension fund average"
+msgstr "Eesti keskmises pensionifondis"
+
+#: templates/components/front-header.php:93
+#: templates/components/front-header.php:100
+msgid "Annual fees"
+msgstr "Tasud aastas"
+
+#: templates/components/front-header.php:97
+msgid "In a single low-cost fund"
+msgstr "Madala tasuga fondis"
+
+#: templates/components/front-header.php:104
+msgid "Cost of high fees"
+msgstr "Kõrgete tasude kulu"
+
+#: templates/components/front-header.php:115
+msgid "Want to know how to start saving?"
+msgstr "Soovid teada, kuidas alustada säästmist?"
+
+#: templates/components/front-header.php:117
+msgid ""
+"<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Send me "
+"information</a>"
+msgstr ""
+"<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Saada mulle infot</"
+"a>"
+
+#: templates/components/front-header.php:129
+msgid "Every bit as safe as a bank-run fund."
+msgstr "Sama turvaline kui panga pensionifond."
+
+#: templates/components/front-header.php:130
+msgid "Find out more"
+msgstr "Uuri lähemalt"
+
+#: templates/components/front-header.php:135
+msgid "Estonians invest in Tuleva pension funds."
+msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
 #: templates/components/front-proposal.php:13
 msgid ""
@@ -1456,10 +1545,6 @@ msgid "Fund bonds page"
 msgstr "Võlakirja fondi leht"
 
 #. Template Name of the plugin/theme
-msgid "Fund details page"
-msgstr "Fondide leht"
-
-#. Template Name of the plugin/theme
 msgid "Fund stocks page"
 msgstr "Aktsiate fondi leht"
 
@@ -1474,6 +1559,9 @@ msgstr "Liikmeks astutud"
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
+
+#~ msgid "Fund details page"
+#~ msgstr "Fondide leht"
 
 #~ msgid "Enter Tuleva app"
 #~ msgstr "Liikmekonto"
