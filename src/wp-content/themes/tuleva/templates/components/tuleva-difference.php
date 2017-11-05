@@ -2,21 +2,18 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-10 m-auto">
-          <h2 class="mb-4">Tuleva pole tavaline teenusepakkuja</h2>
-          <p class="lead">Tuleva omanikud on pensionikogujad ise, kes otsustasid pankadest vahemehed kõrvale jätta ja käivitada sellised
-            pensionifondid, kus nad raha ise koguda tahaksid.</p>
+          <h2 class="mb-4"><?php _e('Tuleva is not your usual pension fund.', TEXT_DOMAIN); ?></h2>
+          <p class="lead"><?php _e("Tuleva's owners are the pension savers themselves — we cut out the middleman to save on fees and better our fund's performance.", TEXT_DOMAIN); ?></p>
           <img src="<?php echo get_template_directory_uri() ?>/img/founding-members@2x.jpg" alt="" class="img-fluid mb-5">
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-8 m-auto">
           <ul class="list-style-checkmark text-left mb-5">
-            <li>Tuleva Tulundusühistu asutasid 22 Eesti ettevõtjat, rahanduseksperti ja ühiskonnategelast, kes leidsid, et Eesti
-              inimesed väärivad paremat tulevikku.</li>
-            <li>Usume passiivsesse investeerimisse. See tähendab, et jagad oma raha maailma suurimate ettevõtete aktsiate ja
-              valitsuste võlakirjade vahel. Keskendume pikaajalisele tootlusele ja ei muretse lühiajaliste kõikumiste pärast.</li>
+            <li><?php _e('Tuleva was started by 22 people who believed that we deserved something better than bank-run funds.', TEXT_DOMAIN); ?></li>
+            <li><?php _e('We believe in passive investments — risk well diversified through stock of large companies and government bonds — with a view to the long term.', TEXT_DOMAIN); ?></li>
           </ul>
-          <a href="yhistu.html" class="btn btn-outline-primary btn-lg">Tutvu Tuleva ühistuga</a>
+          <?php _e('<a href="/en/mutual-company/" class="btn btn-outline-primary btn-lg">Learn more about Tuleva</a>', TEXT_DOMAIN); ?>
         </div>
       </div>
     </div>

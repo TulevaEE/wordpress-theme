@@ -18,6 +18,9 @@
         }
 
         get_template_part('templates/components/modal-founders');
+        get_template_part('templates/components/modal-question-fee');
+        get_template_part('templates/components/modal-question-profit');
+        get_template_part('templates/components/modal-question-rights');
 
     endwhile; ?>
 </div>

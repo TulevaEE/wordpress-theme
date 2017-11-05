@@ -98,6 +98,9 @@ $(document).ready(function($) {
     initModal('#security', 'securityModal');
     initModal('#calculator', 'calculatorModal');
     initModal('#founders', 'foundersModal');
+    initModal('#question-fee', 'questionFeeModal');
+    initModal('#question-profit', 'questionProfitModal');
+    initModal('#question-rights', 'questionRightsModal');
 
     $('.testimonial-slider').unslider({
         nav: false,

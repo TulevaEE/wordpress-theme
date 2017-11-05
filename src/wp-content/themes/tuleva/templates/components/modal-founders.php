@@ -4,7 +4,7 @@
     </div>
     <div class="modal-full-container">
 
-        <div class="container pt-3 pt-md-6">
+        <div class="container pt-5 pt-md-6">
             <div class="modal-full-content">
                 <div class="row">
                     <div class="col">

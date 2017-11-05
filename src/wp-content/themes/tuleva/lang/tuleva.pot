@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-03 12:20:09+00:00\n"
+"POT-Creation-Date: 2017-11-05 21:37:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,31 @@ msgstr ""
 
 #: templates/blog/submenu.php:21
 msgid "RSS feed"
+msgstr ""
+
+#: templates/components/cta-change.php:5
+msgid "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes only five minutes</span>."
+msgstr ""
+
+#: templates/components/cta-change.php:6
+msgid "Switch to Tuleva"
+msgstr ""
+
+#: templates/components/cta-join.php:5
+msgid "Are we on the right track?"
+msgstr ""
+
+#: templates/components/cta-join.php:6
+msgid "Join us!"
+msgstr ""
+
+#: templates/components/cta-join.php:8 templates/components/signup.php:7
+msgid "Join Tuleva"
+msgstr ""
+
+#: templates/components/featured-articles-et.php:3
+#: templates/components/featured-articles.php:3
+msgid "Read our blog"
 msgstr ""
 
 #: templates/components/founder-stories.php:16
@@ -220,6 +245,7 @@ msgid "one-off joining fee"
 msgstr ""
 
 #: templates/components/front-proposal.php:35
+#: templates/components/mutual-header.php:28
 msgid "Become a member"
 msgstr ""
 
@@ -331,8 +357,8 @@ msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:27
-#: templates/components/fund-choosing.php:28
+#: templates/components/fund-choosing.php:35
+#: templates/components/fund-choosing.php:37
 msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
 
@@ -350,10 +376,10 @@ msgid "you are willing to forgo higher returns in order to avoid losses"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:24
-#: templates/components/fund-choosing.php:21
-#: templates/components/fund-choosing.php:39
+#: templates/components/fund-choosing.php:26
+#: templates/components/fund-choosing.php:47
 #: templates/components/fund-stocks-header.php:26
-msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block\">I choose this fund</a>"
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-calculator.php:13
@@ -364,51 +390,54 @@ msgstr ""
 msgid "Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life"
 msgstr ""
 
-#: templates/components/fund-choosing.php:3
+#: templates/components/fund-choosing.php:4
 msgid "Which Tuleva pension fund to choose?"
 msgstr ""
 
-#: templates/components/fund-choosing.php:8
+#: templates/components/fund-choosing.php:11
 msgid "If you are less than 55 years old, then the fund suitable to you is"
 msgstr ""
 
-#: templates/components/fund-choosing.php:9
-#: templates/components/fund-choosing.php:10
+#: templates/components/fund-choosing.php:14
+#: templates/components/fund-choosing.php:16
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/fund-choosing.php:11
+#: templates/components/fund-choosing.php:17
 msgid "The equity fund with lowest costs in Estonia:<br />management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio <span class=\"text-highlight\"><strong>0,5%</strong></span>"
 msgstr ""
 
-#: templates/components/fund-choosing.php:13
+#: templates/components/fund-choosing.php:19
 msgid "Most of the money is invested in stocks: bigger expected return and risk"
 msgstr ""
 
-#: templates/components/fund-choosing.php:14
+#: templates/components/fund-choosing.php:20
 msgid "Suitable for you if you want <span class=\"text-highlight\"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market"
 msgstr ""
 
-#: templates/components/fund-choosing.php:19
-#: templates/components/fund-choosing.php:37
-msgid "See fund info"
-msgstr ""
-
-#: templates/components/fund-choosing.php:26
-msgid "If you are over 55, the fund better suited for you could be"
-msgstr ""
-
-#: templates/components/fund-choosing.php:29
-msgid "Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expenses <span class=\"text-highlight\"><strong>0,5%</strong></span>"
-msgstr ""
-
-#: templates/components/fund-choosing.php:31
-msgid "Money is invested into world goverments’ and governmental organisations’ bonds: smaller risk, smaller expected return"
+#: templates/components/fund-choosing.php:25
+msgid "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase text-medium d-block mb-3\">See fund info</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:32
+msgid "If you are over 55, the fund better suited for you could be"
+msgstr ""
+
+#: templates/components/fund-choosing.php:38
+msgid "Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expenses <span class=\"text-highlight\"><strong>0,5%</strong></span>"
+msgstr ""
+
+#: templates/components/fund-choosing.php:40
+msgid "Money is invested into world goverments’ and governmental organisations’ bonds: smaller risk, smaller expected return"
+msgstr ""
+
+#: templates/components/fund-choosing.php:41
 msgid "This suits you in case you have just a few years till retirement or in case you are willing to forgo returns in order to avoid losses"
+msgstr ""
+
+#: templates/components/fund-choosing.php:46
+msgid "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-medium d-block mb-3\">See fund info</a>"
 msgstr ""
 
 #: templates/components/fund-counter.php:7
@@ -709,6 +738,115 @@ msgstr ""
 msgid "Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which translates as a primer on how to get rich. Jaak devotes his time to making Estonians financially savvier, so they could make better financial decisions and enjoy a better life."
 msgstr ""
 
+#: templates/components/modal-question-fee.php:12
+#: templates/components/mutual-header.php:29
+msgid "How do we use membership fees?"
+msgstr ""
+
+#: templates/components/modal-question-fee.php:14
+msgid "Membership fees are used to develop the Association and to represent the interests of members. The fees of our first members were used to raise the fund's initial capital, introduce Tuleva to the general public, and make preparations to start the fund, including application for an activity license from the Financial Inspectorate. From this point forward, membership fees will be used for the following activities:"
+msgstr ""
+
+#: templates/components/modal-question-fee.php:15
+msgid ""
+"\n"
+"                        <ul>\n"
+"                            <li>Membership community management and communication</li>\n"
+"                            <li>Development of Tuleva’s web page, blog, and other informational channels</li>\n"
+"                            <li>The creation of and proposals influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>\n"
+"                            <li>Development of Tuleva’s IT systems</li>\n"
+"                            <li>Preparation and analysis of voluntary savings products and Third Pillar options</li>\n"
+"                        </ul>"
+msgstr ""
+
+#: templates/components/modal-question-profit.php:12
+msgid "How is the profit shared?"
+msgstr ""
+
+#: templates/components/modal-question-profit.php:14
+msgid "If Tuleva earns a profit it is divided among members according to the members' agreement in Tuleva's Articles of Assocation."
+msgstr ""
+
+#: templates/components/modal-question-profit.php:15
+msgid ""
+"Each member receives the membership bonus they have earned — 0.5% of the value of the member's Second Pillar fund units in Tuleva. The remainder of profit is divided according to a member's contribution to the Assocation's capital.</p>\n"
+"                        <p> The membership bonus may be thought of as a preferred stock dividend, paid to all members based on the amount they have transferred into Tuleva pension funds.</p>\n"
+"                        <p>A member's capital share is calculated based on the amount of money they have contributed into the fund's initial capital, plus the amount of membership bonuses the member has accumulated."
+msgstr ""
+
+#: templates/components/modal-question-rights.php:12
+msgid "What are your rights and obligations as a Tuleva member?"
+msgstr ""
+
+#: templates/components/modal-question-rights.php:14
+msgid "Every member has the right to:"
+msgstr ""
+
+#: templates/components/modal-question-rights.php:15
+msgid ""
+"\n"
+"                        <ul>\n"
+"                            <li>Have access to important documentation pertaining to all activities of the association</li>\n"
+"                            <li>Participate in the general assembly and other Tuleva events</li>\n"
+"                            <li>Elect Tuleva management and apply for management positions</li>\n"
+"                            <li>Participate in Tuleva’s profit sharing based on predetermined rules</li>\n"
+"                            <li>Use Tuleva’s services and participate in members’ information sharing (for example via e-mail or in our closed Facebook group)</li>\n"
+"                            <li>Leave the association (after 5 years of membership have passed)</li>\n"
+"                            <li>Leave their assets as an inheritance to their designated heir</li>\n"
+"                        </ul>"
+msgstr ""
+
+#: templates/components/modal-question-rights.php:25
+msgid "Every member has the obligation to:"
+msgstr ""
+
+#: templates/components/modal-question-rights.php:26
+msgid ""
+"\n"
+"                        <ul>\n"
+"                            <li>Comply with laws and follow the decisions made by Tuleva’s managerial board</li>\n"
+"                            <li>Pay a one-time membership fee</li>\n"
+"                            <li>Keep Tuleva’s business secrets</li>\n"
+"                            <li>Pay additional fees if decided so by the general assembly*</li>\n"
+"                        </ul>"
+msgstr ""
+
+#: templates/components/modal-question-rights.php:33
+msgid "* This obligation has been included in our articles of association in the unlikely event that Tuleva has an unexpected need for additional capital. If a member refuses to pay additional fees which have been decided upon by the general assembly, they will lose their membership status."
+msgstr ""
+
+#: templates/components/mutual-header.php:5
+msgid "The Tuleva Commercial Association's goal is to grow our members' assets over the long term."
+msgstr ""
+
+#: templates/components/mutual-header.php:6
+msgid "This is achieved by creating investment opportunities for small sums invested over the long term."
+msgstr ""
+
+#: templates/components/mutual-header.php:19
+msgid "The Tuleva Commercial Association is the owner of the pension fund's management"
+msgstr ""
+
+#: templates/components/mutual-header.php:20
+msgid "Tuleva members "
+msgstr ""
+
+#: templates/components/mutual-header.php:20
+msgid "<span class=\"text-highlight\">share the profit</span> from the fund management"
+msgstr ""
+
+#: templates/components/mutual-header.php:21
+msgid "The Tuleva Commercial Association looks for opportunities for its members to save money over the long term"
+msgstr ""
+
+#: templates/components/mutual-header.php:22
+msgid "Tuleva plays an advocacy role to affect change in laws to make the Estonian pension system more profitable for its savers"
+msgstr ""
+
+#: templates/components/mutual-header.php:27
+msgid "one-time membership fee"
+msgstr ""
+
 #: templates/components/pension-calculator.php:1
 msgid "Average management fee savings with Tuleva"
 msgstr ""
@@ -815,16 +953,12 @@ msgstr ""
 msgid "As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies."
 msgstr ""
 
-#: templates/components/signup.php:7
-msgid "Join Tuleva"
-msgstr ""
-
 #: templates/components/signup.php:13
 msgid "Enter your details and send membership application"
 msgstr ""
 
 #: templates/components/signup.php:16
-msgid "Tuleva member can be anybody of legal age who does not have current criminal record. <a href=\"#rights-and-obligations\">What are my rights and obligations as a Tuleva member?</a>"
+msgid "Tuleva member can be anybody of legal age who does not have current criminal record. <a id=\"question-rights\" href=\"#questionRightsModal\">What are my rights and obligations as a Tuleva member?</a>"
 msgstr ""
 
 #: templates/components/signup.php:19
@@ -832,7 +966,7 @@ msgid "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
 msgstr ""
 
 #: templates/components/signup.php:22
-msgid "This is the contribution of all Tuleva members to our joint entreprise.<br /><a href=\"#membership-fee-usage\">What we do with joining fees?</a>"
+msgid "This is the contribution of all Tuleva members to our joint entreprise."
 msgstr ""
 
 #: templates/components/signup.php:25
@@ -878,6 +1012,26 @@ msgstr ""
 
 #: templates/components/testimonials.php:49
 msgid "I transferred my pension to Tuleva because it made me feel like I am the state."
+msgstr ""
+
+#: templates/components/tuleva-difference.php:5
+msgid "Tuleva is not your usual pension fund."
+msgstr ""
+
+#: templates/components/tuleva-difference.php:6
+msgid "Tuleva's owners are the pension savers themselves — we cut out the middleman to save on fees and better our fund's performance."
+msgstr ""
+
+#: templates/components/tuleva-difference.php:13
+msgid "Tuleva was started by 22 people who believed that we deserved something better than bank-run funds."
+msgstr ""
+
+#: templates/components/tuleva-difference.php:14
+msgid "We believe in passive investments — risk well diversified through stock of large companies and government bonds — with a view to the long term."
+msgstr ""
+
+#: templates/components/tuleva-difference.php:16
+msgid "<a href=\"/en/mutual-company/\" class=\"btn btn-outline-primary btn-lg\">Learn more about Tuleva</a>"
 msgstr ""
 
 #: templates/footer/beacon-toggle.php:3

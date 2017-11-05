@@ -1,5 +1,5 @@
 <section id="founder-stories" class="d-none d-md-block py-6">
-    <div class="container-fluid">
+    <div class="container-fluid mb-4">
         <h2 class="text-center">Asutajaliikmed</h2>
         <!-- CAROUSEL -->
         <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">

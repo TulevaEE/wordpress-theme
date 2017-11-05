@@ -8327,7 +8327,7 @@ small,
   .eeldus:first-of-type {
     padding-top: 0; }
 
-.change-cta {
+.cta-change {
   border-top: 1px solid #e9ecef; }
 
 .read-blog .card {
@@ -8426,19 +8426,32 @@ small,
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
   z-index: 1050;
-  width: 4rem;
-  height: 4rem;
-  background: #fff;
-  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background: #868e96;
+  border-radius: 1rem;
   box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
-  transition: all .25s ease-out; }
+  transition: all .15s ease-out; }
   [class*="close-button-"]:hover {
     cursor: pointer;
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
+  [class*="close-button-"] img {
+    width: 75%;
+    height: 75%; }
+  @media (min-width: 768px) {
+    [class*="close-button-"] {
+      width: 4rem;
+      height: 4rem;
+      right: 2rem;
+      top: 2rem;
+      border-radius: 2rem; }
+      [class*="close-button-"] img {
+        width: auto;
+        height: auto; } }
 
 .proposal {
   display: -webkit-box;
@@ -8496,6 +8509,15 @@ small,
         padding-left: 2.5rem;
         padding-right: 1rem;
         padding-top: 0; } }
+
+.icon-info {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8dGl0bGU+MkVBNDY4NUMtQkQyOC00QUNGLUIwOTUtQzg1NTNFREU3NEYwPC90aXRsZT4KICA8cGF0aCBkPSJNOCAwYTcuOTkgNy45OSAwIDAgMC04IDhjMCA0LjQyNyAzLjU3MyA4IDggOHM4LTMuNTczIDgtOC0zLjU3My04LTgtOHptMSAxM0g3VjdoMnY2em0wLThIN1YzaDJ2MnoiCiAgICBmaWxsPSIjMDA3OEZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIG9wYWNpdHk9Ii44Ii8+Cjwvc3ZnPg=="); }
 
 .fund-info__item {
   border-bottom: 1px solid #dee2e6;
