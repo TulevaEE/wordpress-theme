@@ -109,6 +109,13 @@ acf_add_local_field_group(array (
                 'value' => 'page_fund-bonds.php',
             ),
         ),
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_mutual.php',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'normal',
