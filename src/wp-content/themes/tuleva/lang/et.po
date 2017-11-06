@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-06 13:44:52+00:00\n"
-"PO-Revision-Date: 2017-11-06 15:45+0200\n"
+"POT-Creation-Date: 2017-11-06 21:49:35+00:00\n"
+"PO-Revision-Date: 2017-11-06 23:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
-#: functions.php:25 helpers/acf/init.php:16 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:15 helpers/post-types/init.php:9
 #: widgets/init.php:14
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
@@ -58,15 +58,11 @@ msgid "RSS feed"
 msgstr "RSS voog"
 
 #: templates/components/cta-change.php:5
-#, fuzzy
-#| msgid ""
-#| "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and "
-#| "takes only five minutes</span>."
 msgid ""
 "Switching funds is free <span class=\"d-none d-lg-inline-block\">and takes "
 "only five minutes</span>."
 msgstr ""
-"Fondivahetus on TASUTA<span class=\"d-none d-lg-inline-block\"> ja võtab "
+"Fondivahetus on TASUTA <span class=\"d-none d-lg-inline-block\">ja võtab "
 "vaid 5 minutit</span>."
 
 #: templates/components/cta-change.php:6
@@ -1719,11 +1715,11 @@ msgstr "Saada"
 
 #: templates/footer/blog-beacon.php:2
 msgid ""
-"<a class=\"btn btn-primary btn-block\" href=\"/en/#inline-signup-anchor"
-"\">Join Tuleva</a>"
+"<a class=\"btn btn-primary btn-block\" href=\"/en/mutual-company/#inline-"
+"signup-anchor\">Join Tuleva</a>"
 msgstr ""
-"<a class=\"btn btn-primary btn-block\" href=\"/#inline-signup-anchor\">Liitu "
-"Tulevaga</a>"
+"<a class=\"btn btn-primary btn-block\" href=“/tulundusyhistu/#inline-signup-"
+"anchor\">Liitu Tulevaga</a>"
 
 #: templates/footer/blog-beacon.php:3
 msgid ""
