@@ -75,7 +75,7 @@ class CTA_Primary_Widget extends WP_Widget {
 
         <div class="cta-widget cta-widget--primary">
             <?php if ( ! empty( $title ) ) { ?>
-                <h3 class="cta-widget__title"><?php echo $title; ?></h3>
+                <h4 class="cta-widget__title"><?php echo $title; ?></h4>
             <?php } ?>
 
             <a href="<?php echo $button_url; ?>" class="btn btn-primary btn-lg"><?php echo $button_text; ?></a>

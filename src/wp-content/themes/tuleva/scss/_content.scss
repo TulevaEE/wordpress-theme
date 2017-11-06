@@ -9,12 +9,23 @@
     h1,
     h2,
     h3 {
-        color: $text-primary;
+        color: $navy-blue;
+        font-family: $font-family-serif;
     }
 
     h2,
     h3 {
-        margin-bottom: $line-height-computed;
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: $h3-font-size;
+    }
+    h2 {
+        font-size: $h4-font-size;
+    }
+    h3 {
+        font-size: $h5-font-size;
     }
 }
 
@@ -81,6 +92,10 @@
             height: auto;
         }
 
+        .wp-caption-text {
+            margin-top: .75rem;
+        }
+
         blockquote {
             color: $blue;
             font-size: $font-size-blockquote;
@@ -90,12 +105,12 @@
             margin-top: 70px;
             margin-bottom: 70px;
 
-            @include desktop-lg {
+            @include media-breakpoint-only(lg) {
                 margin-left: -125px;
                 margin-right: -125px;
             }
 
-            @include desktop-xl {
+            @include media-breakpoint-only(xl) {
                 margin-left: -125px;
                 margin-right: -125px;
             }

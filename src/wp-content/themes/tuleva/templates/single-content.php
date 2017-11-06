@@ -2,7 +2,7 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 offset-md-1">
                 <?php if (get_the_title()) { ?>
                     <h1 class="page-title post-title"><?php the_title(); ?></h1>
                 <?php } ?>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-1 col-md-offset-1">
+            <div class="col-md-1 offset-md-1">
                 <div class="post-social">
                     <a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank">
                         <img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook-gray.svg" alt="Facebook">

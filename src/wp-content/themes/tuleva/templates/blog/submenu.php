@@ -18,6 +18,6 @@
                 <a href="<?php echo get_term_link($term_id); ?>"><?php _e('Featured articles', TEXT_DOMAIN); ?></a>
             </li>
         </ul>
-        <a class="pull-right hidden-xs" href="<?php bloginfo('url'); ?>/feed/rss2/"><?php _e('RSS feed', TEXT_DOMAIN); ?></a>
+        <a class="d-none d-md-inline-block" href="<?php bloginfo('url'); ?>/feed/rss2/"><?php _e('RSS feed', TEXT_DOMAIN); ?></a>
     </nav>
 <?php } ?>

@@ -34,7 +34,7 @@
                     <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>"></a>
                 </div>
             <?php } ?>
-            <h3 class="post-list__item__title<?php if ($is_featured) { echo ' h2'; } ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <h5 class="post-list__item__title text-serif<?php if ($is_featured) { echo ' h4'; } ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
             <div class="post-list__item__meta">
                 <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="post-list__item__author"><?php echo get_the_author(); ?></a> <?php the_date(); ?>
             </div>

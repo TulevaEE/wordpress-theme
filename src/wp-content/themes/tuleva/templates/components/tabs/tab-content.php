@@ -17,7 +17,7 @@
                         <?php the_sub_field('content_2'); ?>
                     </div>
                 <?php } else { ?>
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-lg-8 mx-md-auto">
                         <?php the_sub_field('content'); ?>
                     </div>
                 <?php } ?>

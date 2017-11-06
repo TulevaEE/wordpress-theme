@@ -1,14 +1,14 @@
-<div class="bg-alt">
-    <div class="container counter-block">
-        <div class="row row-spacing-half">
-            <h2 class="h1-xs text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
+<div id="faq" class="container mt-6">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>
         </div>
     </div>
 </div>
 
-<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
+<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('qa-block qa-block--collapsed container'); ?>">
     <div class="row">
-        <div class="col-md-offset-1 col-md-10">
+        <div class="mx-md-auto col-lg-10">
             <?php if (have_rows('questions')) $i = 0; {
                 while (have_rows('questions')) { $i++; the_row(); ?>
                     <div class="qa__question-wrapper">
@@ -23,6 +23,11 @@
                     <hr />
                 <?php  }
             } ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mx-md-auto col-lg-10">
+            <a href="#" class="qa-block__expand" data-open-text="<?php _e('More questions', TEXT_DOMAIN) ?>" data-close-text="<?php _e('Less questions', TEXT_DOMAIN); ?>"><?php _e('More questions', TEXT_DOMAIN) ?></a>
         </div>
     </div>
 </div>

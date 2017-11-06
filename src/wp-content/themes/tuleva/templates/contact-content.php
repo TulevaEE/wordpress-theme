@@ -13,7 +13,7 @@
             </div>
             <div class="row row-spacing">
                 <div class="col-md-12">
-                    <div class="contacts-block">
+                    <div class="row contacts-block">
                         <?php if (have_rows('contacts')) {
                             while (have_rows('contacts')) { the_row(); ?>
                                 <div class="col-md-4 contacts-block__item">

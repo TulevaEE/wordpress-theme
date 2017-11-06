@@ -51,8 +51,8 @@ $(document).ready(function($) {
         });
     },
     initBlogBeacon = function() {
-        var $blogBeacon = $('.blog-beacon');
-        var $beaconToggle = $('.beacon-toggle');
+        var $blogBeacon = $('.blog-beacon'),
+            $beaconToggle = $('.beacon-toggle');
 
         $(window).scroll(function() {
             var scrollPosition = $(window).scrollTop(),
@@ -81,11 +81,26 @@ $(document).ready(function($) {
                 hideStickyHeader();
             }
         });
+    },
+    initModal = function(id, target) {
+        $(id).animatedModal({
+            modalTarget: target,
+            color: '#fff',
+            animatedIn: 'fadeIn',
+            animatedOut: 'fadeOut',
+            animationDuration: '.25s'
+        });
     };
 
     initStickyHeader();
     initBeaconToggle();
     initBlogBeacon();
+    initModal('#security', 'securityModal');
+    initModal('#calculator', 'calculatorModal');
+    initModal('#founders', 'foundersModal');
+    initModal('#question-fee', 'questionFeeModal');
+    initModal('#question-profit', 'questionProfitModal');
+    initModal('#question-rights', 'questionRightsModal');
 
     $('.testimonial-slider').unslider({
         nav: false,
@@ -113,6 +128,7 @@ $(document).ready(function($) {
         .not('[href="#"]')
         .not('[href="#0"]')
         .not('[data-toggle="tab"]')
+        .not('[href="#carouselControls"]')
         .on('click', function(ev) {
             // Figure out element to scroll to
             var target = $(this.hash),
@@ -154,11 +170,34 @@ $(document).ready(function($) {
                 }
             }
         });
+
     $('.popper').popover({
         container: 'body',
         html: true,
         content: function () {
             return $(this).next('.popper-content').html();
+        }
+    });
+
+    $('.qa-block').each(function() {
+        if ($(this).find('.qa__question-wrapper').length < 4) {
+            $(this).find('.qa-block__expand').remove();
+        }
+    });
+
+    $('.qa-block__expand').on('click', function(ev) {
+        var currentText = $(this).text(),
+            openText = $(this).data('open-text'),
+            closeText = $(this).data('close-text');
+
+        ev.preventDefault();
+
+        if (currentText === openText) {
+            $(this).closest('.qa-block').removeClass('qa-block--collapsed');
+            $(this).text(closeText);
+        } else {
+            $(this).closest('.qa-block').addClass('qa-block--collapsed');
+            $(this).text(openText);
         }
     });
 });
