@@ -57,16 +57,16 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="#">Prospekt ja tingimused</a>
+                                <a href="http://tuleva.ee/wp-content/uploads/2017/03/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_270317.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond_270317.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="#">Mudelportfell</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2017/09/Tuleva-pensionifondi-rebalansseerimise-mudel-aug2017-Mudelportfell-n%C3%B5ukogule.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="#">Põhiteave</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2017/03/Pohiteave_Maailma-Aktsiate_270317.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
-                                <a href="#">Fondi vara puhasväärtuse määramise kord</a>
+                                <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
                             </li>
                         </ul>
 
@@ -75,16 +75,12 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="#">03.17</a>,
-                                <a href="#">04.17</a>,
-                                <a href="#">05.17</a>,
-                                <a href="#">06.17</a>,
-                                <a href="#">07.17</a>,
-                                <a href="#">08.17</a>,
-                                <a href="#">09.17</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2017/10/TULAPF-investeeringute-aruanne-300917.pdf" target="_blank">09.17</a>
+                                <br>
+                                <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
                             <li>
-                                <a href="#">Poolaasta aruanne</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULAPF-poolaastaaruanne-2017.pdf" target="_blank">Poolaasta aruanne</a>
                             </li>
                             <li class="text-muted">Aastaaruanne</li>
                             <li class="text-muted">Fondi kasumiaruanne</li>
