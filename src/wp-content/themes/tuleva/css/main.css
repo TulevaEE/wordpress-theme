@@ -8895,18 +8895,51 @@ small,
     .bg-hero-main {
       height: 100vh;
       max-height: 720px; } }
+  @media (max-width: 991px) {
+    .bg-hero-main {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/dog-p-1600.jpeg"); } }
+  @media (max-width: 767px) {
+    .bg-hero-main {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/dog-p-1080.jpeg"); } }
+  @media (max-width: 575px) {
+    .bg-hero-main {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/dog-p-500.jpeg"); } }
 
 .bg-hero-mutual {
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad.jpg");
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad_w_2670.jpg");
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat; }
+  @media (max-width: 1199px) {
+    .bg-hero-mutual {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad_w_2356.jpg"); } }
+  @media (max-width: 991px) {
+    .bg-hero-mutual {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad_w_1842.jpg"); } }
+  @media (max-width: 767px) {
+    .bg-hero-mutual {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad_w_1319.jpg"); } }
+  @media (max-width: 575px) {
+    .bg-hero-mutual {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/plikad_w_480.jpg"); } }
 
 .bg-hero-stocks {
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc.jpeg");
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_2670.jpg");
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat; }
+  @media (max-width: 1199px) {
+    .bg-hero-stocks {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_2261.jpg"); } }
+  @media (max-width: 991px) {
+    .bg-hero-stocks {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_1813.jpg"); } }
+  @media (max-width: 767px) {
+    .bg-hero-stocks {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_1266.jpg"); } }
+  @media (max-width: 575px) {
+    .bg-hero-stocks {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_480.jpg"); } }
 
 .bg-blueish-gray {
   background: #f0f4f7; }

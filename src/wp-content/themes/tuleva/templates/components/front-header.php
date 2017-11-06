@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 d-none d-md-flex align-items-center">
-                        <span class="membercount mr-4">5076</span>
+                        <span class="membercount mr-4">5199</span>
                         <p class="mb-0 text-navy"><?php _e('Estonians invest in Tuleva pension funds.', TEXT_DOMAIN); ?></p>
                     </div>
                 </div>

@@ -27,20 +27,53 @@
         height: 100vh;
         max-height: 720px;
     }
+    @include media-breakpoint-down (md) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/dog-p-1600.jpeg');
+    }
+    @include media-breakpoint-down (sm) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/dog-p-1080.jpeg');
+    }
+    @include media-breakpoint-only (xs) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/dog-p-500.jpeg');
+    }
 }
 
 .bg-hero-mutual {
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad.jpg');
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad_w_2670.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
+    @include media-breakpoint-down (lg) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad_w_2356.jpg');
+    }
+    @include media-breakpoint-down (md) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad_w_1842.jpg');
+    }
+    @include media-breakpoint-down (sm) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad_w_1319.jpg');
+    }
+    @include media-breakpoint-only (xs) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/plikad_w_480.jpg');
+    }
 }
 
 .bg-hero-stocks {
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc.jpeg');
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_2670.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
+    @include media-breakpoint-down (lg) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_2261.jpg');
+    }
+    @include media-breakpoint-down (md) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_1813.jpg');
+    }
+    @include media-breakpoint-down (sm) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_1266.jpg');
+    }
+    @include media-breakpoint-only (xs) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_480.jpg');
+    }
 }
 
 .bg-blueish-gray {
@@ -57,9 +90,9 @@
 
 // Shadows
 .shadow-sm {
-    box-shadow: $shadow-sm;    
+    box-shadow: $shadow-sm;
 }
 
 .shadow-md {
-    box-shadow: $shadow-md;    
+    box-shadow: $shadow-md;
 }
