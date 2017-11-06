@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-06 10:47:16+00:00\n"
+"POT-Creation-Date: 2017-11-06 13:44:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +54,7 @@ msgid "RSS feed"
 msgstr ""
 
 #: templates/components/cta-change.php:5
-msgid "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes only five minutes</span>."
+msgid "Switching funds is free <span class=\"d-none d-lg-inline-block\">and takes only five minutes</span>."
 msgstr ""
 
 #: templates/components/cta-change.php:6
@@ -76,6 +76,11 @@ msgstr ""
 #: templates/components/featured-articles-et.php:3
 #: templates/components/featured-articles.php:3
 msgid "Read our blog"
+msgstr ""
+
+#: templates/components/founder-stories.php:3
+#: templates/components/modal-founders.php:11
+msgid "Founding members"
 msgstr ""
 
 #: templates/components/founder-stories.php:16
@@ -133,6 +138,10 @@ msgstr ""
 #: templates/components/founder-stories.php:60
 #: templates/components/front-founders.php:79
 msgid "It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves."
+msgstr ""
+
+#: templates/components/founder-stories.php:84
+msgid "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary\">See all founding members</a>"
 msgstr ""
 
 #: templates/components/front-header.php:6

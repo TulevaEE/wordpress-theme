@@ -1,6 +1,6 @@
 <section id="founder-stories" class="d-none d-md-block py-6">
     <div class="container-fluid mb-4">
-        <h2 class="text-center">Asutajaliikmed</h2>
+        <h2 class="text-center"><?php _e('Founding members', TEXT_DOMAIN); ?></h2>
         <!-- CAROUSEL -->
         <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
@@ -81,7 +81,7 @@
             <div class="col text-center">
                 <img src="<?php echo get_template_directory_uri() ?>/img/founder-thumbnails.jpg" alt="Kõik Tuleva asutajaliikmed" class="mb-4">
                 <br>
-                <a id="founders" href="#foundersModal" class="btn btn-outline-primary">Kõik Tuleva asutajaliikmed</a>
+                <?php _e('<a id="founders" href="#foundersModal" class="btn btn-outline-primary">See all founding members</a>', TEXT_DOMAIN); ?>
             </div>
         </div>
     </div>

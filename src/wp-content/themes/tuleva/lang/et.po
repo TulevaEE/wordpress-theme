@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-06 10:47:16+00:00\n"
-"PO-Revision-Date: 2017-11-06 12:49+0200\n"
+"POT-Creation-Date: 2017-11-06 13:44:52+00:00\n"
+"PO-Revision-Date: 2017-11-06 15:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -58,8 +58,12 @@ msgid "RSS feed"
 msgstr "RSS voog"
 
 #: templates/components/cta-change.php:5
+#, fuzzy
+#| msgid ""
+#| "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and "
+#| "takes only five minutes</span>."
 msgid ""
-"Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes "
+"Switching funds is free <span class=\"d-none d-lg-inline-block\">and takes "
 "only five minutes</span>."
 msgstr ""
 "Fondivahetus on TASUTA<span class=\"d-none d-lg-inline-block\"> ja võtab "
@@ -85,6 +89,11 @@ msgstr "Liitu Tulevaga"
 #: templates/components/featured-articles.php:3
 msgid "Read our blog"
 msgstr "Loe meie blogi"
+
+#: templates/components/founder-stories.php:3
+#: templates/components/modal-founders.php:11
+msgid "Founding members"
+msgstr "Asutajaliikmed"
 
 #: templates/components/founder-stories.php:16
 #: templates/components/founder-stories.php:36
@@ -182,6 +191,14 @@ msgstr ""
 "Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks "
 "muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
 "ehitamisel."
+
+#: templates/components/founder-stories.php:84
+msgid ""
+"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary"
+"\">See all founding members</a>"
+msgstr ""
+"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary"
+"\">Vaata kõiki asutajaliikmeid</a>"
 
 #: templates/components/front-header.php:6
 msgid "A pension should benefit you. Not your bank."
