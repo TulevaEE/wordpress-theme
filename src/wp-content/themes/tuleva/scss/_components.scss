@@ -1186,3 +1186,25 @@
         white-space: normal;
     }
 }
+
+.list-subscribe {
+    font-size: 0;
+
+    .mc-field-group {
+        width: 100%;
+    }
+
+    .email {
+        width: 100%;
+        height: 48px;
+        padding: 12px;
+        font-size: $font-size-md;
+        outline: none;
+        border: 1px solid rgba(0, 47, 99, 0.16);
+        border-radius: 4px 0 0 4px;
+
+        &::placeholder {
+            color: $very-light-gray;
+        }
+    }
+}

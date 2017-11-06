@@ -1,4 +1,4 @@
-<div class="container">
+<div id="tuleva-story" class="container">
     <div class="row row-spacing-half">
         <div class="col">
             <h2 class="text-center">

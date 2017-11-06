@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-05 21:37:08+00:00\n"
-"PO-Revision-Date: 2017-11-05 23:39+0200\n"
+"POT-Creation-Date: 2017-11-06 10:47:16+00:00\n"
+"PO-Revision-Date: 2017-11-06 12:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -252,23 +252,24 @@ msgstr "Kõrgete tasude kulu"
 msgid "Want to know how to start saving?"
 msgstr "Soovid teada, kuidas alustada säästmist?"
 
-#: templates/components/front-header.php:117
-msgid ""
-"<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Send me "
-"information</a>"
-msgstr ""
-"<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Saada mulle infot</"
-"a>"
+#: templates/components/front-header.php:121
+#: templates/footer/subscribe-form.php:6
+msgid "Your e-mail address"
+msgstr "Sinu e-maili aadress"
 
-#: templates/components/front-header.php:129
+#: templates/components/front-header.php:131
+msgid "Send me information"
+msgstr "Saatke mulle infot"
+
+#: templates/components/front-header.php:146
 msgid "Every bit as safe as a bank-run fund."
 msgstr "Sama turvaline kui panga pensionifond."
 
-#: templates/components/front-header.php:130
+#: templates/components/front-header.php:147
 msgid "Find out more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/front-header.php:135
+#: templates/components/front-header.php:152
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
@@ -1715,10 +1716,6 @@ msgstr ""
 "<a class=\"btn btn-link btn-block\" href=\"/kuidas-tuua-pension-tulevasse/"
 "\">Too pension üle</a>"
 
-#: templates/footer/subscribe-form.php:6
-msgid "Your e-mail address"
-msgstr "Sinu e-maili aadress"
-
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
 msgstr ""
@@ -1863,6 +1860,13 @@ msgstr "Liikmeks astutud"
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
+
+#~ msgid ""
+#~ "<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Send me "
+#~ "information</a>"
+#~ msgstr ""
+#~ "<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Saada mulle "
+#~ "infot</a>"
 
 #~ msgid "See fund info"
 #~ msgstr "Vaata fondi infot"

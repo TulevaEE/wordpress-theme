@@ -1,4 +1,4 @@
-<div class="container mt-6">
+<div id="faq" class="container mt-6">
     <div class="row">
         <div class="col">
             <h2 class="text-center"><?php _e('Answers to frequently asked questions', TEXT_DOMAIN) ?></h2>

@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="row text-center">
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="security-block">
                             <div class="security-block__icon">
                                 <img src="<?php echo get_template_directory_uri() ?>/img/icon-umbrella.svg" alt="Umbrella">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="security-block">
                             <div class="security-block__icon">
                                 <img src="<?php echo get_template_directory_uri() ?>/img/icon-safe.svg" alt="Safe">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="security-block">
                             <div class="security-block__icon">
                                 <img src="<?php echo get_template_directory_uri() ?>/img/icon-lifesaver.svg" alt="Lifesaver">
