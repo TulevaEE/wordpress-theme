@@ -9,12 +9,23 @@
     h1,
     h2,
     h3 {
-        color: $text-primary;
+        color: $navy-blue;
+        font-family: $font-family-serif;
     }
 
     h2,
     h3 {
         margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: $h3-font-size;
+    }
+    h2 {
+        font-size: $h4-font-size;
+    }
+    h3 {
+        font-size: $h5-font-size;
     }
 }
 
@@ -79,6 +90,10 @@
         figure {
             max-width: 100%;
             height: auto;
+        }
+
+        .wp-caption-text {
+            margin-top: .75rem;
         }
 
         blockquote {

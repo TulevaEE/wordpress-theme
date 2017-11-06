@@ -8072,11 +8072,20 @@ small,
 .submenu {
   padding-top: 40px;
   margin-bottom: 40px;
-  box-shadow: inset 0 -1px 0 0 #d6dee6; }
+  box-shadow: inset 0 -1px 0 0 #d6dee6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   .submenu__list {
     list-style: none;
     padding: 0;
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: .75rem; }
   .submenu__item {
     display: inline-block;
     font-size: 1.25em;
@@ -8088,18 +8097,19 @@ small,
       font-weight: bold;
       box-shadow: inset 0 -4px 0 0 #0081EE; }
   @media (max-width: 767px) {
-    .submenu {
-      box-shadow: none; }
-      .submenu__list {
-        display: block; }
-      .submenu__item {
-        display: block; }
-        .submenu__item a {
-          display: block;
-          margin: 0;
-          padding: 20px;
-          box-shadow: none;
-          border: 2px solid #d6dee6; } }
+    .submenu__list {
+      display: inline-block;
+      margin-bottom: 0; }
+    .submenu__item a {
+      display: block;
+      margin: 0;
+      padding: 1rem; } }
+  @media (max-width: 767px) and (max-width: 767px) {
+    .submenu__item a {
+      font-size: 1rem; } }
+  @media (max-width: 767px) {
+    .submenu__item:nth-of-type(odd) a {
+      padding-left: 0; } }
 
 .post-list {
   display: -webkit-box;
@@ -8122,7 +8132,8 @@ small,
     .post-list__item__image {
       overflow: hidden;
       max-height: 350px;
-      border-radius: 4px; }
+      border-radius: 4px;
+      margin-bottom: 1rem; }
       .post-list__item__image a {
         display: block; }
       .post-list__item__image img {
@@ -8175,7 +8186,7 @@ small,
 
 .cta-widget {
   border-radius: 4px;
-  padding: 0 1.5em; }
+  padding: 1.5rem 1.5rem 0; }
   .cta-widget--primary {
     background-color: #edf7fe;
     border: 2px solid #0081EE; }
@@ -8184,7 +8195,8 @@ small,
   .cta-widget__title {
     text-align: center;
     font-size: 1.5em;
-    margin-bottom: 1rem; }
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    margin-bottom: 1.5rem; }
     .cta-widget__title--link {
       display: inline-block;
       text-align: left;
@@ -9150,10 +9162,17 @@ small,
   .content h1,
   .content h2,
   .content h3 {
-    color: #303030; }
+    color: #002F63;
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif; }
   .content h2,
   .content h3 {
     margin-bottom: 1.5rem; }
+  .content h1 {
+    font-size: 1.75rem; }
+  .content h2 {
+    font-size: 1.5rem; }
+  .content h3 {
+    font-size: 1.25rem; }
 
 .single-post .page-title {
   line-height: 1.25;
@@ -9197,6 +9216,8 @@ small,
   .single-post .content figure {
     max-width: 100%;
     height: auto; }
+  .single-post .content .wp-caption-text {
+    margin-top: .75rem; }
   .single-post .content blockquote {
     color: #0081EE;
     font-size: 2rem;
