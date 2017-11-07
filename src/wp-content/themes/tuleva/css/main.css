@@ -8322,16 +8322,6 @@ small,
 .card.calculator .savings {
   color: #0081EE; }
 
-.qa-block--collapsed .qa__question-wrapper:nth-child(n+6),
-.qa-block--collapsed .qa__question-wrapper:nth-child(n+6) + hr {
-  display: none; }
-
-.qa-block__expand {
-  margin: 24px 0;
-  display: block;
-  text-align: center;
-  text-transform: uppercase; }
-
 .eeldus {
   width: 100%;
   box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.12);
@@ -8789,15 +8779,25 @@ small,
   -ms-flex-align: center;
   align-items: center; }
 
-.qa__question {
-  font-size: 20px;
+.qa-block--collapsed .qa__question-wrapper:nth-child(n+6),
+.qa-block--collapsed .qa__question-wrapper:nth-child(n+6) + hr {
+  display: none; }
+
+.qa-block__expand {
+  margin: 24px 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase; }
+
+.qa__question, .qa__question:active, .qa__question:focus {
+  font-size: 1rem;
   color: #002F63;
   font-weight: 500;
   margin: 30px 0;
   padding: 0 30px 0 0;
   display: block;
   text-align: left;
-  background: url("../img/icon-plussign.svg") no-repeat right 15px center;
+  background: url("../img/icon-plussign.svg") no-repeat right center;
   white-space: normal; }
 
 .list-subscribe {

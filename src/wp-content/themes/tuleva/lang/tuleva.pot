@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-07 09:15:16+00:00\n"
+"POT-Creation-Date: 2017-11-07 12:02:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -661,7 +661,7 @@ msgid "23yrs"
 msgstr ""
 
 #: templates/components/modal-calculator.php:38
-msgid "Detailed calculation in Google Docs"
+msgid "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed calculation in Google Docs</a>"
 msgstr ""
 
 #: templates/components/modal-founders.php:24
@@ -887,11 +887,11 @@ msgstr ""
 msgid "Answers to frequently asked questions"
 msgstr ""
 
-#: templates/components/qa-block.php:30
+#: templates/components/qa-block.php:29
 msgid "More questions"
 msgstr ""
 
-#: templates/components/qa-block.php:30
+#: templates/components/qa-block.php:29
 msgid "Less questions"
 msgstr ""
 

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-07 09:15:16+00:00\n"
-"PO-Revision-Date: 2017-11-07 11:15+0200\n"
+"POT-Creation-Date: 2017-11-07 12:02:27+00:00\n"
+"PO-Revision-Date: 2017-11-07 14:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -912,8 +912,16 @@ msgid "23yrs"
 msgstr "23a"
 
 #: templates/components/modal-calculator.php:38
-msgid "Detailed calculation in Google Docs"
-msgstr "Üksikasjadega mudel Google Docsis"
+msgid ""
+"<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
+"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
+"\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed calculation in "
+"Google Docs</a>"
+msgstr ""
+"<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
+"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
+"\" target=\"_blank\" rel=\"noopener noreferrer\">Üksikasjadega arvutus "
+"Google Docsis.</a>"
 
 #: templates/components/modal-founders.php:24
 msgid ""
@@ -1396,11 +1404,11 @@ msgstr ""
 msgid "Answers to frequently asked questions"
 msgstr "Korduvad küsimused"
 
-#: templates/components/qa-block.php:30
+#: templates/components/qa-block.php:29
 msgid "More questions"
 msgstr "Rohkem küsimusi"
 
-#: templates/components/qa-block.php:30
+#: templates/components/qa-block.php:29
 msgid "Less questions"
 msgstr "Vähem küsimusi"
 
@@ -1873,6 +1881,9 @@ msgstr "Liikmeks astutud"
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
+
+#~ msgid "Detailed calculation in Google Docs"
+#~ msgstr "Üksikasjadega mudel Google Docsis"
 
 #~ msgid ""
 #~ "<a href=\"#\" class=\"btn btn-primary btn-lg btn-block\">Send me "
