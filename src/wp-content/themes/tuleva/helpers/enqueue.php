@@ -27,7 +27,7 @@ class ThemeEnqueue {
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '25102017',
+                'ver' => '07112017',
                 'media' => 'all',
                 'enqueue' => true
             ],

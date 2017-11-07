@@ -1187,6 +1187,7 @@
     }
 }
 
+//Subscribe section in main header
 .list-subscribe {
     font-size: 0;
 
@@ -1208,3 +1209,10 @@
         }
     }
 }
+
+//Card header image border radius override
+
+.rounded-top {
+    border-top-left-radius: $border-radius-md !important;
+    border-top-right-radius: $border-radius-md !important;
+  }

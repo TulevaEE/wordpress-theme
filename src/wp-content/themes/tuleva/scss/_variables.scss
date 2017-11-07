@@ -6,8 +6,8 @@
  $text-secondary: rgba(48, 48, 48, 0.64);
  $text-hint: rgba(48, 48, 48, 0.32);
  $text-secondary-heading: #2a2c2e;
- 
- 
+
+
  $blue: #0081EE;
  $navy-blue: #002F63;
  $blue-light: #00AEEA;
@@ -22,16 +22,16 @@
  $gray-washed: rgba(0,0,0,.12);
  $very-light-gray: rgba(48, 48, 48, 0.32);
  $border-gray: #d6dee6;
- 
+
  $heading-primary: $navy-blue;
- 
+
  // SHADOWS
- 
+
  $shadow-sm: 0 0 48px 0 rgba(0, 0, 0, .08);
  $shadow-md: 0 0 64px 0 rgba(0, 0, 0, .12);
- 
+
  // SPACING
- 
+
  $spacer: 1rem !default;
  $spacers: (
    0: 0,
@@ -42,27 +42,28 @@
    5: ($spacer * 3),
    6: ($spacer * 5)
  ) !default;
- 
+
  /**
   * Brand definitions
   */
- 
+
  $brand-primary: $blue !default;
  $brand-success: $green !default;
  $body-color: $text-primary !default;
  $body-color-alt: $blue-washed !default;
- 
+
  $body-gradient-start: #fff !default;
  $body-gradient-stop: $body-color-alt !default;
  $card-border-width: 0;
  $dropdown-box-shadow: 0 .5rem 2rem rgba(0,0,0,.16);
- 
+
  $border-radius-md: .5rem;
- 
+ $card-border-radius: $border-radius-md;
+
  /**
  * Fonts customization
  */
- 
+
  $font-family-sans-serif: 'Roboto', "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
  $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
  $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
@@ -77,23 +78,23 @@
  $font-weight-medium: 500 !default;
  $line-height-xl: 1.25 !default;
  $lead-font-weight: normal !default;
- 
+
  $h1-font-size: 2.5rem !default;
  $h2-font-size: 2rem !default;
  $h3-font-size: 1.75rem !default;
  $h4-font-size: 1.5rem !default;
  $h5-font-size: 1.25rem !default;
  $h6-font-size: 1rem !default;
- 
+
  // Buttons
  $btn-font-weight: 500 !default;
  $btn-border-radius-xl: 8px !default;
  $padding-xl-horizontal: 60px !default;
  $padding-xl-vertical: 16px !default;
- 
+
  // Widgets
  $widget-primary-bg-color: $blue-washed !default;
- 
+
  // Navbar
  $navbar-height: 72px !default;
  $navbar-padding-vertical: 25px !default;
@@ -103,14 +104,14 @@
  $navbar-toggle-color: $navy-blue !default;
  $navbar-default-brand-hover-color: $brand-primary !default;
  $navbar-default-brand-hover-bg: transparent !default;
- 
+
  // Footer
  $footer-bg-color: $blueish-gray !default;
- 
+
  // Carousel
- 
+
  $carousel-control-opacity:                    .32 !default;
  $carousel-control-icon-width:                 48px !default;
- 
+
  $carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
  $carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
