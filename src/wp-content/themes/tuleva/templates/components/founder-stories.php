@@ -32,7 +32,7 @@
                                 <div class="founder-story">
                                     <div class="founder-story__person founder-story__person--annika"></div>
                                     <div class="founder-story__content">
-                                        <h3 class="mb-0">Annika Ruusalepp</h3>
+                                        <h3 class="mb-0">Annika Uudelepp</h3>
                                         <p class="text-navy mb-4"><?php _e('Tuleva founder', TEXT_DOMAIN); ?></p>
                                         <p class="text-navy mb-4"><?php _e('II pillar: Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                                         </p>
