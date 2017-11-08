@@ -22,13 +22,17 @@ input::-webkit-contacts-auto-fill-button {
     pointer-events: none;
     position: absolute;
     right: 0;
-  }
+}
 
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 .list-style-arrow {
     list-style: none;
@@ -54,7 +58,6 @@ input::-webkit-contacts-auto-fill-button {
             padding-left: 1.5em;
             background-position: 0 .5em;
         }
-
         &:last-of-type {
             margin-bottom: 0;
         }

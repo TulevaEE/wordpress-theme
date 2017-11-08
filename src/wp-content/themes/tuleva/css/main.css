@@ -7482,6 +7482,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+input[type=number] {
+  -moz-appearance: textfield; }
+
 .list-style-arrow {
   list-style: none;
   padding-left: 30px; }
