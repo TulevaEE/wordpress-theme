@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-07 12:02:27+00:00\n"
+"POT-Creation-Date: 2017-11-13 11:29:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -149,7 +149,7 @@ msgid "A pension should benefit you. Not your bank."
 msgstr ""
 
 #: templates/components/front-header.php:7
-msgid "Tuleva pension funds belong to their investors — with up to four times lower fees than bank-run plans."
+msgid "Tuleva pension funds belong to their investors — with up to four times lower fees than bank-run plans.*"
 msgstr ""
 
 #: templates/components/front-header.php:8
@@ -184,45 +184,45 @@ msgstr ""
 msgid "grow"
 msgstr ""
 
-#: templates/components/front-header.php:28
+#: templates/components/front-header.php:29
 msgid "Estonian pension fund average"
 msgstr ""
 
-#: templates/components/front-header.php:93
-#: templates/components/front-header.php:100
+#: templates/components/front-header.php:94
+#: templates/components/front-header.php:101
 msgid "Annual fees"
 msgstr ""
 
-#: templates/components/front-header.php:97
-msgid "In a single low-cost fund"
+#: templates/components/front-header.php:98
+msgid "In Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-header.php:104
+#: templates/components/front-header.php:106
 msgid "Cost of high fees"
 msgstr ""
 
-#: templates/components/front-header.php:115
+#: templates/components/front-header.php:117
 msgid "Want to know how to start saving?"
 msgstr ""
 
-#: templates/components/front-header.php:121
+#: templates/components/front-header.php:123
 #: templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"
 msgstr ""
 
-#: templates/components/front-header.php:131
+#: templates/components/front-header.php:133
 msgid "Send me information"
 msgstr ""
 
-#: templates/components/front-header.php:146
+#: templates/components/front-header.php:148
 msgid "Every bit as safe as a bank-run fund."
 msgstr ""
 
-#: templates/components/front-header.php:147
+#: templates/components/front-header.php:149
 msgid "Find out more"
 msgstr ""
 
-#: templates/components/front-header.php:152
+#: templates/components/front-header.php:154
 msgid "Estonians invest in Tuleva pension funds."
 msgstr ""
 
@@ -371,8 +371,8 @@ msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:35
-#: templates/components/fund-choosing.php:37
+#: templates/components/fund-choosing.php:36
+#: templates/components/fund-choosing.php:38
 msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
 
@@ -390,8 +390,8 @@ msgid "you are willing to forgo higher returns in order to avoid losses"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:24
-#: templates/components/fund-choosing.php:26
-#: templates/components/fund-choosing.php:47
+#: templates/components/fund-choosing.php:27
+#: templates/components/fund-choosing.php:48
 #: templates/components/fund-stocks-header.php:26
 msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block\">Select this fund</a>"
 msgstr ""
@@ -408,49 +408,49 @@ msgstr ""
 msgid "Which Tuleva pension fund to choose?"
 msgstr ""
 
-#: templates/components/fund-choosing.php:11
+#: templates/components/fund-choosing.php:12
 msgid "If you are less than 55 years old, then the fund suitable to you is"
 msgstr ""
 
-#: templates/components/fund-choosing.php:14
-#: templates/components/fund-choosing.php:16
+#: templates/components/fund-choosing.php:15
+#: templates/components/fund-choosing.php:17
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/fund-choosing.php:17
-msgid "The equity fund with lowest costs in Estonia: management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio <span class=\"text-highlight\"><strong>0,5%</strong></span>"
-msgstr ""
-
-#: templates/components/fund-choosing.php:19
-msgid "Most of the money is invested in stocks: bigger expected return and risk"
+#: templates/components/fund-choosing.php:18
+msgid "The equity fund with lowest costs in Estonia*: management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio <span class=\"text-highlight\"><strong>0,5%</strong></span>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:20
+msgid "Most of the money is invested in stocks: bigger expected return and risk"
+msgstr ""
+
+#: templates/components/fund-choosing.php:21
 msgid "Suitable for you if you want <span class=\"text-highlight\"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market"
 msgstr ""
 
-#: templates/components/fund-choosing.php:25
+#: templates/components/fund-choosing.php:26
 msgid "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase text-medium d-block mb-4\">See fund info</a>"
 msgstr ""
 
-#: templates/components/fund-choosing.php:32
+#: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
 msgstr ""
 
-#: templates/components/fund-choosing.php:38
+#: templates/components/fund-choosing.php:39
 msgid "Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</strong></span> and total expenses <span class=\"text-highlight\"><strong>0,5%</strong></span>"
 msgstr ""
 
-#: templates/components/fund-choosing.php:40
+#: templates/components/fund-choosing.php:41
 msgid "Money is invested into world goverments’ and governmental organisations’ bonds: smaller risk, smaller expected return"
 msgstr ""
 
-#: templates/components/fund-choosing.php:41
+#: templates/components/fund-choosing.php:42
 msgid "This suits you in case you have just a few years till retirement or in case you are willing to forgo returns in order to avoid losses"
 msgstr ""
 
-#: templates/components/fund-choosing.php:46
+#: templates/components/fund-choosing.php:47
 msgid "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-medium d-block mb-4\">See fund info</a>"
 msgstr ""
 

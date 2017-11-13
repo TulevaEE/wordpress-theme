@@ -7524,9 +7524,6 @@ a:focus {
   color: #0081EE;
   text-decoration: underline; }
 
-.brand-logo {
-  max-width: 150px; }
-
 .control-code {
   font-size: 5em;
   font-weight: bold; }
@@ -8299,7 +8296,7 @@ small,
   color: #002F63;
   font-weight: 500; }
 
-.card.calculator input {
+.calculator input {
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 700;
@@ -8308,22 +8305,133 @@ small,
   background: #fff;
   line-height: 1; }
 
-.card.calculator input#age {
+.calculator input#age {
   max-width: 3rem; }
 
-.card.calculator input#netWage {
+.calculator input#netWage {
   max-width: 4.5rem; }
 
-.card.calculator .calculator__heading {
+.calculator__heading {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2; }
 
-.card.calculator .calculator__comparison-row:first-of-type {
-  margin-bottom: 1px; }
+.calculator__comparison-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #edf7fe; }
+  .calculator__comparison-row:first-of-type {
+    margin-bottom: 1px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; }
+  .calculator__comparison-row:last-of-type {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; }
+  @media (min-width: 576px) {
+    .calculator__comparison-row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
-.card.calculator .savings {
-  color: #0081EE; }
+.calculator__comparison-fund {
+  margin-bottom: 1rem; }
+  @media (min-width: 576px) {
+    .calculator__comparison-fund {
+      margin-bottom: 0; } }
+
+.calculator__comparison-result {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media (min-width: 576px) {
+    .calculator__comparison-result {
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      margin-left: 1.5rem; } }
+
+.calculator__savings {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 1.5rem; }
+  @media (min-width: 576px) {
+    .calculator__savings {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 1rem; } }
+
+.calculator__savings-title {
+  color: #002F63;
+  font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+  @media (min-width: 576px) {
+    .calculator__savings-title {
+      margin-right: 1rem;
+      margin-bottom: 0; } }
+
+.calculator__sum {
+  color: #FF4800;
+  font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 0; }
+  @media (min-width: 576px) {
+    .calculator__sum {
+      margin-right: 1rem; } }
 
 .eeldus {
   width: 100%;
@@ -9085,7 +9193,9 @@ small,
       color: #0081EE; } }
 
 .navbar .brand-logo {
-  max-height: 3rem; }
+  max-height: 3rem;
+  max-width: 110px;
+  width: 100%; }
 
 .navbar .dropdown-menu {
   left: 0;

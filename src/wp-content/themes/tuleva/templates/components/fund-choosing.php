@@ -15,7 +15,7 @@
                                 <?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                             </h4>
                             <img src="<?php echo get_template_directory_uri() ?>/img/aktsiafond-pie.svg?v2" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
-                            <p class="text-left"><?php _e('The equity fund with lowest costs in Estonia: management fee <span class="text-highlight"><strong>0,34%</strong></span> and total expense ratio <span class="text-highlight"><strong>0,5%</strong></span>', TEXT_DOMAIN); ?></p>
+                            <p class="text-left"><?php _e('The equity fund with lowest costs in Estonia*: management fee <span class="text-highlight"><strong>0,34%</strong></span> and total expense ratio <span class="text-highlight"><strong>0,5%</strong></span>', TEXT_DOMAIN); ?></p>
                             <ul class="text-left list-style-checkmark mb-0">
                                 <li><?php _e('Most of the money is invested in stocks: bigger expected return and risk', TEXT_DOMAIN); ?></li>
                                 <li><?php _e('Suitable for you if you want <span class="text-highlight"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market', TEXT_DOMAIN); ?></li>

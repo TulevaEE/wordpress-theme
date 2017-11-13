@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-07 12:02:27+00:00\n"
-"PO-Revision-Date: 2017-11-07 14:04+0200\n"
+"POT-Creation-Date: 2017-11-13 11:29:47+00:00\n"
+"PO-Revision-Date: 2017-11-13 13:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -203,10 +203,10 @@ msgstr "Kogu pensionit endale, mitte pangale."
 #: templates/components/front-header.php:7
 msgid ""
 "Tuleva pension funds belong to their investors — with up to four times lower "
-"fees than bank-run plans."
+"fees than bank-run plans.*"
 msgstr ""
 "Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 4x soodsama "
-"valitsemistasuga."
+"valitsemistasuga.*"
 
 #: templates/components/front-header.php:8
 msgid ""
@@ -244,45 +244,45 @@ msgstr "eelduslikult"
 msgid "grow"
 msgstr "pensioniks"
 
-#: templates/components/front-header.php:28
+#: templates/components/front-header.php:29
 msgid "Estonian pension fund average"
 msgstr "Eesti keskmises pensionifondis"
 
-#: templates/components/front-header.php:93
-#: templates/components/front-header.php:100
+#: templates/components/front-header.php:94
+#: templates/components/front-header.php:101
 msgid "Annual fees"
 msgstr "Tasud aastas"
 
-#: templates/components/front-header.php:97
-msgid "In a single low-cost fund"
-msgstr "Madala tasuga fondis"
+#: templates/components/front-header.php:98
+msgid "In Tuleva pension fund"
+msgstr "Tuleva pensionifondis"
 
-#: templates/components/front-header.php:104
+#: templates/components/front-header.php:106
 msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
-#: templates/components/front-header.php:115
+#: templates/components/front-header.php:117
 msgid "Want to know how to start saving?"
 msgstr "Soovid teada, kuidas alustada säästmist?"
 
-#: templates/components/front-header.php:121
+#: templates/components/front-header.php:123
 #: templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"
 msgstr "Sinu e-maili aadress"
 
-#: templates/components/front-header.php:131
+#: templates/components/front-header.php:133
 msgid "Send me information"
 msgstr "Saatke mulle infot"
 
-#: templates/components/front-header.php:146
+#: templates/components/front-header.php:148
 msgid "Every bit as safe as a bank-run fund."
 msgstr "Sama turvaline kui panga pensionifond."
 
-#: templates/components/front-header.php:147
+#: templates/components/front-header.php:149
 msgid "Find out more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/front-header.php:152
+#: templates/components/front-header.php:154
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
@@ -455,8 +455,8 @@ msgid "Reports"
 msgstr "Aruanded"
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:35
-#: templates/components/fund-choosing.php:37
+#: templates/components/fund-choosing.php:36
+#: templates/components/fund-choosing.php:38
 msgid "Tuleva World Bonds Pension Fund"
 msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
@@ -476,8 +476,8 @@ msgid "you are willing to forgo higher returns in order to avoid losses"
 msgstr "oled nõus kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
 
 #: templates/components/fund-bonds-header.php:24
-#: templates/components/fund-choosing.php:26
-#: templates/components/fund-choosing.php:47
+#: templates/components/fund-choosing.php:27
+#: templates/components/fund-choosing.php:48
 #: templates/components/fund-stocks-header.php:26
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
@@ -504,33 +504,33 @@ msgstr ""
 msgid "Which Tuleva pension fund to choose?"
 msgstr "Milline Tuleva pensionifond valida?"
 
-#: templates/components/fund-choosing.php:11
+#: templates/components/fund-choosing.php:12
 msgid "If you are less than 55 years old, then the fund suitable to you is"
 msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
 
-#: templates/components/fund-choosing.php:14
-#: templates/components/fund-choosing.php:16
+#: templates/components/fund-choosing.php:15
+#: templates/components/fund-choosing.php:17
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
-#: templates/components/fund-choosing.php:17
+#: templates/components/fund-choosing.php:18
 msgid ""
-"The equity fund with lowest costs in Estonia: management fee <span class="
+"The equity fund with lowest costs in Estonia*: management fee <span class="
 "\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio "
 "<span class=\"text-highlight\"><strong>0,5%</strong></span>"
 msgstr ""
-"Kõige madalamate kuludega aktsiafond Eestis: valitsemistasu <span class="
+"Kõige madalamate kuludega aktsiafond Eestis*: valitsemistasu <span class="
 "\"text-highlight\"><strong>0,34%</strong></span> ja kogukulu <span class="
 "\"text-highlight\"><strong>0,5%</strong></span>"
 
-#: templates/components/fund-choosing.php:19
+#: templates/components/fund-choosing.php:20
 msgid ""
 "Most of the money is invested in stocks: bigger expected return and risk"
 msgstr ""
 "Suurem osa rahast investeeritakse aktsiatesse: suurem võimalik tulu ja risk"
 
-#: templates/components/fund-choosing.php:20
+#: templates/components/fund-choosing.php:21
 msgid ""
 "Suitable for you if you want <span class=\"text-highlight\"><strong>best "
 "expected return</strong></span> over long term and you are not disturbed by "
@@ -540,7 +540,7 @@ msgstr ""
 "\"><strong>parimat võimalikku tootlust</strong></span> pika aja vältel ja "
 "sind ei löö rivist välja turu lühiajalised kõikumised"
 
-#: templates/components/fund-choosing.php:25
+#: templates/components/fund-choosing.php:26
 msgid ""
 "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase "
 "text-medium d-block mb-4\">See fund info</a>"
@@ -548,11 +548,11 @@ msgstr ""
 "<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" class=\"text-uppercase "
 "text-medium d-block mb-4\">Vaata fondi infot</a>"
 
-#: templates/components/fund-choosing.php:32
+#: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
 msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
 
-#: templates/components/fund-choosing.php:38
+#: templates/components/fund-choosing.php:39
 msgid ""
 "Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</"
 "strong></span> and total expenses <span class=\"text-highlight"
@@ -562,7 +562,7 @@ msgstr ""
 "strong></span> ja kogukulu <span class=\"text-highlight\"><strong>0,5%</"
 "strong></span>"
 
-#: templates/components/fund-choosing.php:40
+#: templates/components/fund-choosing.php:41
 msgid ""
 "Money is invested into world goverments’ and governmental organisations’ "
 "bonds: smaller risk, smaller expected return"
@@ -570,7 +570,7 @@ msgstr ""
 "Raha on maailma valitsuste ja nendega seotud organisatsioonide võlakirjades: "
 "väiksem risk, väiksem võimalik tulu"
 
-#: templates/components/fund-choosing.php:41
+#: templates/components/fund-choosing.php:42
 msgid ""
 "This suits you in case you have just a few years till retirement or in case "
 "you are willing to forgo returns in order to avoid losses"
@@ -578,7 +578,7 @@ msgstr ""
 "Sobib sulle, kui sul on pensionini jäänud vaid mõni aasta või oled nõus "
 "kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
 
-#: templates/components/fund-choosing.php:46
+#: templates/components/fund-choosing.php:47
 msgid ""
 "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-"
 "medium d-block mb-4\">See fund info</a>"
@@ -794,7 +794,7 @@ msgstr ""
 
 #: templates/components/fund-stocks-header.php:25
 msgid "of people chose this fund"
-msgstr "pensionikogujate valik"
+msgstr "Tuleva pensionifondides kogujate valik"
 
 #: templates/components/goals.php:5
 msgid "Done"
@@ -1881,6 +1881,12 @@ msgstr "Liikmeks astutud"
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
+
+#~ msgid "In Tuleva fund"
+#~ msgstr "Tuleva pensionifondis"
+
+#~ msgid "In a single low-cost fund"
+#~ msgstr "Madala tasuga fondis"
 
 #~ msgid "Detailed calculation in Google Docs"
 #~ msgstr "Üksikasjadega mudel Google Docsis"

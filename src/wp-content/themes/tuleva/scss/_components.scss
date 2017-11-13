@@ -718,7 +718,8 @@
     font-weight: $font-weight-medium;
 }
 
-.card.calculator {
+//Header calculator styles
+.calculator {
     input {
         display: inline-block;
         font-size: $font-size-md;
@@ -726,30 +727,96 @@
         padding:.125em .5em;
         color: $blue;
         background: $white;
-        //border-radius: 0;
-        //border: none;
-        //border-bottom: 2px solid $blue-light;
         line-height: 1;
     }
+
     input#age {
         max-width: 3rem;
     }
+
     input#netWage {
         max-width: 4.5rem;
     }
-    .calculator__heading {
+
+    &__heading {
         font-size: $font-size-base;
         font-weight: $font-weight-normal;
         line-height: 2;
     }
-    .calculator__comparison-row {
+
+    &__comparison-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $blue-washed;
+
         &:first-of-type {
             margin-bottom: 1px;
+            border-top-left-radius: $border-radius-md;
+            border-top-right-radius: $border-radius-md;
+        }
+
+        &:last-of-type {
+            border-bottom-left-radius: $border-radius-md;
+            border-bottom-right-radius: $border-radius-md;
+        }
+
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
         }
     }
 
-    .savings {
-        color: $blue;
+    &__comparison-fund {
+        margin-bottom: map-get($spacers,3);
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__comparison-result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include media-breakpoint-up(sm) {
+            align-items: flex-end;
+            margin-left: map-get($spacers,4);
+        }
+    }
+
+    &__savings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: map-get($spacers,4);
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: map-get($spacers,3);
+        }
+    }
+
+    &__savings-title {
+        color: $navy-blue;
+        font-family: $font-family-base;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        @include media-breakpoint-up(sm) {
+            margin-right: map-get($spacers,3);
+            margin-bottom: 0;
+        }
+    }
+
+    &__sum {
+        color: $orange;
+        font-family: $font-family-base;
+        margin-bottom: 0;
+        @include media-breakpoint-up(sm) {
+            margin-right: map-get($spacers,3);
+        }
     }
 }
 

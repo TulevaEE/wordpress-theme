@@ -22,7 +22,7 @@
                     </div>
                     <div class="proposal__cta">
                         <h3 class="text-center mb-0">86%</h3>
-                        <p class="text-center text-navy mb-4"><?php _e('of people chose this fund', TEXT_DOMAIN) ?></p>
+                        <p class="small text-center text-navy mb-4"><?php _e('of people chose this fund', TEXT_DOMAIN) ?></p>
                         <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block">Select this fund</a>', TEXT_DOMAIN); ?>
                     </div>
                 </div>
