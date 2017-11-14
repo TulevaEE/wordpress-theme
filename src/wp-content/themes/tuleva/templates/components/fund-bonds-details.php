@@ -57,7 +57,7 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="http://tuleva.ee/wp-content/uploads/2017/03/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_270317.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Volakirjade-Pensionifond_270317.pdf" target="_blank">tingimused</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2017/11/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_13.11.2017-1.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Volakirjade-Pensionifond_270317.pdf" target="_blank">tingimused</a>
                         </li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2017/09/Tuleva-pensionifondi-rebalansseerimise-mudel-aug2017-Mudelportfell-n%C3%B5ukogule.pdf" target="_blank">Mudelportfell</a>
