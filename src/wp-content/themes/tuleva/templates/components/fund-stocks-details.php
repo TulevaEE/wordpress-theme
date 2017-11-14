@@ -75,7 +75,7 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="https://tuleva.ee/wp-content/uploads/2017/10/TULAPF-investeeringute-aruanne-300917.pdf" target="_blank">09.17</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2017/11/TULAPF-investeeringute-aruanne-311017.pdf" target="_blank">10.17</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
