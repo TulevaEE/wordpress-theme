@@ -7960,6 +7960,12 @@ small,
   max-width: 110px;
   width: 100%; }
 
+.navbar .dropdown > a::after {
+  display: none; }
+  @media (min-width: 768px) {
+    .navbar .dropdown > a::after {
+      display: inline-block; } }
+
 .navbar .dropdown-menu {
   left: 0;
   top: 0;
