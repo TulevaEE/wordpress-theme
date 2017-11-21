@@ -7442,6 +7442,27 @@ small,
 
 .inline-signup {
   border: 1px solid #e9ecef; }
+  .inline-signup__number {
+    width: 32px;
+    height: 32px;
+    color: #0081EE;
+    background-color: rgba(5, 147, 252, 0.24);
+    border: none;
+    display: inline-block;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 16px; }
+  .inline-signup__title {
+    font-weight: 500;
+    font-size: 20px; }
+  .inline-signup__content {
+    margin-left: 48px; }
+  .inline-signup__item {
+    margin-bottom: 1em; }
   .inline-signup .custom-control-indicator {
     display: none; }
 
@@ -7449,31 +7470,6 @@ small,
   color: #0081ED;
   font-size: 32px;
   line-height: 44px; }
-
-.inline-signup__number {
-  width: 32px;
-  height: 32px;
-  color: #0081EE;
-  background-color: rgba(5, 147, 252, 0.24);
-  border: none;
-  display: inline-block;
-  line-height: 32px;
-  border-radius: 50%;
-  text-align: center;
-  z-index: 3;
-  font-weight: bold;
-  font-size: 20px;
-  margin-right: 16px; }
-
-.inline-signup__title {
-  font-weight: 500;
-  font-size: 20px; }
-
-.inline-signup__content {
-  margin-left: 48px; }
-
-.inline-signup__item {
-  margin-bottom: 1em; }
 
 .goal-box {
   min-height: 211px;

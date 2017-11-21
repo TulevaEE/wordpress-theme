@@ -1059,6 +1059,35 @@
 .inline-signup {
     border: 1px solid $gray-200;
 
+    &__number {
+        width: 32px;
+        height: 32px;
+        color: #0081EE;
+        background-color: rgba(5, 147, 252, 0.24);
+        border: none;
+        display: inline-block;
+        line-height: 32px;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 3;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 16px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &__content {
+        margin-left: 48px;
+    }
+
+    &__item {
+        margin-bottom: 1em;
+    }
+
     .custom-control-indicator {
         display: none;
     }
@@ -1072,34 +1101,7 @@
 }
 
 // INLINE SIGNUP
-.inline-signup__number {
-    width: 32px;
-    height: 32px;
-    color: #0081EE;
-    background-color: rgba(5, 147, 252, 0.24);
-    border: none;
-    display: inline-block;
-    line-height: 32px;
-    border-radius: 50%;
-    text-align: center;
-    z-index: 3;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 16px;
-}
 
-.inline-signup__title {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.inline-signup__content {
-    margin-left: 48px;
-}
-
-.inline-signup__item {
-    margin-bottom: 1em;
-}
 
 .goal-box {
     min-height: 211px;

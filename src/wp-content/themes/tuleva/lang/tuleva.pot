@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2017-11-13 11:29:47+00:00\n"
+"POT-Creation-Date: 2017-11-21 08:28:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -371,7 +371,6 @@ msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:36
 #: templates/components/fund-choosing.php:38
 msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
@@ -413,6 +412,9 @@ msgid "If you are less than 55 years old, then the fund suitable to you is"
 msgstr ""
 
 #: templates/components/fund-choosing.php:15
+msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
+msgstr ""
+
 #: templates/components/fund-choosing.php:17
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
@@ -436,6 +438,10 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
+msgstr ""
+
+#: templates/components/fund-choosing.php:36
+msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:39
