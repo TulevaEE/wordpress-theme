@@ -6798,6 +6798,7 @@ small,
   right: 29px;
   bottom: 29px;
   display: none;
+  max-width: 12rem;
   text-align: center;
   font-size: 1.125em;
   line-height: 1;

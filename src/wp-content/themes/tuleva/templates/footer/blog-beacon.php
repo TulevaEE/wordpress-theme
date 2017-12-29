@@ -1,4 +1,4 @@
 <div class="blog-beacon">
-    <?php _e('<a class="btn btn-primary btn-block" href="/en/mutual-company/#inline-signup-anchor">Join Tuleva</a>', TEXT_DOMAIN); ?>
-    <?php _e('<a class="btn btn-link btn-block" href="/en/transfer-pension-tuleva/">Transfer pension</a>', TEXT_DOMAIN); ?>
+    <p class="px-3 py-2 mb-1 text-navy text-medium"><?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?></p>
+    <?php _e('<a class="btn btn-primary btn-block" href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
 </div>
