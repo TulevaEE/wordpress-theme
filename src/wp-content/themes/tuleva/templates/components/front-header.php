@@ -5,7 +5,7 @@
                 <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
                     <h1><?php _e('A pension should benefit you. Not your bank.', TEXT_DOMAIN); ?></h1>
                     <p class="lead text-navy"><?php _e('Tuleva pension funds belong to their investors — with up to four times lower fees than bank-run plans.*', TEXT_DOMAIN); ?></p>
-                    <?php _e('<a href="#choose-fund" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Save on fees</a>', TEXT_DOMAIN); ?>
+                    <?php _e('<a href="https://pension.tuleva.ee/account" class="btn btn-primary btn-lg mb-3 d-none d-md-block">See you pension account balance</a>', TEXT_DOMAIN); ?>
                     <p class="small text-navy mb-md-5 mb-lg-0 d-none d-md-block"><?php _e('Switching funds is free (and takes only five minutes).', TEXT_DOMAIN); ?></p>
                 </div>
                 <div class="col-lg-6">
