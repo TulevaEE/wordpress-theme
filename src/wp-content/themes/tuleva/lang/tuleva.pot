@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-10 08:41:20+00:00\n"
+"POT-Creation-Date: 2018-01-10 11:09:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -153,7 +153,7 @@ msgid "Tuleva pension funds belong to their investors — with up to four times 
 msgstr ""
 
 #: templates/components/front-header.php:8
-msgid "<a href=\"https://pension.tuleva.ee/account\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-block\">See you pension account balance</a>"
+msgid "<a href=\"https://pension.tuleva.ee/account\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-block ga\" data-label=\"see-account-balance\">See you pension account balance</a>"
 msgstr ""
 
 #: templates/components/front-header.php:9
@@ -1110,7 +1110,7 @@ msgid "How much would you lose to high fees?"
 msgstr ""
 
 #: templates/footer/blog-beacon.php:3
-msgid "<a class=\"btn btn-primary btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
+msgid "<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/en/\" data-label=\"see-calculation-blog\">See calculation</a>"
 msgstr ""
 
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
