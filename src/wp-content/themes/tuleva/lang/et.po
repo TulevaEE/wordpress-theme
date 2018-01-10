@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-10 11:09:48+00:00\n"
-"PO-Revision-Date: 2018-01-10 13:11+0200\n"
+"POT-Creation-Date: 2018-01-10 11:58:50+00:00\n"
+"PO-Revision-Date: 2018-01-10 13:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -259,8 +259,8 @@ msgid "In Tuleva pension fund"
 msgstr "Tuleva pensionifondis"
 
 #: templates/components/front-header.php:101
-msgid "Annual fees <span id=\"fund-fee\">0.34%</span>"
-msgstr "Tasud aastas <span id=\"fund-fee\">0,34%</span>"
+msgid "Annual fees <span id=\"fund-fee\">0.5%</span>"
+msgstr "Tasud aastas <span id=\"fund-fee\">0,5%</span>"
 
 #: templates/components/front-header.php:106
 msgid "Cost of high fees"

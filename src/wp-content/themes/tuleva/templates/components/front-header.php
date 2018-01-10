@@ -14,9 +14,9 @@
                             <form class="d-flex flex-row justify-content-center pb-3">
                                 <div class="d-inline-block align-items-center text-medium mr-2">
                                     <span class="calculator__heading"><?php _e("If you're", TEXT_DOMAIN); ?></span>
-                                    <input class="form-control d-inline-block mx-1" id="age" type="number" value="29" min="18" max="65" onchange="calculateSaving()">
+                                    <input class="form-control d-inline-block mx-1 ga" id="age" type="number" value="29" min="18" max="65" onchange="calculateSaving()" data-label="calculator-age">
                                     <span class="calculator__heading"><?php _e("years old and earn", TEXT_DOMAIN); ?></span>
-                                    <input class="form-control d-inline-block mx-1" id="netWage" type="number" value="1800" step="100" onchange="calculateSaving()">
+                                    <input class="form-control d-inline-block mx-1 ga" id="netWage" type="number" value="1800" step="100" onchange="calculateSaving()" data-label="calculator-wage">
                                     <span class="calculator__heading"><?php _e("euros per month (net),", TEXT_DOMAIN); ?>
                                         <?php _e("your second pillar", TEXT_DOMAIN); ?>
                                         <a id="calculator" href="#calculatorModal"><?php _e("could", TEXT_DOMAIN); ?></a> <?php _e("grow", TEXT_DOMAIN); ?></span>
@@ -24,7 +24,7 @@
                             </form>
                             <div>
                                 <div class="p-3 calculator__comparison-row">
-                                    <select class="form-control calculator__comparison-fund" name="pensionFunds" id="comparisonFund" onchange="calculateSaving()">
+                                    <select class="form-control calculator__comparison-fund ga" name="pensionFunds" id="comparisonFund" onchange="calculateSaving()" data-label="calculator-dropdown">
                                         <option value="average">
                                         <?php _e("Estonian pension fund average", TEXT_DOMAIN); ?>
                                         </option>
@@ -55,7 +55,7 @@
                                         <option value="NPK25">
                                             Luminor Pensionifond B
                                         </option>
-                                        <option value="NPK75">
+                                        <option value="NPK00">
                                             Luminor Pensionifond C
                                         </option>
                                         <option value="SEK75">
@@ -98,7 +98,7 @@
                                     <h6 class="calculator__comparison-fund"><?php _e("In Tuleva pension fund", TEXT_DOMAIN); ?></h6>
                                     <div class="calculator__comparison-result">
                                         <h5 class="mb-0" id="future-value-tuleva">545 654€</h5>
-                                        <small class="text-secondary"><?php _e('Annual fees <span id="fund-fee">0.34%</span>', TEXT_DOMAIN); ?></small>
+                                        <small class="text-secondary"><?php _e('Annual fees <span id="fund-fee">0.5%</span>', TEXT_DOMAIN); ?></small>
                                     </div>
                                 </div>
                             </div>

@@ -1,25 +1,25 @@
 var fundFee = {
-    'LIK75': 0.0039,
-    'LXK00': 0.0062802,
-    'LSK00': 0.00798,
-    'LMK25': 0.01064,
-    'LLK50': 0.0133,
-    'LXK75': 0.0133,
-    'NPK00': 0.0075,
-    'NPK25': 0.0137,
-    'NPK50': 0.0147,
-    'NPK75': 0.0156,
-    'SIK75': 0.0029,
-    'SEK00': 0.0049,
-    'SEK25': 0.010115,
-    'SEK50': 0.011671,
-    'SEK75': 0.013227,
-    'SWK00': 0.0029,
-    'SWK25': 0.0087,
-    'SWK50': 0.0092,
-    'SWK75': 0.0092,
-    'SWK99': 0.0049,
-    'average': 0.0108
+    'LIK75': 0.0086,
+    'LXK00': 0.0073,
+    'LSK00': 0.0096,
+    'LMK25': 0.0129,
+    'LLK50': 0.0161,
+    'LXK75': 0.0163,
+    'NPK00': 0.0085,
+    'NPK25': 0.0142,
+    'NPK50': 0.0151,
+    'NPK75': 0.0161,
+    'SIK75': 0.0049,
+    'SEK00': 0.0056,
+    'SEK25': 0.0126,
+    'SEK50': 0.0149,
+    'SEK75': 0.0164,
+    'SWK00': 0.0039,
+    'SWK25': 0.0104,
+    'SWK50': 0.0110,
+    'SWK75': 0.0113,
+    'SWK99': 0.0089,
+    'average': 0.0129
 };
 
 var format = function(num) {
@@ -67,7 +67,7 @@ var calculateSaving = function() {
     var futureValueOfPensionFund = Math.ceil((grossWage * 0.06 * 12) * ((Math.pow(marketReturn - comparisonFund, (65 - (Math.max(0, Math.min(age, 65)))))) - (Math.pow(salaryGrowth, (65 - (Math.max(0, Math.min(age, 65))))))) / (marketReturn - comparisonFund - salaryGrowth) + (presentValueOfPensionFund * (Math.pow(marketReturn - comparisonFund, (65 - (Math.max(0, Math.min(age, 65))))))));
 
 
-    var tulevaFee = 0.0034;
+    var tulevaFee = 0.005;
 
     var totalSavingWithTuleva = Math.ceil((grossWage * 0.06 * 12) * ((Math.pow(marketReturn - tulevaFee, (65 - (Math.max(0, Math.min(age, 65)))))) - (Math.pow(salaryGrowth, (65 - (Math.max(0, Math.min(age, 65))))))) / (marketReturn - tulevaFee - salaryGrowth) + (presentValueOfPensionFund * (Math.pow(marketReturn - tulevaFee, (65 - (Math.max(0, Math.min(age, 65))))))) - futureValueOfPensionFund);
 
