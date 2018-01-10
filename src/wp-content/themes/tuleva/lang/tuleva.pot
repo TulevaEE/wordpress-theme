@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-10 11:58:50+00:00\n"
+"POT-Creation-Date: 2018-01-10 12:29:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -392,10 +392,7 @@ msgid "you are willing to forgo higher returns in order to avoid losses"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:24
-#: templates/components/fund-choosing.php:27
-#: templates/components/fund-choosing.php:48
-#: templates/components/fund-stocks-header.php:26
-msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block\">Select this fund</a>"
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-calculator.php:13
@@ -415,7 +412,7 @@ msgid "If you are less than 55 years old, then the fund suitable to you is"
 msgstr ""
 
 #: templates/components/fund-choosing.php:15
-msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
+msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy ga\" data-label=\"fund-header-stocks\">Tuleva World Stocks Pension Fund</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:17
@@ -439,12 +436,16 @@ msgstr ""
 msgid "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase text-medium d-block mb-4\">See fund info</a>"
 msgstr ""
 
+#: templates/components/fund-choosing.php:27
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-choose-stocks\">Select this fund</a>"
+msgstr ""
+
 #: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
 msgstr ""
 
 #: templates/components/fund-choosing.php:36
-msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
+msgid "<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy ga\" data-label=\"fund-header-bonds\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:39
@@ -461,6 +462,10 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:47
 msgid "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-medium d-block mb-4\">See fund info</a>"
+msgstr ""
+
+#: templates/components/fund-choosing.php:48
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-choose-bonds\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-counter.php:7
@@ -594,6 +599,10 @@ msgstr ""
 
 #: templates/components/fund-stocks-header.php:25
 msgid "of people chose this fund"
+msgstr ""
+
+#: templates/components/fund-stocks-header.php:26
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/goals.php:5

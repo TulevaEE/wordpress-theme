@@ -12,7 +12,7 @@
                                 <?php _e('If you are less than 55 years old, then the fund suitable to you is', TEXT_DOMAIN); ?>
                             </h6>
                             <h4>
-                                <?php _e('<a href="/en/transfer-pension-tuleva/" target="_blank" class="text-navy">Tuleva World Stocks Pension Fund</a>', TEXT_DOMAIN); ?>
+                                <?php _e('<a href="/en/transfer-pension-tuleva/" target="_blank" class="text-navy ga" data-label="fund-header-stocks">Tuleva World Stocks Pension Fund</a>', TEXT_DOMAIN); ?>
                             </h4>
                             <img src="<?php echo get_template_directory_uri() ?>/img/aktsiafond-pie.svg?v2" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
                             <p class="text-left"><?php _e('The equity fund with lowest costs in Estonia*: management fee <span class="text-highlight"><strong>0,34%</strong></span> and total expense ratio <span class="text-highlight"><strong>0,5%</strong></span>', TEXT_DOMAIN); ?></p>
@@ -24,7 +24,7 @@
                         <div class="bg-white m-4">
                             <hr class="mb-4">
                             <?php _e('<a href="/en/tuleva-world-stocks-pension-fund/" class="text-uppercase text-medium d-block mb-4">See fund info</a>', TEXT_DOMAIN); ?>
-                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block">Select this fund</a>', TEXT_DOMAIN); ?>
+                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?>
                         </div>
                     </div>
                     <div class="card shadow-sm">
@@ -33,7 +33,7 @@
                                 <?php _e('If you are over 55, the fund better suited for you could be', TEXT_DOMAIN); ?>
                             </h6>
                             <h4>
-                                <?php _e('<a href="/en/transfer-pension-tuleva/" target="_blank" class="text-navy">Tuleva World Bonds Pension Fund</a>', TEXT_DOMAIN); ?>
+                                <?php _e('<a href="/en/transfer-pension-tuleva/" target="_blank" class="text-navy ga" data-label="fund-header-bonds">Tuleva World Bonds Pension Fund</a>', TEXT_DOMAIN); ?>
                             </h4>
                             <img src="<?php echo get_template_directory_uri() ?>/img/volakirjad-pie.svg?v2" class="img-fluid my-5" alt="<?php _e('Tuleva World Bonds Pension Fund', TEXT_DOMAIN); ?>">
                             <p class="text-left"><?php _e('Low cost: management fee <span class="text-highlight"><strong>0,34%</strong></span> and total expenses <span class="text-highlight"><strong>0,5%</strong></span>', TEXT_DOMAIN); ?></p>
@@ -45,7 +45,7 @@
                         <div class="bg-white m-4">
                             <hr class="mb-4">
                             <?php _e('<a href="/en/tuleva-world-bonds-pension-fund/" class="text-uppercase text-medium d-block mb-4">See fund info</a>', TEXT_DOMAIN); ?>
-                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block">Select this fund</a>', TEXT_DOMAIN); ?>
+                            <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
                         </div>
                     </div>
                 </div>
