@@ -201,15 +201,4 @@ $(document).ready(function($) {
             $(this).text(openText);
         }
     });
-
-    $(".ga").on("click", function(e) {
-        var label = $(this).data("label");
-        var action = $(this).data("action");
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Wordpress',
-          eventAction: action,
-          eventLabel: label
-        });
-    });
 });

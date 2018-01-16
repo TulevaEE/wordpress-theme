@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-16 08:44:01+00:00\n"
-"PO-Revision-Date: 2018-01-16 10:45+0200\n"
+"POT-Creation-Date: 2018-01-16 14:28:17+00:00\n"
+"PO-Revision-Date: 2018-01-16 16:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -509,12 +509,11 @@ msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
 
 #: templates/components/fund-choosing.php:15
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy "
-"ga\" data-label=\"fund-header-stocks\">Tuleva World Stocks Pension Fund</a>"
+"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy"
+"\">Tuleva World Stocks Pension Fund</a>"
 msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" target=\"_blank\" class=\"text-"
-"navy ga\" data-label=\"fund-header-stocks\">Tuleva Maailma Aktsiate "
-"Pensionifond</a>"
+"navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
 
 #: templates/components/fund-choosing.php:17
 #: templates/components/fund-stocks-header.php:5
@@ -558,10 +557,10 @@ msgstr ""
 #: templates/components/fund-choosing.php:27
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-choose-stocks\">Select this fund</a>"
+"block\" id=\"fund-choose-stocks\">Select this fund</a>"
 msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block ga\" data-label=\"fund-choose-stocks\">Valin selle fondi</a>"
+"btn-block\" id=\"fund-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
@@ -569,12 +568,11 @@ msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
 
 #: templates/components/fund-choosing.php:36
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy "
-"ga\" data-label=\"fund-header-bonds\">Tuleva World Bonds Pension Fund</a>"
+"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy"
+"\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" target=\"_blank\" class=\"text-"
-"navy ga\" data-label=\"fund-header-bonds\">Tuleva Maailma Võlakirjade "
-"Pensionifond</a>"
+"navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
 
 #: templates/components/fund-choosing.php:39
 msgid ""
@@ -613,10 +611,10 @@ msgstr ""
 #: templates/components/fund-choosing.php:48
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-choose-bonds\">Select this fund</a>"
+"block\" id=\"fund-choose-bonds\">Select this fund</a>"
 msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block ga\" data-label=\"fund-choose-bonds\">Valin selle fondi</a>"
+"btn-block\" id=\"fund-choose-bonds\">Valin selle fondi</a>"
 
 #: templates/components/fund-counter.php:7
 msgid "3600"
