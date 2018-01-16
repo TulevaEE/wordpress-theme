@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-10 12:29:45+00:00\n"
+"POT-Creation-Date: 2018-01-16 08:44:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -153,7 +153,7 @@ msgid "Tuleva pension funds belong to their investors — with up to four times 
 msgstr ""
 
 #: templates/components/front-header.php:8
-msgid "<a href=\"https://pension.tuleva.ee/account\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-block ga\" data-label=\"see-account-balance\">See you pension account balance</a>"
+msgid "<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-block\">Choose the right fund for you</a>"
 msgstr ""
 
 #: templates/components/front-header.php:9
