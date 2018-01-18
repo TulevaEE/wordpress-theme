@@ -322,30 +322,32 @@
 
 .beacon-toggle {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 1rem;
+    bottom: 1rem;
+    @include media-breakpoint-up(md) {
+        right: 2rem;
+        bottom: 2rem;
+    }
     display: none;
     font-family: $font-family-serif;
     font-weight: bold;
     color: #fff;
     text-align: center;
-    font-size: 1.125em;
+    font-size: $font-size-base;
     line-height: 1;
-    border-radius: 64px;
+    border-radius: 1.5rem;
     background-color: $orange;
-    padding: 24px 34px;
+    padding: 1rem 2rem;
     white-space: nowrap;
     overflow: hidden;
-    height: 64px;
-    width: 230px;
-    transition: all .4s ease;
-    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+    height: 3rem;
+    transition: all .2s ease;
     &:hover,
     &:focus {
         color: #fff;
     }
     &__icon {
-        background: $navy-blue;
+        background: $white;
         position: absolute;
         left: 50%;
         margin-left: -10px;
@@ -371,9 +373,10 @@
         }
     }
     &--open {
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
+        background-color: $gray-600;
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
         .beacon-toggle__icon {
             opacity: 1;
             transition: opacity .1s;
@@ -414,7 +417,10 @@
 }
 
 .recent-articles {
-    margin-bottom: 60px;
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 4rem;
+    }
     &__heading {
         color: $brand-primary;
         text-transform: uppercase;
@@ -584,10 +590,9 @@
 
 .cta-widget {
     border-radius: 4px;
-    padding: 1.5rem 1.5rem 0;
+    padding: 1.5rem;
     &--primary {
         background-color: $widget-primary-bg-color;
-        border: 2px solid $brand-primary;
     }
     &--secondary {
         border: 1px solid $border-gray;
@@ -610,11 +615,55 @@
     }
     .btn {
         display: block;
-        margin-bottom: 30px;
         white-space: pre-line;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.article-widget {
+    padding: 1rem 0 1rem;
+    margin-bottom: 1.5em;
+    background-color: $white;
+    border-top: 4px solid $brand-primary;
+    border-bottom: 4px solid $brand-primary;
+    &__title {
+        text-align: center;
+        font-size: 1.5em;
+        font-family: $font-family-base;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        &--link {
+            display: inline-block;
+            text-align: left;
+            font-weight: 500;
+            font-family: $font-family-sans-serif;
+            padding-right: 1.5em;
+            background-image: url('../img/icon-arrow-right.svg');
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
     }
     p {
         margin-bottom: 1.5em;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid $gray-washed;
+        border-bottom: 1px solid $gray-washed;
+        li {
+            padding: 1rem 0 1rem;
+            border-bottom: 1px solid $gray-washed;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
 }
 

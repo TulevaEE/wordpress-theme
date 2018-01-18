@@ -11,7 +11,7 @@ $current_post_cat_id = $current_post_categories[0]->term_id;
             $args = [
                         'category' => $current_post_cat_id,
                         'suppress_filters' => 0,
-                        'numberposts' => '2',
+                        'numberposts' => '3',
                         'exclude' => $current_post_id
                     ];
 

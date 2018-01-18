@@ -32,17 +32,23 @@
 .single-post {
     .page-title {
         line-height: 1.25;
-        margin: 30px 0;
+        margin: 2rem 0;
     }
 
     .post-title {
-        margin-top: 100px;
+        margin-top: 3rem;
+        @include media-breakpoint-up(md) {
+            margin-top: 6rem;
+        }
     }
 
     .post-meta {
         text-align: center;
         text-transform: uppercase;
-        margin-bottom: 100px;
+        margin-bottom: 2rem;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 5rem;
+        }
 
         &__author {
             font-weight: bold;
@@ -56,14 +62,14 @@
 
     .post-image {
         max-width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 3rem;
     }
 
     .post-social {
         margin-top: 7px;
 
         img {
-            margin-bottom: 16px;
+            margin-right: 16px;
         }
     }
 
@@ -104,16 +110,6 @@
             padding: 0;
             margin-top: 70px;
             margin-bottom: 70px;
-
-            @include media-breakpoint-only(lg) {
-                margin-left: -125px;
-                margin-right: -125px;
-            }
-
-            @include media-breakpoint-only(xl) {
-                margin-left: -125px;
-                margin-right: -125px;
-            }
 
             p {
                 color: $blue;

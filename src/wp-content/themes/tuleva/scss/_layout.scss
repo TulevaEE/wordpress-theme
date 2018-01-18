@@ -78,14 +78,21 @@ $row-spacing-quarter: 40px;
 }
 
 .content-area {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         width: 66%;
         margin-right: 4%;
     }
 }
 
 .widget-area {
-    @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &--bottom {
+        justify-content: space-between;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(lg) {
         width: 30%;
     }
 }

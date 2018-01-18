@@ -1,35 +1,55 @@
 <div class="page-container">
+    <script>
+        var LANGCODE = '<?php echo apply_filters( 'wpml_current_language', NULL );  ?>';
+    </script>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-lg-10 offset-lg-1">
                 <?php if (get_the_title()) { ?>
                     <h1 class="page-title post-title"><?php the_title(); ?></h1>
                 <?php } ?>
                 <div class="post-meta">
                     <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>" class="post-meta__author"><?php echo get_the_author(); ?></a><span class="post-meta__separator">·</span><span class="post-meta__date"><?php the_date(); ?></span>
                 </div>
-                <img class="post-image" src="<?php echo the_post_thumbnail_url('full'); ?>" alt="">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-1 offset-md-1">
-                <div class="post-social">
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook-gray.svg" alt="Facebook">
-                    </a>
-                    <a href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo urlencode(get_permalink()); ?>" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/icon-twitter-gray.svg" alt="Twitter">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8">
+            <div class="content-area">
+                <img class="post-image" src="<?php echo the_post_thumbnail_url('full'); ?>" alt="">
                 <?php if (get_the_content()) { ?>
                     <div class="content">
                         <?php the_content(); ?>
                     </div>
                 <?php } ?>
                 <?php get_template_part('templates/blog/recent-articles'); ?>
+            </div>
+            <div class="widget-area">
+                <div class="article-widget d-none d-md-block">
+                        <h4 class="article-widget__title"><?php _e('3 important posts', TEXT_DOMAIN); ?></h4>
+                        <?php
+                        if (ICL_LANGUAGE_CODE=='et') {
+                            get_template_part('templates/blog/sidebar-articles-et');
+                        } elseif (ICL_LANGUAGE_CODE=='en') {
+                            get_template_part('templates/blog/sidebar-articles');
+                        }
+                        ?>
+                        <?php _e('<a class="d-block text-uppercase text-medium text-center" href="/en/blog/">See more posts</a>', TEXT_DOMAIN); ?>
+                </div>
+                <div class="widget-area__cta">
+                    <div class="widget">
+                        <div class="cta-widget cta-widget--primary">
+                            <h4 class="cta-widget__title"><?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?></h4>
+                            <?php _e('<a class="btn btn-primary btn-lg btn-block" href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="cta-widget cta-widget--secondary">
+                            <h5 class="cta-widget__title--link"><?php _e('<a href="/en/transfer-pension-tuleva/">Transfer pension to Tuleva</a>', TEXT_DOMAIN); ?></h5>
+                            <p><?php _e('Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved.', TEXT_DOMAIN); ?></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

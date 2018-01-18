@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-16 14:28:17+00:00\n"
-"PO-Revision-Date: 2018-01-16 16:28+0200\n"
+"POT-Creation-Date: 2018-01-18 07:41:13+00:00\n"
+"PO-Revision-Date: 2018-01-18 09:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1760,7 +1760,7 @@ msgstr ""
 msgid "Send"
 msgstr "Saada"
 
-#: templates/footer/blog-beacon.php:2
+#: templates/footer/blog-beacon.php:2 templates/single-content.php:42
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
@@ -1799,6 +1799,38 @@ msgstr ""
 #: templates/header/main-sticky.php:8 templates/header/main.php:8
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
+
+#: templates/single-content.php:29
+msgid "3 important posts"
+msgstr "3 olulist artiklit"
+
+#: templates/single-content.php:37
+msgid ""
+"<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/"
+"\">See more posts</a>"
+msgstr ""
+"<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
+"\">Vaata kõiki artikleid</a>"
+
+#: templates/single-content.php:43
+msgid ""
+"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
+"\">See calculation</a>"
+msgstr ""
+"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+"\">Vaata arvutust</a>"
+
+#: templates/single-content.php:48
+msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
+msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
+
+#: templates/single-content.php:49
+msgid ""
+"Our guide makes transferring your pension easy via your internet bank. 5 "
+"minutes, no costs involved."
+msgstr ""
+"Juhend aitab sul 5 minutiga fondi vahetada ilma pikemalt ekslemata. "
+"Fondivahetus on kõigile tasuta."
 
 #: widgets/cta-button-widget.php:12
 msgid "CTA Button widget"
@@ -2009,14 +2041,6 @@ msgstr "Ühistu leht"
 #~ msgstr ""
 #~ "Näitame sulle, kui palju sa säästaksid Tuleva pensionifondi kliendina ja/"
 #~ "või Tuleva liikmena."
-
-#~ msgid "Transfer your pension to Tuleva"
-#~ msgstr "Too pension Tulevasse"
-
-#~ msgid ""
-#~ "A guide how to transfer your pension through your internet bank or the "
-#~ "Pensionikeskus web page."
-#~ msgstr "Juhend, kuidas vahetada fondi internetipangas või pensionikeskuses."
 
 #~ msgid ""
 #~ "Before you decide which pension fund you’d like to move your second-"

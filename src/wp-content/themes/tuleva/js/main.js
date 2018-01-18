@@ -50,20 +50,6 @@ $(document).ready(function($) {
             }
         });
     },
-    initBlogBeacon = function() {
-        var $blogBeacon = $('.blog-beacon'),
-            $beaconToggle = $('.beacon-toggle');
-
-        $(window).scroll(function() {
-            var scrollPosition = $(window).scrollTop(),
-                viewportHeight = $(window).height();
-
-            if ($blogBeacon.length && scrollPosition > viewportHeight) {
-                $blogBeacon.show();
-                $beaconToggle.hide();
-            }
-        });
-    },
     showStickyHeader = function() {
         $('body').addClass('sticky-header-visible');
     },
@@ -90,11 +76,23 @@ $(document).ready(function($) {
             animatedOut: 'fadeOut',
             animationDuration: '.25s'
         });
+    },
+    initPostSidebarHandler = function() {
+        var $sidebar = $('.widget-area');
+        if ($('body').hasClass('single-post') && $sidebar.length > 0) {
+            window.onscroll = function(e) {
+                if (this.scrollY > 2000) {
+                    $sidebar.addClass('widget-area--bottom');
+                } else {
+                    $sidebar.removeClass('widget-area--bottom');
+                }
+              }
+        }
     };
 
     initStickyHeader();
     initBeaconToggle();
-    initBlogBeacon();
+    initPostSidebarHandler();
     initModal('#security', 'securityModal');
     initModal('#calculator', 'calculatorModal');
     initModal('#founders', 'foundersModal');
