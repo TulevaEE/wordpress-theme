@@ -393,6 +393,32 @@
     }
 }
 
+.beacon-content {
+    display: none;
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+    max-width: 420px;
+    min-width: 300px;
+    background-color: $white;
+    border-radius: $border-radius-md;
+    padding: 1.5rem;
+    box-shadow: $shadow-md;
+
+    label {
+        margin-bottom: .25rem;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+    }
+
+    input {
+        margin-bottom: 1rem;
+    }
+    &--open {
+        display: block;
+    }
+}
+
 .blog-beacon {
     position: fixed;
     right: 29px;

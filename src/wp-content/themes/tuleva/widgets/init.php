@@ -36,7 +36,7 @@ function tu_widgets_init() {
     register_sidebar( [
         'name'          => 'Footer widget area',
         'id'            => 'footer_widget_area',
-        'before_widget' => '<div class="col-md-3 footer__column">',
+        'before_widget' => '<div class="col-md footer__column">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',

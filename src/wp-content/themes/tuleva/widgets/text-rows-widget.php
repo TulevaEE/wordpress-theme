@@ -24,13 +24,15 @@ class Text_Rows_Widget extends WP_Widget {
             'title' => '',
             'row_1' => '',
             'row_2' => '',
-            'row_3' => ''
+            'row_3' => '',
+            'row_4' => ''
         ];
 
         $title = isset($instance[ 'title' ]) ? $instance[ 'title' ] : '';
         $row_1 = isset($instance[ 'row_1' ]) ? $instance[ 'row_1' ] : '';
         $row_2 = isset($instance[ 'row_2' ]) ? $instance[ 'row_2' ] : '';
         $row_3 = isset($instance[ 'row_3' ]) ? $instance[ 'row_3' ] : '';
+        $row_4 = isset($instance[ 'row_4' ]) ? $instance[ 'row_4' ] : '';
 
         // markup for form ?>
         <p>
@@ -49,6 +51,10 @@ class Text_Rows_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'row_3' ); ?>"><?php _e( 'Text row 3:', TEXT_DOMAIN ); ?></label>
             <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'row_3' ); ?>" name="<?php echo $this->get_field_name( 'row_3' ); ?>" value="<?php echo esc_attr( $row_3 ); ?>">
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'row_4' ); ?>"><?php _e( 'Text row 4:', TEXT_DOMAIN ); ?></label>
+            <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'row_4' ); ?>" name="<?php echo $this->get_field_name( 'row_4' ); ?>" value="<?php echo esc_attr( $row_4 ); ?>">
+        </p>
     <?php
     }
 
@@ -58,6 +64,7 @@ class Text_Rows_Widget extends WP_Widget {
         $instance[ 'row_1' ] = strip_tags( $new_instance[ 'row_1' ] );
         $instance[ 'row_2' ] = strip_tags( $new_instance[ 'row_2' ] );
         $instance[ 'row_3' ] = strip_tags( $new_instance[ 'row_3' ] );
+        $instance[ 'row_4' ] = strip_tags( $new_instance[ 'row_4' ] );
 
         return $instance;
     }
@@ -69,6 +76,7 @@ class Text_Rows_Widget extends WP_Widget {
         $row_1 = isset($instance[ 'row_1' ]) ? $instance[ 'row_1' ] : '';
         $row_2 = isset($instance[ 'row_2' ]) ? $instance[ 'row_2' ] : '';
         $row_3 = isset($instance[ 'row_3' ]) ? $instance[ 'row_3' ] : '';
+        $row_4 = isset($instance[ 'row_4' ]) ? $instance[ 'row_4' ] : '';
 
         echo $before_widget;
         ?>
@@ -86,6 +94,9 @@ class Text_Rows_Widget extends WP_Widget {
             <? } ?>
             <?php if ($row_3) { ?>
                 <div class="footer__column__text__row"><?php echo $row_3; ?></div>
+            <? } ?>
+            <?php if ($row_4) { ?>
+                <div class="footer__column__text__row"><?php echo $row_4; ?></div>
             <? } ?>
         </div>
         <?php

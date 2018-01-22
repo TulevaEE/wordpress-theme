@@ -6796,6 +6796,26 @@ small,
     .beacon-toggle--open .beacon-toggle__text {
       visibility: hidden; }
 
+.beacon-content {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  bottom: 6rem;
+  max-width: 420px;
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12); }
+  .beacon-content label {
+    margin-bottom: .25rem;
+    font-size: 0.875rem;
+    font-weight: 500; }
+  .beacon-content input {
+    margin-bottom: 1rem; }
+  .beacon-content--open {
+    display: block; }
+
 .blog-beacon {
   position: fixed;
   right: 29px;

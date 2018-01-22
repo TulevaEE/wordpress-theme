@@ -38,7 +38,7 @@ $(document).ready(function($) {
         $beaconToggle.on('click', function(ev) {
             ev.preventDefault();
             $(this).toggleClass('beacon-toggle--open');
-            window.HS.beacon.toggle();
+            $('.beacon-content').toggleClass('beacon-content--open');
         });
 
         $(window).scroll(function() {
