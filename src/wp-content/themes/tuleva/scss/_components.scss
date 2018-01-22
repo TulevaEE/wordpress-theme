@@ -823,6 +823,7 @@
 
     &__comparison-fund {
         margin-bottom: map-get($spacers,3);
+        word-wrap: normal;
         @include media-breakpoint-up(sm) {
             margin-bottom: 0;
         }

@@ -7156,7 +7156,8 @@ small,
       flex-direction: row; } }
 
 .calculator__comparison-fund {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  word-wrap: normal; }
   @media (min-width: 576px) {
     .calculator__comparison-fund {
       margin-bottom: 0; } }
