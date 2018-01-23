@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-18 07:41:13+00:00\n"
+"POT-Creation-Date: 2018-01-23 14:55:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: functions.php:25 helpers/acf/init.php:15 helpers/post-types/init.php:9
-#: widgets/init.php:14
+#: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr ""
 
@@ -1066,10 +1066,6 @@ msgstr ""
 msgid "<a href=\"/en/mutual-company/\" class=\"btn btn-outline-primary btn-lg\">Learn more about Tuleva</a>"
 msgstr ""
 
-#: templates/footer/beacon-toggle.php:3
-msgid "Have a question?"
-msgstr ""
-
 #: templates/footer/beacon-translations.php:4
 msgid "Send a Message"
 msgstr ""
@@ -1118,8 +1114,8 @@ msgstr ""
 msgid "How much would you lose to high fees?"
 msgstr ""
 
-#: templates/footer/blog-beacon.php:3
-msgid "<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/en/\" data-label=\"see-calculation-blog\">See calculation</a>"
+#: templates/footer/blog-beacon.php:3 templates/single-content.php:43
+msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
 msgstr ""
 
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
@@ -1144,10 +1140,6 @@ msgstr ""
 
 #: templates/single-content.php:37
 msgid "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/\">See more posts</a>"
-msgstr ""
-
-#: templates/single-content.php:43
-msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
 msgstr ""
 
 #: templates/single-content.php:48
@@ -1183,7 +1175,8 @@ msgid "Shows primary CTA widget."
 msgstr ""
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
-#: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
+#: widgets/help-widget.php:34 widgets/subscribe-widget.php:35
+#: widgets/text-rows-widget.php:39
 msgid "Title:"
 msgstr ""
 
@@ -1201,6 +1194,22 @@ msgstr ""
 
 #: widgets/cta-secondary-widget.php:39
 msgid "Title URL:"
+msgstr ""
+
+#: widgets/help-widget.php:12
+msgid "Ask help"
+msgstr ""
+
+#: widgets/help-widget.php:16
+msgid "Shows help widget."
+msgstr ""
+
+#: widgets/help-widget.php:38
+msgid "Button label:"
+msgstr ""
+
+#: widgets/help-widget.php:65
+msgid "Ask from Tuleva Community Manager Kristi Saare."
 msgstr ""
 
 #: widgets/subscribe-widget.php:12
@@ -1227,16 +1236,20 @@ msgstr ""
 msgid "Shows text rows."
 msgstr ""
 
-#: widgets/text-rows-widget.php:41
+#: widgets/text-rows-widget.php:43
 msgid "Text row 1:"
 msgstr ""
 
-#: widgets/text-rows-widget.php:45
+#: widgets/text-rows-widget.php:47
 msgid "Text row 2:"
 msgstr ""
 
-#: widgets/text-rows-widget.php:49
+#: widgets/text-rows-widget.php:51
 msgid "Text row 3:"
+msgstr ""
+
+#: widgets/text-rows-widget.php:55
+msgid "Text row 4:"
 msgstr ""
 #. Theme Name of the plugin/theme
 msgid "Tuleva"

@@ -1,8 +1,6 @@
 <a href="#" class="beacon-toggle">
     <span class="beacon-toggle__icon"></span>
-    <span class="beacon-toggle__text">
-        <?php _e('Soovin uudiskirja', TEXT_DOMAIN); ?>
-    </span>
+    <span class="beacon-toggle__text">Soovin uudiskirja</span>
 </a>
 <div class="beacon-content">
     <!-- Begin MailChimp Signup Form -->
@@ -26,7 +24,7 @@
                         Palun sisesta e-posti aadress.
                     </div>
                 </div>
-                <div class="mc-field-group d-none d-lg-block">
+                <div class="mc-field-group">
                     <label for="mce-PHONE">Telefon</label>
                     <input type="number" value="" name="PHONE" placeholder="Kujul +372XXXXXX" class="form-control" id="mce-PHONE">
                 </div>
@@ -34,7 +32,7 @@
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
                 </div>
-                <div class="small text-secondary mb-2 d-none d-md-block"><?php _e('Tuleva ei jaga sinu kontaktandmeid kunagi kellegagi. Soovi korral saad uudiskirjast alati loobuda.', TEXT_DOMAIN); ?></div>
+                <div class="small text-secondary mb-2">Tuleva ei jaga sinu kontaktandmeid kunagi kellegagi. Soovi korral saad uudiskirjast alati loobuda.</div>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_594cafb01e6f3b0087743e6f5_b30d5d60e3" tabindex="-1" value="">

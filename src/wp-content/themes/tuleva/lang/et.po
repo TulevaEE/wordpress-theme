@@ -4,20 +4,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-18 07:41:13+00:00\n"
-"PO-Revision-Date: 2018-01-18 09:48+0200\n"
+"POT-Creation-Date: 2018-01-23 14:55:14+00:00\n"
+"PO-Revision-Date: 2018-01-23 16:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:25 helpers/acf/init.php:15 helpers/post-types/init.php:9
-#: widgets/init.php:14
+#: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
@@ -1709,10 +1709,6 @@ msgstr ""
 "<a href=\"/tulundusyhistu/\" class=\"btn btn-outline-primary btn-lg\">Tutvu "
 "Tuleva ühistuga</a>"
 
-#: templates/footer/beacon-toggle.php:3
-msgid "Have a question?"
-msgstr "Küsi Kristilt!"
-
 #: templates/footer/beacon-translations.php:4
 msgid "Send a Message"
 msgstr "Saada sõnum"
@@ -1764,13 +1760,13 @@ msgstr "Saada"
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
-#: templates/footer/blog-beacon.php:3
+#: templates/footer/blog-beacon.php:3 templates/single-content.php:43
 msgid ""
-"<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/en/\" "
-"data-label=\"see-calculation-blog\">See calculation</a>"
+"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
+"\">See calculation</a>"
 msgstr ""
-"<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/\" data-"
-"label=\"see-calculation-blog\">Vaata arvutust</a>"
+"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+"\">Vaata arvutust</a>"
 
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
@@ -1812,14 +1808,6 @@ msgstr ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
 "\">Vaata kõiki artikleid</a>"
 
-#: templates/single-content.php:43
-msgid ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
-"\">See calculation</a>"
-msgstr ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
-"\">Vaata arvutust</a>"
-
 #: templates/single-content.php:48
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
@@ -1857,7 +1845,8 @@ msgid "Shows primary CTA widget."
 msgstr "Näitab peamist CTA moodulit."
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
-#: widgets/subscribe-widget.php:35 widgets/text-rows-widget.php:37
+#: widgets/help-widget.php:34 widgets/subscribe-widget.php:35
+#: widgets/text-rows-widget.php:39
 msgid "Title:"
 msgstr "Pealkiri:"
 
@@ -1876,6 +1865,22 @@ msgstr "Näitab teisejärgulist CTA moodulit."
 #: widgets/cta-secondary-widget.php:39
 msgid "Title URL:"
 msgstr "Pealkirja URL:"
+
+#: widgets/help-widget.php:12
+msgid "Ask help"
+msgstr "Küsi abi"
+
+#: widgets/help-widget.php:16
+msgid "Shows help widget."
+msgstr "Näitab abi moodulit."
+
+#: widgets/help-widget.php:38
+msgid "Button label:"
+msgstr "Nupu tekst:"
+
+#: widgets/help-widget.php:65
+msgid "Ask from Tuleva Community Manager Kristi Saare."
+msgstr "Vastab Tuleva kogukonnajuht Kristi Saare."
 
 #: widgets/subscribe-widget.php:12
 msgid "Subscribe form"
@@ -1901,17 +1906,21 @@ msgstr "Tekstiread"
 msgid "Shows text rows."
 msgstr "Näitab tekstiridu."
 
-#: widgets/text-rows-widget.php:41
+#: widgets/text-rows-widget.php:43
 msgid "Text row 1:"
 msgstr "Tekstirida 1:"
 
-#: widgets/text-rows-widget.php:45
+#: widgets/text-rows-widget.php:47
 msgid "Text row 2:"
 msgstr "Tekstirida 2:"
 
-#: widgets/text-rows-widget.php:49
+#: widgets/text-rows-widget.php:51
 msgid "Text row 3:"
 msgstr "Tekstirida 3:"
+
+#: widgets/text-rows-widget.php:55
+msgid "Text row 4:"
+msgstr "Tekstirida 4:"
 
 #. Theme Name of the plugin/theme
 msgid "Tuleva"
@@ -1948,6 +1957,27 @@ msgstr "Liikmeks astutud"
 #. Template Name of the plugin/theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
+
+#, fuzzy
+#~| msgid ""
+#~| "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+#~| "en/\">See calculation</a>"
+#~ msgid ""
+#~ "<a class=\"btn btn-primary btn-block\" href=\"https://tuleva.ee/en/\">See "
+#~ "calculation</a>"
+#~ msgstr ""
+#~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+#~ "\">Vaata arvutust</a>"
+
+#~ msgid "Have a question?"
+#~ msgstr "Küsi Kristilt!"
+
+#~ msgid ""
+#~ "<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/en/\" "
+#~ "data-label=\"see-calculation-blog\">See calculation</a>"
+#~ msgstr ""
+#~ "<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/\" "
+#~ "data-label=\"see-calculation-blog\">Vaata arvutust</a>"
 
 #~ msgid ""
 #~ "<a href=\"https://pension.tuleva.ee/account\" class=\"btn btn-primary btn-"

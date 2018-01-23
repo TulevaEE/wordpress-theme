@@ -6745,7 +6745,8 @@ small,
   white-space: nowrap;
   overflow: hidden;
   height: 3rem;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  z-index: 1100; }
   @media (min-width: 992px) {
     .beacon-toggle {
       right: 2rem;
@@ -6799,12 +6800,17 @@ small,
 .beacon-content {
   display: none;
   padding: 1.5rem;
-  width: 100%;
   position: fixed;
-  bottom: 6rem;
   background-color: #fff;
   box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
   z-index: 1090; }
+  @media (max-width: 575px) {
+    .beacon-content {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto; } }
   @media (min-width: 576px) {
     .beacon-content {
       right: 1rem;
@@ -6834,7 +6840,8 @@ small,
   display: none;
   background-color: #868e96;
   border-radius: 1.5rem;
-  padding: 0; }
+  padding: 0;
+  z-index: 1100; }
   @media (min-width: 992px) {
     .footer-help-close {
       right: 2rem;
