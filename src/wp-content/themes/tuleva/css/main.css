@@ -6746,7 +6746,7 @@ small,
   overflow: hidden;
   height: 3rem;
   transition: all .2s ease; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .beacon-toggle {
       right: 2rem;
       bottom: 2rem; } }
@@ -6798,15 +6798,24 @@ small,
 
 .beacon-content {
   display: none;
-  position: fixed;
-  right: 2rem;
-  bottom: 6rem;
-  max-width: 420px;
-  min-width: 300px;
-  background-color: #fff;
-  border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12); }
+  width: 100%;
+  position: fixed;
+  bottom: 6rem;
+  background-color: #fff;
+  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1090; }
+  @media (min-width: 576px) {
+    .beacon-content {
+      right: 1rem;
+      bottom: 5rem;
+      max-width: 420px;
+      min-width: 300px;
+      border-radius: 0.5rem; } }
+  @media (min-width: 992px) {
+    .beacon-content {
+      right: 2rem;
+      bottom: 6rem; } }
   .beacon-content label {
     margin-bottom: .25rem;
     font-size: 0.875rem;
@@ -6814,6 +6823,47 @@ small,
   .beacon-content input {
     margin-bottom: 1rem; }
   .beacon-content--open {
+    display: block; }
+
+.footer-help-close {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  background-color: #868e96;
+  border-radius: 1.5rem;
+  padding: 0; }
+  @media (min-width: 992px) {
+    .footer-help-close {
+      right: 2rem;
+      bottom: 2rem; } }
+  .footer-help-close__icon {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 48%;
+    width: 18px;
+    height: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .footer-help-close__icon::before {
+      content: ' ';
+      background: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 2px;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+  .footer-help-close--open {
     display: block; }
 
 .blog-beacon {

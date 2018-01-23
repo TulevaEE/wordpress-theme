@@ -7,6 +7,7 @@ function tu_register_widgets() {
         'widgets/cta-primary-widget.php',
         'widgets/cta-secondary-widget.php',
         'widgets/cta-button-widget.php',
+        'widgets/help-widget.php',
     ];
 
     foreach ($widget_includes as $file) {
@@ -22,6 +23,7 @@ function tu_register_widgets() {
     register_widget( 'CTA_Primary_Widget' );
     register_widget( 'CTA_Secondary_Widget' );
     register_widget( 'CTA_Button_Widget' );
+    register_widget( 'Help_Widget' );
 
 
 }

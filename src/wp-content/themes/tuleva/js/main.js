@@ -45,8 +45,8 @@ $(document).ready(function($) {
             var scrollPosition = $(window).scrollTop(),
                 viewportHeight = $(window).height();
 
-            if (scrollPosition > viewportHeight) {
-                $beaconToggle.show();
+            if (scrollPosition > viewportHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
+                $beaconToggle.addClass('d-block');
             }
         });
     },
@@ -198,5 +198,18 @@ $(document).ready(function($) {
             $(this).closest('.qa-block').addClass('qa-block--collapsed');
             $(this).text(openText);
         }
+    });
+
+    $('.footer-help').on('click', function(ev) {
+        ev.preventDefault();
+        window.HS.beacon.toggle();
+        $('.footer-help-close').toggleClass('footer-help-close--open');
+        $('.beacon-toggle').removeClass('d-block');
+    });
+
+    $('.footer-help-close').on('click', function(ev) {
+        ev.preventDefault();
+        window.HS.beacon.toggle();
+        $(this).toggleClass('footer-help-close--open');
     });
 });
