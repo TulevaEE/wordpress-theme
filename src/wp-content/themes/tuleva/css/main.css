@@ -8252,6 +8252,12 @@ small,
   line-height: 1.25;
   margin: 2rem 0; }
 
+.single-post .post-header {
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .single-post .post-header {
+      margin-bottom: 5rem; } }
+
 .single-post .post-title {
   margin-top: 3rem; }
   @media (min-width: 768px) {
@@ -8261,10 +8267,7 @@ small,
 .single-post .post-meta {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 2rem; }
-  @media (min-width: 768px) {
-    .single-post .post-meta {
-      margin-bottom: 5rem; } }
+  margin-bottom: 1rem; }
   .single-post .post-meta__author {
     font-weight: bold; }
   .single-post .post-meta__separator {
@@ -8276,9 +8279,23 @@ small,
   margin-bottom: 3rem; }
 
 .single-post .post-social {
-  margin-top: 7px; }
-  .single-post .post-social img {
-    margin-right: 16px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .single-post .post-social > * {
+    margin-right: .5em; }
+  .single-post .post-social:last-child {
+    margin-right: 0;
+    margin-top: 4px; }
 
 .single-post .content {
   padding-top: 0;
