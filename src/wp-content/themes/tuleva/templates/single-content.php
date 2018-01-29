@@ -53,24 +53,16 @@
                     <span class="post-meta__date">
                         <?php the_date(); ?>
                     </span>
+                    <span class="post-meta__separator">·</span>
+                    <div class="post-social">
+                        <span class="text-secondary"><?php _e('Share with a friend:', TEXT_DOMAIN); ?></span>
+                        <div class="fb-share-button" data-layout="button"></div>
+                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                        Tweet</a>
+                    </div>
                 </div>
 
-                <div class="post-social">
-                    <span class="text-secondary"><?php _e('Share with a friend:', TEXT_DOMAIN); ?></span>
-                    <div class="fb-share-button" data-layout="button"></div>
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                        Tweet</a>
-<!--                     <a class="post-social post-social__facebook" href="https://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink()); ?>"
-                        target="_blank">
-                        <i></i>
-                        <span class="label">Share</span>
-                    </a>
-                    <a class="post-social post-social__twitter" href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo urlencode(get_permalink()); ?>"
-                        target="_blank">
-                        <i></i>
-                        <span class="label">Tweet</span>
-                    </a> -->
-                </div>
+
             </div>
         </div>
         <div class="row">

@@ -70,17 +70,19 @@
     }
 
     .post-social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
+
+        iframe {
+            vertical-align: middle;
+        }
 
         & > * {
-            margin-right: .5em;
+            display: inline-block;
+            margin-right: .25em;
         }
 
         &:last-child {
             margin-right: 0;
-            margin-top: 4px;
         }
     }
 
