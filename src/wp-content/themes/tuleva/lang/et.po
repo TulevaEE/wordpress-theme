@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-29 11:51:55+00:00\n"
-"PO-Revision-Date: 2018-01-29 13:52+0200\n"
+"POT-Creation-Date: 2018-01-30 09:11:23+00:00\n"
+"PO-Revision-Date: 2018-01-30 11:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -202,11 +202,11 @@ msgstr "Kogu pensionit endale, mitte pangale."
 
 #: templates/components/front-header.php:7
 msgid ""
-"Tuleva pension funds belong to their investors — with up to four times lower "
-"fees than bank-run plans.*"
+"Tuleva pension funds belong to their investors — with up to 3.3 times lower "
+"fees than bank-run funds.*"
 msgstr ""
-"Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 4x soodsama "
-"valitsemistasuga.*"
+"Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 3,3x madalama "
+"tasuga.*"
 
 #: templates/components/front-header.php:8
 msgid ""
@@ -1756,11 +1756,11 @@ msgstr ""
 msgid "Send"
 msgstr "Saada"
 
-#: templates/footer/blog-beacon.php:2 templates/single-content.php:104
+#: templates/footer/blog-beacon.php:2 templates/single-content.php:96
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
-#: templates/footer/blog-beacon.php:3 templates/single-content.php:106
+#: templates/footer/blog-beacon.php:3 templates/single-content.php:98
 msgid ""
 "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
 "\">See calculation</a>"
@@ -1796,15 +1796,15 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
-#: templates/single-content.php:59
+#: templates/single-content.php:58
 msgid "Share with a friend:"
 msgstr "Jaga sõbraga:"
 
-#: templates/single-content.php:89
+#: templates/single-content.php:81
 msgid "3 important posts"
 msgstr "3 olulist artiklit"
 
-#: templates/single-content.php:98
+#: templates/single-content.php:90
 msgid ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/"
 "\">See more posts</a>"
@@ -1812,11 +1812,11 @@ msgstr ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
 "\">Vaata kõiki artikleid</a>"
 
-#: templates/single-content.php:112
+#: templates/single-content.php:104
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
 
-#: templates/single-content.php:115
+#: templates/single-content.php:107
 msgid ""
 "Our guide makes transferring your pension easy via your internet bank. 5 "
 "minutes, no costs involved."

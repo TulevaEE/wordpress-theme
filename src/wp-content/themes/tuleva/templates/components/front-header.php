@@ -4,7 +4,7 @@
             <div class="row align-items-center py-5">
                 <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
                     <h1><?php _e('A pension should benefit you. Not your bank.', TEXT_DOMAIN); ?></h1>
-                    <p class="lead text-navy"><?php _e('Tuleva pension funds belong to their investors — with up to four times lower fees than bank-run plans.*', TEXT_DOMAIN); ?></p>
+                    <p class="lead text-navy"><?php _e('Tuleva pension funds belong to their investors — with up to 3.3 times lower fees than bank-run funds.*', TEXT_DOMAIN); ?></p>
                     <?php _e('<a href="#choose-fund" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Choose the right fund for you</a>', TEXT_DOMAIN); ?>
                     <p class="small text-navy mb-md-5 mb-lg-0 d-none d-md-block"><?php _e('Switching funds is free (and takes only five minutes).', TEXT_DOMAIN); ?></p>
                 </div>

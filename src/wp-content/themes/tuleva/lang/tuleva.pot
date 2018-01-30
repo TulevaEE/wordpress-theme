@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-29 11:51:55+00:00\n"
+"POT-Creation-Date: 2018-01-30 09:11:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -149,7 +149,7 @@ msgid "A pension should benefit you. Not your bank."
 msgstr ""
 
 #: templates/components/front-header.php:7
-msgid "Tuleva pension funds belong to their investors — with up to four times lower fees than bank-run plans.*"
+msgid "Tuleva pension funds belong to their investors — with up to 3.3 times lower fees than bank-run funds.*"
 msgstr ""
 
 #: templates/components/front-header.php:8
@@ -1110,11 +1110,11 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: templates/footer/blog-beacon.php:2 templates/single-content.php:104
+#: templates/footer/blog-beacon.php:2 templates/single-content.php:96
 msgid "How much would you lose to high fees?"
 msgstr ""
 
-#: templates/footer/blog-beacon.php:3 templates/single-content.php:106
+#: templates/footer/blog-beacon.php:3 templates/single-content.php:98
 msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
 msgstr ""
 
@@ -1134,23 +1134,23 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: templates/single-content.php:59
+#: templates/single-content.php:58
 msgid "Share with a friend:"
 msgstr ""
 
-#: templates/single-content.php:89
+#: templates/single-content.php:81
 msgid "3 important posts"
 msgstr ""
 
-#: templates/single-content.php:98
+#: templates/single-content.php:90
 msgid "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/\">See more posts</a>"
 msgstr ""
 
-#: templates/single-content.php:112
+#: templates/single-content.php:104
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr ""
 
-#: templates/single-content.php:115
+#: templates/single-content.php:107
 msgid "Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved."
 msgstr ""
 
