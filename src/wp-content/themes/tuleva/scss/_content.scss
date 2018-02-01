@@ -53,14 +53,20 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 1rem;
+        color: $navy-blue;
 
         &__author {
+            font-weight: bold;
+        }
+
+        &__category {
             font-weight: bold;
         }
 
         &__separator {
             margin: 0 10px;
             font-weight: bold;
+            color: $text-secondary;
         }
     }
 
@@ -70,7 +76,9 @@
     }
 
     .post-social {
-        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        color: $navy-blue;
 
         iframe {
             vertical-align: middle;

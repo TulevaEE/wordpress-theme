@@ -54,15 +54,20 @@
                         <?php the_date(); ?>
                     </span>
                     <span class="post-meta__separator">·</span>
-                    <div class="post-social">
-                        <span class="text-secondary"><?php _e('Share with a friend:', TEXT_DOMAIN); ?></span>
-                        <div class="fb-share-button" data-layout="button"></div>
-                        <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                        Tweet</a>
-                    </div>
+                    <span><?php _e('Category:', TEXT_DOMAIN); ?></span>
+                    <?php
+                        $categories = get_the_category();
+                        if ( ! empty( $categories ) ) {
+                            echo '<a class="post-meta__category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                        }
+                    ?>
                 </div>
-
-
+                <div class="post-social">
+                    <span><?php _e('Share with a friend:', TEXT_DOMAIN); ?></span>
+                    <div class="fb-share-button" data-layout="button_count"></div>
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                    Tweet</a>
+                </div>
             </div>
         </div>
         <div class="row">

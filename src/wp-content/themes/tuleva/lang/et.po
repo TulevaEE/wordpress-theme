@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-01-30 09:11:23+00:00\n"
-"PO-Revision-Date: 2018-01-30 11:12+0200\n"
+"POT-Creation-Date: 2018-02-01 12:20:47+00:00\n"
+"PO-Revision-Date: 2018-02-01 14:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -33,6 +33,10 @@ msgstr "Pole olemas sellist lehekülge"
 msgid "Maybe something got mixed up when entering the address?"
 msgstr "Ehk läks aadressi sisestamisega midagi valesti?"
 
+#: templates/blog/categories-list.php:8
+msgid "Categories"
+msgstr ""
+
 #: templates/blog/pagination.php:3 templates/blog/pagination.php:8
 msgid "Older articles"
 msgstr "Vanemad artiklid"
@@ -45,15 +49,15 @@ msgstr "Uuemad artiklid"
 msgid "Recent articles"
 msgstr "Viimased artiklid"
 
-#: templates/blog/submenu.php:13
+#: templates/blog/submenu.php:15
 msgid "All articles"
 msgstr "Kõik artiklid"
 
-#: templates/blog/submenu.php:18
+#: templates/blog/submenu.php:20
 msgid "Featured articles"
 msgstr "Olulisemad artiklid"
 
-#: templates/blog/submenu.php:21
+#: templates/blog/submenu.php:23
 msgid "RSS feed"
 msgstr "RSS voog"
 
@@ -1756,11 +1760,11 @@ msgstr ""
 msgid "Send"
 msgstr "Saada"
 
-#: templates/footer/blog-beacon.php:2 templates/single-content.php:96
+#: templates/footer/blog-beacon.php:2 templates/single-content.php:104
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
-#: templates/footer/blog-beacon.php:3 templates/single-content.php:98
+#: templates/footer/blog-beacon.php:3 templates/single-content.php:106
 msgid ""
 "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
 "\">See calculation</a>"
@@ -1797,14 +1801,18 @@ msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
 #: templates/single-content.php:58
+msgid "Category:"
+msgstr "Teema:"
+
+#: templates/single-content.php:68
 msgid "Share with a friend:"
 msgstr "Jaga sõbraga:"
 
-#: templates/single-content.php:81
+#: templates/single-content.php:89
 msgid "3 important posts"
 msgstr "3 olulist artiklit"
 
-#: templates/single-content.php:90
+#: templates/single-content.php:98
 msgid ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/"
 "\">See more posts</a>"
@@ -1812,11 +1820,11 @@ msgstr ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
 "\">Vaata kõiki artikleid</a>"
 
-#: templates/single-content.php:104
+#: templates/single-content.php:112
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
 
-#: templates/single-content.php:107
+#: templates/single-content.php:115
 msgid ""
 "Our guide makes transferring your pension easy via your internet bank. 5 "
 "minutes, no costs involved."

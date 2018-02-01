@@ -527,6 +527,36 @@
     }
 }
 
+.categories {
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 4rem;
+    }
+    &__heading {
+        color: $brand-primary;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            font-size: $font-size-sm;
+            // border-top: 1px solid $border-gray;
+            margin-right: 0.5rem;
+            &:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+            a {
+                color: $navy-blue;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
 .submenu {
     padding-top: 40px;
     margin-bottom: 40px;
