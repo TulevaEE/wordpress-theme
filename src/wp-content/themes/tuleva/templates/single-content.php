@@ -57,8 +57,14 @@
                     <span><?php _e('Category:', TEXT_DOMAIN); ?></span>
                     <?php
                         $categories = get_the_category();
+                        $copy = $categories;
                         if ( ! empty( $categories ) ) {
-                            echo '<a class="post-meta__category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                            foreach($categories as $category) {
+                                echo '<a class="post-meta__category" href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>';
+                                if (next($copy)) {
+                                    echo ', '; // Add comma for all elements instead of last
+                                }
+                            }
                         }
                     ?>
                 </div>
