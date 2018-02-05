@@ -1425,6 +1425,22 @@
     }
 }
 
+.principle {
+    &__item,
+    &__item:active,
+    &__item:focus {
+        font-size: $font-size-md;
+        color: $navy-blue;
+        font-weight: 500;
+        margin: 30px 0;
+        padding: 0 30px 0 0;
+        display: block;
+        text-align: left;
+        background: url("../img/icon-plussign.svg") no-repeat right center;
+        white-space: normal;
+    }
+}
+
 //Subscribe section in main header
 .list-subscribe {
     font-size: 0;
