@@ -200,7 +200,7 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" width="64" height="64" class="rounded-circle mb-3"
+                        <img src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" width="64" height="64" class="rounded-circle mb-3"
                         />
                         <h6 class="text-navy">Tõnu Pekk</h6>
                     </div>
