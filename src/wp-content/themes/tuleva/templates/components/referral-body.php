@@ -4,7 +4,7 @@
             <div class="mx-md-auto col-md-10">
                 <div class="qa__question-wrapper principle">
                     <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-1">
-                        <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem teed hea valiku, seda suurem on mõju su pensionile.
+                        <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem valid õige fondi, seda suurem on mõju su pensionile.
                     </a>
                     <div id="answer-1" class="row my-5">
                         <div class="col-md-10 col-lg-8 mx-auto">
@@ -45,7 +45,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-3">
-                        <span class="inline-signup__number">3</span>Ära püüa turgu ajastada. Regulaarne investeerimine on parim riskide maandaja.
+                        <span class="inline-signup__number">3</span>Ära püüa turgu ajastada. Vali indeksifond.
                     </a>
                     <div id="answer-3" class="collapse my-5">
                         <div class="col-md-10 col-lg-8 mx-auto">
@@ -127,7 +127,7 @@
 
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
-                <h5 class="text-center">Sulle sobib</h5>
+                <h5 class="text-center">Kui nõustud ülaltooduga, siis sobib sulle</h5>
                 <h3  class="text-center">Tuleva Maailma Aktsiate Pensionifond</h3>
                 <p class="text-center">mis on loodud nendest põhimõtetest lähtudes.</br> Selles fondis
                     kogub raha enamik Tuleva asutajaid ja liikmeid.</p>
