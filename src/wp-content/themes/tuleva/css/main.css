@@ -8000,13 +8000,13 @@ small,
   background-repeat: repeat, no-repeat; }
   @media (max-width: 1199px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1400.jpg"); } }
   @media (max-width: 767px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1291.jpg"); } }
   @media (max-width: 575px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_610.jpg"); } }
 
 .bg-blueish-gray {
   background: #f0f4f7; }

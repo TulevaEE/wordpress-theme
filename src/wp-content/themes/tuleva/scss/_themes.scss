@@ -77,13 +77,13 @@
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
     @include media-breakpoint-down (lg) {
-        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands.jpg');
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands_w_1400.jpg');
     }
     @include media-breakpoint-down (sm) {
-        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands.jpg');
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands_w_1291.jpg');
     }
     @include media-breakpoint-only (xs) {
-        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands.jpg');
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .92), rgba(209, 244, 255, .92)), url('../img/hands_w_610.jpg');
     }
 }
 
