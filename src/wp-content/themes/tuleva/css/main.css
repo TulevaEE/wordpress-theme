@@ -7828,6 +7828,10 @@ small,
   font-size: 1.25rem;
   color: #002F63; }
 
+.emphasis-box {
+  background-color: #edf7fe;
+  border-radius: 0.5rem; }
+
 .list-subscribe {
   font-size: 0; }
   .list-subscribe .mc-field-group {

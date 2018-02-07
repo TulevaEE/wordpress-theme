@@ -1425,6 +1425,7 @@
     }
 }
 
+// Referral page
 .principle {
     &__item,
     &__item:active,
@@ -1444,6 +1445,11 @@
         font-size: $font-size-md;
         color: $navy-blue;
     }
+}
+
+.emphasis-box {
+    background-color: $blue-washed;
+    border-radius: $border-radius-md;
 }
 
 //Subscribe section in main header

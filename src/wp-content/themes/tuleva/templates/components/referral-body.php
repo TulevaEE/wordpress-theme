@@ -126,11 +126,12 @@
         </div>
 
         <div class="row mt-6">
-            <div class="col-md-10 col-lg-8 mx-auto">
-                <p class="mb-5">Sulle sobib
-                <span class="text-highlight text-bold">Tuleva Maailma Aktsiate Pensionifond</span>, mis on loodud nendest põhimõtetest lähtudes. Selles fondis
-                    kogub raha enamik Tuleva asutajaid ja liikmeid.
-                </p>
+            <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
+                <h5 class="text-center">Sulle sobib</h5>
+                <h3  class="text-center">Tuleva Maailma Aktsiate Pensionifond</h3>
+                <p class="text-center">mis on loodud nendest põhimõtetest lähtudes.</br> Selles fondis
+                    kogub raha enamik Tuleva asutajaid ja liikmeid.</p>
+
 
                 <div class="qa__question-wrapper">
                     <div class="text-center">
