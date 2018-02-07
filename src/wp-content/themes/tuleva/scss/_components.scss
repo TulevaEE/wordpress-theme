@@ -1439,6 +1439,11 @@
         background: url("../img/icon-plussign.svg") no-repeat right center;
         white-space: normal;
     }
+
+    blockquote {
+        font-size: $font-size-md;
+        color: $navy-blue;
+    }
 }
 
 //Subscribe section in main header
