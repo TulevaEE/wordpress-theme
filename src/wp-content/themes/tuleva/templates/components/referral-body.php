@@ -12,7 +12,7 @@
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Liitintress on kaheksas maailmaime. Kes aru saab, teenib seda. Kes ei saa, maksab seda.” Albert Einstein</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-1.png" class="img-fluid mb-5" alt="Tuleva tootlus" />
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-1.png" class="img-fluid mb-5" alt="Nii palju suurendaks su pensionivara vaid 1% suurem tootlus" />
 
                             <p>Kui teed 20-aastaselt valiku, mis suurendab sinu pensionifondi tulu keskmiselt 1% võrra aastas,
                                 saad ilma ise sentigi lisaks kulutamata veerandi võrra suurema pensioni. Tehes sama 35-aastaselt,
@@ -34,7 +34,7 @@
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Aktsiaturg on vahend raha liigutamiseks kannatamatute käest kannatlike kätte.” Warren Buffett. </p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid mb-5" alt="Tuleva tootlus" />
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid mb-5" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist" />
 
                             <p>Kui sul on pensionini rohkem kui kümme aastat, <span class="text-highlight text-bold">vali agressiivne pensionifond</span>, mis investeerib võimalikult
                                 suure osa varast aktsiatesse. Sama soovitab oma inimestele näiteks Rootsi riik - tulemused on
@@ -65,7 +65,7 @@
 
                             <p>Nagu Warren Buffett, on enamik maailma juhtivaid majandusteadlasi veendunud, et pensioniks raha kogumiseks sobib kõige paremini <span class="text-highlight text-bold">passiivselt juhitud pensionifond ehk indeksifond</span>. Sellises fondis võid kindel olla, et sinu vara investeeritakse sama regulaarselt kui sa säästad. Aktiivselt juhitud fondis võib fondijuht jätta su raha pikaks ajaks pangaarvele seisma või teha liiga uljaid investeerimisotsuseid. Liigne kartlikkus ja julgus on sulle ühtemoodi kahjulikud.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-3.png" class="img-fluid" alt="Eesti II sambasse pandud raha käekäik 2003-2016" />
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-3.png" class="img-fluid" alt="Indeskifondis oleks me rahal läinud kolm korda paremini" />
                             <cite class="d-block small text-secondary mt-3 mb-5">Maailmaturu indeks: 50% MSCI ACWI (EUR) ja 50% Euro Government
                             Bond Index. Eesti pensionifondide tootlus mõõdetud EPI indeksiga,
                             teenustasu arvestatud vastavalt rahandusministeeriumi statistikale.
@@ -97,7 +97,7 @@
                                 tõuseb aastas 3% ja ta on valinud agressiivse strateegiaga pensionifondi, mille tootlus aastas
                                 enne tasusid on Sanderi tööelu vältel keskmiselt 5% aastas.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-4.png" class="img-fluid mb-5" alt="Tuleva tootlus" />
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-4.png" class="img-fluid mb-5" alt="Pensionikonto väärtuse kasv erinevate tasudega" />
 
                             <p>Kui Sanderi pensionifondi jooksvad tasud (valitsemistasu + muud investeeringu kulud) on 0,5% aastas
                                 nagu Eesti soodsaima tasuga pensionifondidel, koguneb tema pensionikontole 65ndaks eluaastaks
