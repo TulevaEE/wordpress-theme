@@ -160,6 +160,9 @@
                                 müügimeeste armeedele ega muudele asjadele, mis pensionikogujatele pikas plaanis väärtust
                                 ei loo.</li>
                         </ul>
+                        <div class="text-center pt-4">
+                            <a class="btn btn-primary btn-lg" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,7 +188,7 @@
                     armeede palkamist. Tuues kogumispensioni Tulevasse, aitad kaasa, et inimeste oma pensionifondi kulud
                     langeksid meie kõigi jaoks.)
                 </p>
-                <p class="mb-0">Siin on sulle juhend, mille abil saad <span class="text-highlight text-bold">netipangas fondivahetuse tehtud 5 minutiga.</span> See ei maksa sulle midagi
+                <p class="mb-0">Siin on sulle juhend, mille abil saad <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">netipangas fondivahetuse tehtud 5 minutiga.</a> See ei maksa sulle midagi
                     – hakkad hoopis kohe tänu madalamale tasule kokku hoidma.
                 </p>
                 <div class="text-center py-6">
