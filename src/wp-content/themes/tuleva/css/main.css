@@ -7824,6 +7824,9 @@ small,
   background: url("../img/icon-plussign.svg") no-repeat right center;
   white-space: normal; }
 
+.principle__item:hover {
+  cursor: pointer; }
+
 .principle blockquote {
   font-size: 1.25rem;
   color: #002F63; }
@@ -7998,19 +8001,20 @@ small,
       background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_480.jpg"); } }
 
 .bg-hero-referral {
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands.jpg");
-  background-position: 0px 0px, 50% 0px;
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_2170.jpg");
+  background-position: 0px 0px, 50% 35%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat; }
   @media (max-width: 1199px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1400.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1613.jpg"); } }
   @media (max-width: 767px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1291.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_1145.jpg");
+      background-position: 0px 0px, 75% 35%; } }
   @media (max-width: 575px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_610.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.92), rgba(209, 244, 255, 0.92)), url("../img/hands_w_480.jpg"); } }
 
 .bg-blueish-gray {
   background: #f0f4f7; }

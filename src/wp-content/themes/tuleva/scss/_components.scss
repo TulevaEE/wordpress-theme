@@ -1440,6 +1440,9 @@
         background: url("../img/icon-plussign.svg") no-repeat right center;
         white-space: normal;
     }
+    &__item:hover {
+        cursor: pointer;
+    }
 
     blockquote {
         font-size: $font-size-md;

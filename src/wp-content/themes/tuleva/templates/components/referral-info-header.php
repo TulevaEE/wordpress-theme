@@ -4,7 +4,7 @@
             <div class="row py-5">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="mb-4">5 asja, millest pensioniks kogudes juhinduda, kui oled 18-55-aastane</h2>
-                    <p class="lead text-navy mb-0"><span class="text-highlight">6% sinu brutopalgast</span> läheb iga kuu kohustusliku kogumispensioni fondi. See teeb sinust investori rahvusvahelistel väärtpaberiturgudel, meeldib see sulle või ei meeldi. Tulevik ega turud garantiisid ei paku, aga tark on anda oma rahale kasvuks võimalikult head eeldused.</p>
+                    <p class="lead text-navy mb-0">Kui sa ei tee palju asju valesti, pead tegema ainult mõned asjad õigesti, on öelnud üks maailma edukamaid investoreid Warren Buffett. Ta soovitab oma järeltulijatel panna vara <span class="text-highlight text-bold">madalate kuludega indeksifondi</span>. Siin on need vähesed asjad, millest pensioniks kogumisel lähtuda:</p>
                 </div>
             </div>
         </div>

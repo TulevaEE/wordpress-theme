@@ -1,12 +1,14 @@
 <section class="py-6">
     <div class="container">
         <div class="row mb-5">
-            <div class="mx-md-auto col-md-10">
-                <div class="qa__question-wrapper principle">
-                    <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-1">
-                        <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem valid õige fondi, seda suurem on mõju su pensionile.
-                    </a>
-                    <div id="answer-1" class="row my-5">
+            <div class="mx-md-auto col-md-10" id="accordion">
+                <div class="qa__question-wrapper">
+                    <div id="headingOne">
+                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem valid õige fondi, seda suurem on mõju su pensionile.
+                        </button>
+                    </div>
+                    <div id="collapseOne" class="collapse show my-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Liitintress on kaheksas maailmaime. Kes aru saab, teenib seda. Kes ei saa, maksab seda.” Albert Einstein</p>
 
@@ -23,10 +25,12 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-2">
-                        <span class="inline-signup__number">2</span>Vali agressiivne fond. Pea meeles, et riskivaba tulu pole olemas.
-                    </a>
-                    <div id="answer-2" class="collapse my-5">
+                    <div id="headingTwo">
+                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="inline-signup__number">2</span>Vali agressiivne fond. Pea meeles, et riskivaba tulu pole olemas.
+                        </button>
+                    </div>
+                    <div id="collapseTwo" class="collapse my-5" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Aktsiaturg on vahend raha liigutamiseks kannatamatute käest kannatlike kätte.” Warren Buffett. </p>
 
@@ -44,10 +48,12 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-3">
-                        <span class="inline-signup__number">3</span>Ära püüa turgu ajastada. Vali indeksifond.
-                    </a>
-                    <div id="answer-3" class="collapse my-5">
+                    <div id="headingThree">
+                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="inline-signup__number">3</span>Ära püüa turgu ajastada. Vali indeksifond.
+                        </button>
+                    </div>
+                    <div id="collapseThree" class="collapse my-5" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
 
                             <p class="blockquote text-blue mb-5">“Investorid on kaotanud palju rohkem raha turu languseks valmistudes või seda ette näha püüdes kui
@@ -57,9 +63,7 @@
                                 summade kaupa - 6% palgast iga kuu. Sinu kasuks töötab automaatselt pikaajalise investori parim
                                 riskide maandamise tööriist: dollar cost averaging ehk ostude ajas hajutamine.</p>
 
-                            <p><span class="text-highlight text-bold">Vali passiivselt juhitud pensionifond ehk indeksifond</span>, sest sellises fondis investeeritakse sinu
-                                vara sama regulaarselt kui sa säästad. Fondijuht ei saa jätta su raha pikaks ajaks pangaarvele
-                                seisma ega teha mingil perioodil liiga uljaid investeerimisotsuseid.</p>
+                            <p>Nagu Warren Buffett, on enamik maailma juhtivaid majandusteadlasi veendunud, et pensioniks raha kogumiseks sobib kõige paremini <span class="text-highlight text-bold">passiivselt juhitud pensionifond ehk indeksifond</span>. Sellises fondis võid kindel olla, et sinu vara investeeritakse sama regulaarselt kui sa säästad. Aktiivselt juhitud fondis võib fondijuht jätta su raha pikaks ajaks pangaarvele seisma või teha liiga uljaid investeerimisotsuseid. Liigne kartlikkus ja julgus on sulle ühtemoodi kahjulikud.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-3.png" class="img-fluid" alt="Eesti II sambasse pandud raha käekäik 2003-2016" />
                             <cite class="d-block small text-secondary mt-3 mb-5">Maailmaturu indeks: 50% MSCI ACWI (EUR) ja 50% Euro Government
@@ -75,10 +79,12 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-4">
-                        <span class="inline-signup__number">4</span>Kulud on tähtsamad kui sa arvad. Ära maksa tasudeks rohkem kui pool protsenti.
-                    </a>
-                    <div id="answer-4" class="collapse my-5">
+                    <div id="headingFour">
+                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span class="inline-signup__number">4</span>Kulud on tähtsamad kui sa arvad. Ära maksa tasudeks rohkem kui pool protsenti.
+                        </button>
+                    </div>
+                    <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“On üks usaldusväärne soovitus, mille järgimine sinu investeerimistulu parandab: hoia investeeringu
                                 kulud võimalikult madalal.” Burton G. Malkiel </p>
@@ -102,10 +108,12 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <a class="btn btn-link principle__item" data-toggle="collapse" href="#answer-5">
-                        <span class="inline-signup__number">5</span>Ole järjekindel. Ära hüple pensionifondidest sisse-välja.
-                    </a>
-                    <div id="answer-5" class="collapse my-5">
+                    <div id="headingFive">
+                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span class="inline-signup__number">5</span>Ole järjekindel. Ära hüple pensionifondidest sisse-välja.
+                        </button>
+                    </div>
+                    <div id="collapseFive" class="collapse my-5" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Aeg on su sõber ja impulss sinu vaenlane.” Jack Bogle</p>
 
@@ -127,10 +135,9 @@
 
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
-                <h5 class="text-center">Kui nõustud ülaltooduga, siis sobib sulle</h5>
+                <h5 class="text-center">Just nendest põhimõtetest lähtudes on loodud</h5>
                 <h3  class="text-center">Tuleva Maailma Aktsiate Pensionifond</h3>
-                <p class="text-center">mis on loodud nendest põhimõtetest lähtudes.</br> Selles fondis
-                    kogub raha enamik Tuleva asutajaid ja liikmeid.</p>
+                <p class="text-center">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
 
 
                 <div class="qa__question-wrapper">
@@ -160,11 +167,11 @@
 
         <div class="row my-5">
             <div class="col-md-10 col-lg-8 mx-auto">
-                <p>Tuleva ei ole pank, vaid <span class="text-highlight text-bold">22 Eesti ühiskonnategelase algatusel</span> loodud pensionikogujate ühendus, mille eesmärk
-                    on aidata teha Eesti pensionistrateegia paremaks, lähtudes eelkõige inimeste, mitte pankade ja kindlustusseltside
-                    huvidest. </p>
+                <p>Pankade fondivalitsejate eesmärk on teenida omanikele kasumit. Tuleva eesmärk on kasvatada pensionikogujate vara, vabanedes ahnetest vahemeestest ja hoides kulud hästi madalal.</p>
 
-                    <img src="<?php echo get_template_directory_uri() ?>/img/founding-members@2x.jpg" class="img-fluid my-4" alt="Tuleva tootlus" />
+                <p>Tuleva ei ole pank, vaid <a href="https://tuleva.ee/tulundusyhistu/#founder-stories" target="_blank" class="">22 Eesti ühiskonnategelase</a> algatusel loodud pensionikogujate ühendus. Meie eesmärk on koos targemalt koguda, kaitsta inimeste huve ja aidata riigil teha Eestile paremad seadused, mis lähtuvad eelkõige <span class="text-highlight text-bold">inimeste, mitte pankade</span> ja kindlustusseltside kasust.</p>
+
+                <img src="<?php echo get_template_directory_uri() ?>/img/founding-members@2x.jpg" class="img-fluid my-4" alt="Tuleva tootlus" />
             </div>
         </div>
 
