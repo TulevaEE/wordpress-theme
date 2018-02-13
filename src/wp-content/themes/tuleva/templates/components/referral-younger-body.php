@@ -70,7 +70,7 @@
 
                             <p>Pensioni teise sambasse kogudes teed juba ühe tähtsa asja õigesti: sa investeerid regulaarselt
                                 väikeste summade kaupa - 6% palgast iga kuu. Sinu kasuks töötab automaatselt pikaajalise
-                                investori parim riskide maandamise tööriist: dollar cost averaging ehk ostude ajas hajutamine.</p>
+                                investori parim riskide maandamise tööriist: <i>dollar cost averaging</i> ehk ostude ajas hajutamine.</p>
 
                             <p>Nagu Warren Buffett, on enamik maailma juhtivaid majandusteadlasi veendunud, et pensioniks raha
                                 kogumiseks sobib kõige paremini
@@ -207,14 +207,6 @@
 
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
-
-                <p class="">Meie eesmärk on, et võimalikult paljudel Eesti inimestel oleks tulevikus paremad eeldused pensionivara kasvatamiseks
-                    kui seni on olnud. Kui sulle Tuleva miskipärast ei meeldi, kaalu oma vana, kõrge tasuga fondi vahetamist
-                    SEB indeksifondi vastu, mis on pankade agressiivse strateegiaga pensionifondidest soodsaima tasuga. (Fondi
-                    valides teed küll tahes või tahtmata ühe valiku veel. Panga fondis toetad oma rahaga müügiesindajate
-                    armeede palkamist. Tuues kogumispensioni Tulevasse, aitad kaasa, et inimeste oma pensionifondi kulud
-                    langeksid meie kõigi jaoks.)
-                </p>
                 <p class="mb-0">Siin on sulle juhend, mille abil saad
                     <a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">netipangas fondivahetuse tehtud 5 minutiga.</a> See ei maksa sulle midagi – hakkad hoopis kohe tänu madalamale
                     tasule kokku hoidma.
@@ -229,7 +221,7 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <h4>Tekkis küsimusi? </h4>
                 <a class="">Helista +372 644 5100 või kirjuta
-                    <a href="mailto:info@tuleva.ee">info@tuleva.ee</a> Sulle ei vasta kunagi robot, vaid üks meist, neljast:
+                    <a href="mailto:info@tuleva.ee">info@tuleva.ee</a>. Sulle ei vasta kunagi robot, vaid üks meist, neljast:
                     </p>
             </div>
         </div>
