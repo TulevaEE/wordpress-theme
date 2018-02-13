@@ -8,7 +8,7 @@
                             <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem valid õige fondi, seda suurem on mõju su pensionile.
                         </button>
                     </div>
-                    <div id="collapseOne" class="collapse show my-5" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div id="collapseOne" class="collapse my-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="col-md-10 col-lg-8 mx-auto">
                             <p class="blockquote text-blue mb-5">“Liitintress on kaheksas maailmaime. Kes aru saab, teenib seda. Kes ei saa, maksab seda.” Albert Einstein</p>
 
@@ -135,8 +135,8 @@
 
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
-                <h5 class="text-center">Just nendest põhimõtetest lähtudes on loodud</h5>
-                <h3  class="text-center">Tuleva Maailma Aktsiate Pensionifond</h3>
+                <h5 class="text-center">Kui sul on pensionini rohkem kui kümme aastat, sobib sulle</h5>
+                <h2  class="text-center my-4">Tuleva Maailma Aktsiate Pensionifond</h3>
                 <p class="text-center">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
 
 
@@ -146,7 +146,7 @@
                             Tuleva pensionifondide filosoofia
                         </a>
                     </div>
-                    <div id="answer" class="collapse text-left mt-5">
+                    <div id="answer" class="collapse show text-left mt-5">
                         <ul class="list-style-checkmark">
                             <li>Juhindume maailma juhtivate majandusteadlaste faktidel põhinevatest veendumustest. Mitte fantaasiatest
                                 ega usust targa fondijuhi maagiasse.</li>
@@ -161,7 +161,7 @@
                                 ei loo.</li>
                         </ul>
                         <div class="text-center pt-4">
-                            <a class="btn btn-primary btn-lg" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                            <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                     – hakkad hoopis kohe tänu madalamale tasule kokku hoidma.
                 </p>
                 <div class="text-center py-6">
-                    <a class="btn btn-primary btn-lg" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                    <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
                 </div>
             </div>
         </div>
