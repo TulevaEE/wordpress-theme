@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="268" height="268" viewBox="0 0 268 268">
   <g fill="none" fill-rule="evenodd">
     <circle cx="134" cy="134" r="134" fill="#FFFFFF"/>
-    <circle cx="134" cy="134" r="128" fill="#EFF4F7"/>
-    <text fill="#002F63" font-family="Roboto-Bold, Roboto" font-size="26" font-weight="bold">
-      <tspan x="102.027" y="135">100%</tspan> <tspan x="165.973" y="135" font-size="22"> </tspan> <tspan x="99.793" y="165" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal">võlakirjad</tspan>
+    <circle cx="134" cy="134" r="128" fill="#002F63" fill-opacity="0.12"/>
+    <text fill="#002F63" font-family="Roboto-Bold, Roboto, sans-serif" font-size="26" font-weight="bold">
+      <tspan x="102.027" y="135">100%</tspan> <tspan x="165.973" y="135" font-size="22"> </tspan> <tspan x="99.793" y="165" font-family="Roboto-Regular, Roboto, sans-serif" font-size="16" font-weight="normal">võlakirjad</tspan>
     </text>
   </g>
 </svg>

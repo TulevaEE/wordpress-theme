@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="268" height="268" viewBox="0 0 268 268">
   <g fill="none" fill-rule="evenodd">
-    <path fill="#EFF4F7" d="M140,0 C210.692,0 268,57.308 268,128 C268,128 268,132.519043 267.347656,135.450684 L140,128 L140,0 Z"/>
+    <path fill="#002F63" fill-opacity="0.12" d="M140,0 C210.692,0 268,57.308 268,128 C268,128 268,132.519043 267.347656,135.450684 L140,128 L140,0 Z"/>
     <path fill="#CEF0FB" d="M128,12 C57.308,12 0,69.308 0,140 C0,210.692 57.308,268 128,268 C196.025126,268 251.657034,214.934357 255.757677,147.941119 C255.757677,147.941119 128,140 128,140 L128,12 Z"/>
-    <text fill="#002F63" font-family="Roboto-Bold, Roboto" font-size="26" font-weight="bold">
-      <tspan x="55.485" y="172">73%</tspan> <tspan x="104.515" y="172" font-size="22"> </tspan> <tspan x="54.051" y="202" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal">aktsiad</tspan>
+    <text fill="#002F63" font-family="Roboto-Bold, Roboto, sans-serif" font-size="26" font-weight="bold">
+      <tspan x="55.485" y="172">73%</tspan> <tspan x="104.515" y="172" font-size="22"> </tspan> <tspan x="54.051" y="202" font-family="Roboto-Regular, Roboto, sans-serif" font-size="16" font-weight="normal">aktsiad</tspan>
     </text>
-    <text fill="#002F63" font-family="Roboto-Bold, Roboto" font-size="26" font-weight="bold">
-      <tspan x="174.485" y="77">27%</tspan> <tspan x="223.515" y="77" font-size="22"> </tspan> <tspan x="164.793" y="107" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal">võlakirjad</tspan>
+    <text fill="#002F63" font-family="Roboto-Bold, Roboto, sans-serif" font-size="26" font-weight="bold">
+      <tspan x="174.485" y="77">27%</tspan> <tspan x="223.515" y="77" font-size="22"> </tspan> <tspan x="164.793" y="107" font-family="Roboto-Regular, Roboto, sans-serif" font-size="16" font-weight="normal">võlakirjad</tspan>
     </text>
   </g>
 </svg>
