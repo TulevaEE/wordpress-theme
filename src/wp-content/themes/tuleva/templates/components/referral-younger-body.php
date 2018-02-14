@@ -157,13 +157,9 @@
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
                 <h5 class="text-center">Kui sul on pensionini rohkem kui kümme aastat, sobib sulle</h5>
                 <h2 class="text-center my-4">Tuleva Maailma Aktsiate Pensionifond</h2>
-                <p class="text-center">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
+                <p class="text-center mb-6">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
 
                 <div class="text-center">
-
-                        <img src="<?php echo get_template_directory_uri() ?>/img/aktsiafond-pie.svg" class="mb-5 mt-3" alt="Tuleva Maailma Aktsiate Pensionifond">
-
-
                     <div class="text-left">
                         <ul class="list-style-checkmark">
                             <li>Juhindume maailma juhtivate majandusteadlaste <span class="text-highlight text-bold">faktidel</span> põhinevatest veendumustest. Mitte
