@@ -157,10 +157,11 @@
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
                 <h5 class="text-center">Kui sul on pensionini rohkem kui kümme aastat, sobib sulle</h5>
                 <h2 class="text-center my-4">Tuleva Maailma Aktsiate Pensionifond</h2>
-                <p class="text-center mb-6">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
+                <p class="text-center mb-5">Selles fondis kogub raha enamik Tuleva asutajaid ja liikmeid. Tule kogu ka meiega koos.</p>
 
                 <div class="text-center">
                     <div class="text-left">
+                        <h5 class="mb-3">Tuleva pensionifondide filosoofia</h5>
                         <ul class="list-style-checkmark">
                             <li>Juhindume maailma juhtivate majandusteadlaste <span class="text-highlight text-bold">faktidel</span> põhinevatest veendumustest. Mitte
                                 fantaasiatest ega usust targa fondijuhi maagiasse.</li>
