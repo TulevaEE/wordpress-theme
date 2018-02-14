@@ -46,6 +46,7 @@ input[type=number] {
 }
 
 .list-style-checkmark,
+.list-style-cross,
 .list-style-plussign {
     list-style: none;
     padding-left: 0;
@@ -66,6 +67,10 @@ input[type=number] {
 
 .list-style-checkmark li {
     background-image: url('../img/icon-checkmark.svg');
+}
+
+.list-style-cross li {
+    background-image: url('../img/icon-close-red.svg');
 }
 
 .list-style-plussign li {
