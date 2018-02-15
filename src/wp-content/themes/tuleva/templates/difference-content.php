@@ -31,17 +31,14 @@
                     <span class="text-highlight text-bold">Kui kasvame, saame tasud veel väiksemaks</span>. </p>
 
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-fees.png" class="img-fluid" alt="Vaid veerand valitsemistasudest 2016. aastal kulus meie raha eest hoolitsemisele" />
-                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti fondivalitsejate 2016 aasta aruanded. Tuleva arvutused <a href="https://tuleva.ee/analuusid/fondivalitsejate-aastaaruanded-2016/" target="_blank">siin</a>.</cite>
+                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti fondivalitsejate 2016. aasta aruanded. Tuleva arvutused <a href="https://tuleva.ee/analuusid/fondivalitsejate-aastaaruanded-2016/" target="_blank">siin</a>.</cite>
 
                 <p>Pangad teevad näo, et kulud pole tegelikult tähtsad. Warren Buffett pole nõus. Andme-nohikud pole ka nõus. Nad on aastate viisi statistikat analüüsinud ja leidnud üht: madalad kulud on kõige tõsisem fondi tootluse ennustaja.</p>
-
-                <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-fee-comparison.png" class="img-fluid" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
-                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Pensionikeskus, Rahandusministeerium. <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit#gid=0" target="_blank">Eesti pensionifondide jooksvate kulude tabel</a></cite>
 
                 <p>Teisisõnu: <span class="text-highlight text-bold">mida madalamad on pensionifondi kulud, seda suurem tõenäosus, et sinu pensionivara kasvab rohkem</span>.</p>
 
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-success-probability.png" class="img-fluid" alt="Odava tasuga fondid saavad parima tulemuse" />
-                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">Morning Star analüüs</a>.</cite>
+                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma MorningStar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal.</cite>
 
                 <h3 class="text-center mb-5">Meie usume nohikuid</h3>
 
@@ -52,9 +49,13 @@
 
                 <p>Meil on teine eesmärk: <span class="text-highlight text-bold">saada igast täna säästetud eurost pensionile jõudmise ajaks maksimaalne kasu. Sest meie omanikud ongi pensionikogujad ise</span>.</p>
 
+
                 <p>See teebki Tuleva pensionifondid eriliseks. Kõik muu on üsna sama.</p>
 
-                <p class="mb-0">Tuleva liikmetega koos saavad pensioni koguda kõik Eesti inimesed. Fondivahetus võtab paar minutit ja ei maksa sulle midagi - hakkad hoopis kohe tasudelt kokku hoidma.</p>
+                <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-fee-comparison.png" class="img-fluid" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
+                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Pensionikeskus, Rahandusministeerium. <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit#gid=0" target="_blank">Eesti pensionifondide jooksvate kulude tabel</a></cite>
+
+                <p class="mb-0">Tuleva liikmetega koos saavad pensioni koguda kõik Eesti inimesed. <span class="text-highlight text-bold">Fondivahetus võtab paar minutit ja ei maksa sulle midagi</span> - hakkad hoopis kohe tasudelt kokku hoidma.</p>
             </div>
         </div>
 
