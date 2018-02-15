@@ -10,7 +10,7 @@
                         </button>
                     </div>
                     <div id="collapseOne" class="collapse my-5" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="col-md-10 mx-auto">
                             <p class="blockquote text-blue mb-5">“Liitintress on kaheksas maailmaime. Kes aru saab, teenib seda. Kes ei saa, maksab seda.” Albert
                                 Einstein</p>
 
@@ -37,12 +37,14 @@
                         </button>
                     </div>
                     <div id="collapseTwo" class="collapse my-5" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="col-md-10 mx-auto">
                             <p class="blockquote text-blue mb-5">“Aktsiaturg on vahend raha liigutamiseks kannatamatute käest kannatlike kätte.” Warren Buffett.
                                 </p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid mb-5" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
                             />
+
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a></cite>
 
                             <p>Kui sul on pensionini rohkem kui kümme aastat,
                                 <span class="text-highlight text-bold">vali agressiivne pensionifond</span>, mis investeerib võimalikult suure osa varast aktsiatesse.
@@ -63,7 +65,7 @@
                         </button>
                     </div>
                     <div id="collapseThree" class="collapse my-5" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="col-md-10 mx-auto">
 
                             <p class="blockquote text-blue mb-5">“Investorid on kaotanud palju rohkem raha turu languseks valmistudes või seda ette näha püüdes
                                 kui turu langustes endis.” Peter Lynch</p>
@@ -100,7 +102,7 @@
                         </button>
                     </div>
                     <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="col-md-10 mx-auto">
                             <p class="blockquote text-blue mb-5">“On üks usaldusväärne soovitus, mille järgimine sinu investeerimistulu parandab: hoia investeeringu
                                 kulud võimalikult madalal.” Burton G. Malkiel </p>
 
@@ -112,8 +114,10 @@
                                 palk tõuseb aastas 3% ja ta on valinud agressiivse strateegiaga pensionifondi, mille tootlus
                                 aastas enne tasusid on Sanderi tööelu vältel keskmiselt 5% aastas.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-4.png" class="img-fluid mb-5" alt="Pensionikonto väärtuse kasv erinevate tasudega"
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-4.png" class="img-fluid" alt="Pensionikonto väärtuse kasv erinevate tasudega"
                             />
+
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti keskmine pensionifondi kulumäär on Rahandusministeeriumi andmete põhjal. Kõikide pensionifondide individuaalsed kulumäärad on <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit?usp=sharing" target="_blank">siin tabelis</a>.</cite>
 
                             <p>Kui Sanderi pensionifondi jooksvad tasud (valitsemistasu + muud investeeringu kulud) on 0,5%
                                 aastas nagu Eesti soodsaima tasuga pensionifondidel, koguneb tema pensionikontole 65ndaks
@@ -133,7 +137,7 @@
                         </button>
                     </div>
                     <div id="collapseFive" class="collapse my-5" aria-labelledby="headingFive" data-parent="#accordion">
-                        <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="col-md-10 mx-auto">
                             <p class="blockquote text-blue mb-5">“Aeg on su sõber ja impulss sinu vaenlane.” Jack Bogle</p>
 
                             <p>Kui sa veel ei kogu madala tasu ja agressiivse strateegiaga indeksifondis,

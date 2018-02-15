@@ -13,7 +13,7 @@
                         <div class="col-md-10 mx-auto">
 
                             <p>Sinu ametlik pensioniiga jõuab kätte vahemikus 64-65 (sõltuvalt sünniaastast). See ei kohusta
-                                sind pensioinile minemast - sa saad seda teha juba 3 aastat varem või mitu aastat hiljem
+                                sind pensionile minemast - sa saad seda teha juba 3 aastat varem või mitu aastat hiljem
                                 (NB! II sammast enne ametlikku pensioniiga kasutama hakata ei saa). Sea realistlik eesmärk
                                 - millal sa tahaks, et kogutud raha ja I samba pension hakkaks kas üksi või palga kõrvalt
                                 sinu igapäevaseid kulutusi toetama?</p>
@@ -21,7 +21,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-1.png" class="img-fluid" alt="Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed"
                             />
 
-                            <cite class="d-block small text-secondary mt-3 mb-5">Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Graafik näitab, kui palju muutub iga väljateenitud 100 € pensioni, kui hakkad seda välja võtma enne või pärast ametlikku pensioniiga. Allikas: Pensionikeskus.</cite>
 
                         </div>
                     </div>
@@ -42,8 +42,10 @@
                                 aga selle oodatav tootlus on nullilähedane. Ei ole võimalik saada korraga head tootlust ja
                                 väikest riski.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid mb-5" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
                             />
+
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a></cite>
                         </div>
                     </div>
                 </div>
@@ -64,6 +66,8 @@
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-3.png" class="img-fluid" alt="Kui palju maksad teenustasudeks iga 10 000€ pealt"
                             />
+
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti keskmine pensionifondi kulumäär on Rahandusministeeriumi andmete põhjal. Kõikide pensionifondide individuaalsed kulumäärad on <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit?usp=sharing" target="_blank">siin tabelis</a>.</cite>
                         </div>
                     </div>
                 </div>
@@ -111,11 +115,6 @@
                                     </p>
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
 
                     </div>
@@ -141,7 +140,7 @@
                                 pensionile suunduva inimese eluea vältel tehtava keskmise pensioni väljamakse ostujõud tänases
                                 rahas. Tegemist on väga erinevate toodetega - Rootsi mudeli väljamaksed võivad ajas kõikuda
                                 ning nende pensioniamet eeldab 2,1% kasvu aastas, Eestis väljamaksed ei muutu ning elukalliduse
-                                tõusuga ei kasva. Kliki pildil, et näha alusandmeid.</cite>
+                                tõusuga ei kasva. <a href="https://docs.google.com/spreadsheets/d/1E18F5Nam2OfJPUg_eSo1D8IsscuUV9V2iy1_wPTzLpA/edit?usp=sharing" target="_blank">Vaata arvutuse alusandmeid</a>.</cite>
                         </div>
                     </div>
                 </div>
