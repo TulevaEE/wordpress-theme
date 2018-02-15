@@ -38,7 +38,7 @@
                 <p>Teisisõnu: <span class="text-highlight text-bold">mida madalamad on pensionifondi kulud, seda suurem tõenäosus, et sinu pensionivara kasvab rohkem</span>.</p>
 
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-success-probability.png" class="img-fluid" alt="Odava tasuga fondid saavad parima tulemuse" />
-                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma MorningStar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal.</cite>
+                <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal.</cite>
 
                 <h3 class="text-center mb-5">Meie usume nohikuid</h3>
 
