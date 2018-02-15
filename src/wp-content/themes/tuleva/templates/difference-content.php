@@ -68,7 +68,7 @@
 
                 <div class="text-center emphasis-box p-5">
                     <h5 class="mb-4">Tahad ka meie eesmärkidele õla alla panna ja saada osa Eesti põnevaima sotsiaalse ettevõtte arengust?</h5>
-                    <a class="btn btn-outline-primary btn-lg" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Miks astuda Tuleva liikmeks?</a>
+                    <a class="btn btn-outline-primary btn-lg" href="https://tuleva.ee/tulundusyhistu/">Miks astuda Tuleva liikmeks?</a>
                 </div>
             </div>
         </div>
