@@ -63,8 +63,8 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="text-center py-6">
                     <h3 class="mb-4">Milline Tuleva pensionifond sobib sulle?</h3>
-                    <a class="btn btn-primary btn-lg mr-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Olen noorem kui 55</a>
-                    <a class="btn btn-primary btn-lg" href="https://tuleva.ee/valmistu-pensioniks-targalt/">Olen vanem kui 55</a>
+                    <a class="btn btn-primary btn-lg d-block d-md-inline-block mb-4 mb-md-0 mr-md-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Olen noorem kui 55</a>
+                    <a class="btn btn-primary btn-lg d-block d-md-inline-block" href="https://tuleva.ee/valmistu-pensioniks-targalt/">Olen vanem kui 55</a>
                 </div>
 
                 <div class="text-center emphasis-box p-5">
