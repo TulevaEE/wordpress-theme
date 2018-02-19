@@ -7821,13 +7821,12 @@ small,
   white-space: normal; }
 
 .principle__item {
-  margin: 30px 0;
-  padding: 0 30px 0 0;
-  background: url("../img/icon-plussign.svg") no-repeat right center; }
+  margin: 30px 0; }
   .principle__item--link {
     font-size: 1.25rem;
     color: #002F63;
-    padding: 0;
+    background: url("../img/icon-plussign.svg") no-repeat right center;
+    padding: 0 30px 0 0;
     font-weight: 500;
     text-align: left;
     white-space: normal; }

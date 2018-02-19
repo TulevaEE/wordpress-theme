@@ -1429,12 +1429,11 @@
 .principle {
     &__item {
         margin: 30px 0;
-        padding: 0 30px 0 0;
-        background: url("../img/icon-plussign.svg") no-repeat right center;
         &--link {
             font-size: $font-size-md;
             color: $navy-blue;
-            padding: 0;
+            background: url("../img/icon-plussign.svg") no-repeat right center;
+            padding: 0 30px 0 0;
             font-weight: 500;
             text-align: left;
             white-space: normal;
