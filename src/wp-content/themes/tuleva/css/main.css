@@ -7820,19 +7820,20 @@ small,
   background: url("../img/icon-plussign.svg") no-repeat right center;
   white-space: normal; }
 
-.principle__item, .principle__item:active, .principle__item:focus {
-  font-size: 1.25rem;
-  color: #002F63;
-  font-weight: 500;
+.principle__item {
   margin: 30px 0;
   padding: 0 30px 0 0;
-  display: block;
-  text-align: left;
-  background: url("../img/icon-plussign.svg") no-repeat right center;
-  white-space: normal; }
-
-.principle__item:hover {
-  cursor: pointer; }
+  background: url("../img/icon-plussign.svg") no-repeat right center; }
+  .principle__item--link {
+    font-size: 1.25rem;
+    color: #002F63;
+    padding: 0;
+    font-weight: 500;
+    text-align: left;
+    white-space: normal; }
+    .principle__item--link:hover {
+      color: #0081EE;
+      cursor: pointer; }
 
 .principle blockquote {
   font-size: 1.25rem;

@@ -3,8 +3,8 @@
         <div class="row mb-5">
             <div class="mx-md-auto col-md-10" id="accordion">
                 <div class="qa__question-wrapper">
-                    <div id="headingOne">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    <div id="headingOne" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
                             <span class="inline-signup__number">1</span>Mõtle, millal sa tegelikult pensionile plaanid jääda?
                         </button>
@@ -28,8 +28,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingTwo">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    <div id="headingTwo" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
                             <span class="inline-signup__number">2</span>Alusta tasahaaval strateegia muutmist.
                         </button>
@@ -51,8 +51,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingThree">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    <div id="headingThree" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
                             <span class="inline-signup__number">3</span>Kulud on tähtsamad kui sa arvad. Ära maksa tasudeks rohkem kui pool protsenti.
                         </button>
@@ -73,8 +73,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFour">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                    <div id="headingFour" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
                             <span class="inline-signup__number">4</span>Tee endale selgeks kogutud vara kasutamise võimalused.
                         </button>
@@ -121,8 +121,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFive">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                    <div id="headingFive" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
                             aria-controls="collapseFive">
                             <span class="inline-signup__number">5</span>Nõua poliitikutelt paremaid seadusi.
                         </button>
@@ -147,46 +147,6 @@
                 <hr />
             </div>
         </div>
-
-        <!-- <div class="row mt-6">
-            <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
-                <h5 class="text-center">Enamik üle 55-aastaseid Tulevas pensioni koguvaid inimesi eelistab</h5>
-                <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifondi</h3>
-                <p class="text-center">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult võlakirjadesse.</p>
-
-
-                <div class="qa__question-wrapper">
-                    <div class="text-center">
-                        <a class="btn btn-outline-primary d-inline-block text-center" data-toggle="collapse" href="#answer">
-                            Tuleva pensionifondide filosoofia
-                        </a>
-                    </div>
-                    <div id="answer" class="collapse text-left mt-5">
-                        <ul class="list-style-checkmark">
-                            <li>Juhindume maailma juhtivate majandusteadlaste
-                                <span class="text-highlight text-bold">faktidel</span> põhinevatest veendumustest. Mitte fantaasiatest ega usust targa fondijuhi
-                                maagiasse.</li>
-                            <li>
-                                <span class="text-highlight text-bold">Investeerime passiivselt</span>. See tähendab, et jagame raha reeglipäraselt maailma suurimate
-                                ettevõtete aktsiate ja valitsuste võlakirjade vahel.</li>
-                            <li>
-                                <span class="text-highlight text-bold">Investeerime pidevalt</span>. Nii maandab meie investorite riske alati dollar cost averaging
-                                ehk ostude ajas hajutamine.</li>
-                            <li>Keskendume
-                                <span class="text-highlight text-bold">pikaajalisele tootlusele</span>, sest katsed lühiajalisi kõikumisi vähendada oleks pikaajalisele
-                                investorile tarbetu kulu.</li>
-                            <li>Hoiame
-                                <span class="text-highlight text-bold">kulud nii madalal kui võimalik</span> ja ei kuluta investorite raha ekstravagantsetele reklaamikampaaniatele,
-                                müügimeeste armeedele ega muudele asjadele, mis pensionikogujatele pikas plaanis väärtust
-                                ei loo.</li>
-                        </ul>
-                        <div class="pt-4 text-center">
-                            <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="row my-5">
             <div class="col-md-10 col-lg-8 mx-auto">

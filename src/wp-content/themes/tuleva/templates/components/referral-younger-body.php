@@ -3,8 +3,8 @@
         <div class="row mb-5">
             <div class="mx-md-auto col-md-10" id="accordion">
                 <div class="qa__question-wrapper">
-                    <div id="headingOne">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    <div id="headingOne" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
                             <span class="inline-signup__number">1</span>Tegutse kohe. Mida varem valid õige fondi, seda suurem on mõju su pensionile.
                         </button>
@@ -30,8 +30,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingTwo">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    <div id="headingTwo" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
                             <span class="inline-signup__number">2</span>Vali agressiivne fond. Pea meeles, et riskivaba tulu pole olemas.
                         </button>
@@ -58,8 +58,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingThree">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    <div id="headingThree" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
                             <span class="inline-signup__number">3</span>Ära püüa turgu ajastada. Vali indeksifond.
                         </button>
@@ -95,8 +95,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFour">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                    <div id="headingFour" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
                             <span class="inline-signup__number">4</span>Kulud on tähtsamad kui sa arvad. Ära maksa tasudeks rohkem kui pool protsenti.
                         </button>
@@ -130,8 +130,8 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFive">
-                        <button class="btn btn-link btn-block principle__item" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                    <div id="headingFive" class="principle__item">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
                             aria-controls="collapseFive">
                             <span class="inline-signup__number">5</span>Ole järjekindel. Ära hüple pensionifondidest sisse-välja.
                         </button>
