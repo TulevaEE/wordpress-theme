@@ -113,13 +113,10 @@
 
                 <p>Võtame näiteks 30-aastased Martini ja Sirli, kes teenivad mõlemad 1900 eurot kuus. Martin maksab tasudeks 1,22% aastas. Sirli valis aasta algul madalate kuludega fondi vastu ja maksab edaspidi tasuks 0,5% aastas. Tänaseks kogutud 10 000 eurot.</p>
 
-                <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli-fees.png" class="img-fluid text-center" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
-                <cite class="d-block small text-secondary mt-3 mb-5">Eeldame, et Sirli ja Martini palk kasvab 3% aastas ning mõlema fondi tootlus enne teenustasu mahaarvamist on 5% aastas. Pea meeles, et tootlus ei ole ei Tuleva ega üheski teises Eesti pensionifondis garanteeritud ja võib olla nii positiivne kui negatiivne. 5-aastase sammuga tulbad, kui palju Martinil ja Sirlil tasudele kulub. Martini ja Sirli pilt ka vasakule ja paremale. </cite>
-
                 <p>Martinile koguneb pensioniks kokku 185 tuhat eurot. Sirli kogub sama ajaga 215 tuhat eurot. Pealtnäha <span class="text-highlight text-bold">pisike erinevus tasudes läks Martinile maksma ligi 30 000 eurot!</span></p>
 
-                <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli-comparison.png" class="img-fluid text-center" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
-                <cite class="d-block small text-secondary mt-3 mb-3">Eeldame, et Sirli ja Martini palk kasvab 3% aastas ning mõlema fondi tootlus enne teenustasu mahaarvamist on 5% aastas. Pea meeles, et tootlus ei ole ei Tuleva ega üheski teises Eesti pensionifondis garanteeritud ja võib olla nii positiivne kui negatiivne. 5-aastase sammuga tulbad, kui palju Martinil ja Sirlil tasudele kulub. Martini ja Sirli pilt ka vasakule ja paremale. </cite>
+                <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli.png" class="img-fluid text-center" alt="Teenustasude kulu" />
+                <cite class="d-block small text-secondary mt-3 mb-5">Eeldame, et Sirli ja Martini palk kasvab 3% aastas ning mõlema fondi tootlus enne teenustasu mahaarvamist on 5% aastas. Pea meeles, et tootlus ei ole ei Tuleva ega üheski teises Eesti pensionifondis garanteeritud ja võib olla nii positiivne kui negatiivne.</cite>
 
                 <a class="btn btn-link btn-block text-center h5 my-5" href="#">Loe lähemalt meie blogist</a>
                 <hr />
