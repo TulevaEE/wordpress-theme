@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<section class="py-6">
+<section class="py-4 py-md-6">
     <div class="container">
         <div class="row mb-5">
             <div class="mx-md-auto col-md-8" id="accordion">
@@ -116,13 +116,16 @@
 
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli.png" class="img-fluid  text-center" alt="Teenustasude kulu" />
 
-                <a class="btn btn-link btn-block text-center  text-bold mt-4 mb-6" href="#">Loe lähemalt, ja vaata, milliste eeldustega need näited on tehtud.</a>
+                <div class="text-center mt-4 mb-4 mb-md-6">
+                    <a class="text-bold" href="#">Loe lähemalt, ja vaata, milliste eeldustega need näited on tehtud.</a>
+                </div>
+
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
-                <div class="text-center emphasis-box py-5">
+                <div class="text-center emphasis-box p-4 p-md-5">
                     <h4 class="mb-4">5 soovitust — kuidas pensionifondi valida?</h4>
                     <a class="btn btn-primary btn-lg d-block d-md-inline-block mb-4 mb-md-0 mr-md-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Vanus 18-55</a>
                     <a class="btn btn-primary btn-lg d-block d-md-inline-block" href="https://tuleva.ee/valmistu-pensioniks-targalt/">Vanus üle 55</a>
