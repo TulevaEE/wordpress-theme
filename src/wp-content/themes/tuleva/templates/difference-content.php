@@ -32,7 +32,7 @@
                             <p>Asi on lihtsalt selles, et maailmamajanduse käekäik pole meie kontrolli all. Väärtpaberiturgude tõuse ja torme ette ennustada on üsna võimatu. Aga kulud on selge suurus: mida rohkem läheb tasudeks, seda vähem jääb sulle tulust, mida sinu raha turgudel teenib.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-success-probability.png" class="img-fluid" alt="Odava tasuga fondid saavad parima tulemuse" />
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal. Edu tõnäosus näitab tõenäosust, millega fond saavutab investoritele keskmisest parema tulemuse.</cite>
 
                         </div>
                     </div>
