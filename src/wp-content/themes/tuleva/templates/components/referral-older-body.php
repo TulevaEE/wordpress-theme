@@ -148,49 +148,29 @@
             </div>
         </div>
 
-        <div class="row my-5">
-            <div class="col-md-10 col-lg-8 mx-auto">
-                <img src="<?php echo get_template_directory_uri() ?>/img/fig-fund-guidance.png" class="img-fluid mb-5" alt="Milline fond valida kui oled vanem kui 55 aastat"
-                />
+        <div class="row mt-6">
+            <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
+                <h5 class="text-center">Kui sul on pensionini vähem kui 10 aastat, kaalu osaliselt vara toomist</h5>
+                <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifondi</h3>
+                <p class="text-center mb-5">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on kaotuse vältimiseks nõus kõrgema tootluse võimalusest loobuma.</p>
 
-                <h4 class="mb-4">Mida me soovitame?</h4>
-
-                <p>
-                    <span class="text-highlight text-bold">Pensionile minekuni rohkem kui 10 aastat</span>
-                    </br>
-                    Kui sinu tegelikult pensionile jäämise päevani on aega rohkem kui 10 aastat, siis sobib sulle agressiivse strateegiaga fond nagu näiteks <strong>Tuleva Maailma Aktsiate Pensionifond</strong>. Sul on aega taluda aktsiaturgude
-                    kõikumisi selle nimel, et sinu teine sammas võimalikult suureks kasvaks.
-                </p>
-                <p>
-                    <span class="text-highlight text-bold">Pensionile minekuni 5-10 aastat.</span>
-                    </br>
-                    Suuna oma uued maksed konservatiivsesse fondi (seda saad teha valikuavalduse esitamisega). Järgmise 5-10 aastaga kogud sa
-                    niimoodi tasahaaval tagavara, mille väärtus ei sõltu turu kõikumistest. See osa portfellist sulle juurde
-                    ka midagi ei teeni - riskivaba tootlust ei ole kahjuks täna olemas. Vali madalate kuludega konservatiivne
-                    fond - sellised on <strong>Tuleva Maailma Võlakirjade Pensionifond</strong> ja Swedbank K1.
-                </p>
-                <p>
-                    <span class="text-highlight text-bold">Pensionile minekuni alla 5 aasta</span>
-                    </br>
-                    Suuna oma uued maksed ja 50% senikogunenud teise samba varast konservatiivsesse fondi. See osa portfellist küll sulle tulu
-                    enam ei teeni, aga tema väärtus enam ka ei kõigu. Selline portfell sobib sulle kuni selle päevani, mil
-                    plaanid kogutud vara kasutama hakata.
-                </p>
-                <p>
-                    <span class="text-highlight text-bold">Sooviksid II samba vara kasutama hakata?</span>
-                    </br>
-                    Esiteks, hoolitse, et su vara oleks vähemalt 50% ulatuses madalate kuludega konservatiivses fondis. Edasi. Kui sul on kogunenud
-                    alla 8 800 euro siis sõlmi fondipensioni leping pensionikeskuse lehel. Kui rohkem, siis on su valikuvõimalused
-                    täna kehvemad. Kui vähegi kannatab, siis oota väljamaksete alustamisega seni, kuni Riigikogu on läbi
-                    analüüsinud Tuleva ettepanekud.
-
-                </p>
-
-                <div class="pt-4 text-center">
-                            <a class="btn btn-primary btn-xl mb-5" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
-                        </div>
-
-                <hr>
+                <div class="text-center">
+                    <div class="text-left">
+                        <h5 class="mb-3">Tuleva pensionifondide filosoofia</h5>
+                        <ul class="list-style-checkmark">
+                            <li>Juhindume maailma juhtivate majandusteadlaste <span class="text-highlight text-bold">faktidel</span> põhinevatest veendumustest. Mitte fantaasiatest ega usust targa fondijuhi maagiasse.</li>
+                            <li>
+                                <span class="text-highlight text-bold">Investeerime passiivselt</span>. See tähendab, et jagame raha reeglipäraselt maailma suurimate valitsuste võlakirjade vahel.</li>
+                            <li>
+                                <span class="text-highlight text-bold">Investeerime pidevalt</span>. Nii maandab meie investorite riske alati dollar cost averaging ehk ostude ajas hajutamine.</li>
+                            <li>Hoiame <span class="text-highlight text-bold">kulud nii madalal kui võimalik</span> ja ei kuluta investorite raha ekstravagantsetele reklaamikampaaniatele, müügimeeste armeedele ega muudele asjadele, mis pensionikogujatele pikas plaanis väärtust ei loo.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <h6 class="text-navy">Kas peaksid kõik või osaliselt oma II samba sellesse fondi tooma?</h6>
+                        <h3>Küsi meilt: +372 644 5100</h3>
+                    </div>
+                </div>
             </div>
         </div>
 
