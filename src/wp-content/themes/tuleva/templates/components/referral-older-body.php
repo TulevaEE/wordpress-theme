@@ -45,7 +45,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
                             />
 
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a></cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a>. Ajalooline tootlus ei taga sarnast tootlust tulevikus.</cite>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     </div>
                     <div id="collapseThree" class="collapse my-5" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p>Teenustasu on pikaajalise säästmise suurim vaenlane. Enamus uurimusi näitab -
+                            <p>Teenustasu on pikaajalise säästmise suurim vaenlane. Paljud uurimused näitavad -
                                 <span class="text-highlight text-bold">kõrge tasuga fondid annavad pikaajaliselt kehvemat tootlust kui madala tasuga fondid</span>.
                                 Juba täna on pensionikogujale saadaval fondid, mille tasu on 0,5% aastas. Ei ole mingit põhjust
                                 maksta rohkem teenuse eest, mis on saadaval odavamalt.</p>
@@ -85,7 +85,7 @@
                                 ja algselt raskesti arusaadavad. Kui oled ühe lepingu sõlminud, siis sa seda hiljem enam
                                 tagasi pöörata ei saa. Pea meeles, et sul ei ole
                                 <span class="text-highlight text-bold">MINGIT KOHUSTUST</span> pensioniea saabudes ühtegi lepingut oma teise sambasse kogunenud
-                                raha osas.
+                                raha osas sõlmida.
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/" target="_blank">Tee endale alternatiivid rahulikult selgeks</a>
                                 - las raha olla senikaua samas, kus ta varem oli.</p>
 
@@ -130,7 +130,7 @@
                     <div id="collapseFive" class="collapse my-5" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
                             <p>Täna on teise samba pensionite väljamaksmise süsteem liiga palju pankade ja kindlustusfirmade
-                                poole kaldu. Tuleva on näidanud, et seadusega seatud piiranguid saab muuta kui piisavalt
+                                poole kaldu. Tuleva on näidanud, et seadusega seatud piiranguid saab muuta, kui piisavalt
                                 palju inimesi seda nõuab. Nõua, et väljamaksete süsteem kaitseks
                                 <span class="text-highlight text-bold">sinu huve, mitte panga omasid</span>.</p>
 
@@ -152,7 +152,7 @@
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
                 <h5 class="text-center">Kui sul on pensionini vähem kui 10 aastat, kaalu osaliselt vara toomist</h5>
                 <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifondi</h3>
-                <p class="text-center mb-5">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on kaotuse vältimiseks nõus kõrgema tootluse võimalusest loobuma.</p>
+                <p class="text-center mb-5">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on riski vähendamiseks nõus kõrgema tootluse võimalusest loobuma.</p>
 
                 <div class="text-center">
                     <div class="text-left">
@@ -177,7 +177,7 @@
         <div class="row my-5">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <p>Pankade fondivalitsejate eesmärk on teenida omanikele kasumit.
-                    <span class="text-highlight text-bold">Tuleva eesmärk on kasvatada pensionikogujate vara</span>, vabanedes ahnetest vahemeestest ja hoides kulud
+                    <span class="text-highlight text-bold">Tuleva eesmärk on kasvatada pensionikogujate vara</span>, vabanedes liigsetest vahemeestest ja hoides kulud
                     hästi madalal.</p>
 
                 <p>Tuleva ei ole pank, vaid

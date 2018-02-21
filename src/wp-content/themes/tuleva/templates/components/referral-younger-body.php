@@ -44,7 +44,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
                             />
 
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a></cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: <a href="https://www.credit-suisse.com/corporate/en/articles/news-and-expertise/credit-suisse-yearbook-2017-201704.html" target="_blank">Credit Suisse Global Investment Returns Yearbook 2017</a>. Ajalooline tootlus ei taga sarnast tootlust tulevikus.</cite>
 
                             <p>Kui sul on pensionini rohkem kui kümme aastat,
                                 <span class="text-highlight text-bold">vali agressiivne pensionifond</span>, mis investeerib võimalikult suure osa varast aktsiatesse.
@@ -193,7 +193,7 @@
         <div class="row my-5">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <p>Pankade fondivalitsejate eesmärk on teenida omanikele kasumit. Tuleva eesmärk on kasvatada pensionikogujate
-                    vara, vabanedes ahnetest vahemeestest ja hoides kulud hästi madalal.</p>
+                    vara, vabanedes liigsetest vahemeestest ja hoides kulud hästi madalal.</p>
 
                 <p>Tuleva ei ole pank, vaid
                     <a href="https://tuleva.ee/tulundusyhistu/#founder-stories" target="_blank" class="">22 Eesti ühiskonnategelase</a> algatusel loodud pensionikogujate ühendus. Meie eesmärk on koos targemalt
