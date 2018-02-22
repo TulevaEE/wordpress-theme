@@ -15,13 +15,13 @@
 
                         <p><?php _e("As the first and only association representing pension savers, Tuleva is a serious partner for Ministry of Finance and state legislative bodies. We sit with the officials at the table where before were only banks and insurance companies.", TEXT_DOMAIN) ?></p>
 
-                        <p><?php _e("We help to make better laws. The laws that protect the people. The laws that maximize our profits from our savings, not banks’.", TEXT_DOMAIN) ?></p>
+                        <p><?php _e('<span class="text-highlight text-bold">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our savings, not banks’.', TEXT_DOMAIN) ?></p>
 
                         <p class="mb-2"><?php _e("We have our first achievements. For example", TEXT_DOMAIN) ?></p>
 
                         <ul>
-                            <li><?php _e("People in Estonia saved only during last year 1.5 million euros, because on Tuleva’s initiative, the fund managers are no longer allowed to charge high fees for changing the pension fund.", TEXT_DOMAIN) ?></li>
-                            <li><?php _e("We sent a petition to parliament, signed by 2300 people, that proposes to reform how people can use their II pillar savings.", TEXT_DOMAIN) ?></li>
+                            <li><?php _e('<span class="text-highlight text-bold">People in Estonia saved only during last year 1.5 million euros</span>, because on Tuleva’s initiative, the fund managers are no longer allowed to charge high fees for changing the pension fund.', TEXT_DOMAIN) ?></li>
+                            <li><?php _e('<span class="text-highlight text-bold">We sent a petition to parliament, signed by 2300 people</span>, that proposes to reform how people can use their II pillar savings.', TEXT_DOMAIN) ?></li>
                         </ul>
 
                         <p><?php _e("We do not organise demonstrations or spread random complaints. We are direct, analyse issues and offer constructive solutions.", TEXT_DOMAIN) ?></p>

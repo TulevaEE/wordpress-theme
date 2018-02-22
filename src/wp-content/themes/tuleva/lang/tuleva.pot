@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-22 09:33:18+00:00\n"
+"POT-Creation-Date: 2018-02-22 10:04:29+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -804,7 +804,7 @@ msgid "As the first and only association representing pension savers, Tuleva is 
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:18
-msgid "We help to make better laws. The laws that protect the people. The laws that maximize our profits from our savings, not banks’."
+msgid "<span class=\"text-highlight text-bold\">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our savings, not banks’."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:20
@@ -812,11 +812,11 @@ msgid "We have our first achievements. For example"
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:23
-msgid "People in Estonia saved only during last year 1.5 million euros, because on Tuleva’s initiative, the fund managers are no longer allowed to charge high fees for changing the pension fund."
+msgid "<span class=\"text-highlight text-bold\">People in Estonia saved only during last year 1.5 million euros</span>, because on Tuleva’s initiative, the fund managers are no longer allowed to charge high fees for changing the pension fund."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:24
-msgid "We sent a petition to parliament, signed by 2300 people, that proposes to reform how people can use their II pillar savings."
+msgid "<span class=\"text-highlight text-bold\">We sent a petition to parliament, signed by 2300 people</span>, that proposes to reform how people can use their II pillar savings."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:27
@@ -836,11 +836,11 @@ msgid "Every year, each member who has transferred their II pillar to Tuleva pen
 msgstr ""
 
 #: templates/components/modal-question-profit.php:18
-msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association with earn profit. The profit is then divided among members, as set in our Articles of Assocation."
+msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association with earn profit. <span class=\"text-highlight text-bold\">The profit is then divided among members</span>, as set in our Articles of Assocation."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:20
-msgid "As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the 100-euro joining fee pays for itself many times over. But we do not give promises."
+msgid "As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the <span class=\"text-highlight text-bold\">100-euro joining fee pays for itself many times over</span>. But we do not give promises."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:22
@@ -913,11 +913,11 @@ msgid "Every member has a vote on annual general meeting and has a right to elec
 msgstr ""
 
 #: templates/components/modal-question-vote.php:16
-msgid "Every day we share our ideas and experience among Tuleva memebers in our Facebook group, e-mail, phone and working groups. Among our community there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
+msgid "Every day we share our ideas and experience among <span class=\"text-highlight text-bold\">Tuleva memebers in our Facebook group</span>, e-mail, phone and working groups. Among our community there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:18
-msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that the power of thousands of smart people can be used for increasing our common good."
+msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that <span class=\"text-highlight text-bold\">the power of thousands of smart people</span> can be used for increasing our common good."
 msgstr ""
 
 #: templates/components/mutual-header.php:5
