@@ -80,7 +80,7 @@ $(document).ready(function($) {
     initPostSidebarHandler = function() {
         var $sidebar = $('.widget-area');
         if ($('body').hasClass('single-post') && $sidebar.length > 0) {
-            window.onscroll = function(e) {
+            window.onscroll = function() {
                 if (this.scrollY > 2000) {
                     $sidebar.addClass('widget-area--bottom');
                 } else {
@@ -96,8 +96,11 @@ $(document).ready(function($) {
     initModal('#security', 'securityModal');
     initModal('#calculator', 'calculatorModal');
     initModal('#founders', 'foundersModal');
+    initModal('#founders-2', 'foundersModal-2');
     initModal('#question-fee', 'questionFeeModal');
+    initModal('#question-joining-fee', 'questionJoiningFeeModal');
     initModal('#question-profit', 'questionProfitModal');
+    initModal('#question-vote', 'questionVoteModal');
     initModal('#question-rights', 'questionRightsModal');
 
     $('.testimonial-slider').unslider({

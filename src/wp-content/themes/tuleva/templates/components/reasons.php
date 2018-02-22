@@ -2,11 +2,11 @@
     <div class="row row-spacing-half">
         <div class="col">
             <h2 class="text-center">
-                <?php _e('Why Tuleva was born and what are our goals?', TEXT_DOMAIN) ?>
+                <?php _e('Tuleva makes lives better for ourselves and for Estonia', TEXT_DOMAIN) ?>
             </h2>
         </div>
     </div>
-    <div class="row vertical-align">
+    <div class="row">
         <div class="offset-md-2 col-md-5 col-sm-7">
             <p>
                 <?php _e('We all need pension one day. The earlier you start thinking about it, the better is your life in the future.', TEXT_DOMAIN) ?>
@@ -22,7 +22,9 @@
             </p>
         </div>
         <div class="offset-md-1 col-md-2 offset-sm-1 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/idea.svg" alt="Idea" />
+            <img src="https://tuleva.ee/wp-content/uploads/2018/02/jordan-valdma.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Jordan Valdma</p>
+            <p class="small text-secondary"><?php _e('Developer, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
     <div class="row row-spacing">
@@ -32,7 +34,7 @@
             </p>
         </div>
     </div>
-    <div class="row row-spacing vertical-align">
+    <div class="row row-spacing-half vertical-align">
         <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We deserve better', TEXT_DOMAIN) ?>
@@ -42,14 +44,13 @@
             </p>
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/founders.svg" alt="Founders" />
+            <img src="https://tuleva.ee/wp-content/uploads/2018/02/krista-teearu.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Krista Teearu</p>
+            <p class="small text-secondary"><?php _e('Entrepreneur, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
-    <div class="row row-spacing vertical-align">
-        <div class="offset-md-2 col-md-2 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/members.svg" alt="Members" />
-        </div>
-        <div class="offset-md-1 col-md-5 col-sm-7">
+    <div class="row row-spacing-half vertical-align">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We are stronger together', TEXT_DOMAIN) ?>
             </h4>
@@ -60,8 +61,13 @@
                 ?>
             </p>
         </div>
+        <div class="offset-md-1 col-md-2 col-sm-3 text-center">
+            <img src="https://tuleva.ee/wp-content/uploads/2018/02/tanel-padar-2.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Tanel Padar</p>
+            <p class="small text-secondary"><?php _e('Musician, Member of Tuleva', TEXT_DOMAIN) ?></p>
+        </div>
     </div>
-    <div class="row row-spacing vertical-align">
+    <div class="row row-spacing-half vertical-align">
         <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We earn money for ourselves, not for the banks', TEXT_DOMAIN) ?>
@@ -71,14 +77,13 @@
             </p>
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/global-index.svg" alt="Global Index" />
+            <img src="https://tuleva.ee/wp-content/uploads/2016/08/kristi_portree.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Kristi Saare</p>
+            <p class="small text-secondary"><?php _e('Teacher, investor, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
-    <div class="row row-spacing vertical-align">
-        <div class="offset-md-2 col-md-2 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/rocket.svg" alt="Rocket" />
-        </div>
-        <div class="offset-md-1 col-md-5 col-sm-7">
+    <div class="row row-spacing-half vertical-align">
+        <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('A beginning has been made', TEXT_DOMAIN) ?>
             </h4>
@@ -86,8 +91,13 @@
                 <?php _e('As a first step, we started modern low cost II pillar pension funds. All Estonian people can now save for pension together with Tuleva founders and members.', TEXT_DOMAIN) ?>
             </p>
         </div>
+        <div class="offset-md-1 col-md-2 col-sm-3 text-center">
+            <img src="https://tuleva.ee/wp-content/uploads/2018/02/indrek-seppo.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Indrek Seppo</p>
+            <p class="small text-secondary"><?php _e('Economist, Member of Tuleva', TEXT_DOMAIN) ?></p>
+        </div>
     </div>
-    <div class="row row-spacing vertical-align">
+    <div class="row row-spacing-half vertical-align">
         <div class="offset-md-2 col-md-5 col-sm-7">
             <h4>
                 <?php _e('We have many more good ideas', TEXT_DOMAIN) ?>
@@ -97,7 +107,9 @@
             </p>
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
-            <img src="<?php echo get_template_directory_uri() ?>/img/vacation.svg" alt="Vacation" />
+            <img src="https://tuleva.ee/wp-content/uploads/2018/02/lili-milani.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
+            <p class="text-secondary text-bold mb-0">Lili Milani</p>
+            <p class="small text-secondary"><?php _e('Genealogist, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
     <div class="row text-center row-spacing-bottom-quarter">

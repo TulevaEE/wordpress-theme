@@ -9,12 +9,25 @@
                 <div class="row">
                     <div class="col-md-10 m-auto">
                         <h2 class="text-serif text-center mb-5">
-                            <?php _e('How is the profit shared?', TEXT_DOMAIN) ?>
+                            <?php _e('Tuleva is a social company with a goal to earn profit for its members.', TEXT_DOMAIN) ?>
                         </h2>
-                        <p><?php _e("If Tuleva earns a profit it is divided among members according to the members' agreement in Tuleva's Articles of Assocation.", TEXT_DOMAIN) ?></p>
-                        <p><?php _e("Each member receives the membership bonus they have earned — 0.5% of the value of the member's Second Pillar fund units in Tuleva. The remainder of profit is divided according to a member's contribution to the Assocation's capital.</p>
-                        <p> The membership bonus may be thought of as a preferred stock dividend, paid to all members based on the amount they have transferred into Tuleva pension funds.</p>
-                        <p>A member's capital share is calculated based on the amount of money they have contributed into the fund's initial capital, plus the amount of membership bonuses the member has accumulated.", TEXT_DOMAIN) ?></p>
+                        <p><?php _e("Tuleva’s main principle is that people themselves save money for their future, using contemporary technologies and bypassing unnecessary middlemen and costs as much as possible.", TEXT_DOMAIN) ?></p>
+
+                        <p><?php _e("Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a member bonus. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit.", TEXT_DOMAIN) ?></p>
+
+                        <p><?php _e("When Tuleva grows, our funds under management grow and we add new products to our offering, then the association with earn profit. The profit is then divided among members, as set in our Articles of Assocation.", TEXT_DOMAIN) ?></p>
+
+                        <p><?php _e("As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the 100-euro joining fee pays for itself many times over. But we do not give promises.", TEXT_DOMAIN) ?></p>
+
+                        <h5><?php _e("How is member bonus calculated?", TEXT_DOMAIN) ?></h5>
+
+                        <p class="mb-2"><?php _e("At the end of each year", TEXT_DOMAIN) ?></p>
+
+                        <ul>
+                            <li><?php _e("We calculate how many pension fund units each member had on average during the year in euros", TEXT_DOMAIN) ?></li>
+                            <li><?php _e("Multiply this by 0,05% and transfer the resulting amount to member’s capital account", TEXT_DOMAIN) ?></li>
+                            <li><?php _e("Every 5 years, members annual meeting decides whether to pay our accumulated profit as a dividend or keep it invested.", TEXT_DOMAIN) ?></li>
+                        </ul>
                     </div>
                 </div>
             </div>
