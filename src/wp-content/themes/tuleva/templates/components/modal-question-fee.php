@@ -16,7 +16,7 @@
                         <ul>
                             <li>Membership community management and communication</li>
                             <li>Development of Tuleva’s web page, blog, and other informational channels</li>
-                            <li>The creation of and proposals influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>
+                            <li>The creation of proposals and influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>
                             <li>Development of Tuleva’s IT systems</li>
                             <li>Preparation and analysis of voluntary savings products and Third Pillar options</li>
                         </ul>", TEXT_DOMAIN) ?>

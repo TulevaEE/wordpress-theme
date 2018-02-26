@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-8 mx-auto text-center">
                 <p class="lead text-navy mb-3">" <?php _e("Tuleva is two-in-one — Estonia’s most exciting social company and a civil initiative that defends people's interests.", TEXT_DOMAIN); ?>" </p>
-                <p class="text-navy mb-5"><?php _e("<strong>Taavet Hinrikus</strong>, Tuleva and Transferwise co-founder", TEXT_DOMAIN); ?></p>
+                <p class="text-navy mb-5"><?php _e('<a href="#founder-stories" class="text-navy text-bold"><u>Taavet Hinrikus</u></a>, Tuleva and Transferwise co-founder', TEXT_DOMAIN); ?></p>
             </div>
         </div>
     </div>

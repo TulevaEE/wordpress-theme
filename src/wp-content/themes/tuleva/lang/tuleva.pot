@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-22 10:04:29+00:00\n"
+"POT-Creation-Date: 2018-02-26 14:21:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -785,7 +785,7 @@ msgid ""
 "                        <ul>\n"
 "                            <li>Membership community management and communication</li>\n"
 "                            <li>Development of Tuleva’s web page, blog, and other informational channels</li>\n"
-"                            <li>The creation of and proposals influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>\n"
+"                            <li>The creation of proposals and influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>\n"
 "                            <li>Development of Tuleva’s IT systems</li>\n"
 "                            <li>Preparation and analysis of voluntary savings products and Third Pillar options</li>\n"
 "                        </ul>"
@@ -800,11 +800,11 @@ msgid "Every euro saved gives a Swede almost a third higher pension than the sam
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:16
-msgid "As the first and only association representing pension savers, Tuleva is a serious partner for Ministry of Finance and state legislative bodies. We sit with the officials at the table where before were only banks and insurance companies."
+msgid "As the first and only association representing pension savers, Tuleva is a credible partner for Ministry of Finance and state legislative bodies. We participate in pension strategy discussions, where next to the officials only banks and insurance companies used to be represented."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:18
-msgid "<span class=\"text-highlight text-bold\">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our savings, not banks’."
+msgid "<span class=\"text-highlight text-bold\">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our, not banks’ savings."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:20
@@ -812,7 +812,7 @@ msgid "We have our first achievements. For example"
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:23
-msgid "<span class=\"text-highlight text-bold\">People in Estonia saved only during last year 1.5 million euros</span>, because on Tuleva’s initiative, the fund managers are no longer allowed to charge high fees for changing the pension fund."
+msgid "On Tuleva’s initiative, <span class=\"text-highlight text-bold\">people in Estonia saved only during last year 1.5 million euros</span>, because the fund managers are no longer allowed to charge high fees for changing the pension fund."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:24
@@ -820,7 +820,7 @@ msgid "<span class=\"text-highlight text-bold\">We sent a petition to parliament
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:27
-msgid "We do not organise demonstrations or spread random complaints. We are direct, analyse issues and offer constructive solutions."
+msgid "We do not organise demonstrations or spread random complaints. We are direct, we analyse issues and offer constructive solutions."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:12
@@ -832,11 +832,11 @@ msgid "Tuleva’s main principle is that people themselves save money for their 
 msgstr ""
 
 #: templates/components/modal-question-profit.php:16
-msgid "Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a member bonus. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit."
+msgid "Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a <span class=\"text-highlight text-bold\">member bonus</span>. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:18
-msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association with earn profit. <span class=\"text-highlight text-bold\">The profit is then divided among members</span>, as set in our Articles of Assocation."
+msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association will earn profit. <span class=\"text-highlight text-bold\">The profit is then divided among members</span>, as set in our Articles of Association."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:20
@@ -909,11 +909,11 @@ msgid "Tuleva is for people who care."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:14
-msgid "Every member has a vote on annual general meeting and has a right to elect and be elected to Tuleva’s board of directors and other supervisory bodys. This is the official part and it is very important."
+msgid "Every member has a vote on annual general meeting and has a right to elect and be elected to Tuleva’s board of directors and other supervisory bodies. This is the official part and it is very important."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:16
-msgid "Every day we share our ideas and experience among <span class=\"text-highlight text-bold\">Tuleva memebers in our Facebook group</span>, e-mail, phone and working groups. Among our community there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
+msgid "Every day we share our ideas and experience among <span class=\"text-highlight text-bold\">Tuleva members in our Facebook group</span>, e-mail, phone and working groups. Among our community, there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:18
@@ -929,7 +929,7 @@ msgid "Tuleva is two-in-one — Estonia’s most exciting social company and a c
 msgstr ""
 
 #: templates/components/mutual-header.php:9
-msgid "<strong>Taavet Hinrikus</strong>, Tuleva and Transferwise co-founder"
+msgid "<a href=\"#founder-stories\" class=\"text-navy text-bold\"><u>Taavet Hinrikus</u></a>, Tuleva and Transferwise co-founder"
 msgstr ""
 
 #: templates/components/mutual-header.php:21
@@ -1095,7 +1095,7 @@ msgid "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
 msgstr ""
 
 #: templates/components/signup.php:22
-msgid "This is the contribution of all Tuleva members to our joint entreprise."
+msgid "This is the contribution of all Tuleva members to our joint enterprise."
 msgstr ""
 
 #: templates/components/signup.php:25

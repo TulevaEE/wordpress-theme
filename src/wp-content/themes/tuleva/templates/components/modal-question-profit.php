@@ -13,9 +13,9 @@
                         </h2>
                         <p><?php _e("Tuleva’s main principle is that people themselves save money for their future, using contemporary technologies and bypassing unnecessary middlemen and costs as much as possible.", TEXT_DOMAIN) ?></p>
 
-                        <p><?php _e("Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a member bonus. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit.", TEXT_DOMAIN) ?></p>
+                        <p><?php _e('Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a <span class="text-highlight text-bold">member bonus</span>. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit.', TEXT_DOMAIN) ?></p>
 
-                        <p><?php _e('When Tuleva grows, our funds under management grow and we add new products to our offering, then the association with earn profit. <span class="text-highlight text-bold">The profit is then divided among members</span>, as set in our Articles of Assocation.', TEXT_DOMAIN) ?></p>
+                        <p><?php _e('When Tuleva grows, our funds under management grow and we add new products to our offering, then the association will earn profit. <span class="text-highlight text-bold">The profit is then divided among members</span>, as set in our Articles of Association.', TEXT_DOMAIN) ?></p>
 
                         <p><?php _e('As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the <span class="text-highlight text-bold">100-euro joining fee pays for itself many times over</span>. But we do not give promises.', TEXT_DOMAIN) ?></p>
 

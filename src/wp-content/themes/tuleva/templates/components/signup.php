@@ -19,7 +19,7 @@
                 <span class="inline-signup__number">2</span><span class="inline-signup__title"><?php _e('Pay one-off joining fee <span class="text-highlight">100 euros</span>', TEXT_DOMAIN) ?></span>
             </div>
             <p class="inline-signup__content">
-                <?php _e('This is the contribution of all Tuleva members to our joint entreprise.', TEXT_DOMAIN) ?>
+                <?php _e('This is the contribution of all Tuleva members to our joint enterprise.', TEXT_DOMAIN) ?>
             </p>
             <div class="inline-signup__item">
                 <span class="inline-signup__number">3</span><span class="inline-signup__title"><?php _e('Choose Tuleva pension fund', TEXT_DOMAIN) ?></span>
