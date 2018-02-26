@@ -5,7 +5,15 @@
                 <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
                     <h1><?php _e('A pension should benefit you. Not your bank.', TEXT_DOMAIN); ?></h1>
                     <p class="lead text-navy"><?php _e('Tuleva pension funds belong to their investors — with up to 3.3 times lower fees than bank-run funds.*', TEXT_DOMAIN); ?></p>
-                    <?php _e('<a href="#choose-fund" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Choose the right fund for you</a>', TEXT_DOMAIN); ?>
+
+                    <?php
+                    if (ICL_LANGUAGE_CODE=='et') {
+                        echo '<a href="/tasud-alla/" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Miks valida Tuleva?</a>';
+                    }
+                    if (ICL_LANGUAGE_CODE=='en') {
+                        echo '<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Choose the right fund for you</a>';
+                    }
+                    ?>
                     <p class="small text-navy mb-md-5 mb-lg-0 d-none d-md-block"><?php _e('Switching funds is free (and takes only five minutes).', TEXT_DOMAIN); ?></p>
                 </div>
                 <div class="col-lg-6">
@@ -104,10 +112,16 @@
                             </div>
                             <div class="calculator__savings">
                                 <h6 class="calculator__savings-title"><?php _e("Cost of high fees", TEXT_DOMAIN); ?></h6>
-                                <h1 class="calculator__sum" id="tuleva-saving">70 826€</h1>
+                                <h1 class="calculator__sum" id="tuleva-saving">-</h1>
                             </div>
                         </div>
                     </div>
+                    <?php
+                    if (ICL_LANGUAGE_CODE=='et') {
+                        echo '<a href="https://tuleva.ee/tasud-alla/" class="btn btn-link btn-block text-medium text-uppercase text-center my-3">Miks tasud olulised on?</a>';
+                    }
+                    ?>
+
                 </div>
             </div>
 

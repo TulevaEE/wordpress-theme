@@ -5,7 +5,6 @@
 
     <?php
     get_template_part('templates/components/front-header');
-    get_template_part('templates/components/fund-choosing');
     get_template_part('templates/components/tuleva-difference');
     get_template_part('templates/components/testimonials');
     ?>

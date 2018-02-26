@@ -152,7 +152,8 @@
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
                 <h5 class="text-center">Kui sul on pensionini vähem kui 10 aastat, kaalu osaliselt vara toomist</h5>
                 <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifondi</h3>
-                <p class="text-center mb-5">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on riski vähendamiseks nõus kõrgema tootluse võimalusest loobuma.</p>
+                <p class="text-center">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on riski vähendamiseks nõus kõrgema tootluse võimalusest loobuma.</p>
+                <a href="/tuleva-maailma-volakirjade-pensionifond/" class="btn btn-link btn-block text-uppercase text-medium mb-5">Vaata pensionifondi infot</a>
 
                 <div class="text-center">
                     <div class="text-left">
@@ -198,7 +199,7 @@
                     madalamale tasule kokku hoidma.
                 </p>
                 <div class="text-center py-6">
-                    <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                    <a class="btn btn-primary btn-xl" href="/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
                 </div>
             </div>
         </div>

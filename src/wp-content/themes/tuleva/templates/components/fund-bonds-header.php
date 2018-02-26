@@ -21,7 +21,7 @@
                         </ul>
                     </div>
                     <div class="proposal__cta">
-                    <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
+                    <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
                     </div>
                 </div>
             </div>

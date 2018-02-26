@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-26 14:21:47+00:00\n"
-"PO-Revision-Date: 2018-02-26 16:22+0200\n"
+"POT-Creation-Date: 2018-02-26 15:42:43+00:00\n"
+"PO-Revision-Date: 2018-02-26 17:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -66,8 +66,12 @@ msgstr ""
 "vaid 5 minutit</span>."
 
 #: templates/components/cta-change.php:6
-msgid "Switch to Tuleva"
-msgstr "Vali Tuleva pensionifond"
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
+"\">Switch to Tuleva</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
+"\">Vali Tuleva pensionifond</a>"
 
 #: templates/components/cta-join.php:5
 msgid "Are we on the right track?"
@@ -208,84 +212,76 @@ msgstr ""
 "Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 3,3x madalama "
 "tasuga.*"
 
-#: templates/components/front-header.php:8
-msgid ""
-"<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
-"block\">Choose the right fund for you</a>"
-msgstr ""
-"<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
-"block\">Vali sobiv pensionifond</a>"
-
-#: templates/components/front-header.php:9
+#: templates/components/front-header.php:17
 msgid "Switching funds is free (and takes only five minutes)."
 msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
 
-#: templates/components/front-header.php:16
+#: templates/components/front-header.php:24
 msgid "If you're"
 msgstr "Kui oled"
 
-#: templates/components/front-header.php:18
+#: templates/components/front-header.php:26
 msgid "years old and earn"
 msgstr "ja teenid kuus"
 
-#: templates/components/front-header.php:20
+#: templates/components/front-header.php:28
 msgid "euros per month (net),"
 msgstr "eurot neto,"
 
-#: templates/components/front-header.php:21
+#: templates/components/front-header.php:29
 msgid "your second pillar"
 msgstr "kogud"
 
-#: templates/components/front-header.php:22
+#: templates/components/front-header.php:30
 msgid "could"
 msgstr "eelduslikult"
 
-#: templates/components/front-header.php:22
+#: templates/components/front-header.php:30
 msgid "grow"
 msgstr "pensioniks"
 
-#: templates/components/front-header.php:29
+#: templates/components/front-header.php:37
 msgid "Estonian pension fund average"
 msgstr "Eesti keskmises pensionifondis"
 
-#: templates/components/front-header.php:94
+#: templates/components/front-header.php:102
 msgid "Annual fees"
 msgstr "Tasud aastas"
 
-#: templates/components/front-header.php:98
+#: templates/components/front-header.php:106
 msgid "In Tuleva pension fund"
 msgstr "Tuleva pensionifondis"
 
-#: templates/components/front-header.php:101
+#: templates/components/front-header.php:109
 msgid "Annual fees <span id=\"fund-fee\">0.5%</span>"
 msgstr "Tasud aastas <span id=\"fund-fee\">0,5%</span>"
 
-#: templates/components/front-header.php:106
+#: templates/components/front-header.php:114
 msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
-#: templates/components/front-header.php:117
+#: templates/components/front-header.php:131
 msgid "Want to know how to start saving?"
 msgstr "Soovid teada, kuidas alustada säästmist?"
 
-#: templates/components/front-header.php:123
+#: templates/components/front-header.php:137
 #: templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"
 msgstr "Sinu e-maili aadress"
 
-#: templates/components/front-header.php:133
+#: templates/components/front-header.php:147
 msgid "Send me information"
 msgstr "Saatke mulle infot"
 
-#: templates/components/front-header.php:148
+#: templates/components/front-header.php:162
 msgid "Every bit as safe as a bank-run fund."
 msgstr "Sama turvaline kui panga pensionifond."
 
-#: templates/components/front-header.php:149
+#: templates/components/front-header.php:163
 msgid "Find out more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/front-header.php:154
+#: templates/components/front-header.php:168
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
@@ -479,11 +475,11 @@ msgstr "oled nõus kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
 
 #: templates/components/fund-bonds-header.php:24
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block ga\" data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
+"data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
 
 #: templates/components/fund-calculator.php:13
 msgid "Age: 28"
@@ -509,11 +505,11 @@ msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
 
 #: templates/components/fund-choosing.php:15
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy"
-"\">Tuleva World Stocks Pension Fund</a>"
+"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" class="
+"\"text-navy\">Tuleva World Stocks Pension Fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" target=\"_blank\" class=\"text-"
-"navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
+"<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" class="
+"\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
 
 #: templates/components/fund-choosing.php:17
 #: templates/components/fund-stocks-header.php:5
@@ -556,11 +552,11 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:27
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block\" id=\"fund-choose-stocks\">Select this fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block\" id=\"fund-choose-stocks\">Valin selle fondi</a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
+"data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-choosing.php:33
 msgid "If you are over 55, the fund better suited for you could be"
@@ -568,11 +564,11 @@ msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
 
 #: templates/components/fund-choosing.php:36
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" target=\"_blank\" class=\"text-navy"
-"\">Tuleva World Bonds Pension Fund</a>"
+"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" class="
+"\"text-navy\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" target=\"_blank\" class=\"text-"
-"navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
+"<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
 
 #: templates/components/fund-choosing.php:39
 msgid ""
@@ -610,11 +606,11 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:48
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block\" id=\"fund-choose-bonds\">Select this fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block\" id=\"fund-choose-bonds\">Valin selle fondi</a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
+"data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
 
 #: templates/components/fund-counter.php:7
 msgid "3600"
@@ -828,12 +824,11 @@ msgstr "Tuleva pensionifondides kogujate valik"
 
 #: templates/components/fund-stocks-header.php:26
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg btn-"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg "
-"btn-block ga\" data-label=\"fund-details-choose-stocks\">Valin selle fondi</"
-"a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
+"data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/goals.php:5
 msgid "Done"
@@ -2149,6 +2144,10 @@ msgid "Fund page"
 msgstr "Fondide leht"
 
 #. Template Name of the plugin/theme
+msgid "Instructions — Step 1"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Membership success"
 msgstr "Liikmeks astutud"
 
@@ -2163,6 +2162,30 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr ""
+
+#~ msgid "Switch to Tuleva"
+#~ msgstr "Vali Tuleva pensionifond"
+
+#~ msgid ""
+#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg "
+#~ "btn-block\" id=\"fund-choose-stocks\">Select this fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+#~ "lg btn-block\" id=\"fund-choose-stocks\">Valin selle fondi</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg "
+#~ "btn-block\" id=\"fund-choose-bonds\">Select this fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+#~ "lg btn-block\" id=\"fund-choose-bonds\">Valin selle fondi</a>"
+
+#~ msgid ""
+#~ "<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
+#~ "block\">Choose the right fund for you</a>"
+#~ msgstr ""
+#~ "<a href=\"#choose-fund\" class=\"btn btn-primary btn-lg mb-3 d-none d-md-"
+#~ "block\">Vali sobiv pensionifond</a>"
 
 #~ msgid "How is the profit shared?"
 #~ msgstr "Kuidas Tuleva kasumit jaotab?"

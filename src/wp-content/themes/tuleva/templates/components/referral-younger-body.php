@@ -184,7 +184,8 @@
                         </ul>
                     </div>
                     <div class="pt-4">
-                        <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                        <a class="btn btn-primary btn-xl mb-4" href="https://tuleva.ee/netipanga-juhend/">Too pension Tulevasse</a>
+                        <a href="/tuleva-maailma-aktsiate-pensionifond/" class="btn btn-link btn-block text-uppercase text-medium">Vaata pensionifondi infot</a>
                     </div>
                 </div>
             </div>
@@ -213,7 +214,7 @@
                     tasule kokku hoidma.
                 </p>
                 <div class="text-center py-6">
-                    <a class="btn btn-primary btn-xl" href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/">Too pension Tulevasse</a>
+                    <a class="btn btn-primary btn-xl" href="https://tuleva.ee/netipanga-juhend/">Too pension Tulevasse</a>
                 </div>
             </div>
         </div>
