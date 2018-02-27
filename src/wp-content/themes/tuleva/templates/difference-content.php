@@ -32,7 +32,7 @@
                             <p>Asi on lihtsalt selles, et maailmamajanduse käekäik pole meie kontrolli all. Väärtpaberiturgude tõuse ja torme ette ennustada on üsna võimatu. Aga kulud on selge suurus: mida rohkem läheb tasudeks, seda vähem jääb sulle tulust, mida sinu raha turgudel teenib.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-success-probability.png" class="img-fluid" alt="Odava tasuga fondid saavad parima tulemuse" />
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal. Edu tõnäosus näitab tõenäosust, millega fond saavutab investoritele keskmisest parema tulemuse.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal. Edu tõenäosus näitab tõenäosust, millega fond saavutab investoritele keskmisest parema tulemuse.</cite>
 
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                         <p>Meie ühistes fondides ei kulu sinu raha</p>
                         <ul class="list-style-cross mb-5">
                             <li>Panga kasumiks</li>
-                            <li>näitlejate palkamiseks glamurset elu maalivatesse reklaamidesse</li>
+                            <li>glamuurset elu maalivatesse reklaamidesse näitlejate palkamiseks</li>
                             <li>müügimeeste armeedele komisjoni maksmiseks</li>
                             <li>ennustamatu ennustamiseks</li>
                         </ul>
@@ -117,7 +117,7 @@
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli.png" class="img-fluid  text-center" alt="Teenustasude kulu" />
 
                 <div class="text-center mt-4 mb-4 mb-md-6">
-                    <a class="text-bold" href="#">Loe lähemalt, ja vaata, milliste eeldustega need näited on tehtud.</a>
+                    <a class="text-bold" href="#">Loe lähemalt ja vaata, milliste eeldustega need näited on tehtud.</a>
                 </div>
 
             </div>
