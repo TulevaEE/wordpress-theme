@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-27 13:46:06+00:00\n"
-"PO-Revision-Date: 2018-02-27 15:46+0200\n"
+"POT-Creation-Date: 2018-02-27 14:05:48+00:00\n"
+"PO-Revision-Date: 2018-02-27 16:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -58,12 +58,8 @@ msgid "RSS feed"
 msgstr "RSS voog"
 
 #: templates/components/cta-change.php:5
-msgid ""
-"Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes "
-"only five minutes</span>."
-msgstr ""
-"Fondivahetus on TASUTA<span class=\"d-none d-lg-inline-block\"> ja võtab "
-"vaid 5 minutit</span>."
+msgid "Switching funds is FREE and takes only five minutes."
+msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
 
 #: templates/components/cta-change.php:6
 msgid ""
@@ -2153,6 +2149,11 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr ""
+
+#~ msgid ""
+#~ "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and "
+#~ "takes only five minutes</span>."
+#~ msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
 
 #~ msgid "Want to know how to start saving?"
 #~ msgstr "Soovid teada, kuidas alustada säästmist?"
