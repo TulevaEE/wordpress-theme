@@ -46,9 +46,9 @@
                 </h1>
                 <?php } ?>
                 <div class="post-meta">
-                    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>" class="post-meta__author">
+                    <span class="post-meta__author">
                         <?php echo get_the_author(); ?>
-                    </a>
+                    </span>
                     <span class="post-meta__separator">·</span>
                     <span class="post-meta__date">
                         <?php the_date(); ?>

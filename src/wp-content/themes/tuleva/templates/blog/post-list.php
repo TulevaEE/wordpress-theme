@@ -36,7 +36,7 @@
             <?php } ?>
             <h5 class="post-list__item__title text-serif<?php if ($is_featured) { echo ' h4'; } ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
             <div class="post-list__item__meta">
-                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="post-list__item__author"><?php echo get_the_author(); ?></a> <?php the_date(); ?>
+                <span class="post-list__item__author text-uppercase text-navy text-medium"><?php echo get_the_author(); ?></span> <?php the_date(); ?>
             </div>
             <div class="post-list__item__description"><?php the_excerpt(); ?></div>
         </li>
