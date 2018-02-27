@@ -1,4 +1,4 @@
-<section id="choose-fund" class="d-none d-md-block py-6">
+<section id="choose-fund" class="py-6">
     <div class="container text-center">
         <h2 class="mb-5">
             <?php _e('Which Tuleva pension fund to choose?', TEXT_DOMAIN) ?>
