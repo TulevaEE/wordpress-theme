@@ -8008,20 +8008,36 @@ small,
       background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/nyc_w_480.jpg"); } }
 
 .bg-hero-referral {
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/hearts_w_2670.jpg");
-  background-position: 0px 0px, 80% 35%;
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/kids_w_2600.jpg");
+  background-position: 0px 0px, 80% 15%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat; }
   @media (max-width: 1199px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/hearts_w_1994.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/kids_w_1971.jpg"); } }
   @media (max-width: 767px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/hearts_w_1385.jpg");
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/kids_w_1560.jpg");
       background-position: 0px 0px, 75% 35%; } }
   @media (max-width: 575px) {
     .bg-hero-referral {
-      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/hearts_w_480.jpg"); } }
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/kids_w_400.jpg"); } }
+
+.bg-hero-fees {
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/tasud-alla_w_2560.jpg");
+  background-position: 0px 0px, 80% 20%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat; }
+  @media (max-width: 1199px) {
+    .bg-hero-fees {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/tasud-alla_w_1986.jpg"); } }
+  @media (max-width: 767px) {
+    .bg-hero-fees {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/tasud-alla_w_1591.jpg");
+      background-position: 0px 0px, 75% 35%; } }
+  @media (max-width: 575px) {
+    .bg-hero-fees {
+      background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.92)), url("../img/tasud-alla_w_400.jpg"); } }
 
 .bg-blueish-gray {
   background: #f0f4f7; }
