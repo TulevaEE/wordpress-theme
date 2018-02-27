@@ -1,4 +1,4 @@
-<section id="difference" class="d-none d-md-block py-6">
+<section id="difference" class="py-6">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-10 m-auto">

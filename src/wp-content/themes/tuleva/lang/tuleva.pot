@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-26 15:42:43+00:00\n"
+"POT-Creation-Date: 2018-02-27 13:46:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +54,7 @@ msgid "RSS feed"
 msgstr ""
 
 #: templates/components/cta-change.php:5
-msgid "Switching funds is free <span class=\"d-none d-lg-inline-block\">and takes only five minutes</span>."
+msgid "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes only five minutes</span>."
 msgstr ""
 
 #: templates/components/cta-change.php:6
@@ -200,28 +200,15 @@ msgstr ""
 msgid "Cost of high fees"
 msgstr ""
 
-#: templates/components/front-header.php:131
-msgid "Want to know how to start saving?"
-msgstr ""
-
-#: templates/components/front-header.php:137
-#: templates/footer/subscribe-form.php:6
-msgid "Your e-mail address"
-msgstr ""
-
-#: templates/components/front-header.php:147
-msgid "Send me information"
-msgstr ""
-
-#: templates/components/front-header.php:162
+#: templates/components/front-header.php:135
 msgid "Every bit as safe as a bank-run fund."
 msgstr ""
 
-#: templates/components/front-header.php:163
+#: templates/components/front-header.php:136
 msgid "Find out more"
 msgstr ""
 
-#: templates/components/front-header.php:168
+#: templates/components/front-header.php:141
 msgid "Estonians invest in Tuleva pension funds."
 msgstr ""
 
@@ -1209,6 +1196,10 @@ msgstr ""
 
 #: templates/footer/blog-beacon.php:3 templates/single-content.php:109
 msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
+msgstr ""
+
+#: templates/footer/subscribe-form.php:6
+msgid "Your e-mail address"
 msgstr ""
 
 #: templates/fund-content-old.php:17 templates/fund-content.php:17

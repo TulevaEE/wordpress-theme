@@ -1,4 +1,4 @@
-<section id="founder-stories" class="d-none d-md-block py-6">
+<section id="founder-stories" class="py-6">
     <div class="container-fluid mb-4">
         <h2 class="text-center"><?php _e('Founding members', TEXT_DOMAIN); ?></h2>
         <!-- CAROUSEL -->

@@ -8,13 +8,13 @@
 
                     <?php
                     if (ICL_LANGUAGE_CODE=='et') {
-                        echo '<a href="/tasud-alla/" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Miks valida Tuleva?</a>';
+                        echo '<a href="/tasud-alla/" class="btn btn-primary btn-lg btn-block mb-3">Miks valida Tuleva?</a>';
                     }
                     if (ICL_LANGUAGE_CODE=='en') {
-                        echo '<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg mb-3 d-none d-md-block">Choose the right fund for you</a>';
+                        echo '<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-lg btn-block mb-3">Choose the right fund for you</a>';
                     }
                     ?>
-                    <p class="small text-navy mb-md-5 mb-lg-0 d-none d-md-block"><?php _e('Switching funds is free (and takes only five minutes).', TEXT_DOMAIN); ?></p>
+                    <p class="small text-navy mb-md-5 mb-lg-0"><?php _e('Switching funds is free (and takes only five minutes).', TEXT_DOMAIN); ?></p>
                 </div>
                 <div class="col-lg-6">
                     <div class="card calculator shadow-md">
@@ -122,33 +122,6 @@
                     }
                     ?>
 
-                </div>
-            </div>
-
-            <!-- Small screen subscribe section -->
-            <div class="row d-md-none mb-5 text-center">
-                <div class="col input-group-lg list-subscribe">
-                    <h5 class="mb-4"><?php _e('Want to know how to start saving?', TEXT_DOMAIN); ?></h5>
-                    <!-- Begin MailChimp Signup Form -->
-                    <div id="mc_embed_signup">
-                        <form action="//tuleva.us13.list-manage.com/subscribe/post?u=594cafb01e6f3b0087743e6f5&amp;id=b30d5d60e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll">
-                                <span class="mc-field-group">
-                                    <input type="email" value="" placeholder="<?php _e('Your e-mail address', TEXT_DOMAIN); ?>" name="EMAIL" class="required email form-control mb-3" id="mce-EMAIL">
-                                </span>
-                                <span id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </span>
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                    <input type="text" name="“b_594cafb01e6f3b0087743e6f5_b30d5d60e3”" tabindex="-1" value="">
-                                </div>
-                                <input type="submit" value="<?php _e('Send me information', TEXT_DOMAIN); ?>" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-lg btn-block">
-                            </div>
-                        </form>
-                    </div>
-                    <!--End mc_embed_signup-->
                 </div>
             </div>
         </div>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-26 15:42:43+00:00\n"
-"PO-Revision-Date: 2018-02-27 09:00+0200\n"
+"POT-Creation-Date: 2018-02-27 13:46:06+00:00\n"
+"PO-Revision-Date: 2018-02-27 15:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -59,10 +59,10 @@ msgstr "RSS voog"
 
 #: templates/components/cta-change.php:5
 msgid ""
-"Switching funds is free <span class=\"d-none d-lg-inline-block\">and takes "
+"Switching funds is free<span class=\"d-none d-lg-inline-block\"> and takes "
 "only five minutes</span>."
 msgstr ""
-"Fondivahetus on TASUTA <span class=\"d-none d-lg-inline-block\">ja võtab "
+"Fondivahetus on TASUTA<span class=\"d-none d-lg-inline-block\"> ja võtab "
 "vaid 5 minutit</span>."
 
 #: templates/components/cta-change.php:6
@@ -260,28 +260,15 @@ msgstr "Tasud aastas <span id=\"fund-fee\">0,5%</span>"
 msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
-#: templates/components/front-header.php:131
-msgid "Want to know how to start saving?"
-msgstr "Soovid teada, kuidas alustada säästmist?"
-
-#: templates/components/front-header.php:137
-#: templates/footer/subscribe-form.php:6
-msgid "Your e-mail address"
-msgstr "Sinu e-maili aadress"
-
-#: templates/components/front-header.php:147
-msgid "Send me information"
-msgstr "Saatke mulle infot"
-
-#: templates/components/front-header.php:162
+#: templates/components/front-header.php:135
 msgid "Every bit as safe as a bank-run fund."
 msgstr "Sama turvaline kui panga pensionifond."
 
-#: templates/components/front-header.php:163
+#: templates/components/front-header.php:136
 msgid "Find out more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/front-header.php:168
+#: templates/components/front-header.php:141
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
@@ -1949,6 +1936,10 @@ msgstr ""
 "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
 "\">Vaata arvutust</a>"
 
+#: templates/footer/subscribe-form.php:6
+msgid "Your e-mail address"
+msgstr "Sinu e-maili aadress"
+
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
 msgstr ""
@@ -2162,6 +2153,12 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr ""
+
+#~ msgid "Want to know how to start saving?"
+#~ msgstr "Soovid teada, kuidas alustada säästmist?"
+
+#~ msgid "Send me information"
+#~ msgstr "Saatke mulle infot"
 
 #~ msgid "Switch to Tuleva"
 #~ msgstr "Vali Tuleva pensionifond"
