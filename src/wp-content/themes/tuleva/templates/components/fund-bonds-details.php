@@ -78,10 +78,11 @@
                             <a href="https://tuleva.ee/wp-content/uploads/2018/02/TULVPF-investeeringute-aruanne-310118.pdf" target="_blank">01.18</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Poolaasta aruanne</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
                         </li>
-                        <li class="text-muted">Aastaaruanne</li>
-                        <li class="text-muted">Fondi kasumiaruanne</li>
+                        <li class="text-muted">Fondi aastaaruanne</li>
+                        <li class="text-muted"><a href="https://tuleva.ee/wp-content/uploads/2018/02/Tuleva-Fondid-AS-poolaasta-aruanne-30.06.2017.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
+                        <li class="text-muted">Fondivalitseja aastaaruanne</li>
                     </ul>
                 </div>
             </div>
