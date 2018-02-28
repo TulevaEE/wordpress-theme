@@ -116,9 +116,8 @@
                 <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli.png" class="img-fluid  text-center" alt="Teenustasude kulu" />
 
                 <div class="text-center mt-4 mb-4 mb-md-6">
-                    <a class="text-bold" href="#">Loe lähemalt ja vaata, milliste eeldustega need näited on tehtud.</a>
+                    <a class="text-bold" href="https://tuleva.ee/vastused/pensionifondide-tasud/" target="_blank">Loe lähemalt ja vaata, milliste eeldustega need näited on tehtud.</a>
                 </div>
-
             </div>
         </div>
 

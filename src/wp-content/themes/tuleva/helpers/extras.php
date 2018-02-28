@@ -40,28 +40,18 @@ add_filter('excerpt_more', 'custom_excerpt_more');
  */
 function language_picker($isMobile = false) {
     $languages = icl_get_languages('skip_missing=0&orderby=code');
-    $visibility_class = $isMobile ? 'visible-xs' : 'hidden-xs';
 
     if (!empty($languages)) { ?>
         <ul class="navbar-nav mr-0 pr-0">
             <?php
             foreach($languages as $l) {
-                $link = '<li class="nav-item d-block"><a href="'.$l['url'].'" class="nav-lang nav-link text-uppercase ' . $visibility_class;
-
-                if ($l['active']) {
-                    $link .= ' active"></li>';
-                } else {
-                    $link .='"></li>';
-                }
-
-                $link .= icl_disp_language($l['code']);
-
-                $link .= '</a>';
+                $link = '<li class="nav-item"><a href="'.$l['url'].'" class="nav-lang nav-link d-block text-uppercase">'.icl_disp_language($l['code']).'</a></li>';
 
                 if (!$l['active']) {
                     echo $link;
                 }
-            } ?>
+            }
+            ?>
         </ul>
         <?php
     }
