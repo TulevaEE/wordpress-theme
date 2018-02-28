@@ -88,6 +88,23 @@
     }
 }
 
+.bg-hero-referral-older {
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .92)), url('../img/coffee_w_1920.jpg');
+    background-position: 0px 0px, 80% 25%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    @include media-breakpoint-down (lg) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .92)), url('../img/coffee_w_1775.jpg');
+    }
+    @include media-breakpoint-down (sm) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .92)), url('../img/coffee_w_1536.jpg');
+        background-position: 0px 0px, 75% 35%;
+    }
+    @include media-breakpoint-only (xs) {
+        background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .92)), url('../img/coffee_w_400.jpg');
+    }
+}
+
 .bg-hero-fees {
     background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .92)), url('../img/tasud-alla_w_2560.jpg');
     background-position: 0px 0px, 80% 20%;

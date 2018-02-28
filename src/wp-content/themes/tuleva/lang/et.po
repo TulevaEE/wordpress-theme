@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-27 14:05:48+00:00\n"
-"PO-Revision-Date: 2018-02-27 16:06+0200\n"
+"POT-Creation-Date: 2018-02-28 09:40:44+00:00\n"
+"PO-Revision-Date: 2018-02-28 11:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1960,9 +1960,17 @@ msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
 "\">Suuna pension Tulevasse</a>"
 
-#: templates/header/main-sticky.php:8 templates/header/main.php:8
+#: templates/header/main-sticky.php:7 templates/header/main.php:7
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
+
+#: templates/header/main-sticky.php:14 templates/header/main.php:14
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary d-none d-lg-"
+"inline-block ml-2\">Switch to Tuleva</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary d-none d-"
+"lg-inline-block ml-2\">Too pension Tulevasse</a>"
 
 #: templates/single-content.php:57
 msgid "Category:"

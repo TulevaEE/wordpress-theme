@@ -43,7 +43,7 @@ function language_picker($isMobile = false) {
     $visibility_class = $isMobile ? 'visible-xs' : 'hidden-xs';
 
     if (!empty($languages)) { ?>
-        <ul class="navbar-nav ml-auto mr-0 pr-0">
+        <ul class="navbar-nav mr-0 pr-0">
             <?php
             foreach($languages as $l) {
                 $link = '<li class="nav-item d-block"><a href="'.$l['url'].'" class="nav-lang nav-link text-uppercase ' . $visibility_class;

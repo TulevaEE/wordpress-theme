@@ -1,5 +1,5 @@
 <section id="main-header">
-    <div class="bg-hero-referral">
+    <div class="bg-hero-referral-older">
         <div class="container">
             <div class="row py-5">
                 <div class="col-lg-8 mx-auto text-center">
