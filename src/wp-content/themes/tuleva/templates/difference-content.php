@@ -20,7 +20,7 @@
                         <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Täpsemalt on peamine muidugi tootlus.
                         </button>
-                        <p>Aga andmenohikud on leinud, et mida madalamad kulud, seda paremad eeldused, et tootlus tuleb hea.</p>
+                        <p>Aga andmenohikud on leidnud, et mida madalamad kulud, seda paremad eeldused, et tootlus tuleb hea.</p>
                     </div>
                     <div id="collapseOne" class="collapse mt-2 mb-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div>
