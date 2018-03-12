@@ -1,7 +1,7 @@
 <ul>
     <li>
-        <a href="/lood/kuidas-koguda-raha-re/" class="text-navy text-medium">
-            Kuidas koguda raha 20-, 30-, 40- ja 50-aastaselt?
+        <a href="/vastused/pensionifondide-tasud/" class="text-navy text-medium">
+            Kui palju pensionifondi tasud su vara vähendavad?
         </a>
     </li>
     <li>
@@ -10,8 +10,8 @@
         </a>
     </li>
     <li>
-        <a href="/oluline/millal-vahetada-fondi/" class="text-navy text-medium">
-            Kuidas vahetada fondi nii, et kasu saaksid sina, mitte pank või müügiesindaja — 3 head ja 3 halba põhjust
+        <a href="/lood/madalate-kuludega-fond-koigile/" class="text-navy text-medium">
+            Kas sinu II sammas toetab ikka veel müügimeeste armeesid ja pankade kasumeid?
         </a>
     </li>
 </ul>

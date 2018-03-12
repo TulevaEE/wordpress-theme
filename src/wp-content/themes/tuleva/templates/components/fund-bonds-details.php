@@ -75,7 +75,7 @@
                         <li>
                             Investeeringute aruanded
                             <br>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/02/TULVPF-investeeringute-aruanne-310118.pdf" target="_blank">01.18</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/03/TULVPF-investeeringute-aruanne-280218.docx.pdf" target="_blank">02.18</a>
                         </li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
