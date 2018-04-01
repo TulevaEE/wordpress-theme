@@ -34,12 +34,16 @@
                             <div>0,34%</div>
                         </div>
                         <div class="fund-info__item">
+                            <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
+                            <div>0,47%</div>
+                        </div>
+                        <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
                             <div>0%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></div>
-                            <div>2 400 000 <?php _e('units', TEXT_DOMAIN) ?></div>
+                            <div>3 448 877 <?php _e('units', TEXT_DOMAIN) ?></div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></div>
@@ -57,13 +61,13 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2017/11/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_13.11.2017-1.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond_270317.pdf" target="_blank">tingimused</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_01.04.2018.docx.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond_270317.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2017/09/Tuleva-pensionifondi-rebalansseerimise-mudel-aug2017-Mudelportfell-n%C3%B5ukogule.pdf" target="_blank">Mudelportfell</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2017/03/Pohiteave_Maailma-Aktsiate_270317.pdf" target="_blank">Põhiteave</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Pohiteave_Maailma-Aktsiate_Pe-nsionifond.01.04.2018.docx.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
                                 <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>

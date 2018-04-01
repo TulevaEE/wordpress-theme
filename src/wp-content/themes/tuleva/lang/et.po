@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2018-02-28 12:33:34+00:00\n"
-"PO-Revision-Date: 2018-02-28 14:34+0200\n"
+"POT-Creation-Date: 2018-04-01 18:54:12+00:00\n"
+"PO-Revision-Date: 2018-04-01 19:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -249,8 +249,8 @@ msgid "In Tuleva pension fund"
 msgstr "Tuleva pensionifondis"
 
 #: templates/components/front-header.php:109
-msgid "Annual fees <span id=\"fund-fee\">0.5%</span>"
-msgstr "Tasud aastas <span id=\"fund-fee\">0,5%</span>"
+msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
+msgstr "Tasud aastas <span id=\"fund-fee\">0,47%</span>"
 
 #: templates/components/front-header.php:114
 msgid "Cost of high fees"
@@ -394,45 +394,50 @@ msgstr "Valitsemistasu"
 
 #: templates/components/fund-bonds-details.php:37
 #: templates/components/fund-stocks-details.php:37
-msgid "Redemption fee and issue fee"
-msgstr "Väljalasketasu ja tagasivõtmistasu"
+msgid "Total expense ratio"
+msgstr "Kogukulu määr"
 
 #: templates/components/fund-bonds-details.php:41
 #: templates/components/fund-stocks-details.php:41
-msgid "Fund manager's participation rate in fund"
-msgstr "Fondivalitseja osalus fondis"
-
-#: templates/components/fund-bonds-details.php:42
-#: templates/components/fund-stocks-details.php:42
-msgid "units"
-msgstr "osakut"
+msgid "Redemption fee and issue fee"
+msgstr "Väljalasketasu ja tagasivõtmistasu"
 
 #: templates/components/fund-bonds-details.php:45
 #: templates/components/fund-stocks-details.php:45
-msgid "Risk profile"
-msgstr "Riskiprofiil"
+msgid "Fund manager's participation rate in fund"
+msgstr "Fondivalitseja osalus fondis"
 
 #: templates/components/fund-bonds-details.php:46
-msgid "Conservative"
-msgstr "Konservatiivne"
+#: templates/components/fund-stocks-details.php:46
+msgid "units"
+msgstr "osakut"
 
 #: templates/components/fund-bonds-details.php:49
 #: templates/components/fund-stocks-details.php:49
+msgid "Risk profile"
+msgstr "Riskiprofiil"
+
+#: templates/components/fund-bonds-details.php:50
+msgid "Conservative"
+msgstr "Konservatiivne"
+
+#: templates/components/fund-bonds-details.php:53
+#: templates/components/fund-stocks-details.php:53
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
-#: templates/components/fund-bonds-details.php:50
-#: templates/components/fund-stocks-details.php:50
+#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-stocks-details.php:54
 msgid "and"
 msgstr "ja"
 
-#: templates/components/fund-bonds-details.php:57
-#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:61
 msgid "Documents"
 msgstr "Dokumendid"
 
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-bonds-details.php:77
+#: templates/components/fund-stocks-details.php:77
 msgid "Reports"
 msgstr "Aruanded"
 
@@ -783,7 +788,7 @@ msgid ""
 "ee</a>"
 msgstr " "
 
-#: templates/components/fund-stocks-details.php:46
+#: templates/components/fund-stocks-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
 

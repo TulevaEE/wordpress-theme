@@ -34,6 +34,10 @@
                         <div>0,34%</div>
                     </div>
                     <div class="fund-info__item">
+                        <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
+                        <div>0,5%</div>
+                    </div>
+                    <div class="fund-info__item">
                         <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
                         <div>0%</div>
                     </div>
@@ -57,10 +61,10 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2017/11/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_13.11.2017-1.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Volakirjade-Pensionifond_270317.pdf" target="_blank">tingimused</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/04/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_01.04.2018.docx.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Volakirjade-Pensionifond_270317.pdf" target="_blank">tingimused</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2017/09/Tuleva-pensionifondi-rebalansseerimise-mudel-aug2017-Mudelportfell-n%C3%B5ukogule.pdf" target="_blank">Mudelportfell</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                         </li>
                         <li>
                             <a href="http://tuleva.ee/wp-content/uploads/2017/03/Pohiteave_Maailma-Volakirjade_270317.pdf" target="_blank">Põhiteave</a>
@@ -76,6 +80,8 @@
                             Investeeringute aruanded
                             <br>
                             <a href="https://tuleva.ee/wp-content/uploads/2018/03/TULVPF-investeeringute-aruanne-280218.docx.pdf" target="_blank">02.18</a>
+                            <br>
+                            <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
