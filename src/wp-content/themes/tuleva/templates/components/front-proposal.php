@@ -9,7 +9,7 @@
           <div class="intro w-container">
             <div class="intro-text">
               <?php
-                global $memberCount;
+                $memberCount = get_member_count();
                 printf(__('Tuleva is a growing mutual company. Born as a citizens’s initiative, it has %s owners or members.', TEXT_DOMAIN), $memberCount);
               ?>
             </div>

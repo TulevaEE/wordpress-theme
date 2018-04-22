@@ -13,7 +13,11 @@
     </div>
 </footer>
 
-<?php if (ICL_LANGUAGE_CODE=='et') {get_template_part('templates/footer/beacon-toggle');} ?>
+<?php get_template_part('templates/components/modal'); ?>
+
+<?php if (ICL_LANGUAGE_CODE=='et') {
+    get_template_part('templates/footer/beacon-toggle');
+} ?>
 
 <?php wp_footer(); ?>
 

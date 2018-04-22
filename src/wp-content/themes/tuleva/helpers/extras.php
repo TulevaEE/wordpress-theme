@@ -272,3 +272,23 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 function get_app_url() {
     return 'https://pension.tuleva.ee/login?language=' . ICL_LANGUAGE_CODE;
 }
+
+/*
+ * Get Tuleva member count
+ */
+function get_member_count() {
+    stream_context_set_default(
+        array(
+            'http' => array(
+                'method' => 'HEAD',
+                'header' => array(
+                    "Authorization: Bearer b4adb192-29a8-4861-a697-c704947d0023"
+                )
+            )
+        )
+    );
+    $headers = get_headers('https://onboarding-service.tuleva.ee/v1/members', 1);
+    $memberCount = empty($headers['X-Total-Count']) ? 0 : $headers['X-Total-Count'];
+
+    return $memberCount;
+}

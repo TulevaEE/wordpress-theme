@@ -1,6 +1,7 @@
 <?php
 
 $acf_includes = [
+    'helpers/acf/page.php',
     'helpers/acf/fund.php', // Fund page fields
     'helpers/acf/front.php', // Front page fields
     'helpers/acf/blog.php', // Blog page fields

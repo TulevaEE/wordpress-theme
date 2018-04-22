@@ -1,4 +1,4 @@
-<div id="foundersModal">
+<div id="foundersModal" class="modal-full">
     <div class="close-button-foundersModal">
         <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>

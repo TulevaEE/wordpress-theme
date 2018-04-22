@@ -28,19 +28,3 @@ foreach ($theme_includes as $file) {
     require_once $filepath;
 }
 unset($file, $filepath);
-
-/*
- * Get Tuleva member count
- */
-stream_context_set_default(
-    array(
-        'http' => array(
-            'method' => 'HEAD',
-            'header' => array(
-                "Authorization: Bearer b4adb192-29a8-4861-a697-c704947d0023"
-            )
-        )
-    )
-);
-$headers = get_headers('https://onboarding-service.tuleva.ee/v1/members', 1);
-$memberCount = $headers['X-Total-Count'];

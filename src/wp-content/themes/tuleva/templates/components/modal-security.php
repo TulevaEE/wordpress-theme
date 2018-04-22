@@ -1,5 +1,5 @@
-<div id="securityModal">
-    <div class="close-button-securityModal">
+<div id="modal-security" class="modal-full">
+    <div class="close-button-modal-security">
         <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>
     <div class="modal-full__container">

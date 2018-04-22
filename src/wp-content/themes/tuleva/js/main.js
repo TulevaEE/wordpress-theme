@@ -77,6 +77,27 @@ $(document).ready(function($) {
             animationDuration: '.25s'
         });
     },
+    initModalEscClose = function() {
+        $(document).on('keyup', function(ev) {
+            if (ev.keyCode === 27) {
+                $('[class^="close-button-').each(function() {
+                    $(this).trigger('click');
+                });
+            }
+        });
+    },
+    initGenericModals = function() {
+        $('[href^="#modal-"]').each(function() {
+            var id = $(this).attr('id');
+
+            if (!id) {
+                id = $(this).attr('href').split('#modal-')[1];
+                $(this).attr('id', id);
+            }
+
+            initModal('#' + id, $(this).attr('href').substr(1));
+        });
+    },
     initPostSidebarHandler = function() {
         var $sidebar = $('.widget-area');
         if ($('body').hasClass('single-post') && $sidebar.length > 0) {
@@ -93,13 +114,12 @@ $(document).ready(function($) {
     initStickyHeader();
     initBeaconToggle();
     initPostSidebarHandler();
-    initModal('#security', 'securityModal');
-    initModal('#calculator', 'calculatorModal');
+    initGenericModals();
+    initModalEscClose();
     initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
-    initModal('#question-fee', 'questionFeeModal');
-    initModal('#question-joining-fee', 'questionJoiningFeeModal');
-    initModal('#question-profit', 'questionProfitModal');
+    // initModal('#question-joining-fee', 'questionJoiningFeeModal');
+    // initModal('#question-profit', 'questionProfitModal');
     initModal('#question-vote', 'questionVoteModal');
     initModal('#question-rights', 'questionRightsModal');
 
@@ -128,6 +148,7 @@ $(document).ready(function($) {
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
+        .not('[href^="#modal-"]')
         .not('[data-toggle="tab"]')
         .not('[data-toggle="collapse"]')
         .not('[href="#carouselControls"]')

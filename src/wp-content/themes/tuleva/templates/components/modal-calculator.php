@@ -1,5 +1,5 @@
-  <div id="calculatorModal">
-    <div class="close-button-calculatorModal">
+  <div id="modal-calculator" class="modal-full">
+    <div class="close-button-modal-calculator">
       <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>
     <div class="modal-full__container">

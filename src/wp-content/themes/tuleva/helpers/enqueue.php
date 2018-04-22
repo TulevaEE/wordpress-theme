@@ -27,7 +27,7 @@ class ThemeEnqueue {
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '28022018',
+                'ver' => '17042018',
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -80,14 +80,6 @@ class ThemeEnqueue {
                 'enqueue' => true
             ],
             [
-                'handle' => 'main-script',
-                'src' => $js_path . 'main.js',
-                'deps' => 'jquery',
-                'ver' => '26022018',
-                'js_in_header' => false,
-                'enqueue' => true
-            ],
-            [
                 'handle' => 'rangeslider',
                 'src' => $js_path . 'vendor/rangeslider.min.js',
                 'deps' => 'jquery',
@@ -102,6 +94,14 @@ class ThemeEnqueue {
                 'ver' => '12062017',
                 'js_in_header' => false,
                 'enqueue' => true
+            ],
+            [
+                'handle' => 'main-script',
+                'src' => $js_path . 'main.js',
+                'deps' => 'jquery',
+                'ver' => '17042018',
+                'js_in_header' => false,
+                'enqueue' => true
             ]
         ];
         if (is_front_page()) {
@@ -110,7 +110,7 @@ class ThemeEnqueue {
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '01042018',
+                'ver' => '17042018',
                 'js_in_header' => false,
                 'enqueue' => true
             ]

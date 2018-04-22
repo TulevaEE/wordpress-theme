@@ -1,36 +1,19 @@
-<section id="read-blog" class="read-blog py-6">
-    <div class="container">
-      <h2 class="mb-5 text-center"><?php _e('Read our blog', TEXT_DOMAIN); ?></h2>
-      <div class="card-deck">
-        <a href="/en/recommendations/tuleva-pension-funds-invest-fund-suit-best/">
+<section id="<?php the_sub_field('component_id'); ?>" class="read-blog py-6">
+<div class="container">
+  <h2 class="mb-5 text-center"><?php the_sub_field('heading'); ?></h2>
+  <div class="card-deck">
+    <?php for( $i = 1; $i <= 3; $i++ ) { ?>
+        <a href="<?php the_permalink(get_sub_field('article_' . $i)); ?>">
           <div class="card shadow-sm">
-            <img src="https://tuleva.ee/wp-content/uploads/2017/05/fondivalik-eng-a-300x157.jpg" alt="" class="card-img-top rounded-top">
+            <img src="<?php echo get_the_post_thumbnail_url(get_sub_field('article_' . $i), 'max-width-500'); ?>" alt="<?php echo get_the_title(get_sub_field('article_' . $i)); ?>" class="card-img-top rounded-top">
             <div class="card-body">
-              <a href="/en/recommendations/tuleva-pension-funds-invest-fund-suit-best/" class="card-text">
-              Anatomy of a Tuleva fund: Where we invest (and which fund is right for you)?
+              <a href="<?php the_permalink(get_sub_field('article_' . $i)); ?>" class="card-text">
+                <?php echo get_the_title(get_sub_field('article_' . $i)); ?>
               </a>
             </div>
           </div>
         </a>
-        <a href="/en/analysis/tonus-journal-first-year/">
-          <div class="card shadow-sm">
-            <img src="https://tuleva.ee/wp-content/uploads/2017/04/Tuleva-esimene-seminar-300x157.jpg" alt="" class="card-img-top rounded-top">
-            <div class="card-body">
-              <a href="/en/analysis/tonus-journal-first-year/" class="card-text">
-                Tõnu's Journal — Year One
-              </a>
-            </div>
-          </div>
-        </a>
-        <a href="/en/analysis/chapter-one-warren-buffett-index-funds/">
-          <div class="card shadow-sm">
-            <img src="https://tuleva.ee/wp-content/uploads/2016/09/1peatykk-300x157.jpg" alt="" class="card-img-top rounded-top">
-            <div class="card-body">
-              <a href="/en/analysis/chapter-one-warren-buffett-index-funds/" class="card-text">
-              Chapter One: Why does Warren Buffet advise his heirs to invest in index funds?</a>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+    <?php  } ?>
+  </div>
+</div>
+</section>
