@@ -292,3 +292,7 @@ function get_member_count() {
 
     return $memberCount;
 }
+
+function is_cookie_consent() {
+    return !empty($_COOKIE['cookie-consent']);
+}

@@ -21,6 +21,8 @@
 
 <?php wp_footer(); ?>
 
+<?php get_template_part('templates/footer/cookie-bar'); ?>
+
 <?php get_template_part('templates/footer/beacon-translations'); ?>
 
 <?php get_template_part('templates/footer/analytics'); ?>

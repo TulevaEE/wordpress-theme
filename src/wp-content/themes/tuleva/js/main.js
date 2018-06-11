@@ -109,7 +109,14 @@ $(document).ready(function($) {
                 }
               }
         }
-    };
+    },
+    setCookie = function(cookieName, cookieValue, nDays) {
+        var today = new Date();
+        var expire = new Date();
+        if (nDays==null || nDays==0) nDays=1;
+        expire.setTime(today.getTime() + 3600000*24*nDays);
+        document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString()+"; path=/";
+    }
 
     initStickyHeader();
     initBeaconToggle();
@@ -235,5 +242,10 @@ $(document).ready(function($) {
         ev.preventDefault();
         window.HS.beacon.toggle();
         $(this).toggleClass('footer-help-close--open');
+    });
+
+    $('.cookie-bar__btn').on('click', function(ev) {
+        setCookie('cookie-consent', 1, 365);
+        $('#cookie-bar').fadeOut();
     });
 });

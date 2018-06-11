@@ -7875,6 +7875,39 @@ small,
   border-top-left-radius: 0.5rem !important;
   border-top-right-radius: 0.5rem !important; }
 
+.cookie-bar {
+  opacity: 1;
+  max-height: 999px;
+  min-height: 30px;
+  box-sizing: border-box;
+  z-index: 9999;
+  overflow: hidden;
+  color: #002F63;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #edf7fe;
+  padding: 15px 20px 15px; }
+  .cookie-bar__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative; }
+  .cookie-bar__right {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+
 .row-spacing {
   margin-top: 100px;
   margin-bottom: 100px; }

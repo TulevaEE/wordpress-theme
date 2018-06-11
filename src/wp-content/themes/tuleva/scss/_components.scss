@@ -1488,8 +1488,36 @@
 }
 
 //Card header image border radius override
-
 .rounded-top {
     border-top-left-radius: $border-radius-md !important;
     border-top-right-radius: $border-radius-md !important;
-  }
+}
+
+// Cookie consent bar
+.cookie-bar {
+    opacity: 1;
+    max-height: 999px;
+    min-height: 30px;
+    box-sizing: border-box;
+    z-index: 9999;
+    overflow: hidden;
+    color: $navy-blue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $blue-washed;
+    padding: 15px 20px 15px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__right {
+        flex-shrink: 0;
+    }
+}
+
