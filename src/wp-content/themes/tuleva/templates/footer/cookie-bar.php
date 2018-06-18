@@ -4,7 +4,7 @@
             <span class="cookie-bar__left">Kasutame oma veebilehel küpsiseid. Küpsistest saate loobuda igal ajal, muutes kasutatava seadme veebilehitseja seadistusi ja kustutades salvestatud küpsised. <a class="cookie-bar__more-info-link" tabindex="0" href="#modal-cookies">Soovin rohkem infot.</a>
             </span>
             <span class="cookie-bar__right">
-                <button class="cookie-bar__btn btn btn-primary btn-block" tabindex="0">Jah, nõustun</button>
+                <button class="cookie-bar__btn btn btn-primary btn-block" tabindex="0">Sain aru</button>
             </span>
         </div>
     </div>
