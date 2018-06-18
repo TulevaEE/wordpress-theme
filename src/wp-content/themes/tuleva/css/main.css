@@ -7880,7 +7880,7 @@ small,
   max-height: 999px;
   min-height: 30px;
   box-sizing: border-box;
-  z-index: 9999;
+  z-index: 1100;
   overflow: hidden;
   color: #002F63;
   position: fixed;
