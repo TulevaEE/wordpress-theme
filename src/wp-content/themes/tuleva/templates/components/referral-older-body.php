@@ -12,11 +12,9 @@
                     <div id="collapseOne" class="collapse my-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
 
-                            <p>Sinu ametlik pensioniiga jõuab kätte vahemikus 64-65 (sõltuvalt sünniaastast). See ei kohusta
-                                sind pensionile minemast - sa saad seda teha juba 3 aastat varem või mitu aastat hiljem
-                                (NB! II sammast enne ametlikku pensioniiga kasutama hakata ei saa). Sea realistlik eesmärk
-                                - millal sa tahaks, et kogutud raha ja I samba pension hakkaks kas üksi või palga kõrvalt
-                                sinu igapäevaseid kulutusi toetama?</p>
+                            <p>Eelpensionile võid vajadusel jääda juba 3 aastat enne ametliku pensioniea saabumist. Aga kui tervis hea, kaalu hoopis pensioni edasi lükkamist! Sinu riiklik ehk I samba pension suureneb tulevikus iga edasi lükatud kuu eest 0,9%.</p>
+
+                            <p>Mõtle ka, millal sa II sambasse kogutud vara kasutama hakata soovid. Sellest sõltub, millal peaksid suunama vara agressiivse strateegiaga fondist konservatiivse strateegiaga fondi.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-1.png" class="img-fluid" alt="Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed"
                             />
@@ -31,16 +29,14 @@
                     <div id="headingTwo" class="principle__item">
                         <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
-                            <span class="inline-signup__number">2</span>Alusta tasahaaval strateegia muutmist.
+                            <span class="inline-signup__number">2</span>Hakka muutma strateegiat: asenda aktsiad võlakirjadega.
                         </button>
                     </div>
                     <div id="collapseTwo" class="collapse my-5" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p>Kuigi agressiivse strateegiaga fondide oodatav tootlus on kõrgem, siis on võimatu tagada, et
-                                see tulu on positiivne järgmise 5 v 10 aasta jooksul. Sinu kogutud raha väärtus võib väheneda
-                                mitu aastat järjest. Konservatiivse strateegiaga fondis sinu raha väärtus ei kõigu nii palju,
-                                aga selle oodatav tootlus on nullilähedane. Ei ole võimalik saada korraga head tootlust ja
-                                väikest riski.</p>
+                            <p>Kui II samba kasutamiseni on jäänud 5 - 10 aastat, suuna vara järk-järgult konservatiivse strateegiaga fondi, mis investeerib võlakirjadesse.</p>
+
+                            <p>Miks? Aktsiad pakuvad kõrgemat tootlust, aga nende väärtus kõigub rohkem. Kui turge tabab madalseis, pole peatselt pensionile jääjal aega taastumist oodata. Konservatiivse strateegiaga fondi tootlus on nullilähedane, aga kõigub palju vähem. Risk ja tulu käivad käsikäes.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-2.png" class="img-fluid" alt="Maailma väärtapaberiturgude aastane tootlus 1900-2016 pärast inflatsiooni mahaarvutamist"
                             />
@@ -54,15 +50,14 @@
                     <div id="headingThree" class="principle__item">
                         <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
-                            <span class="inline-signup__number">3</span>Kulud on tähtsamad kui sa arvad. Ära maksa tasudeks rohkem kui pool protsenti.
+                            <span class="inline-signup__number">3</span>Kulud on tähtsamad kui sa arvad: ära maksa tasudeks rohkem kui pool protsenti.
                         </button>
                     </div>
                     <div id="collapseThree" class="collapse my-5" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p>Teenustasu on pikaajalise säästmise suurim vaenlane. Paljud uurimused näitavad -
-                                <span class="text-highlight text-bold">kõrge tasuga fondid annavad pikaajaliselt kehvemat tootlust kui madala tasuga fondid</span>.
-                                Juba täna on pensionikogujale saadaval fondid, mille tasu on 0,5% aastas. Ei ole mingit põhjust
-                                maksta rohkem teenuse eest, mis on saadaval odavamalt.</p>
+                            <p>Madala tasuga fondid saavutavad reeglina parema tootluse kui kõrge tasuga fondid. Konservatiivse strateegiaga fondide puhul on tasude mõju eriti tähtis: <span class="text-highlight text-bold">kõrgema tasuga fondides on üsna kindel, et su vara väärtus lähiaastail kahaneb</span>. </p>
+
+                            <p>Eestis on kaks mõistliku tasuga konservatiivse strateegiaga pensionifondi: <span class="text-highlight text-bold">Tuleva Maailma Võlakirjade Fond</span> ja Swedbank K1. Vali nende vahel.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-3.png" class="img-fluid" alt="Kui palju maksad teenustasudeks iga 10 000€ pealt"
                             />
@@ -76,31 +71,29 @@
                     <div id="headingFour" class="principle__item">
                         <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
-                            <span class="inline-signup__number">4</span>Tee endale selgeks kogutud vara kasutamise võimalused.
+                            <span class="inline-signup__number">4</span>Tee endale selgeks II sambasse kogutud vara kasutamise võimalused.
                         </button>
                     </div>
                     <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p>Teise samba vara kasutamisel on olulised piirangud ning alternatiivid on tihti üsna keerulised
-                                ja algselt raskesti arusaadavad. Kui oled ühe lepingu sõlminud, siis sa seda hiljem enam
-                                tagasi pöörata ei saa. Pea meeles, et sul ei ole
-                                <span class="text-highlight text-bold">MINGIT KOHUSTUST</span> pensioniea saabudes ühtegi lepingut oma teise sambasse kogunenud
-                                raha osas sõlmida.
-                                <a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/" target="_blank">Tee endale alternatiivid rahulikult selgeks</a>
-                                - las raha olla senikaua samas, kus ta varem oli.</p>
+                            <p><a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/" target="_blank">Loe siit</a>, millised võimalused sul pensioniks kogutud vara kasutamiseks on.</p>
+
+                            <p><span class="text-highlight text-bold">Pea meeles, et sa ei pea kohe pensioniikka jõudes kindlustusseltsiga pensionilepingut sõlmima. Ja ära unusta, et juba sõlmitud pensionilepingut tühistada ei saa.</span></p>
+
+                            <p>Seega: kui rahaliselt võimalik, lükka lepingu sõlmimist edasi, sest <a href="https://tuleva.ee/seadusandlus/maksimaalne-kasu-ii-sambast-anna-oma-allkiri/?utm_campaign=sniply&utm_medium=sniply&utm_source=sniply" target="_blank">Tulevas võitleme selle nimel, et vara kasutamiseks loodaks tulevikus ka paremaid võimalusi</a>. </p>
 
                             <h5 class="mb-4">Valikud pensioniea saabudes</h5>
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Alla 1976 euro kogunenud</span>
+                                        <span class="text-highlight text-bold">Kogunenud vähem kui 1890,10 eurot</span>
                                         </br>
                                         Võid kohe välja võtta
                                     </p>
                                 </div>
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Alla 8800 euro kogunenud</span>
+                                        <span class="text-highlight text-bold">Kogunenud on 1890,10 - 9465,50 eurot</span>
                                         </br>
                                         Saad võtta
                                         <a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/regulaarsed-maksed-pensionifondist/" target="_blank">regulaarsete maksetena pensionifondist</a>
@@ -108,7 +101,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Üle 8800 euro kogunenud</span>
+                                        <span class="text-highlight text-bold">Kogunenud on üle 9465,50 euro</span>
                                         </br>
                                         Saad võtta ainult kindlustuslepingu sõlmides eluaegsete maksetena.
                                         <a href="http://www.pensionikeskus.ee/eesti-pensionisusteem/kalkulaatorid/kindlustusseltside-kalkulaator/" target="_blank">Arvuta siin kui suure makse saad</a>.
@@ -129,10 +122,9 @@
                     </div>
                     <div id="collapseFive" class="collapse my-5" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p>Täna on teise samba pensionite väljamaksmise süsteem liiga palju pankade ja kindlustusfirmade
-                                poole kaldu. Tuleva on näidanud, et seadusega seatud piiranguid saab muuta, kui piisavalt
-                                palju inimesi seda nõuab. Nõua, et väljamaksete süsteem kaitseks
-                                <span class="text-highlight text-bold">sinu huve, mitte panga omasid</span>.</p>
+                            <p>II pensionisamba väljamaksete süsteem on <span class="text-highlight text-bold">jäik ja ebaefektiivne</span>.</p>
+
+                            <p>Nõua poliitikutelt seadusi, mis seaks sinu huvid pankade ja kindlustusseltside huvidest ettepoole. Tuleva on juba tõestanud, et kui ärksad inimesed koos tegutsevad, saame esile kutsuda suure mõjuga muutusi! Kui tahad meie eesmärkide ellu viimist toetada, <a href="https://tuleva.ee/tulundusyhistu">astu Tuleva liikmeks</a>.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-5.png" class="img-fluid" alt="Rootsi pensionisüsteem suudab samast rahast palju suurema pensioni välja maksta"
                             />
@@ -150,9 +142,9 @@
 
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
-                <h5 class="text-center">Kui sul on pensionini vähem kui 10 aastat, kaalu osaliselt vara toomist</h5>
+                <h5 class="text-center">Kui sul on pensionini jäänud loetud aastad, sobib sulle madala riskiga</h5>
                 <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifondi</h3>
-                <p class="text-center">See on hästi konservatiivne madalate kuludega fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. See fond sobib neile, kes on riski vähendamiseks nõus kõrgema tootluse võimalusest loobuma.</p>
+                <p class="text-center">See on hästi konservatiivne soodsa tasuga fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. Ükski võlakirjafond ei paku kõrget tootlust, aga hoides kulud kontrolli all, loome head eeldused sinu vara väärtuse säilimiseks.</p>
                 <a href="/tuleva-maailma-volakirjade-pensionifond/" class="btn btn-link btn-block text-uppercase text-medium mb-5">Vaata pensionifondi infot</a>
 
                 <div class="text-center">
@@ -168,7 +160,7 @@
                         </ul>
                     </div>
                     <div class="pt-4">
-                        <h6 class="text-navy">Kas peaksid kõik või osaliselt oma II samba sellesse fondi tooma?</h6>
+                        <h6 class="text-navy">Tahad oma valikuid enne otsustamist arutada?</h6>
                         <h3>Küsi meilt: +372 644 5100</h3>
                     </div>
                 </div>
