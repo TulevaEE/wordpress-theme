@@ -143,7 +143,7 @@
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto emphasis-box p-5">
                 <h5 class="text-center">Kui sul on pensionini jäänud loetud aastad, sobib sulle madala riskiga</h5>
-                <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifond</h3>
+                <h3 class="text-center">Tuleva Maailma Võlakirjade Pensionifond.</h3>
                 <p class="text-center">See on hästi konservatiivne soodsa tasuga fond, mis investeerib ainult maailma valitsuste ja nendega seotud organisatsioonide võlakirjadesse. Ükski võlakirjafond ei paku kõrget tootlust, aga hoides kulud kontrolli all, loome head eeldused sinu vara väärtuse säilimiseks.</p>
                 <a href="/tuleva-maailma-volakirjade-pensionifond/" class="btn btn-link btn-block text-uppercase text-medium mb-5">Vaata pensionifondi infot</a>
 
