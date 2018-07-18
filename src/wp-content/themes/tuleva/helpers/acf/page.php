@@ -1987,6 +1987,11 @@ acf_add_local_field_group(array(
                 'operator' => '==',
                 'value' => 'page',
             ),
+            array(
+                'param' => 'page_template',
+                'operator' => '!=',
+                'value' => 'default',
+            )
         ),
     ),
     'menu_order' => 0,
