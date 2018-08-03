@@ -87,9 +87,9 @@
                             <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/05/Tuleva-Maailma-Võlakirjade-Pensionifondi-aastaaruanne-2017.pdf" target="_blank">Fondi aastaaruanne</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Võlakirjade-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi aastaaruanne</a>
                         </li>
-                        <li><a href="https://tuleva.ee/wp-content/uploads/2018/02/Tuleva-Fondid-AS-poolaasta-aruanne-30.06.2017.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
+                        <li><a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Fondid-AS-2018-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2018/04/Tuleva-Fondid-AS-aastaaruanne-2017.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
                         </li>

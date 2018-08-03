@@ -84,7 +84,7 @@
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULAPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Aktsiate-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi poolaasta aruanne</a>
                             </li>
                             <li>
                                 <a href="https://tuleva.ee/wp-content/uploads/2018/05/Tuleva-Maailma-Aktsiate-Pensionifondi-aastaaruanne-2017.pdf" target="_blank">Fondi aastaaruanne</a>
