@@ -72,6 +72,9 @@
                         <li>
                             <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
                         </li>
+                        <li>
+                            <a href="https://tuleva.ee/uudised/mida-tahendavad-muudatused-tuleva-fondide-tingimustes-prospektis-ja-pohiteabes/" target="_blank">Tingimused, prospekt ja põhiteabe dokument alates 01.01.2019</a>
+                        </li>
                     </ul>
 
                     <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
