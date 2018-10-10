@@ -43,7 +43,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></div>
-                            <div>3 448 877 <?php _e('units', TEXT_DOMAIN) ?></div>
+                            <div>4 263 522 <?php _e('units', TEXT_DOMAIN) ?></div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></div>
