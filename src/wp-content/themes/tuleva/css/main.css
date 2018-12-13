@@ -8390,6 +8390,22 @@ small,
     font-size: 1.5rem; }
   .content h3 {
     font-size: 1.25rem; }
+  .content h1,
+  .content .h1,
+  .content h2,
+  .content .h2,
+  .content h3,
+  .content .h3,
+  .content h4,
+  .content .h4,
+  .content h5,
+  .content .h5,
+  .content h6,
+  .content .h6 {
+    line-height: 1;
+    margin-bottom: 20px; }
+  .content ul, .content ol, .content dl {
+    margin: 0 0 2em; }
 
 .single-post .page-title {
   line-height: 1.25;
