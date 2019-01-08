@@ -61,19 +61,16 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/04/Prospekt_maailmaaktsiatejavolakirjadepensionifondid_01.04.2018.docx.pdf" target="_blank">Prospekt</a> ja <a href="http://tuleva.ee/wp-content/uploads/2017/03/Tingimused_Tuleva-Maailma-Volakirjade-Pensionifond_270317.pdf" target="_blank">tingimused</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="https://tuleva.ee/wp-content/uploads/2019/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.01.01.2019.pdf" target="_blank">tingimused</a>
                         </li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                         </li>
                         <li>
-                            <a href="http://tuleva.ee/wp-content/uploads/2017/03/Pohiteave_Maailma-Volakirjade_270317.pdf" target="_blank">Põhiteave</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2019/01/Tuleva-Maailma-VõlakirjadePensionifond.Põhiteave-01.01.2019.pdf" target="_blank">Põhiteave</a>
                         </li>
                         <li>
                             <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
-                        </li>
-                        <li>
-                            <a href="https://tuleva.ee/uudised/mida-tahendavad-muudatused-tuleva-fondide-tingimustes-prospektis-ja-pohiteabes/" target="_blank">Tingimused, prospekt ja põhiteabe dokument alates 01.01.2019</a>
                         </li>
                     </ul>
 
