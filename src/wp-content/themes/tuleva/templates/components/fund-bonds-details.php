@@ -79,15 +79,15 @@
                         <li>
                             Investeeringute aruanded
                             <br>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/12/TULVPF-investeeringute-aruanne-301118.pdf" target="_blank">11.18</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2019/01/TULVPF-investeeringute-aruanne-311218.pdf" target="_blank">12.18</a>
                             <br>
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2017/09/TULVPF-poolaastaaruanne-2017.pdf" target="_blank">Fondi poolaasta aruanne</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Võlakirjade-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi poolaasta aruanne</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Võlakirjade-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi aastaaruanne</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2018/05/Tuleva-Maailma-Võlakirjade-Pensionifondi-aastaaruanne-2017.pdf" target="_blank">Fondi aastaaruanne</a>
                         </li>
                         <li><a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Fondid-AS-2018-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                         <li>
