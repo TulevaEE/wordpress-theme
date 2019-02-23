@@ -87,11 +87,14 @@
                                 <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Aktsiate-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi poolaasta aruanne</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2018/05/Tuleva-Maailma-Aktsiate-Pensionifondi-aastaaruanne-2017.pdf" target="_blank">Fondi aastaaruanne</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Maailma-Aktsiate-Pensionifond-2018-aastaaruanne.pdf" target="_blank">Fondi aastaaruanne</a>
                             </li>
                             <li><a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Fondid-AS-2018-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Tuleva-Fondid-AS-aastaaruanne-2017.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
+                            </li>
+                            <li>
+                                <a href="https://tuleva.ee/eelmiste-perioodide-aastaaruanded/">Eelmiste perioodide aastaaruanded</a>
                             </li>
                         </ul>
                     </div>
