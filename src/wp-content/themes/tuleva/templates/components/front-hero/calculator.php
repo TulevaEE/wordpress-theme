@@ -20,12 +20,6 @@
                     <option value="LIK75">
                         LHV Pensionifond Indeks
                     </option>
-                    <option value="LXK00">
-                        LHV Pensionifond XS
-                    </option>
-                    <option value="LSK00">
-                        LHV Pensionifond S
-                    </option>
                     <option value="LMK25">
                         LHV Pensionifond M
                     </option>
@@ -44,26 +38,17 @@
                     <option value="NPK25">
                         Luminor Pensionifond B
                     </option>
-                    <option value="NPK00">
-                        Luminor Pensionifond C
-                    </option>
                     <option value="SEK75">
                         SEB Energiline Pensionifond
                     </option>
                     <option value="SIK75">
                         SEB Energiline Pensionifond Indeks
                     </option>
-                    <option value="SEK00">
-                        SEB Konservatiivne Pensionifond
-                    </option>
                     <option value="SEK25">
                         SEB Optimaalne Pensionifond
                     </option>
                     <option value="SEK50">
                         SEB Progressiivne Pensionifond
-                    </option>
-                    <option value="SWK00">
-                        Swedbank Pensionifond K1 (Konservatiivne strateegia)
                     </option>
                     <option value="SWK25">
                         Swedbank Pensionifond K2 (Tasakaalustatud strateegia)
