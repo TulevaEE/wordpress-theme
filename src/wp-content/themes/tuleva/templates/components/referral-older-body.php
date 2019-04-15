@@ -76,7 +76,7 @@
                     </div>
                     <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p><a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/" target="_blank">Loe siit</a>, millised võimalused sul pensioniks kogutud vara kasutamiseks on.</p>
+                            <p><a href="https://tuleva.ee/liikmetele/kuidas-kasutada-teise-sambasse-kogutud-vara/" target="_blank">Loe siit</a>, millised võimalused sul pensioniks kogutud vara kasutamiseks on.</p>
 
                             <p><span class="text-highlight text-bold">Pea meeles, et sa ei pea kohe pensioniikka jõudes kindlustusseltsiga pensionilepingut sõlmima. Ja ära unusta, et juba sõlmitud pensionilepingut tühistada ei saa.</span></p>
 
@@ -86,14 +86,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud vähem kui 1890,10 eurot</span>
+                                        <span class="text-highlight text-bold">Kogunenud vähem kui 2052,10 eurot</span>
                                         </br>
                                         Võid kohe välja võtta
                                     </p>
                                 </div>
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud on 1890,10 - 9465,50 eurot</span>
+                                        <span class="text-highlight text-bold">Kogunenud on 2052,10 - 10260,50 eurot</span>
                                         </br>
                                         Saad võtta
                                         <a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/regulaarsed-maksed-pensionifondist/" target="_blank">regulaarsete maksetena pensionifondist</a>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud on üle 9465,50 euro</span>
+                                        <span class="text-highlight text-bold">Kogunenud on üle 10260,50 euro</span>
                                         </br>
                                         Saad võtta ainult kindlustuslepingu sõlmides eluaegsete maksetena.
                                         <a href="http://www.pensionikeskus.ee/eesti-pensionisusteem/kalkulaatorid/kindlustusseltside-kalkulaator/" target="_blank">Arvuta siin kui suure makse saad</a>.
