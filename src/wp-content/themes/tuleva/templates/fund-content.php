@@ -77,7 +77,7 @@ $context = stream_context_create(
         'http' => array(
             'method' => 'GET',
             'header' => array(
-                "Authorization: Bearer 5f2096c3-4c78-48aa-beaa-3c47c5a543db"
+                "Authorization: Bearer 06377792-6045-40dc-9324-d8ede3d27b3a"
             )
         )
     )
