@@ -17,6 +17,8 @@
                     get_template_part('templates/components/founder-carousel');
                 } else if (get_row_layout() === 'signup_block') {
                     get_template_part('templates/components/signup-block');
+                } else if (get_row_layout() === 'login_block') {
+                    get_template_part('templates/components/login-block');
                 } else if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
                 }
