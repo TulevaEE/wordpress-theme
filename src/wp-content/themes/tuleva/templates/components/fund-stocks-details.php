@@ -67,7 +67,7 @@
                                 <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/01/Tuleva-Maailma-Aktsiate-Pensionifond.-Põhiteave-01.01.2019.pdf" target="_blank">Põhiteave</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/05/Põhiteave_Maailma-Aktsiate_Pensionifond-mai-2019.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
                                 <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
@@ -79,7 +79,7 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/04/TULAPF-investeeringute-aruanne-310319.pdf" target="_blank">03.19</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/05/TULAPF-investeeringute-aruanne-300419.pdf" target="_blank">03.19</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
