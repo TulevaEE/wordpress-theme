@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-5">
                    <div id="inline-login" class="inline-signup card p-4 bg-light">
-                        <form id="login-form" action="https://pension.tuleva.ee/" method="GET">
+                        <form id="login-form" action="https://pension.tuleva.ee/3rd-pillar-flow/confirm-mandate" method="GET">
                            <div class="form-group mb-2">
                               <label for="monthlyThirdPillarContribution"><span>Igakuine sissemakse</span></label>
                               <div>
@@ -35,7 +35,7 @@
                               <label for="exchangeExistingThirdPillarUnits" class="small">Soovin kogunenud osakud üle tuua</label>
                            </div>
                            <div class="form-group mb-3">
-                                <span class="small text-muted">Sisenedes annad ühekordse loa küsida pensioniregistrist sinu andmed. Mei ei jaga, müü ega kasuta neid kurjasti.</span>
+                                <span class="small text-muted">Sisenedes annad ühekordse loa küsida pensioniregistrist sinu andmed. Me ei jaga, müü ega kasuta neid kurjasti.</span>
                            </div>
                            <div><button type="submit" class="btn btn-primary btn-lg btn-block"><span>Logi sisse</span></button></div>
                         </form>
