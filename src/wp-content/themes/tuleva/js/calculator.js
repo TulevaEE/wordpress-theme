@@ -19,7 +19,7 @@ var fundFee = {
     'SWK50': 0.0097,
     'SWK75': 0.0099,
     'SWK99': 0.0072,
-    'average': 0.0106
+    'average': 0.0120
 };
 
 var format = function(num) {
