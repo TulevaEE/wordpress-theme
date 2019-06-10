@@ -63,7 +63,6 @@ class Help_Widget extends WP_Widget {
         <?php } ?>
             <div class="d-flex">
                 <p class="small w-50 mr-3"><?php _e('Ask from Tuleva Community Manager Kristi Saare.', TEXT_DOMAIN); ?></p>
-                <img src="https://tuleva.ee/wp-content/uploads/2016/08/kristi_portree.jpg" class="rounded-circle" width="64" height="64">
             </div>
             <a class="btn btn-outline-primary footer-help" href="#"><?php echo $button_label; ?></a>
             <a href="#" class="footer-help-close">
