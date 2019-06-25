@@ -62,7 +62,7 @@ class Help_Widget extends WP_Widget {
             <h4 class="footer__title"><?php echo $title; ?></h4>
         <?php } ?>
             <div class="d-flex">
-                <p class="small w-50 mr-3"><?php _e('Ask from Tuleva Community Manager Kristi Saare.', TEXT_DOMAIN); ?></p>
+                <p class="small w-50 mr-3"><?php _e('Ask Tõnu, Mari or Liis from Tuleva team.', TEXT_DOMAIN); ?></p>
             </div>
             <a class="btn btn-outline-primary footer-help" href="#"><?php echo $button_label; ?></a>
             <a href="#" class="footer-help-close">

@@ -35,7 +35,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
-                            <div>0,47%</div>
+                            <div>0,46%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></div>
-                            <div>4 263 522 <?php _e('units', TEXT_DOMAIN) ?></div>
+                            <div>5 747 351 <?php _e('units', TEXT_DOMAIN) ?></div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></div>
