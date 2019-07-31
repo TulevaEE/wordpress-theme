@@ -72,7 +72,7 @@
                 <h6 class="calculator__comparison-fund"><?php _e("In Tuleva pension fund", TEXT_DOMAIN); ?></h6>
                 <div class="calculator__comparison-result">
                     <h5 class="mb-0" id="future-value-tuleva">545 654€</h5>
-                    <small class="text-secondary"><?php _e('Annual fees', TEXT_DOMAIN); ?> <span id="fund-fee">0.46%</span></small>
+                    <small class="text-secondary"><?php _e('Annual fees', TEXT_DOMAIN); ?> <span id="fund-fee">0,46%</span></small>
                 </div>
             </div>
         </div>
