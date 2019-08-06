@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Priit Lepasepp</h4>
-                                    <p><?php _e("Priit Lepasepp is an adviser with Nelja Energia AS. His everyday work is aimed at increasing renewable energy generation, and he also serves as one of Tuleva’s legal advisers.", TEXT_DOMAIN) ?></p>
+                                    <p><?php _e("Priit Lepasepp's everyday work is aimed at increasing renewable energy generation, and he also serves as one of Tuleva’s legal advisers.", TEXT_DOMAIN) ?></p>
                                 </div>
                             </div>
 
