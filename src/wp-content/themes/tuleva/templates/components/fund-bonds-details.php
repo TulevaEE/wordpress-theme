@@ -72,6 +72,9 @@
                         <li>
                             <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
                         </li>
+                        <li>
+                            <a href="https://tuleva.ee/uudised/tuleva-fondide-tingimused-19/">Fondi tingimused prospekt ja põhiteave alates 01.01.2020</a>
+                        </li>
                     </ul>
 
                     <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
@@ -84,12 +87,12 @@
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
                         <li>
-                            <a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Maailma-Võlakirjade-Pensionifondi-poolaasta-aruanne-2018.pdf" target="_blank">Fondi poolaasta aruanne</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2019/09/Tuleva-Maailma-Võlakirjade-Pensionifondi-2019-poolaasta-aruanne.pdf" target="_blank">Fondi poolaasta aruanne</a>
                         </li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Maailma-Võlakirjade-Pensionifond-2018-aastaaruanne.pdf" target="_blank">Fondi aastaaruanne</a>
                         </li>
-                        <li><a href="https://tuleva.ee/wp-content/uploads/2018/08/Tuleva-Fondid-AS-2018-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
+                        <li><a href="https://tuleva.ee/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                         <li>
                             <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
                         </li>
