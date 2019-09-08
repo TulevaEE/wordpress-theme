@@ -5,8 +5,8 @@
         get_template_part('templates/components/fund-third-details');
         get_template_part('templates/components/fund-manager');
 
-        if (have_rows('fund_components')) {
-            while (have_rows('fund_components')) { the_row();
+        if (have_rows('page_components')) {
+            while (have_rows('page_components')) { the_row();
                 if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
                 }
