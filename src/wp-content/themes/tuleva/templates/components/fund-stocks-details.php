@@ -97,7 +97,7 @@
                                 <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/eelmiste-perioodide-aastaaruanded/">Eelmiste perioodide aastaaruanded</a>
+                                <a href="https://tuleva.ee/eelmiste-perioodide-aruanded/">Eelmiste perioodide aruanded</a>
                             </li>
                         </ul>
                     </div>
