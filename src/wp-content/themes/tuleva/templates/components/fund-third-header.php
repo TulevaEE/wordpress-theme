@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row py-6">
             <div class="col-lg-10 mx-auto text-center">
-                <h1 class="mb-6"><?php _e('Tuleva III Pillar Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h1><?php _e('Tuleva III Pillar Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h4 class="mb-6">(fond registreerimisel)</h4>
             </div>
         </div>
     </div>
