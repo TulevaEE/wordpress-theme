@@ -22,12 +22,6 @@
                     <h5 class="mb-0">3240€</h5>
                 </div>
             </div>
-            <!-- <div class="p-3 calculator__comparison-row">
-                <h6 class="calculator__comparison-fund">Tulumaksu arvelt võidad:</h6>
-                <div class="calculator__comparison-result">
-                    <h5 class="mb-0">648€</h5>
-                </div>
-            </div> -->
         </div>
         <div class="calculator__savings">
             <h6 class="calculator__savings-title">Tulumaksu arvelt võidad</h6>

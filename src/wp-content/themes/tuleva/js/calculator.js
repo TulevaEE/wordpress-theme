@@ -22,12 +22,12 @@ var fundFee = {
     'average': 0.0120
 };
 
-var format = function(num) {
+var format = function (num) {
     if (!LANGCODE) {
         return num;
     }
 
-    switch(LANGCODE) {
+    switch (LANGCODE) {
         case 'et':
             if (num > 9999) {
                 return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
@@ -41,7 +41,7 @@ var format = function(num) {
     return num;
 };
 
-var calculateSaving = function() {
+var calculateSaving = function () {
     var age = $('#age').val();
     var netWage = $('#netWage').val();
 
