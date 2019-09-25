@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2019-09-08 15:06:45+00:00\n"
-"PO-Revision-Date: 2019-09-08 18:08+0300\n"
+"POT-Creation-Date: 2019-09-25 19:50:57+00:00\n"
+"PO-Revision-Date: 2019-09-25 22:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -381,7 +381,7 @@ msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
 #: templates/components/fund-bonds-header.php:17
 #: templates/components/fund-stocks-header.php:17
-#: templates/components/fund-third-header.php:17
+#: templates/components/fund-third-header.php:18
 msgid "Suitable for you if"
 msgstr "Sobib sulle, kui"
 
@@ -728,12 +728,12 @@ msgid "Aggressive"
 msgstr "Agressiivne"
 
 #: templates/components/fund-stocks-header.php:19
-#: templates/components/fund-third-header.php:19
+#: templates/components/fund-third-header.php:20
 msgid "you are younger than 55 years"
 msgstr "oled noorem kui 55-aastane"
 
 #: templates/components/fund-stocks-header.php:20
-#: templates/components/fund-third-header.php:20
+#: templates/components/fund-third-header.php:21
 msgid ""
 "you would like to earn <span class=\"text-highlight\"><strong>best expected "
 "return</strong></span> over long term and you are not disturbed by short-"
@@ -748,7 +748,7 @@ msgid "of people chose this fund"
 msgstr "Tuleva pensionifondides kogujate valik"
 
 #: templates/components/fund-stocks-header.php:26
-#: templates/components/fund-third-header.php:24
+#: templates/components/fund-third-header.php:25
 msgid ""
 "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
@@ -1213,6 +1213,26 @@ msgstr "Vähem küsimusi"
 msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
+#: templates/components/third-pillar-calculator.php:5
+msgid "Insert your gross monthly salary"
+msgstr "Sisesta oma brutokuupalk"
+
+#: templates/components/third-pillar-calculator.php:8
+msgid "euros"
+msgstr "eurot"
+
+#: templates/components/third-pillar-calculator.php:14
+msgid "In a month you can place in III pillar"
+msgstr "Kuus saad III sambasse panna"
+
+#: templates/components/third-pillar-calculator.php:20
+msgid "In a year you can place in III pillar"
+msgstr "Aastas saad III sambasse panna"
+
+#: templates/components/third-pillar-calculator.php:27
+msgid "You win on income tax"
+msgstr "Tulumaksu arvelt võidad"
+
 #: templates/footer/beacon-translations.php:4
 msgid "Send a Message"
 msgstr "Saada sõnum"
@@ -1482,6 +1502,10 @@ msgstr "III samba fondi leht"
 #. Template Name of the plugin/theme
 msgid "Fund page"
 msgstr "Fondide leht"
+
+#. Template Name of the plugin/theme
+msgid "General page"
+msgstr "Üldine leht"
 
 #. Template Name of the plugin/theme
 msgid "Instructions — Step 1"
@@ -1962,9 +1986,6 @@ msgstr "Soovitus 18-55"
 #~ msgstr ""
 #~ "Kui sinu II sammas pole juba Tuleva pensionifondi suunatud, saad seda "
 #~ "kohe mugavalt teha."
-
-#~ msgid "Fund details page"
-#~ msgstr "Fondide leht"
 
 #~ msgid "Switching funds is FREE and takes only five minutes."
 #~ msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."

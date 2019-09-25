@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2019-09-08 15:06:45+00:00\n"
+"POT-Creation-Date: 2019-09-25 19:50:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -349,7 +349,7 @@ msgstr ""
 
 #: templates/components/fund-bonds-header.php:17
 #: templates/components/fund-stocks-header.php:17
-#: templates/components/fund-third-header.php:17
+#: templates/components/fund-third-header.php:18
 msgid "Suitable for you if"
 msgstr ""
 
@@ -628,12 +628,12 @@ msgid "Aggressive"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:19
-#: templates/components/fund-third-header.php:19
+#: templates/components/fund-third-header.php:20
 msgid "you are younger than 55 years"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:20
-#: templates/components/fund-third-header.php:20
+#: templates/components/fund-third-header.php:21
 msgid ""
 "you would like to earn <span class=\"text-highlight\"><strong>best expected "
 "return</strong></span> over long term and you are not disturbed by short-"
@@ -645,7 +645,7 @@ msgid "of people chose this fund"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:26
-#: templates/components/fund-third-header.php:24
+#: templates/components/fund-third-header.php:25
 msgid ""
 "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
@@ -989,6 +989,26 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
+#: templates/components/third-pillar-calculator.php:5
+msgid "Insert your gross monthly salary"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:8
+msgid "euros"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:14
+msgid "In a month you can place in III pillar"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:20
+msgid "In a year you can place in III pillar"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:27
+msgid "You win on income tax"
+msgstr ""
+
 #: templates/footer/beacon-translations.php:4
 msgid "Send a Message"
 msgstr ""
@@ -1240,6 +1260,10 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Fund page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "General page"
 msgstr ""
 
 #. Template Name of the plugin/theme
