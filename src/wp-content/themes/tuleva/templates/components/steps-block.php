@@ -1,5 +1,4 @@
 <section id="<?php the_sub_field('component_id'); ?>">
-    <div id="inline-signup-anchor"></div>
     <div class="container row-spacing-half">
         <div class="row text-center row-spacing-bottom-quarter">
             <div class="col">

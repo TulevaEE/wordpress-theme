@@ -1,3 +1,5 @@
+/* global LANGCODE */
+
 $(document).ready(function ($) {
     var handleResponsiveSlidesNav = function () {
         var wrapSelector = '.media-box-slider-responsive',
@@ -120,13 +122,43 @@ $(document).ready(function ($) {
 
             expire.setTime(today.getTime() + 3600000 * 24 * nDays);
             document.cookie = cookieName + "=" + escape(cookieValue) + ";expires=" + expire.toGMTString() + "; path=/";
-        }
+        },
+        format = function (number) {
+            if (typeof LANGCODE === 'undefined') {
+                return number;
+            }
+
+            if (LANGCODE === 'et' && number > 9999) {
+                number = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            } else if (LANGCODE === 'en') {
+                number = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            }
+
+            return number;
+        },
+        calculateThirdPillarSavings = function () {
+            var $calculator = $('.third-pillar-calculator'),
+                wage = $calculator.find('#wage').val(),
+                monthlyAmount = Math.min(wage * 0.15, 500),
+                yearlyAmount = Math.min(wage * 1.8, 6000),
+                savingsSum = Math.min(wage * 0.36, 1200);
+
+            $calculator.find('#monthlyAmount').text(format(monthlyAmount) + " €");
+            $calculator.find('#yearlyAmount').text(format(yearlyAmount) + " €");
+            $calculator.find('#savingsSum').text(format(savingsSum) + " €");
+        },
+        initThirdPillarCalculator = function () {
+            calculateThirdPillarSavings();
+
+            $('.third-pillar-calculator #wage').on('change', calculateThirdPillarSavings);
+        };
 
     initStickyHeader();
     initBeaconToggle();
     initPostSidebarHandler();
     initGenericModals();
     initModalEscClose();
+    initThirdPillarCalculator();
     initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');
