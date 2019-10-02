@@ -125,13 +125,13 @@ $(document).ready(function ($) {
         },
         format = function (number) {
             if (typeof LANGCODE === 'undefined') {
-                return number;
+                return Math.floor(number);
             }
 
             if (LANGCODE === 'et' && number > 9999) {
-                number = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+                number = Math.floor(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
             } else if (LANGCODE === 'en') {
-                number = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                number = Math.floor(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             }
 
             return number;
