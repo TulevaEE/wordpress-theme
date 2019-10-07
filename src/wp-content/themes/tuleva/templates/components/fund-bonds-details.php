@@ -82,7 +82,7 @@
                         <li>
                             Investeeringute aruanded
                             <br>
-                            <a href="https://tuleva.ee/wp-content/uploads/2019/09/TULVPF-investeeringute-aruanne-300819.pdf" target="_blank">08.19</a>
+                            <a href="https://tuleva.ee/wp-content/uploads/2019/10/TULVPF-investeeringute-aruanne-300919.pdf" target="_blank">09.19</a>
                             <br>
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
