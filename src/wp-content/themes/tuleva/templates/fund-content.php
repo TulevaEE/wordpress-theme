@@ -86,6 +86,7 @@ $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundMan
 $funds = json_decode($json, true);
 $stock = array_search('EE3600109435', array_column($funds, 'isin'));
 $bond = array_search('EE3600109443', array_column($funds, 'isin'));
+$third = array_search('EE3600001707', array_column($funds, 'isin'));
 ?>
 
 <script type="text/javascript">

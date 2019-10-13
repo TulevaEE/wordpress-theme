@@ -7,7 +7,7 @@
                         <h5 class="mb-4"><?php _e('Fund details', TEXT_DOMAIN) ?></h5>
                         <div class="hidden-xs fund-info__item">
                             <div class="small text-bold">ISIN</div>
-                            <div>-</div>
+                            <div>EE3600001707</div>
                         </div>
                         <div class="hidden-xs fund-info__item">
                             <div class="small text-bold"><?php _e('Currency', TEXT_DOMAIN) ?></div>
@@ -15,7 +15,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Date of inception', TEXT_DOMAIN) ?></div>
-                            <div><?php _e('-', TEXT_DOMAIN) ?></div>
+                            <div><?php _e('15th October 2019', TEXT_DOMAIN) ?></div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Fund volume', TEXT_DOMAIN) ?></div>
@@ -61,29 +61,29 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="https://tuleva.ee/wp-content/uploads/2019/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.01.01.2019.pdf" target="_blank">tingimused</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/10/Prospekt_Tuleva-III-Samba-Pensionifond.02.10.2019.docx.pdf" target="_blank">Prospekt</a> ja <a href="https://tuleva.ee/wp-content/uploads/2019/10/Tingimused_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/10/Tuleva-III-Samba-Pensionifondi-mudelportfell.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/05/Põhiteave_Maailma-Aktsiate_Pensionifond-mai-2019.pdf" target="_blank">Põhiteave</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/10/Põhiteave_Tuleva-III-Samba-Pensionifond.02.10.2019.docx.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
-                                <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
+                                <a href="https://tuleva.ee/wp-content/uploads/2019/10/Fondide-vara-puhasväärtuse-määramise-kord_10.10.2019.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
                             </li>
                         </ul>
 
-                        <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
+                        <?php /**<h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow">
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/08/TULAPF-investeeringute-aruanne-310719.pdf" target="_blank">07.19</a>
+                                <a href="" target="_blank">10.19</a>
                                 <br>
-                                <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
+                                <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/" target="_blank">Eelnevad aruanded</a>
                             </li>
-                        </ul>
+                        </ul>*/?>
                     </div>
                 </div>
             </div>

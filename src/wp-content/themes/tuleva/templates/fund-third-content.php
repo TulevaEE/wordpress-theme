@@ -30,7 +30,7 @@
     $funds = json_decode($json, true);
     $stock = array_search('EE3600109435', array_column($funds, 'isin'));
     $bond = array_search('EE3600109443', array_column($funds, 'isin'));
-    $third = array_search('', array_column($funds, 'isin'));
+    $third = array_search('EE3600001707', array_column($funds, 'isin'));
     ?>
 
     <script type="text/javascript">
@@ -39,8 +39,8 @@
             $('#stock-fund-nav').html('<?php echo $funds[$stock]['nav'] ?>');
             $('#bond-fund-volume').html('<?php echo number_format($funds[$bond]['volume'], 0, '.', ' ') ?>');
             $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
-            // $('#third-fund-volume').html('<?php echo number_format($funds[$third]['volume'], 0, '.', ' ') ?>');
-            // $('#third-fund-nav').html('<?php echo $funds[$third]['nav'] ?>');
+            $('#third-fund-volume').html('<?php echo number_format($funds[$third]['volume'], 0, '.', ' ') ?>');
+            $('#third-fund-nav').html('<?php echo $funds[$third]['nav'] ?>');
         });
     </script>
 </div>
