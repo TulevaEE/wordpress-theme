@@ -139,9 +139,9 @@ $(document).ready(function ($) {
         calculateThirdPillarSavings = function () {
             var $calculator = $('.third-pillar-calculator'),
                 wage = $calculator.find('#wage').val(),
-                monthlyAmount = Math.min(wage * 0.15, 500),
-                yearlyAmount = Math.min(wage * 1.8, 6000),
-                savingsSum = Math.min(wage * 0.36, 1200);
+                monthlyAmount = Math.min(0.15 * wage, 500, Math.max(0, 964 * wage - 500, 0)),
+                yearlyAmount = monthlyAmount * 12,
+                savingsSum = monthlyAmount * 2.4;
 
             $calculator.find('#monthlyAmount').text(format(monthlyAmount) + " €");
             $calculator.find('#yearlyAmount').text(format(yearlyAmount) + " €");
