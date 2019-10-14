@@ -120,17 +120,21 @@
         margin-bottom: 64px;
 
         p {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             line-height: 1.56;
 
             &:first-child {
-                font-size: 1.5em;
+                font-size: 1.5rem;
             }
         }
 
         ul,
         ol {
-            font-size: 1.2em;
+            font-size: 1.2rem;
+
+            li {
+                margin-bottom: 1rem;
+            }
         }
 
         img,
@@ -164,11 +168,12 @@
 
         .alignright {
             float: right;
-            margin: 0 0 2em 2em;
+            margin: 0 0 2rem 2rem;
         }
+
         .alignleft {
             float: left;
-            margin: 0 2em 2em 0;
+            margin: 0 2rem 2rem 0;
         }
 
         .aligncenter {
