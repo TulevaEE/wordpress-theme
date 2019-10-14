@@ -61,19 +61,19 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="https://tuleva.ee/wp-content/uploads/2019/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.01.01.2019.pdf" target="_blank">tingimused</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.01.01.2019.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/05/Põhiteave_Maailma-Aktsiate_Pensionifond-mai-2019.pdf" target="_blank">Põhiteave</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/05/Põhiteave_Maailma-Aktsiate_Pensionifond-mai-2019.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
-                                <a href="http://tuleva.ee/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/uudised/tuleva-fondide-tingimused-19/">Fondi tingimused prospekt ja põhiteave alates 01.01.2020</a>
+                                <a href="<?php echo get_site_url(); ?>/uudised/tuleva-fondide-tingimused-19/">Fondi tingimused prospekt ja põhiteave alates 01.01.2020</a>
                             </li>
                         </ul>
 
@@ -82,22 +82,22 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/10/TULAPF-investeeringute-aruanne-300919.pdf" target="_blank">09.19</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/TULAPF-investeeringute-aruanne-300919.pdf" target="_blank">09.19</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/09/Tuleva-Maailma-Aktsiate-pensionifondi-2019-poolaastaaruanne.pdf" target="_blank">Fondi poolaasta aruanne</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Maailma-Aktsiate-pensionifondi-2019-poolaastaaruanne.pdf" target="_blank">Fondi poolaasta aruanne</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Maailma-Aktsiate-Pensionifond-2018-aastaaruanne.pdf" target="_blank">Fondi aastaaruanne</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Maailma-Aktsiate-Pensionifond-2018-aastaaruanne.pdf" target="_blank">Fondi aastaaruanne</a>
                             </li>
-                            <li><a href="https://tuleva.ee/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
+                            <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                             <li>
-                                <a href="https://tuleva.ee/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
                             </li>
                             <li>
-                                <a href="https://tuleva.ee/eelmiste-perioodide-aruanded/">Eelmiste perioodide aruanded</a>
+                                <a href="<?php echo get_site_url(); ?>/eelmiste-perioodide-aruanded/">Eelmiste perioodide aruanded</a>
                             </li>
                         </ul>
                     </div>

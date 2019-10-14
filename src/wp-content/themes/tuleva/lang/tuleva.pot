@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2019-10-13 18:25:29+00:00\n"
+"POT-Creation-Date: 2019-10-14 18:38:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -704,7 +704,6 @@ msgid "Aggressive"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:19
-#: templates/components/fund-third-header.php:19
 msgid "you are younger than 55 years"
 msgstr ""
 
@@ -734,19 +733,19 @@ msgstr ""
 msgid "Tuleva III Pillar Pension Fund"
 msgstr ""
 
-#: templates/components/fund-third-header.php:19
+#: templates/components/fund-third-header.php:22
 msgid ""
-"The fund is suitable for people over 55 years of age in combination with a "
-"lower risk fund or bank deposit"
+"you are younger than 55 years (the fund is suitable for people over 55 years "
+"of age in combination with a bond or bank deposit)"
 msgstr ""
 
-#: templates/components/fund-third-header.php:20
+#: templates/components/fund-third-header.php:23
 msgid ""
-"you want to achieve %sthe best possible return%s over the long term and you "
-"are not shaken by short-term market fluctuations"
+"and you want to achieve %sthe best possible return%s and you are not shaken "
+"by short-term market fluctuations"
 msgstr ""
 
-#: templates/components/fund-third-header.php:24
+#: templates/components/fund-third-header.php:27
 msgid "Select this fund"
 msgstr ""
 
