@@ -4,7 +4,7 @@
             <div class="d-flex flex-row justify-content-between text-medium ml-3 mr-2">
                 <span class="calculator__heading"><?php _e('Insert your gross monthly salary', TEXT_DOMAIN); ?>:</span>
                 <span>
-                    <input class="form-control d-inline-block mx-1" style="max-width: 4.5rem" id="wage" type="number" value="1800" min="0" step="100">
+                    <input class="form-control d-inline-block mx-1" style="max-width: 4.5rem" id="wage" type="number" value="1800" min="0" step="1">
                     <span class="calculator__heading"><?php _e('euros', TEXT_DOMAIN); ?></span>
                 <span>
             </div>
