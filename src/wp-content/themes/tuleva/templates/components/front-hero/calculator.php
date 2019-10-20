@@ -3,9 +3,9 @@
         <form class="d-flex flex-row justify-content-center pb-3">
             <div class="d-inline-block align-items-center text-medium mr-2">
                 <span class="calculator__heading"><?php _e("If you're", TEXT_DOMAIN); ?></span>
-                <input class="form-control d-inline-block mx-1" id="age" type="number" value="29" min="18" max="65" onchange="calculateSaving()">
+                <input class="form-control d-inline-block mx-1" id="age" type="number" value="29" min="18" max="65" onkeyup="calculateSaving()" onchange="calculateSaving()">
                 <span class="calculator__heading"><?php _e("years old and earn", TEXT_DOMAIN); ?></span>
-                <input class="form-control d-inline-block mx-1" id="netWage" type="number" value="1800" step="100" onchange="calculateSaving()">
+                <input class="form-control d-inline-block mx-1" id="netWage" type="number" value="1800" onkeyup="calculateSaving()" onchange="calculateSaving()">
                 <span class="calculator__heading"><?php _e("euros per month (net),", TEXT_DOMAIN); ?>
                     <?php _e("your second pillar", TEXT_DOMAIN); ?>
                     <a id="calculator" href="#modal-calculator"><?php _e("could", TEXT_DOMAIN); ?></a> <?php _e("grow", TEXT_DOMAIN); ?></span>

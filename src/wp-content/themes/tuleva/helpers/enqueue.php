@@ -91,7 +91,7 @@ class ThemeEnqueue {
                 'handle' => 'slider',
                 'src' => $js_path . 'slider.js',
                 'deps' => ['jquery', 'rangeslider'],
-                'ver' => '12062017',
+                'ver' => '20102019',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
@@ -99,7 +99,7 @@ class ThemeEnqueue {
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '14102019v2',
+                'ver' => '20102019',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
@@ -110,7 +110,7 @@ class ThemeEnqueue {
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '27022019',
+                'ver' => '20102019',
                 'js_in_header' => false,
                 'enqueue' => true
             ]

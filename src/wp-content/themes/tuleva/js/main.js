@@ -151,6 +151,7 @@ $(document).ready(function ($) {
             calculateThirdPillarSavings();
 
             $('.third-pillar-calculator #wage').on('change', calculateThirdPillarSavings);
+            $('.third-pillar-calculator #wage').on('keyup', calculateThirdPillarSavings);
             $('.third-pillar-calculator #wage').closest('form').on('submit', function (ev) {
                 ev.preventDefault();
 
