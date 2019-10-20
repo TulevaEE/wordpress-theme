@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2019-10-14 18:38:17+00:00\n"
-"PO-Revision-Date: 2019-10-14 21:38+0300\n"
+"POT-Creation-Date: 2019-10-20 17:56:31+00:00\n"
+"PO-Revision-Date: 2019-10-20 20:56+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -842,7 +842,7 @@ msgstr "15. oktoober 2019"
 msgid "Tuleva III Pillar Pension Fund"
 msgstr "Tuleva III Samba Pensionifond"
 
-#: templates/components/fund-third-header.php:22
+#: templates/components/fund-third-header.php:19
 msgid ""
 "you are younger than 55 years (the fund is suitable for people over 55 years "
 "of age in combination with a bond or bank deposit)"
@@ -850,7 +850,7 @@ msgstr ""
 "oled noorem kui 55-aastane (üle 55-aastasele sobib fond kombinatsioonis "
 "võlakirjafondi või pangadeposiidiga)"
 
-#: templates/components/fund-third-header.php:23
+#: templates/components/fund-third-header.php:20
 msgid ""
 "and you want to achieve %sthe best possible return%s and you are not shaken "
 "by short-term market fluctuations"
@@ -858,7 +858,7 @@ msgstr ""
 "ja tahad saavutada %sparimat võimalikku tootlust%s ning sind ei löö rivist "
 "välja turu lühiajalised kõikumised"
 
-#: templates/components/fund-third-header.php:27
+#: templates/components/fund-third-header.php:24
 msgid "Select this fund"
 msgstr "Valin selle fondi"
 
@@ -1892,13 +1892,23 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
-#: templates/header/main-sticky.php:14 templates/header/main.php:14
+#: templates/header/main-sticky.php:14
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-"
 "block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Switch to Tuleva</a>"
 msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
 "block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too pension "
+"Tulevasse</a>"
+
+#: templates/header/main.php:14
+msgid ""
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-"
+"block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Switch II pillar to "
+"Tuleva</a>"
+msgstr ""
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+"block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too II sammas "
 "Tulevasse</a>"
 
 #: templates/single-content.php:57
