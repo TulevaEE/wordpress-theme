@@ -39,10 +39,8 @@
             $('#stock-fund-nav').html('<?php echo $funds[$stock]['nav'] ?>');
             $('#bond-fund-volume').html('<?php echo number_format($funds[$bond]['volume'], 0, '.', ' ') ?>');
             $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
-            <?php if ($third) { ?>
-                $('#third-fund-volume').html('<?php echo number_format($funds[$third]['volume'], 0, '.', ' ') ?>');
-                $('#third-fund-nav').html('<?php echo $funds[$third]['nav'] ?>');
-            <?php } ?>
+            $('#third-fund-volume').html('<?php echo number_format($funds[$third]['volume'], 0, '.', ' ') ?>');
+            $('#third-fund-nav').html('<?php echo $funds[$third]['nav'] ?>');
         });
     </script>
 </div>
