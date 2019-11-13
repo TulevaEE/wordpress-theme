@@ -67,7 +67,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tuleva-III-Samba-Pensionifondi-mudelportfell-1.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Põhiteave_Tuleva-III-Samba-Pensionifond.02.10.2019.docx.pdf" target="_blank">Põhiteave</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/Põhiteave_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Fondide-vara-puhasväärtuse-määramise-kord_10.10.2019.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
