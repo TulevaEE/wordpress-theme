@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2019-10-20 17:56:31+00:00\n"
-"PO-Revision-Date: 2019-10-20 20:56+0300\n"
+"PO-Revision-Date: 2019-11-15 08:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1783,7 +1783,7 @@ msgstr "Kes juhib Tuleva fonde?"
 
 #: templates/components/third-pillar-calculator.php:5
 msgid "Insert your gross monthly salary"
-msgstr "Sisesta oma brutokuupalk"
+msgstr "Sisesta oma igakuine brutosissetulek"
 
 #: templates/components/third-pillar-calculator.php:8
 msgid "euros"
