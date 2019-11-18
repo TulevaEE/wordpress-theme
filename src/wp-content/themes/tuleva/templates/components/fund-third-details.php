@@ -76,13 +76,13 @@
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow">
-                            <?php /*<li>
+                            <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="" target="_blank">10.19</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/TUV100-investeeringute-aruanne-31.10.2019.pdf" target="_blank">10.19</a>
                                 <br>
-                                <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/" target="_blank">Eelnevad aruanded</a>
-                            </li>*/?>
+                                <?php /*<a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/" target="_blank">Eelnevad aruanded</a>*/ ?>
+                            </li>
                             <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
