@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2019-10-20 17:56:31+00:00\n"
+"POT-Creation-Date: 2019-11-20 17:37:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -415,6 +415,7 @@ msgstr ""
 
 #: templates/components/fund-bonds-details.php:80
 #: templates/components/fund-stocks-details.php:80
+#: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr ""
 
@@ -1433,7 +1434,7 @@ msgid "Who manages Tuleva funds?"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:5
-msgid "Insert your gross monthly salary"
+msgid "Your monthly gross income"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:8
@@ -1441,15 +1442,15 @@ msgid "euros"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:14
-msgid "In a month you can place in III pillar"
+msgid "You can contribute monthly to III pillar"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:20
-msgid "In a year you can place in III pillar"
+msgid "Your can contribute annually to III pillar"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:27
-msgid "You win on income tax"
+msgid "Your gain from income tax"
 msgstr ""
 
 #: templates/footer/beacon-translations.php:4
