@@ -1,4 +1,4 @@
-# Copyright (C) 2019 
+# Copyright (C) 2019
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
@@ -1634,7 +1634,7 @@ msgid "Button label:"
 msgstr ""
 
 #: widgets/help-widget.php:65
-msgid "Ask Tõnu, Mari or Liis from Tuleva team."
+msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr ""
 
 #: widgets/subscribe-widget.php:12
