@@ -82,7 +82,7 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/TULAPF-investeeringute-aruanne-311019.pdf" target="_blank">10.19</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/12/TULAPF-investeeringute-aruanne-291119.pdf" target="_blank">11.19</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>
