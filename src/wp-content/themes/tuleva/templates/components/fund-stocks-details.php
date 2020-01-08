@@ -61,19 +61,16 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.01.01.2019.pdf" target="_blank">tingimused</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Prospekt_maailmaaktsiatejavolakirjadepensionifondid.alates-01.01.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/05/Põhiteave_Maailma-Aktsiate_Pensionifond-mai-2019.pdf" target="_blank">Põhiteave</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Põhiteave_Maailma-Aktsiate_Pensionifond.alates01.01.2020.pdf" target="_blank">Põhiteave</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_site_url(); ?>/uudised/tuleva-fondide-tingimused-19/">Fondi tingimused prospekt ja põhiteave alates 01.01.2020</a>
                             </li>
                         </ul>
 
@@ -82,7 +79,7 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/12/TULAPF-investeeringute-aruanne-291119.pdf" target="_blank">11.19</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/TULAPF-investeeringute-aruanne-311219.pdf" target="_blank">12.19</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
                             </li>

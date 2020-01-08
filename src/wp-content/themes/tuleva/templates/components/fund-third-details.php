@@ -79,7 +79,7 @@
                             <li>
                                 Investeeringute aruanded
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/12/TUV100-investeeringute-aruanne-29.11.2019.pdf" target="_blank">11.19</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/TUV100-investeeringute-aruanne-31.12.2019.pdf" target="_blank">12.19</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/81/" target="_blank">Eelnevad aruanded</a>
                             </li>
