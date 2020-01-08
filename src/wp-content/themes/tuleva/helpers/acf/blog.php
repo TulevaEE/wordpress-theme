@@ -27,6 +27,28 @@ acf_add_local_field_group(array (
             'return_format' => 'id',
             'multiple' => 0,
         ),
+        array (
+            'key' => 'field_5905ec7c821cf',
+            'label' => 'Secondary articles category',
+            'name' => 'secondary_articles_category',
+            'type' => 'taxonomy',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array (
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'taxonomy' => 'category',
+            'field_type' => 'select',
+            'allow_null' => 0,
+            'add_term' => 0,
+            'save_terms' => 0,
+            'load_terms' => 0,
+            'return_format' => 'id',
+            'multiple' => 0,
+        ),
     ),
     'location' => array (
         array (
