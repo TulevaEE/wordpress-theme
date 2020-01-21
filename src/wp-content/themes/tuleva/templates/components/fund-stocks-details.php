@@ -64,7 +64,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Prospekt_maailmaaktsiatejavolakirjadepensionifondid.alates-01.01.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Põhiteave_Maailma-Aktsiate_Pensionifond.alates01.01.2020.pdf" target="_blank">Põhiteave</a>

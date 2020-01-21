@@ -64,7 +64,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Prospekt_Tuleva-III-Samba-Pensionifond.02.10.2019.docx.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tingimused_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tuleva-III-Samba-Pensionifondi-mudelportfell-1.pdf" target="_blank">Mudelportfell</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-III-Samba-Pensionifondi-mudelportfell.pdf" target="_blank">Mudelportfell</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/Põhiteave_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank">Põhiteave</a>

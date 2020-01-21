@@ -61,10 +61,10 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Prospekt_maailmaaktsiatejavolakirjadepensionifondid.alates-01.01.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank">tingimused</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank">tingimused</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/04/Mudelportfell-marts-2018-Mudelportfell-nõukogule.pdf" target="_blank">Mudelportfell</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank">Mudelportfell</a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/05/Põhiteave_Maailma-Võlakirjade_Pensionifond-mai-2019-.pdf" target="_blank">Põhiteave</a>
