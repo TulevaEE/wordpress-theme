@@ -275,14 +275,14 @@ $(document).ready(function ($) {
 
     $('.footer-help').on('click', function (ev) {
         ev.preventDefault();
-        window.HS.beacon.toggle();
+        window.Beacon('toggle');
         $('.footer-help-close').toggleClass('footer-help-close--open');
         $('.beacon-toggle').removeClass('d-block');
     });
 
     $('.footer-help-close').on('click', function (ev) {
         ev.preventDefault();
-        window.HS.beacon.toggle();
+        window.Beacon('toggle');
         $(this).toggleClass('footer-help-close--open');
     });
 

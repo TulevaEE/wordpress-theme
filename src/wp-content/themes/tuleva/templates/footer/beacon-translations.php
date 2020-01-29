@@ -1,5 +1,5 @@
 <script>
-    window.HS.beacon.config({
+    window.Beacon('config', {
         translation: {
           contactLabel: '<?php _e("Send a Message", TEXT_DOMAIN); ?>',
           attachFileLabel: '<?php _e("Attach a file", TEXT_DOMAIN); ?>',
