@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2020-01-29 17:26:31+00:00\n"
-"PO-Revision-Date: 2020-01-29 19:26+0200\n"
+"POT-Creation-Date: 2020-01-30 16:31:00+00:00\n"
+"PO-Revision-Date: 2020-01-30 18:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1907,8 +1907,8 @@ msgstr ""
 "Tulevasse</a>"
 
 #: templates/header/main.php:14
-msgid "Log in to your pension account"
-msgstr "Sisene pensionikontole"
+msgid "Log in"
+msgstr "Sisene"
 
 #: templates/single-content.php:57
 msgid "Category:"
@@ -2107,6 +2107,9 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid "Log in to your pension account"
+#~ msgstr "Sisene pensionikontole"
 
 #~ msgid ""
 #~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"

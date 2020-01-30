@@ -11,7 +11,7 @@
             <?php get_template_part('templates/header/menu'); ?>
             <div class="d-flex flex-column flex-md-row align-items-md-center ml-auto">
                 <?php language_picker(); ?>
-                <a href="https://pension.tuleva.ee" class="btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0"><?php _e('Log in to your pension account', TEXT_DOMAIN); ?></a>
+                <a href="https://pension.tuleva.ee" class="btn btn-primary btn-block d-block d-md-block d-lg-block ml-md-2 mt-4 mt-md-0"><?php _e('Log in', TEXT_DOMAIN); ?></a>
             </div>
         </div>
     </nav>
