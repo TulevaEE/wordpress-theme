@@ -14,7 +14,7 @@
                             <h4>
                                 <?php _e('<a href="/en/tuleva-world-stocks-pension-fund/" target="_blank" class="text-navy">Tuleva World Stocks Pension Fund</a>', TEXT_DOMAIN); ?>
                             </h4>
-                            <img src="<?php echo get_template_directory_uri() ?>/img/aktsiafond-pie.svg?v2" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
+                            <img src="<?php echo get_template_directory_uri() ?>/img/stocks-pie.svg" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
 
                             <div class="bg-white mb-4">
                                 <?php _e('<a href="/en/tuleva-world-stocks-pension-fund/" class="text-uppercase text-medium d-block mb-4">See fund info</a>', TEXT_DOMAIN); ?>

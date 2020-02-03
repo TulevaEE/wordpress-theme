@@ -51,12 +51,12 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Comparison index', TEXT_DOMAIN) ?></div>
-                            <div>73% MSCI ACWI (EUR) <?php _e('and', TEXT_DOMAIN) ?> 27% Bloomberg Barclays Global Aggregate Index (EUR)</div>
+                            <div>100% MSCI ACWI (EUR) </div>
                         </div>
                     </div>
                     <div class="col-md-5 offset-md-1">
                         <div class="w-100 text-center">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/aktsiafond-pie.svg" class="mb-6" alt="Tuleva Maailma Aktsiate Pensionifond">
+                            <img src="<?php echo get_template_directory_uri() ?>/img/stocks-pie.svg" class="mb-6" alt="Tuleva Maailma Aktsiate Pensionifond">
                         </div>
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
