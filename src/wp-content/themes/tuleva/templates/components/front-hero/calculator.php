@@ -42,7 +42,7 @@
                         SEB Energiline Pensionifond
                     </option>
                     <option value="SIK75">
-                        SEB Energiline Pensionifond Indeks
+                        SEB Pensionifond Indeks 100
                     </option>
                     <option value="SEK25">
                         SEB Optimaalne Pensionifond
@@ -51,16 +51,16 @@
                         SEB Progressiivne Pensionifond
                     </option>
                     <option value="SWK25">
-                        Swedbank Pensionifond K2 (Tasakaalustatud strateegia)
+                        Swedbank Pensionifond K30
                     </option>
                     <option value="SWK50">
-                        Swedbank Pensionifond K3 (Kasvustrateegia)
+                        Swedbank Pensionifond K60
                     </option>
                     <option value="SWK75">
-                        Swedbank Pensionifond K4 (Aktsiastrateegia)
+                        Swedbank Pensionifond K100
                     </option>
                     <option value="SWK99">
-                        Swedbank Pensionifond K90-99 (Elutsükli strateegia)
+                        Swedbank Pensionifond K1990-1999 indeks
                     </option>
                 </select>
                 <div class="calculator__comparison-result">
