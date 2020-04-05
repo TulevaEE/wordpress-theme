@@ -61,13 +61,13 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/01/Prospekt_maailmaaktsiate_ja_volakirjade_pensionifondid_01.01.2019.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank">tingimused</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Prospekt-TUK75-ja-TUK00.-01.04.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank">tingimused</a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank">Mudelportfell</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/05/Põhiteave_Maailma-Võlakirjade_Pensionifond-mai-2019-.pdf" target="_blank">Põhiteave</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Põhiteave.TUK00_01.04.2020.pdf" target="_blank">Põhiteave</a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
@@ -84,17 +84,7 @@
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Maailma-Võlakirjade-Pensionifondi-2019-poolaasta-aruanne.pdf" target="_blank">Fondi poolaasta aruanne</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Maailma-Võlakirjade-Pensionifond-2018-aastaaruanne.pdf" target="_blank">Fondi aastaaruanne</a>
-                        </li>
-                        <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
-                        <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo get_site_url(); ?>/eelmiste-perioodide-aruanded/">Eelmiste perioodide aruanded</a>
+                            <a href="<?php echo get_site_url(); ?>/aruanded/ ">Fondi ja fondivalitseja finantsaruanded</a>
                         </li>
                     </ul>
                 </div>
