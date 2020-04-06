@@ -83,12 +83,8 @@
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/81/" target="_blank">Eelnevad aruanded</a>
                             </li>
-                            <li><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/09/Tuleva-Fondid-AS-2019-I-poolaasta-aruanne.pdf" target="_blank">Fondivalitseja poolaasta aruanne</a></li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/02/Tuleva-Fondid-AS-aastaaruanne-2018.pdf" target="_blank">Fondivalitseja aastaaruanne</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo get_site_url(); ?>/eelmiste-perioodide-aruanded/">Eelmiste perioodide aruanded</a>
+                                <a href="<?php echo get_site_url(); ?>/aruanded/ ">Fondi ja fondivalitseja finantsaruanded</a>
                             </li>
                         </ul>
                     </div>
