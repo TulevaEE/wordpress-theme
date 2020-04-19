@@ -1,4 +1,5 @@
 <?php
+    $category = get_queried_object();
     $category_id = $wp_query->get_queried_object_id();
     $is_category = is_category();
     $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -18,6 +19,11 @@
 
     if ($is_category) {
         $args['cat'] = $category_id;
+
+        if ($category->slug === 'laura-rikkaks') {
+            $args['orderby'] = 'publish_date';
+            $args['order'] = 'ASC';
+        }
     }
 
     $wp_query = new WP_Query($args);
