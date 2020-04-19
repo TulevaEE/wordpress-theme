@@ -19,11 +19,11 @@
 
     if ($is_category) {
         $args['cat'] = $category_id;
+    }
 
-        if ($category->slug === 'laura-rikkaks') {
-            $args['orderby'] = 'publish_date';
-            $args['order'] = 'ASC';
-        }
+    if ($category && $category->slug === 'laura-rikkaks') {
+        $args['orderby'] = 'publish_date';
+        $args['order'] = 'ASC';
     }
 
     $wp_query = new WP_Query($args);
