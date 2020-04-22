@@ -2,26 +2,26 @@
 
 var fundFee = {
     'LIK75': 0.0063,
-    'LXK00': 0.0061,
-    'LSK00': 0.0060,
-    'LMK25': 0.0084,
     'LLK50': 0.0101,
+    'LMK25': 0.0084,
+    'LSK00': 0.0069,
+    'LXK00': 0.0061,
     'LXK75': 0.0098,
-    'NPK00': 0.0075,
-    'NPK25': 0.0133,
-    'NPK50': 0.014,
-    'NPK75': 0.015,
-    'SIK75': 0.0040,
+    'NPK00': 0.0097,
+    'NPK25': 0.0155,
+    'NPK50': 0.0158,
+    'NPK75': 0.0162,
     'SEK00': 0.0049,
     'SEK25': 0.0094,
     'SEK50': 0.0094,
     'SEK75': 0.0092,
-    'SWK00': 0.0035,
-    'SWK25': 0.0092,
-    'SWK50': 0.0097,
-    'SWK75': 0.0099,
-    'SWK99': 0.0072,
-    'average': 0.0100
+    'SIK75': 0.004,
+    'SWK00': 0.0037,
+    'SWK25': 0.0065,
+    'SWK50': 0.0067,
+    'SWK75': 0.007,
+    'SWK99': 0.007,
+    'average': 0.0086
 },
 
     format = function (num) {
@@ -58,7 +58,7 @@ var fundFee = {
             marketReturn = 1.05,
             salaryGrowth = 1.03,
             futureValueOfPensionFund = Math.ceil(grossWage * 0.06 * 12 * (Math.pow(marketReturn - comparisonFund, 65 - Math.max(0, Math.min(age, 65))) - Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65)))) / (marketReturn - comparisonFund - salaryGrowth) + presentValueOfPensionFund * Math.pow(marketReturn - comparisonFund, 65 - Math.max(0, Math.min(age, 65)))),
-            tulevaFee = 0.0046,
+            tulevaFee = 0.0045,
             totalSavingWithTuleva = Math.ceil(grossWage * 0.06 * 12 * (Math.pow(marketReturn - tulevaFee, 65 - Math.max(0, Math.min(age, 65))) - Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65)))) / (marketReturn - tulevaFee - salaryGrowth) + presentValueOfPensionFund * Math.pow(marketReturn - tulevaFee, 65 - Math.max(0, Math.min(age, 65))) - futureValueOfPensionFund),
             futureValueWithTuleva = futureValueOfPensionFund + totalSavingWithTuleva;
 
