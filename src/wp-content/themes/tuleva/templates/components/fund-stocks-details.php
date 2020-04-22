@@ -35,7 +35,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
-                            <div>0,46%</div>
+                            <div>0,45%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
