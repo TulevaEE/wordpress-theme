@@ -296,3 +296,36 @@ function get_member_count() {
 function is_cookie_consent() {
     return !empty($_COOKIE['cookie-consent']);
 }
+
+function print_funds_js() {
+    $context = stream_context_create(
+        array(
+            'http' => array(
+                'method' => 'GET',
+                'header' => array(
+                    "Authorization: Bearer 06377792-6045-40dc-9324-d8ede3d27b3a"
+                )
+            )
+        )
+    );
+    $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
+    $data = json_decode($json, true);
+    $filtered = array_filter($data, function($value, $key) {
+        return $value['fundManager']['name'] !== 'Tuleva' && $value['status'] === 'ACTIVE';
+    }, ARRAY_FILTER_USE_BOTH);
+    $funds = array_map(function($value) {
+        return [
+                'fundManagerId' => $value['fundManager']['id'],
+                'name' => $value['name'],
+                'fee' => $value['ongoingChargesFigure']
+            ];
+    }, $filtered);
+    usort($funds, function($a, $b) {
+        return strcmp($a['name'], $b['name']);;
+    });
+
+    echo '<script type="text/javascript">';
+    echo 'var calculatorFunds = ' . json_encode($funds) . ';';
+    echo '</script>';
+}
+add_action('wp_footer', 'print_funds_js');

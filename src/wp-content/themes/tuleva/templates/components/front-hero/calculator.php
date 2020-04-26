@@ -15,52 +15,8 @@
             <div class="p-3 calculator__comparison-row">
                 <select class="form-control calculator__comparison-fund" name="pensionFunds" id="comparisonFund" onchange="calculateSaving()">
                     <option value="average">
-                    <?php _e("Estonian pension fund average", TEXT_DOMAIN); ?>
-                    </option>
-                    <option value="LIK75">
-                        LHV Pensionifond Indeks
-                    </option>
-                    <option value="LMK25">
-                        LHV Pensionifond M
-                    </option>
-                    <option value="LLK50">
-                        LHV Pensionifond L
-                    </option>
-                    <option value="LXK75">
-                        LHV Pensionifond XL
-                    </option>
-                    <option value="NPK50">
-                        Luminor Pensionifond A
-                    </option>
-                    <option value="NPK75">
-                        Luminor Pensionifond A Pluss
-                    </option>
-                    <option value="NPK25">
-                        Luminor Pensionifond B
-                    </option>
-                    <option value="SEK75">
-                        SEB Energiline Pensionifond
-                    </option>
-                    <option value="SIK75">
-                        SEB Pensionifond Indeks 100
-                    </option>
-                    <option value="SEK25">
-                        SEB Optimaalne Pensionifond
-                    </option>
-                    <option value="SEK50">
-                        SEB Progressiivne Pensionifond
-                    </option>
-                    <option value="SWK25">
-                        Swedbank Pensionifond K30
-                    </option>
-                    <option value="SWK50">
-                        Swedbank Pensionifond K60
-                    </option>
-                    <option value="SWK75">
-                        Swedbank Pensionifond K100
-                    </option>
-                    <option value="SWK99">
-                        Swedbank Pensionifond K1990-1999 indeks
+                        <?php _e("Estonian pension fund average", TEXT_DOMAIN); ?>
+                        <!-- Other funds are filled with JS in calculator.js -->
                     </option>
                 </select>
                 <div class="calculator__comparison-result">
