@@ -311,7 +311,11 @@ function print_funds_js() {
     $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
     $data = json_decode($json, true);
     $filtered = array_filter($data, function($value, $key) {
-        return $value['fundManager']['name'] !== 'Tuleva' && $value['status'] === 'ACTIVE';
+        $isActive = $value['status'] === 'ACTIVE';
+        $isSecondPillar = $value['pillar'] === 2;
+        $isNotTulevaFund = $value['fundManager']['name'] !== 'Tuleva';
+
+        return $isActive && $isSecondPillar && $isNotTulevaFund;
     }, ARRAY_FILTER_USE_BOTH);
     $funds = array_map(function($value) {
         return [
