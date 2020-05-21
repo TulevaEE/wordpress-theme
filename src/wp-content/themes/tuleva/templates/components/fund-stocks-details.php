@@ -61,7 +61,7 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Prospekt-TUK75-ja-TUK00.-01.04.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank">tingimused</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Prospekt-TUK75-ja-TUK00_01.04.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank">tingimused</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank">Mudelportfell</a>
@@ -71,6 +71,9 @@
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Teade-Tuleva-Maailma-Aktsiate-Pensionifondi-ja-Tuleva-Maailma-Võlakirjade-Pensionifondi-tingimuste-ja-prospekti-muutmisest-01.09.2020.pdf">Teade fondi tingimuste muutmisest alates 01.09.2020</a>
                             </li>
                         </ul>
 
