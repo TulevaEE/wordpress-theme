@@ -79,7 +79,7 @@
                         <li>
                             Investeeringute aruanded
                             <br>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/TULVPF-investeeringute-aruanne-300420.pdf" target="_blank">04.20</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/07/TULVPF-investeeringute-aruanne-300620.pdf" target="_blank">06.20</a>
                             <br>
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank">Eelnevad aruanded</a>
                         </li>
