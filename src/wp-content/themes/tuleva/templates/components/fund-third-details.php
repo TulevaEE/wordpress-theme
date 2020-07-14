@@ -61,7 +61,7 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/TUV100-Prospekt-20.04.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tingimused_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e('(in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/TUV100-Prospekt-20.04.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tingimused_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-III-Samba-Pensionifondi-mudelportfell.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -77,7 +77,7 @@
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow">
                             <li>
-                            <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
+                                <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/07/TUV100-investeeringute-aruanne-30.06.2020.pdf" target="_blank">06.20</a>
                                 <br>
