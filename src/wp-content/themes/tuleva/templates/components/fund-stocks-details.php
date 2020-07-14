@@ -61,33 +61,33 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Prospekt-TUK75-ja-TUK00_01.04.2020.pdf" target="_blank">Prospekt</a> ja <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank">tingimused</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Prospekt-TUK75-ja-TUK00_01.04.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Aktsiate-Pensionifond.alates-01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank">Mudelportfell</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Põhiteave.-TUK75_01.04.2020.pdf" target="_blank">Põhiteave</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Põhiteave.-TUK75_01.04.2020.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank">Fondi vara puhasväärtuse määramise kord</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2017/04/Fondide-vara-puhasvaartuse-maaramise-kord.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Teade-Tuleva-Maailma-Aktsiate-Pensionifondi-ja-Tuleva-Maailma-Võlakirjade-Pensionifondi-tingimuste-ja-prospekti-muutmisest-01.09.2020.pdf">Teade fondi tingimuste muutmisest alates 01.09.2020</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Teade-Tuleva-Maailma-Aktsiate-Pensionifondi-ja-Tuleva-Maailma-Võlakirjade-Pensionifondi-tingimuste-ja-prospekti-muutmisest-01.09.2020.pdf"><?php _e('Notice of changes to the terms and conditions of fund from 01.09.2020 (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow">
                             <li>
-                                Investeeringute aruanded
+                                <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/06/TULAPF-investeeringute-aruanne-290520.pdf" target="_blank">05.20</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/07/TULAPF-investeeringute-aruanne-300620.pdf" target="_blank">06.20</a>
                                 <br>
-                                <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank">Eelnevad aruanded</a>
+                                <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/aruanded/ ">Fondi ja fondivalitseja finantsaruanded</a>
+                                <a href="<?php echo get_site_url(); ?>/aruanded/ "><?php _e('Financial reports of fund and fund manager (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
                     </div>
