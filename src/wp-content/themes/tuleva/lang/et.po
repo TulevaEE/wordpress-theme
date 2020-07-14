@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2020-01-30 16:31:00+00:00\n"
-"PO-Revision-Date: 2020-01-30 18:32+0200\n"
+"POT-Creation-Date: 2020-07-14 08:48:04+00:00\n"
+"PO-Revision-Date: 2020-07-14 11:48+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
@@ -241,13 +241,13 @@ msgid "Estonian pension fund average"
 msgstr "Eesti keskmises pensionifondis"
 
 #: templates/components/front-header.php:102
-#: templates/components/front-hero/calculator.php:68
-#: templates/components/front-hero/calculator.php:75
+#: templates/components/front-hero/calculator.php:24
+#: templates/components/front-hero/calculator.php:31
 msgid "Annual fees"
 msgstr "Tasud aastas"
 
 #: templates/components/front-header.php:106
-#: templates/components/front-hero/calculator.php:72
+#: templates/components/front-hero/calculator.php:28
 msgid "In Tuleva pension fund"
 msgstr "Tuleva pensionifondis"
 
@@ -256,7 +256,7 @@ msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
 msgstr "Tasud aastas <span id=\"fund-fee\">0,47%</span>"
 
 #: templates/components/front-header.php:114
-#: templates/components/front-hero/calculator.php:80
+#: templates/components/front-hero/calculator.php:36
 msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
@@ -443,7 +443,6 @@ msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
 #: templates/components/fund-bonds-details.php:54
-#: templates/components/fund-stocks-details.php:54
 msgid "and"
 msgstr "ja"
 
@@ -453,11 +452,71 @@ msgstr "ja"
 msgid "Documents"
 msgstr "Dokumendid"
 
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:64
+#: templates/components/fund-third-details.php:64
+msgid "Prospectus"
+msgstr "Prospekt"
+
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:64
+#: templates/components/fund-third-details.php:64
+msgid " and "
+msgstr " ja "
+
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:64
+#: templates/components/fund-third-details.php:64
+msgid "Terms and conditions"
+msgstr "tingimused"
+
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:64
+#: templates/components/fund-third-details.php:64
+msgid " (in Estonian)"
+msgstr " "
+
+#: templates/components/fund-bonds-details.php:67
+#: templates/components/fund-stocks-details.php:67
+#: templates/components/fund-third-details.php:67
+msgid "Model portfolio (in Estonian)"
+msgstr "Mudelportfell"
+
+#: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-stocks-details.php:70
+#: templates/components/fund-third-details.php:70
+msgid "Key Investor Information (in Estonian)"
+msgstr "Põhiteave"
+
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-third-details.php:73
+msgid "Procedure for determining net worth of fund (in Estonian)"
+msgstr "Fondi vara puhasväärtuse määramise kord"
+
 #: templates/components/fund-bonds-details.php:77
-#: templates/components/fund-stocks-details.php:77
+#: templates/components/fund-stocks-details.php:80
 #: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr "Aruanded"
+
+#: templates/components/fund-bonds-details.php:80
+#: templates/components/fund-stocks-details.php:83
+#: templates/components/fund-third-details.php:80
+msgid "Investment reports (in Estonian)"
+msgstr "Investeeringute aruanded"
+
+#: templates/components/fund-bonds-details.php:84
+#: templates/components/fund-stocks-details.php:87
+#: templates/components/fund-third-details.php:84
+msgid "Previous reports"
+msgstr "Eelnevad aruanded"
+
+#: templates/components/fund-bonds-details.php:87
+#: templates/components/fund-stocks-details.php:90
+#: templates/components/fund-third-details.php:87
+msgid "Financial reports of fund and fund manager (in Estonian)"
+msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-header.php:5
 #: templates/components/fund-choosing.php:39
@@ -811,6 +870,12 @@ msgstr " "
 #: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
+
+#: templates/components/fund-stocks-details.php:76
+msgid ""
+"Notice of changes to the terms and conditions of fund from 01.09.2020 (in "
+"Estonian)"
+msgstr "Teade fondi tingimuste muutmisest alates 01.09.2020"
 
 #: templates/components/fund-stocks-header.php:19
 msgid "you are younger than 55 years"
@@ -1897,16 +1962,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
-#: templates/header/main-sticky.php:14
-msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-"
-"block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Switch to Tuleva</a>"
-msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
-"block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too pension "
-"Tulevasse</a>"
-
-#: templates/header/main.php:14
+#: templates/header/main-sticky.php:14 templates/header/main.php:14
 msgid "Log in"
 msgstr "Sisene"
 
@@ -2107,6 +2163,15 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid ""
+#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
+#~ "block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Switch to "
+#~ "Tuleva</a>"
+#~ msgstr ""
+#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+#~ "block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too pension "
+#~ "Tulevasse</a>"
 
 #~ msgid "Log in to your pension account"
 #~ msgstr "Sisene pensionikontole"
@@ -2449,9 +2514,6 @@ msgstr "Soovitus 18-55"
 #, fuzzy
 #~ msgid "Astu Tuleva liikmeks!"
 #~ msgstr "Liikmekonto"
-
-#~ msgid "Previous articles"
-#~ msgstr "Eelmised artiklid"
 
 #~ msgid "Next articles"
 #~ msgstr "Järgmised artiklid"

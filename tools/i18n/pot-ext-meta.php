@@ -7,7 +7,7 @@
  * @subpackage tools
  */
 
-$pomo = dirname( dirname( dirname( __FILE__ ) ) ) . '/src/wp-includes/pomo';
+$pomo = dirname( dirname( dirname( __FILE__ ) ) ) . '/wordpress/wp-includes/pomo';
 require_once "$pomo/po.php";
 require_once dirname( __FILE__ ) . '/makepot.php';
 
