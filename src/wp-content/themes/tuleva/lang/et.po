@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2020-08-06 12:47:40+00:00\n"
-"PO-Revision-Date: 2020-08-06 15:48+0300\n"
+"POT-Creation-Date: 2020-09-02 13:22:07+00:00\n"
+"PO-Revision-Date: 2020-09-02 16:23+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -495,25 +495,25 @@ msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
 #: templates/components/fund-bonds-details.php:77
-#: templates/components/fund-stocks-details.php:80
+#: templates/components/fund-stocks-details.php:77
 #: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr "Aruanded"
 
 #: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-stocks-details.php:83
+#: templates/components/fund-stocks-details.php:80
 #: templates/components/fund-third-details.php:80
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:84
-#: templates/components/fund-stocks-details.php:87
+#: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:87
-#: templates/components/fund-stocks-details.php:90
+#: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
@@ -870,12 +870,6 @@ msgstr " "
 #: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
-
-#: templates/components/fund-stocks-details.php:76
-msgid ""
-"Notice of changes to the terms and conditions of fund from 01.09.2020 (in "
-"Estonian)"
-msgstr "Teade fondi tingimuste muutmisest alates 01.09.2020"
 
 #: templates/components/fund-stocks-header.php:19
 msgid "you are younger than 55 years"
@@ -2169,6 +2163,11 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid ""
+#~ "Notice of changes to the terms and conditions of fund from 01.09.2020 (in "
+#~ "Estonian)"
+#~ msgstr "Teade fondi tingimuste muutmisest alates 01.09.2020"
 
 #~ msgid "Log in"
 #~ msgstr "Sisene"

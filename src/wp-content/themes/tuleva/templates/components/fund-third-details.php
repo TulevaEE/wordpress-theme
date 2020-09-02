@@ -79,7 +79,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/08/TUV100-investeeringute-aruanne-31.07.2020.pdf" target="_blank">07.20</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/09/TUV100-investeeringute-aruanne-31.08.2020.pdf" target="_blank">08.20</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>

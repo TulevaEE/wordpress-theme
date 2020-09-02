@@ -61,7 +61,7 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/05/Prospekt-TUK75-ja-TUK00_01.04.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/09/Prospekt.-TUK75-ja-TUK00-alates-01.09.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -79,7 +79,7 @@
                         <li>
                             <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                             <br>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/08/TULVPF-investeeringute-aruanne-310720.pdf" target="_blank">07.20</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/09/TULVPF-investeeringute-aruanne-310820.pdf" target="_blank">08.20</a>
                             <br>
                             <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                         </li>
