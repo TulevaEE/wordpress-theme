@@ -12,14 +12,14 @@
                     <div id="collapseOne" class="collapse my-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
 
-                            <p>Eelpensionile võid vajadusel jääda juba 3 aastat enne ametliku pensioniea saabumist. Aga kui tervis hea, kaalu hoopis pensioni edasi lükkamist! Sinu riiklik ehk I samba pension suureneb tulevikus iga edasi lükatud kuu eest 0,9%.</p>
+                            <p>Eelpensionile võid vajadusel jääda juba 5 aastat enne ametliku pensioniea saabumist. Aga kui tervis hea, kaalu hoopis pensioni edasi lükkamist! Sinu riiklik ehk I samba pension suureneb tulevikus iga edasi lükatud kuu eest.</p>
 
                             <p>Mõtle ka, millal sa II sambasse kogutud vara kasutama hakata soovid. Sellest sõltub, millal peaksid suunama vara agressiivse strateegiaga fondist konservatiivse strateegiaga fondi.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-1.png" class="img-fluid" alt="Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed"
                             />
 
-                            <cite class="d-block small text-secondary mt-3 mb-5">Graafik näitab, kui palju muutub iga väljateenitud 100 € pensioni, kui hakkad seda välja võtma enne või pärast ametlikku pensioniiga. Allikas: Pensionikeskus.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Graafik näitab, kui palju muutub iga väljateenitud 100 € pensioni, kui hakkad seda välja võtma enne või pärast ametlikku pensioniiga. Allikas: Sotsiaalkindlustusamet.</cite>
 
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-3.png" class="img-fluid" alt="Kui palju maksad teenustasudeks iga 10 000€ pealt"
                             />
 
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti keskmine pensionifondi kulumäär on Rahandusministeeriumi andmete põhjal. Kõikide pensionifondide individuaalsed kulumäärad on <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit?usp=sharing" target="_blank">siin tabelis</a>.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti keskmine pensionifondi kulumäär on Rahandusministeeriumi andmete põhjal. Kõikide pensionifondide individuaalsed kulumäärad on <a href="https://www.pensionikeskus.ee/ii-sammas/fondid/fondide-tasud/fonditasude-vordlused/" target="_blank">siin lehel</a>.</cite>
                         </div>
                     </div>
                 </div>
@@ -76,66 +76,22 @@
                     </div>
                     <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p><a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/" target="_blank">Loe siit</a>, millised võimalused sul pensioniks kogutud vara kasutamiseks on.</p>
+                            <p><a href="https://tuleva.ee/seadusandlus/pensionireform-ulevaade/" target="_blank">Alates 1. jaanuarist 2020. a jõustub muudatus, mille nimel Tuleva aastaid võidelnud on:</a> igaüks saab nüüd vabalt otsustada, mida oma rahaga pensionieas teha.</p>
 
-                            <p><span class="text-highlight text-bold">Pea meeles, et sa ei pea kohe pensioniikka jõudes kindlustusseltsiga pensionilepingut sõlmima. Ja ära unusta, et juba sõlmitud pensionilepingut tühistada ei saa.</span></p>
+                            <p>Pensioniikka jõudes ei pea enam teise samba kontol olevat vara kindlustusseltsile andma. See suurendab valikuvabadust, aga toob ka kõigile kogujatele suure rahalise võidu – hinnanguliselt on seni kindlustuslepinguga seotud kuludeks ja tasudeks kulunud umbes viiendik inimeste pensionivarast.</p>
 
-                            <p>Seega: kui rahaliselt võimalik, lükka lepingu sõlmimist edasi, sest <a href="https://tuleva.ee/seadusandlus/maksimaalne-kasu-ii-sambast-anna-oma-allkiri/?utm_campaign=sniply&utm_medium=sniply&utm_source=sniply" target="_blank">Tulevas võitleme selle nimel, et vara kasutamiseks loodaks tulevikus ka paremaid võimalusi</a>. </p>
-
-                            <h5 class="mb-4">Valikud pensioniea saabudes</h5>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud vähem kui 1890,10 eurot</span>
-                                        </br>
-                                        Võid kohe välja võtta
-                                    </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud on 1890,10 - 9465,50 eurot</span>
-                                        </br>
-                                        Saad võtta
-                                        <a href="http://www.pensionikeskus.ee/ii-sammas/valjamaksed/regulaarsed-maksed-pensionifondist/" target="_blank">regulaarsete maksetena pensionifondist</a>
-                                    </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="">
-                                        <span class="text-highlight text-bold">Kogunenud on üle 9465,50 euro</span>
-                                        </br>
-                                        Saad võtta ainult kindlustuslepingu sõlmides eluaegsete maksetena.
-                                        <a href="http://www.pensionikeskus.ee/eesti-pensionisusteem/kalkulaatorid/kindlustusseltside-kalkulaator/" target="_blank">Arvuta siin kui suure makse saad</a>.
-                                    </p>
-                                </div>
+                          <p>Värskelt jõustunud seadus lubab võtta välja korraga nii palju raha kui vaja. Suuremat summat võib korraga tarvis minna näiteks kodu fassaadi soojustamiseks või elu päästvate ravikulude katteks. Võib valida fondipensioni: see tähendab, et raha makstakse välja vähehaaval, samal ajal kui ülejäänu teenib pensionifondis tootlust edasi. Mõlemal juhul jääb raha, mida sina oma elu jooksul kasutada ei jõua, sinu pärijatele.</p>
+                          
+                          <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse Pensionikeskuse lehel oma kontole.</p>
+                                  
+                              
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <hr />
-                <div class="qa__question-wrapper">
-                    <div id="headingFive" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
-                            aria-controls="collapseFive">
-                            <span class="inline-signup__number">5</span>Nõua poliitikutelt paremaid seadusi.
-                        </button>
-                    </div>
-                    <div id="collapseFive" class="collapse my-5" aria-labelledby="headingFive" data-parent="#accordion">
-                        <div class="col-md-10 mx-auto">
-                            <p>II pensionisamba väljamaksete süsteem on <span class="text-highlight text-bold">jäik ja ebaefektiivne</span>.</p>
-
-                            <p>Nõua poliitikutelt seadusi, mis seaks sinu huvid pankade ja kindlustusseltside huvidest ettepoole. Tuleva on juba tõestanud, et kui ärksad inimesed koos tegutsevad, saame esile kutsuda suure mõjuga muutusi! Kui tahad meie eesmärkide ellu viimist toetada, <a href="https://tuleva.ee/tulundusyhistu">astu Tuleva liikmeks</a>.</p>
-
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-5.png" class="img-fluid" alt="Rootsi pensionisüsteem suudab samast rahast palju suurema pensioni välja maksta"
-                            />
-                            <cite class="d-block small text-secondary mt-3 mb-5">Tuleva arvutas pensionikeskuse ja Rootsi pensioniameti andmete põhjal välja, kui suur on tänavu
-                                pensionile suunduva inimese eluea vältel tehtava keskmise pensioni väljamakse ostujõud tänases
-                                rahas. Tegemist on väga erinevate toodetega - Rootsi mudeli väljamaksed võivad ajas kõikuda
-                                ning nende pensioniamet eeldab 2,1% kasvu aastas, Eestis väljamaksed ei muutu ning elukalliduse
-                                tõusuga ei kasva. <a href="https://docs.google.com/spreadsheets/d/1E18F5Nam2OfJPUg_eSo1D8IsscuUV9V2iy1_wPTzLpA/edit?usp=sharing" target="_blank">Vaata arvutuse alusandmeid</a>.</cite>
-                        </div>
-                    </div>
-                </div>
+                
                 <hr />
             </div>
         </div>
@@ -223,10 +179,7 @@
                         />
                         <h6 class="text-navy">Kristi Saare</h6>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/sirli.jpg" width="64" height="64" class="rounded-circle mb-3" />
-                        <h6 class="text-navy">Sirli Oot</h6>
-                    </div>
+                    
                 </div>
             </div>
         </div>
