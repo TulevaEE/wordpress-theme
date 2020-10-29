@@ -16,7 +16,7 @@
 
                             <p>Mõtle ka, millal sa II sambasse kogutud vara kasutama hakata soovid. Sellest sõltub, millal peaksid suunama vara agressiivse strateegiaga fondist konservatiivse strateegiaga fondi.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-1.png" class="img-fluid" alt="Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed"
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-older-1.png?v2020-10-29" class="img-fluid" alt="Esimese samba pensioni suuruse muutus sõltuvalt sellest, millal sa pensionile lähed"
                             />
 
                             <cite class="d-block small text-secondary mt-3 mb-5">Graafik näitab, kui palju muutub iga väljateenitud 100 € pensioni, kui hakkad seda välja võtma enne või pärast ametlikku pensioniiga. Allikas: Sotsiaalkindlustusamet.</cite>
@@ -83,7 +83,6 @@
                             <p>Värskelt jõustunud seadus lubab võtta välja korraga nii palju raha kui vaja. Suuremat summat võib korraga tarvis minna näiteks kodu fassaadi soojustamiseks või elu päästvate ravikulude katteks. Võib valida fondipensioni: see tähendab, et raha makstakse välja vähehaaval, samal ajal kui ülejäänu teenib pensionifondis tootlust edasi. Mõlemal juhul jääb raha, mida sina oma elu jooksul kasutada ei jõua, sinu pärijatele.</p>
 
                             <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse Pensionikeskuse lehel oma kontole.</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,21 +123,20 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <p>Pankade fondivalitsejate eesmärk on teenida omanikele kasumit.
                     <span class="text-highlight text-bold">Tuleva eesmärk on kasvatada pensionikogujate vara</span>, vabanedes liigsetest vahemeestest ja hoides kulud
-                    hästi madalal.</p>
+                    hästi madalal.
+                </p>
 
                 <p>Tuleva ei ole pank, vaid
                     <a href="https://tuleva.ee/tulundusyhistu/#founder-stories" target="_blank" class="">22 Eesti ühiskonnategelase</a> algatusel loodud pensionikogujate ühendus. Meie eesmärk on koos targemalt
                     koguda, kaitsta inimeste huve ja aidata riigil teha Eestile paremad seadused, mis lähtuvad eelkõige
-                    <span class="text-highlight text-bold">inimeste, mitte pankade</span> ja kindlustusseltside kasust.</p>
-
-                <img src="<?php echo get_template_directory_uri() ?>/img/founding-members@2x.jpg" class="img-fluid my-4" alt="Tuleva tootlus"
-                />
+                    <span class="text-highlight text-bold">inimeste, mitte pankade</span> ja kindlustusseltside kasust.
+                </p>
+                <img src="<?php echo get_template_directory_uri() ?>/img/founding-members@2x.jpg" class="img-fluid my-4" alt="Tuleva tootlus"/>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
-
                 <p class="mb-0">Siin on sulle juhend, mille abil saad
                     <span class="text-highlight text-bold">netipangas fondivahetuse tehtud 5 minutiga.</span> See ei maksa sulle midagi – hakkad hoopis kohe tänu
                     madalamale tasule kokku hoidma.
@@ -151,9 +149,9 @@
 
         <div class="row text-center mt-4">
             <div class="col-md-10 col-lg-8 mx-auto">
-                <h4>Tekkis küsimusi? </h4>
+                <h4>Tekkis küsimusi?</h4>
                 <p>
-                    <a class="">Helista +372 644 5100 või kirjuta<a href="mailto:info@tuleva.ee">info@tuleva.ee</a>. Sulle ei vasta kunagi robot, vaid üks meist, neljast:
+                    Helista +372 644 5100 või kirjuta <a href="mailto:info@tuleva.ee">info@tuleva.ee</a>. Sulle ei vasta kunagi robot, vaid üks meist, neljast:
                 </p>
             </div>
         </div>
@@ -161,24 +159,20 @@
         <div class="row text-center">
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="row">
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" width="64" height="64" class="rounded-circle mb-3"
-                        />
+                    <div class="col-6 col-md-4">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" width="64" height="64" class="rounded-circle mb-3"/>
                         <h6 class="text-navy">Tõnu Pekk</h6>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/mari-kuhi.jpg" width="64" height="64" class="rounded-circle mb-3"
-                        />
+                    <div class="col-6 col-md-4">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/mari-kuhi.jpg" width="64" height="64" class="rounded-circle mb-3"/>
                         <h6 class="text-navy">Mari Kuhi</h6>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/kristi-saare.png" width="64" height="64" class="rounded-circle mb-3"
-                        />
+                    <div class="col-6 col-md-4">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/kristi-saare.png" width="64" height="64" class="rounded-circle mb-3"/>
                         <h6 class="text-navy">Kristi Saare</h6>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
