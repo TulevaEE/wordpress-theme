@@ -21,6 +21,10 @@
                     get_template_part('templates/components/login-block');
                 } else if (get_row_layout() === 'steps_block') {
                     get_template_part('templates/components/steps-block');
+                } else if (get_row_layout() === 'text_block') {
+                    get_template_part('templates/components/text-block');
+                } else if (get_row_layout() === 'rich_text_block') {
+                    get_template_part('templates/components/rich-text-block');
                 } else if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
                 } else if (get_row_layout() === 'third_pillar_hero') {

@@ -28,6 +28,12 @@
                     get_template_part('templates/components/testimonials');
                 } else if (get_row_layout() === 'featured_articles') {
                     get_template_part('templates/components/featured-articles');
+                } else if (get_row_layout() === 'steps_block') {
+                    get_template_part('templates/components/steps-block');
+                } else if (get_row_layout() === 'text_block') {
+                    get_template_part('templates/components/text-block');
+                } else if (get_row_layout() === 'rich_text_block') {
+                    get_template_part('templates/components/rich-text-block');
                 } else if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
                 }
