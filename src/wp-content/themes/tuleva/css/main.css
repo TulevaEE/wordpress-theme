@@ -7885,6 +7885,10 @@ small,
   .navbar .navbar-collapse {
     margin: 1rem 0; } }
 
+@media (min-height: 72px) {
+  [id] {
+    scroll-margin-top: 72px; } }
+
 .footer {
   background-color: #f0f4f7;
   padding: 70px 0; }
