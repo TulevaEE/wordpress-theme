@@ -11,7 +11,7 @@
         <div class="mx-md-auto col-md-10 col-lg-8">
             <?php if (have_rows('questions')) $i = 0; {
                 while (have_rows('questions')) { $i++; the_row(); ?>
-                    <div class="qa__question-wrapper">
+                    <div class="qa__question-wrapper" id="kkk-<?php echo $i; ?>">
                         <a class="btn btn-link qa__question" data-toggle="collapse" href="#answer-<?php echo $i; ?>">
                             <?php the_sub_field('question'); ?>
                         </a>
