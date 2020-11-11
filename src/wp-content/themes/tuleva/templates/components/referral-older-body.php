@@ -76,13 +76,13 @@
                     </div>
                     <div id="collapseFour" class="collapse my-5" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="col-md-10 mx-auto">
-                            <p><a href="https://tuleva.ee/seadusandlus/pensionireform-ulevaade/" target="_blank">Alates 1. jaanuarist 2020. a jõustub muudatus, mille nimel Tuleva aastaid võidelnud on:</a> igaüks saab nüüd vabalt otsustada, mida oma rahaga pensionieas teha.</p>
+                            <p><a href="https://tuleva.ee/seadusandlus/pensionireform-ulevaade/" target="_blank">Alates 1. jaanuarist 2021. a jõustub muudatus, mille nimel Tuleva aastaid võidelnud on:</a> igaüks saab nüüd vabalt otsustada, mida oma rahaga pensionieas teha.</p>
 
                             <p>Pensioniikka jõudes ei pea enam teise samba kontol olevat vara kindlustusseltsile andma. See suurendab valikuvabadust, aga toob ka kõigile kogujatele suure rahalise võidu – hinnanguliselt on seni kindlustuslepinguga seotud kuludeks ja tasudeks kulunud umbes viiendik inimeste pensionivarast.</p>
 
                             <p>Värskelt jõustunud seadus lubab võtta välja korraga nii palju raha kui vaja. Suuremat summat võib korraga tarvis minna näiteks kodu fassaadi soojustamiseks või elu päästvate ravikulude katteks. Võib valida fondipensioni: see tähendab, et raha makstakse välja vähehaaval, samal ajal kui ülejäänu teenib pensionifondis tootlust edasi. Mõlemal juhul jääb raha, mida sina oma elu jooksul kasutada ei jõua, sinu pärijatele.</p>
 
-                            <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse Pensionikeskuse lehel oma kontole.</p>
+                            <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse <a href="http://pensionikeskus.ee/">Pensionikeskuse lehel</a> oma kontole.</p>
                         </div>
                     </div>
                 </div>
