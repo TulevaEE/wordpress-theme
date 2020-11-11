@@ -1,4 +1,4 @@
-# Copyright (C) 2020 
+# Copyright (C) 2020
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
@@ -550,10 +550,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/fund-choosing.php:24
-msgid ""
-"The equity fund with lowest costs in Estonia*: management fee <span class="
-"\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio "
-"<span class=\"text-highlight\"><strong>0,45%</strong></span>"
+msgid "Low cost: management fee %s0,34%%%s and total expense ratio %s0,45%%%s"
 msgstr ""
 
 #: templates/components/fund-choosing.php:26
