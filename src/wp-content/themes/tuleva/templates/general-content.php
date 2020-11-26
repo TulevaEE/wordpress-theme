@@ -29,6 +29,8 @@
                     get_template_part('templates/components/qa-block');
                 } else if (get_row_layout() === 'third_pillar_hero') {
                     get_template_part('templates/components/third-pillar-hero');
+                } else if (get_row_layout() === 'featured_articles') {
+                    get_template_part('templates/components/featured-articles');
                 }
             }
         }
