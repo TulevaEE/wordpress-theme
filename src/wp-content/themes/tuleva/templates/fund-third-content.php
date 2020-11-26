@@ -9,6 +9,8 @@
             while (have_rows('page_components')) { the_row();
                 if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
+                } else if (get_row_layout() === 'featured_articles') {
+                    get_template_part('templates/components/featured-articles');
                 }
             }
         }
