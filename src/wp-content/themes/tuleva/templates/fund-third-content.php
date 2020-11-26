@@ -23,7 +23,7 @@
             'http' => array(
                 'method' => 'GET',
                 'header' => array(
-                    "Authorization: Bearer 06377792-6045-40dc-9324-d8ede3d27b3a"
+                    "Authorization: Bearer 705e26c1-9316-47f2-94b8-a5c6b0dfb566"
                 )
             )
         )
