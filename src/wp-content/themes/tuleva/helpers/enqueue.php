@@ -104,7 +104,7 @@ class ThemeEnqueue {
                 'enqueue' => true
             ]
         ];
-        if (is_front_page()) {
+        // if (is_front_page()) {
             array_push($assets,
             [
                 'handle' => 'calculator',
@@ -115,7 +115,7 @@ class ThemeEnqueue {
                 'enqueue' => true
             ]
             );
-        }
+        // }
 
         /* Get file that contains SimplyEnqueue class */
         require_once (get_template_directory() . '/lib/enqueue.php');
