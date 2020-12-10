@@ -1852,7 +1852,7 @@ msgid "You can contribute monthly to III pillar"
 msgstr "Kuus saad III sambasse panna"
 
 #: templates/components/third-pillar-calculator.php:20
-msgid "Your can contribute annually to III pillar"
+msgid "You can contribute annually to III pillar"
 msgstr "Aastas saad III sambasse panna"
 
 #: templates/components/third-pillar-calculator.php:27

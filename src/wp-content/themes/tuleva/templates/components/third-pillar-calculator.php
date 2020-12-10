@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="p-3 calculator__comparison-row">
-                <h6 class="calculator__comparison-fund"><?php _e('Your can contribute annually to III pillar', TEXT_DOMAIN); ?>:</h6>
+                <h6 class="calculator__comparison-fund"><?php _e('You can contribute annually to III pillar', TEXT_DOMAIN); ?>:</h6>
                 <div class="calculator__comparison-result">
                     <h5 class="mb-0" id="yearlyAmount">3240 €</h5>
                 </div>
