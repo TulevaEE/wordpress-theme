@@ -79,7 +79,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/10/TULAPF-investeeringute-aruanne-300920.pdf" target="_blank">09.20</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/TULAPF-investeeringute-aruanne-311220-.pdf" target="_blank">12.20</a>
                                 <br>
                                 <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/77/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
