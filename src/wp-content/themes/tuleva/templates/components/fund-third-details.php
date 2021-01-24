@@ -70,7 +70,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/TUV100-Põhiteabedokument-20.04.2020.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Fondide-vara-puhasväärtuse-määramise-kord_10.10.2019.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
 
