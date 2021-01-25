@@ -81,7 +81,7 @@
                                 <br>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/TUV100-investeeringute-aruanne-31.12.2020.pdf" target="_blank">12.20</a>
                                 <br>
-                                <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
+                                <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-pensionifondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/aruanded/ "><?php _e('Financial reports of fund and fund manager (in Estonian)', TEXT_DOMAIN) ?></a>

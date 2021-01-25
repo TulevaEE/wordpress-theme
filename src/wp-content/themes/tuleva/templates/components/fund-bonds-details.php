@@ -81,7 +81,7 @@
                             <br>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/TULVPF-investeeringute-aruanne-311220.pdf" target="_blank">12.20</a>
                             <br>
-                            <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
+                            <a href="http://www.pensionikeskus.ee/ii-sammas/fondid/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/aruanded/ "><?php _e('Financial reports of fund and fund manager (in Estonian)', TEXT_DOMAIN) ?></a>
