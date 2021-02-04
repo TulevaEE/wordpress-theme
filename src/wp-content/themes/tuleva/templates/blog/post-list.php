@@ -10,8 +10,10 @@
     $temp = $wp_query;
     $wp_query = null;
     $is_paged = $paged > 1;
+    $posts_number = 7;
     $i = 0;
     $args = [
+        'posts_per_page' => $posts_number,
         'paged' => $paged
     ];
 
