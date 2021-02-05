@@ -72,6 +72,9 @@
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                         </li>
+                        <li>
+                            <a href="https://docs.google.com/document/d/1zK5L2eu0noXtDWWR-cCwGX_SYPazkJLMqYvgq8fjpuU/edit" target="_blank">Teade tingimuste muudatustest alates 05.03.2021</a>
+                        </li>
                     </ul>
 
                     <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
