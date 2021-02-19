@@ -61,13 +61,13 @@
                     <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                     <ul class="list-style-arrow mb-5">
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/09/Prospekt.-TUK75-ja-TUK00-alates-01.09.2020.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Prospekt.-TUK75-ja-TUK00.-kehtiv-19.02.2021.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/04/Põhiteave.TUK00_01.04.2020.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Pohiteave.TUK00_19.02.2021.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
