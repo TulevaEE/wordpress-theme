@@ -21,7 +21,7 @@
                                 <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block" id="fund-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?>
                             </div>
                             <hr class="mb-4">
-                            <p class="text-left"><?php  echo sprintf( __('Low cost: management fee %s0,34%%%s and total expense ratio %s0,45%%%s', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>' ); ?></p>
+                            <p class="text-left"><?php  echo sprintf( __('Low cost: management fee %s0,34%%%s (from 01.04.2021 0,31%%) and total expense ratio %s0,45%%%s (from 01.04.2021 0,39%%)', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>' ); ?></p>
                             <ul class="text-left list-style-checkmark mb-0">
                                 <li><?php _e('Most of the money is invested in stocks: bigger expected return and risk', TEXT_DOMAIN); ?></li>
                                 <li><?php _e('Suitable for you if you want <span class="text-highlight"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market', TEXT_DOMAIN); ?></li>
@@ -42,7 +42,7 @@
                                 <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block" id="fund-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
                             </div>
                             <hr class="mb-4">
-                            <p class="text-left"><?php _e('Low cost: management fee <span class="text-highlight"><strong>0,34%</strong></span> and total expenses <span class="text-highlight"><strong>0,47%</strong></span>', TEXT_DOMAIN); ?></p>
+                            <p class="text-left"><?php echo sprintf( __('Low cost: management fee %s0,34%%%s (from 01.04.2021 0,31%%) and total expenses %s0,47%%%s (from 01.04.2021 0,43%%)', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>' ); ?></p>
                             <ul class="text-left list-style-checkmark mb-0">
                                 <li><?php _e('Money is invested into world goverments’ and governmental organisations’ bonds: smaller risk, smaller expected return', TEXT_DOMAIN); ?></li>
                                 <li><?php _e('This suits you in case you have just a few years till retirement or in case you are willing to forgo returns in order to avoid losses', TEXT_DOMAIN); ?></li>
