@@ -64,7 +64,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Prospekt.-TUV100.-kehtiv-19.02.2021.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/Tingimused_Tuleva-III-Samba-Pensionifond.02.10.2019.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-III-Samba-Pensionifondi-mudelportfell.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-pensionifondide-mudelportfellid-18.02.2021.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Pohiteave.-TUV100_19.02.2021.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -79,7 +79,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/TUV100-investeeringute-aruanne-29.01.2021.pdf" target="_blank">01.21</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/TUV100-investeeringute-aruanne-26.02.2021.pdf" target="_blank">02.21</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>

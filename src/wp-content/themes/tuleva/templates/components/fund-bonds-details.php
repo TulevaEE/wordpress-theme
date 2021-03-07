@@ -64,7 +64,7 @@
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Prospekt.-TUK75-ja-TUK00.-kehtiv-19.02.2021.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tingimused_Tuleva-Maailma-Võlakirjade-Pensionifond.alates01.01.2020.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2020/01/Tuleva-II-samba-fondide-mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-pensionifondide-mudelportfellid-18.02.2021.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/Pohiteave.TUK00_19.02.2021.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -82,7 +82,7 @@
                         <li>
                             <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                             <br>
-                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/02/TULVPF-investeeringute-aruanne-290121.pdf" target="_blank">01.21</a>
+                            <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/TULVPF-investeeringute-aruanne-260221.docx.pdf" target="_blank">02.21</a>
                             <br>
                             <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                         </li>
