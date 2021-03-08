@@ -282,7 +282,7 @@ function get_member_count() {
             'http' => array(
                 'method' => 'HEAD',
                 'header' => array(
-                    "Authorization: Bearer 705e26c1-9316-47f2-94b8-a5c6b0dfb566"
+                    "Authorization: Bearer c32fde75-70b2-4da4-ab00-b395734bdb80"
                 )
             )
         )
@@ -303,7 +303,7 @@ function print_funds_js() {
             'http' => array(
                 'method' => 'GET',
                 'header' => array(
-                    "Authorization: Bearer 705e26c1-9316-47f2-94b8-a5c6b0dfb566"
+                    "Authorization: Bearer c32fde75-70b2-4da4-ab00-b395734bdb80"
                 )
             )
         )
