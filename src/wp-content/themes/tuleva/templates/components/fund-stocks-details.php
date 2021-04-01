@@ -31,11 +31,11 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
-                            <div>0,34% (<?php _e('from', TEXT_DOMAIN) ?> 01.04.2021 0,31%)</div>
+                            <div>0,31%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
-                            <div>0,42% (<?php _e('from', TEXT_DOMAIN) ?> 01.04.2021 0,39%)</div>
+                            <div>0,39%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-02-19 09:43:25+00:00\n"
+"POT-Creation-Date: 2021-04-01 07:36:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -366,13 +366,6 @@ msgstr ""
 msgid "Management fee"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:34
-#: templates/components/fund-bonds-details.php:38
-#: templates/components/fund-stocks-details.php:34
-#: templates/components/fund-stocks-details.php:38
-msgid "from"
-msgstr ""
-
 #: templates/components/fund-bonds-details.php:37
 #: templates/components/fund-stocks-details.php:37
 #: templates/components/fund-third-details.php:37
@@ -465,26 +458,26 @@ msgstr ""
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-stocks-details.php:80
+#: templates/components/fund-bonds-details.php:77
+#: templates/components/fund-stocks-details.php:77
 #: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-stocks-details.php:83
+#: templates/components/fund-bonds-details.php:80
+#: templates/components/fund-stocks-details.php:80
 #: templates/components/fund-third-details.php:80
 msgid "Investment reports (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:87
-#: templates/components/fund-stocks-details.php:87
+#: templates/components/fund-bonds-details.php:84
+#: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-stocks-details.php:90
+#: templates/components/fund-bonds-details.php:87
+#: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr ""
@@ -557,9 +550,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/fund-choosing.php:24
-msgid ""
-"Low cost: management fee %s0,34%%%s (from 01.04.2021 0,31%%) and total "
-"expense ratio %s0,42%%%s (from 01.04.2021 0,39%%)"
+msgid "Low cost: management fee %s0,31%%%s and total expense ratio %s0,39%%%s"
 msgstr ""
 
 #: templates/components/fund-choosing.php:26
@@ -597,9 +588,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/fund-choosing.php:45
-msgid ""
-"Low cost: management fee %s0,34%%%s (from 01.04.2021 0,31%%) and total "
-"expenses %s0,46%%%s (from 01.04.2021 0,43%%)"
+msgid "Low cost: management fee %s0,31%%%s and total expenses %s0,43%%%s"
 msgstr ""
 
 #: templates/components/fund-choosing.php:47
