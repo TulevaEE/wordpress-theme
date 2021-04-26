@@ -22,9 +22,9 @@
                 <?php } ?>
             </div>
             <div class="col-md-5">
-                    <div id="inline-signup" class="inline-signup card p-4 bg-light"></div>
-                    <script type="text/javascript" src="<?php echo get_template_directory_uri();
-                    ?>/templates/onboarding-client/static/js/signup.2ae7f29f_3.js"></script>
+                <div id="inline-signup" class="inline-signup card p-4 bg-light">
+                    <a href="https://pension.tuleva.ee/join" class="btn btn-primary btn-lg"><?php _e('Join Tuleva', TEXT_DOMAIN); ?></a>
+                </div>
             </div>
         </div>
     </div>
