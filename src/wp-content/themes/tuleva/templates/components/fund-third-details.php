@@ -72,6 +72,9 @@
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
+                            <li>
+                                <a href="<?php echo get_site_url(); ?>/oluline/mis-muutus-tuleva-iii-samba-pensionifondi-tingimustes/">Prospekt ja tingimused alates 28.05.2021</a>
+                            </li>
                         </ul>
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
@@ -79,7 +82,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/04/TUV100-investeeringute-aruanne-31.03.2021.pdf" target="_blank">03.21</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/TUV100-investeeringute-aruanne-26.02.2021.pdf" target="_blank">02.21</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
