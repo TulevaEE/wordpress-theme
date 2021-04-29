@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-04-01 07:36:45+00:00\n"
-"PO-Revision-Date: 2021-04-01 10:37+0300\n"
+"POT-Creation-Date: 2021-04-29 09:07:14+00:00\n"
+"PO-Revision-Date: 2021-04-29 12:07+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -70,7 +70,7 @@ msgid "Join us!"
 msgstr "Ühine meiega!"
 
 #: templates/components/cta-join.php:8 templates/components/middle-cta.php:5
-#: templates/components/signup.php:7
+#: templates/components/signup-block.php:27
 msgid "Join Tuleva"
 msgstr "Liitu Tulevaga"
 
@@ -1793,41 +1793,9 @@ msgstr ""
 "paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte "
 "pankadele ja kindlustusseltsidele."
 
-#: templates/components/signup.php:13
-msgid "Enter your details and send membership application"
-msgstr "Sisesta oma andmed ja saada liitumisavaldus"
-
-#: templates/components/signup.php:16
-msgid ""
-"Tuleva member can be anybody of legal age who does not have current criminal "
-"record. <a id=\"question-rights\" href=\"#questionRightsModal\">What are my "
-"rights and obligations as a Tuleva member?</a>"
-msgstr ""
-"Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat "
-"kriminaalkaristust. <a id=\"question-rights\" href=\"#questionRightsModal"
-"\">Mis on minu õigused ja kohustused Tuleva liikmena?</a>"
-
-#: templates/components/signup.php:19
-msgid "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
-msgstr ""
-"Maksa ühekordne liitumistasu <span class=\\\"text-highlight\\\">100 eurot</"
-"span>"
-
-#: templates/components/signup.php:22
-msgid "This is the contribution of all Tuleva members to our joint enterprise."
-msgstr "See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse."
-
-#: templates/components/signup.php:25
-msgid "Choose Tuleva pension fund"
-msgstr "Suuna pension Tulevasse"
-
-#: templates/components/signup.php:28
-msgid ""
-"If your II pillar is not already in Tuleva pension fund, you can comfortably "
-"do it here."
-msgstr ""
-"Kui sinu II sammas pole juba Tuleva pensionifondi suunatud, saad seda kohe "
-"mugavalt teha."
+#: templates/components/signup-block.php:26
+msgid "To become a member please log in to your pension account"
+msgstr "Liikmeks astumiseks logi sisse oma pensionikontole"
 
 #: templates/components/single-quote-block.php:1
 msgid "Who manages Tuleva funds?"
@@ -2152,6 +2120,38 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
 
+#~ msgid "Enter your details and send membership application"
+#~ msgstr "Sisesta oma andmed ja saada liitumisavaldus"
+
+#~ msgid ""
+#~ "Tuleva member can be anybody of legal age who does not have current "
+#~ "criminal record. <a id=\"question-rights\" href=\"#questionRightsModal"
+#~ "\">What are my rights and obligations as a Tuleva member?</a>"
+#~ msgstr ""
+#~ "Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat "
+#~ "kriminaalkaristust. <a id=\"question-rights\" href=\"#questionRightsModal"
+#~ "\">Mis on minu õigused ja kohustused Tuleva liikmena?</a>"
+
+#~ msgid ""
+#~ "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
+#~ msgstr ""
+#~ "Maksa ühekordne liitumistasu <span class=\\\"text-highlight\\\">100 "
+#~ "eurot</span>"
+
+#~ msgid ""
+#~ "This is the contribution of all Tuleva members to our joint enterprise."
+#~ msgstr "See on kõigi Tuleva liikmete panus meie ühise ettevõtte arendusse."
+
+#~ msgid "Choose Tuleva pension fund"
+#~ msgstr "Suuna pension Tulevasse"
+
+#~ msgid ""
+#~ "If your II pillar is not already in Tuleva pension fund, you can "
+#~ "comfortably do it here."
+#~ msgstr ""
+#~ "Kui sinu II sammas pole juba Tuleva pensionifondi suunatud, saad seda "
+#~ "kohe mugavalt teha."
+
 #~ msgid "from"
 #~ msgstr "alates"
 
@@ -2180,9 +2180,6 @@ msgstr "Soovitus 18-55"
 
 #~ msgid "Log in"
 #~ msgstr "Sisene"
-
-#~ msgid "Log in to your pension account"
-#~ msgstr "Sisene pensionikontole"
 
 #~ msgid ""
 #~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"

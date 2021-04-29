@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-04-01 07:36:45+00:00\n"
+"POT-Creation-Date: 2021-04-29 09:07:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -66,7 +66,7 @@ msgid "Join us!"
 msgstr ""
 
 #: templates/components/cta-join.php:8 templates/components/middle-cta.php:5
-#: templates/components/signup.php:7
+#: templates/components/signup-block.php:27
 msgid "Join Tuleva"
 msgstr ""
 
@@ -1457,33 +1457,8 @@ msgid ""
 "banks and insurance companies."
 msgstr ""
 
-#: templates/components/signup.php:13
-msgid "Enter your details and send membership application"
-msgstr ""
-
-#: templates/components/signup.php:16
-msgid ""
-"Tuleva member can be anybody of legal age who does not have current criminal "
-"record. <a id=\"question-rights\" href=\"#questionRightsModal\">What are my "
-"rights and obligations as a Tuleva member?</a>"
-msgstr ""
-
-#: templates/components/signup.php:19
-msgid "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
-msgstr ""
-
-#: templates/components/signup.php:22
-msgid "This is the contribution of all Tuleva members to our joint enterprise."
-msgstr ""
-
-#: templates/components/signup.php:25
-msgid "Choose Tuleva pension fund"
-msgstr ""
-
-#: templates/components/signup.php:28
-msgid ""
-"If your II pillar is not already in Tuleva pension fund, you can comfortably "
-"do it here."
+#: templates/components/signup-block.php:26
+msgid "To become a member please log in to your pension account"
 msgstr ""
 
 #: templates/components/single-quote-block.php:1
