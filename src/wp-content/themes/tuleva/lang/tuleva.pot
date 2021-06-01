@@ -1,4 +1,4 @@
-# Copyright (C) 2021 
+# Copyright (C) 2021
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
@@ -751,7 +751,7 @@ msgstr ""
 
 #: templates/components/fund-security.php:46
 msgid ""
-"Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"http://www."
+"Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://www."
 "pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus."
 "ee</a>"
 msgstr ""

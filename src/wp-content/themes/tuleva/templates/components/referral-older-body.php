@@ -82,7 +82,7 @@
 
                             <p>Värskelt jõustunud seadus lubab võtta välja korraga nii palju raha kui vaja. Suuremat summat võib korraga tarvis minna näiteks kodu fassaadi soojustamiseks või elu päästvate ravikulude katteks. Võib valida fondipensioni: see tähendab, et raha makstakse välja vähehaaval, samal ajal kui ülejäänu teenib pensionifondis tootlust edasi. Mõlemal juhul jääb raha, mida sina oma elu jooksul kasutada ei jõua, sinu pärijatele.</p>
 
-                            <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse <a href="http://pensionikeskus.ee/">Pensionikeskuse lehel</a> oma kontole.</p>
+                            <p>Raha ühekordse maksena väljavõtmiseks või fondipensioni lepingu sõlmimiseks logi sisse <a href="https://pensionikeskus.ee/">Pensionikeskuse lehel</a> oma kontole.</p>
                         </div>
                     </div>
                 </div>

@@ -24,14 +24,14 @@
                     </div>
                     <div id="collapseOne" class="collapse mt-2 mb-5" aria-labelledby="headingOne" data-parent="#accordion">
                         <div>
-                            <p>Pangad teevad näo, et kulud pole tegelikult tähtsad. Warren Buffett pole nõus. Analüütikud pole ka nõus. Nad on aastate viisi andmeid läbi töötanud ja leidnud üht: <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">madalad kulud on kõige tõsisem fondi tootluse ennustaja</a>.</p>
+                            <p>Pangad teevad näo, et kulud pole tegelikult tähtsad. Warren Buffett pole nõus. Analüütikud pole ka nõus. Nad on aastate viisi andmeid läbi töötanud ja leidnud üht: <a href="https://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">madalad kulud on kõige tõsisem fondi tootluse ennustaja</a>.</p>
 
                             <p>Teisisõnu: <span class="text-highlight text-bold">mida madalamad on pensionifondi kulud, seda suurem tõenäosus, et sinu pensionivara kasvab rohkem.</span></p>
 
                             <p>Asi on lihtsalt selles, et maailmamajanduse käekäik pole meie kontrolli all. Väärtpaberiturgude tõuse ja torme ette ennustada on üsna võimatu. Aga kulud on selge suurus: mida rohkem läheb tasudeks, seda vähem jääb sulle tulust, mida sinu raha turgudel teenib.</p>
 
                             <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-success-probability.png" class="img-fluid" alt="Odava tasuga fondid saavad parima tulemuse" />
-                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="http://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal. Edu tõenäosus näitab tõenäosust, millega fond saavutab investoritele keskmisest parema tulemuse.</cite>
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Maailma suurima fondide analüüsi firma Morningstar <a href="https://news.morningstar.com/articlenet/article.aspx?id=752485" target="_blank">analüüs</a> USA investeerimisfondide 2010-2015 tulemuste põhjal. Edu tõenäosus näitab tõenäosust, millega fond saavutab investoritele keskmisest parema tulemuse.</cite>
 
                         </div>
                     </div>

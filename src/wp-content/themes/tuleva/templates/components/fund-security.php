@@ -43,5 +43,5 @@
             </div>
         </div>
     </div>
-    <div class="row text-center"><em><?php _e('Loe lähemalt, kuidas sinu varad kaitstud on: <a href="http://www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/">pensionikeskus.ee</a>', TEXT_DOMAIN) ?></em></div>
+    <div class="row text-center"><em><?php _e('Loe lähemalt, kuidas sinu varad kaitstud on: <a href="https://www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/">pensionikeskus.ee</a>', TEXT_DOMAIN) ?></em></div>
 </div>
