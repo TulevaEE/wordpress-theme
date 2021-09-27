@@ -223,36 +223,9 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <h4>Tekkis küsimusi? </h4>
                 <a class="">Helista +372 644 5100 või kirjuta
-                    <a href="mailto:info@tuleva.ee">info@tuleva.ee</a>. Sulle ei vasta kunagi robot, vaid üks meist, neljast:
+                    <a href="mailto:info@tuleva.ee">info@tuleva.ee</a>
                     </p>
             </div>
         </div>
-
-        <div class="row text-center">
-            <div class="col-md-10 col-lg-8 mx-auto">
-                <div class="row">
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" width="64" height="64" class="rounded-circle mb-3"
-                        />
-                        <h6 class="text-navy">Tõnu Pekk</h6>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/mari-kuhi.jpg" width="64" height="64" class="rounded-circle mb-3"
-                        />
-                        <h6 class="text-navy">Mari Kuhi</h6>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/kristi-saare.png" width="64" height="64" class="rounded-circle mb-3"
-                        />
-                        <h6 class="text-navy">Kristi Saare</h6>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/sirli.jpg" width="64" height="64" class="rounded-circle mb-3" />
-                        <h6 class="text-navy">Sirli Oot</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
