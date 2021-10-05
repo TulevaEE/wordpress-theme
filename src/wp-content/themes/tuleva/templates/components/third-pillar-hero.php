@@ -16,6 +16,10 @@
                             </p>
                         <?php } ?>
                     <?php } ?>
+
+                    <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
+                        <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3"><?php the_sub_field('button_text'); ?></a>
+                    <?php } ?>
                 </div>
                 <div class="col-lg-6">
                     <?php get_template_part('templates/components/third-pillar-calculator'); ?>
