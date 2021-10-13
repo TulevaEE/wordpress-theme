@@ -7,5 +7,6 @@
   MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
 
   mixpanel.init('ff49493de3c6ed27e198e6b15063b60f');
+  mixpanel.track('LOCATION_CHANGE');
 </script>
 <!-- End Mixpanel -->
