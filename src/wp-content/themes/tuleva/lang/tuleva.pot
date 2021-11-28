@@ -1,10 +1,10 @@
-# Copyright (C) 2021
+# Copyright (C) 2021 
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-05-17 12:19:10+00:00\n"
+"POT-Creation-Date: 2021-11-28 16:17:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,14 +43,6 @@ msgstr ""
 
 #: templates/blog/submenu.php:12
 msgid "All articles"
-msgstr ""
-
-#: templates/blog/submenu.php:19
-msgid "Featured articles"
-msgstr ""
-
-#: templates/blog/submenu.php:27
-msgid "Laura getting rich"
 msgstr ""
 
 #: templates/blog/submenu.php:31
@@ -460,25 +452,25 @@ msgstr ""
 
 #: templates/components/fund-bonds-details.php:77
 #: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:80
+#: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:80
 #: templates/components/fund-stocks-details.php:80
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:80
 msgid "Investment reports (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:84
 #: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:90
+#: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr ""
 
@@ -1659,7 +1651,11 @@ msgstr ""
 msgid "Button label:"
 msgstr ""
 
-#: widgets/help-widget.php:65
+#: widgets/help-widget.php:67 widgets/help-widget.php:69
+msgid "See also our %sFAQ%s page."
+msgstr ""
+
+#: widgets/help-widget.php:73
 msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr ""
 

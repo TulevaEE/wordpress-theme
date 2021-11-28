@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-05-17 12:19:10+00:00\n"
-"PO-Revision-Date: 2021-05-17 15:19+0300\n"
+"POT-Creation-Date: 2021-11-28 16:17:10+00:00\n"
+"PO-Revision-Date: 2021-11-28 18:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -48,14 +48,6 @@ msgstr "Viimased artiklid"
 #: templates/blog/submenu.php:12
 msgid "All articles"
 msgstr "Kõik artiklid"
-
-#: templates/blog/submenu.php:19
-msgid "Featured articles"
-msgstr "Olulisemad artiklid"
-
-#: templates/blog/submenu.php:27
-msgid "Laura getting rich"
-msgstr "Laura rikkaks"
 
 #: templates/blog/submenu.php:31
 msgid "RSS feed"
@@ -496,25 +488,25 @@ msgstr "Fondi vara puhasväärtuse määramise kord"
 
 #: templates/components/fund-bonds-details.php:77
 #: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:80
+#: templates/components/fund-third-details.php:77
 msgid "Reports"
 msgstr "Aruanded"
 
 #: templates/components/fund-bonds-details.php:80
 #: templates/components/fund-stocks-details.php:80
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:80
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:84
 #: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:90
+#: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
@@ -2012,7 +2004,11 @@ msgstr "Näitab abi moodulit."
 msgid "Button label:"
 msgstr "Nupu tekst:"
 
-#: widgets/help-widget.php:65
+#: widgets/help-widget.php:67 widgets/help-widget.php:69
+msgid "See also our %sFAQ%s page."
+msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
+
+#: widgets/help-widget.php:73
 msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr "Vastab Tõnu või Mari Tuleva tiimist."
 
@@ -2119,6 +2115,12 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid "Featured articles"
+#~ msgstr "Olulisemad artiklid"
+
+#~ msgid "Laura getting rich"
+#~ msgstr "Laura rikkaks"
 
 #~ msgid "Enter your details and send membership application"
 #~ msgstr "Sisesta oma andmed ja saada liitumisavaldus"
