@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-11-28 16:17:10+00:00\n"
-"PO-Revision-Date: 2021-11-28 18:25+0200\n"
+"POT-Creation-Date: 2021-12-01 19:40:16+00:00\n"
+"PO-Revision-Date: 2021-12-01 21:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1794,8 +1794,12 @@ msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
 #: templates/components/third-pillar-calculator.php:5
-msgid "Your monthly gross income"
-msgstr "Sisesta oma igakuine brutosissetulek"
+msgid ""
+"Appr. gross income 2021 (<a href=\"#modal-gross_income\">look up on e-MTA</"
+"a>)"
+msgstr ""
+"Ligikaudne brutotulu 2021 (<a href=\"#modal-brutotulu\">vaata e-"
+"maksuametist</a>)"
 
 #: templates/components/third-pillar-calculator.php:8
 msgid "euros"
@@ -1806,8 +1810,8 @@ msgid "You can contribute monthly to III pillar"
 msgstr "Kuus saad III sambasse panna"
 
 #: templates/components/third-pillar-calculator.php:20
-msgid "You can contribute annually to III pillar"
-msgstr "Aastas saad III sambasse panna"
+msgid "This year you can contribute to III pillar"
+msgstr "Sel aastal saad III sambase panna"
 
 #: templates/components/third-pillar-calculator.php:27
 msgid "Your gain from income tax"
@@ -1971,7 +1975,7 @@ msgid "Shows primary CTA widget."
 msgstr "Näitab peamist CTA moodulit."
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:34 widgets/subscribe-widget.php:35
+#: widgets/help-widget.php:36 widgets/subscribe-widget.php:35
 #: widgets/text-rows-widget.php:39
 msgid "Title:"
 msgstr "Pealkiri:"
@@ -2000,15 +2004,21 @@ msgstr "Küsi abi"
 msgid "Shows help widget."
 msgstr "Näitab abi moodulit."
 
-#: widgets/help-widget.php:38
+#: widgets/help-widget.php:40
 msgid "Button label:"
 msgstr "Nupu tekst:"
 
-#: widgets/help-widget.php:67 widgets/help-widget.php:69
+#: widgets/help-widget.php:44
+#, fuzzy
+#| msgid "Facebook URL:"
+msgid "FAQ page URL:"
+msgstr "Facebook URL:"
+
+#: widgets/help-widget.php:75
 msgid "See also our %sFAQ%s page."
 msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
 
-#: widgets/help-widget.php:73
+#: widgets/help-widget.php:80
 msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr "Vastab Tõnu või Mari Tuleva tiimist."
 
@@ -2115,6 +2125,12 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid "Your monthly gross income"
+#~ msgstr "Sisesta oma igakuine brutosissetulek"
+
+#~ msgid "You can contribute annually to III pillar"
+#~ msgstr "Aastas saad III sambasse panna"
 
 #~ msgid "Featured articles"
 #~ msgstr "Olulisemad artiklid"

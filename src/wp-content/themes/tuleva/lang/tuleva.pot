@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2021-11-28 16:17:10+00:00\n"
+"POT-Creation-Date: 2021-12-01 19:40:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1458,7 +1458,9 @@ msgid "Who manages Tuleva funds?"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:5
-msgid "Your monthly gross income"
+msgid ""
+"Appr. gross income 2021 (<a href=\"#modal-gross_income\">look up on e-MTA</"
+"a>)"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:8
@@ -1470,7 +1472,7 @@ msgid "You can contribute monthly to III pillar"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:20
-msgid "You can contribute annually to III pillar"
+msgid "This year you can contribute to III pillar"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:27
@@ -1618,7 +1620,7 @@ msgid "Shows primary CTA widget."
 msgstr ""
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:34 widgets/subscribe-widget.php:35
+#: widgets/help-widget.php:36 widgets/subscribe-widget.php:35
 #: widgets/text-rows-widget.php:39
 msgid "Title:"
 msgstr ""
@@ -1647,15 +1649,19 @@ msgstr ""
 msgid "Shows help widget."
 msgstr ""
 
-#: widgets/help-widget.php:38
+#: widgets/help-widget.php:40
 msgid "Button label:"
 msgstr ""
 
-#: widgets/help-widget.php:67 widgets/help-widget.php:69
+#: widgets/help-widget.php:44
+msgid "FAQ page URL:"
+msgstr ""
+
+#: widgets/help-widget.php:75
 msgid "See also our %sFAQ%s page."
 msgstr ""
 
-#: widgets/help-widget.php:73
+#: widgets/help-widget.php:80
 msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr ""
 
