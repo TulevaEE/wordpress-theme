@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2021-12-01 19:40:16+00:00\n"
-"PO-Revision-Date: 2021-12-01 21:41+0200\n"
+"PO-Revision-Date: 2021-12-13 12:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
 
@@ -591,8 +591,8 @@ msgstr ""
 "data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-choosing.php:24
-msgid "Low cost: management fee %s0,31%%%s and total expense ratio %s0,39%%%s"
-msgstr "Madalad kulud: valitsemistasu %s0,31%%%s ja kogukulu määr %s0,39%%%s"
+msgid "Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s"
+msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,37%%%s"
 
 #: templates/components/fund-choosing.php:26
 msgid ""
@@ -639,8 +639,8 @@ msgstr ""
 "data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
 
 #: templates/components/fund-choosing.php:45
-msgid "Low cost: management fee %s0,31%%%s and total expenses %s0,43%%%s"
-msgstr "Madalad kulud: valitsemistasu %s0,31%%%s ja kogukulu määr %s0,43%%%s"
+msgid "Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s"
+msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,41%%%s"
 
 #: templates/components/fund-choosing.php:47
 msgid ""
@@ -1811,7 +1811,7 @@ msgstr "Kuus saad III sambasse panna"
 
 #: templates/components/third-pillar-calculator.php:20
 msgid "This year you can contribute to III pillar"
-msgstr "Sel aastal saad III sambase panna"
+msgstr "Sel aastal saad III sambasse panna"
 
 #: templates/components/third-pillar-calculator.php:27
 msgid "Your gain from income tax"

@@ -54,7 +54,7 @@ var calculateSaving = function () {
     var marketReturn = 1.05;
     var salaryGrowth = 1.03;
     var futureValueOfPensionFund = Math.ceil(grossWage * 0.06 * 12 * (Math.pow(marketReturn - comparisonFund, 65 - Math.max(0, Math.min(age, 65))) - Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65)))) / (marketReturn - comparisonFund - salaryGrowth) + presentValueOfPensionFund * Math.pow(marketReturn - comparisonFund, 65 - Math.max(0, Math.min(age, 65))));
-    var tulevaFee = 0.0039;
+    var tulevaFee = 0.0037;
     var totalSavingWithTuleva = Math.ceil(grossWage * 0.06 * 12 * (Math.pow(marketReturn - tulevaFee, 65 - Math.max(0, Math.min(age, 65))) - Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65)))) / (marketReturn - tulevaFee - salaryGrowth) + presentValueOfPensionFund * Math.pow(marketReturn - tulevaFee, 65 - Math.max(0, Math.min(age, 65))) - futureValueOfPensionFund);
     var futureValueWithTuleva = futureValueOfPensionFund + totalSavingWithTuleva;
 

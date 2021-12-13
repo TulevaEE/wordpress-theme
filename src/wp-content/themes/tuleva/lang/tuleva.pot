@@ -1,4 +1,4 @@
-# Copyright (C) 2021 
+# Copyright (C) 2021
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
@@ -542,7 +542,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/fund-choosing.php:24
-msgid "Low cost: management fee %s0,31%%%s and total expense ratio %s0,39%%%s"
+msgid "Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s"
 msgstr ""
 
 #: templates/components/fund-choosing.php:26
@@ -580,7 +580,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/fund-choosing.php:45
-msgid "Low cost: management fee %s0,31%%%s and total expenses %s0,43%%%s"
+msgid "Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s"
 msgstr ""
 
 #: templates/components/fund-choosing.php:47
