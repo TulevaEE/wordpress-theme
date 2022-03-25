@@ -64,7 +64,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/02/Prospekt.-TUK75-ja-TUK00.-21.02.2022.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/06/Tuleva-pensionifondide-mudelportfellid-18.02.2021.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/03/Tuleva-pensionifondide-mudelportfellid-21.03.2022.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/02/Põhiteave.TUK00_21.02.2022.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
