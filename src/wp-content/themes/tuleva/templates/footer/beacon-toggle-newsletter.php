@@ -1,12 +1,11 @@
-<a href="#" class="beacon-toggle">
+<a href="#" class="beacon-toggle beacon-toggle--newsletter">
     <span class="beacon-toggle__icon"></span>
     <span class="beacon-toggle__text">Soovin uudiskirja</span>
 </a>
-<div class="beacon-content">
+<div class="beacon-content beacon-content--newsletter">
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
-        <form action="https://tuleva.us13.list-manage.com/subscribe/post?u=594cafb01e6f3b0087743e6f5&amp;id=b30d5d60e3" method="post"
-            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <form action="https://tuleva.us13.list-manage.com/subscribe/post?u=594cafb01e6f3b0087743e6f5&amp;id=b30d5d60e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
                 <h6 class="text-navy mb-4">Jagame aegajalt parimaid artikleid, ekspertide nõuandeid ja kasulikke meeldetuletusi.</h6>
                 <div class="mc-field-group">

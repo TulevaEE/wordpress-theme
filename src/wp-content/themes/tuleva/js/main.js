@@ -34,13 +34,31 @@ $(document).ready(function ($) {
             }
         });
     },
-        initBeaconToggle = function () {
-            var $beaconToggle = $('.beacon-toggle');
+        initNewsletterBeaconToggle = function () {
+            var $beaconToggle = $('.beacon-toggle--newsletter');
 
             $beaconToggle.on('click', function (ev) {
                 ev.preventDefault();
                 $(this).toggleClass('beacon-toggle--open');
-                $('.beacon-content').toggleClass('beacon-content--open');
+                $('.beacon-content--newsletter').toggleClass('beacon-content--open');
+            });
+
+            $(window).scroll(function () {
+                var scrollPosition = $(window).scrollTop(),
+                    viewportHeight = $(window).height();
+
+                if (scrollPosition > viewportHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
+                    $beaconToggle.addClass('d-block');
+                }
+            });
+        },
+        initHelpBeaconToggle = function () {
+            var $beaconToggle = $('.beacon-toggle--help');
+
+            $beaconToggle.on('click', function (ev) {
+                ev.preventDefault();
+                $(this).toggleClass('beacon-toggle--open');
+                window.Beacon('toggle');
             });
 
             $(window).scroll(function () {
@@ -160,7 +178,8 @@ $(document).ready(function ($) {
         };
 
     initStickyHeader();
-    initBeaconToggle();
+    initNewsletterBeaconToggle();
+    initHelpBeaconToggle();
     initPostSidebarHandler();
     initGenericModals();
     initModalEscClose();

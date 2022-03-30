@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-01-04 13:16:56+00:00\n"
-"PO-Revision-Date: 2022-01-04 15:17+0200\n"
+"POT-Creation-Date: 2022-03-30 12:25:00+00:00\n"
+"PO-Revision-Date: 2022-03-30 15:26+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -486,27 +486,27 @@ msgstr "Põhiteave"
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
-#: templates/components/fund-bonds-details.php:77
-#: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:77
-msgid "Reports"
-msgstr "Aruanded"
-
 #: templates/components/fund-bonds-details.php:80
 #: templates/components/fund-stocks-details.php:80
 #: templates/components/fund-third-details.php:80
+msgid "Reports"
+msgstr "Aruanded"
+
+#: templates/components/fund-bonds-details.php:83
+#: templates/components/fund-stocks-details.php:83
+#: templates/components/fund-third-details.php:83
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
-
-#: templates/components/fund-bonds-details.php:84
-#: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:84
-msgid "Previous reports"
-msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
+msgid "Previous reports"
+msgstr "Eelnevad aruanded"
+
+#: templates/components/fund-bonds-details.php:90
+#: templates/components/fund-stocks-details.php:90
+#: templates/components/fund-third-details.php:90
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
@@ -1813,6 +1813,10 @@ msgstr "Aastas saad III sambasse panna"
 msgid "Your gain from income tax"
 msgstr "Tulumaksu arvelt võidad"
 
+#: templates/footer/beacon-toggle-help.php:3
+msgid "I have a question"
+msgstr "Soovin küsida"
+
 #: templates/footer/beacon-translations.php:3
 msgid "Send a Message"
 msgstr "Saada sõnum"
@@ -2463,9 +2467,6 @@ msgstr "Soovitus 18-55"
 #~ msgstr ""
 #~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
 #~ "\">Vaata arvutust</a>"
-
-#~ msgid "Have a question?"
-#~ msgstr "Küsi Kristilt!"
 
 #~ msgid ""
 #~ "<a class=\"btn btn-primary btn-block ga\" href=\"https://tuleva.ee/en/\" "
