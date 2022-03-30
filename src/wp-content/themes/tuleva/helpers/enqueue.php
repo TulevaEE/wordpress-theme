@@ -1,15 +1,19 @@
 <?php
 
-class ThemeEnqueue {
-    private function init() {
-        add_action( 'wp_enqueue_scripts', array($this, 'enqueue_assets'), 12);
+class ThemeEnqueue
+{
+    private function init()
+    {
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_assets'), 12);
     }
 
-    function __construct() {
+    function __construct()
+    {
         $this->init();
     }
 
-    public function enqueue_assets() {
+    public function enqueue_assets()
+    {
         $css_path = get_template_directory_uri() . '/css/';
         $js_path = get_template_directory_uri() . '/js/';
 
@@ -99,13 +103,14 @@ class ThemeEnqueue {
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '20220104',
+                'ver' => '20220330',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
         ];
         // if (is_front_page()) {
-            array_push($assets,
+        array_push(
+            $assets,
             [
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
@@ -114,11 +119,11 @@ class ThemeEnqueue {
                 'js_in_header' => false,
                 'enqueue' => true
             ]
-            );
+        );
         // }
 
         /* Get file that contains SimplyEnqueue class */
-        require_once (get_template_directory() . '/lib/enqueue.php');
+        require_once(get_template_directory() . '/lib/enqueue.php');
 
         // Deregisters jquery in case it was registered before
         wp_deregister_script('jquery');
