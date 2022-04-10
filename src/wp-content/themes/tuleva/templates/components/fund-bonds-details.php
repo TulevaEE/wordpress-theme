@@ -82,7 +82,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/03/TULVPF-investeeringute-aruanne-280222.pdf" target="_blank">02.22</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/04/TULVPF-investeeringute-aruanne-310322.pdf" target="_blank">03.22</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
