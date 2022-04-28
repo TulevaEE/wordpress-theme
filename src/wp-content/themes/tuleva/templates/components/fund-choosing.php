@@ -14,14 +14,22 @@
                             <h4>
                                 <?php _e('<a href="/en/tuleva-world-stocks-pension-fund/" target="_blank" class="text-navy">Tuleva World Stocks Pension Fund</a>', TEXT_DOMAIN); ?>
                             </h4>
-                            <img src="<?php echo get_template_directory_uri() ?>/img/stocks-pie.svg" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
+                            <?php
+                            $stocks_img = get_template_directory_uri() . '/img/stocks-pie.svg';
+
+                            if (ICL_LANGUAGE_CODE == 'en') {
+                                $stocks_img = get_template_directory_uri() . '/img/stocks-pie-en.svg';
+                            }
+                            ?>
+
+                            <img src="<?php echo $stocks_img ?>" class="img-fluid my-5" alt="<?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>">
 
                             <div class="bg-white mb-4">
                                 <?php _e('<a href="/en/tuleva-world-stocks-pension-fund/" class="text-uppercase text-medium d-block mb-4">See fund info</a>', TEXT_DOMAIN); ?>
                                 <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block" id="fund-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?>
                             </div>
                             <hr class="mb-4">
-                            <p class="text-left"><?php  echo sprintf( __('Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>' ); ?></p>
+                            <p class="text-left"><?php echo sprintf(__('Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>'); ?></p>
                             <ul class="text-left list-style-checkmark mb-0">
                                 <li><?php _e('Most of the money is invested in stocks: bigger expected return and risk', TEXT_DOMAIN); ?></li>
                                 <li><?php _e('Suitable for you if you want <span class="text-highlight"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market', TEXT_DOMAIN); ?></li>
@@ -36,13 +44,21 @@
                             <h4>
                                 <?php _e('<a href="/en/tuleva-world-bonds-pension-fund/" target="_blank" class="text-navy">Tuleva World Bonds Pension Fund</a>', TEXT_DOMAIN); ?>
                             </h4>
-                            <img src="<?php echo get_template_directory_uri() ?>/img/volakirjad-pie.svg?v2" class="img-fluid my-5" alt="<?php _e('Tuleva World Bonds Pension Fund', TEXT_DOMAIN); ?>">
+                            <?php
+                            $bonds_img = get_template_directory_uri() . '/img/volakirjad-pie.svg?v2';
+
+                            if (ICL_LANGUAGE_CODE == 'en') {
+                                $bonds_img = get_template_directory_uri() . '/img/volakirjad-pie-en.svg';
+                            }
+                            ?>
+
+                            <img src="<?php echo $bonds_img ?>" class="img-fluid my-5" alt="<?php _e('Tuleva World Bonds Pension Fund', TEXT_DOMAIN); ?>">
                             <div class="bg-white mb-4">
                                 <?php _e('<a href="/en/tuleva-world-bonds-pension-fund/" class="text-uppercase text-medium d-block mb-4">See fund info</a>', TEXT_DOMAIN); ?>
                                 <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block" id="fund-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
                             </div>
                             <hr class="mb-4">
-                            <p class="text-left"><?php echo sprintf( __('Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>' ); ?></p>
+                            <p class="text-left"><?php echo sprintf(__('Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>', '<span class="text-highlight"><strong>', '</strong></span>'); ?></p>
                             <ul class="text-left list-style-checkmark mb-0">
                                 <li><?php _e('Money is invested into world goverments’ and governmental organisations’ bonds: smaller risk, smaller expected return', TEXT_DOMAIN); ?></li>
                                 <li><?php _e('This suits you in case you have just a few years till retirement or in case you are willing to forgo returns in order to avoid losses', TEXT_DOMAIN); ?></li>
