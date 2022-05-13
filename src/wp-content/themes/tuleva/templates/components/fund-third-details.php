@@ -55,9 +55,6 @@
                         </div>
                     </div>
                     <div class="col-md-5 offset-md-1">
-                        <div class="w-100 text-center">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/third-pillar-pie.svg" class="mb-6" alt="<?php _e('Tuleva III Pillar Pension Fund', TEXT_DOMAIN) ?>">
-                        </div>
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>

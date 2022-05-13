@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row py-6">
             <div class="col-lg-10 mx-auto text-center">
-                <h1 class="mb-6"><?php _e('Tuleva World Bonds Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h1 class="mb-4"><?php _e('Tuleva World Bonds Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h5 class="text-normal mb-4"><?php echo sprintf(__('Share of bonds %s%%', TEXT_DOMAIN), '100') ?></h5>
             </div>
         </div>
     </div>
@@ -21,7 +22,7 @@
                         </ul>
                     </div>
                     <div class="proposal__cta">
-                    <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
+                        <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
                     </div>
                 </div>
             </div>

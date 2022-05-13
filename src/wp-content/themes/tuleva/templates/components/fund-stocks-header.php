@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row py-6">
             <div class="col-lg-10 mx-auto text-center">
-                <h1 class="mb-6"><?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h1 class="mb-4"><?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN) ?></h1>
+                <h5 class="text-normal mb-4"><?php echo sprintf(__('Share of shares %s%%', TEXT_DOMAIN), '100') ?></h5>
             </div>
         </div>
     </div>
