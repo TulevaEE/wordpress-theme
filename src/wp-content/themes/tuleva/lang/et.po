@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-03-30 12:25:00+00:00\n"
-"PO-Revision-Date: 2022-03-30 15:26+0300\n"
+"POT-Creation-Date: 2022-05-13 19:32:57+00:00\n"
+"PO-Revision-Date: 2022-05-13 22:33+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -511,7 +511,7 @@ msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:39
+#: templates/components/fund-choosing.php:55
 msgid "Tuleva World Bonds Pension Fund"
 msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
@@ -569,12 +569,12 @@ msgstr ""
 "<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" class="
 "\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
 
-#: templates/components/fund-choosing.php:17
+#: templates/components/fund-choosing.php:25
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
-#: templates/components/fund-choosing.php:20
+#: templates/components/fund-choosing.php:28
 msgid ""
 "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase "
 "text-medium d-block mb-4\">See fund info</a>"
@@ -582,7 +582,7 @@ msgstr ""
 "<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" class=\"text-uppercase "
 "text-medium d-block mb-4\">Vaata fondi infot</a>"
 
-#: templates/components/fund-choosing.php:21
+#: templates/components/fund-choosing.php:29
 msgid ""
 "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block\" id=\"fund-choose-stocks\">Select this fund</a>"
@@ -590,17 +590,17 @@ msgstr ""
 "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
 "data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
-#: templates/components/fund-choosing.php:24
+#: templates/components/fund-choosing.php:32
 msgid "Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s"
 msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,37%%%s"
 
-#: templates/components/fund-choosing.php:26
+#: templates/components/fund-choosing.php:34
 msgid ""
 "Most of the money is invested in stocks: bigger expected return and risk"
 msgstr ""
 "Suurem osa rahast investeeritakse aktsiatesse: suurem võimalik tulu ja risk"
 
-#: templates/components/fund-choosing.php:27
+#: templates/components/fund-choosing.php:35
 msgid ""
 "Suitable for you if you want <span class=\"text-highlight\"><strong>best "
 "expected return</strong></span> over long term and you are not disturbed by "
@@ -610,11 +610,11 @@ msgstr ""
 "\"><strong>parimat võimalikku tootlust</strong></span> pika aja vältel ja "
 "sind ei löö rivist välja turu lühiajalised kõikumised"
 
-#: templates/components/fund-choosing.php:34
+#: templates/components/fund-choosing.php:42
 msgid "If you are over 55, the fund better suited for you could be"
 msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
 
-#: templates/components/fund-choosing.php:37
+#: templates/components/fund-choosing.php:45
 msgid ""
 "<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" class="
 "\"text-navy\">Tuleva World Bonds Pension Fund</a>"
@@ -622,7 +622,7 @@ msgstr ""
 "<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" target=\"_blank\" "
 "class=\"text-navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
 
-#: templates/components/fund-choosing.php:41
+#: templates/components/fund-choosing.php:57
 msgid ""
 "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-"
 "medium d-block mb-4\">See fund info</a>"
@@ -630,7 +630,7 @@ msgstr ""
 "<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" class=\"text-uppercase "
 "text-medium d-block mb-4\">Vaata fondi infot</a>"
 
-#: templates/components/fund-choosing.php:42
+#: templates/components/fund-choosing.php:58
 msgid ""
 "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
 "block\" id=\"fund-choose-bonds\">Select this fund</a>"
@@ -638,11 +638,11 @@ msgstr ""
 "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
 "data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
 
-#: templates/components/fund-choosing.php:45
+#: templates/components/fund-choosing.php:61
 msgid "Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s"
 msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,41%%%s"
 
-#: templates/components/fund-choosing.php:47
+#: templates/components/fund-choosing.php:63
 msgid ""
 "Money is invested into world goverments’ and governmental organisations’ "
 "bonds: smaller risk, smaller expected return"
@@ -650,7 +650,7 @@ msgstr ""
 "Raha on maailma valitsuste ja nendega seotud organisatsioonide võlakirjades: "
 "väiksem risk, väiksem võimalik tulu"
 
-#: templates/components/fund-choosing.php:48
+#: templates/components/fund-choosing.php:64
 msgid ""
 "This suits you in case you have just a few years till retirement or in case "
 "you are willing to forgo returns in order to avoid losses"
@@ -850,6 +850,36 @@ msgstr " "
 #: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
+
+#: templates/components/fund-stocks-details.php:94
+msgid "Sustainability information"
+msgstr "Jätkusuutlikkuse info"
+
+#: templates/components/fund-stocks-details.php:97
+msgid "CO2 intensity"
+msgstr "CO2 intensiivsus"
+
+#: templates/components/fund-stocks-details.php:99
+msgid "150 tons / $1M turnover per year"
+msgstr "150 tonni / $1M käibe kohta aastas"
+
+#: templates/components/fund-stocks-details.php:103
+msgid ""
+"Share of investments with increased negative impact in the equity portfolio"
+msgstr "Kõrgendatud negatiivse mõjuga investeeringute osakaal aktsiaportfellis"
+
+#: templates/components/fund-stocks-details.php:105
+msgid ""
+"Mining and utilization of energy coal (%s%%); Mining and exploitation of "
+"petroleum sand (%s%%); Tobacco production and sales (%s%%); Production and "
+"sale of prohibited weapons (%s%%); Production and sale of nuclear weapons (%s"
+"%%), Sale of weapons of war to private individuals (%s%%), violators of the "
+"UN Global Compact (%s%%)"
+msgstr ""
+"Energiasöe kaevandamine ja kasutamine (%s%%); Naftaliiva kaevandamine ja "
+"kasutamine (%s%%); Tubakatootmine ja müük (%s%%); Keelatud relvade tootmine "
+"ja müük (%s%%); Tuumarelvade tootmine ja müük (%s%%), Eraisikutele "
+"lahingrelvade müük (%s%%), UN Global Compact rikkujad (%s%%)"
 
 #: templates/components/fund-stocks-header.php:19
 msgid "you are younger than 55 years"
@@ -1975,8 +2005,8 @@ msgid "Shows primary CTA widget."
 msgstr "Näitab peamist CTA moodulit."
 
 #: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:36 widgets/subscribe-widget.php:35
-#: widgets/text-rows-widget.php:39
+#: widgets/help-widget.php:36 widgets/subscribe-widget.php:39
+#: widgets/text-rows-widget.php:43
 msgid "Title:"
 msgstr "Pealkiri:"
 
@@ -2020,43 +2050,43 @@ msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
 msgid "Ask Tõnu or Mari from Tuleva team."
 msgstr "Vastab Tõnu või Mari Tuleva tiimist."
 
-#: widgets/subscribe-widget.php:12
+#: widgets/subscribe-widget.php:14
 msgid "Subscribe form"
 msgstr "Tellimisvorm"
 
-#: widgets/subscribe-widget.php:16
+#: widgets/subscribe-widget.php:18
 msgid "Shows subscribe form."
 msgstr "Näitab tellimisvormi."
 
-#: widgets/subscribe-widget.php:39
+#: widgets/subscribe-widget.php:43
 msgid "Facebook URL:"
 msgstr "Facebook URL:"
 
-#: widgets/subscribe-widget.php:43
+#: widgets/subscribe-widget.php:47
 msgid "Twitter URL:"
 msgstr "Twitter URL:"
 
-#: widgets/text-rows-widget.php:12
+#: widgets/text-rows-widget.php:14
 msgid "Text rows"
 msgstr "Tekstiread"
 
-#: widgets/text-rows-widget.php:16
+#: widgets/text-rows-widget.php:18
 msgid "Shows text rows."
 msgstr "Näitab tekstiridu."
 
-#: widgets/text-rows-widget.php:43
+#: widgets/text-rows-widget.php:47
 msgid "Text row 1:"
 msgstr "Tekstirida 1:"
 
-#: widgets/text-rows-widget.php:47
+#: widgets/text-rows-widget.php:51
 msgid "Text row 2:"
 msgstr "Tekstirida 2:"
 
-#: widgets/text-rows-widget.php:51
+#: widgets/text-rows-widget.php:55
 msgid "Text row 3:"
 msgstr "Tekstirida 3:"
 
-#: widgets/text-rows-widget.php:55
+#: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
 
@@ -2359,9 +2389,6 @@ msgstr "Soovitus 18-55"
 
 #~ msgid "Want to know how to start saving?"
 #~ msgstr "Soovid teada, kuidas alustada säästmist?"
-
-#~ msgid "Send me information"
-#~ msgstr "Saatke mulle infot"
 
 #~ msgid "Switch to Tuleva"
 #~ msgstr "Vali Tuleva pensionifond"

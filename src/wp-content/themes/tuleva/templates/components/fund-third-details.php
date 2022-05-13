@@ -78,7 +78,7 @@
                         </ul>
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
-                        <ul class="list-style-arrow">
+                        <ul class="list-style-arrow mb-5">
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
@@ -90,6 +90,8 @@
                                 <a href="<?php echo get_site_url(); ?>/aruanded/ "><?php _e('Financial reports of fund and fund manager (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
+
+                        <?php get_template_part('templates/components/fund-sustainability-block'); ?>
                     </div>
                 </div>
             </div>
