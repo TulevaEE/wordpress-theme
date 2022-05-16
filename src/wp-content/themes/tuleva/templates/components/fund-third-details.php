@@ -96,7 +96,7 @@
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
                             <?php echo sprintf(
-                                __('Mining and utilization of energy coal (%s%%); Mining and exploitation of petroleum sand (%s%%); Tobacco production and sales (%s%%); Production and sale of prohibited weapons (%s%%); Production and sale of nuclear weapons (%s%%), Sale of weapons of war to private individuals (%s%%), violators of the UN Global Compact (%s%%)', TEXT_DOMAIN),
+                                __('Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)', TEXT_DOMAIN),
                                 '0.38',
                                 '0.36',
                                 '0.14',
