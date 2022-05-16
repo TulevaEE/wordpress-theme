@@ -70,7 +70,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/03/Tuleva-jatkusuutlikkusriskidega-arvestamise-poliitika.pdf" target="_blank">Jätkusuutlikkusriskide arvesse võtmine</a>
+                                <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Consideration of sustainability risks', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
 
@@ -88,7 +88,24 @@
                             </li>
                         </ul>
 
-                        <?php get_template_part('templates/components/fund-sustainability-block'); ?>
+                        <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
+                        <div class="fund-info__item">
+                            <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
+                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 156) ?>
+                        </div>
+                        <div class="fund-info__item">
+                            <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
+                            <?php echo sprintf(
+                                __('Mining and utilization of energy coal (%s%%); Mining and exploitation of petroleum sand (%s%%); Tobacco production and sales (%s%%); Production and sale of prohibited weapons (%s%%); Production and sale of nuclear weapons (%s%%), Sale of weapons of war to private individuals (%s%%), violators of the UN Global Compact (%s%%)', TEXT_DOMAIN),
+                                '0.38',
+                                '0.35',
+                                '0.14',
+                                '0.59',
+                                '1.30',
+                                '0.14',
+                                '0.24'
+                            ); ?>
+                        </div>
 
                     </div>
                 </div>

@@ -4,7 +4,8 @@
  * Returns post meta description value
  * @return string
  */
-function get_meta_description() {
+function get_meta_description()
+{
     $meta_desc = get_post_meta(get_queried_object_id(), '_tu_meta_desc', true);
 
     return $meta_desc;
@@ -14,7 +15,8 @@ function get_meta_description() {
  * Prints post meta description tag
  * @return string
  */
-function print_meta_description_tag() {
+function print_meta_description_tag()
+{
     $meta_desc = get_meta_description();
 
     if (!empty($meta_desc)) {
@@ -28,7 +30,8 @@ add_action('wp_head', 'print_meta_description_tag');
  * @param  string $more Current "more" string
  * @return string       Returns modified "more" string
  */
-function custom_excerpt_more($more) {
+function custom_excerpt_more($more)
+{
     return '...';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
@@ -38,14 +41,15 @@ add_filter('excerpt_more', 'custom_excerpt_more');
  * @param  boolean $isMobile Is visible in mobile or desktop
  * @return void
  */
-function language_picker($isMobile = false) {
+function language_picker($isMobile = false)
+{
     $languages = icl_get_languages('skip_missing=0&orderby=code');
 
     if (!empty($languages)) { ?>
         <ul class="navbar-nav mr-0 pr-0">
             <?php
-            foreach($languages as $l) {
-                $link = '<li class="nav-item"><a href="'.$l['url'].'" class="nav-lang nav-link d-block text-uppercase">'.icl_disp_language($l['code']).'</a></li>';
+            foreach ($languages as $l) {
+                $link = '<li class="nav-item"><a href="' . $l['url'] . '" class="nav-lang nav-link d-block text-uppercase">' . icl_disp_language($l['code']) . '</a></li>';
 
                 if (!$l['active']) {
                     echo $link;
@@ -53,7 +57,7 @@ function language_picker($isMobile = false) {
             }
             ?>
         </ul>
-        <?php
+    <?php
     }
 
     unset($languages);
@@ -64,7 +68,8 @@ function language_picker($isMobile = false) {
  * @param  array/string  $classes Array or string of classes to be joined
  * @return string                 String of classes joined together
  */
-function get_component_classes($classes = []) {
+function get_component_classes($classes = [])
+{
     if (!empty($classes) && is_string($classes)) {
         $classes = [$classes];
     }
@@ -86,7 +91,8 @@ function get_component_classes($classes = []) {
  * Adds custom logo to login page
  * @return void
  */
-function customize_login_page_logo() { ?>
+function customize_login_page_logo()
+{ ?>
     <style type="text/css">
         #login h1 a,
         .login h1 a {
@@ -104,8 +110,9 @@ add_action('login_enqueue_scripts', 'customize_login_page_logo');
  * @param  array $classes Default WPML body classes
  * @return array          Modified WPML body classes
  */
-function wpml_body_class($classes) {
-    if(defined('ICL_LANGUAGE_CODE')) {
+function wpml_body_class($classes)
+{
+    if (defined('ICL_LANGUAGE_CODE')) {
         $classes[] = 'lang-' . ICL_LANGUAGE_CODE;
     }
 
@@ -119,16 +126,17 @@ add_filter('body_class', 'wpml_body_class');
  * @param  boolean    $object   By default post id is returned. If set to true object is returned
  * @return int/object           Post ID or object is returned
  */
-function get_template_post($template, $object = false) {
+function get_template_post($template, $object = false)
+{
     $args = [
-                'post_type' => 'page',
-                'meta_key' => '_wp_page_template',
-                'meta_value' => $template,
-                'meta_compare' => '=='
-            ];
+        'post_type' => 'page',
+        'meta_key' => '_wp_page_template',
+        'meta_value' => $template,
+        'meta_compare' => '=='
+    ];
     $template_query = null;
     $template_query = new WP_Query();
-    $template_query->query( $args );
+    $template_query->query($args);
     $posts = $template_query->get_posts();
     $post = false;
     $return = null;
@@ -145,7 +153,8 @@ function get_template_post($template, $object = false) {
         }
     }
 
-    $template_query = null; wp_reset_postdata();
+    $template_query = null;
+    wp_reset_postdata();
 
     return $return;
 }
@@ -155,7 +164,8 @@ function get_template_post($template, $object = false) {
  * @param  string $string Input: This is My Title
  * @return string         Output: this-is-my-title
  */
-function to_slug($string){
+function to_slug($string)
+{
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
 }
 
@@ -163,7 +173,8 @@ function to_slug($string){
 /**
  * Make a URL relative
  */
-function root_relative_url($input) {
+function root_relative_url($input)
+{
     $url = parse_url($input);
     if (!isset($url['host']) || !isset($url['path'])) {
         return $input;
@@ -187,7 +198,8 @@ function root_relative_url($input) {
 /**
  * Compare URL against relative URL
  */
-function theme_url_compare($url, $rel) {
+function theme_url_compare($url, $rel)
+{
     $url = trailingslashit($url);
     $rel = trailingslashit($rel);
 
@@ -197,7 +209,8 @@ function theme_url_compare($url, $rel) {
 /**
  * Hooks a single callback to multiple tags
  */
-function add_filters($tags, $function, $priority = 10, $accepted_args = 1) {
+function add_filters($tags, $function, $priority = 10, $accepted_args = 1)
+{
     foreach ((array) $tags as $tag) {
         add_filter($tag, $function, $priority, $accepted_args);
     }
@@ -206,7 +219,8 @@ function add_filters($tags, $function, $priority = 10, $accepted_args = 1) {
 /**
  * Display error alerts in admin panel
  */
-function alerts($errors, $capability = 'activate_plugins') {
+function alerts($errors, $capability = 'activate_plugins')
+{
     if (!did_action('init')) {
         return add_action('init', function () use ($errors, $capability) {
             alerts($errors, $capability);
@@ -225,16 +239,18 @@ function alerts($errors, $capability = 'activate_plugins') {
 /**
  * Remove comments from admin
  */
-function remove_unwanted_wp_menus() {
+function remove_unwanted_wp_menus()
+{
     remove_menu_page('edit-comments.php');
 }
-add_action( 'admin_menu', 'remove_unwanted_wp_menus' );
+add_action('admin_menu', 'remove_unwanted_wp_menus');
 
 /**
  * Thumb upscale
  */
-function thumbnail_upscale($default, $orig_w, $orig_h, $new_w, $new_h, $crop) {
-    if ( !$crop ) return null;
+function thumbnail_upscale($default, $orig_w, $orig_h, $new_w, $new_h, $crop)
+{
+    if (!$crop) return null;
 
     $aspect_ratio = $orig_w / $orig_h;
     $size_ratio = max($new_w / $orig_w, $new_h / $orig_h);
@@ -245,23 +261,24 @@ function thumbnail_upscale($default, $orig_w, $orig_h, $new_w, $new_h, $crop) {
     $s_x = floor(($orig_w - $crop_w) / 2);
     $s_y = floor(($orig_h - $crop_h) / 2);
 
-    return array( 0, 0, (int) $s_x, (int) $s_y, (int) $new_w, (int) $new_h, (int) $crop_w, (int) $crop_h );
+    return array(0, 0, (int) $s_x, (int) $s_y, (int) $new_w, (int) $new_h, (int) $crop_w, (int) $crop_h);
 }
-add_filter( 'image_resize_dimensions', 'thumbnail_upscale', 10, 6 );
+add_filter('image_resize_dimensions', 'thumbnail_upscale', 10, 6);
 
 /**
  * List child pages
  */
-function wpb_list_child_pages() {
+function wpb_list_child_pages()
+{
     global $post;
 
-    if ( is_page() && $post->post_parent ) {
-        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+    if (is_page() && $post->post_parent) {
+        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0');
     } else {
-        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0');
     }
 
-    if ( $childpages ) {
+    if ($childpages) {
         $string = '<ul>' . $childpages . '</ul>';
     }
 
@@ -269,14 +286,16 @@ function wpb_list_child_pages() {
 }
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-function get_app_url() {
+function get_app_url()
+{
     return 'https://pension.tuleva.ee/login?language=' . ICL_LANGUAGE_CODE;
 }
 
 /*
  * Get Tuleva member count
  */
-function get_member_count() {
+function get_member_count()
+{
     stream_context_set_default(
         array(
             'http' => array(
@@ -293,11 +312,13 @@ function get_member_count() {
     return $memberCount;
 }
 
-function is_cookie_consent() {
+function is_cookie_consent()
+{
     return !empty($_COOKIE['cookie-consent']);
 }
 
-function print_funds_js() {
+function print_funds_js()
+{
     $context = stream_context_create(
         array(
             'http' => array(
@@ -310,21 +331,21 @@ function print_funds_js() {
     );
     $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
     $data = json_decode($json, true);
-    $filtered = array_filter($data, function($value, $key) {
+    $filtered = array_filter($data, function ($value, $key) {
         $isActive = $value['status'] === 'ACTIVE';
         $isSecondPillar = $value['pillar'] === 2;
         $isNotTulevaFund = $value['fundManager']['name'] !== 'Tuleva';
 
         return $isActive && $isSecondPillar && $isNotTulevaFund;
     }, ARRAY_FILTER_USE_BOTH);
-    $funds = array_map(function($value) {
+    $funds = array_map(function ($value) {
         return [
-                'fundManagerId' => $value['fundManager']['id'],
-                'name' => $value['name'],
-                'fee' => $value['ongoingChargesFigure']
-            ];
+            'fundManagerId' => $value['fundManager']['id'],
+            'name' => $value['name'],
+            'fee' => $value['ongoingChargesFigure']
+        ];
     }, $filtered);
-    usort($funds, function($a, $b) {
+    usort($funds, function ($a, $b) {
         return strcmp($a['name'], $b['name']);;
     });
 
@@ -333,3 +354,14 @@ function print_funds_js() {
     echo '</script>';
 }
 add_action('wp_footer', 'print_funds_js');
+
+function get_esg_document_url()
+{
+    $esg_document_path = '/wp-content/uploads/2022/05/Principles-for-considering-sustainability-risks.pdf';
+
+    if (ICL_LANGUAGE_CODE == 'et') {
+        $esg_document_path = '/wp-content/uploads/2022/03/Tuleva-jatkusuutlikkusriskidega-arvestamise-poliitika.pdf';
+    }
+
+    return get_site_url() . $esg_document_path;
+}
