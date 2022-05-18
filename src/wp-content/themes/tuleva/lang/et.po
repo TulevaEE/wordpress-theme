@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-05-16 19:24:12+00:00\n"
-"PO-Revision-Date: 2022-05-16 22:26+0300\n"
+"POT-Creation-Date: 2022-05-18 05:05:16+00:00\n"
+"PO-Revision-Date: 2022-05-18 08:12+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -493,57 +493,57 @@ msgid "Consideration of sustainability risks"
 msgstr "Jätkusuutlikkusriskide arvesse võtmine"
 
 #: templates/components/fund-bonds-details.php:77
-#: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:77
+#: templates/components/fund-stocks-details.php:80
+#: templates/components/fund-third-details.php:80
 msgid "Reports"
 msgstr "Aruanded"
 
 #: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-stocks-details.php:80
-#: templates/components/fund-third-details.php:80
+#: templates/components/fund-stocks-details.php:83
+#: templates/components/fund-third-details.php:83
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:84
-#: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:84
+#: templates/components/fund-stocks-details.php:87
+#: templates/components/fund-third-details.php:87
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:87
-#: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-stocks-details.php:90
+#: templates/components/fund-third-details.php:90
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-details.php:91
-#: templates/components/fund-stocks-details.php:91
-#: templates/components/fund-third-details.php:91
+#: templates/components/fund-stocks-details.php:94
+#: templates/components/fund-third-details.php:94
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
 #: templates/components/fund-bonds-details.php:93
-#: templates/components/fund-stocks-details.php:93
-#: templates/components/fund-third-details.php:93
+#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-third-details.php:96
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
 #: templates/components/fund-bonds-details.php:94
-#: templates/components/fund-stocks-details.php:94
-#: templates/components/fund-third-details.php:94
+#: templates/components/fund-stocks-details.php:97
+#: templates/components/fund-third-details.php:97
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
 
 #: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-third-details.php:100
 msgid ""
 "Share of investments with increased negative impact in the equity portfolio"
 msgstr "Kõrgendatud negatiivse mõjuga investeeringute osakaal aktsiaportfellis"
 
 #: templates/components/fund-bonds-details.php:99
-#: templates/components/fund-stocks-details.php:99
-#: templates/components/fund-third-details.php:99
+#: templates/components/fund-stocks-details.php:102
+#: templates/components/fund-third-details.php:102
 msgid ""
 "Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%"
 "%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); "
@@ -898,6 +898,11 @@ msgstr " "
 #: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
+
+#: templates/components/fund-stocks-details.php:76
+#: templates/components/fund-third-details.php:76
+msgid "Fund documents from %s (in Estonian)"
+msgstr "Fondi dokumendid alates %s"
 
 #: templates/components/fund-stocks-header.php:6
 #: templates/components/fund-third-header.php:6

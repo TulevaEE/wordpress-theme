@@ -72,6 +72,9 @@
                             <li>
                                 <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Consideration of sustainability risks', TEXT_DOMAIN) ?></a>
                             </li>
+                            <li>
+                                <a href="<?php echo get_site_url(); ?>/uudised/tuleva-esg-pohimotted/" target="_blank"><?php echo sprintf(__('Fund documents from %s (in Estonian)', TEXT_DOMAIN), '01.09.2022') ?></a>
+                            </li>
                         </ul>
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
