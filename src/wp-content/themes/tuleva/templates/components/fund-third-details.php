@@ -82,7 +82,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/05/TUV100-investeeringute-aruanne-29.04.2022.pdf" target="_blank">04.22</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/06/TUV100-investeeringute-aruanne-31.05.2022.pdf" target="_blank">05.22</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
