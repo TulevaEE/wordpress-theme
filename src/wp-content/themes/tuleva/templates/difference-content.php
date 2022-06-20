@@ -39,8 +39,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingTwo" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo">Meie usume nohikuid.</button>
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Meie usume nohikuid.</button>
                         <p>Me usume, et pangad usuvad tegelikult ka. Lihtsalt nemad peavad omanikele kasumit teenima.</p>
                     </div>
                     <div id="collapseTwo" class="collapse mt-2 mb-5" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -48,19 +47,18 @@
 
                         <a>Pole kokkusattumus, et meie pankade pensionifondid paistavad silma nii kõrgete tasude kui ka kehvade tulemustega. Näiteks 2016. aastal võtsid pankade fondivalitsejad igast eurost, mis Eesti inimeste raha turgudel teenis, <a href="https://tuleva.ee/analuusid/fondivalitsejate-aastaaruanded-2016/" target="_blank">40 senti endale</a>.</p>
 
-                        <p>Pankade omanikele kõrged tasud meeldivad. Mida rohkem sa maksad, seda suurem on fondivalitseja kasum.</p>
+                            <p>Pankade omanikele kõrged tasud meeldivad. Mida rohkem sa maksad, seda suurem on fondivalitseja kasum.</p>
 
-                        <p><span class="text-highlight text-bold">Tuleval on teine eesmärk</span>. Meie, pensionikogujad, tegime ise oma fondid, et saada igast täna säästetud eurost pensionile jõudmise ajaks rohkem kasu.</p>
+                            <p><span class="text-highlight text-bold">Tuleval on teine eesmärk</span>. Meie, pensionikogujad, tegime ise oma fondid, et saada igast täna säästetud eurost pensionile jõudmise ajaks rohkem kasu.</p>
 
-                        <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-oecd-comparison.png" class="img-fluid" alt="Eestis on pensionifondide tasud ühed OECD kõrgemad ja tootlus kõige madalam" />
-                        <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Postimees, <a href="https://majandus24.postimees.ee/4292311/eesti-pensionifondid-endiselt-oecd-kehvimad" target="_blank">Eesti pensionifondid endiselt OECD kehvimad</a>.</cite>
+                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-oecd-comparison.png" class="img-fluid" alt="Eestis on pensionifondide tasud ühed OECD kõrgemad ja tootlus kõige madalam" />
+                            <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Postimees, <a href="https://majandus24.postimees.ee/4292311/eesti-pensionifondid-endiselt-oecd-kehvimad" target="_blank">Eesti pensionifondid endiselt OECD kehvimad</a>.</cite>
                     </div>
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingThree" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
+                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Müük, turundus ja panga kasum.
                         </button>
                         <p>Enamus inimeste rahast võetud valitsemistasudest kulubki pankade fondivalitsejatel just nendele asjadele.</p>
@@ -76,8 +74,7 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFour" class="principle__item"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-                            aria-controls="collapseFour">
+                    <div id="headingFour" class="principle__item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         <button class="btn btn-link btn-block principle__item--link">
                             Tulevas jälgime kulusid kullipilguga.
                         </button>
@@ -126,7 +123,7 @@
                 <div class="text-center emphasis-box p-4 p-md-5">
                     <h4 class="mb-4">5 soovitust — kuidas pensionifondi valida?</h4>
                     <a class="btn btn-primary btn-lg d-block d-md-inline-block mb-4 mb-md-0 mr-md-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Vanus 18-55</a>
-                    <a class="btn btn-primary btn-lg d-block d-md-inline-block" href="https://tuleva.ee/valmistu-pensioniks-targalt/">Vanus üle 55</a>
+                    <a class="btn btn-primary btn-lg d-block d-md-inline-block" href="https://tuleva.ee/oluline/kuidas-kasutada-pensionivara/">Vanus üle 55</a>
                 </div>
             </div>
         </div>
