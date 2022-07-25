@@ -1,6 +1,6 @@
 /* global LANGCODE, funds */
 
-var averageFundFee = 0.0087;
+var averageFundFee = 1.01 / 100;
 
 var format = function (num) {
     if (!LANGCODE) {

@@ -323,9 +323,9 @@ function print_funds_js()
         array(
             'http' => array(
                 'method' => 'GET',
-                'header' => array(
-                    "Authorization: Bearer tucCfeciBZrJZFC6bYPfxfgGOSs"
-                )
+                // 'header' => array(
+                //     "Authorization: Bearer tucCfeciBZrJZFC6bYPfxfgGOSs"
+                // )
             )
         )
     );
