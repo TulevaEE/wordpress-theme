@@ -75,10 +75,7 @@ get_template_part('templates/components/fund-calculator');
 $context = stream_context_create(
     array(
         'http' => array(
-            'method' => 'GET',
-            'header' => array(
-                "Authorization: Bearer tucCfeciBZrJZFC6bYPfxfgGOSs"
-            )
+            'method' => 'GET'
         )
     )
 );
