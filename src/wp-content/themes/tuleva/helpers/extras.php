@@ -299,10 +299,7 @@ function get_member_count()
     stream_context_set_default(
         array(
             'http' => array(
-                'method' => 'HEAD',
-                'header' => array(
-                    "Authorization: Bearer tucCfeciBZrJZFC6bYPfxfgGOSs"
-                )
+                'method' => 'HEAD'
             )
         )
     );
@@ -323,9 +320,6 @@ function print_funds_js()
         array(
             'http' => array(
                 'method' => 'GET',
-                'header' => array(
-                    "Authorization: Bearer tucCfeciBZrJZFC6bYPfxfgGOSs"
-                )
             )
         )
     );
@@ -340,13 +334,12 @@ function print_funds_js()
     }, ARRAY_FILTER_USE_BOTH);
     $funds = array_map(function ($value) {
         return [
-            'fundManagerId' => $value['fundManager']['id'],
             'name' => $value['name'],
             'fee' => $value['ongoingChargesFigure']
         ];
     }, $filtered);
     usort($funds, function ($a, $b) {
-        return strcmp($a['name'], $b['name']);;
+        return strcmp($a['name'], $b['name']);
     });
 
     echo '<script type="text/javascript">';
