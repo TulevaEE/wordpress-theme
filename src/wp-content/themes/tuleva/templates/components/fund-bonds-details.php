@@ -97,13 +97,13 @@
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
                             <?php echo sprintf(
                                 __('Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)', TEXT_DOMAIN),
-                                '0.00',
-                                '0.12',
-                                '0.00',
-                                '0.32',
-                                '0.52',
-                                '0.00',
-                                '0.00'
+                                '0.16', // Controversial Weapons
+                                '0.06', // Nuclear Weapons
+                                '0.00', // Civilian Firearms
+                                '0.28', // Tobacco
+                                '1.14', // UN Global Compact Violators
+                                '0.37', // Thermal Coal
+                                '0.00'  // Oil Sands
                             ); ?>
                         </div>
                     </div>
