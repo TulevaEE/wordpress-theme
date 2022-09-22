@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Kristo Käärmann</h4>
-                                    <p><?php _e("Kristo Käärmann is a co-founder of Transferwise. Having witnessed inefficiency in the financial sector, Kristo is helping to lead a revolution in the way money is moved, making currency exchange easier, clearer and more transparent all around the world.", TEXT_DOMAIN) ?></p>
+                                    <p><?php _e("Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in the financial sector, Kristo is helping to lead a revolution in the way money is moved, making currency exchange easier, clearer and more transparent all around the world.", TEXT_DOMAIN) ?></p>
                                 </div>
                             </div>
 
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Taavet Hinrikus</h4>
-                                    <p><?php _e("Taavet Hinrikus is a co-founder of Transferwise. Taavet believes in simple, clear and transparent solutions and is helping to make money transfers and currency exchange easier and more convenient for everyone.", TEXT_DOMAIN) ?></p>
+                                    <p><?php _e("Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear and transparent solutions and is helping to make money transfers and currency exchange easier and more convenient for everyone.", TEXT_DOMAIN) ?></p>
                                 </div>
                             </div>
 

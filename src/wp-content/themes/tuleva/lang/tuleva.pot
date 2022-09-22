@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-09-22 06:36:38+00:00\n"
+"POT-Creation-Date: 2022-09-22 06:41:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -942,9 +942,9 @@ msgstr ""
 
 #: templates/components/modal-founders.php:64
 msgid ""
-"Kristo Käärmann is a co-founder of Transferwise. Having witnessed "
-"inefficiency in the financial sector, Kristo is helping to lead a revolution "
-"in the way money is moved, making currency exchange easier, clearer and more "
+"Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in "
+"the financial sector, Kristo is helping to lead a revolution in the way "
+"money is moved, making currency exchange easier, clearer and more "
 "transparent all around the world."
 msgstr ""
 
@@ -990,8 +990,8 @@ msgstr ""
 
 #: templates/components/modal-founders.php:134
 msgid ""
-"Taavet Hinrikus is a co-founder of Transferwise. Taavet believes in simple, "
-"clear and transparent solutions and is helping to make money transfers and "
+"Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear "
+"and transparent solutions and is helping to make money transfers and "
 "currency exchange easier and more convenient for everyone."
 msgstr ""
 
