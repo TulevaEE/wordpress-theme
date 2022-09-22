@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Heikko Mäe</h4>
-                                    <p><?php _e("Heikko Mäe is an auditor with a passion for getting things done in a meticulous manner. He is now putting his experience and knowledge to work for Tuleva as an internal auditor.", TEXT_DOMAIN) ?></p>
+                                    <p><?php _e("Heikko Mäe is an auditor with a passion for getting things done in a meticulous manner. Heikko shared his knowledge and experience in creating Tuleva funds", TEXT_DOMAIN) ?></p>
                                 </div>
                             </div>
 
