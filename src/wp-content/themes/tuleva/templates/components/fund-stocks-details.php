@@ -79,7 +79,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/TULAPF-investeeringute-aruanne-310822.pdf" target="_blank">08.22</a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/10/TULAPF-investeeringute-aruanne-300922.pdf" target="_blank">09.22</a>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/77/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
@@ -91,19 +91,19 @@
                         <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
-                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 146) ?>
+                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 110) ?>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
                             <?php echo sprintf(
                                 __('Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)', TEXT_DOMAIN),
-                                '0.37', // Controversial Weapons
-                                '0.34', // Nuclear Weapons
-                                '0.10', // Civilian Firearms
-                                '0.69', // Tobacco
-                                '1.26', // UN Global Compact Violators
-                                '0.15', // Thermal Coal
-                                '0.27'  // Oil Sands
+                                '0.00', // Controversial Weapons
+                                '0.00', // Nuclear Weapons
+                                '0.00', // Civilian Firearms
+                                '0.00', // Tobacco
+                                '0.00', // UN Global Compact Violators
+                                '0.00', // Thermal Coal
+                                '0.00'  // Oil Sands
                             ); ?>
                         </div>
 
