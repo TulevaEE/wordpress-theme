@@ -1,17 +1,17 @@
 var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     gulpif = require('gulp-if'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     cleanCSS = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
-    util = require('gulp-util'),
+    log = require('fancy-log'),
     exit = require('gulp-exit'),
     cssDir = 'css',
     sassSrc = 'scss/*.scss',
     error = function(err) {
         if (err) {
-            util.log(err.toString());
+            log(err.toString());
         }
 
         if (this.emit) {
@@ -20,13 +20,13 @@ var gulp = require('gulp'),
     },
     logFinishedTask = function(name) {
         return function() {
-            util.log(name + ' task finished.');
+            log(name + ' task finished.');
         };
     },
     buildCss = function(isCompressed) {
         return gulp.src(sassSrc)
             .pipe(gulpif(!isCompressed, sourcemaps.init()))
-            .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'normal' })
+            .pipe(sass({ outputStyle: isCompressed ? 'compressed' : 'expanded' })
                             .on('end', logFinishedTask('SASS'))
                             .on('error', error))
             .pipe(gulpif(isCompressed, cleanCSS({level: 2})
@@ -54,7 +54,7 @@ gulp.task('default', function() {
         return buildCss(false);
     })
     .on('change', function(path) {
-        util.log('Changed: ' + path);
+        log('Changed: ' + path);
     })
     .on('error', error);
 });
