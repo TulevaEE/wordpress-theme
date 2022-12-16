@@ -21,7 +21,7 @@
                         </div>
                     </td>
                     <td class="pb-3 text-left pl-2">
-                        <h5 class="mb-0 text-normal">
+                        <h5 class="mb-0 text-normal text-muted">
                             <span class="d-none d-md-inline-block"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             <span class="d-md-none">&euro;</span>
                         </h5>
@@ -42,7 +42,7 @@
                         </div>
                     </td>
                     <td class="pb-3 text-left pl-2">
-                        <h5 class="mb-0 text-normal">
+                        <h5 class="mb-0 text-normal text-muted">
                             <span class="d-none d-md-inline-block"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             <span class="d-md-none">&euro;</span>
                         </h5>
@@ -63,7 +63,7 @@
                         </div>
                     </td>
                     <td class="pb-3 text-left pl-2">
-                        <h5 class="mb-0 text-normal">
+                        <h5 class="mb-0 text-normal text-muted">
                             <span class="d-none d-md-inline-block"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             <span class="d-md-none">&euro;</span>
                         </h5>
@@ -84,7 +84,7 @@
                         </div>
                     </td>
                     <td class="pb-3 text-left pl-2">
-                        <h5 class="mb-0 text-normal">
+                        <h5 class="mb-0 text-normal text-muted">
                             <?php _e('kids', TEXT_DOMAIN); ?>
                         </h5>
                     </td>
