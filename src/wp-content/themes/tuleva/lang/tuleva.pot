@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-09-22 06:41:43+00:00\n"
+"POT-Creation-Date: 2022-12-16 06:24:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -152,8 +152,8 @@ msgstr ""
 
 #: templates/components/founder-stories.php:84
 msgid ""
-"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary"
-"\">See all founding members</a>"
+"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
+"primary\">See all founding members</a>"
 msgstr ""
 
 #: templates/components/front-header.php:6
@@ -564,8 +564,8 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:15
 msgid ""
-"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" class="
-"\"text-navy\">Tuleva World Stocks Pension Fund</a>"
+"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:25
@@ -607,8 +607,8 @@ msgstr ""
 
 #: templates/components/fund-choosing.php:45
 msgid ""
-"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" class="
-"\"text-navy\">Tuleva World Bonds Pension Fund</a>"
+"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
 
 #: templates/components/fund-choosing.php:57
@@ -907,9 +907,9 @@ msgstr ""
 #: templates/components/modal-calculator.php:38
 msgid ""
 "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
-"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
-"\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed calculation in "
-"Google Docs</a>"
+"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
+"usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed "
+"calculation in Google Docs</a>"
 msgstr ""
 
 #: templates/components/modal-founders.php:24
@@ -1295,9 +1295,9 @@ msgstr ""
 #: templates/components/modal-question-vote.php:18
 msgid ""
 "Tuleva team listens very carefully to our members and uses their ideas for "
-"making Tuleva better. We are only starting and believe that <span class="
-"\"text-highlight text-bold\">the power of thousands of smart people</span> "
-"can be used for increasing our common good."
+"making Tuleva better. We are only starting and believe that <span "
+"class=\"text-highlight text-bold\">the power of thousands of smart people</"
+"span> can be used for increasing our common good."
 msgstr ""
 
 #: templates/components/mutual-header.php:5
@@ -1505,24 +1505,72 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:5
-msgid "Your monthly gross income"
+#: templates/components/third-pillar-calculator.php:12
+msgid "<a href=\"#modal-gross_income\">2022 gross income</a>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:8
-msgid "euros"
+#: templates/components/third-pillar-calculator.php:23
+#: templates/components/third-pillar-calculator.php:43
+#: templates/components/third-pillar-calculator.php:63
+msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:14
-msgid "You can contribute monthly to III pillar"
+#: templates/components/third-pillar-calculator.php:29
+msgid "2022 gross income on which income tax is not refundable"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:20
-msgid "You can contribute annually to III pillar"
+#: templates/components/third-pillar-calculator.php:31
+msgid ""
+"Dividends received from an Estonian company, from which income tax has not "
+"been withheld as a private person; income from abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:27
+#: templates/components/third-pillar-calculator.php:49
+msgid "Other tax reliefs"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:51
+msgid ""
+"Home loan interest up to €300, gifts and donations, education costs, "
+"including kindergarten fees"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:69
+msgid "Number of children"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:71
+msgid ""
+"One parent of children under the age of 18 can deduct additional tax-free "
+"income"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:83
+msgid "kids"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:90
+msgid "This year it is reasonable to contribute to III pillar"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:92
+msgid ""
+"Contributions to the III pillar are subject to an income tax discount of up "
+"to 15% of taxable income in Estonia, but not more than 6000 euros per year"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:106
 msgid "Your gain from income tax"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:108
+msgid ""
+"The declaration of income for 2022 will start on February 15, 2023. Remember "
+"that you cannot get more income tax back than you paid this year."
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:122
+msgid "Make a III pillar payment"
 msgstr ""
 
 #: templates/footer/beacon-toggle-help.php:3
@@ -1602,8 +1650,8 @@ msgstr ""
 
 #: templates/fund-content-old.php:32 templates/fund-content.php:32
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
-"\">Choose Tuleva pension fund</a>"
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
+"lg\">Choose Tuleva pension fund</a>"
 msgstr ""
 
 #: templates/header/main-sticky.php:7 templates/header/main.php:7
