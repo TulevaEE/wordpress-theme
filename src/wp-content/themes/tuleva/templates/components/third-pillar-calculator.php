@@ -6,7 +6,7 @@
 <div class="card calculator shadow-md">
     <div class="card-body p-4 text-center third-pillar-calculator">
         <form class="pb-2">
-            <table class="text-navy w-100">
+            <table class="w-100">
                 <tr>
                     <td class="text-right pr-2 pb-3">
                         <strong>
@@ -99,10 +99,10 @@
                         </strong>
                     </td>
                     <td class="text-right pl-3">
-                        <h1 class="calculator__win text-navy" id="yearlyAmount">3240</h1>
+                        <h1 class="calculator__win" id="yearlyAmount">3240</h1>
                     </td>
                     <td class="text-left pl-2">
-                        <h1 class="calculator__win text-navy">&euro;</h1>
+                        <h1 class="calculator__win">&euro;</h1>
                     </td>
                 </tr>
                 <tr>

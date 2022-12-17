@@ -25,7 +25,7 @@
                     <?php get_template_part('templates/components/third-pillar-calculator'); ?>
                     <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
                         <div class="my-3 text-medium text-center">
-                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>">
+                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>" target="_blank">
                                 <?php the_sub_field('below_calculator_link_text'); ?>
                             </a>
                         </div>
