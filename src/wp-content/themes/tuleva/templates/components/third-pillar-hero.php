@@ -11,7 +11,7 @@
                                 <?php if (get_sub_field('source_link_url')) { ?>
                                     <a href="<?php the_sub_field('source_link_url'); ?>" class="text-navy text-bold">
                                 <?php } ?>
-                                    <u><?php the_sub_field('source'); ?></u><?php
+                                    <?php the_sub_field('source'); ?><?php
                                         if (get_sub_field('source_link_url')) { ?></a><?php } ?>, <?php the_sub_field('source_description'); ?>
                             </p>
                         <?php } ?>
