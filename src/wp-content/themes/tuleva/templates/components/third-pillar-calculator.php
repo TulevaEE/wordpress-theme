@@ -126,7 +126,11 @@
                class="btn btn-primary btn-lg btn-block mt-3">
                 <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
             </a>
-
+            <div class="mt-2">
+                <small class="text-secondary">
+                    <?php _e('To make a payment log into your pension account using your ID-card, Mobile-ID or Smart-ID.', TEXT_DOMAIN); ?>
+                </small>
+            </div>
         </form>
     </div>
 </div>

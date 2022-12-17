@@ -77,12 +77,6 @@ input[type=number] {
     background-image: url('../img/icon-plussign.svg');
 }
 
-a:hover:not(.btn),
-a:focus:not(.btn) {
-    color: $brand-primary;
-    text-decoration: underline;
-}
-
 .control-code {
     font-size: 5em;
     font-weight: bold;

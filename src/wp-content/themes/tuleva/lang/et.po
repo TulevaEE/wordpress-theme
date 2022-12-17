@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-12-16 06:24:21+00:00\n"
-"PO-Revision-Date: 2022-12-16 14:24+0800\n"
+"POT-Creation-Date: 2022-12-17 07:02:35+00:00\n"
+"PO-Revision-Date: 2022-12-17 15:08+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1844,21 +1844,21 @@ msgstr "Liikmeks astumiseks logi sisse oma pensionikontole"
 msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
-#: templates/components/third-pillar-calculator.php:12
+#: templates/components/third-pillar-calculator.php:13
 msgid "<a href=\"#modal-gross_income\">2022 gross income</a>"
 msgstr "<a href=\"#modal-brutotulu\">2022 brutotulu kokku</a>"
 
-#: templates/components/third-pillar-calculator.php:23
-#: templates/components/third-pillar-calculator.php:43
-#: templates/components/third-pillar-calculator.php:63
+#: templates/components/third-pillar-calculator.php:25
+#: templates/components/third-pillar-calculator.php:46
+#: templates/components/third-pillar-calculator.php:67
 msgid "&euro;/year"
 msgstr "&euro;&nbsp;aastas"
 
-#: templates/components/third-pillar-calculator.php:29
+#: templates/components/third-pillar-calculator.php:32
 msgid "2022 gross income on which income tax is not refundable"
 msgstr "2022 brutotulu, mille pealt ei saa tulumaksu tagasi"
 
-#: templates/components/third-pillar-calculator.php:31
+#: templates/components/third-pillar-calculator.php:34
 msgid ""
 "Dividends received from an Estonian company, from which income tax has not "
 "been withheld as a private person; income from abroad."
@@ -1866,11 +1866,11 @@ msgstr ""
 "Eesti äriühingult saadud dividendid, millelt pole eraisikuna tulumaksu kinni "
 "peetud; välismaalt saadud tulud."
 
-#: templates/components/third-pillar-calculator.php:49
+#: templates/components/third-pillar-calculator.php:53
 msgid "Other tax reliefs"
 msgstr "Muud maksuvabastused"
 
-#: templates/components/third-pillar-calculator.php:51
+#: templates/components/third-pillar-calculator.php:55
 msgid ""
 "Home loan interest up to €300, gifts and donations, education costs, "
 "including kindergarten fees"
@@ -1878,26 +1878,26 @@ msgstr ""
 "Eluasemelaenu intressid kuni 300€; kingitused ja annetused; koolituskulud, "
 "sh lasteaiatasud"
 
-#: templates/components/third-pillar-calculator.php:69
+#: templates/components/third-pillar-calculator.php:74
 msgid "Number of children"
 msgstr "Laste arv"
 
-#: templates/components/third-pillar-calculator.php:71
+#: templates/components/third-pillar-calculator.php:76
 msgid ""
 "One parent of children under the age of 18 can deduct additional tax-free "
 "income"
 msgstr ""
 "Alla 18a laste üks vanem võib tulust maha arvata täiendava maksuvaba tulu"
 
-#: templates/components/third-pillar-calculator.php:83
+#: templates/components/third-pillar-calculator.php:88
 msgid "kids"
 msgstr "last"
 
-#: templates/components/third-pillar-calculator.php:90
+#: templates/components/third-pillar-calculator.php:95
 msgid "This year it is reasonable to contribute to III pillar"
 msgstr "Sel aastal on mõistlik III sambasse panna"
 
-#: templates/components/third-pillar-calculator.php:92
+#: templates/components/third-pillar-calculator.php:97
 msgid ""
 "Contributions to the III pillar are subject to an income tax discount of up "
 "to 15% of taxable income in Estonia, but not more than 6000 euros per year"
@@ -1905,11 +1905,11 @@ msgstr ""
 "III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis "
 "maksustatavast tulust, kuid mitte rohkem kui 6000 eurot aastas"
 
-#: templates/components/third-pillar-calculator.php:106
+#: templates/components/third-pillar-calculator.php:111
 msgid "Your gain from income tax"
 msgstr "Sinu tulumaksuvõit"
 
-#: templates/components/third-pillar-calculator.php:108
+#: templates/components/third-pillar-calculator.php:113
 msgid ""
 "The declaration of income for 2022 will start on February 15, 2023. Remember "
 "that you cannot get more income tax back than you paid this year."
@@ -1917,9 +1917,17 @@ msgstr ""
 "2022 aasta tulude deklareerimine algab 15. veebruaril 2023. Pea meeles, et "
 "sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
 
-#: templates/components/third-pillar-calculator.php:122
+#: templates/components/third-pillar-calculator.php:127
 msgid "Make a III pillar payment"
 msgstr "Tee III samba sissemakse"
+
+#: templates/components/third-pillar-calculator.php:131
+msgid ""
+"To make a payment log into your pension account using your ID-card, Mobile-"
+"ID or Smart-ID."
+msgstr ""
+"Sissemakse tegemiseks või kogumise alustamiseks sisene oma pensionikontole "
+"ID-kaardi, Mobiil-ID või Smart-ID abil."
 
 #: templates/footer/beacon-toggle-help.php:3
 msgid "I have a question"

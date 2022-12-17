@@ -1,10 +1,10 @@
-# Copyright (C) 2022 
+# Copyright (C) 2022
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-12-16 06:24:21+00:00\n"
+"POT-Creation-Date: 2022-12-17 07:02:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1505,72 +1505,78 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:12
+#: templates/components/third-pillar-calculator.php:13
 msgid "<a href=\"#modal-gross_income\">2022 gross income</a>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:23
-#: templates/components/third-pillar-calculator.php:43
-#: templates/components/third-pillar-calculator.php:63
+#: templates/components/third-pillar-calculator.php:25
+#: templates/components/third-pillar-calculator.php:46
+#: templates/components/third-pillar-calculator.php:67
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:29
+#: templates/components/third-pillar-calculator.php:32
 msgid "2022 gross income on which income tax is not refundable"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:31
+#: templates/components/third-pillar-calculator.php:34
 msgid ""
 "Dividends received from an Estonian company, from which income tax has not "
 "been withheld as a private person; income from abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:49
+#: templates/components/third-pillar-calculator.php:53
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:51
+#: templates/components/third-pillar-calculator.php:55
 msgid ""
 "Home loan interest up to €300, gifts and donations, education costs, "
 "including kindergarten fees"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:69
+#: templates/components/third-pillar-calculator.php:74
 msgid "Number of children"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:71
+#: templates/components/third-pillar-calculator.php:76
 msgid ""
 "One parent of children under the age of 18 can deduct additional tax-free "
 "income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:83
+#: templates/components/third-pillar-calculator.php:88
 msgid "kids"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:90
+#: templates/components/third-pillar-calculator.php:95
 msgid "This year it is reasonable to contribute to III pillar"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:92
+#: templates/components/third-pillar-calculator.php:97
 msgid ""
 "Contributions to the III pillar are subject to an income tax discount of up "
 "to 15% of taxable income in Estonia, but not more than 6000 euros per year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:106
+#: templates/components/third-pillar-calculator.php:111
 msgid "Your gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:108
+#: templates/components/third-pillar-calculator.php:113
 msgid ""
 "The declaration of income for 2022 will start on February 15, 2023. Remember "
 "that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:122
+#: templates/components/third-pillar-calculator.php:127
 msgid "Make a III pillar payment"
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:131
+msgid ""
+"To make a payment log into your pension account using your ID-card, Mobile-"
+"ID or Smart-ID."
 msgstr ""
 
 #: templates/footer/beacon-toggle-help.php:3
