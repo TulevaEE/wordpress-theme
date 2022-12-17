@@ -123,7 +123,8 @@
                 </tr>
             </table>
             <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>"
-               class="btn btn-primary btn-lg btn-block mt-3">
+               class="btn btn-primary btn-lg btn-block mt-3"
+               target="_blank">
                 <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
             </a>
             <div class="mt-2">
