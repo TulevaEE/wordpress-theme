@@ -24,7 +24,11 @@
                 <div class="col-lg-7">
                     <?php get_template_part('templates/components/third-pillar-calculator'); ?>
                     <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
-                        <a href="<?php the_sub_field('below_calculator_link_url'); ?>" class="btn btn-link btn-block text-medium text-center my-3"><?php the_sub_field('below_calculator_link_text'); ?></a>
+                        <div class="my-3 text-medium text-center">
+                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>">
+                                <?php the_sub_field('below_calculator_link_text'); ?>
+                            </a>
+                        </div>
                     <?php } ?>
                 </div>
             </div>

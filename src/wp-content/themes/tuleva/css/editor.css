@@ -211,8 +211,8 @@ input[type=number] {
   background-image: url("../img/icon-plussign.svg");
 }
 
-a:hover,
-a:focus {
+a:hover:not(.btn),
+a:focus:not(.btn) {
   color: #0081EE;
   text-decoration: underline;
 }
@@ -234,6 +234,18 @@ hr {
 }
 
 .form-control::-webkit-input-placeholder {
+  color: rgba(48, 48, 48, 0.32);
+}
+
+.form-control::-moz-placeholder {
+  color: rgba(48, 48, 48, 0.32);
+}
+
+.form-control:-ms-input-placeholder {
+  color: rgba(48, 48, 48, 0.32);
+}
+
+.form-control::-ms-input-placeholder {
   color: rgba(48, 48, 48, 0.32);
 }
 

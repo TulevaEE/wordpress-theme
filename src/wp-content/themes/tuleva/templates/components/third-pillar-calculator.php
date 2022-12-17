@@ -6,7 +6,7 @@
 <div class="card calculator shadow-md">
     <div class="card-body p-4 text-center third-pillar-calculator">
         <form class="pb-2">
-            <table style="width: 100%;" class="text-navy">
+            <table class="text-navy w-100">
                 <tr>
                     <td class="text-right pr-2 pb-3">
                         <strong>
