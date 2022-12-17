@@ -111,7 +111,11 @@ small,
 }
 
 .text-navy {
-  color: $navy-blue;
+  color: $navy-blue !important;
+}
+
+.text-green {
+    color: $green !important;
 }
 
 .text-blue {

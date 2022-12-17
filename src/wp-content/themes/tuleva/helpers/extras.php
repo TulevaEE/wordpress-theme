@@ -286,9 +286,9 @@ function wpb_list_child_pages()
 }
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-function get_app_url()
+function get_app_url($path)
 {
-    return 'https://pension.tuleva.ee/login?language=' . ICL_LANGUAGE_CODE;
+    return 'https://pension.tuleva.ee' . $path . '?language=' . ICL_LANGUAGE_CODE;
 }
 
 /*

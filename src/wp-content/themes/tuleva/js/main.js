@@ -155,24 +155,48 @@ $(document).ready(function ($) {
             return number;
         },
         calculateThirdPillarSavings = function () {
-            var $calculator = $('.third-pillar-calculator'),
-                wage = $calculator.find('#wage').val(),
-                monthlyAmount = Math.min(0.15 * wage, 500, Math.max(0.964 * wage - 500, 0)),
-                yearlyAmount = monthlyAmount * 12,
-                savingsSum = monthlyAmount * 2.4;
+            var $calculator = $('.third-pillar-calculator');
+            var wage = $calculator.find('#wage').val();
+            var wageDeduction = $calculator.find('#wageDeduction').val();
+            var taxReliefs = $calculator.find('#taxReliefs').val();
+            var kids = $calculator.find('#kids').val();
 
-            $calculator.find('#monthlyAmount').text(format(monthlyAmount) + " €");
-            $calculator.find('#yearlyAmount').text(format(yearlyAmount) + " €");
-            $calculator.find('#savingsSum').text(format(savingsSum) + " €");
+            var wageTotal = Math.max(wage - wageDeduction, 0);
+            var taxFreeWage = (function (wage) {
+                if (wage < 14400) {
+                    return 6000;
+                }
+                if (wage < 25200) {
+                    return 6000 - 6000 / 10800 * (wage - 14400);
+                }
+                return 0;
+            })(wage);
+            var deductions = wageTotal * 0.036;
+            var additionalTaxFreeWage = (function (kids) {
+                var additionalTaxFreeWage = 0;
+                if (kids >= 2) {
+                    additionalTaxFreeWage += 1848;
+                }
+                if (kids >= 3) {
+                    additionalTaxFreeWage += 3048 * (kids - 2);
+                }
+                return additionalTaxFreeWage;
+            })(kids);
+
+            var taxableWage = Math.max(
+                wageTotal - taxFreeWage - deductions - additionalTaxFreeWage - taxReliefs, 0);
+            var yearlyAmount = Math.min(0.15 * wageTotal, 6000, taxableWage);
+            var savingsSum = yearlyAmount * 0.2;
+
+            $calculator.find('#yearlyAmount').text(format(yearlyAmount));
+            $calculator.find('#savingsSum').text(format(savingsSum));
         },
         initThirdPillarCalculator = function () {
-            calculateThirdPillarSavings();
-
-            $('.third-pillar-calculator #wage').on('change', calculateThirdPillarSavings);
-            $('.third-pillar-calculator #wage').on('keyup', calculateThirdPillarSavings);
-            $('.third-pillar-calculator #wage').closest('form').on('submit', function (ev) {
+            var $input = $('.third-pillar-calculator input');
+            $input.on('change', calculateThirdPillarSavings);
+            $input.on('keyup', calculateThirdPillarSavings);
+            $input.closest('form').on('submit', function (ev) {
                 ev.preventDefault();
-
                 return false;
             });
         };

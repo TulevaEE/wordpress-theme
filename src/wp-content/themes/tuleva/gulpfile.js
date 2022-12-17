@@ -33,7 +33,7 @@ var gulp = require('gulp'),
                             .on('end', logFinishedTask('CleanCSS'))
                             .on('error', error)))
             .pipe(autoprefixer({
-                    browsers: ['> 1%', 'last 2 versions', 'safari >= 7'],
+                    overrideBrowserslist: ['> 1%', 'last 2 versions', 'safari >= 7'],
                     cascade: false
                 })
                 .on('end', logFinishedTask('Autoprefixer'))

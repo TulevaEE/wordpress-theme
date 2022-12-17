@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-09-22 06:41:43+00:00\n"
-"PO-Revision-Date: 2022-09-22 09:42+0300\n"
+"POT-Creation-Date: 2022-12-16 06:24:21+00:00\n"
+"PO-Revision-Date: 2022-12-16 14:24+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:25 helpers/acf/init.php:16 helpers/post-types/init.php:9
@@ -175,11 +175,11 @@ msgstr ""
 
 #: templates/components/founder-stories.php:84
 msgid ""
-"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary"
-"\">See all founding members</a>"
+"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
+"primary\">See all founding members</a>"
 msgstr ""
-"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary"
-"\">Vaata kõiki asutajaliikmeid</a>"
+"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
+"primary\">Vaata kõiki asutajaliikmeid</a>"
 
 #: templates/components/front-header.php:6
 msgid "A pension should benefit you. Not your bank."
@@ -611,11 +611,11 @@ msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
 
 #: templates/components/fund-choosing.php:15
 msgid ""
-"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" class="
-"\"text-navy\">Tuleva World Stocks Pension Fund</a>"
+"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
 msgstr ""
-"<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" class="
-"\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
+"<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
 
 #: templates/components/fund-choosing.php:25
 #: templates/components/fund-stocks-header.php:5
@@ -654,9 +654,9 @@ msgid ""
 "expected return</strong></span> over long term and you are not disturbed by "
 "short-term fluctuations of the market"
 msgstr ""
-"Sobib sulle, kui tahad saavutada <span class=\"text-highlight"
-"\"><strong>parimat võimalikku tootlust</strong></span> pika aja vältel ja "
-"sind ei löö rivist välja turu lühiajalised kõikumised"
+"Sobib sulle, kui tahad saavutada <span class=\"text-"
+"highlight\"><strong>parimat võimalikku tootlust</strong></span> pika aja "
+"vältel ja sind ei löö rivist välja turu lühiajalised kõikumised"
 
 #: templates/components/fund-choosing.php:42
 msgid "If you are over 55, the fund better suited for you could be"
@@ -664,8 +664,8 @@ msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
 
 #: templates/components/fund-choosing.php:45
 msgid ""
-"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" class="
-"\"text-navy\">Tuleva World Bonds Pension Fund</a>"
+"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" "
+"class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
 msgstr ""
 "<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" target=\"_blank\" "
 "class=\"text-navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
@@ -1028,14 +1028,14 @@ msgstr "23a"
 #: templates/components/modal-calculator.php:38
 msgid ""
 "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
-"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
-"\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed calculation in "
-"Google Docs</a>"
+"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
+"usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed "
+"calculation in Google Docs</a>"
 msgstr ""
 "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
-"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
-"\" target=\"_blank\" rel=\"noopener noreferrer\">Üksikasjadega arvutus "
-"Google Docsis.</a>"
+"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
+"usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Üksikasjadega "
+"arvutus Google Docsis.</a>"
 
 #: templates/components/modal-founders.php:24
 msgid ""
@@ -1593,14 +1593,14 @@ msgstr ""
 #: templates/components/modal-question-vote.php:18
 msgid ""
 "Tuleva team listens very carefully to our members and uses their ideas for "
-"making Tuleva better. We are only starting and believe that <span class="
-"\"text-highlight text-bold\">the power of thousands of smart people</span> "
-"can be used for increasing our common good."
+"making Tuleva better. We are only starting and believe that <span "
+"class=\"text-highlight text-bold\">the power of thousands of smart people</"
+"span> can be used for increasing our common good."
 msgstr ""
 "Tuleva tiim kuulab liikmete tagasisidet ja ettepanekuid väga tõsiselt. Me "
-"oleme alles alguses ja usume, et <span class=\"text-highlight text-bold"
-"\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles õpime "
-"meie ühise kasu ja Eesti arengu nimel rakendama."
+"oleme alles alguses ja usume, et <span class=\"text-highlight text-"
+"bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles "
+"õpime meie ühise kasu ja Eesti arengu nimel rakendama."
 
 #: templates/components/mutual-header.php:5
 msgid "Join us."
@@ -1844,25 +1844,82 @@ msgstr "Liikmeks astumiseks logi sisse oma pensionikontole"
 msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
-#: templates/components/third-pillar-calculator.php:5
-msgid "Your monthly gross income"
-msgstr "Sisesta oma igakuine brutosissetulek"
+#: templates/components/third-pillar-calculator.php:12
+msgid "<a href=\"#modal-gross_income\">2022 gross income</a>"
+msgstr "<a href=\"#modal-brutotulu\">2022 brutotulu kokku</a>"
 
-#: templates/components/third-pillar-calculator.php:8
-msgid "euros"
-msgstr "eurot"
+#: templates/components/third-pillar-calculator.php:23
+#: templates/components/third-pillar-calculator.php:43
+#: templates/components/third-pillar-calculator.php:63
+msgid "&euro;/year"
+msgstr "&euro;&nbsp;aastas"
 
-#: templates/components/third-pillar-calculator.php:14
-msgid "You can contribute monthly to III pillar"
-msgstr "Kuus saad III sambasse panna"
+#: templates/components/third-pillar-calculator.php:29
+msgid "2022 gross income on which income tax is not refundable"
+msgstr "2022 brutotulu, mille pealt ei saa tulumaksu tagasi"
 
-#: templates/components/third-pillar-calculator.php:20
-msgid "You can contribute annually to III pillar"
-msgstr "Aastas saad III sambasse panna"
+#: templates/components/third-pillar-calculator.php:31
+msgid ""
+"Dividends received from an Estonian company, from which income tax has not "
+"been withheld as a private person; income from abroad."
+msgstr ""
+"Eesti äriühingult saadud dividendid, millelt pole eraisikuna tulumaksu kinni "
+"peetud; välismaalt saadud tulud."
 
-#: templates/components/third-pillar-calculator.php:27
+#: templates/components/third-pillar-calculator.php:49
+msgid "Other tax reliefs"
+msgstr "Muud maksuvabastused"
+
+#: templates/components/third-pillar-calculator.php:51
+msgid ""
+"Home loan interest up to €300, gifts and donations, education costs, "
+"including kindergarten fees"
+msgstr ""
+"Eluasemelaenu intressid kuni 300€; kingitused ja annetused; koolituskulud, "
+"sh lasteaiatasud"
+
+#: templates/components/third-pillar-calculator.php:69
+msgid "Number of children"
+msgstr "Laste arv"
+
+#: templates/components/third-pillar-calculator.php:71
+msgid ""
+"One parent of children under the age of 18 can deduct additional tax-free "
+"income"
+msgstr ""
+"Alla 18a laste üks vanem võib tulust maha arvata täiendava maksuvaba tulu"
+
+#: templates/components/third-pillar-calculator.php:83
+msgid "kids"
+msgstr "last"
+
+#: templates/components/third-pillar-calculator.php:90
+msgid "This year it is reasonable to contribute to III pillar"
+msgstr "Sel aastal on mõistlik III sambasse panna"
+
+#: templates/components/third-pillar-calculator.php:92
+msgid ""
+"Contributions to the III pillar are subject to an income tax discount of up "
+"to 15% of taxable income in Estonia, but not more than 6000 euros per year"
+msgstr ""
+"III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis "
+"maksustatavast tulust, kuid mitte rohkem kui 6000 eurot aastas"
+
+#: templates/components/third-pillar-calculator.php:106
 msgid "Your gain from income tax"
-msgstr "Tulumaksu arvelt võidad"
+msgstr "Sinu tulumaksuvõit"
+
+#: templates/components/third-pillar-calculator.php:108
+msgid ""
+"The declaration of income for 2022 will start on February 15, 2023. Remember "
+"that you cannot get more income tax back than you paid this year."
+msgstr ""
+"2022 aasta tulude deklareerimine algab 15. veebruaril 2023. Pea meeles, et "
+"sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
+
+#: templates/components/third-pillar-calculator.php:122
+msgid "Make a III pillar payment"
+msgstr "Tee III samba sissemakse"
 
 #: templates/footer/beacon-toggle-help.php:3
 msgid "I have a question"
@@ -1949,11 +2006,11 @@ msgstr ""
 
 #: templates/fund-content-old.php:32 templates/fund-content.php:32
 msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
-"\">Choose Tuleva pension fund</a>"
+"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
+"lg\">Choose Tuleva pension fund</a>"
 msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
-"\">Suuna pension Tulevasse</a>"
+"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+"lg\">Suuna pension Tulevasse</a>"
 
 #: templates/header/main-sticky.php:7 templates/header/main.php:7
 msgid "Toggle navigation"
@@ -2175,6 +2232,18 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
 
+#~ msgid "euros"
+#~ msgstr "eurot"
+
+#~ msgid "Your monthly gross income"
+#~ msgstr "Sisesta oma igakuine brutosissetulek"
+
+#~ msgid "You can contribute monthly to III pillar"
+#~ msgstr "Kuus saad III sambasse panna"
+
+#~ msgid "You can contribute annually to III pillar"
+#~ msgstr "Aastas saad III sambasse panna"
+
 #~ msgid "Fund documents from %s (in Estonian)"
 #~ msgstr "Fondi dokumendid alates %s"
 
@@ -2190,16 +2259,6 @@ msgstr "Soovitus 18-55"
 #~ "tootmine ja müük (%s%%); Tuumarelvade tootmine ja müük (%s%%), "
 #~ "Eraisikutele lahingrelvade müük (%s%%), UN Global Compact rikkujad (%s%%)"
 
-#~ msgid ""
-#~ "Appr. gross income 2021 (<a href=\"#modal-gross_income\">look up on e-"
-#~ "MTA</a>)"
-#~ msgstr ""
-#~ "Ligikaudne brutotulu 2021 (<a href=\"#modal-brutotulu\">vaata e-"
-#~ "maksuametist</a>)"
-
-#~ msgid "This year you can contribute to III pillar"
-#~ msgstr "Sel aastal saad III sambasse panna"
-
 #~ msgid "Featured articles"
 #~ msgstr "Olulisemad artiklid"
 
@@ -2211,12 +2270,14 @@ msgstr "Soovitus 18-55"
 
 #~ msgid ""
 #~ "Tuleva member can be anybody of legal age who does not have current "
-#~ "criminal record. <a id=\"question-rights\" href=\"#questionRightsModal"
-#~ "\">What are my rights and obligations as a Tuleva member?</a>"
+#~ "criminal record. <a id=\"question-rights\" "
+#~ "href=\"#questionRightsModal\">What are my rights and obligations as a "
+#~ "Tuleva member?</a>"
 #~ msgstr ""
 #~ "Tuleva liikmeks võib saada iga täisealine inimene, kellel pole kehtivat "
-#~ "kriminaalkaristust. <a id=\"question-rights\" href=\"#questionRightsModal"
-#~ "\">Mis on minu õigused ja kohustused Tuleva liikmena?</a>"
+#~ "kriminaalkaristust. <a id=\"question-rights\" "
+#~ "href=\"#questionRightsModal\">Mis on minu õigused ja kohustused Tuleva "
+#~ "liikmena?</a>"
 
 #~ msgid ""
 #~ "Pay one-off joining fee <span class=\"text-highlight\">100 euros</span>"
@@ -2243,21 +2304,21 @@ msgstr "Soovitus 18-55"
 
 #~ msgid ""
 #~ "Low cost: management fee <span class=\"text-highlight\"><strong>0,34%</"
-#~ "strong></span> and total expenses <span class=\"text-highlight"
-#~ "\"><strong>0,47%</strong></span>"
-#~ msgstr ""
-#~ "Madalad kulud: valitsemistasu <span class=\"text-highlight"
-#~ "\"><strong>0,34%</strong></span> ja kogukulu määr <span class=\"text-"
+#~ "strong></span> and total expenses <span class=\"text-"
 #~ "highlight\"><strong>0,47%</strong></span>"
+#~ msgstr ""
+#~ "Madalad kulud: valitsemistasu <span class=\"text-"
+#~ "highlight\"><strong>0,34%</strong></span> ja kogukulu määr <span "
+#~ "class=\"text-highlight\"><strong>0,47%</strong></span>"
 
 #~ msgid ""
-#~ "The equity fund with lowest costs in Estonia*: management fee <span class="
-#~ "\"text-highlight\"><strong>0,34%</strong></span> and total expense ratio "
-#~ "<span class=\"text-highlight\"><strong>0,45%</strong></span>"
+#~ "The equity fund with lowest costs in Estonia*: management fee <span "
+#~ "class=\"text-highlight\"><strong>0,34%</strong></span> and total expense "
+#~ "ratio <span class=\"text-highlight\"><strong>0,45%</strong></span>"
 #~ msgstr ""
-#~ "Kõige madalamate kuludega aktsiafond Eestis*: valitsemistasu <span class="
-#~ "\"text-highlight\"><strong>0,34%</strong></span> ja kogukulu määr <span "
-#~ "class=\"text-highlight\"><strong>0,45%</strong></span>"
+#~ "Kõige madalamate kuludega aktsiafond Eestis*: valitsemistasu <span "
+#~ "class=\"text-highlight\"><strong>0,34%</strong></span> ja kogukulu määr "
+#~ "<span class=\"text-highlight\"><strong>0,45%</strong></span>"
 
 #~ msgid ""
 #~ "Notice of changes to the terms and conditions of fund from 01.09.2020 (in "
@@ -2289,11 +2350,11 @@ msgstr "Soovitus 18-55"
 #~ msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
 
 #~ msgid ""
-#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg"
-#~ "\">Switch to Tuleva</a>"
+#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
+#~ "lg\">Switch to Tuleva</a>"
 #~ msgstr ""
-#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg"
-#~ "\">Vali Tuleva pensionifond</a>"
+#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+#~ "lg\">Vali Tuleva pensionifond</a>"
 
 #~ msgid ""
 #~ "Fund managers are not allowed to charge high fees for changing the "
@@ -2412,11 +2473,11 @@ msgstr "Soovitus 18-55"
 #~ "pärast."
 
 #~ msgid ""
-#~ "<a href=\"/en/mutual-company/\" class=\"btn btn-outline-primary btn-lg"
-#~ "\">Learn more about Tuleva</a>"
+#~ "<a href=\"/en/mutual-company/\" class=\"btn btn-outline-primary btn-"
+#~ "lg\">Learn more about Tuleva</a>"
 #~ msgstr ""
-#~ "<a href=\"/tulundusyhistu/\" class=\"btn btn-outline-primary btn-lg"
-#~ "\">Tutvu Tuleva ühistuga</a>"
+#~ "<a href=\"/tulundusyhistu/\" class=\"btn btn-outline-primary btn-"
+#~ "lg\">Tutvu Tuleva ühistuga</a>"
 
 #~ msgid ""
 #~ "Switching funds is free<span class=\"d-none d-lg-inline-block\"> and "
