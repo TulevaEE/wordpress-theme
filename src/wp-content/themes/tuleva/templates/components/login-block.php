@@ -10,10 +10,10 @@
             <div class="col-md-7">
                 <?php if (have_rows('list')) { $i = 0; ?>
                     <?php while (have_rows('list')) { the_row(); $i++; ?>
-                       <div class="inline-signup__item">
-                           <span class="inline-signup__number"><?php echo $i; ?></span><span class="inline-signup__title"><?php the_sub_field('heading'); ?></span>
+                       <div class="inline-register__item">
+                           <span class="inline-register__number"><?php echo $i; ?></span><span class="inline-register__title"><?php the_sub_field('heading'); ?></span>
                        </div>
-                       <p class="inline-signup__content">
+                       <p class="inline-register__content">
                             <?php remove_filter('acf_the_content', 'wpautop'); ?>
                             <?php the_sub_field('text'); ?>
                             <?php add_filter('acf_the_content', 'wpautop'); ?>
@@ -22,7 +22,7 @@
                 <?php } ?>
             </div>
             <div class="col-md-5">
-                   <div id="inline-login" class="inline-signup card p-4 bg-light">
+                   <div id="inline-login" class="inline-register card p-4 bg-light">
                         <form id="login-form" action="https://pension.tuleva.ee/3rd-pillar-flow/confirm-mandate" method="GET">
                            <div class="form-group mb-2">
                               <label for="monthlyThirdPillarContribution"><span>Igakuine sissemakse</span></label>

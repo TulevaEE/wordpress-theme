@@ -31,7 +31,7 @@ class ThemeEnqueue
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '20221216',
+                'ver' => '20221228',
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -108,7 +108,6 @@ class ThemeEnqueue
                 'enqueue' => true
             ]
         ];
-        // if (is_front_page()) {
         array_push(
             $assets,
             [
@@ -120,7 +119,6 @@ class ThemeEnqueue
                 'enqueue' => true
             ]
         );
-        // }
 
         /* Get file that contains SimplyEnqueue class */
         require_once(get_template_directory() . '/lib/enqueue.php');

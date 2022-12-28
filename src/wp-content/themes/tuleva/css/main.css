@@ -9646,10 +9646,10 @@ small,
   margin-bottom: 0;
 }
 
-.inline-signup {
+.inline-register {
   border: 1px solid #e9ecef;
 }
-.inline-signup__number {
+.inline-register__number {
   width: 32px;
   height: 32px;
   color: #0081EE;
@@ -9664,17 +9664,17 @@ small,
   font-size: 20px;
   margin-right: 16px;
 }
-.inline-signup__title {
+.inline-register__title {
   font-weight: 500;
   font-size: 20px;
 }
-.inline-signup__content {
+.inline-register__content {
   margin-left: 48px;
 }
-.inline-signup__item {
+.inline-register__item {
   margin-bottom: 1em;
 }
-.inline-signup .custom-control-indicator {
+.inline-register .custom-control-indicator {
   display: none;
 }
 
