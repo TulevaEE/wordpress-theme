@@ -123,15 +123,19 @@
 }
 
 .bg-blueish-gray {
-    background: $blueish-gray;
+    background: $blueish-gray !important;
 }
 
 .bg-blue-washed {
-    background: $blue-washed;
+    background: $blue-washed !important;
+}
+
+.bg-gray-tint {
+    background-color: $gray-tint !important;
 }
 
 .bg-alt {
-    background-color: $body-color-alt;
+    background-color: $body-color-alt !important;
 }
 
 // Shadows

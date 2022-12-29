@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2022-12-17 07:02:35+00:00\n"
+"POT-Creation-Date: 2022-12-26 08:50:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1506,7 +1506,7 @@ msgid "Who manages Tuleva funds?"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:13
-msgid "<a href=\"#modal-gross_income\">2022 gross income</a>"
+msgid "<a href=\"#modal-gross_income\">2022 total gross income</a>"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:25
@@ -1516,13 +1516,14 @@ msgid "&euro;/year"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:32
-msgid "2022 gross income on which income tax is not refundable"
+msgid "of which dividends"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:34
 msgid ""
-"Dividends received from an Estonian company, from which income tax has not "
-"been withheld as a private person; income from abroad."
+"Gross income, from which income tax has not been withheld as a private "
+"person. For example, dividends received from an Estonian company; dividends "
+"that have been taxed abroad."
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:53
@@ -1536,7 +1537,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:74
-msgid "Number of children"
+msgid "Number of underage children"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:76
@@ -1550,7 +1551,7 @@ msgid "kids"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:95
-msgid "This year it is reasonable to contribute to III pillar"
+msgid "Sensible contribution to III pillar"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:97
@@ -1569,11 +1570,11 @@ msgid ""
 "that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:127
+#: templates/components/third-pillar-calculator.php:128
 msgid "Make a III pillar payment"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:131
+#: templates/components/third-pillar-calculator.php:132
 msgid ""
 "To make a payment log into your pension account using your ID-card, Mobile-"
 "ID or Smart-ID."

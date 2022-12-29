@@ -946,18 +946,20 @@
             color: $navy-blue;
         }
 
-        td:first-child {
+        &.first td:first-child {
             border-top-left-radius: $border-radius-md;
-            border-bottom-left-radius: $border-radius-md;
-            padding: 1rem 0 1rem 1rem;
         }
 
-        td:last-child {
+        &.first td:last-child {
             border-top-right-radius: $border-radius-md;
+        }
+
+        &.last td:first-child {
+            border-bottom-left-radius: $border-radius-md;
+        }
+
+        &.last td:last-child {
             border-bottom-right-radius: $border-radius-md;
-            padding: 1rem 1rem 1rem 0;
-
-
         }
     }
 
