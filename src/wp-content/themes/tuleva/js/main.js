@@ -156,18 +156,21 @@ $(document).ready(function ($) {
         },
         calculateThirdPillarSavings = function () {
             var $calculator = $('.third-pillar-calculator');
-            var wage = $calculator.find('#wage').val();
-            var wageDeduction = $calculator.find('#wageDeduction').val();
-            var taxReliefs = $calculator.find('#taxReliefs').val();
-            var kids = $calculator.find('#kids').val();
+            var yearlyWage = parseInt($calculator.find('#yearlyWage').val()) || 0;
+            var monthlyWage = parseInt($calculator.find('#monthlyWage').val()) || 0;
+            var wageAddition = parseInt($calculator.find('#wageAddition').val()) || 0;
+            var wageDeduction = parseInt($calculator.find('#wageDeduction').val()) || 0;
+            var taxReliefs = parseInt($calculator.find('#taxReliefs').val()) || 0;
+            var kids = parseInt($calculator.find('#kids').val()) || 0;
 
-            var wageTotal = Math.max(wage - wageDeduction, 0);
+            var wage = yearlyWage ? yearlyWage : monthlyWage * 12;
+            var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
             var taxFreeWage = (function (wage) {
                 if (wage < 14400) {
-                    return 6000;
+                    return 7848;
                 }
                 if (wage < 25200) {
-                    return 6000 - 6000 / 10800 * (wage - 14400);
+                    return 7848 - 7848 / 10800 * (wage - 14400);
                 }
                 return 0;
             })(wage);
@@ -186,9 +189,11 @@ $(document).ready(function ($) {
             var taxableWage = Math.max(
                 wageTotal - taxFreeWage - deductions - additionalTaxFreeWage - taxReliefs, 0);
             var yearlyAmount = Math.min(0.15 * wageTotal, 6000, taxableWage);
+            var monthlyAmount = yearlyAmount / 12;
             var savingsSum = yearlyAmount * 0.2;
 
             $calculator.find('#yearlyAmount').text(format(yearlyAmount));
+            $calculator.find('#monthlyAmount').text(format(monthlyAmount));
             $calculator.find('#savingsSum').text(format(savingsSum));
         },
         initThirdPillarCalculator = function () {
