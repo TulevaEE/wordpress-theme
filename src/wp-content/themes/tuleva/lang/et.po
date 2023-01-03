@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-01-02 18:08:37+00:00\n"
-"PO-Revision-Date: 2023-01-02 19:11+0100\n"
+"POT-Creation-Date: 2023-01-02 18:23:22+00:00\n"
+"PO-Revision-Date: 2023-01-02 19:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1918,7 +1918,6 @@ msgstr ""
 "maksustatavast brutotulust, kuid mitte rohkem kui 6000&nbsp;€&nbsp;aastas"
 
 #: templates/components/third-pillar-calculator.php:117
-#: templates/components/third-pillar-calculator.php:230
 msgid "Your gain from income tax"
 msgstr "Sinu tulumaksuvõit"
 
@@ -1980,6 +1979,10 @@ msgid ""
 msgstr ""
 "<span class=\"d-inline-block\">III sambasse on mõistlik</span> <span "
 "class=\"d-inline-block\">iga kuu panna</span>"
+
+#: templates/components/third-pillar-calculator.php:230
+msgid "Yearly gain from income tax"
+msgstr "Aastane tulumaksuvõit"
 
 #: templates/components/third-pillar-calculator.php:248
 msgid "Set up a recurring payment"

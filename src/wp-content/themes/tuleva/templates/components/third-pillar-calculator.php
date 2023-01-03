@@ -141,37 +141,37 @@ $isDecember = (date('m') == 12);
                 </div>
             <?php } else { ?>
                 <table class="w-100">
-                    <tr class="calculator__summary-row first">
-                        <td class="text-right pr-2 py-3 pl-3 bg-gray-tint">
+                    <tr>
+                        <td class="text-right pr-2 pb-3 pl-3">
                             <?php _e('Monthly gross salary', TEXT_DOMAIN); ?><span
                                 class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                 data-placement="top"
                                 title="<?php _e('Your monthly gross salary (before tax). Including parental benefits, pension, etc.', TEXT_DOMAIN); ?>"
                             ></span>
                         </td>
-                        <td style="width: 109px" class="py-3 bg-gray-tint">
+                        <td style="width: 109px" class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="monthlyWage"
                                        min="0" step="1" placeholder="2000"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
-                        <td class="text-left text-muted pl-2 py-3 pr-3 bg-gray-tint">
+                        <td class="text-left text-muted pl-2 pb-3 pr-3">
                             <span class="d-none d-md-inline-block">
                                 <?php _e('&euro;/month', TEXT_DOMAIN); ?>
                             </span>
                             <span class="d-md-none">&euro;</span>
                         </td>
                     </tr>
-                    <tr class="calculator__summary-row last">
-                        <td class="text-right pr-2 pb-3 pl-3 bg-gray-tint">
+                    <tr>
+                        <td class="text-right pr-2 pb-3 pl-3">
                             <?php _e('Other yearly gross income', TEXT_DOMAIN); ?><span
                                 class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                 data-placement="top"
                                 title="<?php _e('Yearly gross income taxed at 20% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate.', TEXT_DOMAIN); ?>"
                             ></span>
                         </td>
-                        <td class="pb-3 bg-gray-tint">
+                        <td class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right"
                                        id="wageAddition"
@@ -179,7 +179,7 @@ $isDecember = (date('m') == 12);
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3 bg-gray-tint">
+                        <td class="text-left text-muted pl-2 pb-3 pr-3">
                             <span class="d-none d-md-inline-block">
                                 <?php _e('&euro;/year', TEXT_DOMAIN); ?>
                             </span>
@@ -187,21 +187,21 @@ $isDecember = (date('m') == 12);
                         </td>
                     </tr>
                     <tr>
-                        <td class="text-right pr-2 py-3 pl-3">
+                        <td class="text-right pr-2 pb-3 pl-3">
                             <?php _e('Number of underage children', TEXT_DOMAIN); ?><span
                                 class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                 data-placement="top"
                                 title="<?php _e('One parent of children under the age of 18 can deduct additional tax-free income', TEXT_DOMAIN); ?>"
                             ></span>
                         </td>
-                        <td class="py-3">
+                        <td class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="kids"
                                        min="0" step="1" placeholder="2"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
-                        <td class="text-left text-muted pl-2 py-3 pr-3">
+                        <td class="text-left text-muted pl-2 pb-3 pr-3">
                             <span
                                 class="d-none d-md-inline-block"><?php _e('kids', TEXT_DOMAIN); ?></span>
                         </td>
@@ -227,7 +227,7 @@ $isDecember = (date('m') == 12);
                     <tr>
                         <td class="text-right pr-2 pt-3 pl-3">
                             <strong>
-                                <?php _e('Your gain from income tax', TEXT_DOMAIN); ?><span
+                                <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?><span
                                     class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                     data-placement="top"
                                     title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
