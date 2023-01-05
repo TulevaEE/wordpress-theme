@@ -23,7 +23,7 @@
         </div>
         <div class="offset-md-1 col-md-2 offset-sm-1 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2018/02/jordan-valdma.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Jordan Valdma</p>
+            <p class="text-bold mb-0">Jordan Valdma</p>
             <p class="small text-secondary"><?php _e('Developer, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2018/02/krista-teearu.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Krista Teearu</p>
+            <p class="text-bold mb-0">Krista Teearu</p>
             <p class="small text-secondary"><?php _e('Entrepreneur, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2018/02/tanel-padar-2.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Tanel Padar</p>
+            <p class="text-bold mb-0">Tanel Padar</p>
             <p class="small text-secondary"><?php _e('Musician, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2016/08/kristi_portree.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Kristi Saare</p>
+            <p class="text-bold mb-0">Kristi Saare</p>
             <p class="small text-secondary"><?php _e('Teacher, investor, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
@@ -93,7 +93,7 @@
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2018/02/indrek-seppo.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Indrek Seppo</p>
+            <p class="text-bold mb-0">Indrek Seppo</p>
             <p class="small text-secondary"><?php _e('Economist, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>
@@ -108,7 +108,7 @@
         </div>
         <div class="offset-md-1 col-md-2 col-sm-3 text-center">
             <img src="https://tuleva.ee/wp-content/uploads/2018/02/lili-milani.jpg" width="96" height="96" class="rounded-circle mb-4" alt="Idea" />
-            <p class="text-secondary text-bold mb-0">Lili Milani</p>
+            <p class="text-bold mb-0">Lili Milani</p>
             <p class="small text-secondary"><?php _e('Genealogist, Member of Tuleva', TEXT_DOMAIN) ?></p>
         </div>
     </div>

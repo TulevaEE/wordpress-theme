@@ -23,8 +23,8 @@
             </div>
             <div class="col-md-5">
                 <div id="inline-signup" class="card p-4 bg-light text-center">
-                    <p class="mb-4"><?php _e('To become a member please log in to your pension account', TEXT_DOMAIN); ?></p>
-                    <a href="https://pension.tuleva.ee/join" class="btn btn-primary btn-lg"><?php _e('Join Tuleva', TEXT_DOMAIN); ?></a>
+                    <p class="mb-4"><?php _e('To become a member please log in to your pension account.', TEXT_DOMAIN); ?></p>
+                    <a href="https://pension.tuleva.ee/join" class="btn btn-primary btn-lg"><?php _e('Become a member', TEXT_DOMAIN); ?></a>
                 </div>
             </div>
         </div>

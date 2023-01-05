@@ -8,7 +8,7 @@ $isDecember = (date('m') == 12);
 ?>
 <div class="card calculator shadow-md">
     <div class="card-body p-4 text-center third-pillar-calculator">
-        <form class="pb-2">
+        <form>
             <?php if ($isDecember) { ?>
                 <table class="w-100">
                     <tr class="calculator__summary-row first">

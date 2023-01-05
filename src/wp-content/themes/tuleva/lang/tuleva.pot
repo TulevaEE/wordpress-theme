@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-01-02 18:23:22+00:00\n"
+"POT-Creation-Date: 2023-01-03 10:04:24+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,9 +57,12 @@ msgstr ""
 msgid "Join us!"
 msgstr ""
 
-#: templates/components/cta-join.php:8 templates/components/middle-cta.php:5
+#: templates/components/cta-join.php:8
+#: templates/components/front-proposal.php:35
+#: templates/components/middle-cta.php:5
+#: templates/components/mutual-header.php:37
 #: templates/components/signup-block.php:27
-msgid "Join Tuleva"
+msgid "Become a member"
 msgstr ""
 
 #: templates/components/featured-articles-et.php:3
@@ -278,11 +281,6 @@ msgstr ""
 
 #: templates/components/front-proposal.php:33
 msgid "one-off joining fee"
-msgstr ""
-
-#: templates/components/front-proposal.php:35
-#: templates/components/mutual-header.php:37
-msgid "Become a member"
 msgstr ""
 
 #: templates/components/front-proposal.php:39
@@ -1498,7 +1496,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/signup-block.php:26
-msgid "To become a member please log in to your pension account"
+msgid "To become a member please log in to your pension account."
 msgstr ""
 
 #: templates/components/single-quote-block.php:1
