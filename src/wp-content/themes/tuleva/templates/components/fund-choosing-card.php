@@ -6,7 +6,7 @@
         <?php if ( have_rows('title') ) while ( have_rows('title') ) : the_row(); ?>
             <?php $link = get_sub_field('link'); ?>
             <?php if ($link) { ?>
-                <a href="<?php $link; ?>" target="_blank" class="text-navy"><?php the_sub_field('text'); ?></a>
+                <a href="<?php echo $link; ?>" target="_blank" class="text-navy"><?php the_sub_field('text'); ?></a>
             <?php } ?>
         <?php endwhile; ?>
     </h4>
