@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-01-03 10:04:24+00:00\n"
-"PO-Revision-Date: 2023-01-03 11:04+0100\n"
+"POT-Creation-Date: 2023-01-09 19:25:38+00:00\n"
+"PO-Revision-Date: 2023-01-09 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: .\n"
 
-#: functions.php:25 helpers/acf/init.php:16 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:17 helpers/post-types/init.php:9
 #: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
@@ -553,7 +553,6 @@ msgstr ""
 "%); Naftaliiva kaevandamine ja kasutamine (%s%%)"
 
 #: templates/components/fund-bonds-header.php:5
-#: templates/components/fund-choosing.php:55
 msgid "Tuleva World Bonds Pension Fund"
 msgstr "Tuleva Maailma Võlakirjade Pensionifond"
 
@@ -574,8 +573,8 @@ msgstr ""
 "aastat</span>"
 
 #: templates/components/fund-bonds-header.php:21
-msgid "you are willing to forgo higher returns in order to avoid losses"
-msgstr "oled nõus kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
+msgid "a long-term stable result is more important to you"
+msgstr "sulle on olulisem pikaajaline stabiilne tulemus"
 
 #: templates/components/fund-bonds-header.php:25
 msgid ""
@@ -598,111 +597,6 @@ msgstr ""
 "Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha "
 "Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule tööelu "
 "jooksul kokku"
-
-#: templates/components/fund-choosing.php:4
-msgid "Which Tuleva pension fund to choose?"
-msgstr "Milline Tuleva pensionifond valida?"
-
-#: templates/components/fund-choosing.php:12
-msgid "If you are less than 55 years old, then the fund suitable to you is"
-msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
-
-#: templates/components/fund-choosing.php:15
-msgid ""
-"<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" "
-"class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
-msgstr ""
-"<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" "
-"class=\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
-
-#: templates/components/fund-choosing.php:25
-#: templates/components/fund-stocks-header.php:5
-msgid "Tuleva World Stocks Pension Fund"
-msgstr "Tuleva Maailma Aktsiate Pensionifond"
-
-#: templates/components/fund-choosing.php:28
-msgid ""
-"<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase "
-"text-medium d-block mb-4\">See fund info</a>"
-msgstr ""
-"<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" class=\"text-uppercase "
-"text-medium d-block mb-4\">Vaata fondi infot</a>"
-
-#: templates/components/fund-choosing.php:29
-msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block\" id=\"fund-choose-stocks\">Select this fund</a>"
-msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
-
-#: templates/components/fund-choosing.php:32
-msgid "Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s"
-msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,37%%%s"
-
-#: templates/components/fund-choosing.php:34
-msgid ""
-"Most of the money is invested in stocks: bigger expected return and risk"
-msgstr ""
-"Suurem osa rahast investeeritakse aktsiatesse: suurem võimalik tulu ja risk"
-
-#: templates/components/fund-choosing.php:35
-msgid ""
-"Suitable for you if you want <span class=\"text-highlight\"><strong>best "
-"expected return</strong></span> over long term and you are not disturbed by "
-"short-term fluctuations of the market"
-msgstr ""
-"Sobib sulle, kui tahad saavutada <span class=\"text-"
-"highlight\"><strong>parimat võimalikku tootlust</strong></span> pika aja "
-"vältel ja sind ei löö rivist välja turu lühiajalised kõikumised"
-
-#: templates/components/fund-choosing.php:42
-msgid "If you are over 55, the fund better suited for you could be"
-msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
-
-#: templates/components/fund-choosing.php:45
-msgid ""
-"<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" "
-"class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
-msgstr ""
-"<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" target=\"_blank\" "
-"class=\"text-navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
-
-#: templates/components/fund-choosing.php:57
-msgid ""
-"<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase text-"
-"medium d-block mb-4\">See fund info</a>"
-msgstr ""
-"<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" class=\"text-uppercase "
-"text-medium d-block mb-4\">Vaata fondi infot</a>"
-
-#: templates/components/fund-choosing.php:58
-msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block\" id=\"fund-choose-bonds\">Select this fund</a>"
-msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
-
-#: templates/components/fund-choosing.php:61
-msgid "Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s"
-msgstr "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,41%%%s"
-
-#: templates/components/fund-choosing.php:63
-msgid ""
-"Money is invested into world goverments’ and governmental organisations’ "
-"bonds: smaller risk, smaller expected return"
-msgstr ""
-"Raha on maailma valitsuste ja nendega seotud organisatsioonide võlakirjades: "
-"väiksem risk, väiksem võimalik tulu"
-
-#: templates/components/fund-choosing.php:64
-msgid ""
-"This suits you in case you have just a few years till retirement or in case "
-"you are willing to forgo returns in order to avoid losses"
-msgstr ""
-"Sobib sulle, kui sul on pensionini jäänud vaid mõni aasta või oled nõus "
-"kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
 
 #: templates/components/fund-counter.php:7
 msgid "3600"
@@ -896,6 +790,10 @@ msgstr " "
 #: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr "Agressiivne"
+
+#: templates/components/fund-stocks-header.php:5
+msgid "Tuleva World Stocks Pension Fund"
+msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
 #: templates/components/fund-stocks-header.php:6
 #: templates/components/fund-third-header.php:6
@@ -2305,6 +2203,98 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid "you are willing to forgo higher returns in order to avoid losses"
+#~ msgstr "oled nõus kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
+
+#~ msgid "Which Tuleva pension fund to choose?"
+#~ msgstr "Milline Tuleva pensionifond valida?"
+
+#~ msgid "If you are less than 55 years old, then the fund suitable to you is"
+#~ msgstr "Kui oled alla 55-aastane, on sulle mõeldud"
+
+#~ msgid ""
+#~ "<a href=\"/en/tuleva-world-stocks-pension-fund/\" target=\"_blank\" "
+#~ "class=\"text-navy\">Tuleva World Stocks Pension Fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" target=\"_blank\" "
+#~ "class=\"text-navy\">Tuleva Maailma Aktsiate Pensionifond</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/tuleva-world-stocks-pension-fund/\" class=\"text-uppercase "
+#~ "text-medium d-block mb-4\">See fund info</a>"
+#~ msgstr ""
+#~ "<a href=\"/tuleva-maailma-aktsiate-pensionifond/\" class=\"text-uppercase "
+#~ "text-medium d-block mb-4\">Vaata fondi infot</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg "
+#~ "btn-block\" id=\"fund-choose-stocks\">Select this fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block "
+#~ "ga\" data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
+
+#~ msgid ""
+#~ "Low cost: management fee %s0,29%%%s and total expense ratio %s0,37%%%s"
+#~ msgstr ""
+#~ "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,37%%%s"
+
+#~ msgid ""
+#~ "Most of the money is invested in stocks: bigger expected return and risk"
+#~ msgstr ""
+#~ "Suurem osa rahast investeeritakse aktsiatesse: suurem võimalik tulu ja "
+#~ "risk"
+
+#~ msgid ""
+#~ "Suitable for you if you want <span class=\"text-highlight\"><strong>best "
+#~ "expected return</strong></span> over long term and you are not disturbed "
+#~ "by short-term fluctuations of the market"
+#~ msgstr ""
+#~ "Sobib sulle, kui tahad saavutada <span class=\"text-"
+#~ "highlight\"><strong>parimat võimalikku tootlust</strong></span> pika aja "
+#~ "vältel ja sind ei löö rivist välja turu lühiajalised kõikumised"
+
+#~ msgid "If you are over 55, the fund better suited for you could be"
+#~ msgstr "Kui oled üle 55-aastane, võib sulle paremini sobida"
+
+#~ msgid ""
+#~ "<a href=\"/en/tuleva-world-bonds-pension-fund/\" target=\"_blank\" "
+#~ "class=\"text-navy\">Tuleva World Bonds Pension Fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" target=\"_blank\" "
+#~ "class=\"text-navy\">Tuleva Maailma Võlakirjade Pensionifond</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/tuleva-world-bonds-pension-fund/\" class=\"text-uppercase "
+#~ "text-medium d-block mb-4\">See fund info</a>"
+#~ msgstr ""
+#~ "<a href=\"/tuleva-maailma-volakirjade-pensionifond/\" class=\"text-"
+#~ "uppercase text-medium d-block mb-4\">Vaata fondi infot</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg "
+#~ "btn-block\" id=\"fund-choose-bonds\">Select this fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block "
+#~ "ga\" data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
+
+#~ msgid "Low cost: management fee %s0,29%%%s and total expenses %s0,41%%%s"
+#~ msgstr ""
+#~ "Madalad kulud: valitsemistasu %s0,29%%%s ja kogukulu määr %s0,41%%%s"
+
+#~ msgid ""
+#~ "Money is invested into world goverments’ and governmental organisations’ "
+#~ "bonds: smaller risk, smaller expected return"
+#~ msgstr ""
+#~ "Raha on maailma valitsuste ja nendega seotud organisatsioonide "
+#~ "võlakirjades: väiksem risk, väiksem võimalik tulu"
+
+#~ msgid ""
+#~ "This suits you in case you have just a few years till retirement or in "
+#~ "case you are willing to forgo returns in order to avoid losses"
+#~ msgstr ""
+#~ "Sobib sulle, kui sul on pensionini jäänud vaid mõni aasta või oled nõus "
+#~ "kaotuse vältimiseks kõrgema tootluse võimalusest loobuma"
 
 #~ msgid "Join Tuleva"
 #~ msgstr "Liitu Tulevaga"
