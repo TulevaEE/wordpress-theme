@@ -106,7 +106,9 @@
                             <h4 class="cta-widget__title">
                                 <?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?>
                             </h4>
-                            <?php _e('<a class="btn btn-primary btn-lg btn-block" href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
+                            <h5 class="cta-widget__title--link">
+                                <?php _e('<a href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
+                            </h5>
                         </div>
                     </div>
                     <div class="widget">

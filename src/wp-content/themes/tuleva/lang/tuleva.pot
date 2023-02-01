@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-01-09 19:25:38+00:00\n"
+"POT-Creation-Date: 2023-02-01 11:54:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1603,7 +1603,7 @@ msgstr ""
 msgid "How much would you lose to high fees?"
 msgstr ""
 
-#: templates/footer/blog-beacon.php:3 templates/single-content.php:109
+#: templates/footer/blog-beacon.php:3
 msgid ""
 "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
 "\">See calculation</a>"
@@ -1660,11 +1660,15 @@ msgid ""
 "\">See more posts</a>"
 msgstr ""
 
-#: templates/single-content.php:115
+#: templates/single-content.php:110
+msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
+msgstr ""
+
+#: templates/single-content.php:117
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr ""
 
-#: templates/single-content.php:118
+#: templates/single-content.php:120
 msgid ""
 "Our guide makes transferring your pension easy via your internet bank. 5 "
 "minutes, no costs involved."
