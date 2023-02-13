@@ -245,7 +245,7 @@ $isDecember = (date('m') == 12);
                 <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3"
                    target="_blank">
-                    <?php _e('Set up a recurring payment', TEXT_DOMAIN); ?>
+                    <?php _e('Get started', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2">
                     <small class="text-secondary">
