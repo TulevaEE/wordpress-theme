@@ -187,3 +187,51 @@
 .image-border {
     border: 1px solid $border-gray;
 }
+
+.image-circle {
+    clip-path: circle(50% at center);
+    max-width: 100%;
+}
+
+.column-2 {
+    column-count: 2;
+    column-gap: 20px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    blockquote,
+    table,
+    pre {
+        break-inside: avoid-column;
+    }
+}
+
+.avoid-column {
+    break-inside: avoid-column;
+}
+
+.collapsed__shown {
+    display: none;
+}
+
+.collapsed__hidden {
+    display: block;
+}
+
+.collapsed {
+    .collapsed__shown {
+        display: block;
+    }
+
+    .collapsed__hidden {
+        display: none;
+    }
+}

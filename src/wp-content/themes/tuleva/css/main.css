@@ -8039,6 +8039,15 @@ hr {
   padding: 0 !important;
 }
 
+.btn-plus,
+.btn-plus:active,
+.btn-plus:focus,
+.btn-plus:not([disabled]):not(.disabled):active,
+.btn-plus:not([disabled]):not(.disabled).active {
+  padding: 0 30px 0 0;
+  background: url(../img/icon-plussign.svg) no-repeat right center;
+}
+
 h1, .h1 {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-size: 2.5rem;
@@ -10832,6 +10841,59 @@ small,
 
 .image-border {
   border: 1px solid #d6dee6;
+}
+
+.image-circle {
+  -webkit-clip-path: circle(50% at center);
+  clip-path: circle(50% at center);
+  max-width: 100%;
+}
+
+.column-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.column-2 h1,
+.column-2 h2,
+.column-2 h3,
+.column-2 h4,
+.column-2 h5,
+.column-2 h6,
+.column-2 p,
+.column-2 ul,
+.column-2 ol,
+.column-2 dl,
+.column-2 blockquote,
+.column-2 table,
+.column-2 pre {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid-column;
+}
+
+.avoid-column {
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid-column;
+}
+
+.collapsed__shown {
+  display: none;
+}
+
+.collapsed__hidden {
+  display: block;
+}
+
+.collapsed .collapsed__shown {
+  display: block;
+}
+.collapsed .collapsed__hidden {
+  display: none;
 }
 
 .swed {

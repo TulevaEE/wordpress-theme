@@ -276,4 +276,13 @@ hr {
 .no-padding {
   padding: 0 !important;
 }
+
+.btn-plus,
+.btn-plus:active,
+.btn-plus:focus,
+.btn-plus:not([disabled]):not(.disabled):active,
+.btn-plus:not([disabled]):not(.disabled).active {
+  padding: 0 30px 0 0;
+  background: url(../img/icon-plussign.svg) no-repeat right center;
+}
 /*# sourceMappingURL=editor.css.map */
