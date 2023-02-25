@@ -4,6 +4,11 @@
         background-size: 100% 200%;
         transition: background 0.2s ease-in-out;
 
+        &.active .btn-cta {
+                transition: visibility 0.1s, opacity 0.1s linear;
+                opacity: 0;
+                visibility: hidden;
+            }
         &.active {
             background-position: 100% 100%;
         }

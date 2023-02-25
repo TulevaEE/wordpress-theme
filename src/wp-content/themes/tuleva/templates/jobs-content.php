@@ -27,7 +27,7 @@
                     </div>
                     <hr class="w-50 d-inline-block">
                     <div class="col-12 py-4">
-                        <a href="#" class="btn btn-primary btn-lg">Kandideeri</a>
+                        <a href="#" class="btn btn-primary btn-lg btn-cta">Kandideeri</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center py-5 toggle-parent">
@@ -41,7 +41,7 @@
                     </div>
                     <hr class="w-50 d-inline-block">
                     <div class="col-12 py-4">
-                        <a href="#" class="btn btn-primary btn-lg">Kandideeri</a>
+                        <a href="#" class="btn btn-primary btn-lg btn-cta">Kandideeri</a>
                     </div>
                 </div>
             </div>
