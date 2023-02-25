@@ -1,4 +1,4 @@
-<div class="page-container accordion-parent">
+<div id="jobs-page" class="page-container accordion-parent">
     <section class="bg-hero-main d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
@@ -15,8 +15,8 @@
     </section>
     <section class="d-flex flex-column">
         <div class="container my-auto">
-            <div class="row align-items-center py-5">
-                <div class="col-lg-6 text-center mt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center py-5 toggle-parent">
                     <div class="col-12 pb-2">
                         <img class="w-25 image-circle mb-2" src="http://localhost:8888/tuleva/git/wordpress-theme/src/wp-content/uploads/2023/02/Tuleva_veebr23-23-e1676921839339.jpg" alt="">
                         <h3>Operatsioonide juht</h3>
@@ -30,7 +30,7 @@
                         <a href="#" class="btn btn-primary btn-lg">Kandideeri</a>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center mt-5">
+                <div class="col-lg-6 text-center py-5 toggle-parent">
                     <div class="col-12 pb-2">
                         <img class="w-25 image-circle mb-2" src="http://localhost:8888/tuleva/git/wordpress-theme/src/wp-content/uploads/2023/02/Tuleva_veebr23-23-e1676921839339.jpg" alt="">
                         <h3>Kasvustrateeg</h3>

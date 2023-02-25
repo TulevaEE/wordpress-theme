@@ -207,13 +207,19 @@ $(document).ready(function ($) {
         },
         initAccordion = function () {
             $('.accordion-parent').on('show.bs.collapse', function (ev) {
-                var $toggle = $(ev.target).find('[data-toggle="collapse"]');
-                $($toggle).addClass('active');
+                var $target = $(ev.target);
+                $($target).addClass('active');
+
+                var $toggle = $('[data-target="#' + $target.attr('id') + '"]');
+                $($toggle).closest('.toggle-parent').addClass('active');
             });
 
             $('.accordion-parent').on('hide.bs.collapse', function (ev) {
-                var $toggle = $(ev.target).find('[data-toggle="collapse"]');
-                $($toggle).removeClass('active');
+                var $target = $(ev.target);
+                $($target).removeClass('active');
+
+                var $toggle = $('[data-target="#' + $target.attr('id') + '"]');
+                $($toggle).closest('.toggle-parent').removeClass('active');
             });
 
             $('[data-toggle="collapse"]').click(function() {

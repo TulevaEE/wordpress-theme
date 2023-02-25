@@ -7919,6 +7919,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -11005,5 +11007,16 @@ small,
   font-size: 40px;
   line-height: 40px;
   font-weight: 700;
+}
+
+#jobs-page .toggle-parent {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #edf7fe), to(#edf7fe));
+  background: linear-gradient(transparent, transparent 50%, #edf7fe 50%, #edf7fe);
+  background-size: 100% 200%;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+#jobs-page .toggle-parent.active {
+  background-position: 100% 100%;
 }
 /*# sourceMappingURL=main.css.map */
