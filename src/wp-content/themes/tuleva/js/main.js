@@ -204,7 +204,26 @@ $(document).ready(function ($) {
                 ev.preventDefault();
                 return false;
             });
-        };
+        },
+        initAccordion = function () {
+            $('.accordion-parent').on('show.bs.collapse', function (ev) {
+                var $toggle = $(ev.target).find('[data-toggle="collapse"]');
+                $($toggle).addClass('active');
+            });
+
+            $('.accordion-parent').on('hide.bs.collapse', function (ev) {
+                var $toggle = $(ev.target).find('[data-toggle="collapse"]');
+                $($toggle).removeClass('active');
+            });
+
+            $('[data-toggle="collapse"]').click(function() {
+                var target = $(this).attr('data-target');
+                var $target = $(target);
+                var $parent = $($target.attr('data-parent'));
+
+                $parent.find('.collapse.show').collapse('hide');
+            });
+        }
 
     initStickyHeader();
     initNewsletterBeaconToggle();
@@ -213,6 +232,7 @@ $(document).ready(function ($) {
     initGenericModals();
     initModalEscClose();
     initThirdPillarCalculator();
+    initAccordion();
     initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');
