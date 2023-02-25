@@ -20,7 +20,7 @@
                     <div class="col-12 pb-2">
                         <img class="w-25 image-circle mb-2" src="http://localhost:8888/tuleva/git/wordpress-theme/src/wp-content/uploads/2023/02/Tuleva_veebr23-23-e1676921839339.jpg" alt="">
                         <h3>Operatsioonide juht</h3>
-                        <a class="btn btn-link btn-plus collapsed" data-toggle="collapse" data-target="#job-description-1" aria-controls="job-description-1">
+                        <a class="btn btn-link btn-plus collapsed" data-toggle="collapse" href="#job-description-1" aria-controls="job-description-1">
                             <span class="text-navy lead font-weight-bold collapsed__shown">Loe lähemalt</span>
                             <span class="text-navy lead font-weight-bold collapsed__hidden">Sulge</span>
                         </a>
@@ -34,7 +34,7 @@
                     <div class="col-12 pb-2">
                         <img class="w-25 image-circle mb-2" src="http://localhost:8888/tuleva/git/wordpress-theme/src/wp-content/uploads/2023/02/Tuleva_veebr23-23-e1676921839339.jpg" alt="">
                         <h3>Kasvustrateeg</h3>
-                        <a class="btn btn-link btn-plus collapsed" data-toggle="collapse" data-target="#job-description-2" aria-controls="job-description-2">
+                        <a class="btn btn-link btn-plus collapsed" data-toggle="collapse" href="#job-description-2" aria-controls="job-description-2">
                             <span class="text-navy lead font-weight-bold collapsed__shown">Loe lähemalt</span>
                             <span class="text-navy lead font-weight-bold collapsed__hidden">Sulge</span>
                         </a>

@@ -210,7 +210,7 @@ $(document).ready(function ($) {
                 var $target = $(ev.target);
                 $($target).addClass('active');
 
-                var $toggle = $('[data-target="#' + $target.attr('id') + '"]');
+                var $toggle = $('[data-target="#' + $target.attr('id') + '"], [href="#' + $target.attr('id') + '"]');
                 $($toggle).closest('.toggle-parent').addClass('active');
             });
 
@@ -218,7 +218,7 @@ $(document).ready(function ($) {
                 var $target = $(ev.target);
                 $($target).removeClass('active');
 
-                var $toggle = $('[data-target="#' + $target.attr('id') + '"]');
+                var $toggle = $('[data-target="#' + $target.attr('id') + '"], [href="#' + $target.attr('id') + '"]');
                 $($toggle).closest('.toggle-parent').removeClass('active');
             });
 
