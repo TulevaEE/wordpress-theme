@@ -358,3 +358,7 @@ function get_esg_document_url()
 
     return get_site_url() . $esg_document_path;
 }
+
+function hyphenate_string($string) {
+    return strtolower(preg_replace('/[^a-zA-Z0-9]+/', '-', $string));
+}
