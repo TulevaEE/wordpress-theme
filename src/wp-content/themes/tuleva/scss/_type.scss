@@ -110,7 +110,8 @@ small,
   color: $text-secondary;
 }
 
-.text-navy {
+.text-navy,
+.text-navy p {
   color: $navy-blue !important;
 }
 

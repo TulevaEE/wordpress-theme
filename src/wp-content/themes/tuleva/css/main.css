@@ -8165,7 +8165,8 @@ small,
   color: rgba(48, 48, 48, 0.64);
 }
 
-.text-navy {
+.text-navy,
+.text-navy p {
   color: #002F63 !important;
 }
 
