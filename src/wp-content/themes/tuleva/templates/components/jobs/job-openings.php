@@ -2,7 +2,7 @@
 $unique_id = uniqid('_');
 $unique_parent_id = 'accordion-parent' . $unique_id;
 ?>
-<div class="<?php echo $unique_parent_id; ?>">
+<div class="accordion-parent <?php echo $unique_parent_id; ?>">
     <section class="d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center">

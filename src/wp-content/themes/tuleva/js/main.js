@@ -210,9 +210,8 @@ $(document).ready(function ($) {
                 var $target = $(ev.target);
                 $($target).addClass('active');
 
-                $('.toggle-parent').removeClass('active');
                 var $toggle = $('[data-target="#' + $target.attr('id') + '"], [href="#' + $target.attr('id') + '"]');
-                $($toggle).closest('.toggle-parent').addClass('active');
+                $($toggle).closest('.toggle-parent').addClass('active').siblings().removeClass('active');
             });
 
             $('.accordion-parent').on('hide.bs.collapse', function (ev) {
