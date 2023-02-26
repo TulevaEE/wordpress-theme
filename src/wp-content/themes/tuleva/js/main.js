@@ -210,6 +210,7 @@ $(document).ready(function ($) {
                 var $target = $(ev.target);
                 $($target).addClass('active');
 
+                $('.toggle-parent').removeClass('active');
                 var $toggle = $('[data-target="#' + $target.attr('id') + '"], [href="#' + $target.attr('id') + '"]');
                 $($toggle).closest('.toggle-parent').addClass('active');
             });
