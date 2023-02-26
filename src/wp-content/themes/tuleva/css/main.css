@@ -10886,6 +10886,18 @@ small,
   break-inside: avoid-column;
 }
 
+.collapse-lg-block:not(.collapsing) {
+  display: none;
+}
+.collapse-lg-block:not(.collapsing).show {
+  display: none;
+}
+@media (min-width: 992px) {
+  .collapse-lg-block:not(.collapsing).show {
+    display: block;
+  }
+}
+
 .collapsed__shown {
   display: none;
 }
@@ -11027,5 +11039,13 @@ small,
 }
 #jobs-page .toggle-parent.active {
   background-position: 100% 100%;
+}
+#jobs-page .toggle-parent .collapse-lg-none {
+  display: none;
+}
+@media (max-width: 1199px) {
+  #jobs-page .toggle-parent.active .collapse-lg-none {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

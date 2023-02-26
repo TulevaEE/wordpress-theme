@@ -29,6 +29,12 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 </a>
                             </div>
                             <hr class="w-50 d-inline-block">
+                            <div class="col-12 collapse-lg-none">
+                                <?php the_sub_field('text') ?>
+                            </div>
+                            <div class="col-12 pt-5 text-center collapse-lg-none">
+                                <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>
+                            </div>
                             <div class="col-12 py-4">
                                 <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg btn-cta"><?php the_sub_field('cta_button_text'); ?></a>
                             </div>
@@ -42,7 +48,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
     <?php if( have_rows('job_openings') ): ?>
         <?php while( have_rows('job_openings') ): the_row(); ?>
             <?php $job_id = hyphenate_string(get_sub_field('title') . $unique_id); ?>
-            <section id="<?php echo $job_id; ?>" class="collapse bg-blue-washed" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
+            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block bg-blue-washed" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
                 <div class="container my-auto">
                     <div class="row align-items-center py-5">
                         <div class="col-12 column-lg-2">

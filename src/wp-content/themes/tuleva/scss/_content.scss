@@ -220,6 +220,17 @@
     break-inside: avoid-column;
 }
 
+.collapse-lg-block:not(.collapsing) {
+    display: none;
+
+    &.show {
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+}
+
 .collapsed__shown {
     display: none;
 }
