@@ -193,24 +193,26 @@
     max-width: 100%;
 }
 
-.column-2 {
-    column-count: 2;
-    column-gap: 20px;
+.column-lg-2 {
+    @include media-breakpoint-up(lg) {
+        column-count: 2;
+        column-gap: 20px;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    ol,
-    dl,
-    blockquote,
-    table,
-    pre {
-        break-inside: avoid-column;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        dl,
+        blockquote,
+        table,
+        pre {
+            break-inside: avoid-column;
+        }
     }
 }
 

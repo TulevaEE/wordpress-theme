@@ -45,7 +45,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
             <section id="<?php echo $job_id; ?>" class="collapse bg-blue-washed" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
                 <div class="container my-auto">
                     <div class="row align-items-center py-5">
-                        <div class="column-2">
+                        <div class="col-12 column-lg-2">
                             <?php the_sub_field('text') ?>
                         </div>
                         <div class="col-12 pt-5 text-center">
