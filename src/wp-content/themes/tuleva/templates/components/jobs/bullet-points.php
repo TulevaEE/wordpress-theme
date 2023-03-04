@@ -1,7 +1,7 @@
 <?php
 $class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-washed' : '';
 ?>
-<section class="d-none d-md-block py-6 <?php echo $class ?>">
+<section class="py-6 <?php echo $class ?>">
     <div class="container">
     <h2 class="mb-5"><?php the_sub_field('heading'); ?></h2>
     <?php if( have_rows('bullet_points') ): ?>
