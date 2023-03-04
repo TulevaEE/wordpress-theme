@@ -1,5 +1,5 @@
 <?php if( have_rows('hero') ) while ( have_rows('hero') ) : the_row(); ?>
-<section class="bg-hero-main d-flex flex-column">
+<section class="bg-hero-jobs d-flex flex-column">
     <div class="container my-auto">
         <div class="row align-items-center py-5">
             <div class="col-lg-6 mx-auto">
