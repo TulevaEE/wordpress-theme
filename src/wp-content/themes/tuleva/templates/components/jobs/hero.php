@@ -1,7 +1,8 @@
 <?php if( have_rows('hero') ) while ( have_rows('hero') ) : the_row(); ?>
 <?php
 $image = get_sub_field('image');
-$image_url = $image['sizes']['large']
+$image_url = wp_get_attachment_image_url($image['ID'], 'large');
+$image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
 ?>
 <section class="bg-hero-jobs d-flex flex-column">
     <div class="container my-auto">
@@ -12,7 +13,7 @@ $image_url = $image['sizes']['large']
                 <div class="text-navy mb-5"><?php the_sub_field('text'); ?></div>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid" src="<?php echo $image_url; ?>" alt="">
+                <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="">
             </div>
         </div>
     </div>
