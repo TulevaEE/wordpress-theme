@@ -1,4 +1,8 @@
 <?php if( have_rows('hero') ) while ( have_rows('hero') ) : the_row(); ?>
+<?php
+$image = get_sub_field('image');
+$image_url = $image['sizes']['large']
+?>
 <section class="bg-hero-jobs d-flex flex-column">
     <div class="container my-auto">
         <div class="row align-items-center py-5">
@@ -8,7 +12,7 @@
                 <div class="text-navy mb-5"><?php the_sub_field('text'); ?></div>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid" src="<?php the_sub_field('image'); ?>" alt="">
+                <img class="img-fluid" src="<?php echo $image_url; ?>" alt="">
             </div>
         </div>
     </div>
