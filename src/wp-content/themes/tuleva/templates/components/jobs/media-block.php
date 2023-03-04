@@ -3,15 +3,17 @@ $bg_class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-
 $image_alignment = strtolower(get_sub_field('image_alignment'));
 $image_url = get_sub_field('image');
 $content_class = $image_url ? 'col-lg-6' : 'col-lg-12';
+$left_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-block d-lg-none' : '';
+$right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-none d-lg-block' : '';
 ?>
 <section class="d-flex flex-column <?php echo $bg_class; ?>">
     <div class="container container my-auto">
         <div class="row align-items-center py-5">
-            <?php if ($image_url && $image_alignment === 'left'): ?>
-                <div class="col-lg-6">
+            <?php if ($image_url) { ?>
+                <div class="col-lg-6 <?php echo $left_image_visibility_class; ?>">
                     <img class="img-fluid mb-4" src="<?php echo $image_url; ?>" alt="<?php the_sub_field('heading') ?>">
                 </div>
-            <?php endif; ?>
+            <?php } ?>
 
             <div class="<?php echo $content_class ?> mx-auto">
                 <h3 class="mb-4"><?php the_sub_field('heading') ?></h3>
@@ -22,7 +24,7 @@ $content_class = $image_url ? 'col-lg-6' : 'col-lg-12';
             </div>
 
             <?php if ($image_url && $image_alignment === 'right'): ?>
-                <div class="col-lg-6">
+                <div class="col-lg-6 <?php echo $right_image_visibility_class; ?>">
                     <img class="img-fluid mb-4" src="<?php echo $image_url; ?>" alt="<?php the_sub_field('heading') ?>">
                 </div>
             <?php endif; ?>
