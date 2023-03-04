@@ -18,6 +18,10 @@
         &.active .collapse-lg-none {
             @include media-breakpoint-down(lg) {
                 display: block;
+
+                .h1 {
+                    margin-bottom: 2rem !important;
+                }
             }
         }
     }

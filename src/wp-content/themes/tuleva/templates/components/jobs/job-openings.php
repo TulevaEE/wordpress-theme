@@ -29,7 +29,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 </a>
                             </div>
                             <hr class="w-50 d-inline-block">
-                            <div class="col-12 collapse-lg-none">
+                            <div class="col-12 text-left collapse-lg-none">
                                 <?php the_sub_field('text') ?>
                             </div>
                             <div class="col-12 pt-5 text-center collapse-lg-none">

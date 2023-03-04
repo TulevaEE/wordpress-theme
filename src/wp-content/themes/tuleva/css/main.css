@@ -11079,5 +11079,8 @@ small,
   #jobs-page .toggle-parent.active .collapse-lg-none {
     display: block;
   }
+  #jobs-page .toggle-parent.active .collapse-lg-none .h1 {
+    margin-bottom: 2rem !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
