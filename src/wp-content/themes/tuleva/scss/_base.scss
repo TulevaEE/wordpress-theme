@@ -35,20 +35,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.list-style-arrow {
-    list-style: none;
-    padding-left: 30px;
-    li {
-        padding-left: 2em;
-        background-image: url('../img/icon-arrow-right.svg');
-        background-repeat: no-repeat;
-        background-position: 0 .25em;
-    }
-}
-
 .list-style-checkmark,
 .list-style-cross,
-.list-style-plussign {
+.list-style-plussign,
+.list-style-arrow {
     list-style: none;
     padding-left: 0;
     li {
@@ -76,6 +66,10 @@ input[type=number] {
 
 .list-style-plussign li {
     background-image: url('../img/icon-plussign.svg');
+}
+
+.list-style-arrow li {
+    background-image: url('../img/icon-arrow-right.svg');
 }
 
 .control-code {

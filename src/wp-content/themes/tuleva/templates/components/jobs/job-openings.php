@@ -22,21 +22,14 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 <?php if ($thumbnail_url) { ?>
                                     <img class="w-25 image-circle mb-2" src="<?php echo $thumbnail_url; ?>" alt="<?php the_sub_field('title'); ?>">
                                 <?php } ?>
-                                <h3><?php the_sub_field('title'); ?></h3>
-                                <a class="btn btn-link btn-plus collapsed" data-toggle="collapse" data-target="#<?php echo $job_id; ?>" href="#<?php echo $job_id; ?>" aria-controls="<?php echo $job_id; ?>">
-                                    <span class="text-navy lead font-weight-bold collapsed__shown"><?php the_sub_field('open_link_text'); ?></span>
-                                    <span class="text-navy lead font-weight-bold collapsed__hidden"><?php the_sub_field('close_link_text'); ?></span>
+                                <h3 class="mb-3"><?php the_sub_field('title'); ?></h3>
+                                <a class="btn btn-outline-primary btn-lg collapsed" data-toggle="collapse" data-target="#<?php echo $job_id; ?>" href="#<?php echo $job_id; ?>" aria-controls="<?php echo $job_id; ?>">
+                                    <span class="collapsed__shown"><?php the_sub_field('open_link_text'); ?></span>
+                                    <span class="collapsed__hidden"><?php the_sub_field('close_link_text'); ?></span>
                                 </a>
                             </div>
-                            <hr class="w-50 d-inline-block">
-                            <div class="col-12 text-left collapse-lg-none">
+                            <div class="col-12 text-left collapse-lg-none mt-5">
                                 <?php the_sub_field('text') ?>
-                            </div>
-                            <div class="col-12 pt-5 text-center collapse-lg-none">
-                                <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>
-                            </div>
-                            <div class="col-12 py-4">
-                                <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg btn-cta"><?php the_sub_field('cta_button_text'); ?></a>
                             </div>
                         </div>
 

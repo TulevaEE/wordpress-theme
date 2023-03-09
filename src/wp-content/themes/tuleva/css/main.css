@@ -7924,26 +7924,17 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.list-style-arrow {
-  list-style: none;
-  padding-left: 30px;
-}
-.list-style-arrow li {
-  padding-left: 2em;
-  background-image: url("../img/icon-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-
 .list-style-checkmark,
 .list-style-cross,
-.list-style-plussign {
+.list-style-plussign,
+.list-style-arrow {
   list-style: none;
   padding-left: 0;
 }
 .list-style-checkmark li,
 .list-style-cross li,
-.list-style-plussign li {
+.list-style-plussign li,
+.list-style-arrow li {
   padding-left: 2em;
   margin-bottom: 1em;
   background-repeat: no-repeat;
@@ -7952,14 +7943,16 @@ input[type=number] {
 @media (max-width: 767px) {
   .list-style-checkmark li,
   .list-style-cross li,
-  .list-style-plussign li {
+  .list-style-plussign li,
+  .list-style-arrow li {
     padding-left: 1.5em;
     background-position: 0 0.5em;
   }
 }
 .list-style-checkmark li:last-of-type,
 .list-style-cross li:last-of-type,
-.list-style-plussign li:last-of-type {
+.list-style-plussign li:last-of-type,
+.list-style-arrow li:last-of-type {
   margin-bottom: 0;
 }
 
@@ -7973,6 +7966,10 @@ input[type=number] {
 
 .list-style-plussign li {
   background-image: url("../img/icon-plussign.svg");
+}
+
+.list-style-arrow li {
+  background-image: url("../img/icon-arrow-right.svg");
 }
 
 .control-code {
@@ -10308,8 +10305,8 @@ small,
 }
 
 .bg-hero-jobs {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/tuleva-party.jpg");
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/tuleva-party.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.94)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party.jpg");
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.94), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party.jpg");
   background-position: 0px 0px, 50% 40%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -10322,20 +10319,20 @@ small,
 }
 @media (max-width: 991px) {
   .bg-hero-jobs {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/tuleva-party-1536x995.jpg");
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/tuleva-party-1536x995.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-1536x995.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-1536x995.jpg");
   }
 }
 @media (max-width: 767px) {
   .bg-hero-jobs {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/tuleva-party-1024x663.jpg");
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/tuleva-party-1024x663.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-1024x663.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-1024x663.jpg");
   }
 }
 @media (max-width: 575px) {
   .bg-hero-jobs {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/tuleva-party-500x324.jpg");
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/tuleva-party-500x324.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-500x324.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-500x324.jpg");
   }
 }
 

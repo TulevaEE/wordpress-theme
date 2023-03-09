@@ -162,26 +162,17 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.list-style-arrow {
-  list-style: none;
-  padding-left: 30px;
-}
-.list-style-arrow li {
-  padding-left: 2em;
-  background-image: url("../img/icon-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-
 .list-style-checkmark,
 .list-style-cross,
-.list-style-plussign {
+.list-style-plussign,
+.list-style-arrow {
   list-style: none;
   padding-left: 0;
 }
 .list-style-checkmark li,
 .list-style-cross li,
-.list-style-plussign li {
+.list-style-plussign li,
+.list-style-arrow li {
   padding-left: 2em;
   margin-bottom: 1em;
   background-repeat: no-repeat;
@@ -190,14 +181,16 @@ input[type=number] {
 @media (max-width: 767px) {
   .list-style-checkmark li,
   .list-style-cross li,
-  .list-style-plussign li {
+  .list-style-plussign li,
+  .list-style-arrow li {
     padding-left: 1.5em;
     background-position: 0 0.5em;
   }
 }
 .list-style-checkmark li:last-of-type,
 .list-style-cross li:last-of-type,
-.list-style-plussign li:last-of-type {
+.list-style-plussign li:last-of-type,
+.list-style-arrow li:last-of-type {
   margin-bottom: 0;
 }
 
@@ -211,6 +204,10 @@ input[type=number] {
 
 .list-style-plussign li {
   background-image: url("../img/icon-plussign.svg");
+}
+
+.list-style-arrow li {
+  background-image: url("../img/icon-arrow-right.svg");
 }
 
 .control-code {

@@ -222,6 +222,10 @@ $(document).ready(function ($) {
                 $($toggle).closest('.toggle-parent').removeClass('active');
             });
 
+            $('.accordion-parent').on('shown.bs.collapse', function () {
+                this.scrollIntoView();
+            });
+
             $('[data-toggle="collapse"]').click(function() {
                 var target = $(this).attr('data-target');
                 var $target = $(target);
