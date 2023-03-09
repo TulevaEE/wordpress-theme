@@ -1,4 +1,4 @@
-<section id="join-cta" class="d-none d-md-block py-5 bg-blue-washed">
+<section id="join-cta" class="py-5 bg-blue-washed">
     <div class="container">
       <div class="row text-center">
         <div class="d-flex w-100 justify-content-center align-items-center">

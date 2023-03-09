@@ -1,6 +1,6 @@
 <div class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div class="bg-blue-washed">
+    <div>
         <div class="container py-6">
             <div class="row">
                 <div class="col">
@@ -18,6 +18,17 @@
             </div>
         </div>
     </div>
+    <?php
+        if (have_rows('page_components')) {
+            while (have_rows('page_components')) { the_row();
+                if (get_row_layout() === 'cta_block') {
+                    get_template_part('templates/components/cta-change');
+                } else if (get_row_layout() === 'middle_cta') {
+                    get_template_part('templates/components/middle-cta');
+                }
+            }
+        }
+    ?>
     <div class="container pb-6">
         <?php if( have_rows('contacts_block') ) while ( have_rows('contacts_block') ) : the_row(); ?>
         <div class="row pt-6">
