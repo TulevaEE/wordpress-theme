@@ -4,7 +4,6 @@ $image_alignment = strtolower(get_sub_field('image_alignment'));
 $original_image_url = get_sub_field('image');
 $image_id = attachment_url_to_postid($original_image_url);
 $image_url = wp_get_attachment_image_url($image_id, 'large');
-$image_srcset = wp_get_attachment_image_srcset($image_id,'large');
 $content_class = $image_url ? 'col-lg-6' : 'col-lg-12';
 $left_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-block d-lg-none' : '';
 $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-none d-lg-block' : '';
@@ -14,7 +13,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
         <div class="row align-items-center py-5">
             <?php if ($image_url) { ?>
                 <div class="col-lg-6 <?php echo $left_image_visibility_class; ?>">
-                    <img class="img-fluid mb-4" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="<?php the_sub_field('heading') ?>">
+                    <?php get_template_part('templates/components/jobs/media-block-image'); ?>
                 </div>
             <?php } ?>
 
@@ -28,7 +27,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
 
             <?php if ($image_url && $image_alignment === 'right'): ?>
                 <div class="col-lg-6 <?php echo $right_image_visibility_class; ?>">
-                    <img class="img-fluid mb-4" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="<?php the_sub_field('heading') ?>">
+                    <?php get_template_part('templates/components/jobs/media-block-image'); ?>
                 </div>
             <?php endif; ?>
         </div>

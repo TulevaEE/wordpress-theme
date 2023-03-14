@@ -25,4 +25,38 @@
             }
         }
     }
+
+    .media-block__media {
+        position: relative;
+        display: inline-block;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .media-block__media__icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            padding-top: 30px;
+            padding-left: 30px;
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0.8;
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+
+
+            image {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &:hover .media-block__media__icon {
+            opacity: 1;
+        }
+    }
 }
