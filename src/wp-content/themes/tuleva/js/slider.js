@@ -1,5 +1,3 @@
-/* global mixpanel */
-
 function calculateSaving(age, netWage) {
     var grossWage = netWage / 0.8,
         pastAverageReturn = 1.039,
@@ -39,9 +37,7 @@ $('#tuleva-calculator-wage').rangeslider({
     },
 
     onSlideEnd: function (position, wage) {
-        mixpanel.track("Wage slider interaction", {
-            wage: wage
-        });
+
     }
 });
 
@@ -68,8 +64,6 @@ $('#tuleva-calculator-age').rangeslider({
     },
 
     onSlideEnd: function (position, age) {
-        mixpanel.track("Age slider interaction", {
-            age: age
-        });
+
     }
 });

@@ -9,7 +9,4 @@
             </div>
         </div>
     <?php endwhile; ?>
-    <script type="text/javascript">
-        mixpanel.track("MEMBERSHIP_SUCCESS_PAGE");
-    </script>
 </div>
