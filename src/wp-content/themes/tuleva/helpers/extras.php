@@ -311,7 +311,9 @@ function get_member_count()
 
 function is_cookie_consent()
 {
-    return !empty($_COOKIE['cookie-consent']);
+    // TODO: Disabling. Needs to be removed completely, when new cookie banner is implemented.
+    // return !empty($_COOKIE['cookie-consent']);
+    return true;
 }
 
 function print_funds_js()
