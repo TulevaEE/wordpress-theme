@@ -156,12 +156,12 @@ $(document).ready(function ($) {
         },
         calculateThirdPillarSavings = function () {
             var $calculator = $('.third-pillar-calculator');
-            var yearlyWage = parseInt($calculator.find('#yearlyWage').val()) || 0;
-            var monthlyWage = parseInt($calculator.find('#monthlyWage').val()) || 0;
+            var yearlyWage = parseInt($calculator.find('#yearlyWage').val()) || 24000;
+            var monthlyWage = parseInt($calculator.find('#monthlyWage').val()) || 2000;
             var wageAddition = parseInt($calculator.find('#wageAddition').val()) || 0;
             var wageDeduction = parseInt($calculator.find('#wageDeduction').val()) || 0;
-            var taxReliefs = parseInt($calculator.find('#taxReliefs').val()) || 0;
-            var kids = parseInt($calculator.find('#kids').val()) || 0;
+            var taxReliefs = parseInt($calculator.find('#taxReliefs').val()) || 300;
+            var kids = parseInt($calculator.find('#kids').val()) || 2;
 
             var wage = yearlyWage ? yearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
