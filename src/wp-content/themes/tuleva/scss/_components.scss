@@ -1441,8 +1441,8 @@
 
 .qa-block {
     &--collapsed {
-        .qa__question-wrapper:nth-child(n+6),
-        .qa__question-wrapper:nth-child(n+6) + hr {
+        .qa__question-wrapper:nth-child(n+20),
+        .qa__question-wrapper:nth-child(n+20) + hr {
             display: none;
         }
     }

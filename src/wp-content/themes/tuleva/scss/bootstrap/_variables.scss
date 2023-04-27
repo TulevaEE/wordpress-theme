@@ -222,8 +222,8 @@ $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-lg:                calc($font-size-base * 1.25) !default;
+$font-size-sm:                calc($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
@@ -239,7 +239,7 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-margin-bottom:      calc($spacer / 2) !default;
 $headings-font-family:        inherit !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
@@ -256,7 +256,7 @@ $display3-weight:             300 !default;
 $display4-weight:             300 !default;
 $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-size:              calc($font-size-base * 1.25) !default;
 $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
@@ -264,7 +264,7 @@ $small-font-size:             80% !default;
 $text-muted:                  $gray-600 !default;
 
 $blockquote-small-color:      $gray-600 !default;
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        calc($font-size-base * 1.25) !default;
 
 $hr-border-color:             rgba($black,.1) !default;
 $hr-border-width:             $border-width !default;
@@ -536,7 +536,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-y:                  calc($spacer / 2) !default;
 $navbar-padding-x:                  $spacer !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
@@ -611,7 +611,7 @@ $card-bg:                           $white !default;
 
 $card-img-overlay-padding:          1.25rem !default;
 
-$card-group-margin:                 ($grid-gutter-width / 2) !default;
+$card-group-margin:                 calc($grid-gutter-width / 2) !default;
 $card-deck-margin:                  $card-group-margin !default;
 
 $card-columns-count:                3 !default;
