@@ -364,3 +364,37 @@ function get_esg_document_url()
 function hyphenate_string($string) {
     return strtolower(preg_replace('/[^a-zA-Z0-9]+/', '-', $string));
 }
+
+function generate_report_link($url, $link_text = null) {
+    preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches);
+    $year = intval($matches[1]);
+    $month = intval($matches[2]);
+
+    $month--;
+    if ($month === 0) {
+        $month = 12;
+        $year--;
+    }
+
+    $year_str = substr(strval($year), -2);
+    $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
+
+    if ($link_text === null) {
+        $link_text = sprintf('%s.%s', $month_str, $year_str);
+    }
+
+    if (filter_var($url, FILTER_VALIDATE_URL)) {
+        $path = parse_url($url, PHP_URL_PATH);
+    } else {
+        $path = $url;
+    }
+
+    $output = sprintf(
+        '<a href="%s%s" target="_blank">%s</a>',
+        get_site_url(),
+        $path,
+        $link_text
+    );
+
+    return $output;
+}

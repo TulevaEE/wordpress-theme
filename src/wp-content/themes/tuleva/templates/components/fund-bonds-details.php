@@ -79,7 +79,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/04/TULVPF-investeeringute-aruanne-310323.pdf" target="_blank">03.23</a>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2023/05/TULVPF-investeeringute-aruanne-280423.pdf'); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
