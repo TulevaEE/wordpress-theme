@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
@@ -1741,7 +1741,7 @@ msgid "See also our %sFAQ%s page."
 msgstr ""
 
 #: widgets/help-widget.php:80
-msgid "Ask Tõnu or Mari from Tuleva team."
+msgid "Ask Pirje from Tuleva team."
 msgstr ""
 
 #: widgets/subscribe-widget.php:14

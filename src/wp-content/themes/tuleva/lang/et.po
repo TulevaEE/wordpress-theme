@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2023-02-13 16:00:46+00:00\n"
-"PO-Revision-Date: 2023-02-13 18:01+0200\n"
+"PO-Revision-Date: 2023-05-17 09:06+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:25 helpers/acf/init.php:17 helpers/post-types/init.php:9
@@ -2101,8 +2101,8 @@ msgid "See also our %sFAQ%s page."
 msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
 
 #: widgets/help-widget.php:80
-msgid "Ask Tõnu or Mari from Tuleva team."
-msgstr "Vastab Tõnu või Mari Tuleva tiimist."
+msgid "Ask Pirje from Tuleva team."
+msgstr "Vastab Pirje Tuleva tiimist."
 
 #: widgets/subscribe-widget.php:14
 msgid "Subscribe form"

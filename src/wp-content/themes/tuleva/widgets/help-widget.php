@@ -77,7 +77,7 @@ class Help_Widget extends WP_Widget {
         <?php } ?>
 
         <div class="d-flex">
-            <p class="small w-50 mr-3 mb-3"><?php _e('Ask Tõnu or Mari from Tuleva team.', TEXT_DOMAIN); ?></p>
+            <p class="small w-50 mr-3 mb-3"><?php _e('Ask Pirje from Tuleva team.', TEXT_DOMAIN); ?></p>
         </div>
 
         <a class="btn btn-outline-primary footer-help" href="#"><?php echo $button_label; ?></a>
