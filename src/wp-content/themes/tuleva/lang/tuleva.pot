@@ -1,10 +1,10 @@
-# Copyright (C) 2023
+# Copyright (C) 2023 
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-02-13 16:00:46+00:00\n"
+"POT-Creation-Date: 2023-07-09 18:48:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: functions.php:25 helpers/acf/init.php:17 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
 #: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr ""
@@ -58,7 +58,7 @@ msgid "Join us!"
 msgstr ""
 
 #: templates/components/cta-join.php:8
-#: templates/components/front-proposal.php:35
+#: templates/components/front-proposal.php:29
 #: templates/components/middle-cta.php:5
 #: templates/components/mutual-header.php:37
 #: templates/components/signup-block.php:27
@@ -240,32 +240,32 @@ msgstr ""
 msgid "Estonians invest in Tuleva pension funds."
 msgstr ""
 
-#: templates/components/front-proposal.php:13
+#: templates/components/front-proposal.php:7
 msgid ""
 "Tuleva is a growing mutual company. Born as a citizens’s initiative, it has "
 "%s owners or members."
 msgstr ""
 
-#: templates/components/front-proposal.php:16
+#: templates/components/front-proposal.php:10
 msgid ""
 "If you like Tuleva’s goals, want to support reaching them and want to "
 "benefit as an owner from everything Tuleva does in the future, then come and "
 "become a Tuleva member."
 msgstr ""
 
-#: templates/components/front-proposal.php:23
+#: templates/components/front-proposal.php:17
 msgid "Become a member and choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:25
+#: templates/components/front-proposal.php:19
 msgid "You accumulate your pension in our joint low-cost pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:26
+#: templates/components/front-proposal.php:20
 msgid "Members can earn dividends"
 msgstr ""
 
-#: templates/components/front-proposal.php:26
+#: templates/components/front-proposal.php:20
 msgid ""
 "Tuleva liikmed võivad saada liikmeboonust. Liikmeboonus on omanikutulu, mida "
 "saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud "
@@ -273,43 +273,43 @@ msgid ""
 "kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest."
 msgstr ""
 
-#: templates/components/front-proposal.php:27
+#: templates/components/front-proposal.php:21
 msgid ""
 "You support Tuleva development plans and help to improve Estonian pension "
 "system"
 msgstr ""
 
-#: templates/components/front-proposal.php:33
+#: templates/components/front-proposal.php:27
 msgid "one-off joining fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:39
+#: templates/components/front-proposal.php:33
 msgid "Simply choose Tuleva pension fund"
 msgstr ""
 
-#: templates/components/front-proposal.php:41
+#: templates/components/front-proposal.php:35
 msgid ""
 "Your save for your pension with a low-cost pension fund where owners care "
 "about your returns not bank’s."
 msgstr ""
 
-#: templates/components/front-proposal.php:42
+#: templates/components/front-proposal.php:36
 msgid "Three times lower than average management fee"
 msgstr ""
 
-#: templates/components/front-proposal.php:47
+#: templates/components/front-proposal.php:41
 msgid "FREE"
 msgstr ""
 
-#: templates/components/front-proposal.php:48
+#: templates/components/front-proposal.php:42
 msgid "and it takes only 5 minutes"
 msgstr ""
 
-#: templates/components/front-proposal.php:50
+#: templates/components/front-proposal.php:44
 msgid "<a class=\"link\" href=\"/en/funds/\">Learn about the funds</a>"
 msgstr ""
 
-#: templates/components/front-proposal.php:51
+#: templates/components/front-proposal.php:45
 msgid ""
 "<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the "
 "fund</a>"
@@ -356,156 +356,164 @@ msgstr ""
 msgid "Management fee"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:37
-#: templates/components/fund-stocks-details.php:37
-#: templates/components/fund-third-details.php:37
+#: templates/components/fund-bonds-details.php:38
+#: templates/components/fund-stocks-details.php:38
+#: templates/components/fund-third-details.php:38
 msgid "Total expense ratio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:41
-#: templates/components/fund-stocks-details.php:41
-#: templates/components/fund-third-details.php:41
+#: templates/components/fund-bonds-details.php:42
+#: templates/components/fund-stocks-details.php:42
+#: templates/components/fund-third-details.php:42
+msgid ""
+"Ongoing charges are based on expenses for the last calendar year, i.e., %s. "
+"Ongoing charges may vary from year to year."
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:48
+#: templates/components/fund-stocks-details.php:48
+#: templates/components/fund-third-details.php:48
 msgid "Redemption fee and issue fee"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:45
-#: templates/components/fund-stocks-details.php:45
-#: templates/components/fund-third-details.php:45
+#: templates/components/fund-bonds-details.php:52
+#: templates/components/fund-stocks-details.php:52
+#: templates/components/fund-third-details.php:52
 msgid "Fund manager's participation rate in fund"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:46
-#: templates/components/fund-stocks-details.php:46
-#: templates/components/fund-third-details.php:46
-msgid "units"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:49
-#: templates/components/fund-stocks-details.php:49
-#: templates/components/fund-third-details.php:49
-msgid "Risk profile"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:50
-msgid "Conservative"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:53
 #: templates/components/fund-stocks-details.php:53
 #: templates/components/fund-third-details.php:53
+msgid "units"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:56
+#: templates/components/fund-stocks-details.php:56
+#: templates/components/fund-third-details.php:56
+msgid "Risk profile"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:57
+msgid "Conservative"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:60
+#: templates/components/fund-stocks-details.php:60
+#: templates/components/fund-third-details.php:60
 msgid "Comparison index"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-bonds-details.php:61
 msgid "and"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-stocks-details.php:58
-#: templates/components/fund-third-details.php:58
+#: templates/components/fund-bonds-details.php:65
+#: templates/components/fund-stocks-details.php:65
+#: templates/components/fund-third-details.php:65
 msgid "Documents"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid "Prospectus"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid " and "
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid "Terms and conditions"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid " (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-stocks-details.php:64
-#: templates/components/fund-third-details.php:64
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-third-details.php:71
 msgid "Model portfolio (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-stocks-details.php:67
-#: templates/components/fund-third-details.php:67
+#: templates/components/fund-bonds-details.php:74
+#: templates/components/fund-stocks-details.php:74
+#: templates/components/fund-third-details.php:74
 msgid "Key Investor Information (in Estonian)"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-stocks-details.php:70
-#: templates/components/fund-third-details.php:70
-msgid "Procedure for determining net worth of fund (in Estonian)"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-stocks-details.php:73
-#: templates/components/fund-third-details.php:73
-msgid "Consideration of sustainability risks"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:77
 #: templates/components/fund-stocks-details.php:77
 #: templates/components/fund-third-details.php:77
-msgid "Reports"
+msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:80
 #: templates/components/fund-stocks-details.php:80
 #: templates/components/fund-third-details.php:80
-msgid "Investment reports (in Estonian)"
+msgid "Consideration of sustainability risks"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:84
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
-msgid "Previous reports"
+msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
-msgid "Financial reports of fund and fund manager (in Estonian)"
+msgid "Investment reports (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:91
 #: templates/components/fund-stocks-details.php:91
 #: templates/components/fund-third-details.php:91
-msgid "Sustainability information"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:93
-#: templates/components/fund-stocks-details.php:93
-#: templates/components/fund-third-details.php:93
-msgid "CO2 intensity"
+msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:94
 #: templates/components/fund-stocks-details.php:94
 #: templates/components/fund-third-details.php:94
+msgid "Financial reports of fund and fund manager (in Estonian)"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:98
+#: templates/components/fund-stocks-details.php:98
+#: templates/components/fund-third-details.php:98
+msgid "Sustainability information"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:100
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-third-details.php:100
+msgid "CO2 intensity"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:101
+#: templates/components/fund-stocks-details.php:101
+#: templates/components/fund-third-details.php:101
 msgid "%s tons / $1M turnover per year"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
+#: templates/components/fund-bonds-details.php:104
+#: templates/components/fund-stocks-details.php:104
+#: templates/components/fund-third-details.php:104
 msgid ""
 "Share of investments with increased negative impact in the equity portfolio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:99
-#: templates/components/fund-stocks-details.php:99
-#: templates/components/fund-third-details.php:99
+#: templates/components/fund-bonds-details.php:106
+#: templates/components/fund-stocks-details.php:106
+#: templates/components/fund-third-details.php:106
 msgid ""
 "Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%"
 "%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); "
@@ -704,8 +712,8 @@ msgid ""
 "ee</a>"
 msgstr ""
 
-#: templates/components/fund-stocks-details.php:50
-#: templates/components/fund-third-details.php:50
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid "Aggressive"
 msgstr ""
 
@@ -1421,129 +1429,129 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:16
+#: templates/components/third-pillar-calculator.php:11
 msgid ""
 "<strong><a href=\"#modal-gross_income\">Total gross income this year</a></"
 "strong>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:27
-#: templates/components/third-pillar-calculator.php:50
-#: templates/components/third-pillar-calculator.php:72
-#: templates/components/third-pillar-calculator.php:184
+#: templates/components/third-pillar-calculator.php:22
+#: templates/components/third-pillar-calculator.php:45
+#: templates/components/third-pillar-calculator.php:67
+#: templates/components/third-pillar-calculator.php:179
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:34
+#: templates/components/third-pillar-calculator.php:29
 msgid "of which dividends"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:37
+#: templates/components/third-pillar-calculator.php:32
 msgid ""
 "Gross income, from which income tax has not been withheld as a private "
 "person. For example, dividends received from an Estonian company; dividends "
 "that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:57
+#: templates/components/third-pillar-calculator.php:52
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:60
+#: templates/components/third-pillar-calculator.php:55
 msgid ""
 "Home loan interest up to €300, gifts and donations, education costs, "
 "including kindergarten fees"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:78
-#: templates/components/third-pillar-calculator.php:191
+#: templates/components/third-pillar-calculator.php:73
+#: templates/components/third-pillar-calculator.php:186
 msgid "Number of underage children"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:81
-#: templates/components/third-pillar-calculator.php:194
+#: templates/components/third-pillar-calculator.php:76
+#: templates/components/third-pillar-calculator.php:189
 msgid ""
 "One parent of children under the age of 18 can deduct additional tax-free "
 "income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:93
-#: templates/components/third-pillar-calculator.php:206
+#: templates/components/third-pillar-calculator.php:88
+#: templates/components/third-pillar-calculator.php:201
 msgid "kids"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:99
+#: templates/components/third-pillar-calculator.php:94
 msgid "Sensible contribution to III pillar"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:103
-#: templates/components/third-pillar-calculator.php:216
+#: templates/components/third-pillar-calculator.php:98
+#: templates/components/third-pillar-calculator.php:211
 msgid ""
 "Contributions to the III pillar are subject to an income tax discount of up "
 "to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:117
+#: templates/components/third-pillar-calculator.php:112
 msgid "Your gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:120
-#: templates/components/third-pillar-calculator.php:233
+#: templates/components/third-pillar-calculator.php:115
+#: templates/components/third-pillar-calculator.php:228
 msgid ""
 "The declaration of income for this year will start on February 15 next year. "
 "Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:135
+#: templates/components/third-pillar-calculator.php:130
 msgid "Make a III pillar payment"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:139
+#: templates/components/third-pillar-calculator.php:134
 msgid ""
 "To make a payment log into your pension account using your ID-card, Mobile-"
 "ID or Smart-ID."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:146
+#: templates/components/third-pillar-calculator.php:141
 msgid "Monthly gross salary"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:149
+#: templates/components/third-pillar-calculator.php:144
 msgid ""
 "Your monthly gross salary (before tax). Including parental benefits, "
 "pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:161
+#: templates/components/third-pillar-calculator.php:156
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:168
+#: templates/components/third-pillar-calculator.php:163
 msgid "Other yearly gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:171
+#: templates/components/third-pillar-calculator.php:166
 msgid ""
 "Yearly gross income taxed at 20% income tax rate such as apartment rental "
 "income, Airbnb income, interest earned. Also dividends taxed at 7% personal "
 "income tax rate."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:212
+#: templates/components/third-pillar-calculator.php:207
 msgid ""
 "<span class=\"d-inline-block\">Reasonable monthly contribution</span> <span "
 "class=\"d-inline-block\">to III pillar</span>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:230
+#: templates/components/third-pillar-calculator.php:225
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:248
+#: templates/components/third-pillar-calculator.php:243
 msgid "Get started"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:252
+#: templates/components/third-pillar-calculator.php:247
 msgid ""
 "Setting up a recurring III pillar payment is <strong>free of charge</strong> "
 "and takes only 5&nbsp;minutes. In order to do that, you need to log in to "
@@ -1830,6 +1838,10 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Instructions — Step 1"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Jobs"
 msgstr ""
 
 #. Template Name of the plugin/theme

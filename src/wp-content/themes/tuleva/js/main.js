@@ -335,6 +335,8 @@ $(document).ready(function ($) {
         }
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
     $('.qa-block').each(function () {
         if ($(this).find('.qa__question-wrapper').length < 4) {
             $(this).find('.qa-block__expand').remove();

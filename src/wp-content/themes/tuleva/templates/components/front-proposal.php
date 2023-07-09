@@ -1,9 +1,3 @@
-      <script type="text/javascript">
-      $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();
-      });
-      </script>
-
       <div class="proposal">
         <div class="hero">
           <div class="intro w-container">

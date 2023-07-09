@@ -34,7 +34,14 @@
                             <div>0,29%</div>
                         </div>
                         <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
+                            <div class="small text-bold">
+                                <?php _e('Total expense ratio', TEXT_DOMAIN) ?>
+                                <span
+                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="<?php echo sprintf(__("Ongoing charges are based on expenses for the last calendar year, i.e., %s. Ongoing charges may vary from year to year.", TEXT_DOMAIN), date("Y") - 1); ?>"
+                                ></span>
+                            </div>
                             <div>0,37%</div>
                         </div>
                         <div class="fund-info__item">

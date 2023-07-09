@@ -1,8 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
 <?php
 $isDecember = (date('m') == 12);
 ?>
