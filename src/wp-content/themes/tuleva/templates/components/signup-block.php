@@ -1,9 +1,10 @@
 <section id="<?php the_sub_field('component_id'); ?>">
     <div id="inline-signup-anchor"></div>
     <div class="container row-spacing-half">
-        <div class="row text-center row-spacing-bottom-quarter">
+        <div class="row row-spacing-bottom-quarter">
             <div class="col">
-                <h2><?php the_sub_field('heading'); ?></h2>
+                <h2 class="text-center"><?php the_sub_field('heading'); ?></h2>
+                <?php the_sub_field('text'); ?>
             </div>
         </div>
         <div class="row">
