@@ -10,7 +10,24 @@
                         <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3"><?php the_sub_field('button_text'); ?></a>
                     <?php } ?>
 
-                    <p class="small text-navy mb-md-5 mb-lg-0"><?php the_sub_field('small_text'); ?></p>
+                    <p class="small text-navy mb-md-5 mb-lg-0">
+                        <?php
+                        $isMarch = (date('m') == 3);
+                        $isJuly = (date('m') == 7);
+                        $isNovember = (date('m') == 11);
+                        $dayOfMonth = (int)date('j');
+
+                        if ($isMarch && $dayOfMonth > 21) {
+                            _e('The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
+                        } elseif ($isJuly && $dayOfMonth > 21) {
+                            _e('The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
+                        } elseif ($isNovember && $dayOfMonth > 21) {
+                            _e('The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
+                        } else {
+                            the_sub_field('small_text');
+                        }
+                        ?>
+                    </p>
                 </div>
                 <div class="col-lg-6">
                     <?php get_template_part('templates/components/front-hero/calculator'); ?>

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-07-09 18:48:41+00:00\n"
+"POT-Creation-Date: 2023-07-26 07:58:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,6 +49,27 @@ msgstr ""
 msgid "RSS feed"
 msgstr ""
 
+#: templates/components/cta-change.php:13
+#: templates/components/front-hero.php:21
+msgid ""
+"The deadline for this fund exchange period is <b>March 31.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+
+#: templates/components/cta-change.php:15
+#: templates/components/front-hero.php:23
+msgid ""
+"The deadline for this fund exchange period is <b>July 31.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+
+#: templates/components/cta-change.php:17
+#: templates/components/front-hero.php:25
+msgid ""
+"The deadline for this fund exchange period is <b>November 30.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+
 #: templates/components/cta-join.php:5 templates/components/middle-cta.php:2
 msgid "Are we on the right track?"
 msgstr ""
@@ -61,7 +82,7 @@ msgstr ""
 #: templates/components/front-proposal.php:29
 #: templates/components/middle-cta.php:5
 #: templates/components/mutual-header.php:37
-#: templates/components/signup-block.php:27
+#: templates/components/signup-block.php:28
 msgid "Become a member"
 msgstr ""
 
@@ -1421,7 +1442,7 @@ msgid ""
 "banks and insurance companies."
 msgstr ""
 
-#: templates/components/signup-block.php:26
+#: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
 msgstr ""
 

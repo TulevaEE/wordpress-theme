@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-07-09 18:48:41+00:00\n"
-"PO-Revision-Date: 2023-07-09 21:50+0300\n"
+"POT-Creation-Date: 2023-07-26 07:58:49+00:00\n"
+"PO-Revision-Date: 2023-07-26 10:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
@@ -53,6 +53,33 @@ msgstr "Kõik artiklid"
 msgid "RSS feed"
 msgstr "RSS voog"
 
+#: templates/components/cta-change.php:13
+#: templates/components/front-hero.php:21
+msgid ""
+"The deadline for this fund exchange period is <b>March 31.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+"Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta."
+"</b>"
+
+#: templates/components/cta-change.php:15
+#: templates/components/front-hero.php:23
+msgid ""
+"The deadline for this fund exchange period is <b>July 31.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+"Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta."
+"</b>"
+
+#: templates/components/cta-change.php:17
+#: templates/components/front-hero.php:25
+msgid ""
+"The deadline for this fund exchange period is <b>November 30.</b> Switching "
+"funds is <b>free.</b>"
+msgstr ""
+"Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
+"<b>tasuta.</b>"
+
 #: templates/components/cta-join.php:5 templates/components/middle-cta.php:2
 msgid "Are we on the right track?"
 msgstr "Kas oleme õigel teel?"
@@ -65,7 +92,7 @@ msgstr "Ühine meiega!"
 #: templates/components/front-proposal.php:29
 #: templates/components/middle-cta.php:5
 #: templates/components/mutual-header.php:37
-#: templates/components/signup-block.php:27
+#: templates/components/signup-block.php:28
 msgid "Become a member"
 msgstr "Astu liikmeks"
 
@@ -198,7 +225,7 @@ msgstr ""
 
 #: templates/components/front-header.php:17
 msgid "Switching funds is free (and takes only five minutes)."
-msgstr "Fondivahetus on TASUTA ja võtab vaid 5 minutit."
+msgstr "Fondivahetus on tasuta ja võtab vaid 5 minutit."
 
 #: templates/components/front-header.php:24
 #: templates/components/front-hero/calculator.php:5
@@ -1742,7 +1769,7 @@ msgstr ""
 "paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte "
 "pankadele ja kindlustusseltsidele."
 
-#: templates/components/signup-block.php:26
+#: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
 msgstr "Liikmeks astumiseks logi sisse oma pensionikontole."
 
