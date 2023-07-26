@@ -103,7 +103,7 @@ class ThemeEnqueue
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '20230726-2',
+                'ver' => '20230726',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
@@ -114,7 +114,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '20220922',
+                'ver' => '20230726',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
