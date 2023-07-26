@@ -58,7 +58,7 @@ $isDecember = (date('m') == 12);
                         <td class="py-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="taxReliefs"
-                                       min="0" step="1" placeholder="300"
+                                       min="0" step="1" placeholder="0"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
@@ -79,7 +79,7 @@ $isDecember = (date('m') == 12);
                         <td class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="kids"
-                                       min="0" step="1" placeholder="2"
+                                       min="0" step="1" placeholder="0"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
@@ -192,7 +192,7 @@ $isDecember = (date('m') == 12);
                         <td class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="kids"
-                                       min="0" step="1" placeholder="2"
+                                       min="0" step="1" placeholder="0"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>

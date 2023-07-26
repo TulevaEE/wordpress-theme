@@ -165,9 +165,9 @@ $(document).ready(function ($) {
             var wageDeduction = parseInt($calculator.find('#wageDeduction').val());
             wageDeduction = isNaN(wageDeduction) ? 0 : wageDeduction;
             var taxReliefs = parseInt($calculator.find('#taxReliefs').val());
-            taxReliefs = isNaN(taxReliefs) ? 300 : taxReliefs;
+            taxReliefs = isNaN(taxReliefs) ? 0 : taxReliefs;
             var kids = parseInt($calculator.find('#kids').val());
-            kids = isNaN(kids) ? 2 : kids;
+            kids = isNaN(kids) ? 0 : kids;
 
             var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
