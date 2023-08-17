@@ -77,7 +77,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Consideration of sustainability risks', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
 

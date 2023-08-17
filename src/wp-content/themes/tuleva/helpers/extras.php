@@ -350,12 +350,11 @@ function print_funds_js()
 }
 add_action('wp_footer', 'print_funds_js');
 
-function get_esg_document_url()
-{
+function get_esg_document_url() {
     $esg_document_path = '/wp-content/uploads/2022/09/Principles-for-considering-sustainability-risks_01.09.2022.pdf';
 
     if (ICL_LANGUAGE_CODE == 'et') {
-        $esg_document_path = '/wp-content/uploads/2022/09/Tuleva_jatkusuutlikkusriskidega_arvestamise_poliitika_01.09.2022.pdf';
+        $esg_document_path = '/wp-content/uploads/2023/08/Tuleva_jatkusuutlikkusest_30.06.2023.pdf';
     }
 
     return get_site_url() . $esg_document_path;
