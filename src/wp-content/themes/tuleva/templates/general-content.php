@@ -32,6 +32,10 @@
                     get_template_part('templates/components/third-pillar-hero');
                 } else if (get_row_layout() === 'featured_articles') {
                     get_template_part('templates/components/featured-articles');
+                } else if (get_row_layout() === 'media_block_with_cta') {
+                    get_template_part('templates/components/tuleva-difference');
+                } else if (get_row_layout() === 'media_block') {
+                    get_template_part('templates/components/media-block/media-block');
                 }
             }
         }
