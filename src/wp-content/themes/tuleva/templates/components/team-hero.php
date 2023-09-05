@@ -1,10 +1,10 @@
-<?php if( have_rows('hero') ) while ( have_rows('hero') ) : the_row(); ?>
+
 <?php
 $image = get_sub_field('image');
 $image_url = wp_get_attachment_image_url($image['ID'], 'large');
 $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
 ?>
-<section class="bg-hero-team d-flex flex-column">
+<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-team d-flex flex-column">
     <div class="container my-auto">
         <div class="row align-items-center py-5">
             <div class="col-lg-6 mx-auto">
@@ -18,4 +18,3 @@ $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
         </div>
     </div>
 </section>
-<?php endwhile; ?>

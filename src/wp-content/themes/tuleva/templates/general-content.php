@@ -1,12 +1,13 @@
 <div class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post();
-
         if (have_rows('page_components')) {
             while (have_rows('page_components')) { the_row();
                 if (get_row_layout() === 'mutual_hero') {
                     get_template_part('templates/components/mutual-hero');
                 } else if (get_row_layout() === 'mutual_proposal') {
                     get_template_part('templates/components/mutual-proposal');
+                } else if (get_row_layout() === 'team_hero') {
+                    get_template_part( 'templates/components/team-hero' );
                 } else if (get_row_layout() === 'story') {
                     get_template_part('templates/components/story');
                 } else if (get_row_layout() === 'goals') {
