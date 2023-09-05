@@ -15,7 +15,7 @@
             <?php if (have_rows('sections')) {
                 while (have_rows('sections')) { the_row();
                     if (get_row_layout() === 'media_block') {
-                        get_template_part('templates/components/jobs/media-block');
+                        get_template_part('templates/components/media-block/media-block');
                     } else if (get_row_layout() === 'lead') {
                         get_template_part('templates/components/jobs/lead');
                     } else if (get_row_layout() === 'bullet_points') {

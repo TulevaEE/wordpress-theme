@@ -13,7 +13,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
         <div class="row align-items-center py-5">
             <?php if ($image_url) { ?>
                 <div class="col-lg-6 <?php echo $left_image_visibility_class; ?>">
-                    <?php get_template_part('templates/components/jobs/media-block-image'); ?>
+                    <?php get_template_part('templates/components/media-block/media-block-image'); ?>
                 </div>
             <?php } ?>
 
@@ -27,7 +27,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
 
             <?php if ($image_url && $image_alignment === 'right'): ?>
                 <div class="col-lg-6 <?php echo $right_image_visibility_class; ?>">
-                    <?php get_template_part('templates/components/jobs/media-block-image'); ?>
+                    <?php get_template_part('templates/components/media-block/media-block-image'); ?>
                 </div>
             <?php endif; ?>
         </div>
