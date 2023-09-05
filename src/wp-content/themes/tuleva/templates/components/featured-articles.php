@@ -1,4 +1,5 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="read-blog py-6">
+<?php $bg_class = get_component_background_color_class(); ?>
+<section id="<?php the_sub_field('component_id'); ?>" class="read-blog py-6 <?php echo $bg_class; ?>">
 <div class="container">
   <h2 class="mb-5 text-center"><?php the_sub_field('heading'); ?></h2>
   <div class="card-deck">
