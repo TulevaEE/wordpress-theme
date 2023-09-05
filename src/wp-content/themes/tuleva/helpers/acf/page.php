@@ -2458,6 +2458,32 @@ acf_add_local_field_group(array(
                             'delay' => 0
                         ),
                         array(
+                            'key' => 'field_5ad638341a61b',
+                            'label' => 'Background color',
+                            'name' => 'background_color',
+                            'aria-label' => '',
+                            'type' => 'radio',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'choices' => array(
+                                'None' => 'None',
+                                'Blue' => 'Blue',
+                            ),
+                            'allow_null' => 0,
+                            'other_choice' => 0,
+                            'default_value' => 'None',
+                            'layout' => 'vertical',
+                            'return_format' => 'value',
+                            'wpml_cf_preferences' => 0,
+                            'save_other_choice' => 0,
+                        ),
+                        array(
                             'key' => 'field_5ad638341a60a',
                             'label' => 'Component ID',
                             'name' => 'component_id',

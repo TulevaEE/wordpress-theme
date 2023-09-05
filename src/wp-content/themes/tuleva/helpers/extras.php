@@ -87,6 +87,12 @@ function get_component_classes($classes = [])
     return implode($classes, ' ');
 }
 
+function get_component_background_color_class() {
+    $bg_class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-washed' : '';
+
+    return $bg_class;
+}
+
 /**
  * Adds custom logo to login page
  * @return void

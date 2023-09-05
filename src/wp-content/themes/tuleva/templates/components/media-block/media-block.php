@@ -1,5 +1,5 @@
 <?php
-$bg_class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-washed' : '';
+$bg_class = get_component_background_color_class();
 $image_alignment = strtolower(get_sub_field('image_alignment'));
 $original_image_url = get_sub_field('image');
 $image_id = attachment_url_to_postid($original_image_url);
