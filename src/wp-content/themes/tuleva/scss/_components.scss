@@ -1041,7 +1041,9 @@
 
 .read-blog {
     .card {
+        max-width: 100%;
         transition: all 300ms ease;
+
         &:hover {
             box-shadow: $shadow-md;
             transform: translate(0, -8px);
@@ -1053,6 +1055,9 @@
             font-weight: $font-weight-medium;
             color: $navy-blue;
         }
+@include media-breakpoint-up (md) {
+    max-width: 33%;
+}
     }
 }
 
