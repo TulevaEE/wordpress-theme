@@ -2199,7 +2199,7 @@ acf_add_local_field_group(array(
                             'name' => 'heading',
                             'type' => 'text',
                             'instructions' => '',
-                            'required' => 1,
+                            'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
                                 'width' => '',
@@ -2218,7 +2218,7 @@ acf_add_local_field_group(array(
                             'name' => 'article_1',
                             'type' => 'post_object',
                             'instructions' => '',
-                            'required' => 1,
+                            'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
                                 'width' => '',
@@ -2230,7 +2230,7 @@ acf_add_local_field_group(array(
                             ),
                             'taxonomy' => array(
                             ),
-                            'allow_null' => 0,
+                            'allow_null' => 1,
                             'multiple' => 0,
                             'return_format' => 'id',
                             'ui' => 1,
@@ -2241,7 +2241,7 @@ acf_add_local_field_group(array(
                             'name' => 'article_2',
                             'type' => 'post_object',
                             'instructions' => '',
-                            'required' => 1,
+                            'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
                                 'width' => '',
@@ -2253,7 +2253,7 @@ acf_add_local_field_group(array(
                             ),
                             'taxonomy' => array(
                             ),
-                            'allow_null' => 0,
+                            'allow_null' => 1,
                             'multiple' => 0,
                             'return_format' => 'id',
                             'ui' => 1,
@@ -2264,7 +2264,7 @@ acf_add_local_field_group(array(
                             'name' => 'article_3',
                             'type' => 'post_object',
                             'instructions' => '',
-                            'required' => 1,
+                            'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
                                 'width' => '',
@@ -2275,7 +2275,7 @@ acf_add_local_field_group(array(
                             ),
                             'taxonomy' => array(
                             ),
-                            'allow_null' => 0,
+                            'allow_null' => 1,
                             'multiple' => 0,
                             'return_format' => 'id',
                             'ui' => 1,

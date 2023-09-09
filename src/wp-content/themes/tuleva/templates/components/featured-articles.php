@@ -4,6 +4,7 @@
   <h2 class="mb-5 text-center"><?php the_sub_field('heading'); ?></h2>
   <div class="card-deck">
     <?php for( $i = 1; $i <= 3; $i++ ) { ?>
+        <?php if (get_sub_field('article_' . $i)) { ?>
         <a href="<?php the_permalink(get_sub_field('article_' . $i)); ?>">
           <div class="card shadow-sm">
             <img src="<?php echo get_the_post_thumbnail_url(get_sub_field('article_' . $i), 'max-width-500'); ?>" alt="<?php echo get_the_title(get_sub_field('article_' . $i)); ?>" class="card-img-top rounded-top">
@@ -14,6 +15,7 @@
             </div>
           </div>
         </a>
+        <?php } ?>
     <?php  } ?>
   </div>
 </div>
