@@ -36,6 +36,8 @@
                     get_template_part('templates/components/tuleva-difference');
                 } else if (get_row_layout() === 'media_block') {
                     get_template_part('templates/components/media-block/media-block');
+                } if (get_row_layout() === 'login_cta') {
+                    get_template_part( 'templates/components/login-cta' );
                 }
             }
         }
