@@ -633,6 +633,9 @@
                 width: 100%;
             }
         }
+        &:first-child &__image {
+            max-height: 550px;
+        }
         &__title {
             margin-bottom: 5px;
             a {
