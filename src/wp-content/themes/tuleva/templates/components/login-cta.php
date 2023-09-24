@@ -28,7 +28,7 @@ $bg_class = get_component_background_color_class();
                             </div>
                         </div>
                         <div class="text-center">
-                            <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg mb-3"><?php the_sub_field('button_text'); ?></a>
+                            <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg px-6 mb-3"><?php the_sub_field('button_text'); ?></a>
                             <?php if (get_sub_field('small_text')): ?>
                                 <p class="small text-navy mb-md-5 mb-lg-0">
                                     <?php the_sub_field('small_text'); ?>
