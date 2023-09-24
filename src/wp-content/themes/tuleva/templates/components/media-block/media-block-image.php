@@ -18,7 +18,7 @@ $image_caption = wp_get_attachment_caption($image_id);
         </svg>
     <?php } ?>
     <?php if ($image_caption) { ?>
-        <p class="image-caption mt-2"><?php echo esc_html($image_caption); ?></p>
+        <p class="image-caption small mt-2"><?php echo esc_html($image_caption); ?></p>
     <?php } ?>
 <?php if ($image_link_url) { ?>
     </a>
