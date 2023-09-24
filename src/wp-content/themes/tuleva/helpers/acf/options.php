@@ -79,6 +79,55 @@ acf_add_local_field_group(array (
 
 endif;
 
+if ( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+    'key' => 'field_5925e5f4f8a6a',
+    'title' => 'Members count',
+    'fields' => array (
+        array(
+            'key' => 'field_5925e5f4d1a6a',
+            'label' => 'Members count',
+            'name' => 'members_count',
+            'type' => 'number',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'min' => '',
+            'max' => '',
+            'step' => '',
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'options_page',
+                'operator' => '==',
+                'value' => 'theme-general-settings',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'seamless',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+
+endif;
+
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(

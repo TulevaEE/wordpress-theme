@@ -93,6 +93,21 @@ function get_component_background_color_class() {
     return $bg_class;
 }
 
+function get_component_button_color_class() {
+    $button_color = strtolower(get_sub_field('button_color'));
+    $button_color_class = '';
+
+    if ($button_color === 'blue') {
+        $button_color_class = 'btn-primary';
+    } else if ($button_color === 'outlined') {
+        $button_color_class = 'btn-outline-primary';
+    } else if ($button_color === 'orange') {
+        $button_color_class = 'btn-orange';
+    }
+
+    return $button_color_class;
+}
+
 /**
  * Adds custom logo to login page
  * @return void

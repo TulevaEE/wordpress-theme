@@ -268,6 +268,17 @@ hr {
   }
 }
 
+.btn-orange {
+  color: white;
+  background-color: #FF4800;
+  border-color: #FF4800;
+}
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active {
+  color: white;
+  background-color: #e1470a;
+  border-color: #e1470a;
+}
+
 .no-margin {
   margin: 0 !important;
 }

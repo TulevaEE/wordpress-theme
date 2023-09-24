@@ -128,7 +128,6 @@
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
     @include media-breakpoint-up (lg) {
-        height: 70vh;
         max-height: 720px;
     }
     @include media-breakpoint-down (md) {

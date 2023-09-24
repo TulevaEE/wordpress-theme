@@ -1,3 +1,10 @@
+<?php
+$members_count = get_field('members_count', 'option');
+$members_count_description = get_sub_field('members_count_description');
+$security_text = get_sub_field('security_text');
+$security_link_text = get_sub_field('security_link_text');
+$security_link_url = get_sub_field('security_link_url');
+?>
 <section id="<?php the_sub_field('component_id'); ?>">
     <div class="bg-hero-main d-flex flex-column">
         <div class="container my-auto">
@@ -38,28 +45,30 @@
             </div>
         </div>
         <!-- Credentials -->
-        <div class="container-fluid bg-blueish-gray d-none d-sm-block py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-6 d-flex">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/icon-lock.svg" alt="<?php the_sub_field('security_text'); ?>" class="mr-4">
-                        <?php if (get_sub_field('security_text')) { ?>
-                            <div class="d-flex flex-column justify-content-center">
-                                <p class="mb-2 text-navy"><?php the_sub_field('security_text'); ?></p>
-                                <?php if (get_sub_field('security_link_url') && get_sub_field('security_link_text')) { ?>
-                                    <a id="security" href="<?php the_sub_field('security_link_url'); ?>" class="text-uppercase text-medium"><?php the_sub_field('security_link_text'); ?></a>
-                                <?php } ?>
+        <?php if ($security_text || ($members_count && $members_count_description)) { ?>
+            <div class="container-fluid bg-blueish-gray d-none d-sm-block py-4">
+                <div class="container">
+                    <div class="row">
+                        <?php if ($security_text) { ?>
+                            <div class="col col-md-6 d-flex">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/icon-lock.svg" alt="<?php echo $security_text; ?>" class="mr-4" />
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="mb-2 text-navy"><?php echo $security_text; ?></p>
+                                    <?php if ($security_link_url && $security_link_text) { ?>
+                                        <a id="security" href="<?php echo $security_link_url; ?>" class="text-uppercase text-medium"><?php echo $security_link_text; ?></a>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if ($members_count && $members_count_description) { ?>
+                            <div class="col-md-6 d-none d-md-flex align-items-center">
+                                <span class="membercount mr-4"><?php echo $members_count; ?></span>
+                                <p class="mb-0 text-navy"><?php echo $members_count_description; ?></p>
                             </div>
                         <?php } ?>
                     </div>
-                    <?php if (get_sub_field('members_count') && get_sub_field('members_count_description')) { ?>
-                        <div class="col-md-6 d-none d-md-flex align-items-center">
-                            <span class="membercount mr-4"><?php the_sub_field('members_count'); ?></span>
-                            <p class="mb-0 text-navy"><?php the_sub_field('members_count_description'); ?></p>
-                        </div>
-                    <?php } ?>
                 </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 </section>
