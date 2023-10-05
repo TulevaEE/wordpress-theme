@@ -31,7 +31,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
-                            <div>0,29%</div>
+                            <div>0,27%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold">
@@ -42,7 +42,7 @@
                                     title="<?php echo sprintf(__("Ongoing charges are based on expenses for the last calendar year, i.e., %s. Ongoing charges may vary from year to year.", TEXT_DOMAIN), date("Y") - 1); ?>"
                                 ></span>
                             </div>
-                            <div>0,41%</div>
+                            <div>0,39%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
@@ -65,13 +65,13 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/02/Prospekt.-TUK75-ja-TUK00_17.02.2023.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/10/TUK75-ja-TUK00-Prospekt_05.10.2023.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/05/20230509_Tuleva_pensionifondide_mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/02/202302_Pohiteave_TUK00.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/10/20231005_Pohiteave_TUK00.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/01/Fondide-vara-puhasvaartuse-maaramise-kord_01.01.2021.pdf" target="_blank"><?php _e('Procedure for determining net worth of fund (in Estonian)', TEXT_DOMAIN) ?></a>
