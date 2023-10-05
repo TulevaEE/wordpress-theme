@@ -232,7 +232,7 @@ $(document).ready(function ($) {
                 this.scrollIntoView();
             });
 
-            $('[data-toggle="collapse"]').click(function() {
+            $('.accordion-parent [data-toggle="collapse"]').click(function() {
                 var target = $(this).attr('data-target');
                 var $target = $(target);
                 var $parent = $($target.attr('data-parent'));
