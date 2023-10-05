@@ -39,7 +39,13 @@
                                 <span
                                     class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                     data-placement="top"
-                                    title="<?php echo sprintf(__("Ongoing charges are based on expenses for the last calendar year, i.e., %s. Ongoing charges may vary from year to year.", TEXT_DOMAIN), date("Y") - 1); ?>"
+                                    title="<?php echo sprintf(
+                                        __("Starting from %s fund's management fee was changed and ongoing charges are %s%%. Ongoing charges based on expenses for year %d are %s%%. Ongoing charges may vary from year to year.", TEXT_DOMAIN),
+                                        "01.10.2023",
+                                        "0,39",
+                                        date("Y") - 1,
+                                        "0,41"
+                                    );  ?>"
                                 ></span>
                             </div>
                             <div>0,39%</div>
