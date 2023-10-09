@@ -35,7 +35,6 @@
               </div>
             </div>
           </div>
-          <?php _e('<a class="text-uppercase text-center" href="https://docs.google.com/spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Detailed calculation in Google Docs</a>', TEXT_DOMAIN) ?>
         </div>
       </div>
     </div>

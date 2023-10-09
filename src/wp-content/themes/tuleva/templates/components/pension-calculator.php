@@ -40,8 +40,3 @@
         </div>
     </div>
 </div>
-
-<div class="text-center">
-    <?php _e('<a href="https://docs.google.com/spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing"
-       target="_blank" rel="noopener noreferrer">See how the pension calculator works.</a>', TEXT_DOMAIN); ?>
-</div>
