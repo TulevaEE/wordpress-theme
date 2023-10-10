@@ -92,7 +92,7 @@ var calculateSaving = function () {
                     65 - Math.max(0, Math.min(age, 65))
                 )
     );
-    var tulevaFee = 0.0037;
+    var tulevaFee = 0.0035;
     var totalSavingWithTuleva = Math.ceil(
         (grossWage *
             0.06 *

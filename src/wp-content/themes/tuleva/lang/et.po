@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-10-05 14:17:22+00:00\n"
-"PO-Revision-Date: 2023-10-05 17:19+0300\n"
+"POT-Creation-Date: 2023-10-10 07:27:24+00:00\n"
+"PO-Revision-Date: 2023-10-10 14:35+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -269,7 +269,6 @@ msgid "Annual fees"
 msgstr "Tasud aastas"
 
 #: templates/components/front-header.php:106
-#: templates/components/front-hero/calculator.php:28
 msgid "In Tuleva pension fund"
 msgstr "Tuleva pensionifondis"
 
@@ -293,6 +292,10 @@ msgstr "Uuri lähemalt"
 #: templates/components/front-header.php:141
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
+
+#: templates/components/front-hero/calculator.php:28
+msgid "In Tuleva World Stocks Pension Fund"
+msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
 #: templates/components/front-proposal.php:7
 msgid ""
@@ -969,18 +972,6 @@ msgstr "Pensionikogumise alustamise vanus"
 msgid "23yrs"
 msgstr "23a"
 
-#: templates/components/modal-calculator.php:38
-msgid ""
-"<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
-"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
-"usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed "
-"calculation in Google Docs</a>"
-msgstr ""
-"<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
-"spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
-"usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Üksikasjadega "
-"arvutus Google Docsis.</a>"
-
 #: templates/components/modal-founders.php:24
 msgid ""
 "Tõnu Pekk is an investor with 20 years of experience, a good deal of it from "
@@ -1605,18 +1596,6 @@ msgstr "Vanus"
 #: templates/components/pension-calculator.php:25
 msgid "y/o"
 msgstr "a"
-
-#: templates/components/pension-calculator.php:45
-msgid ""
-"<a href=\"https://docs.google.com/spreadsheets/"
-"d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
-"       target=\"_blank\" rel=\"noopener noreferrer\">See how the pension "
-"calculator works.</a>"
-msgstr ""
-"<a href=\"https://docs.google.com/spreadsheets/"
-"d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
-"       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
-"pensionikalkulaator töötab.</a>"
 
 #: templates/components/qa-block.php:4
 msgid "Frequently asked questions"
@@ -2259,6 +2238,28 @@ msgstr "Soovitus 55+"
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
 msgstr "Soovitus 18-55"
+
+#~ msgid ""
+#~ "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
+#~ "spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
+#~ "usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Detailed "
+#~ "calculation in Google Docs</a>"
+#~ msgstr ""
+#~ "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"
+#~ "spreadsheets/d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?"
+#~ "usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Üksikasjadega "
+#~ "arvutus Google Docsis.</a>"
+
+#~ msgid ""
+#~ "<a href=\"https://docs.google.com/spreadsheets/"
+#~ "d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
+#~ "       target=\"_blank\" rel=\"noopener noreferrer\">See how the pension "
+#~ "calculator works.</a>"
+#~ msgstr ""
+#~ "<a href=\"https://docs.google.com/spreadsheets/"
+#~ "d/10YUEMUfp3LY5tLSnBrZgZAbRCBCvNL318dmoE8RqCRU/edit?usp=sharing\"\n"
+#~ "       target=\"_blank\" rel=\"noopener noreferrer\">Uuri, kuidas "
+#~ "pensionikalkulaator töötab.</a>"
 
 #~ msgid "Consideration of sustainability risks"
 #~ msgstr "Jätkusuutlikkusriskide arvesse võtmine"
