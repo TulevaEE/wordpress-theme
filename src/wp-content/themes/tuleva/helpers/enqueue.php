@@ -31,7 +31,7 @@ class ThemeEnqueue
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '20230924',
+                'ver' => '20231010',
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -114,7 +114,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '20231010',
+                'ver' => '20231010_2',
                 'js_in_header' => false,
                 'enqueue' => true
             ]

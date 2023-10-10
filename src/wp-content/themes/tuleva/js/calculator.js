@@ -43,6 +43,8 @@ var getFee = function () {
 var calculateSaving = function () {
     var age = $("#age").val();
     var netWage = $("#netWage").val();
+    var marketReturn = $("#marketReturn").val();
+    var salaryGrowth = 1.03;
     var comparisonFund = getFee();
     var comparisonFundPercentage = (comparisonFund * 100).toFixed(2) + "%";
     var grossWage = netWage / 0.8;
@@ -74,8 +76,6 @@ var calculateSaving = function () {
                 ))) /
             (pastAverageReturn - pastSalaryGrowth)
     );
-    var marketReturn = 1.05;
-    var salaryGrowth = 1.03;
     var futureValueOfPensionFund = Math.ceil(
         (grossWage *
             0.06 *

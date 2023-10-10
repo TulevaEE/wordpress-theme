@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-10-10 07:27:24+00:00\n"
-"PO-Revision-Date: 2023-10-10 14:35+0700\n"
+"POT-Creation-Date: 2023-10-10 15:47:53+00:00\n"
+"PO-Revision-Date: 2023-10-10 22:48+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -238,33 +238,33 @@ msgid "years old and earn"
 msgstr "ja teenid kuus"
 
 #: templates/components/front-header.php:28
-#: templates/components/front-hero/calculator.php:9
+#: templates/components/front-hero/calculator.php:10
 msgid "euros per month (net),"
 msgstr "eurot neto,"
 
 #: templates/components/front-header.php:29
-#: templates/components/front-hero/calculator.php:10
+#: templates/components/front-hero/calculator.php:19
 msgid "your second pillar"
 msgstr "kogud"
 
 #: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:11
+#: templates/components/front-hero/calculator.php:20
 msgid "could"
 msgstr "eelduslikult"
 
 #: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:11
+#: templates/components/front-hero/calculator.php:21
 msgid "grow"
 msgstr "pensioniks"
 
 #: templates/components/front-header.php:37
-#: templates/components/front-hero/calculator.php:18
+#: templates/components/front-hero/calculator.php:29
 msgid "Estonian pension fund average"
 msgstr "Eesti keskmises pensionifondis"
 
 #: templates/components/front-header.php:102
-#: templates/components/front-hero/calculator.php:24
-#: templates/components/front-hero/calculator.php:31
+#: templates/components/front-hero/calculator.php:35
+#: templates/components/front-hero/calculator.php:42
 msgid "Annual fees"
 msgstr "Tasud aastas"
 
@@ -277,7 +277,7 @@ msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
 msgstr "Tasud aastas <span id=\"fund-fee\">0,47%</span>"
 
 #: templates/components/front-header.php:114
-#: templates/components/front-hero/calculator.php:36
+#: templates/components/front-hero/calculator.php:47
 msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
@@ -293,7 +293,15 @@ msgstr "Uuri lähemalt"
 msgid "Estonians invest in Tuleva pension funds."
 msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
 
-#: templates/components/front-hero/calculator.php:28
+#: templates/components/front-hero/calculator.php:11
+msgid "at"
+msgstr "siis"
+
+#: templates/components/front-hero/calculator.php:18
+msgid "return"
+msgstr "tootlusega"
+
+#: templates/components/front-hero/calculator.php:39
 msgid "In Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
@@ -2237,7 +2245,7 @@ msgstr "Soovitus 55+"
 
 #. Template Name of the plugin/theme
 msgid "Referral 18-55"
-msgstr "Soovitus 18-55"
+msgstr ""
 
 #~ msgid ""
 #~ "<a class=\"text-uppercase text-center\" href=\"https://docs.google.com/"

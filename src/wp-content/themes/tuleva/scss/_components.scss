@@ -889,7 +889,7 @@
 
 //Header calculator styles
 .calculator {
-    input {
+    input, #marketReturn {
         display: inline-block;
         font-size: $font-size-md;
         font-weight: $font-weight-bold;
@@ -912,6 +912,11 @@
 
     input#netWage {
         max-width: 4.5rem;
+    }
+
+    #marketReturn {
+        max-width: 5rem;
+        height: 2rem;
     }
 
     &__heading {

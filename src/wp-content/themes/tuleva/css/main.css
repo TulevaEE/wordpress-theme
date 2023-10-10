@@ -9175,7 +9175,7 @@ small,
   font-weight: 500;
 }
 
-.calculator input {
+.calculator input, .calculator #marketReturn {
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 700;
@@ -9196,10 +9196,14 @@ small,
 .calculator input#netWage {
   max-width: 4.5rem;
 }
+.calculator #marketReturn {
+  max-width: 5rem;
+  height: 2rem;
+}
 .calculator__heading {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 2;
+  line-height: 2.5;
 }
 .calculator__comparison-row {
   display: -webkit-box;
