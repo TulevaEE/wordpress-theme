@@ -101,6 +101,14 @@
 
         <div class="row mt-6">
             <div class="col-md-10 col-lg-8 mx-auto">
+                <h3 class="text-center mb-5">Kumb on olulisem - tootlus või tasud?</h3>
+                <p class="my-0">Vaata klippe küsimuste-vastustega Tõnu Peki ja Kristi Saare tehtud Facebook Live'st.</p>
+                <?php echo do_shortcode('[smartslider3 slider="4"]'); ?>
+            </div>
+        </div>
+
+        <div class="row mt-6">
+            <div class="col-md-10 col-lg-8 mx-auto">
                 <h3 class="text-center mb-5">Tasud on palju suurema mõjuga kui sa arvad.</h3>
                 <p>Kui palju need tillukesed numbrid ikka tulemust mõjutada saavad, küsid sa. Vaatame lähemalt.</p>
 
@@ -110,7 +118,7 @@
 
                 <p>Martinile koguneb pensioniks kokku 185 tuhat eurot. Sirli kogub sama ajaga 215 tuhat eurot. Pealtnäha <span class="text-highlight text-bold">pisike erinevus tasudes läks Martinile maksma ligi 30 000 eurot!</span></p>
 
-                <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli.png" class="img-fluid  text-center" alt="Teenustasude kulu" />
+                <img src="<?php echo get_template_directory_uri() ?>/img/fig-martinsirli2.png" class="img-fluid  text-center" alt="Teenustasude kulu" />
 
                 <div class="text-center mt-4 mb-4 mb-md-6">
                     <a class="text-bold" href="https://tuleva.ee/vastused/pensionifondide-tasud/" target="_blank">Loe lähemalt ja vaata, milliste eeldustega need näited on tehtud.</a>
