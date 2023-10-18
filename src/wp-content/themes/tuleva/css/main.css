@@ -10424,15 +10424,6 @@ small,
     padding: 0.5rem 1rem;
   }
 }
-.navbar .nav-link[href*="pension.tuleva.ee"] {
-  border: 2px solid #0081ee;
-  color: #0081ee;
-  border-radius: 4px;
-}
-.navbar .nav-link[href*="pension.tuleva.ee"]:hover {
-  color: #002F63;
-  border-color: #002F63;
-}
 .navbar .nav-link:hover {
   color: #0081EE;
 }

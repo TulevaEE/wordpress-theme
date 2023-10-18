@@ -1,10 +1,12 @@
 <?php
 $isDecember = (date('m') == 12);
+$isNovember = (date('m') == 11);
+
 ?>
 <div class="card calculator shadow-md">
     <div class="card-body p-4 text-center third-pillar-calculator">
         <form>
-            <?php if ($isDecember) { ?>
+            <?php if ($isNovember || $isDecember) { ?>
                 <table class="w-100">
                     <tr class="calculator__summary-row first">
                         <td class="text-right pr-2 py-3 pl-3 bg-gray-tint">

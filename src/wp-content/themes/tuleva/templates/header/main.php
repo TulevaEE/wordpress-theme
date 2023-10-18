@@ -11,7 +11,7 @@
             <?php get_template_part('templates/header/menu'); ?>
             <div class="d-flex flex-column flex-md-row align-items-md-center ml-auto">
                 <?php language_picker(); ?>
-                <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0">Choose Tuleva 2nd pillar</a>', TEXT_DOMAIN); ?>
+                <?php _e('<a href="https://pension.tuleva.ee/?language=en" class="btn btn-outline-primary ml-md-2 mt-4 mt-md-0">Log in</a>', TEXT_DOMAIN); ?>
             </div>
         </div>
     </nav>

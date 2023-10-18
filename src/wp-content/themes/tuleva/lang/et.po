@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-10-10 15:47:53+00:00\n"
-"PO-Revision-Date: 2023-10-10 22:48+0700\n"
+"POT-Creation-Date: 2023-10-11 10:57:01+00:00\n"
+"PO-Revision-Date: 2023-10-11 17:57+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -2023,7 +2023,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
-#: templates/header/main-sticky.php:14 templates/header/main.php:14
+#: templates/header/main-sticky.php:14
 msgid ""
 "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-"
 "block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Choose Tuleva 2nd pillar</"
@@ -2032,6 +2032,15 @@ msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
 "block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too II sammas "
 "Tulevasse</a>"
+
+#: templates/header/main.php:14
+msgid ""
+"<a href=\"https://pension.tuleva.ee/?language=en\" class=\"btn btn-outline-"
+"primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Log "
+"in</a>"
+msgstr ""
+"<a href=\"https://pension.tuleva.ee\" class=\"btn btn-outline-primary btn-"
+"block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Sisene</a>"
 
 #: templates/single-content.php:57
 msgid "Category:"
