@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-10-11 10:57:01+00:00\n"
+"POT-Creation-Date: 2023-11-01 14:28:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1452,129 +1452,130 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:11
+#: templates/components/third-pillar-calculator.php:13
 msgid ""
 "<strong><a href=\"#modal-gross_income\">Total gross income this year</a></"
 "strong>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:22
-#: templates/components/third-pillar-calculator.php:45
-#: templates/components/third-pillar-calculator.php:67
-#: templates/components/third-pillar-calculator.php:179
+#: templates/components/third-pillar-calculator.php:24
+#: templates/components/third-pillar-calculator.php:47
+#: templates/components/third-pillar-calculator.php:69
+#: templates/components/third-pillar-calculator.php:181
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:29
+#: templates/components/third-pillar-calculator.php:31
 msgid "of which dividends"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:32
+#: templates/components/third-pillar-calculator.php:34
 msgid ""
 "Gross income, from which income tax has not been withheld as a private "
 "person. For example, dividends received from an Estonian company; dividends "
 "that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:52
+#: templates/components/third-pillar-calculator.php:54
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:55
+#: templates/components/third-pillar-calculator.php:57
 msgid ""
 "Home loan interest up to €300, gifts and donations, education costs, "
 "including kindergarten fees"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:73
-#: templates/components/third-pillar-calculator.php:186
+#: templates/components/third-pillar-calculator.php:75
+#: templates/components/third-pillar-calculator.php:188
 msgid "Number of underage children"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:76
-#: templates/components/third-pillar-calculator.php:189
+#: templates/components/third-pillar-calculator.php:78
+#: templates/components/third-pillar-calculator.php:191
 msgid ""
 "One parent of children under the age of 18 can deduct additional tax-free "
 "income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:88
-#: templates/components/third-pillar-calculator.php:201
+#: templates/components/third-pillar-calculator.php:90
+#: templates/components/third-pillar-calculator.php:203
 msgid "kids"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:94
+#: templates/components/third-pillar-calculator.php:96
 msgid "Sensible contribution to III pillar"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:98
-#: templates/components/third-pillar-calculator.php:211
+#: templates/components/third-pillar-calculator.php:100
+#: templates/components/third-pillar-calculator.php:213
 msgid ""
 "Contributions to the III pillar are subject to an income tax discount of up "
 "to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:112
+#: templates/components/third-pillar-calculator.php:114
 msgid "Your gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:115
-#: templates/components/third-pillar-calculator.php:228
+#: templates/components/third-pillar-calculator.php:117
+#: templates/components/third-pillar-calculator.php:230
 msgid ""
 "The declaration of income for this year will start on February 15 next year. "
 "Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:130
-msgid "Make a III pillar payment"
-msgstr ""
-
-#: templates/components/third-pillar-calculator.php:134
+#: templates/components/third-pillar-calculator.php:132
 msgid ""
-"To make a payment log into your pension account using your ID-card, Mobile-"
-"ID or Smart-ID."
+"Make a III pillar payment<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:141
+#: templates/components/third-pillar-calculator.php:136
+msgid ""
+"Making a payment is <strong>free</strong> and takes only 2 minutes. Log into "
+"your pension account."
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:143
 msgid "Monthly gross salary"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:144
+#: templates/components/third-pillar-calculator.php:146
 msgid ""
 "Your monthly gross salary (before tax). Including parental benefits, "
 "pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:156
+#: templates/components/third-pillar-calculator.php:158
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:163
+#: templates/components/third-pillar-calculator.php:165
 msgid "Other yearly gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:166
+#: templates/components/third-pillar-calculator.php:168
 msgid ""
 "Yearly gross income taxed at 20% income tax rate such as apartment rental "
 "income, Airbnb income, interest earned. Also dividends taxed at 7% personal "
 "income tax rate."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:207
+#: templates/components/third-pillar-calculator.php:209
 msgid ""
 "<span class=\"d-inline-block\">Reasonable monthly contribution</span> <span "
 "class=\"d-inline-block\">to III pillar</span>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:225
+#: templates/components/third-pillar-calculator.php:227
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:243
+#: templates/components/third-pillar-calculator.php:245
 msgid "Get started"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:247
+#: templates/components/third-pillar-calculator.php:249
 msgid ""
 "Setting up a recurring III pillar payment is <strong>free of charge</strong> "
 "and takes only 5&nbsp;minutes. In order to do that, you need to log in to "
@@ -1666,18 +1667,10 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: templates/header/main-sticky.php:14
-msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-"
-"block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Choose Tuleva 2nd pillar</"
-"a>"
-msgstr ""
-
-#: templates/header/main.php:14
+#: templates/header/main-sticky.php:14 templates/header/main.php:14
 msgid ""
 "<a href=\"https://pension.tuleva.ee/?language=en\" class=\"btn btn-outline-"
-"primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Log "
-"in</a>"
+"primary ml-md-2 mt-4 mt-md-0\">Log in</a>"
 msgstr ""
 
 #: templates/single-content.php:57

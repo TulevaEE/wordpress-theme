@@ -129,11 +129,11 @@ $isNovember = (date('m') == 11);
                 <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3"
                    target="_blank">
-                    <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
+                    <?php _e('Make a III pillar payment<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2">
                     <small class="text-secondary">
-                        <?php _e('To make a payment log into your pension account using your ID-card, Mobile-ID or Smart-ID.', TEXT_DOMAIN); ?>
+                        <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes. Log into your pension account.', TEXT_DOMAIN); ?>
                     </small>
                 </div>
             <?php } else { ?>
