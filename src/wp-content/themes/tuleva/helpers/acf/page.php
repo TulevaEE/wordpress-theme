@@ -223,7 +223,7 @@ acf_add_local_field_group(array(
                              'conditional_logic' => array(
                                 array(
                                     array(
-                                        'field' => 'field_65494c5fa410f',
+                                        'field' => 'field_65494c5fa219c',
                                         'operator' => '==empty',
                                     ),
                                 ),
