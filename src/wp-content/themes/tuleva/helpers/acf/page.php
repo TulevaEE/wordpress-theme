@@ -220,7 +220,14 @@ acf_add_local_field_group(array(
                             'type' => 'image',
                             'instructions' => '',
                             'required' => 0,
-                            'conditional_logic' => 0,
+                             'conditional_logic' => array(
+                                array(
+                                    array(
+                                        'field' => 'field_65494c5fa410f',
+                                        'operator' => '==empty',
+                                    ),
+                                ),
+                            ),
                             'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
@@ -237,6 +244,34 @@ acf_add_local_field_group(array(
                             'max_size' => '',
                             'mime_types' => '',
                             'preview_size' => 'thumbnail',
+                        ),
+                         array(
+                            'key' => 'field_65494c5fa219c',
+                            'label' => 'Shortcode',
+                            'name' => 'shortcode',
+                            'aria-label' => '',
+                            'type' => 'text',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => array(
+                                array(
+                                    array(
+                                        'field' => 'field_63fb93c34a104',
+                                        'operator' => '==empty',
+                                    ),
+                                ),
+                            ),
+                            'wrapper' => array(
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'wpml_cf_preferences' => 0,
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'maxlength' => '',
                         ),
                         array(
                             'key' => 'field_63fb93c34a105',

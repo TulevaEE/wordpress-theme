@@ -9,6 +9,7 @@ $members_count_description = get_sub_field('members_count_description');
 $security_text = get_sub_field('security_text');
 $security_link_text = get_sub_field('security_link_text');
 $security_link_url = get_sub_field('security_link_url');
+$shortcode = get_sub_field('shortcode');
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-team d-flex flex-column">
     <div class="container my-auto">
@@ -27,7 +28,11 @@ $security_link_url = get_sub_field('security_link_url');
                 <?php } ?>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="">
+                <?php if ($shortcode) { ?>
+                    <?php echo do_shortcode($shortcode); ?>
+                <?php } else if ($image_url) { ?>
+                    <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="">
+                <?php } ?>
             </div>
         </div>
     </div>
