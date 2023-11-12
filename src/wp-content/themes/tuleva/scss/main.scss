@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'mixins';
-@import 'bootstrap';
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-grid';
 @import 'vendor/rangeslider';
 @import 'vendor/unslider/unslider';
 @import 'styles';
