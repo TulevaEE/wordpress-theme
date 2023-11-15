@@ -127,9 +127,6 @@
     background-position: 0px 0px, 50% 40%;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
-    @include media-breakpoint-up (lg) {
-        max-height: 720px;
-    }
     @include media-breakpoint-down (md) {
         background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .94)), url('../img/tuleva-party-1536x995.jpg');
     }

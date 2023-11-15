@@ -14067,11 +14067,6 @@ small,
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
 }
-@media (min-width: 992px) {
-  .bg-hero-team {
-    max-height: 720px;
-  }
-}
 @media (max-width: 991px) {
   .bg-hero-team {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-1536x995.jpg");
