@@ -433,7 +433,7 @@ function countdown_timer_function($atts) {
 
         if ($now > $target_datetime) {
             $days_text = __('days', TEXT_DOMAIN);
-            $days_remaining_html_output = "<span class='countdown-timer__days'>0 {$days_text}</span>";
+            $days_remaining_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__days\">0</span> {$days_text}</span>";
 
             return "<span class='countdown-timer'></span>";
         }
@@ -444,7 +444,7 @@ function countdown_timer_function($atts) {
         if ($hours_until > 48) {
             $days_count = $difference->format('%a');
             $days_text = __('days', TEXT_DOMAIN);
-            $days_remaining_html_output = "<span class='countdown-timer__item'>{$days_count} {$days_text}</span>";
+            $days_remaining_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__days\">{$days_count}</span> {$days_text}</span>";
             $html_output = "<span class='countdown-timer'>{$days_remaining_html_output}</span>";
         } else {
             $total_seconds = $difference->days * 24 * 60 * 60
@@ -456,15 +456,15 @@ function countdown_timer_function($atts) {
             $minutes = floor(($total_seconds / 60) % 60);
             $seconds = $total_seconds % 60;
 
-            $hours_html_output = "<span class='countdown-timer__item'><span class'countdown-timer__hours'>{$hours}</span>h</span>";
-            $minutes_html_output = "<span class='countdown-timer__item'><span class'countdown-timer__minutes'>{$minutes}</span>m</span>";
-            $seconds_html_output = "<span class='countdown-timer__item'><span class='countdown-timer__seconds'>{$seconds}</span>s</span>";
+            $hours_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__hours\">{$hours}</span>h</span>";
+            $minutes_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__minutes\">{$minutes}</span>m</span>";
+            $seconds_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__seconds\">{$seconds}</span>s</span>";
             $time_remaining_html_output = "{$hours_html_output} {$minutes_html_output} {$seconds_html_output}";
-            $html_output = "<span class='countdown-timer'>{$time_remaining_html_output}</span>";
+            $html_output = "<span class=\"countdown-timer\">{$time_remaining_html_output}</span>";
         }
     } catch (Exception $error) {
         $error_message = $error->getMessage();
-        $html_output = "<span class='countdown-timer d-none'>{$error_message}</span>";
+        $html_output = "<span class=\"countdown-timer d-none\">{$error_message}</span>";
     }
 
     return $html_output;
