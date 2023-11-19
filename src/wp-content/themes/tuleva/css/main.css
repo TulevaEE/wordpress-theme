@@ -13773,6 +13773,14 @@ small,
   flex-shrink: 0;
 }
 
+.countdown-timer__item {
+  color: white;
+  background-color: #FF4800;
+  border-color: #FF4800;
+  padding: 0.375rem;
+  border-radius: 0.25rem;
+}
+
 .row-spacing {
   margin-top: 100px;
   margin-bottom: 100px;

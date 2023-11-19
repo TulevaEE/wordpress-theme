@@ -418,3 +418,56 @@ function generate_report_link($url, $link_text = null) {
 
     return $output;
 }
+
+function countdown_timer_function($atts) {
+    $atts = shortcode_atts(array(
+        'datetime' => 'now',
+        'timezone' => get_option('timezone_string')
+    ), $atts, 'countdown_timer');
+
+    try {
+        $userTimezone = new DateTimeZone($atts['timezone']);
+        $now = new DateTime('now', $userTimezone);
+
+        $target_datetime = new DateTime($atts['datetime'], $userTimezone);
+
+        if ($now > $target_datetime) {
+            $days_text = __('days', TEXT_DOMAIN);
+            $days_remaining_html_output = "<span class='countdown-timer__days'>0 {$days_text}</span>";
+
+            return "<span class='countdown-timer'></span>";
+        }
+
+        $difference = $now->diff($target_datetime);
+        $hours_until = (int)$difference->format('%a') * 24 + (int)$difference->format('%h');
+
+        if ($hours_until > 48) {
+            $days_count = $difference->format('%a');
+            $days_text = __('days', TEXT_DOMAIN);
+            $days_remaining_html_output = "<span class='countdown-timer__item'>{$days_count} {$days_text}</span>";
+            $html_output = "<span class='countdown-timer'>{$days_remaining_html_output}</span>";
+        } else {
+            $total_seconds = $difference->days * 24 * 60 * 60
+                            + $difference->h * 60 * 60
+                            + $difference->i * 60
+                            + $difference->s;
+
+            $hours = floor($total_seconds / 3600);
+            $minutes = floor(($total_seconds / 60) % 60);
+            $seconds = $total_seconds % 60;
+
+            $hours_html_output = "<span class='countdown-timer__item'><span class'countdown-timer__hours'>{$hours}</span>h</span>";
+            $minutes_html_output = "<span class='countdown-timer__item'><span class'countdown-timer__minutes'>{$minutes}</span>m</span>";
+            $seconds_html_output = "<span class='countdown-timer__item'><span class='countdown-timer__seconds'>{$seconds}</span>s</span>";
+            $time_remaining_html_output = "{$hours_html_output} {$minutes_html_output} {$seconds_html_output}";
+            $html_output = "<span class='countdown-timer'>{$time_remaining_html_output}</span>";
+        }
+    } catch (Exception $error) {
+        $error_message = $error->getMessage();
+        $html_output = "<span class='countdown-timer d-none'>{$error_message}</span>";
+    }
+
+    return $html_output;
+}
+
+add_shortcode('countdown_timer', 'countdown_timer_function');

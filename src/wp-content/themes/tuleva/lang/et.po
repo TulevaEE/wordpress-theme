@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2023-11-08 08:26:38+00:00\n"
-"PO-Revision-Date: 2023-11-08 15:28+0700\n"
+"PO-Revision-Date: 2023-11-19 23:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -24,6 +24,10 @@ msgstr "%s kutsumisel esines viga"
 #: helpers/setup.php:25
 msgid "Primary Navigation"
 msgstr "Peamenüü"
+
+#: helpers/extras.php:435
+msgid "days"
+msgstr "päeva"
 
 #: templates/404.php:5
 msgid "There is no such page"

@@ -1571,3 +1571,10 @@
     }
 }
 
+.countdown-timer__item {
+    color: white;
+    background-color: $orange;
+    border-color: $orange;
+    padding: $input-btn-padding-y;
+    border-radius: $btn-border-radius;
+}
