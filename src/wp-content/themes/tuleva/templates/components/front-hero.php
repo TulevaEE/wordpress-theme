@@ -4,6 +4,7 @@ $members_count_description = get_sub_field('members_count_description');
 $security_text = get_sub_field('security_text');
 $security_link_text = get_sub_field('security_link_text');
 $security_link_url = get_sub_field('security_link_url');
+$lead_text = get_sub_field('lead_text');
 ?>
 <section id="<?php the_sub_field('component_id'); ?>">
     <div class="bg-hero-main d-flex flex-column">
@@ -11,7 +12,7 @@ $security_link_url = get_sub_field('security_link_url');
             <div class="row align-items-center py-5">
                 <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
                     <h1><?php the_sub_field('heading'); ?></h1>
-                    <p class="lead text-navy"><?php the_sub_field('lead_text'); ?></p>
+                    <p class="lead text-navy"><?php echo do_shortcode($lead_text); ?></p>
 
                     <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
                         <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3"><?php the_sub_field('button_text'); ?></a>
