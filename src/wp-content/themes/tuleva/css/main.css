@@ -13779,6 +13779,7 @@ small,
   border-color: #FF4800;
   padding: 0.375rem;
   border-radius: 0.25rem;
+  text-wrap: nowrap;
 }
 
 .countdown-timer__days,

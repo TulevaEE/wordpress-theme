@@ -1577,6 +1577,7 @@
     border-color: $orange;
     padding: $input-btn-padding-y;
     border-radius: $btn-border-radius;
+    text-wrap: nowrap;
 }
 
 .countdown-timer__days,
