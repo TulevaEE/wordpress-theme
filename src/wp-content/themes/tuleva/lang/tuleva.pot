@@ -1,10 +1,10 @@
-# Copyright (C) 2023
+# Copyright (C) 2023 
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-11-08 08:26:38+00:00\n"
+"POT-Creation-Date: 2023-11-22 12:04:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,12 +17,12 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: helpers/setup.php:25
-msgid "Primary Navigation"
+#: helpers/extras.php:435 helpers/extras.php:446
+msgid "days"
 msgstr ""
 
-#: helpers/extras.php:435
-msgid "days"
+#: helpers/setup.php:25
+msgid "Primary Navigation"
 msgstr ""
 
 #: templates/404.php:5
@@ -54,21 +54,21 @@ msgid "RSS feed"
 msgstr ""
 
 #: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:28
+#: templates/components/front-hero.php:29
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:30
+#: templates/components/front-hero.php:31
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:32
+#: templates/components/front-hero.php:33
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
@@ -800,8 +800,8 @@ msgstr ""
 
 #: templates/components/fund-third-header.php:20
 msgid ""
-"you are younger than 55 years (the fund is suitable for people over 55 years "
-"of age in combination with a bond or bank deposit)"
+"you are younger than 55 years (if you are over 55, this fund is suitable for "
+"you in combination with a low-risk fund or a bank deposit)"
 msgstr ""
 
 #: templates/components/fund-third-header.php:21

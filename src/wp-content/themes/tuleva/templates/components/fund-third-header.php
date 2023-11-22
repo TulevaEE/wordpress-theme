@@ -17,7 +17,7 @@
                     <div class="proposal__body">
                         <h5 class="ml-md-3 mb-3"><?php _e('Suitable for you if', TEXT_DOMAIN); ?></h5>
                         <ul class="list-style-checkmark text-navy">
-                            <li><?php _e('you are younger than 55 years (the fund is suitable for people over 55 years of age in combination with a bond or bank deposit)', TEXT_DOMAIN); ?></li>
+                            <li><?php _e('you are younger than 55 years (if you are over 55, this fund is suitable for you in combination with a low-risk fund or a bank deposit)', TEXT_DOMAIN); ?></li>
                             <li><?php echo sprintf(__('and you want to achieve %sthe best possible return%s and you are not shaken by short-term market fluctuations', TEXT_DOMAIN), '<span class="text-highlight"><strong>', '</strong></span>'); ?>.</li>
                         </ul>
                     </div>
