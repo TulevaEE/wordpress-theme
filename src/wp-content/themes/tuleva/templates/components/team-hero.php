@@ -20,7 +20,7 @@ $lead_text = get_sub_field('lead_text');
                     <p class="lead text-navy mb-3"><?php echo do_shortcode($lead_text); ?></p>
                 <div class="text-navy mb-5"><?php the_sub_field('text'); ?></div>
                 <?php if (get_sub_field('button_text')) { ?>
-                    <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-lg mb-3 px-6 <?php echo $button_color_class; ?>"><?php the_sub_field('button_text'); ?></a>
+                    <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-lg btn-block mb-3 <?php echo $button_color_class; ?>"><?php the_sub_field('button_text'); ?></a>
                     <?php if (get_sub_field('small_text')): ?>
                         <p class="small text-navy mb-md-5 mb-lg-0">
                             <?php the_sub_field('small_text'); ?>
