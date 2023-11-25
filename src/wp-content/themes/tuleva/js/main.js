@@ -239,7 +239,35 @@ $(document).ready(function ($) {
 
                 $parent.find('.collapse.show').collapse('hide');
             });
-        }
+        },
+        initCountdownTimer = function () {
+            var datetimeElement = document.querySelector('.countdown-timer');
+            var targetDatetime = datetimeElement.getAttribute('data-datetime');
+
+            if (!targetDatetime) {
+                return;
+            }
+
+            var targetDate = new Date(targetDatetime);
+            var hoursElement = datetimeElement.querySelector('.countdown-timer__hours');
+            var minutesElement = datetimeElement.querySelector('.countdown-timer__minutes');
+            var secondsElement = datetimeElement.querySelector('.countdown-timer__seconds');
+
+            function updateClock() {
+                var time = getTimeRemaining(targetDate);
+
+                hoursElement.innerText = time.hours.toString().padStart(2, "0");
+                minutesElement.innerText = time.minutes.toString().padStart(2, "0");
+                secondsElement.innerText = time.seconds.toString().padStart(2, "0");
+
+                if (time.total > 0) {
+                    var delay = 1000 - (new Date() % 1000);
+                    setTimeout(updateClock, delay);
+                }
+            }
+
+            updateClock();
+        };
 
     initStickyHeader();
     initNewsletterBeaconToggle();
@@ -249,6 +277,7 @@ $(document).ready(function ($) {
     initModalEscClose();
     initThirdPillarCalculator();
     initAccordion();
+    initCountdownTimer();
     initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');
@@ -377,3 +406,18 @@ $(document).ready(function ($) {
         $('#cookie-bar').fadeOut();
     });
 });
+
+function getTimeRemaining(endtime) {
+    var total = Date.parse(endtime) - Date.parse(new Date());
+    var total_seconds = Math.floor(total / 1000);
+    var hours = Math.floor(total_seconds / 3600);
+    var minutes = Math.floor((total_seconds / 60) % 60);
+    var seconds = total_seconds % 60;
+
+    return {
+        total,
+        hours,
+        minutes,
+        seconds
+    };
+}

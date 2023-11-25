@@ -435,7 +435,7 @@ function countdown_timer_function($atts) {
             $days_text = __('days', TEXT_DOMAIN);
             $days_remaining_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__days\">0</span> {$days_text}</span>";
 
-            return "<span class='countdown-timer'></span>";
+            return "<span class='countdown-timer'>{$days_remaining_html_output}</span>";
         }
 
         $difference = $now->diff($target_datetime);
@@ -452,15 +452,15 @@ function countdown_timer_function($atts) {
                             + $difference->i * 60
                             + $difference->s;
 
-            $hours = floor($total_seconds / 3600);
-            $minutes = floor(($total_seconds / 60) % 60);
-            $seconds = $total_seconds % 60;
+            $hours = str_pad(floor($total_seconds / 3600), 2, "0", STR_PAD_LEFT);
+            $minutes = str_pad(floor(($total_seconds / 60) % 60), 2, "0", STR_PAD_LEFT);
+            $seconds = str_pad($total_seconds % 60, 2, "0", STR_PAD_LEFT);
 
             $hours_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__hours\">{$hours}</span>h</span>";
             $minutes_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__minutes\">{$minutes}</span>m</span>";
             $seconds_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__seconds\">{$seconds}</span>s</span>";
             $time_remaining_html_output = "{$hours_html_output} {$minutes_html_output} {$seconds_html_output}";
-            $html_output = "<span class=\"countdown-timer\">{$time_remaining_html_output}</span>";
+            $html_output = "<span class=\"countdown-timer\" data-datetime=\"{$target_datetime->format(DateTime::ISO8601)}\">{$time_remaining_html_output}</span>";
         }
     } catch (Exception $error) {
         $error_message = $error->getMessage();

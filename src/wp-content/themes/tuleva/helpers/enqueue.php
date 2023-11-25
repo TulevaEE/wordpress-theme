@@ -103,7 +103,7 @@ class ThemeEnqueue
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '20231005',
+                'ver' => '20231125',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
