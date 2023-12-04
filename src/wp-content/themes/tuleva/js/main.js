@@ -242,6 +242,11 @@ $(document).ready(function ($) {
         },
         initCountdownTimer = function () {
             var datetimeElement = document.querySelector('.countdown-timer');
+
+            if (!datetimeElement) {
+                return;
+            }
+
             var targetDatetime = datetimeElement.getAttribute('data-datetime');
 
             if (!targetDatetime) {
