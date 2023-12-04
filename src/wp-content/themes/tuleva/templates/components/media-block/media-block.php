@@ -9,7 +9,7 @@ $left_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-b
 $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-none d-lg-block' : '';
 ?>
 <section class="d-flex flex-column <?php echo $bg_class; ?>">
-    <div class="container container my-auto">
+    <div class="container my-auto">
         <div class="row align-items-center py-5">
             <?php if ($image_url) { ?>
                 <div class="col-lg-6 <?php echo $left_image_visibility_class; ?>">
