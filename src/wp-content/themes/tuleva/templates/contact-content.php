@@ -31,8 +31,8 @@
         ?>
         <?php if( have_rows('contacts_block') ) while ( have_rows('contacts_block') ) : the_row(); ?>
             <section class="d-flex flex-column <?php echo get_component_background_color_class(); ?>">
-                <div class="container-fluid pb-6">
-                    <div class="row py-6">
+                <div class="container">
+                    <div class="row my-6">
                         <div class="col">
                             <h2 class="text-center">
                                 <?php the_sub_field('block_title'); ?>
@@ -40,18 +40,16 @@
                         </div>
                     </div>
                     <?php if (have_rows('contact_categories')) { ?>
-                        <div class="row">
-                            <?php $counter = 0;?>
-                            <?php while (have_rows('contact_categories')) { the_row(); ?>
-                                <?php $counter++; ?>
-                                <div class="<?php echo $counter % 2 == 0 ? 'col-lg-5 offset-lg-1' : 'col-lg-4 offset-lg-1'; ?> col-md-12">
+                        <?php while (have_rows('contact_categories')) { the_row(); ?>
+                            <div class="row my-6">
+                                <div class="col-md-12">
                                     <h3 class="text-center">
                                         <?php the_sub_field('category_title'); ?>
                                     </h3>
                                     <div class="row contacts-block">
                                         <?php if (have_rows('contacts')) { ?>
                                             <?php while (have_rows('contacts')) { the_row(); ?>
-                                                <div class="contacts-block__item">
+                                                <div class="contacts-block__item px-4">
                                                     <?php if(get_sub_field('image')) { ?>
                                                         <img class="contacts-block__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
                                                     <?php } ?>
@@ -84,8 +82,8 @@
                                         <?php  } ?>
                                     </div>
                                 </div>
-                            <?php  } ?>
-                        </div>
+                            </div>
+                        <?php  } ?>
                     <?php  } ?>
                     </div>
                 </div>
