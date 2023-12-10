@@ -84,7 +84,7 @@ function get_component_classes($classes = [])
         $classes[] = 'row-spacing';
     }
 
-    return implode($classes, ' ');
+    return implode(' ', $classes);
 }
 
 function get_component_background_color_class() {
@@ -106,6 +106,15 @@ function get_component_button_color_class() {
     }
 
     return $button_color_class;
+}
+
+function get_qa_question_wrapper_classes($classes, $currentNr, $visibleQuestionsCount) {
+    if ($currentNr > $visibleQuestionsCount) {
+        $classes[] = 'qa__question-wrapper--collapsable';
+        $classes[] = 'qa__question-wrapper--collapsed';
+    }
+
+    return implode(' ', $classes);
 }
 
 /**

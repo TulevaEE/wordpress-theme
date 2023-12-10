@@ -13653,8 +13653,7 @@ small,
   align-items: center;
 }
 
-.qa-block--collapsed .qa__question-wrapper:nth-child(n+20),
-.qa-block--collapsed .qa__question-wrapper:nth-child(n+20) + hr {
+.qa-block .qa__question-wrapper--collapsed {
   display: none;
 }
 .qa-block__expand {
@@ -14840,13 +14839,15 @@ small,
   }
 }
 #jobs-page .media-block__media {
-  position: relative;
   display: inline-block;
 }
 #jobs-page .media-block__media img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+#jobs-page .media-block__media .media-block__media__image {
+  position: relative;
 }
 #jobs-page .media-block__media .media-block__media__icon {
   position: absolute;

@@ -27,13 +27,16 @@
     }
 
     .media-block__media {
-        position: relative;
         display: inline-block;
 
         img {
             display: block;
             max-width: 100%;
             height: auto;
+        }
+
+        .media-block__media__image {
+            position: relative;
         }
 
         .media-block__media__icon {

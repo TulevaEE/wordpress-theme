@@ -371,12 +371,6 @@ $(document).ready(function ($) {
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    $('.qa-block').each(function () {
-        if ($(this).find('.qa__question-wrapper').length < 4) {
-            $(this).find('.qa-block__expand').remove();
-        }
-    });
-
     $('.qa-block__expand').on('click', function (ev) {
         var currentText = $(this).text(),
             openText = $(this).data('open-text'),
@@ -385,10 +379,10 @@ $(document).ready(function ($) {
         ev.preventDefault();
 
         if (currentText === openText) {
-            $(this).closest('.qa-block').removeClass('qa-block--collapsed');
+            $(this).closest('.qa-block').find('.qa__question-wrapper').removeClass('qa__question-wrapper--collapsed');
             $(this).text(closeText);
         } else {
-            $(this).closest('.qa-block').addClass('qa-block--collapsed');
+            $(this).closest('.qa-block').find('.qa__question-wrapper--collapsable').addClass('qa__question-wrapper--collapsed');
             $(this).text(openText);
         }
     });
