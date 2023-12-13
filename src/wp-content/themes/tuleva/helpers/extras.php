@@ -349,11 +349,12 @@ function is_cookie_consent()
 function print_funds_js()
 {
     $context = stream_context_create(
-        array(
-            'http' => array(
+        [
+            'http' => [
                 'method' => 'GET',
-            )
-        )
+                'timeout' => 1,
+            ]
+        ]
     );
     $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
     $data = json_decode($json, true);

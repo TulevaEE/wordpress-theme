@@ -73,11 +73,12 @@ get_template_part('templates/components/fund-calculator');
 
 <?php
 $context = stream_context_create(
-    array(
-        'http' => array(
-            'method' => 'GET'
-        )
-    )
+    [
+        'http' => [
+            'method' => 'GET',
+            'timeout' => 1,
+        ]
+    ]
 );
 $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
 $funds = json_decode($json, true);
