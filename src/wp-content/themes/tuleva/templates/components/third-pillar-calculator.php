@@ -126,7 +126,7 @@ $isNovember = (date('m') == 11);
                         </td>
                     </tr>
                 </table>
-                <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>"
+                <a href="<?php echo get_app_url("/3rd-pillar-payment") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3"
                    target="_blank">
                     <?php _e('Make a III pillar payment<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
