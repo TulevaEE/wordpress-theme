@@ -49,6 +49,10 @@ function language_picker($isMobile = false)
         <ul class="navbar-nav mr-0 pr-0">
             <?php
             foreach ($languages as $l) {
+                if ($l['code'] === 'ru') {
+                    continue;
+                }
+
                 $link = '<li class="nav-item"><a href="' . $l['url'] . '" class="nav-lang nav-link d-block text-uppercase">' . icl_disp_language($l['code']) . '</a></li>';
 
                 if (!$l['active']) {
