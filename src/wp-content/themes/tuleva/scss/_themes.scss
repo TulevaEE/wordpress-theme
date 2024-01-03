@@ -154,6 +154,18 @@
     background-color: $body-color-alt !important;
 }
 
+.bg-notice {
+    background-color: $yellow-light !important;
+    color: $yellow-dark;
+    a {
+        color: $yellow-dark;
+    }
+    .badge-notice {
+        background-color: $yellow-dark;
+        color: $yellow-light;
+    }
+}
+
 // Shadows
 .shadow-sm {
     box-shadow: $shadow-sm;

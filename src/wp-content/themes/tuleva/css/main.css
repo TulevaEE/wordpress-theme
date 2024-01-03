@@ -14154,6 +14154,18 @@ small,
   background-color: #edf7fe !important;
 }
 
+.bg-notice {
+  background-color: #FFEEBA !important;
+  color: #856404;
+}
+.bg-notice a {
+  color: #856404;
+}
+.bg-notice .badge-notice {
+  background-color: #856404;
+  color: #FFEEBA;
+}
+
 .shadow-sm {
   -webkit-box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.08);

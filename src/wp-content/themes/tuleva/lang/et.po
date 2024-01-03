@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2023-12-29 12:48:35+00:00\n"
-"PO-Revision-Date: 2023-12-29 16:32+0200\n"
+"POT-Creation-Date: 2024-01-03 18:56:05+00:00\n"
+"PO-Revision-Date: 2024-01-03 20:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1593,6 +1593,10 @@ msgstr "Räägid otsustamisel kaasa"
 msgid "one-time membership fee"
 msgstr "ühekordne liitumistasu"
 
+#: templates/components/notice.php:6
+msgid "New"
+msgstr "Uus"
+
 #: templates/components/pension-calculator.php:1
 msgid "Average management fee savings with Tuleva"
 msgstr "Keskmine valitsemistasu sääst Tulevaga"
@@ -1602,12 +1606,12 @@ msgid "Net wage"
 msgstr "Netopalk"
 
 #: templates/components/pension-calculator.php:22
-#: templates/components/second-pillar-payment-rate-calculator.php:7
+#: templates/components/second-pillar-payment-rate-calculator.php:8
 msgid "Age"
 msgstr "Vanus"
 
 #: templates/components/pension-calculator.php:25
-#: templates/components/second-pillar-payment-rate-calculator.php:20
+#: templates/components/second-pillar-payment-rate-calculator.php:21
 msgid "y/o"
 msgstr "a"
 
@@ -1773,63 +1777,63 @@ msgstr ""
 "paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte "
 "pankadele ja kindlustusseltsidele."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:18
+#: templates/components/second-pillar-payment-rate-calculator.php:19
 msgid "years old"
 msgstr "aastat"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:25
+#: templates/components/second-pillar-payment-rate-calculator.php:27
 msgid "Gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:36
+#: templates/components/second-pillar-payment-rate-calculator.php:38
 #: templates/components/third-pillar-calculator.php:158
 msgid "&euro;/month"
 msgstr "&euro;&nbsp;kuus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:43
+#: templates/components/second-pillar-payment-rate-calculator.php:46
 msgid "Your II pillar contribution"
 msgstr "II&nbsp;samba panus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:62
+#: templates/components/second-pillar-payment-rate-calculator.php:65
 msgid ""
 "Percentage of gross salary. The state contributes an additional 4% to this."
 msgstr "Protsent brutopalgast. Riik panustab sellele 4% lisaks."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:67
+#: templates/components/second-pillar-payment-rate-calculator.php:71
 msgid "Annual return"
 msgstr "Tootlus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:84
+#: templates/components/second-pillar-payment-rate-calculator.php:88
 msgid "per year"
 msgstr "aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:87
+#: templates/components/second-pillar-payment-rate-calculator.php:91
 msgid "pa"
 msgstr "a"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:94
+#: templates/components/second-pillar-payment-rate-calculator.php:98
 msgid "Compared to a 2% contribution:"
 msgstr "Võrreldes 2%&nbsp;panusega"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:101
+#: templates/components/second-pillar-payment-rate-calculator.php:105
 msgid "Net salary"
 msgstr "Netopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:115
+#: templates/components/second-pillar-payment-rate-calculator.php:119
 msgid "II pillar contribution"
 msgstr "II samba igakuine panus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:129
+#: templates/components/second-pillar-payment-rate-calculator.php:133
 msgid "Accumulates more in II pillar"
 msgstr "Kogud pensioniks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:143
+#: templates/components/second-pillar-payment-rate-calculator.php:147
 msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 "Suurendan<span class=\"d-none d-md-inline\"> II samba</span> "
 "sissemakset<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:147
+#: templates/components/second-pillar-payment-rate-calculator.php:151
 msgid ""
 "Increasing your II pillar contribution is <strong>free of charge</strong> "
 "and takes only 2&nbsp;minutes. In order to do that, you need to log in to "

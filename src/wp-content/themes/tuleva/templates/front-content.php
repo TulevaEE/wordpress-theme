@@ -36,6 +36,8 @@
                     get_template_part('templates/components/rich-text-block');
                 } else if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
+                } else if (get_row_layout() === 'notice') {
+                    get_template_part('templates/components/notice');
                 }
             }
         }
