@@ -106,7 +106,7 @@
                         </strong>
                     </td>
                     <td class="text-right pl-3 pb-2">
-                        <h4 class="calculator__win" id="netWage">-64</h4>
+                        <h4 class="calculator__win" id="netWage">-62</h4>
                     </td>
                     <td class="text-left pl-1 pb-2">
                         <h4 class="calculator__win d-inline-block">&euro;</h4>
