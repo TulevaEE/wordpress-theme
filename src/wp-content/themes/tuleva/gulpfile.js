@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     log = require('fancy-log'),
     exit = require('gulp-exit'),
     cssDir = 'css',
-    sassSrc = 'scss/*.scss',
+    sassSrc = 'scss/**/*.scss',
     error = function(err) {
         if (err) {
             log(err.toString());

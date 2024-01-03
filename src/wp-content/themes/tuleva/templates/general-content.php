@@ -1,4 +1,8 @@
 <div class="page-container">
+    <script>
+        var LANGCODE = '<?php echo apply_filters( "wpml_current_language", NULL );  ?>'; // eslint-disable-line
+    </script>
+
     <?php if ( have_posts() ) while ( have_posts() ) : the_post();
         if (have_rows('page_components')) {
             while (have_rows('page_components')) { the_row();
@@ -30,6 +34,8 @@
                     get_template_part('templates/components/qa-block');
                 } else if (get_row_layout() === 'third_pillar_hero') {
                     get_template_part('templates/components/third-pillar-hero');
+                } else if (get_row_layout() === 'second_pillar_payment_rate_hero') {
+                    get_template_part('templates/components/second-pillar-payment-rate-hero');
                 } else if (get_row_layout() === 'featured_articles') {
                     get_template_part('templates/components/featured-articles');
                 } else if (get_row_layout() === 'media_block_with_cta') {

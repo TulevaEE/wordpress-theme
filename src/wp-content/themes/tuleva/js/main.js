@@ -146,7 +146,7 @@ $(document).ready(function ($) {
                 return Math.floor(number);
             }
 
-            if (LANGCODE === 'et' && number > 9999) {
+            if (LANGCODE === 'et') {
                 number = Math.floor(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
             } else if (LANGCODE === 'en') {
                 number = Math.floor(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -154,6 +154,17 @@ $(document).ready(function ($) {
 
             return number;
         },
+
+        getTaxFreeWage = function (wage) {
+            if (wage < 14400) {
+                return 7848;
+            }
+            if (wage < 25200) {
+                return 7848 - 7848 / 10800 * (wage - 14400);
+            }
+            return 0;
+        },
+
         calculateThirdPillarSavings = function () {
             var $calculator = $('.third-pillar-calculator');
             var yearlyWage = parseInt($calculator.find('#yearlyWage').val());
@@ -171,15 +182,7 @@ $(document).ready(function ($) {
 
             var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
-            var taxFreeWage = (function (wage) {
-                if (wage < 14400) {
-                    return 7848;
-                }
-                if (wage < 25200) {
-                    return 7848 - 7848 / 10800 * (wage - 14400);
-                }
-                return 0;
-            })(wage);
+            var taxFreeWage = getTaxFreeWage(wage);
             var deductions = wageTotal * 0.036;
             var additionalTaxFreeWage = (function (kids) {
                 var additionalTaxFreeWage = 0;
@@ -206,6 +209,58 @@ $(document).ready(function ($) {
             var $input = $('.third-pillar-calculator input');
             $input.on('change', calculateThirdPillarSavings);
             $input.on('keyup', calculateThirdPillarSavings);
+            $input.closest('form').on('submit', function (ev) {
+                ev.preventDefault();
+                return false;
+            });
+        },
+        calculateSecondPillarPaymentRate = function () {
+            var $calculator = $('.second-pillar-payment-rate-calculator');
+
+            var age = parseInt($calculator.find('#yourAge').val());
+            age = isNaN(age) ? 30 : age;
+
+            var grossSalary = parseInt($calculator.find('#monthlyWage').val());
+            grossSalary = isNaN(grossSalary) ? 2000 : grossSalary;
+
+            var pillarContribution = parseInt($calculator.find('input[name="pillarContribution"]:checked').val());
+            var returnRate = parseInt($calculator.find('input[name="returnRate"]:checked').val());
+
+            var unemploymentInsurance = 0.016 * grossSalary;
+            var taxFreeWage = 700;
+
+            // at your selected contribution rate
+            var secondPillarContribution = pillarContribution/100 * grossSalary;
+            var incomeTax =
+                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution - taxFreeWage) * 0.22, 0);
+            var netSalary = grossSalary - unemploymentInsurance - secondPillarContribution - incomeTax;
+
+            // at 2% contribution rate
+            var secondPillarContribution2Percent = 2/100 * grossSalary;
+            var incomeTax2Percent =
+                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.22, 0);
+            var netSalary2Percent = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2Percent;
+            let netWageDiff = netSalary2Percent - netSalary;
+
+            // total 2nd pillar contribution per month
+            var secondPillarContributionTotal = secondPillarContribution + 0.04 * grossSalary;
+            var secondPillarContributionTotal2Percent = secondPillarContribution2Percent + 0.04 * grossSalary;
+            var monthlyContribution = secondPillarContributionTotal - secondPillarContributionTotal2Percent;
+
+            var years = 65 - age;
+
+            var savingSum = !returnRate ?
+                monthlyContribution * 12 * years :
+                monthlyContribution * 12 * (Math.pow(1 + returnRate / 100, years) - 1) / (returnRate / 100);
+
+            $calculator.find('#netWage').text(`-${format(netWageDiff)}`);
+            $calculator.find('#monthlyContribution').text(`+${format( monthlyContribution)}`);
+            $calculator.find('#savingsSum').text(`+${format(savingSum)}`);
+        },
+        initSecondPillarPaymentRateCalculator = function () {
+            var $input = $('.second-pillar-payment-rate-calculator input');
+            $input.on('change', calculateSecondPillarPaymentRate);
+            $input.on('keyup', calculateSecondPillarPaymentRate);
             $input.closest('form').on('submit', function (ev) {
                 ev.preventDefault();
                 return false;
@@ -281,6 +336,7 @@ $(document).ready(function ($) {
     initGenericModals();
     initModalEscClose();
     initThirdPillarCalculator();
+    initSecondPillarPaymentRateCalculator();
     initAccordion();
     initCountdownTimer();
     initModal('#founders', 'foundersModal');
