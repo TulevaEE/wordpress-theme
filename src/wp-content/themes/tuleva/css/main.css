@@ -3727,6 +3727,10 @@ tbody.collapse.show {
   border-top-right-radius: 0;
 }
 
+[data-toggle=buttons] > .btn,
+[data-toggle=buttons] > .btn-group > .btn {
+  margin-bottom: 0;
+}
 [data-toggle=buttons] > .btn input[type=radio],
 [data-toggle=buttons] > .btn input[type=checkbox],
 [data-toggle=buttons] > .btn-group > .btn input[type=radio],

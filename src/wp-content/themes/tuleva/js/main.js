@@ -2,38 +2,38 @@
 
 $(document).ready(function ($) {
     var handleResponsiveSlidesNav = function () {
-        var wrapSelector = '.media-box-slider-responsive',
-            desktopSliderSelector = '.media-box-slider.hidden-xs',
-            mobileSliderSelector = '.media-box-slider.visible-xs',
-            unsliderSelector = '.unslider',
-            navSelector = '.unslider-nav';
+            var wrapSelector = '.media-box-slider-responsive',
+                desktopSliderSelector = '.media-box-slider.hidden-xs',
+                mobileSliderSelector = '.media-box-slider.visible-xs',
+                unsliderSelector = '.unslider',
+                navSelector = '.unslider-nav';
 
-        $(wrapSelector).each(function () {
-            if ($(window).width() < 769) {
-                $(this)
-                    .find(desktopSliderSelector)
-                    .closest(unsliderSelector)
-                    .find(navSelector)
-                    .hide();
-                $(this)
-                    .find(mobileSliderSelector)
-                    .closest(unsliderSelector)
-                    .find(navSelector)
-                    .show();
-            } else {
-                $(this)
-                    .find(mobileSliderSelector)
-                    .closest(unsliderSelector)
-                    .find(navSelector)
-                    .hide();
-                $(this)
-                    .find(desktopSliderSelector)
-                    .closest(unsliderSelector)
-                    .find(navSelector)
-                    .show();
-            }
-        });
-    },
+            $(wrapSelector).each(function () {
+                if ($(window).width() < 769) {
+                    $(this)
+                        .find(desktopSliderSelector)
+                        .closest(unsliderSelector)
+                        .find(navSelector)
+                        .hide();
+                    $(this)
+                        .find(mobileSliderSelector)
+                        .closest(unsliderSelector)
+                        .find(navSelector)
+                        .show();
+                } else {
+                    $(this)
+                        .find(mobileSliderSelector)
+                        .closest(unsliderSelector)
+                        .find(navSelector)
+                        .hide();
+                    $(this)
+                        .find(desktopSliderSelector)
+                        .closest(unsliderSelector)
+                        .find(navSelector)
+                        .show();
+                }
+            });
+        },
         initNewsletterBeaconToggle = function () {
             var $beaconToggle = $('.beacon-toggle--newsletter');
 
@@ -142,8 +142,14 @@ $(document).ready(function ($) {
             document.cookie = cookieName + "=" + escape(cookieValue) + ";expires=" + expire.toGMTString() + "; path=/";
         },
         format = function (number) {
+            number = Math.floor(number);
+
             if (typeof LANGCODE === 'undefined') {
-                return Math.floor(number);
+                return number;
+            }
+
+            if (number < 10000) {
+                return number;
             }
 
             if (LANGCODE === 'et') {
@@ -230,32 +236,53 @@ $(document).ready(function ($) {
             var taxFreeWage = 700;
 
             // at your selected contribution rate
-            var secondPillarContribution = pillarContribution/100 * grossSalary;
+            var secondPillarContribution = pillarContribution / 100 * grossSalary;
             var incomeTax =
                 Math.max((grossSalary - unemploymentInsurance - secondPillarContribution - taxFreeWage) * 0.22, 0);
             var netSalary = grossSalary - unemploymentInsurance - secondPillarContribution - incomeTax;
 
             // at 2% contribution rate
-            var secondPillarContribution2Percent = 2/100 * grossSalary;
+            var secondPillarContribution2Percent = 2 / 100 * grossSalary;
             var incomeTax2Percent =
                 Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.22, 0);
             var netSalary2Percent = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2Percent;
-            let netWageDiff = netSalary2Percent - netSalary;
+            let netSalaryDiff = netSalary2Percent - netSalary;
 
             // total 2nd pillar contribution per month
-            var secondPillarContributionTotal = secondPillarContribution + 0.04 * grossSalary;
-            var secondPillarContributionTotal2Percent = secondPillarContribution2Percent + 0.04 * grossSalary;
-            var monthlyContribution = secondPillarContributionTotal - secondPillarContributionTotal2Percent;
+            var monthlyContribution = secondPillarContribution + 0.04 * grossSalary;
+            var monthlyContribution2Percent = secondPillarContribution2Percent + 0.04 * grossSalary;
+            var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
 
             var years = 65 - age;
 
             var savingSum = !returnRate ?
-                monthlyContribution * 12 * years :
-                monthlyContribution * 12 * (Math.pow(1 + returnRate / 100, years) - 1) / (returnRate / 100);
+                monthlyContributionDiff * 12 * years :
+                monthlyContributionDiff * 12 * (Math.pow(1 + returnRate / 100, years) - 1) / (returnRate / 100);
 
-            $calculator.find('#netWage').text(`-${format(netWageDiff)}`);
-            $calculator.find('#monthlyContribution').text(`+${format( monthlyContribution)}`);
-            $calculator.find('#savingsSum').text(`+${format(savingSum)}`);
+            $calculator.find('#netWage').text(`${format(netSalary)} €`);
+            if (netSalaryDiff > 0) {
+                $calculator.find('#netWageDiff').text(`−${format(netSalaryDiff)} €`);
+            } else {
+                $calculator.find('#netWageDiff').text('');
+            }
+
+            $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
+            if(monthlyContributionDiff > 0) {
+                $calculator.find('#monthlyContributionDiff').text(`+${format(monthlyContributionDiff)} €`);
+            } else {
+                $calculator.find('#monthlyContributionDiff').text('');
+            }
+
+            $calculator.find('#chosenPillarContribution').text(`${pillarContribution}%`);
+
+            if (savingSum > 0) {
+                $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);
+                $calculator.find('#savingsSum').removeClass('d-none');
+                $calculator.find('#savingsSumZero').addClass('d-none');
+            } else {
+                $calculator.find('#savingsSumZero').removeClass('d-none');
+                $calculator.find('#savingsSum').addClass('d-none');
+            }
         },
         initSecondPillarPaymentRateCalculator = function () {
             var $input = $('.second-pillar-payment-rate-calculator input');
@@ -287,7 +314,7 @@ $(document).ready(function ($) {
                 this.scrollIntoView();
             });
 
-            $('.accordion-parent [data-toggle="collapse"]').click(function() {
+            $('.accordion-parent [data-toggle="collapse"]').click(function () {
                 var target = $(this).attr('data-target');
                 var $target = $(target);
                 var $parent = $($target.attr('data-parent'));
