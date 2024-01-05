@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-04 19:36:03+00:00\n"
+"POT-Creation-Date: 2024-01-05 21:22:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1454,9 +1454,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:5
-msgid ""
-"Calculate how much you would gain from increasing II pillar contributions "
-"from 2025"
+msgid "Calculate how much you would gain from increasing your contributions"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:20
@@ -1483,11 +1481,11 @@ msgid "Long-term average stock market return"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:78
-msgid "Net salary"
+msgid "Net salary in 2025"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:81
-msgid "You get every month"
+msgid "Vs. today"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:90
@@ -1495,30 +1493,37 @@ msgid "II pillar contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/third-pillar-calculator.php:227
+msgid "Yearly gain from income tax"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:96
+msgid "no change"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:99
 msgid "You contribute every month"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:102
-msgid "Accumulates in II pillar"
+#: templates/components/second-pillar-payment-rate-calculator.php:108
+msgid "Accumulates more"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:105
-msgid "More compared to a 2% contribution"
+#: templates/components/second-pillar-payment-rate-calculator.php:111
+msgid "Compared to a 2% contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:109
+#: templates/components/second-pillar-payment-rate-calculator.php:116
 msgid "No change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:115
+#: templates/components/second-pillar-payment-rate-calculator.php:124
 msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:119
+#: templates/components/second-pillar-payment-rate-calculator.php:128
 msgid ""
-"Increasing your II pillar contribution is <strong>free of charge</strong> "
-"and takes only 2&nbsp;minutes. In order to do that, you need to log in to "
-"your pension account."
+"Increasing your II pillar contribution is <strong>free of charge</strong>."
 msgstr ""
 
 #: templates/components/signup-block.php:27
@@ -1638,10 +1643,6 @@ msgstr ""
 msgid ""
 "<span class=\"d-inline-block\">Reasonable monthly contribution</span> <span "
 "class=\"d-inline-block\">to III pillar</span>"
-msgstr ""
-
-#: templates/components/third-pillar-calculator.php:227
-msgid "Yearly gain from income tax"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:245

@@ -148,7 +148,7 @@ $(document).ready(function ($) {
                 return number;
             }
 
-            if (number < 10000) {
+            if (number < 10000 && number > -10000) {
                 return number;
             }
 
@@ -234,24 +234,34 @@ $(document).ready(function ($) {
 
             var unemploymentInsurance = 0.016 * grossSalary;
             var taxFreeWage = 700;
+            var secondPillarContribution2Percent = 2 / 100 * grossSalary;
 
-            // at your selected contribution rate
+            // 2024
+            var taxFreeWage2024 = getTaxFreeWage(grossSalary * 12) / 12;
+            var incomeTax2024 =
+                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage2024) * 0.20, 0);
+            var netSalary2024 = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2024;
+
+            // 2025 at your selected contribution rate
             var secondPillarContribution = pillarContribution / 100 * grossSalary;
             var incomeTax =
                 Math.max((grossSalary - unemploymentInsurance - secondPillarContribution - taxFreeWage) * 0.22, 0);
             var netSalary = grossSalary - unemploymentInsurance - secondPillarContribution - incomeTax;
 
-            // at 2% contribution rate
-            var secondPillarContribution2Percent = 2 / 100 * grossSalary;
+            // 2025 at 2% contribution rate
             var incomeTax2Percent =
                 Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.22, 0);
             var netSalary2Percent = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2Percent;
-            let netSalaryDiff = netSalary2Percent - netSalary;
+            let netSalaryVs2Percent = netSalary2Percent - netSalary;
 
             // total 2nd pillar contribution per month
             var monthlyContribution = secondPillarContribution + 0.04 * grossSalary;
             var monthlyContribution2Percent = secondPillarContribution2Percent + 0.04 * grossSalary;
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
+
+            var yearlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent) * 12, 0);
+
+            var netSalary2025vs2024 = netSalary - netSalary2024;
 
             var years = 65 - age;
 
@@ -260,20 +270,30 @@ $(document).ready(function ($) {
                 monthlyContributionDiff * 12 * (Math.pow(1 + returnRate / 100, years) - 1) / (returnRate / 100);
 
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
-            if (netSalaryDiff > 0) {
-                $calculator.find('#netWageDiff').text(`−${format(netSalaryDiff)} €`);
+            $calculator.find('#netWage2024').text(`${format(netSalary2024)} €`);
+
+            if(netSalary2025vs2024 < 0) {
+                $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
             } else {
-                $calculator.find('#netWageDiff').text('');
+                $calculator.find('#netWageDiff').text(`+${format(netSalary2025vs2024)} €`);
             }
 
             $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
-            if(monthlyContributionDiff > 0) {
+
+            if (yearlyTaxWin > 0) {
+                $calculator.find('#yearlyTaxWin').text(`+${format(yearlyTaxWin)} €`);
+                $calculator.find('#yearlyTaxWin').removeClass('d-none');
+                $calculator.find('#yearlyTaxWinZero').addClass('d-none');
+            } else {
+                $calculator.find('#yearlyTaxWinZero').removeClass('d-none');
+                $calculator.find('#yearlyTaxWin').addClass('d-none');
+            }
+
+            if (monthlyContributionDiff > 0) {
                 $calculator.find('#monthlyContributionDiff').text(`+${format(monthlyContributionDiff)} €`);
             } else {
                 $calculator.find('#monthlyContributionDiff').text('');
             }
-
-            $calculator.find('#chosenPillarContribution').text(`${pillarContribution}%`);
 
             if (savingSum > 0) {
                 $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);

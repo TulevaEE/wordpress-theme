@@ -2,7 +2,7 @@
     <div class="card-body p-4 text-navy second-pillar-payment-rate-calculator">
         <form>
             <h5 class="mb-3 px-3">
-                <?php _e('Calculate how much you would gain from increasing II pillar contributions from 2025', TEXT_DOMAIN); ?>
+                <?php _e('Calculate how much you would gain from increasing your contributions', TEXT_DOMAIN); ?>
             </h5>
             <div class="card bg-blue-washed p-3">
                 <div class="form-group row">
@@ -75,11 +75,11 @@
                 <div class="d-flex justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Net salary', TEXT_DOMAIN); ?>
+                            <?php _e('Net salary in 2025', TEXT_DOMAIN); ?>
                         </strong>
                         <small class="text-muted">
-                            <?php _e('You get every month', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="netWageDiff">−62 €</span>
+                            <?php _e('Vs. today', TEXT_DOMAIN); ?>
+                            <span class="text-nowrap" id="netWageDiff">+39 €</span>
                         </small>
                     </div>
                     <h4 id="netWage" class="text-nowrap vertical-align m-0">1595 €</h4>
@@ -89,6 +89,12 @@
                         <strong class="d-block">
                             <?php _e('II pillar contribution', TEXT_DOMAIN); ?>
                         </strong>
+                        <small class="text-muted d-none">
+                            <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?>
+                            <span class="text-nowrap" id="yearlyTaxWin">+211 €</span>
+                            <span class="text-nowrap d-none"
+                                  id="yearlyTaxWinZero"><?php _e('no change', TEXT_DOMAIN); ?></span>
+                        </small>
                         <small class="text-muted">
                             <?php _e('You contribute every month', TEXT_DOMAIN); ?>
                             <span class="text-nowrap" id="monthlyContributionDiff">+80 €</span>
@@ -99,25 +105,29 @@
                 <div class="d-flex justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Accumulates in II pillar', TEXT_DOMAIN); ?>
+                            <?php _e('Accumulates more', TEXT_DOMAIN); ?>
                         </strong>
                         <small class="text-muted">
-                            <?php _e('More compared to a 2% contribution', TEXT_DOMAIN); ?>
+                            <?php _e('Compared to a 2% contribution', TEXT_DOMAIN); ?>
                         </small>
                     </div>
                     <h4 id="savingsSum" class="text-nowrap vertical-align text-success m-0">+33 600 €</h4>
-                    <h4 id="savingsSumZero" class="text-nowrap vertical-align text-danger m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
+                    <h4 id="savingsSumZero"
+                        class="text-nowrap vertical-align text-danger m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
             </div>
-            <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
-               class="btn btn-primary btn-lg btn-block mt-3"
-               target="_blank">
-                <?php _e('Increase contribution<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
-            </a>
-            <div class="mt-2 text-center">
-                <small class="text-secondary">
-                    <?php _e('Increasing your II pillar contribution is <strong>free of charge</strong> and takes only 2&nbsp;minutes. In order to do that, you need to log in to your pension account.', TEXT_DOMAIN); ?>
-                </small>
+
+            <div class="d-md-none d-block">
+                <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
+                   class="btn btn-primary btn-lg btn-block mt-3"
+                   target="_blank">
+                    <?php _e('Increase contribution<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
+                </a>
+                <div class="mt-2 text-center">
+                    <small class="text-secondary">
+                        <?php _e('Increasing your II pillar contribution is <strong>free of charge</strong>.', TEXT_DOMAIN); ?>
+                    </small>
+                </div>
             </div>
     </div>
 </div>

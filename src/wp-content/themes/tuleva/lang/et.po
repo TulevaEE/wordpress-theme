@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-04 19:36:03+00:00\n"
-"PO-Revision-Date: 2024-01-04 21:36+0200\n"
+"POT-Creation-Date: 2024-01-05 21:22:53+00:00\n"
+"PO-Revision-Date: 2024-01-05 23:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1777,11 +1777,8 @@ msgstr ""
 "pankadele ja kindlustusseltsidele."
 
 #: templates/components/second-pillar-payment-rate-calculator.php:5
-msgid ""
-"Calculate how much you would gain from increasing II pillar contributions "
-"from 2025"
-msgstr ""
-"Arvuta, kui palju võidaksid II samba sissemakse suurendamisest alates 2025"
+msgid "Calculate how much you would gain from increasing your contributions"
+msgstr "Arvuta, kui palju võidad suurema sissemaksega"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:20
 #: templates/components/third-pillar-calculator.php:143
@@ -1807,43 +1804,50 @@ msgid "Long-term average stock market return"
 msgstr "Aktsiaturu pikaajaline keskmine tootlus"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:78
-msgid "Net salary"
-msgstr "Netopalk"
+msgid "Net salary in 2025"
+msgstr "Netopalk 2025. a"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:81
-msgid "You get every month"
-msgstr "saad iga kuu kätte"
+msgid "Vs. today"
+msgstr "võrreldes tänasega"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:90
 msgid "II pillar contribution"
 msgstr "II samba panus"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/third-pillar-calculator.php:227
+msgid "Yearly gain from income tax"
+msgstr "Tulumaksuvõit aastas"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:96
+msgid "no change"
+msgstr "ei muutu"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:99
 msgid "You contribute every month"
 msgstr "panustad iga kuu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:102
-msgid "Accumulates in II pillar"
-msgstr "Kogud pensioniks"
+#: templates/components/second-pillar-payment-rate-calculator.php:108
+msgid "Accumulates more"
+msgstr "Kogud pensioniks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:105
-msgid "More compared to a 2% contribution"
-msgstr "rohkem võrreldes 2% panusega"
+#: templates/components/second-pillar-payment-rate-calculator.php:111
+msgid "Compared to a 2% contribution"
+msgstr "võrreldes 2%&nbsp;panusega"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:109
+#: templates/components/second-pillar-payment-rate-calculator.php:116
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:115
+#: templates/components/second-pillar-payment-rate-calculator.php:124
 msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 "Suurendan sissemakset<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:119
+#: templates/components/second-pillar-payment-rate-calculator.php:128
 msgid ""
-"Increasing your II pillar contribution is <strong>free of charge</strong> "
-"and takes only 2&nbsp;minutes. In order to do that, you need to log in to "
-"your pension account."
+"Increasing your II pillar contribution is <strong>free of charge</strong>."
 msgstr "II samba sissemakse suurendamine on <strong>tasuta</strong>."
 
 #: templates/components/signup-block.php:27
@@ -1987,10 +1991,6 @@ msgid ""
 msgstr ""
 "<span class=\"d-inline-block\">III sambasse on mõistlik</span> <span "
 "class=\"d-inline-block\">iga kuu panna</span>"
-
-#: templates/components/third-pillar-calculator.php:227
-msgid "Yearly gain from income tax"
-msgstr "Aastane tulumaksuvõit"
 
 #: templates/components/third-pillar-calculator.php:245
 msgid "Get started"
@@ -2332,6 +2332,15 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr ""
 
+#~ msgid "II pillar monthly contribution"
+#~ msgstr "II samba panus iga kuu"
+
+#~ msgid "You get every month"
+#~ msgstr "saad iga kuu kätte"
+
+#~ msgid "More compared to a 2% contribution"
+#~ msgstr "rohkem võrreldes 2% panusega"
+
 #~ msgid "years old"
 #~ msgstr "aastat"
 
@@ -2348,9 +2357,6 @@ msgstr ""
 
 #~ msgid "pa"
 #~ msgstr "a"
-
-#~ msgid "Compared to a 2% contribution:"
-#~ msgstr "Võrreldes 2%&nbsp;panusega"
 
 #~ msgid "Your"
 #~ msgstr "Sinu"

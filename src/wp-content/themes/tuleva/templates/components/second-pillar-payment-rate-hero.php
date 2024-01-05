@@ -9,8 +9,8 @@
                         <?php if (get_sub_field('source')) { ?>
                             <p class="text-navy mb-5">
                                 <?php if (get_sub_field('source_link_url')) { ?>
-                                    <a href="<?php the_sub_field('source_link_url'); ?>" class="text-navy text-bold">
-                                <?php } ?>
+                                <a href="<?php the_sub_field('source_link_url'); ?>" class="text-navy text-bold">
+                                    <?php } ?>
                                     <?php the_sub_field('source'); ?><?php
                                     if (get_sub_field('source_link_url')) { ?></a><?php } ?><?php
                                 if (get_sub_field('source_description')) { ?>,
@@ -20,9 +20,20 @@
                         <?php } ?>
                     <?php } ?>
 
-                    <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
-                        <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3"><?php the_sub_field('button_text'); ?></a>
-                    <?php } ?>
+                    <div class="d-none d-lg-block">
+                        <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
+                            <a href="<?php the_sub_field('button_url'); ?>"
+                               class="btn btn-primary btn-lg btn-block mb-3">
+                                <?php the_sub_field('button_text'); ?>
+                            </a>
+                        <?php } ?>
+
+                        <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>
+                            <p class="small text-navy text-center mb-md-5 mb-lg-0">
+                                <?php the_sub_field('small_text'); ?>
+                            </p>
+                        <?php } ?>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <?php get_template_part('templates/components/second-pillar-payment-rate-calculator'); ?>
