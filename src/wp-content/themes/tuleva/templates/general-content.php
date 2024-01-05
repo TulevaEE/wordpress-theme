@@ -51,6 +51,7 @@
         get_template_part('templates/components/modal-security');
         get_template_part('templates/components/modal-founders');
         get_template_part('templates/components/modal-question-rights');
+        get_template_part('templates/components/modal-second-pillar-payment-rate');
 
     endwhile; ?>
 </div>

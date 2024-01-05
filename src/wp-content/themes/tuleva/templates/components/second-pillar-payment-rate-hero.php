@@ -43,6 +43,10 @@
                                 <?php the_sub_field('below_calculator_link_text'); ?>
                             </a>
                         </div>
+                    <?php } else { ?>
+                        <div class="my-3 text-center">
+                            <a href="#modal-second-pillar-payment-rate"><?php _e("Calculator assumptions", TEXT_DOMAIN); ?></a>
+                        </div>
                     <?php } ?>
                 </div>
             </div>

@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group row mb-0">
                     <label class="col-sm-6 col-form-label vertical-align pr-0">
-                        <?php _e('Annual return', TEXT_DOMAIN); ?>
+                        <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                     </label>
                     <div class="col-sm-6">
                         <div class="btn-group btn-group-toggle d-flex font-weight-normal"

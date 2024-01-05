@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-05 21:22:53+00:00\n"
+"POT-Creation-Date: 2024-01-05 22:29:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -827,6 +827,7 @@ msgid "In progress"
 msgstr ""
 
 #: templates/components/modal-calculator.php:11
+#: templates/components/modal-second-pillar-payment-rate.php:11
 msgid "How does the calculator work?"
 msgstr ""
 
@@ -852,6 +853,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/modal-calculator.php:21
+#: templates/components/modal-second-pillar-payment-rate.php:21
 msgid "Assumptions"
 msgstr ""
 
@@ -1259,6 +1261,41 @@ msgid ""
 "span> can be used for increasing our common good."
 msgstr ""
 
+#: templates/components/modal-second-pillar-payment-rate.php:16
+msgid ""
+"Expected returns depend greatly on the evolving rate of return, and neither "
+"we nor anyone else are able to guarantee a 7% annual return."
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:17
+msgid "In 2024, income tax rate is 20%."
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:18
+msgid ""
+"In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic "
+"exemption, if annual income increases from 14 400 euros to 25 200 euros, "
+"basic exemption decreases according to the following formula: 7848 – 7848 ÷ "
+"10 800 × (income amount – 14 400), if annual income is above 25 200 euros, "
+"basic exemption is 0."
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:24
+msgid "2025 income tax rate"
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:28
+msgid "2025 basic exemption per year"
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:32
+msgid "Retirement age"
+msgstr ""
+
+#: templates/components/modal-second-pillar-payment-rate.php:33
+msgid "65 y/o"
+msgstr ""
+
 #: templates/components/mutual-header.php:5
 msgid "Join us."
 msgstr ""
@@ -1473,7 +1510,7 @@ msgid "+4% government's contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:54
-msgid "Annual return"
+msgid "Expected annual return"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:67
@@ -1524,6 +1561,10 @@ msgstr ""
 #: templates/components/second-pillar-payment-rate-calculator.php:128
 msgid ""
 "Increasing your II pillar contribution is <strong>free of charge</strong>."
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-hero.php:48
+msgid "Calculator assumptions"
 msgstr ""
 
 #: templates/components/signup-block.php:27

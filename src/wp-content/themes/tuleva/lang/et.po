@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-05 21:22:53+00:00\n"
-"PO-Revision-Date: 2024-01-05 23:23+0200\n"
+"POT-Creation-Date: 2024-01-05 22:29:03+00:00\n"
+"PO-Revision-Date: 2024-01-06 00:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -930,6 +930,7 @@ msgid "In progress"
 msgstr "Töös"
 
 #: templates/components/modal-calculator.php:11
+#: templates/components/modal-second-pillar-payment-rate.php:11
 msgid "How does the calculator work?"
 msgstr "Kuidas pensionikalkulaator töötab?"
 
@@ -965,6 +966,7 @@ msgstr ""
 "garantiiks."
 
 #: templates/components/modal-calculator.php:21
+#: templates/components/modal-second-pillar-payment-rate.php:21
 msgid "Assumptions"
 msgstr "Mudeli eeldused"
 
@@ -1549,6 +1551,47 @@ msgstr ""
 "bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles "
 "õpime meie ühise kasu ja Eesti arengu nimel rakendama."
 
+#: templates/components/modal-second-pillar-payment-rate.php:16
+msgid ""
+"Expected returns depend greatly on the evolving rate of return, and neither "
+"we nor anyone else are able to guarantee a 7% annual return."
+msgstr ""
+"Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
+"keegi teine ei saa sulle tagada, et fondide tootlus on 7% aastas."
+
+#: templates/components/modal-second-pillar-payment-rate.php:17
+msgid "In 2024, income tax rate is 20%."
+msgstr "2024. aastal on tulumaksumäär 20%."
+
+#: templates/components/modal-second-pillar-payment-rate.php:18
+msgid ""
+"In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic "
+"exemption, if annual income increases from 14 400 euros to 25 200 euros, "
+"basic exemption decreases according to the following formula: 7848 – 7848 ÷ "
+"10 800 × (income amount – 14 400), if annual income is above 25 200 euros, "
+"basic exemption is 0."
+msgstr ""
+"2024. aastal aastatuluga kuni 14 400 eurot on maksuvaba tulu aastas 7848 "
+"eurot; aastatulu kasvades 14 400 eurolt 25 200 euroni väheneb maksuvaba tulu "
+"vastavalt valemile 7848 – 7848 ÷ 10 800 × (tulu summa – 14 400); aastatuluga "
+"üle 25 200 euro on maksuvaba tulu 0."
+
+#: templates/components/modal-second-pillar-payment-rate.php:24
+msgid "2025 income tax rate"
+msgstr "2025. a tulumaksumäär"
+
+#: templates/components/modal-second-pillar-payment-rate.php:28
+msgid "2025 basic exemption per year"
+msgstr "2025. a maksuvaba tulu aastas"
+
+#: templates/components/modal-second-pillar-payment-rate.php:32
+msgid "Retirement age"
+msgstr "Pensioniiga"
+
+#: templates/components/modal-second-pillar-payment-rate.php:33
+msgid "65 y/o"
+msgstr "65 a"
+
 #: templates/components/mutual-header.php:5
 msgid "Join us."
 msgstr "Kutsume sind meiega ühinema."
@@ -1796,8 +1839,8 @@ msgid "+4% government's contribution"
 msgstr "+4% riigi panus"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:54
-msgid "Annual return"
-msgstr "Tootlus"
+msgid "Expected annual return"
+msgstr "Eeldatav tootlus"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:67
 msgid "Long-term average stock market return"
@@ -1849,6 +1892,10 @@ msgstr ""
 msgid ""
 "Increasing your II pillar contribution is <strong>free of charge</strong>."
 msgstr "II samba sissemakse suurendamine on <strong>tasuta</strong>."
+
+#: templates/components/second-pillar-payment-rate-hero.php:48
+msgid "Calculator assumptions"
+msgstr "Kalkulaatori eeldused"
 
 #: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
@@ -2332,6 +2379,17 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr ""
 
+#~ msgid "65 years"
+#~ msgstr "65 a"
+
+#~ msgid ""
+#~ "Expected returns depend greatly on the evolving rate of return, and "
+#~ "neither we nor anyone else are able to guarantee a 5% or a 7% annual "
+#~ "return."
+#~ msgstr ""
+#~ "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
+#~ "keegi teine ei saa sulle tagada, et fondide tootlus on 7% aastas."
+
 #~ msgid "II pillar monthly contribution"
 #~ msgstr "II samba panus iga kuu"
 
@@ -2351,9 +2409,6 @@ msgstr ""
 #~ "Percentage of gross salary. The state contributes an additional 4% to "
 #~ "this."
 #~ msgstr "Protsent brutopalgast. Riik panustab sellele 4% lisaks."
-
-#~ msgid "per year"
-#~ msgstr "aastas"
 
 #~ msgid "pa"
 #~ msgstr "a"
