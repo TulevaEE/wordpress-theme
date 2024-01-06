@@ -183,26 +183,14 @@ $(document).ready(function ($) {
             wageDeduction = isNaN(wageDeduction) ? 0 : wageDeduction;
             var taxReliefs = parseInt($calculator.find('#taxReliefs').val());
             taxReliefs = isNaN(taxReliefs) ? 0 : taxReliefs;
-            var kids = parseInt($calculator.find('#kids').val());
-            kids = isNaN(kids) ? 0 : kids;
 
             var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
             var taxFreeWage = getTaxFreeWage(wage);
             var deductions = wageTotal * 0.036;
-            var additionalTaxFreeWage = (function (kids) {
-                var additionalTaxFreeWage = 0;
-                if (kids >= 2) {
-                    additionalTaxFreeWage += 1848;
-                }
-                if (kids >= 3) {
-                    additionalTaxFreeWage += 3048 * (kids - 2);
-                }
-                return additionalTaxFreeWage;
-            })(kids);
 
             var taxableWage = Math.max(
-                wageTotal - taxFreeWage - deductions - additionalTaxFreeWage - taxReliefs, 0);
+                wageTotal - taxFreeWage - deductions - taxReliefs, 0);
             var yearlyAmount = Math.min(0.15 * wageTotal, 6000, taxableWage);
             var monthlyAmount = yearlyAmount / 12;
             var savingsSum = yearlyAmount * 0.2;

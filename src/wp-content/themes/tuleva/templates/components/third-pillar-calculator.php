@@ -15,7 +15,7 @@ $isNovember = (date('m') == 11);
                         <td style="width: 109px" class="py-3 bg-gray-tint">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="yearlyWage"
-                                       min="0" step="1" placeholder="24000"
+                                       min="0" step="1" placeholder="24000" inputmode="numeric"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
@@ -37,7 +37,7 @@ $isNovember = (date('m') == 11);
                         <td class="pb-3 bg-gray-tint">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right"
-                                       id="wageDeduction"
+                                       id="wageDeduction" inputmode="numeric"
                                        min="0" step="1" placeholder="0"
                                        oninput="validity.valid||(value='');">
                             </div>
@@ -54,13 +54,13 @@ $isNovember = (date('m') == 11);
                             <?php _e('Other tax reliefs', TEXT_DOMAIN); ?><span
                                 class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                 data-placement="top"
-                                title="<?php _e('Home loan interest up to €300, gifts and donations, education costs, including kindergarten fees', TEXT_DOMAIN); ?>"
+                                title="<?php _e('Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia.', TEXT_DOMAIN); ?>"
                             ></span>
                         </td>
                         <td class="py-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="taxReliefs"
-                                       min="0" step="1" placeholder="0"
+                                       min="0" step="1" placeholder="0" inputmode="numeric"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
@@ -68,26 +68,6 @@ $isNovember = (date('m') == 11);
                             <span
                                 class="d-none d-md-inline-block"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 pb-3 pl-3">
-                            <?php _e('Number of underage children', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
-                                title="<?php _e('One parent of children under the age of 18 can deduct additional tax-free income', TEXT_DOMAIN); ?>"
-                            ></span>
-                        </td>
-                        <td class="pb-3">
-                            <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right" id="kids"
-                                       min="0" step="1" placeholder="0"
-                                       oninput="validity.valid||(value='');">
-                            </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3">
-                            <span
-                                class="d-none d-md-inline-block"><?php _e('kids', TEXT_DOMAIN); ?></span>
                         </td>
                     </tr>
                     <tr class="calculator__summary-row first last">
@@ -133,7 +113,7 @@ $isNovember = (date('m') == 11);
                 </a>
                 <div class="mt-2">
                     <small class="text-secondary">
-                        <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes. Log into your pension account.', TEXT_DOMAIN); ?>
+                        <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
                     </small>
                 </div>
             <?php } else { ?>
@@ -149,7 +129,7 @@ $isNovember = (date('m') == 11);
                         <td style="width: 109px" class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="monthlyWage"
-                                       min="0" step="1" placeholder="2000"
+                                       min="0" step="1" placeholder="2000" inputmode="numeric"
                                        oninput="validity.valid||(value='');">
                             </div>
                         </td>
@@ -171,7 +151,7 @@ $isNovember = (date('m') == 11);
                         <td class="pb-3">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right"
-                                       id="wageAddition"
+                                       id="wageAddition" inputmode="numeric"
                                        min="0" step="1" placeholder="0"
                                        oninput="validity.valid||(value='');">
                             </div>
@@ -181,26 +161,6 @@ $isNovember = (date('m') == 11);
                                 <?php _e('&euro;/year', TEXT_DOMAIN); ?>
                             </span>
                             <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 pb-3 pl-3">
-                            <?php _e('Number of underage children', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
-                                title="<?php _e('One parent of children under the age of 18 can deduct additional tax-free income', TEXT_DOMAIN); ?>"
-                            ></span>
-                        </td>
-                        <td class="pb-3">
-                            <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right" id="kids"
-                                       min="0" step="1" placeholder="0"
-                                       oninput="validity.valid||(value='');">
-                            </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3">
-                            <span
-                                class="d-none d-md-inline-block"><?php _e('kids', TEXT_DOMAIN); ?></span>
                         </td>
                     </tr>
                     <tr class="calculator__summary-row first last">
@@ -246,7 +206,7 @@ $isNovember = (date('m') == 11);
                 </a>
                 <div class="mt-2">
                     <small class="text-secondary">
-                        <?php _e('Setting up a recurring III pillar payment is <strong>free of charge</strong> and takes only 5&nbsp;minutes. In order to do that, you need to log in to your pension account.', TEXT_DOMAIN); ?>
+                        <?php _e('Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes.', TEXT_DOMAIN); ?>
                     </small>
                 </div>
             <?php } ?>
