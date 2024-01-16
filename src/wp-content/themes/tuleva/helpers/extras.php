@@ -485,3 +485,19 @@ function countdown_timer_function($atts) {
 }
 
 add_shortcode('countdown_timer', 'countdown_timer_function');
+
+function term_link_domain_fix($term_link) {
+    $site_url = get_site_url();
+    $parsed_site_url = parse_url($site_url);
+    $parsed_term_link = parse_url($term_link);
+    $parsed_term_link['host'] = $parsed_site_url['host'];
+
+    $fixed_url = $parsed_term_link['scheme'] . '://' . $parsed_term_link['host'] . $parsed_term_link['path'];
+
+    if (isset($parsed_term_link['query'])) {
+        $fixed_url .= '?' . $parsed_term_link['query'];
+    }
+
+    return $fixed_url;
+}
+add_filter('term_link', 'term_link_domain_fix', 20);
