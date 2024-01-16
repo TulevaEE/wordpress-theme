@@ -12,20 +12,6 @@ function get_meta_description()
 }
 
 /**
- * Prints post meta description tag
- * @return string
- */
-function print_meta_description_tag()
-{
-    $meta_desc = get_meta_description();
-
-    if (!empty($meta_desc)) {
-        echo '<meta name="description" content="' . $meta_desc . '">';
-    }
-}
-add_action('wp_head', 'print_meta_description_tag');
-
-/**
  * Changes default excerpt more
  * @param  string $more Current "more" string
  * @return string       Returns modified "more" string
@@ -501,3 +487,14 @@ function term_link_domain_fix($term_link) {
     return $fixed_url;
 }
 add_filter('term_link', 'term_link_domain_fix', 20);
+
+function force_valid_domain_redirect() {
+    $valid_domain = parse_url(WP_SITEURL, PHP_URL_HOST);
+
+    if ($_SERVER['HTTP_HOST'] !== $valid_domain) {
+        $protocol = is_ssl() ? 'https://' : 'http://';
+        wp_redirect($protocol . $valid_domain . $_SERVER['REQUEST_URI'], 301);
+        exit;
+    }
+}
+add_action('template_redirect', 'force_valid_domain_redirect');
