@@ -45,7 +45,7 @@
                         </div>
                     <?php } else { ?>
                         <div class="my-3 text-center">
-                            <a href="#modal-second-pillar-payment-rate"><?php _e("Calculator assumptions", TEXT_DOMAIN); ?></a>
+                            <a href="#modal-second-pillar-payment-rate"><?php _e("How does the calculator work?", TEXT_DOMAIN); ?></a>
                         </div>
                     <?php } ?>
                 </div>

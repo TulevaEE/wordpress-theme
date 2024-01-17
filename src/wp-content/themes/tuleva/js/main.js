@@ -218,7 +218,7 @@ $(document).ready(function ($) {
             grossSalary = isNaN(grossSalary) ? 2000 : grossSalary;
 
             var pillarContribution = parseInt($calculator.find('input[name="pillarContribution"]:checked').val());
-            var returnRate = parseInt($calculator.find('input[name="returnRate"]:checked').val());
+            var returnRate = Number($calculator.find('#returnRate').val());
 
             var unemploymentInsurance = 0.016 * grossSalary;
             var taxFreeWage = 700;
@@ -231,20 +231,21 @@ $(document).ready(function ($) {
             var netSalary2024 = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2024;
 
             // 2025 at your selected contribution rate
-            var secondPillarContribution = pillarContribution / 100 * grossSalary;
+            var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
             var incomeTax =
-                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution - taxFreeWage) * 0.22, 0);
-            var netSalary = grossSalary - unemploymentInsurance - secondPillarContribution - incomeTax;
+                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * 0.22, 0);
+            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
 
             // 2025 at 2% contribution rate
             var incomeTax2Percent =
                 Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.22, 0);
             var netSalary2Percent = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2Percent;
-            let netSalaryVs2Percent = netSalary2Percent - netSalary;
+            var netSalaryVs2Percent = netSalary2Percent - netSalary;
 
             // total 2nd pillar contribution per month
-            var monthlyContribution = secondPillarContribution + 0.04 * grossSalary;
-            var monthlyContribution2Percent = secondPillarContribution2Percent + 0.04 * grossSalary;
+            var governmentContribution = 0.04 * grossSalary;
+            var monthlyContribution = yourSecondPillarContribution + governmentContribution;
+            var monthlyContribution2Percent = secondPillarContribution2Percent + governmentContribution;
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
 
             var yearlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent) * 12, 0);
@@ -260,13 +261,15 @@ $(document).ready(function ($) {
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
             $calculator.find('#netWage2024').text(`${format(netSalary2024)} €`);
 
-            if(netSalary2025vs2024 < 0) {
+            if (netSalary2025vs2024 < 0) {
                 $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
             } else {
                 $calculator.find('#netWageDiff').text(`+${format(netSalary2025vs2024)} €`);
             }
 
             $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
+            $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
+            $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
             if (yearlyTaxWin > 0) {
                 $calculator.find('#yearlyTaxWin').text(`+${format(yearlyTaxWin)} €`);
@@ -275,12 +278,6 @@ $(document).ready(function ($) {
             } else {
                 $calculator.find('#yearlyTaxWinZero').removeClass('d-none');
                 $calculator.find('#yearlyTaxWin').addClass('d-none');
-            }
-
-            if (monthlyContributionDiff > 0) {
-                $calculator.find('#monthlyContributionDiff').text(`+${format(monthlyContributionDiff)} €`);
-            } else {
-                $calculator.find('#monthlyContributionDiff').text('');
             }
 
             if (savingSum > 0) {
@@ -299,6 +296,35 @@ $(document).ready(function ($) {
             $input.closest('form').on('submit', function (ev) {
                 ev.preventDefault();
                 return false;
+            });
+            var $customRange = $('.second-pillar-payment-rate-calculator .custom-range');
+            var $customTooltip = $('#customTooltip');
+
+            function updateTooltip(value) {
+                $customTooltip.text(value + '%');
+            }
+
+            function updateTooltipPosition() {
+                var value = Number($customRange.val());
+                var max = Number($customRange.attr('max'));
+                var min = Number($customRange.attr('min'));
+
+                var percent = (value - min) / (max - min);
+                var rangeWidth = $customRange.outerWidth();
+                var newX = percent * rangeWidth - rangeWidth / 2;
+
+                var thumbRadius = 24 / 2;
+                var fractionFromCentre = (percent - 0.5) * 2;
+                var adjustment = fractionFromCentre * -thumbRadius;
+
+                $customTooltip.css('transform', 'translateX(' + (newX + adjustment) + 'px)');
+            }
+
+            $customRange.on('input', function () {
+                var value = $(this).val();
+                updateTooltip(value);
+                updateTooltipPosition();
+                calculateSecondPillarPaymentRate();
             });
         },
         initAccordion = function () {

@@ -25,8 +25,8 @@
                                 <p class="mb-0 text-bold text-nowrap">22%</p>
                             </div>
                             <div class="d-flex justify-content-between eeldus">
-                                <p class="mb-0"><?php _e('2025 basic exemption per year', TEXT_DOMAIN) ?></p>
-                                <p class="mb-0 text-bold text-nowrap">8400 €</p>
+                                <p class="mb-0"><?php _e('2025 basic exemption per month', TEXT_DOMAIN) ?></p>
+                                <p class="mb-0 text-bold text-nowrap">700 €</p>
                             </div>
                             <div class="d-flex justify-content-between eeldus">
                                 <p class="mb-0"><?php _e('Retirement age', TEXT_DOMAIN) ?></p>

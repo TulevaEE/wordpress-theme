@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-06 14:56:59+00:00\n"
-"PO-Revision-Date: 2024-01-06 17:01+0200\n"
+"POT-Creation-Date: 2024-01-16 08:07:39+00:00\n"
+"PO-Revision-Date: 2024-01-16 10:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:449 helpers/extras.php:460
+#: helpers/extras.php:435 helpers/extras.php:446
 msgid "days"
 msgstr "päeva"
 
@@ -931,6 +931,7 @@ msgstr "Töös"
 
 #: templates/components/modal-calculator.php:11
 #: templates/components/modal-second-pillar-payment-rate.php:11
+#: templates/components/second-pillar-payment-rate-hero.php:48
 msgid "How does the calculator work?"
 msgstr "Kuidas pensionikalkulaator töötab?"
 
@@ -1557,7 +1558,7 @@ msgid ""
 "we nor anyone else are able to guarantee a 7% annual return."
 msgstr ""
 "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
-"keegi teine ei saa sulle tagada, et fondide tootlus on 7% aastas."
+"keegi teine ei saa sulle tagada fondide tootlust."
 
 #: templates/components/modal-second-pillar-payment-rate.php:17
 msgid "In 2024, income tax rate is 20%."
@@ -1581,8 +1582,8 @@ msgid "2025 income tax rate"
 msgstr "2025. a tulumaksumäär"
 
 #: templates/components/modal-second-pillar-payment-rate.php:28
-msgid "2025 basic exemption per year"
-msgstr "2025. a maksuvaba tulu aastas"
+msgid "2025 basic exemption per month"
+msgstr "2025. a maksuvaba tulu kuus"
 
 #: templates/components/modal-second-pillar-payment-rate.php:32
 msgid "Retirement age"
@@ -1820,82 +1821,75 @@ msgstr ""
 "pankadele ja kindlustusseltsidele."
 
 #: templates/components/second-pillar-payment-rate-calculator.php:5
-msgid "Calculate how much you would gain from increasing your contributions"
-msgstr "Arvuta, kui palju võidad suurema sissemaksega"
+msgid ""
+"Calculate how much you will gain with a higher contribution and the 2025 "
+"income tax reform"
+msgstr ""
+"Arvuta, kui palju võidad <span class=\"text-highlight text-nowrap\">2025. a</"
+"span> tulumaksureformi ja II&nbsp;samba sissemakse suurendamise koosmõjul"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:20
 #: templates/components/third-pillar-calculator.php:123
 msgid "Monthly gross salary"
-msgstr "Brutokuupalk"
+msgstr "Brutopalk"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:30
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:36
-#: templates/components/second-pillar-payment-rate-calculator.php:41
-#: templates/components/second-pillar-payment-rate-calculator.php:46
-msgid "+4% government's contribution"
-msgstr "+4% riigi panus"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:54
+#: templates/components/second-pillar-payment-rate-calculator.php:48
 msgid "Expected annual return"
-msgstr "Eeldatav tootlus"
+msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:67
-msgid "Long-term average stock market return"
-msgstr "Aktsiaturu pikaajaline keskmine tootlus"
+#: templates/components/second-pillar-payment-rate-calculator.php:61
+msgid "Monthly net salary"
+msgstr "Netopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:78
-msgid "Net salary in 2025"
-msgstr "Netopalk 2025. a"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:81
+#: templates/components/second-pillar-payment-rate-calculator.php:64
 msgid "Vs. today"
 msgstr "võrreldes tänasega"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:90
-msgid "II pillar contribution"
-msgstr "II samba panus"
+#: templates/components/second-pillar-payment-rate-calculator.php:73
+msgid "II pillar monthly contribution"
+msgstr "II samba igakuine panus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/second-pillar-payment-rate-calculator.php:76
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:96
+#: templates/components/second-pillar-payment-rate-calculator.php:79
 msgid "no change"
 msgstr "ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:99
-msgid "You contribute every month"
-msgstr "panustad iga kuu"
+#: templates/components/second-pillar-payment-rate-calculator.php:82
+msgid "You contribute"
+msgstr "sina panustad"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:108
+#: templates/components/second-pillar-payment-rate-calculator.php:84
+msgid "the government adds"
+msgstr "riik lisab"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:93
 msgid "Accumulates more"
 msgstr "Kogud pensioniks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:111
-msgid "Compared to a 2% contribution"
-msgstr "võrreldes 2%&nbsp;panusega"
+#: templates/components/second-pillar-payment-rate-calculator.php:96
+msgid "Compared to the current 2% contribution"
+msgstr "võrreldes senise 2%&nbsp;panusega"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:116
+#: templates/components/second-pillar-payment-rate-calculator.php:101
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:124
+#: templates/components/second-pillar-payment-rate-calculator.php:109
 msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 "Suurendan sissemakset<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:128
-msgid ""
-"Increasing your II pillar contribution is <strong>free of charge</strong>."
-msgstr "II samba sissemakse suurendamine on <strong>tasuta</strong>."
-
-#: templates/components/second-pillar-payment-rate-hero.php:48
-msgid "Calculator assumptions"
-msgstr "Kalkulaatori eeldused"
+#: templates/components/second-pillar-payment-rate-calculator.php:113
+msgid "Submitting an application is <strong>free of charge</strong>."
+msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
 #: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
@@ -2356,6 +2350,18 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr ""
 
+#~ msgid "II pillar contribution"
+#~ msgstr "II samba panus"
+
+#~ msgid "Calculator assumptions"
+#~ msgstr "Kalkulaatori eeldused"
+
+#~ msgid "+4% government's contribution"
+#~ msgstr "+4% riigi panus"
+
+#~ msgid "Long-term average stock market return per year"
+#~ msgstr "Aktsiaturu pikaajaline keskmine tootlus aastas"
+
 #~ msgid ""
 #~ "Home loan interest up to €300, gifts and donations, education costs, "
 #~ "including kindergarten fees"
@@ -2388,9 +2394,6 @@ msgstr ""
 #~ "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
 #~ "keegi teine ei saa sulle tagada, et fondide tootlus on 7% aastas."
 
-#~ msgid "II pillar monthly contribution"
-#~ msgstr "II samba panus iga kuu"
-
 #~ msgid "You get every month"
 #~ msgstr "saad iga kuu kätte"
 
@@ -2413,9 +2416,6 @@ msgstr ""
 
 #~ msgid "Your"
 #~ msgstr "Sinu"
-
-#~ msgid "+ the government's"
-#~ msgstr "+ riigi"
 
 #~ msgid ""
 #~ "To make a payment log into your pension account using your ID-card, "

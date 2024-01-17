@@ -1,10 +1,10 @@
-# Copyright (C) 2024 
+# Copyright (C) 2024
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-06 14:56:59+00:00\n"
+"POT-Creation-Date: 2024-01-16 08:07:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: helpers/extras.php:449 helpers/extras.php:460
+#: helpers/extras.php:435 helpers/extras.php:446
 msgid "days"
 msgstr ""
 
@@ -828,6 +828,7 @@ msgstr ""
 
 #: templates/components/modal-calculator.php:11
 #: templates/components/modal-second-pillar-payment-rate.php:11
+#: templates/components/second-pillar-payment-rate-hero.php:48
 msgid "How does the calculator work?"
 msgstr ""
 
@@ -1285,7 +1286,7 @@ msgid "2025 income tax rate"
 msgstr ""
 
 #: templates/components/modal-second-pillar-payment-rate.php:28
-msgid "2025 basic exemption per year"
+msgid "2025 basic exemption per month"
 msgstr ""
 
 #: templates/components/modal-second-pillar-payment-rate.php:32
@@ -1491,7 +1492,9 @@ msgid ""
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:5
-msgid "Calculate how much you would gain from increasing your contributions"
+msgid ""
+"Calculate how much you will gain with a higher contribution and the 2025 "
+"income tax reform"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:20
@@ -1503,68 +1506,57 @@ msgstr ""
 msgid "Your II pillar contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:36
-#: templates/components/second-pillar-payment-rate-calculator.php:41
-#: templates/components/second-pillar-payment-rate-calculator.php:46
-msgid "+4% government's contribution"
-msgstr ""
-
-#: templates/components/second-pillar-payment-rate-calculator.php:54
+#: templates/components/second-pillar-payment-rate-calculator.php:48
 msgid "Expected annual return"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:67
-msgid "Long-term average stock market return"
+#: templates/components/second-pillar-payment-rate-calculator.php:61
+msgid "Monthly net salary"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:78
-msgid "Net salary in 2025"
-msgstr ""
-
-#: templates/components/second-pillar-payment-rate-calculator.php:81
+#: templates/components/second-pillar-payment-rate-calculator.php:64
 msgid "Vs. today"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:90
-msgid "II pillar contribution"
+#: templates/components/second-pillar-payment-rate-calculator.php:73
+msgid "II pillar monthly contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/second-pillar-payment-rate-calculator.php:76
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:96
+#: templates/components/second-pillar-payment-rate-calculator.php:79
 msgid "no change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:99
-msgid "You contribute every month"
+#: templates/components/second-pillar-payment-rate-calculator.php:82
+msgid "You contribute"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:108
+#: templates/components/second-pillar-payment-rate-calculator.php:84
+msgid "the government adds"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:93
 msgid "Accumulates more"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:111
-msgid "Compared to a 2% contribution"
+#: templates/components/second-pillar-payment-rate-calculator.php:96
+msgid "Compared to the current 2% contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:116
+#: templates/components/second-pillar-payment-rate-calculator.php:101
 msgid "No change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:124
+#: templates/components/second-pillar-payment-rate-calculator.php:109
 msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:128
-msgid ""
-"Increasing your II pillar contribution is <strong>free of charge</strong>."
-msgstr ""
-
-#: templates/components/second-pillar-payment-rate-hero.php:48
-msgid "Calculator assumptions"
+#: templates/components/second-pillar-payment-rate-calculator.php:113
+msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr ""
 
 #: templates/components/signup-block.php:27

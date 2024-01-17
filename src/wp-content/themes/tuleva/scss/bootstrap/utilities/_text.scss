@@ -44,9 +44,12 @@
 }
 
 .text-muted { color: $text-muted !important; }
+.text-orange { color: $orange !important; }
+.text-gray-700 { color: $gray-700 !important; }
 
 // Misc
 
 .text-hide {
   @include text-hide();
 }
+
