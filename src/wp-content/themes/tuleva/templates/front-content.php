@@ -38,6 +38,8 @@
                     get_template_part('templates/components/qa-block');
                 } else if (get_row_layout() === 'notice') {
                     get_template_part('templates/components/notice');
+                } else if (get_row_layout() === 'second_pillar_payment_rate_hero') {
+                    get_template_part('templates/components/second-pillar-payment-rate-hero');
                 }
             }
         }
