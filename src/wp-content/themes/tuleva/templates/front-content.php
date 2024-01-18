@@ -22,6 +22,8 @@
                     get_template_part('templates/components/signup-block');
                 } else if (get_row_layout() === 'front_hero') {
                     get_template_part('templates/components/front-hero');
+                } else if (get_row_layout() === 'credentials') {
+                    get_template_part('templates/components/credentials');
                 } else if (get_row_layout() === 'media_block_with_cta') {
                     get_template_part('templates/components/tuleva-difference');
                 } else if (get_row_layout() === 'testimonials') {

@@ -1,9 +1,4 @@
 <?php
-$members_count = get_field('members_count', 'option');
-$members_count_description = get_sub_field('members_count_description');
-$security_text = get_sub_field('security_text');
-$security_link_text = get_sub_field('security_link_text');
-$security_link_url = get_sub_field('security_link_url');
 $lead_text = get_sub_field('lead_text');
 ?>
 <section id="<?php the_sub_field('component_id'); ?>">
@@ -37,7 +32,7 @@ $lead_text = get_sub_field('lead_text');
                         ?>
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6">f
                     <?php get_template_part('templates/components/front-hero/calculator'); ?>
                     <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
                         <a href="<?php the_sub_field('below_calculator_link_url'); ?>" class="btn btn-link btn-block text-medium text-uppercase text-center my-3"><?php the_sub_field('below_calculator_link_text'); ?></a>
@@ -45,33 +40,5 @@ $lead_text = get_sub_field('lead_text');
                 </div>
             </div>
         </div>
-        <!-- Credentials -->
-        <?php if ($security_text || ($members_count && $members_count_description)) { ?>
-            <div class="container-fluid bg-blueish-gray d-none d-sm-block py-4">
-                <div class="container">
-                    <div class="row">
-                        <?php if ($security_text) { ?>
-                            <div class="col col-md-6 d-flex">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/icon-lock.svg" alt="<?php echo $security_text; ?>" class="mr-4" />
-                                <div class="d-flex flex-column justify-content-center">
-                                    <p class="mb-2 text-navy"><?php echo $security_text; ?></p>
-                                    <?php if ($security_link_url && $security_link_text) { ?>
-                                        <a id="security" href="<?php echo $security_link_url; ?>" class="text-uppercase text-medium"><?php echo $security_link_text; ?></a>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        <?php } ?>
-                        <?php if ($members_count && $members_count_description) { ?>
-                            <div class="col-md-6 d-none d-md-flex align-items-center">
-                                <span class="membercount text-nowrap mr-4">
-                                    <?php echo number_format($members_count, 0, '', ' '); ?>
-                                </span>
-                                <p class="mb-0 text-navy"><?php echo $members_count_description; ?></p>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
     </div>
 </section>
