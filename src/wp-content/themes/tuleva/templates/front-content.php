@@ -48,5 +48,6 @@
     <?php
         get_template_part('templates/components/modal-calculator');
         get_template_part('templates/components/modal-security');
+        get_template_part('templates/components/modal-second-pillar-payment-rate');
     ?>
 </div>
