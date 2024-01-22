@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="d-md-none d-block">
+            <div class="d-lg-none d-block">
                 <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3"
                    target="_blank">
