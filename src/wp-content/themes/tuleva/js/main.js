@@ -63,13 +63,16 @@ $(document).ready(function ($) {
 
             $(window).scroll(function () {
                 var scrollPosition = $(window).scrollTop(),
-                    viewportHeight = $(window).height();
+                    viewportHeight = $(window).height(),
+                    heroHeight = $('.page-container section:first-of-type').height();
 
-                if (scrollPosition > viewportHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
+                var maxHeight = Math.max(heroHeight, viewportHeight);
+
+                if (scrollPosition > maxHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
                     $beaconToggle.addClass('d-block');
                 }
 
-                if (scrollPosition < viewportHeight && !$beaconToggle.hasClass('beacon-toggle--open')) {
+                if (scrollPosition < maxHeight && !$beaconToggle.hasClass('beacon-toggle--open')) {
                     $beaconToggle.removeClass('d-block');
                 }
             });
