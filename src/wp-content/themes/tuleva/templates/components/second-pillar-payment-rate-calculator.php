@@ -49,7 +49,7 @@
 
                     </label>
                     <div class="col-sm-6 text-center">
-                        <div id="customTooltip" class="text-primary text-bold mb-1">0%</div>
+                        <span id="customTooltip" class="d-inline-block text-primary text-bold mb-1">0%</span>
                         <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1">
                     </div>
                 </div>
