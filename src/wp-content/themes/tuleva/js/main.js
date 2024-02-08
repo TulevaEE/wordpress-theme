@@ -68,6 +68,10 @@ $(document).ready(function ($) {
                 if (scrollPosition > viewportHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
                     $beaconToggle.addClass('d-block');
                 }
+
+                if (scrollPosition < viewportHeight && !$beaconToggle.hasClass('beacon-toggle--open')) {
+                    $beaconToggle.removeClass('d-block');
+                }
             });
         },
         showStickyHeader = function () {

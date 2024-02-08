@@ -1,9 +1,11 @@
 .sticky-header-visible {
-    .header--sticky {
-        display: block;
-        background-color: #fff;
-        top: 0;
-        transition: top 0.4s ease, background-color 0.4s ease;
+    @include media-breakpoint-up(md) {
+        .header--sticky {
+            display: block;
+            background-color: #fff;
+            top: 0;
+            transition: top 0.4s ease, background-color 0.4s ease;
+        }
     }
 }
 
