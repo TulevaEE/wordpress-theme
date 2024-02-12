@@ -71,7 +71,7 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/12/TUV100-Prospekt-18.12.2023.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/Tuleva-III-Samba-Pensionifondi-Tingimused_01.09.2022.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/02/TUV100-Prospekt-07.02.2024.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/Tuleva-III-Samba-Pensionifondi-Tingimused_01.09.2022.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/05/20230509_Tuleva_pensionifondide_mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -92,7 +92,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/01/TUV100-investeeringute-aruanne-29.12.2023.pdf'); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/02/TUV100-investeeringute-aruanne-31.01.2024.pdf'); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
@@ -104,7 +104,7 @@
                         <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
-                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 98.41) ?>
+                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 94.19) ?>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>

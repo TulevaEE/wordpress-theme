@@ -71,7 +71,7 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/12/TUK75-ja-TUK00-Prospekt-18.12.2023.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/02/TUK75-ja-TUK00-Prospekt-07.02.2024.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/05/20230509_Tuleva_pensionifondide_mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -92,7 +92,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/01/TULVPF-investeeringute-aruanne-291223.pdf'); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/02/TULVPF-investeeringute-aruanne-310124.pdf'); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
@@ -104,17 +104,17 @@
                         <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
-                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 150.27) ?>
+                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 149.65) ?>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
                             <?php echo sprintf(
                                 __('Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)', TEXT_DOMAIN),
                                 '0.00', // Controversial Weapons
-                                '0.07', // Nuclear Weapons
+                                '0.09', // Nuclear Weapons
                                 '0.00', // Civilian Firearms
-                                '0.34', // Tobacco
-                                '0.73', // UN Global Compact Violators
+                                '0.32', // Tobacco
+                                '0.16', // UN Global Compact Violators
                                 '0.10', // Thermal Coal
                                 '0.00'  // Oil Sands
                             ); ?>
