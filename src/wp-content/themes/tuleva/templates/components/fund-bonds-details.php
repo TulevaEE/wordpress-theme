@@ -42,13 +42,13 @@
                                     title="<?php echo sprintf(
                                         __("Starting from %s fund's management fee was changed and ongoing charges are %s%%. Ongoing charges based on expenses for year %d are %s%%. Ongoing charges may vary from year to year.", TEXT_DOMAIN),
                                         "01.10.2023",
-                                        "0,39",
+                                        "0,38",
                                         date("Y") - 1,
-                                        "0,41"
+                                        "0,40"
                                     );  ?>"
                                 ></span>
                             </div>
-                            <div>0,39%</div>
+                            <div>0,38%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
@@ -71,7 +71,7 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/02/TUK75-ja-TUK00-Prospekt-16.02.2024.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/02/TUK75-ja-TUK00-Prospekt-21.02.2024.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2021/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-05.03.20211.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2023/05/20230509_Tuleva_pensionifondide_mudelportfellid.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
