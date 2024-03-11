@@ -362,6 +362,21 @@ $(document).ready(function ($) {
 
                 $parent.find('.collapse.show').collapse('hide');
             });
+
+            const hash = window.location.hash.substring(1);
+
+            if (hash) {
+                const targetElement = document.querySelector(`.toggle-parent a[href="#${hash}"]`);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    targetElement.click();
+                }
+            }
         },
         initCountdownTimer = function () {
             var datetimeElement = document.querySelector('.countdown-timer');
