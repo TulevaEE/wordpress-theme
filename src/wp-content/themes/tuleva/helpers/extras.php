@@ -490,8 +490,9 @@ add_filter('term_link', 'term_link_domain_fix', 20);
 
 function force_valid_domain_redirect() {
     $valid_domain = parse_url(WP_SITEURL, PHP_URL_HOST);
+    $current_host_without_port = explode(':', $_SERVER['HTTP_HOST'])[0];
 
-    if ($_SERVER['HTTP_HOST'] !== $valid_domain) {
+    if ($current_host_without_port !== $valid_domain) {
         $protocol = is_ssl() ? 'https://' : 'http://';
         wp_redirect($protocol . $valid_domain . $_SERVER['REQUEST_URI'], 301);
         exit;
