@@ -51,7 +51,7 @@
 
                             <p><span class="text-highlight text-bold">Tuleval on teine eesmärk</span>. Meie, pensionikogujad, tegime ise oma fondid, et saada igast täna säästetud eurost pensionile jõudmise ajaks rohkem kasu.</p>
 
-                            <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-oecd-comparison.png" class="img-fluid" alt="Eestis on pensionifondide tasud ühed OECD kõrgemad ja tootlus kõige madalam" />
+                            <img src="https://tuleva.ee/wp-content/uploads/2024/03/fig-principle-oecd-comparison.png" class="img-fluid" alt="Eestis on pensionifondide tasud ühed OECD kõrgemad ja tootlus kõige madalam" />
                             <cite class="d-block small text-secondary mt-3 mb-5">Allikas: OECD Pension Markets in Focus 2023</cite>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
 
                         <p>See võib sind üllatada, aga pankade fondivalitsejate võetud tasudest <span class="text-highlight text-bold">vaid veidi üle veerandi läheb pensionikogujate vara eest hoolitsemisele</span>.</p>
 
-                        <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-fees.png" class="img-fluid" alt="Vaid veerand valitsemistasudest 2016. aastal kulus meie raha eest hoolitsemisele" />
+                        <img src="https://tuleva.ee/wp-content/uploads/2024/03/fig-principle-fees.png" class="img-fluid" alt="Vaid veerand valitsemistasudest 2022. aastal kulus meie raha eest hoolitsemisele" />
                         <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Eesti fondivalitsejate 2022. aasta aruanded. Tuleva arvutused <a href="https://tuleva.ee/analuusid/mida-raagivad-fondivalitsejate-aruanded/" target="_blank">siin</a>.</cite>
 
                     </div>
@@ -91,8 +91,8 @@
 
                         <p><span class="text-highlight text-bold">Kui kasvame, saame tasud veel madalamaks.</span></p>
 
-                        <img src="<?php echo get_template_directory_uri() ?>/img/fig-principle-fee-comparison.png" class="img-fluid" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
-                        <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Pensionikeskus, Rahandusministeerium. <a href="https://docs.google.com/spreadsheets/d/1fl45EhacB_HLb1yPPsi-jfkwA4Vt8KEi_e-aQ8N3uUo/edit#gid=0" target="_blank">Eesti pensionifondide jooksvate kulude tabel</a></cite>
+                        <img src="https://tuleva.ee/wp-content/uploads/2024/03/fig-principle-fee-comparison.png" class="img-fluid" alt="Kui palju maksad iga 10 000€ pealt keskmiselt teenustasudeks?" />
+                        <cite class="d-block small text-secondary mt-3 mb-5">Allikas: Pensionikeskus</cite>
                     </div>
                 </div>
                 <hr />
