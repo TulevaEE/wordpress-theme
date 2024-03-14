@@ -45,7 +45,7 @@
                     <div id="collapseTwo" class="collapse mt-2 mb-5" aria-labelledby="headingTwo" data-parent="#accordion">
 
 
-                            <p>Pole kokkusattumus, et meie pankade pensionifondid paistavad silma nii kõrgete tasude kui ka kehvade tulemustega. Viimase 10 aasta jooksul võtsid pankade fondivalitsejad igast eurost, mis Eesti inimeste raha turgudel teenis, <a href="https://tuleva.ee/analuusid/fondivalitsejate-aastaaruanded-2016/" target="_blank">30 senti tasudeks</a>.</p>
+                            <p>Pole kokkusattumus, et meie pankade pensionifondid paistavad silma nii kõrgete tasude kui ka kehvade tulemustega. Iga euro, mida me fondivalitsejatele tasudeks maksame, vähendab ju meie kui kogujate kasumit.</p>
 
                             <p>Pankade omanikele kõrged tasud meeldivad. Mida rohkem sa maksad, seda suurem on fondivalitseja kasum.</p>
 
