@@ -12,6 +12,12 @@
                     get_template_part('templates/components/mutual-proposal');
                 } else if (get_row_layout() === 'team_hero') {
                     get_template_part( 'templates/components/team-hero' );
+                 } else if (get_row_layout() === 'fees_hero') {
+                    get_template_part( 'templates/components/fees-hero' );
+                } elseif (get_row_layout() === 'cta_block') {
+                    get_template_part('templates/components/cta-change');
+                } elseif (get_row_layout() === 'emphasis_cta_block') {
+                    get_template_part('templates/components/emphasis-cta-block');
                 } else if (get_row_layout() === 'story') {
                     get_template_part('templates/components/story');
                 } else if (get_row_layout() === 'goals') {
@@ -32,6 +38,8 @@
                     get_template_part('templates/components/rich-text-block');
                 } else if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
+                 } else if (get_row_layout() === 'accordion_block') {
+                    get_template_part('templates/components/accordion-block');
                 } else if (get_row_layout() === 'third_pillar_hero') {
                     get_template_part('templates/components/third-pillar-hero');
                 } else if (get_row_layout() === 'second_pillar_payment_rate_hero') {
