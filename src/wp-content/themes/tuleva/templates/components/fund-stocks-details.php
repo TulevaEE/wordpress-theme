@@ -92,7 +92,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/03/TULAPF-investeeringute-aruanne-290224.pdf'); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/04/TULAPF-investeeringute-aruanne-310324.pdf'); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/77/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
