@@ -104,7 +104,7 @@
                         <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
-                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 149.65) ?>
+                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 152.06) ?>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Share of investments with increased negative impact in the equity portfolio', TEXT_DOMAIN) ?></div>
@@ -113,8 +113,8 @@
                                 '0.00', // Controversial Weapons
                                 '0.09', // Nuclear Weapons
                                 '0.00', // Civilian Firearms
-                                '0.32', // Tobacco
-                                '0.16', // UN Global Compact Violators
+                                '0.31', // Tobacco
+                                '0.06', // UN Global Compact Violators
                                 '0.10', // Thermal Coal
                                 '0.00'  // Oil Sands
                             ); ?>
