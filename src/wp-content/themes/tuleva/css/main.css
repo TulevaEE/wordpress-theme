@@ -14242,11 +14242,29 @@ small,
 }
 
 .bg-hero-team {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.94)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-cropped-optimized.jpg");
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.94), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-cropped-optimized.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.94)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-2560.jpg");
+  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.94), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-2560.jpg");
   background-position: 0px 0px, 50% 40%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
+}
+@media (max-width: 991px) {
+  .bg-hero-team {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-1536.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-1536.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .bg-hero-team {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-1024.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-1024.jpg");
+  }
+}
+@media (max-width: 575px) {
+  .bg-hero-team {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.94))), url("../img/tuleva-party-500.jpg");
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.94)), url("../img/tuleva-party-500.jpg");
+  }
 }
 
 .bg-blueish-gray {
