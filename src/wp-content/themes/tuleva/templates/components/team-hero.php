@@ -55,7 +55,9 @@ $lead_text = get_sub_field('lead_text');
                     <?php } ?>
                     <?php if ($members_count && $members_count_description) { ?>
                         <div class="col-md-6 d-none d-md-flex align-items-center">
-                            <span class="membercount mr-4"><?php echo $members_count; ?></span>
+                            <span class="membercount text-nowrap mr-4">
+                                <?php echo number_format($members_count, 0, '', ' '); ?>
+                            </span>
                             <p class="mb-0 text-navy"><?php echo $members_count_description; ?></p>
                         </div>
                     <?php } ?>
