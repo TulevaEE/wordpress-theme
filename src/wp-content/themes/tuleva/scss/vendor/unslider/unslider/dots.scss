@@ -1,4 +1,6 @@
-@if($unslider-dot-navigation){
+@import '../variables';
+
+@if($unslider-dot-navigation) {
 	.#{$unslider-namespace}-nav, %#{$unslider-namespace}-nav {
 		ol {
 			list-style: none;

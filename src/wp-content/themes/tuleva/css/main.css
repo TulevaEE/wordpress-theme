@@ -11762,6 +11762,14 @@ input[type=range]:focus + .rangeslider .rangeslider__handle {
   right: 20px;
 }
 
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
 .unslider-nav ol {
   list-style: none;
   text-align: center;
@@ -12865,6 +12873,27 @@ small,
   text-transform: uppercase;
   font-size: 1.25em;
   font-weight: 500;
+}
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.pagination ul li {
+  display: inline-block;
+}
+.pagination ul li a {
+  display: block;
+  padding: 0.2em;
+}
+.pagination ul li a:hover, .pagination ul li a:focus {
+  color: #0058a2;
+  text-decoration: underline;
+}
+.pagination__active a {
+  color: #0058a2;
+  text-decoration: underline;
 }
 .pagination__previous, .pagination__next {
   display: inline-block;
