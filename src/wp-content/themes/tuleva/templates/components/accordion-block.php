@@ -13,7 +13,7 @@
                             <?php } ?>
                         </div>
                         <div id="collapsed-text-<?php echo $i; ?>" class="collapse mt-2 mb-5" data-parent="#accordion">
-                            <?php the_sub_field('text'); ?>
+                            <?php echo get_sub_field('text'); ?>
                         </div>
                     </div>
                     <hr />

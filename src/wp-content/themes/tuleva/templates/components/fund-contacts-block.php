@@ -12,7 +12,7 @@
     </div>
     <div class="row row-spacing-top-half">
         <div class="col-md-6 offset-md-3 text-center">
-            <?php the_sub_field('text'); ?>
+            <?php echo get_sub_field('text'); ?>
         </div>
     </div>
 </div>

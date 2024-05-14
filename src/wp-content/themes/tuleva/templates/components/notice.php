@@ -6,7 +6,7 @@
                 <?php _e('New', TEXT_DOMAIN); ?>
             </span>
                 <span class="ml-2">
-                    <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('text'); ?></a>
+                    <a href="<?php the_sub_field('url'); ?>"><?php echo get_sub_field('text'); ?></a>
                 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      class="bi bi-chevron-right ml-1" viewBox="0 0 16 16">

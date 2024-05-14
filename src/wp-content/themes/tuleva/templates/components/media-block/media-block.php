@@ -24,7 +24,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
                 <?php if (get_sub_field('lead_text')): ?>
                     <p class="lead mb-3"><?php the_sub_field('lead_text') ?></p>
                 <?php endif; ?>
-                <?php the_sub_field('text') ?>
+                <?php echo get_sub_field('text'); ?>
             </div>
 
             <?php if ($image_url && $image_alignment === 'right'): ?>

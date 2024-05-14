@@ -30,7 +30,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 </a>
                             </div>
                             <div class="col-12 text-left collapse-lg-none mt-5">
-                                <?php the_sub_field('text') ?>
+                                <?php echo get_sub_field('text'); ?>
                             </div>
                              <div class="col-12 pt-5 text-center collapse-lg-none">
                                 <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>
@@ -49,7 +49,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                 <div class="container my-auto">
                     <div class="row align-items-center py-5">
                         <div class="col-12 column-lg-2">
-                            <?php the_sub_field('text') ?>
+                            <?php echo get_sub_field('text'); ?>
                         </div>
                         <div class="col-12 pt-5 text-center">
                             <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>

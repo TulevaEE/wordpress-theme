@@ -11,7 +11,7 @@
                                     <img class="testimonial__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
                                 </div>
                                 <div class="col-sm-7 col-xs-10 offset-1 testimonial__body">
-                                    <div class="testimonial__text"><?php the_sub_field('text'); ?></div>
+                                    <div class="testimonial__text"><?php echo get_sub_field('text'); ?></div>
                                     <div class="testimonial__author">
                                         <?php if (get_sub_field('url')) { ?>
                                             <a href="<?php the_sub_field('url'); ?>">

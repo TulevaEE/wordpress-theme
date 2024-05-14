@@ -9,7 +9,7 @@
                 <?php } ?>
                 <div class="media-body">
                     <h2 class="media-heading"><?php the_sub_field('title'); ?></h2>
-                    <?php the_sub_field('text'); ?>
+                    <?php echo get_sub_field('text'); ?>
                 </div>
                 <?php if (get_sub_field('image_alignment') === 'right') { ?>
                     <div class="media-right">

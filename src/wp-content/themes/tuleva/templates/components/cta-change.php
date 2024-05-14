@@ -16,7 +16,7 @@
               } elseif ($isNovember && $dayOfMonth > 21) {
                   _e('The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
               } else {
-                  the_sub_field('text');
+                  echo get_sub_field('text');
               }
               ?>
           </h5>

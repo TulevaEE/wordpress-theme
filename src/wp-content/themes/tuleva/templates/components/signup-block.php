@@ -4,7 +4,7 @@
         <div class="row row-spacing-bottom-quarter">
             <div class="col">
                 <h2 class="text-center"><?php the_sub_field('heading'); ?></h2>
-                <?php the_sub_field('text'); ?>
+                <?php echo get_sub_field('text'); ?>
             </div>
         </div>
         <div class="row">
@@ -16,7 +16,7 @@
                        </div>
                        <p class="inline-register__content">
                             <?php remove_filter('acf_the_content', 'wpautop'); ?>
-                            <?php the_sub_field('text'); ?>
+                            <?php echo get_sub_field('text'); ?>
                             <?php add_filter('acf_the_content', 'wpautop'); ?>
                        </p>
                     <?php } ?>

@@ -12,7 +12,7 @@ $bg_class = get_component_background_color_class();
                     <?php if (get_sub_field('lead_text')): ?>
                         <p class="lead text-navy"><?php the_sub_field('lead_text'); ?></p>
                     <?php endif; ?>
-                    <?php the_sub_field('text'); ?>
+                    <?php echo get_sub_field('text'); ?>
                 </div>
                 <?php if (get_sub_field('button_text') && get_sub_field('button_url')): ?>
                     <div class="col-lg-6">

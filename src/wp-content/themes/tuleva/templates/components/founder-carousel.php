@@ -19,7 +19,7 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
                                                 <h3 class="mb-0"><?php the_sub_field('name'); ?></h3>
                                                 <p class="text-navy mb-4"><?php the_sub_field('description'); ?></p>
                                                 <p class="text-navy mb-4"><?php the_sub_field('fund'); ?></p>
-                                               <?php the_sub_field('text'); ?>
+                                               <?php echo get_sub_field('text'); ?>
                                             </div>
                                         </div>
                                     </div>

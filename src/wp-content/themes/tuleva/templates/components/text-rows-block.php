@@ -8,7 +8,7 @@
                     } ?>">
                     <?php if (have_rows('text_rows')) {
                         while (have_rows('text_rows')) { the_row(); ?>
-                        <div class="text-rows-box__row"><?php the_sub_field('text'); ?></div>
+                        <div class="text-rows-box__row"><?php echo get_sub_field('text'); ?></div>
                     <?php  }
                     } ?>
                 </div>

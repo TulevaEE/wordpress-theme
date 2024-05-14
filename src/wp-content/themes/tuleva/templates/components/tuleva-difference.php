@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-md-8 m-auto">
       <div class="mb-5">
-          <?php the_sub_field('text'); ?>
+          <?php echo get_sub_field('text'); ?>
       </div>
       <div class="text-center">
         <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-outline-primary btn-lg"><?php the_sub_field('button_text'); ?></a>

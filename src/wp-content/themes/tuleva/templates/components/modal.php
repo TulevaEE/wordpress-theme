@@ -12,7 +12,7 @@
                                 <h2 class="text-serif text-center mb-5">
                                     <?php the_sub_field('heading'); ?>
                                 </h2>
-                                <?php the_sub_field('text'); ?>
+                                <?php echo get_sub_field('text'); ?>
                             </div>
                         </div>
                     </div>
