@@ -16,10 +16,10 @@ $visible_questions_count = 10;
                 while (have_rows('questions')) { $i++; the_row(); ?>
                     <div class="<?php echo get_qa_question_wrapper_classes(['qa__question-wrapper'], $i, $visible_questions_count); ?>" id="kkk-<?php echo $i; ?>">
                         <a class="btn btn-link qa__question" data-toggle="collapse" href="#answer-<?php echo $i; ?>">
-                            <?php the_sub_field('question'); ?>
+                            <?php echo get_sub_field('question'); ?>
                         </a>
                         <div id="answer-<?php echo $i; ?>" class="collapse">
-                            <?php the_sub_field('answer'); ?>
+                            <?php echo get_sub_field('answer'); ?>
                         </div>
                         <hr />
                     </div>
