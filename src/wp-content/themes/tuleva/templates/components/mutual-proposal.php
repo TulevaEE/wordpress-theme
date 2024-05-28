@@ -28,7 +28,7 @@
                             </p>
                         <?php } ?>
                         <?php if (get_sub_field('button_text') && get_sub_field('button_url')) { ?>
-                            <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3">
+                            <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mb-3">
                                 <?php the_sub_field('button_text'); ?>
                             </a>
                         <?php } ?>

@@ -44,7 +44,7 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
             <div class="col text-center">
                 <img src="<?php echo get_template_directory_uri() ?>/img/founder-thumbnails.jpg" alt="" class="mb-4">
                 <br>
-                <a id="founders" href="<?php the_sub_field('button_url'); ?>" class="btn btn-outline-primary"><?php the_sub_field('button_text'); ?></a>
+                <a id="founders" href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-outline-primary"><?php the_sub_field('button_text'); ?></a>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
           <?php echo get_sub_field('text'); ?>
       </div>
       <div class="text-center">
-        <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-outline-primary btn-lg"><?php the_sub_field('button_text'); ?></a>
+        <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-outline-primary btn-lg"><?php the_sub_field('button_text'); ?></a>
       </div>
     </div>
   </div>

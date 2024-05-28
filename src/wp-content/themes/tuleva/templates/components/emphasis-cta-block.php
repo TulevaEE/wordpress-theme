@@ -16,7 +16,7 @@
                                 $button_classes .= ' btn-outline-primary';
                             }
                         ?>
-                        <a class="<?php echo $button_classes; ?>" href="<?php the_sub_field('button_url'); ?>"><?php the_sub_field('button_text'); ?></a>
+                        <a class="<?php echo $button_classes; ?>" href="<?php echo get_sub_field('button_url'); ?>"><?php the_sub_field('button_text'); ?></a>
                     <?php } ?>
                 </div>
             </div>

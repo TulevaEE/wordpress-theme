@@ -20,7 +20,7 @@
               }
               ?>
           </h5>
-          <a href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('button_text'); ?></a>
+          <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('button_text'); ?></a>
         </div>
       </div>
     </div>
