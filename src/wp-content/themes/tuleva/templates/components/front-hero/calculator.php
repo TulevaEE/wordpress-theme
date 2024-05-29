@@ -1,3 +1,4 @@
+<?php print_funds_js(); ?>
 <div class="card calculator shadow-md">
     <div class="card-body p-3 text-center">
         <form class="d-flex flex-row justify-content-center pb-3">

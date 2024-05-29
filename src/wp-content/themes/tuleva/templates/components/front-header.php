@@ -1,3 +1,4 @@
+<?php print_funds_js(); ?>
 <section id="main-header">
     <div class="bg-hero-main d-flex flex-column">
         <div class="container my-auto">

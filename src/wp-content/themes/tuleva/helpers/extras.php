@@ -348,6 +348,11 @@ function print_funds_js()
     );
     $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
     $data = json_decode($json, true);
+
+    if (empty($data)) {
+        return;
+    }
+
     $filtered = array_filter($data, function ($value, $key) {
         $isActive = $value['status'] === 'ACTIVE';
         $isSecondPillar = $value['pillar'] === 2;
@@ -369,7 +374,6 @@ function print_funds_js()
     echo 'var calculatorFunds = ' . json_encode($funds) . ';';
     echo '</script>';
 }
-add_action('wp_footer', 'print_funds_js');
 
 function get_esg_document_url() {
     $esg_document_path = '/wp-content/uploads/2022/09/Principles-for-considering-sustainability-risks_01.09.2022.pdf';
