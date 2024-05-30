@@ -1,10 +1,10 @@
-# Copyright (C) 2024
+# Copyright (C) 2024 
 # This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-16 08:07:39+00:00\n"
+"POT-Creation-Date: 2024-05-30 12:56:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,8 +17,16 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: helpers/extras.php:435 helpers/extras.php:446
+#: helpers/extras.php:439 helpers/extras.php:450
 msgid "days"
+msgstr ""
+
+#: helpers/extras.php:541
+msgid "Newer articles"
+msgstr ""
+
+#: helpers/extras.php:573
+msgid "Older articles"
 msgstr ""
 
 #: helpers/setup.php:25
@@ -33,14 +41,6 @@ msgstr ""
 msgid "Maybe something got mixed up when entering the address?"
 msgstr ""
 
-#: templates/blog/pagination.php:3 templates/blog/pagination.php:8
-msgid "Older articles"
-msgstr ""
-
-#: templates/blog/pagination.php:4
-msgid "Newer articles"
-msgstr ""
-
 #: templates/blog/recent-articles.php:8
 msgid "Recent articles"
 msgstr ""
@@ -53,22 +53,25 @@ msgstr ""
 msgid "RSS feed"
 msgstr ""
 
+#: templates/components/calculator-cta.php:24
 #: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:29
+#: templates/components/front-hero.php:24
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
 
+#: templates/components/calculator-cta.php:26
 #: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:31
+#: templates/components/front-hero.php:26
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
 
+#: templates/components/calculator-cta.php:28
 #: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:33
+#: templates/components/front-hero.php:28
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
@@ -184,96 +187,53 @@ msgid ""
 "primary\">See all founding members</a>"
 msgstr ""
 
-#: templates/components/front-header.php:6
-msgid "A pension should benefit you. Not your bank."
-msgstr ""
-
-#: templates/components/front-header.php:7
-msgid ""
-"Tuleva pension funds belong to their investors — with up to 3.3 times lower "
-"fees than bank-run funds.*"
-msgstr ""
-
-#: templates/components/front-header.php:17
-msgid "Switching funds is free (and takes only five minutes)."
-msgstr ""
-
-#: templates/components/front-header.php:24
-#: templates/components/front-hero/calculator.php:5
+#: templates/components/front-hero/calculator.php:6
 msgid "If you're"
 msgstr ""
 
-#: templates/components/front-header.php:26
-#: templates/components/front-hero/calculator.php:7
+#: templates/components/front-hero/calculator.php:8
 msgid "years old and earn"
 msgstr ""
 
-#: templates/components/front-header.php:28
-#: templates/components/front-hero/calculator.php:10
+#: templates/components/front-hero/calculator.php:11
 msgid "euros per month (net),"
 msgstr ""
 
-#: templates/components/front-header.php:29
-#: templates/components/front-hero/calculator.php:19
-msgid "your second pillar"
-msgstr ""
-
-#: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:20
-msgid "could"
-msgstr ""
-
-#: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:21
-msgid "grow"
-msgstr ""
-
-#: templates/components/front-header.php:37
-#: templates/components/front-hero/calculator.php:29
-msgid "Estonian pension fund average"
-msgstr ""
-
-#: templates/components/front-header.php:102
-#: templates/components/front-hero/calculator.php:35
-#: templates/components/front-hero/calculator.php:42
-msgid "Annual fees"
-msgstr ""
-
-#: templates/components/front-header.php:106
-msgid "In Tuleva pension fund"
-msgstr ""
-
-#: templates/components/front-header.php:109
-msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
-msgstr ""
-
-#: templates/components/front-header.php:114
-#: templates/components/front-hero/calculator.php:47
-msgid "Cost of high fees"
-msgstr ""
-
-#: templates/components/front-header.php:135
-msgid "Every bit as safe as a bank-run fund."
-msgstr ""
-
-#: templates/components/front-header.php:136
-msgid "Find out more"
-msgstr ""
-
-#: templates/components/front-header.php:141
-msgid "Estonians invest in Tuleva pension funds."
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:11
+#: templates/components/front-hero/calculator.php:12
 msgid "at"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:18
+#: templates/components/front-hero/calculator.php:19
 msgid "return"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:39
+#: templates/components/front-hero/calculator.php:20
+msgid "your second pillar"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:21
+msgid "could"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:22
+msgid "grow"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:30
+msgid "Estonian pension fund average"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:36
+#: templates/components/front-hero/calculator.php:43
+msgid "Annual fees"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:40
 msgid "In Tuleva World Stocks Pension Fund"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:48
+msgid "Cost of high fees"
 msgstr ""
 
 #: templates/components/front-proposal.php:7
@@ -1661,7 +1621,7 @@ msgid ""
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:205
-msgid "Get started"
+msgid "Make a contribution"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:209

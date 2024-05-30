@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-01-16 08:07:39+00:00\n"
-"PO-Revision-Date: 2024-01-30 15:03+0200\n"
+"POT-Creation-Date: 2024-05-30 12:56:49+00:00\n"
+"PO-Revision-Date: 2024-05-30 15:58+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
@@ -21,9 +21,17 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:435 helpers/extras.php:446
+#: helpers/extras.php:439 helpers/extras.php:450
 msgid "days"
 msgstr "päeva"
+
+#: helpers/extras.php:541
+msgid "Newer articles"
+msgstr "Uuemad artiklid"
+
+#: helpers/extras.php:573
+msgid "Older articles"
+msgstr "Vanemad artiklid"
 
 #: helpers/setup.php:25
 msgid "Primary Navigation"
@@ -37,14 +45,6 @@ msgstr "Pole olemas sellist lehekülge"
 msgid "Maybe something got mixed up when entering the address?"
 msgstr "Ehk läks aadressi sisestamisega midagi valesti?"
 
-#: templates/blog/pagination.php:3 templates/blog/pagination.php:8
-msgid "Older articles"
-msgstr "Vanemad artiklid"
-
-#: templates/blog/pagination.php:4
-msgid "Newer articles"
-msgstr "Uuemad artiklid"
-
 #: templates/blog/recent-articles.php:8
 msgid "Recent articles"
 msgstr "Viimased artiklid"
@@ -57,8 +57,9 @@ msgstr "Kõik artiklid"
 msgid "RSS feed"
 msgstr "RSS voog"
 
+#: templates/components/calculator-cta.php:24
 #: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:29
+#: templates/components/front-hero.php:24
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -66,8 +67,9 @@ msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta."
 "</b>"
 
+#: templates/components/calculator-cta.php:26
 #: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:31
+#: templates/components/front-hero.php:26
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -75,8 +77,9 @@ msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta."
 "</b>"
 
+#: templates/components/calculator-cta.php:28
 #: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:33
+#: templates/components/front-hero.php:28
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
@@ -215,99 +218,54 @@ msgstr ""
 "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
 "primary\">Vaata kõiki asutajaliikmeid</a>"
 
-#: templates/components/front-header.php:6
-msgid "A pension should benefit you. Not your bank."
-msgstr "Kogu pensionit endale, mitte pangale."
-
-#: templates/components/front-header.php:7
-msgid ""
-"Tuleva pension funds belong to their investors — with up to 3.3 times lower "
-"fees than bank-run funds.*"
-msgstr ""
-"Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 3,3x madalama "
-"tasuga.*"
-
-#: templates/components/front-header.php:17
-msgid "Switching funds is free (and takes only five minutes)."
-msgstr "Fondivahetus on tasuta ja võtab vaid 5 minutit."
-
-#: templates/components/front-header.php:24
-#: templates/components/front-hero/calculator.php:5
+#: templates/components/front-hero/calculator.php:6
 msgid "If you're"
 msgstr "Kui oled"
 
-#: templates/components/front-header.php:26
-#: templates/components/front-hero/calculator.php:7
+#: templates/components/front-hero/calculator.php:8
 msgid "years old and earn"
 msgstr "ja teenid kuus"
 
-#: templates/components/front-header.php:28
-#: templates/components/front-hero/calculator.php:10
+#: templates/components/front-hero/calculator.php:11
 msgid "euros per month (net),"
 msgstr "eurot neto,"
 
-#: templates/components/front-header.php:29
-#: templates/components/front-hero/calculator.php:19
-msgid "your second pillar"
-msgstr "kogud"
-
-#: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:20
-msgid "could"
-msgstr "eelduslikult"
-
-#: templates/components/front-header.php:30
-#: templates/components/front-hero/calculator.php:21
-msgid "grow"
-msgstr "pensioniks"
-
-#: templates/components/front-header.php:37
-#: templates/components/front-hero/calculator.php:29
-msgid "Estonian pension fund average"
-msgstr "Eesti keskmises pensionifondis"
-
-#: templates/components/front-header.php:102
-#: templates/components/front-hero/calculator.php:35
-#: templates/components/front-hero/calculator.php:42
-msgid "Annual fees"
-msgstr "Tasud aastas"
-
-#: templates/components/front-header.php:106
-msgid "In Tuleva pension fund"
-msgstr "Tuleva pensionifondis"
-
-#: templates/components/front-header.php:109
-msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
-msgstr "Tasud aastas <span id=\"fund-fee\">0,47%</span>"
-
-#: templates/components/front-header.php:114
-#: templates/components/front-hero/calculator.php:47
-msgid "Cost of high fees"
-msgstr "Kõrgete tasude kulu"
-
-#: templates/components/front-header.php:135
-msgid "Every bit as safe as a bank-run fund."
-msgstr "Sama turvaline kui panga pensionifond."
-
-#: templates/components/front-header.php:136
-msgid "Find out more"
-msgstr "Uuri lähemalt"
-
-#: templates/components/front-header.php:141
-msgid "Estonians invest in Tuleva pension funds."
-msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
-
-#: templates/components/front-hero/calculator.php:11
+#: templates/components/front-hero/calculator.php:12
 msgid "at"
 msgstr "siis"
 
-#: templates/components/front-hero/calculator.php:18
+#: templates/components/front-hero/calculator.php:19
 msgid "return"
 msgstr "tootlusega"
 
-#: templates/components/front-hero/calculator.php:39
+#: templates/components/front-hero/calculator.php:20
+msgid "your second pillar"
+msgstr "kogud"
+
+#: templates/components/front-hero/calculator.php:21
+msgid "could"
+msgstr "eelduslikult"
+
+#: templates/components/front-hero/calculator.php:22
+msgid "grow"
+msgstr "pensioniks"
+
+#: templates/components/front-hero/calculator.php:30
+msgid "Estonian pension fund average"
+msgstr "Eesti keskmises pensionifondis"
+
+#: templates/components/front-hero/calculator.php:36
+#: templates/components/front-hero/calculator.php:43
+msgid "Annual fees"
+msgstr "Tasud aastas"
+
+#: templates/components/front-hero/calculator.php:40
 msgid "In Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
+
+#: templates/components/front-hero/calculator.php:48
+msgid "Cost of high fees"
+msgstr "Kõrgete tasude kulu"
 
 #: templates/components/front-proposal.php:7
 msgid ""
@@ -2012,8 +1970,8 @@ msgstr ""
 "class=\"d-inline-block\">iga kuu panna</span>"
 
 #: templates/components/third-pillar-calculator.php:205
-msgid "Get started"
-msgstr "Alusta siit"
+msgid "Make a contribution"
+msgstr "Tee sissemakse"
 
 #: templates/components/third-pillar-calculator.php:209
 msgid ""
@@ -2350,8 +2308,36 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr ""
 
-#~ msgid "II pillar contribution"
-#~ msgstr "II samba panus"
+#~ msgid "A pension should benefit you. Not your bank."
+#~ msgstr "Kogu pensionit endale, mitte pangale."
+
+#~ msgid ""
+#~ "Tuleva pension funds belong to their investors — with up to 3.3 times "
+#~ "lower fees than bank-run funds.*"
+#~ msgstr ""
+#~ "Tuleva pensionifondid kuuluvad inimestele endile ja on kuni 3,3x madalama "
+#~ "tasuga.*"
+
+#~ msgid "Switching funds is free (and takes only five minutes)."
+#~ msgstr "Fondivahetus on tasuta ja võtab vaid 5 minutit."
+
+#~ msgid "In Tuleva pension fund"
+#~ msgstr "Tuleva pensionifondis"
+
+#~ msgid "Annual fees <span id=\"fund-fee\">0.47%</span>"
+#~ msgstr "Tasud aastas <span id=\"fund-fee\">0,47%</span>"
+
+#~ msgid "Every bit as safe as a bank-run fund."
+#~ msgstr "Sama turvaline kui panga pensionifond."
+
+#~ msgid "Find out more"
+#~ msgstr "Uuri lähemalt"
+
+#~ msgid "Estonians invest in Tuleva pension funds."
+#~ msgstr "Eesti inimest kogub pensionit Tuleva pensionifondides."
+
+#~ msgid "Get started"
+#~ msgstr "Alusta siit"
 
 #~ msgid "Calculator assumptions"
 #~ msgstr "Kalkulaatori eeldused"
