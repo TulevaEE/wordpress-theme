@@ -575,3 +575,13 @@ function blog_pagination() {
 
     echo '</ul></div>' . "\n";
 }
+
+function highlight_search_results($text){
+     if(is_search() && get_search_query()){
+          $keys = implode('|', explode(' ', get_search_query()));
+            $text = preg_replace('/(' . $keys . ')/iu', '<strong class="text-highlight">$1</strong>', $text);
+     }
+
+     return $text;
+}
+add_filter('the_excerpt', 'highlight_search_results');

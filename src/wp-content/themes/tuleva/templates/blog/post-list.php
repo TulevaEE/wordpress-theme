@@ -14,7 +14,8 @@
     $i = 0;
     $args = [
         'posts_per_page' => $posts_number,
-        'paged' => $paged
+        'paged' => $paged,
+        'post_type' => 'post',
     ];
 
     if ($is_category) {
@@ -24,6 +25,10 @@
     if ($category && $category->slug === 'laura-rikkaks') {
         $args['orderby'] = 'publish_date';
         $args['order'] = 'ASC';
+    }
+
+    if (isset( $_REQUEST['s'] )) {
+        $args['s'] = sanitize_text_field( $_REQUEST['s'] );
     }
 
     $wp_query = new WP_Query($args);
