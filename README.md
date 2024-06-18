@@ -38,9 +38,22 @@ docker-compose down
 docker volume rm wordpress-theme_db_data
 ```
 
-# Update theme POT file command
+# Update theme POT file script
 
+## With WP cli
+
+Install wp cli:
+`brew install wp-cli`
+
+1. Generate POT file `wp i18n make-pot src/wp-content/themes/tuleva src/wp-content/themes/tuleva/lang/tuleva.pot --ignore-domain`
+
+2. Generate PO file `wp i18n update-po src/wp-content/themes/tuleva/lang/tuleva.pot  src/wp-content/themes/tuleva/lang`
+
+3. Generate MO file `wp i18n make-mo src/wp-content/themes/tuleva/lang``
+
+## With PHP script (legacy, may not work)
 `php tools/i18n/makepot.php wp-theme src/wp-content/themes/tuleva/ src/wp-content/themes/tuleva/lang/tuleva.pot`
+
 
 # Generate .css from .scss files
 
