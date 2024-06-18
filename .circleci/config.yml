@@ -14,7 +14,8 @@ jobs:
             - run:
                   name: Sync files to production
                   command: |
-                      rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
+                      set -e  # Ensures the CircleCI step fails if any command exits with a non-zero status
+                      rsync -avz --checksum --delete -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
 
 workflows:
     version: 2
