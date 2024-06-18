@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+    deploy:
+        docker:
+            - image: cimg/base:stable
+        steps:
+            - checkout
+            - run:
+                  name: Install lftp
+                  command: sudo apt-get update && sudo apt-get install -y lftp
+            - run:
+                  name: Upload files via FTP using SSL
+                  command: |
+                      lftp -e "
+                        set ftp:ssl-force true;
+                        set ssl:verify-certificate true;
+                        open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
+                        lcd src/wp-content/themes/tuleva;
+                        cd htdocs/wp-content/themes/test-tuleva;
+                        mirror --reverse --verbose --delete;
+                        bye;
+                      "
+
+workflows:
+    version: 2
+    deploy_workflow:
+        jobs:
+            - deploy
