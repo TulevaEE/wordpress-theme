@@ -7,7 +7,7 @@
 6. Add site url to `wp-config.php` for example after `define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );` row
    `define('WP_HOME', 'http://localhost:8880');
    define('WP_SITEURL', 'http://localhost:8880');`
-7. Deactivate SSL enforcing plugin e.g. `really-simple-ssl` by logging in to `wp-admin` and table `options` and row `active_plugins` and remove `i:16;s:47:"really-simple-ssl/rlrsssl-really-simple-ssl.php";` entry. Make sure to update other indexes `i:<value>`, so that the positions are correct (or deactivate the plugin via phpAdmin or file system)
+7. Deactivate SSL enforcing plugin e.g. `really-simple-ssl` by logging in to phpMyAdmin and edit table `options` and row `active_plugins` and remove `i:16;s:47:"really-simple-ssl/rlrsssl-really-simple-ssl.php";` entry. Make sure to update other indexes `i:<value>`, so that the positions are correct (or deactivate the plugin via phpAdmin or file system)
 
 ##
 Re-initialize the database by deleting the existing one before
