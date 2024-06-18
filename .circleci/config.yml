@@ -5,25 +5,19 @@ jobs:
             - image: cimg/base:stable
         steps:
             - checkout
+            - add_ssh_keys:
+                  fingerprints:
+                      - "SHA256:zcVjxTrI9vhVjRczUZxlxnmuWT0Gu2DFUFfsHNSwwCs"
             - run:
-                  name: Install lftp
-                  command: sudo apt-get update && sudo apt-get install -y lftp
+                  name: Install rsync
+                  command: sudo apt-get update && sudo apt-get install -y rsync
             - run:
-                  name: Upload files via FTP using SSL
+                  name: Sync files to production
                   command: |
-                      lftp -e "
-                        set ftp:ssl-force true;
-                        set ssl:verify-certificate false;
-                        set ftp:use-size true;
-                        open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
-                        lcd src/wp-content/themes/tuleva;
-                        cd htdocs/wp-content/themes/tuleva;
-                        mirror --reverse --verbose --delete --ignore-time --only-newer;
-                        bye;
-                      "
+                      rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/test-tuleva/
 
 workflows:
     version: 2
-    deploy_workflow:
+    build_and_deploy:
         jobs:
             - deploy
