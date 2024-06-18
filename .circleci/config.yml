@@ -14,10 +14,11 @@ jobs:
                       lftp -e "
                         set ftp:ssl-force true;
                         set ssl:verify-certificate false;
+                        set ftp:use-size true;
                         open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
                         lcd src/wp-content/themes/tuleva;
                         cd htdocs/wp-content/themes/test-tuleva;
-                        mirror --reverse --verbose --delete --only-newer;
+                        mirror --reverse --verbose --delete --ignore-time --only-newer;
                         bye;
                       "
 
