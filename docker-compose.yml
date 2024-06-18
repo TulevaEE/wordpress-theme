@@ -9,7 +9,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: wordpress
+      MYSQL_DATABASE: d56838_tuleva20
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
@@ -39,8 +39,10 @@ services:
     stdin_open: true
     environment:
       WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: d56838_tuleva20
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DEBUG: true
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./wordpress:/var/www/html/
