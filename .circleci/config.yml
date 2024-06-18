@@ -13,7 +13,7 @@ jobs:
                   command: |
                       lftp -e "
                         set ftp:ssl-force true;
-                        set ssl:verify-certificate true;
+                        set ssl:verify-certificate false;
                         open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
                         lcd src/wp-content/themes/tuleva;
                         cd htdocs/wp-content/themes/test-tuleva;
