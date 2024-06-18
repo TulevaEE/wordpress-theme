@@ -17,7 +17,7 @@ jobs:
                         set ftp:use-size true;
                         open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
                         lcd src/wp-content/themes/tuleva;
-                        cd htdocs/wp-content/themes/test-tuleva;
+                        cd htdocs/wp-content/themes/tuleva;
                         mirror --reverse --verbose --delete --ignore-time --only-newer;
                         bye;
                       "
