@@ -38,6 +38,10 @@ docker-compose down
 docker volume rm wordpress-theme_db_data
 ```
 
+# CI
+CI uses host `ftp.tuleva.ee`, since CloudFlare is configured to forward to the correct machine with that url.
+Rsync uploads changed files using a key, which is configured in the host and CI.
+
 # Update theme POT file script
 
 ## With WP cli
