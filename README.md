@@ -14,6 +14,9 @@ define('WP_SITEURL', 'http://localhost:8880');`
     3. Then remove `i:16;s:47:"really-simple-ssl/rlrsssl-really-simple-ssl.php";` entry.
     4. Then decrease the first number after `a:` by 1.
     5. Make sure to update other indices `i:<value>`, so that the positions are correct (or deactivate the plugin via phpAdmin or file system)
+8. Open http://localhost:8880/, http://localhost:8880/wp-admin/. To login, either:
+    1. Use your production wordpress credentials.
+    2. Move `tools/create-default-user.php` to `wordpress` folder, and visit http://localhost:8880/create-default-user.php. Sign in with `admin`-`admin`
 
 If you see an error with plugins like
 
