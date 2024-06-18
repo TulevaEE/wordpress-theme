@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-            <?php if (false) : ?>
+            <?php if (isset($_GET['development']) && $_GET['development'] === 'true') : ?>
                 <?php get_template_part('templates/footer/not-logged-in-mailing-list-form'); ?>
             <?php endif; ?>
         </div>
