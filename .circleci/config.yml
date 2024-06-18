@@ -14,7 +14,7 @@ jobs:
             - run:
                   name: Sync files to production
                   command: |
-                      rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/test-tuleva/
+                      rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/test-tuleva/
 
 workflows:
     version: 2
