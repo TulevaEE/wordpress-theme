@@ -49,7 +49,9 @@ Install wp cli:
 
 2. Generate PO file `wp i18n update-po src/wp-content/themes/tuleva/lang/tuleva.pot  src/wp-content/themes/tuleva/lang`
 
-3. Generate MO file `wp i18n make-mo src/wp-content/themes/tuleva/lang``
+3. Generate MO file `wp i18n make-mo src/wp-content/themes/tuleva/lang`
+
+Alternatively, use POEdit for steps 2 and 3.
 
 ## With PHP script (legacy, may not work)
 `php tools/i18n/makepot.php wp-theme src/wp-content/themes/tuleva/ src/wp-content/themes/tuleva/lang/tuleva.pot`
