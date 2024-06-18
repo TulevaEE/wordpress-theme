@@ -17,7 +17,7 @@ jobs:
                         open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST;
                         lcd src/wp-content/themes/tuleva;
                         cd htdocs/wp-content/themes/test-tuleva;
-                        mirror --reverse --verbose --delete;
+                        mirror --reverse --verbose --delete --only-newer;
                         bye;
                       "
 
