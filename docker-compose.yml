@@ -5,9 +5,10 @@ services:
     image: mysql:8.0
     volumes:
       - db_data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
@@ -21,8 +22,12 @@ services:
       - 8881:80
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: somewordpress
-
+      MYSQL_ROOT_PASSWORD: rootpassword
+      UPLOAD_LIMIT: 300M
+      MEMORY_LIMIT: 512M
+      MAX_EXECUTION_TIME: 300
+    volumes:
+        - ./php.ini:/usr/local/etc/php/php.ini
   wordpress:
     depends_on:
      - db
