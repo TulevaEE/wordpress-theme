@@ -7,7 +7,7 @@
 6. Add site url to `wp-config.php` if needed
    `define('WP_HOME', 'http://localhost:8880');
    define('WP_SITEURL', 'http://localhost:8880');`
-7. Deactivate SSL enforcing plugin e.g. `really-simple-ssl` by logging in to `wp-admin` (or deactivate the plugin via phpAdmin or file system)
+7. Deactivate SSL enforcing plugin e.g. `really-simple-ssl` by logging in to `wp-admin` and table `options` and row `active_plugins` and remove `i:16;s:47:"really-simple-ssl/rlrsssl-really-simple-ssl.php";` entry (or deactivate the plugin via phpAdmin or file system)
 
 ##
 Re-initialize the database by deleting the existing one before
