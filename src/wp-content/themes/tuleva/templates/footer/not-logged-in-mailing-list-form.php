@@ -10,10 +10,6 @@
             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-primary" value="<?php _e('Join mailing list', TEXT_DOMAIN) ?>">
          </div>
       </div>
-      <div id="mce-responses" class="clear">
-         <div class="response" id="mce-error-response" style="display: none;"></div>
-         <div class="response" id="mce-success-response" style="display: none;"></div>
-      </div>
       <div aria-hidden="true" style="position: absolute; left: -5000px;">
          <input type="text" name="b_594cafb01e6f3b0087743e6f5_f440aa3a54" tabindex="-1" value="">
       </div>
