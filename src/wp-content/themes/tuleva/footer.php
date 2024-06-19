@@ -1,10 +1,10 @@
 <footer class="footer">
-    <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-            <?php if (isset($_GET['development']) && $_GET['development'] === 'true') : ?>
-                <?php get_template_part('templates/footer/not-logged-in-mailing-list-form'); ?>
-            <?php endif; ?>
+    <?php if (isset($_GET['development']) && $_GET['development'] === 'true') : ?>
+        <div class="d-flex align-items-center justify-content-center">
+            <?php get_template_part('templates/footer/not-logged-in-mailing-list-form'); ?>
         </div>
+    <?php endif; ?>
+    <div class="container">
         <div class="row">
             <?php if (is_active_sidebar('footer_widget_area')) : ?>
                 <?php dynamic_sidebar('footer_widget_area'); ?>
