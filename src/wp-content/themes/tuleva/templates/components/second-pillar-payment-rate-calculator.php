@@ -91,8 +91,7 @@
                     class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
                 <div class="pt-3 text-center text-muted">
-                    <small><?php _e('* When taking into account tax system changes for 2025:', TEXT_DOMAIN); ?><br></small>
-                    <small><?php _e('income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?></small>
+                    <small><?php _e('* When taking into account tax system changes for 2025: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?><br></small>
                 </div>
             </div>
 

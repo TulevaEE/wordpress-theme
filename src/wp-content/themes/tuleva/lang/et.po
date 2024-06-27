@@ -1206,7 +1206,7 @@ msgstr "ei muutu"
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:107
+#: templates/components/second-pillar-payment-rate-calculator.php:106
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
@@ -1641,18 +1641,14 @@ msgstr "Sinu netopalk *"
 msgid "You accumulate more monthly"
 msgstr "Kogud igakuiselt rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:94
-msgid "* When taking into account tax system changes for 2025:"
-msgstr "* Arvestades 2025 jõustuvaid maksusüsteemi muudatusi:"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:95
-msgid "income tax is raised to 22% and tax-free basic exemption is raised to 700 euros."
-msgstr "tulumaks tõuseb 22% peale ja maksuvaba tulu kasvab 700 eurole."
-
 #: templates/components/second-pillar-payment-rate-calculator.php:86
 msgid "You accumulate more by age 65"
 msgstr "Kogud 65. eluaastaks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:103
+#: templates/components/second-pillar-payment-rate-calculator.php:102
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr "Hakkan rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:94
+msgid "* When taking into account tax system changes for 2025: <br class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic exemption is raised to 700 euros."
+msgstr "* Arvestades 2025 jõustuvaid maksusüsteemi muudatusi: <br class=\"d-none d-md-inline\">tulumaks tõuseb 22% peale ja maksuvaba tulu kasvab 700 eurole."
