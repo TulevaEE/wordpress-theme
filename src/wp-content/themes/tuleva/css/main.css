@@ -15032,6 +15032,12 @@ small,
   transform: translate(-12px, 8px);
   width: 2.5rem;
   text-align: center;
+  margin-top: -12px;
+}
+@media (min-width: 576px) {
+  #customTooltip {
+    margin-top: 0;
+  }
 }
 
 #jobs-page .toggle-parent {

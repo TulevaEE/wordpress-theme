@@ -47,7 +47,7 @@
                         <?php _e('Expected annual return', TEXT_DOMAIN); ?>
 
                     </label>
-                    <div class="col-sm-6 text-center position-relative d-flex">
+                    <div class="col-sm-6 text-center position-relative d-flex mt-2 mb-2 mt-sm-0 mb-sm-0">
                         <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
                         <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
