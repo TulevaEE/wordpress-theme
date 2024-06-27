@@ -61,6 +61,9 @@ Alternatively, use POEdit for steps 2 and 3.
 `php tools/i18n/makepot.php wp-theme src/wp-content/themes/tuleva/ src/wp-content/themes/tuleva/lang/tuleva.pot`
 
 
-# Generate .css from .scss files
+# Start listener to compile .scss files to .css
 
-`cd src/wp-content/themes/tuleva; npm install --global gulp-cli; gulp`
+Start following npm script
+```cd src/wp-content/themes/tuleva; npm install --global gulp-cli; gulp`
+
+And edit scss files to have them built into css.
