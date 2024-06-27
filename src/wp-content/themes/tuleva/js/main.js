@@ -229,7 +229,7 @@ $(document).ready(function ($) {
 
             var unemploymentInsurance = 0.016 * grossSalary;
             var taxFreeWage = 700;
-            var secondPillarContribution2Percent = 2 / 100 * grossSalary;
+            var secondPillarContribution2Percent = 0.02 * grossSalary;
 
             // 2024
             var taxFreeWage2024 = getTaxFreeWage(grossSalary * 12) / 12;
@@ -254,6 +254,7 @@ $(document).ready(function ($) {
             var monthlyContribution = yourSecondPillarContribution + governmentContribution;
             var monthlyContribution2Percent = secondPillarContribution2Percent + governmentContribution;
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
+            var monthlyContributionYouDiff = yourSecondPillarContribution - secondPillarContribution2Percent;
 
             var yearlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent) * 12, 0);
 
@@ -270,12 +271,17 @@ $(document).ready(function ($) {
 
             if (netSalary2025vs2024 < 0) {
                 $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
+                $calculator.find('#netWageDiff').removeClass('text-success');
+                $calculator.find('#netWageDiff').addClass('text-secondary');
             } else {
                 $calculator.find('#netWageDiff').text(`+${format(netSalary2025vs2024)} €`);
+                $calculator.find('#netWageDiff').removeClass('text-secondary');
+                $calculator.find('#netWageDiff').addClass('text-success');
             }
 
             $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
             $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
+            $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
             $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
             if (yearlyTaxWin > 0) {
@@ -320,12 +326,16 @@ $(document).ready(function ($) {
                 var rangeWidth = $customRange.outerWidth();
                 var newX = percent * rangeWidth - rangeWidth / 2;
 
-                var thumbRadius = 24 / 2;
+                var thumbRadius = 38 / 2;
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -thumbRadius;
 
-                $customTooltip.css('transform', 'translateX(' + (newX + adjustment) + 'px)');
+                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
             }
+
+            $(window).on('resize', function() {
+                updateTooltipPosition();
+            })
 
             $customRange.on('input', function () {
                 var value = $(this).val();

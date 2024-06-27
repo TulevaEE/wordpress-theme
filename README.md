@@ -4,7 +4,9 @@
 2. Move it into `./mysql-init` directory (alternatively import with phpMyAdmin at `http://localhost:8881/`)
 3. `docker-compose up`
 4. Wait for `./wordpress` creation by docker and copy from live `./wp-content` subdirectories `languages`, `plugins` (delete previous `plugins` folder to be sure that it is replaced) and `uploads` to the respective folders in local `./wordpress/wp-content` `
-5. Log in to phpMyAdmin (`http://localhost:8881` `wordpress`/`wordpress`) and fix site url in the database `SELECT * FROM wp_options WHERE option_name = 'siteurl' OR option_name = 'home';`. New url is `http://localhost:8880`
+5. Log in to phpMyAdmin (`http://localhost:8881` `wordpress`/`wordpress`) and fix site url in the database by running SQL query
+`UPDATE wp_options SET option_value = 'http://localhost:8880' WHERE option_name  IN ('siteurl', 'home');`. Verify
+`SELECT * FROM wp_options WHERE option_name = 'siteurl' OR option_name = 'home';`. New url is `http://localhost:8880`
 6. Add site url to `wp-config.php` for example after `define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );` row
    `define('WP_HOME', 'http://localhost:8880');
 define('WP_SITEURL', 'http://localhost:8880');`

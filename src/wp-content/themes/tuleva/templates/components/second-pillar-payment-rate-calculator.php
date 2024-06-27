@@ -1,8 +1,7 @@
 <div class="card shadow-md">
     <div class="card-body p-4 second-pillar-payment-rate-calculator">
-        <form>
             <h5 class="mb-3 text-navy">
-                <?php _e('Calculate how much you will gain with a higher contribution and the 2025 income tax reform', TEXT_DOMAIN); ?>
+                <?php _e('What does increasing your II pillar payments mean to you?', TEXT_DOMAIN); ?>
             </h5>
             <div class="card bg-blue-washed p-3">
                 <div class="form-group row">
@@ -48,29 +47,27 @@
                         <?php _e('Expected annual return', TEXT_DOMAIN); ?>
 
                     </label>
-                    <div class="col-sm-6 text-center">
-                        <span id="customTooltip" class="d-inline-block text-primary text-bold mb-1">0%</span>
-                        <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1">
+                    <div class="col-sm-6 text-center position-relative d-flex mt-2 mb-2 mt-sm-0 mb-sm-0">
+                        <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
+                        <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
                 </div>
             </div>
             <div class="results mt-3 text-gray-700">
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Monthly net salary', TEXT_DOMAIN); ?>
+                            <?php _e('Your net salary *', TEXT_DOMAIN); ?>
+                            <span class="text-nowrap text-success" id="netWageDiff">+38 €</span>
                         </strong>
-                        <small class="text-muted">
-                            <?php _e('Vs. today', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="netWageDiff">+38 €</span>
-                        </small>
+
                     </div>
                     <h4 id="netWage" class="text-nowrap vertical-align m-0 text-gray-700">1595 €</h4>
                 </div>
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('II pillar monthly contribution', TEXT_DOMAIN); ?>
+                            <?php _e('You accumulate more monthly', TEXT_DOMAIN); ?>
                         </strong>
                         <small class="text-muted d-none">
                             <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?>
@@ -78,35 +75,32 @@
                             <span class="text-nowrap d-none"
                                   id="yearlyTaxWinZero"><?php _e('no change', TEXT_DOMAIN); ?></span>
                         </small>
-                        <small class="text-muted">
-                            <?php _e('You contribute', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="monthlyContributionYou">120 €</span>,
-                            <?php _e('the government adds', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="monthlyContributionGov">80 €</span>
-                        </small>
+
                     </div>
-                    <h4 id="monthlyContribution" class="text-nowrap vertical-align m-0 text-gray-700">200 €</h4>
+                    <h4 id="monthlyContributionYouDifference" class="text-nowrap vertical-align m-0 text-gray-700">80 €</h4>
+                    <h4 id="monthlyContribution" class="d-none text-nowrap vertical-align m-0 text-gray-700">200 €</h4>
                 </div>
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Accumulates more', TEXT_DOMAIN); ?>
+                            <?php _e('You accumulate more by age 65', TEXT_DOMAIN); ?>
                         </strong>
-                        <small class="text-muted">
-                            <?php _e('Compared to the current 2% contribution', TEXT_DOMAIN); ?>
-                        </small>
                     </div>
                     <h4 id="savingsSum" class="text-nowrap vertical-align text-success m-0">+33 600 €</h4>
                     <h4 id="savingsSumZero"
-                        class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
+                    class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
+                </div>
+                <div class="pt-3 text-center text-muted">
+                    <small><?php _e('* When taking into account tax system changes for 2025:', TEXT_DOMAIN); ?><br></small>
+                    <small><?php _e('income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?></small>
                 </div>
             </div>
 
             <div class="d-lg-none d-block">
                 <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
-                   class="btn btn-primary btn-lg btn-block mt-3"
+                   class="btn btn-primary btn-lg btn-block mt-3 text-wrap"
                    target="_blank">
-                    <?php _e('Increase contribution<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
+                    <?php _e('Start saving more from next year<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2 text-center">
                     <small class="text-secondary">
@@ -114,6 +108,5 @@
                     </small>
                 </div>
             </div>
-        </form>
     </div>
 </div>

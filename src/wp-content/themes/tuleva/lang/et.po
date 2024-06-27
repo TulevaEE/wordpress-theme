@@ -1064,7 +1064,7 @@ msgid "Net wage"
 msgstr "Netopalk"
 
 #: templates/components/pension-calculator.php:22
-#: templates/components/second-pillar-payment-rate-calculator.php:10
+#: templates/components/second-pillar-payment-rate-calculator.php:9
 msgid "Age"
 msgstr "Vanus"
 
@@ -1180,69 +1180,33 @@ msgstr "See pole kõik"
 msgid "As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies."
 msgstr "Pensionikogujaid ühendava organisatsioonina aitab Tuleva teha Eesti seadused paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte pankadele ja kindlustusseltsidele."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:5
-msgid "Calculate how much you will gain with a higher contribution and the 2025 income tax reform"
-msgstr "Arvuta, kui palju võidad <span class=\"text-highlight text-nowrap\">2025. a</span> tulumaksureformi ja II&nbsp;samba sissemakse suurendamise koosmõjul"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:20
+#: templates/components/second-pillar-payment-rate-calculator.php:19
 #: templates/components/third-pillar-calculator.php:123
 msgid "Monthly gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:30
+#: templates/components/second-pillar-payment-rate-calculator.php:29
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:48
+#: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:61
-msgid "Monthly net salary"
-msgstr "Netopalk"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:64
-msgid "Vs. today"
-msgstr "võrreldes tänasega"
-
 #: templates/components/second-pillar-payment-rate-calculator.php:73
-msgid "II pillar monthly contribution"
-msgstr "II samba igakuine panus"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:76
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:79
+#: templates/components/second-pillar-payment-rate-calculator.php:76
 msgid "no change"
 msgstr "ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:82
-msgid "You contribute"
-msgstr "sina panustad"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:84
-msgid "the government adds"
-msgstr "riik lisab"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:93
-msgid "Accumulates more"
-msgstr "Kogud pensionieaks rohkem"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:96
-msgid "Compared to the current 2% contribution"
-msgstr "võrreldes senise 2%&nbsp;panusega"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:101
+#: templates/components/second-pillar-payment-rate-calculator.php:91
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:109
-msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
-msgstr "Suurendan sissemakset<span class=\"d-none d-md-inline\"> (2 min)</span>"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:113
+#: templates/components/second-pillar-payment-rate-calculator.php:107
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
@@ -1664,3 +1628,31 @@ msgstr "Ole kursis Tuleva uudiste, nõuannete jm kasulike materjalidega."
 #: templates/footer/not-logged-in-mailing-list-form.php:10
 msgid "Join mailing list"
 msgstr "Liitu uudiskirjaga"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:4
+msgid "What does increasing your II pillar payments mean to you?"
+msgstr "Mida II samba panuse tõstmine sinu jaoks tähendab?"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:60
+msgid "Your net salary *"
+msgstr "Sinu netopalk *"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:70
+msgid "You accumulate more monthly"
+msgstr "Kogud igakuiselt rohkem"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:94
+msgid "* When taking into account tax system changes for 2025:"
+msgstr "* Arvestades 2025 jõustuvaid maksusüsteemi muudatusi:"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:95
+msgid "income tax is raised to 22% and tax-free basic exemption is raised to 700 euros."
+msgstr "tulumaks tõuseb 22% peale ja maksuvaba tulu kasvab 700 eurole."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:103
+msgid "Start saving more from next year<span class=\"d-none d-md-inline\"> (2 min)</span>"
+msgstr "Hakkan järgmisest aastast rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:86
+msgid "You accumulate more by age 65"
+msgstr "Kogud 65. eluaastaks rohkem"

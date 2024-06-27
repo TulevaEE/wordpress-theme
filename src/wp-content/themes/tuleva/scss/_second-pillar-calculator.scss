@@ -1,0 +1,21 @@
+#customTooltip {
+  position: absolute;
+  left: calc(50% - 7px);
+  letter-spacing: -1px;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  color: white;
+  transform: translate(-12px, 7px);
+  width: $custom-range-thumb-width;
+  text-align: center;
+  margin-top: -12px;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 0;
+  }
+}
+
