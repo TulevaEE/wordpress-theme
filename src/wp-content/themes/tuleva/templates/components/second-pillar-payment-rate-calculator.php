@@ -89,10 +89,10 @@
                     <h4 id="savingsSumZero"
                     class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
-                <small class="mt-4 d-flex text-center text-muted">
-                    <?php _e('* When taking into account tax system changes for 2025:', TEXT_DOMAIN); ?><br>
-                    <?php _e('income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?>
-                </small>
+                <div class="pt-3 text-center text-muted">
+                    <small><?php _e('* When taking into account tax system changes for 2025:', TEXT_DOMAIN); ?><br></small>
+                    <small><?php _e('income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?></small>
+                </div>
             </div>
 
             <div class="d-lg-none d-block">
