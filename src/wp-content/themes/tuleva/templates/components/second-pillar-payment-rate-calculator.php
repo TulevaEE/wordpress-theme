@@ -77,7 +77,8 @@
                         </small>
 
                     </div>
-                    <h4 id="monthlyContribution" class="text-nowrap vertical-align m-0 text-gray-700">200 €</h4>
+                    <h4 id="monthlyContributionYouDifference" class="text-nowrap vertical-align m-0 text-gray-700">80 €</h4>
+                    <h4 id="monthlyContribution" class="d-none text-nowrap vertical-align m-0 text-gray-700">200 €</h4>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">

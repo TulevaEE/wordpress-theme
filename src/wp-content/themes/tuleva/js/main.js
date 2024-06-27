@@ -229,7 +229,7 @@ $(document).ready(function ($) {
 
             var unemploymentInsurance = 0.016 * grossSalary;
             var taxFreeWage = 700;
-            var secondPillarContribution2Percent = 2 / 100 * grossSalary;
+            var secondPillarContribution2Percent = 0.02 * grossSalary;
 
             // 2024
             var taxFreeWage2024 = getTaxFreeWage(grossSalary * 12) / 12;
@@ -254,6 +254,7 @@ $(document).ready(function ($) {
             var monthlyContribution = yourSecondPillarContribution + governmentContribution;
             var monthlyContribution2Percent = secondPillarContribution2Percent + governmentContribution;
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
+            var monthlyContributionYouDiff = yourSecondPillarContribution - secondPillarContribution2Percent;
 
             var yearlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent) * 12, 0);
 
@@ -280,6 +281,7 @@ $(document).ready(function ($) {
 
             $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
             $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
+            $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
             $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
             if (yearlyTaxWin > 0) {
