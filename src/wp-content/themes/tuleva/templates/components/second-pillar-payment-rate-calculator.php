@@ -100,7 +100,7 @@
                 <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3 text-wrap"
                    target="_blank">
-                    <?php _e('Start saving more from next year<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
+                    <?php _e('Start saving more<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2 text-center">
                     <small class="text-secondary">
