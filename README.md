@@ -64,6 +64,6 @@ Alternatively, use POEdit for steps 2 and 3.
 # Start listener to compile .scss files to .css
 
 Start following npm script
-```cd src/wp-content/themes/tuleva; npm install --global gulp-cli; gulp`
+`cd src/wp-content/themes/tuleva; npm install --global gulp-cli; gulp`
 
 And edit scss files to have them built into css.
