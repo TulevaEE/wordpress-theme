@@ -333,6 +333,10 @@ $(document).ready(function ($) {
                 $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
             }
 
+            $(window).on('resize', function() {
+                updateTooltipPosition();
+            })
+
             $customRange.on('input', function () {
                 var value = $(this).val();
                 updateTooltip(value);

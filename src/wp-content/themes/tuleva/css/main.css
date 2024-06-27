@@ -15024,7 +15024,8 @@ small,
 
 #customTooltip {
   position: absolute;
-  left: calc(50% - 6px);
+  left: calc(50% - 7px);
+  letter-spacing: -1px;
   font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
