@@ -270,8 +270,12 @@ $(document).ready(function ($) {
 
             if (netSalary2025vs2024 < 0) {
                 $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
+                $calculator.find('#netWageDiff').removeClass('text-success');
+                $calculator.find('#netWageDiff').addClass('text-secondary');
             } else {
                 $calculator.find('#netWageDiff').text(`+${format(netSalary2025vs2024)} €`);
+                $calculator.find('#netWageDiff').removeClass('text-secondary');
+                $calculator.find('#netWageDiff').addClass('text-success');
             }
 
             $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
@@ -320,14 +324,11 @@ $(document).ready(function ($) {
                 var rangeWidth = $customRange.outerWidth();
                 var newX = percent * rangeWidth - rangeWidth / 2;
 
-                var thumbRadius = 24 / 2;
+                var thumbRadius = 38 / 2;
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -thumbRadius;
 
-                var largeNumberCompensation = value === 10 ? 8 : 0
-                var smallNumberCompensation = value <= 0 ? 4 : 0
-
-                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12 - largeNumberCompensation + smallNumberCompensation) + 'px, 8px)');
+                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 8px)');
             }
 
             $customRange.on('input', function () {

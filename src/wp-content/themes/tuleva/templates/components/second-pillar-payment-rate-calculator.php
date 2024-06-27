@@ -58,12 +58,10 @@
                 <div class="d-flex justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Monthly net salary', TEXT_DOMAIN); ?>
+                            <?php _e('Your net salary *', TEXT_DOMAIN); ?>
+                            <span class="text-nowrap text-success" id="netWageDiff">+38 €</span>
                         </strong>
-                        <small class="text-muted">
-                            <?php _e('Vs. today', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="netWageDiff">+38 €</span>
-                        </small>
+
                     </div>
                     <h4 id="netWage" class="text-nowrap vertical-align m-0 text-gray-700">1595 €</h4>
                 </div>

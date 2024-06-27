@@ -1,6 +1,6 @@
 #customTooltip {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 6px);
   font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -9,5 +9,7 @@
   pointer-events: none;
   color: white;
   transform: translate(-12px, 8px);
+  width: $custom-range-thumb-width;
+  text-align: center;
 }
 
