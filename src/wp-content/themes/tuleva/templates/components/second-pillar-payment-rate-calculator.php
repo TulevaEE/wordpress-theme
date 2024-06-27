@@ -1,8 +1,7 @@
 <div class="card shadow-md">
     <div class="card-body p-4 second-pillar-payment-rate-calculator">
-        <form>
             <h5 class="mb-3 text-navy">
-                <?php _e('Calculate how much you will gain with a higher contribution and the 2025 income tax reform', TEXT_DOMAIN); ?>
+                <?php _e('What does increasing your II pillar payments mean to you?', TEXT_DOMAIN); ?>
             </h5>
             <div class="card bg-blue-washed p-3">
                 <div class="form-group row">
@@ -55,7 +54,7 @@
                 </div>
             </div>
             <div class="results mt-3 text-gray-700">
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
                             <?php _e('Your net salary *', TEXT_DOMAIN); ?>
@@ -65,10 +64,10 @@
                     </div>
                     <h4 id="netWage" class="text-nowrap vertical-align m-0 text-gray-700">1595 €</h4>
                 </div>
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('II pillar monthly contribution', TEXT_DOMAIN); ?>
+                            <?php _e('You accumulate more monthly', TEXT_DOMAIN); ?>
                         </strong>
                         <small class="text-muted d-none">
                             <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?>
@@ -76,28 +75,24 @@
                             <span class="text-nowrap d-none"
                                   id="yearlyTaxWinZero"><?php _e('no change', TEXT_DOMAIN); ?></span>
                         </small>
-                        <small class="text-muted">
-                            <?php _e('You contribute', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="monthlyContributionYou">120 €</span>,
-                            <?php _e('the government adds', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap" id="monthlyContributionGov">80 €</span>
-                        </small>
+
                     </div>
                     <h4 id="monthlyContribution" class="text-nowrap vertical-align m-0 text-gray-700">200 €</h4>
                 </div>
-                <div class="d-flex justify-content-between mb-2 px-sm-3">
+                <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Accumulates more', TEXT_DOMAIN); ?>
+                            <?php _e('You accumulate more by retirement', TEXT_DOMAIN); ?>
                         </strong>
-                        <small class="text-muted">
-                            <?php _e('Compared to the current 2% contribution', TEXT_DOMAIN); ?>
-                        </small>
                     </div>
                     <h4 id="savingsSum" class="text-nowrap vertical-align text-success m-0">+33 600 €</h4>
                     <h4 id="savingsSumZero"
-                        class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
+                    class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
+                <small class="mt-4 d-flex text-center text-muted">
+                    <?php _e('* When taking into account tax system changes for 2025:', TEXT_DOMAIN); ?><br>
+                    <?php _e('income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?>
+                </small>
             </div>
 
             <div class="d-lg-none d-block">
@@ -112,6 +107,5 @@
                     </small>
                 </div>
             </div>
-        </form>
     </div>
 </div>
