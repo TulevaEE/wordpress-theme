@@ -1,0 +1,29 @@
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+.unslider-nav ol {
+  list-style: none;
+  text-align: center;
+}
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+.unslider-nav ol li.unslider-active {
+  background: #ccc;
+  cursor: default;
+}
+/*# sourceMappingURL=dots.css.map */

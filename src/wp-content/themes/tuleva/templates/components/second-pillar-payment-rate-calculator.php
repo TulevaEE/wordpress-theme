@@ -48,8 +48,8 @@
                         <?php _e('Expected annual return', TEXT_DOMAIN); ?>
 
                     </label>
-                    <div class="col-sm-6 text-center">
-                        <span id="customTooltip" class="d-inline-block text-primary text-bold mb-1">0%</span>
+                    <div class="col-sm-6 text-center position-relative">
+                        <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                         <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1">
                     </div>
                 </div>

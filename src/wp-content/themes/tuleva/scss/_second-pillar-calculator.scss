@@ -1,0 +1,14 @@
+#customTooltip {
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  color: white;
+  transform: translate(-12px, -5px);
+}
+
