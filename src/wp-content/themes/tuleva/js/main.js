@@ -324,7 +324,10 @@ $(document).ready(function ($) {
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -thumbRadius;
 
-                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, -5px)');
+                var largeNumberCompensation = value === 10 ? 8 : 0
+                var smallNumberCompensation = value <= 0 ? 4 : 0
+
+                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12 - largeNumberCompensation + smallNumberCompensation) + 'px, 8px)');
             }
 
             $customRange.on('input', function () {

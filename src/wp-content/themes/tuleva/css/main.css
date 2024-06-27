@@ -15020,7 +15020,6 @@ small,
 
 #customTooltip {
   position: absolute;
-  top: 1px;
   left: 50%;
   font-size: 1rem;
   -webkit-user-select: none;
@@ -15029,8 +15028,8 @@ small,
   user-select: none;
   pointer-events: none;
   color: white;
-  -webkit-transform: translate(-12px, -5px);
-  transform: translate(-12px, -5px);
+  -webkit-transform: translate(-12px, 8px);
+  transform: translate(-12px, 8px);
 }
 
 #jobs-page .toggle-parent {
