@@ -8772,6 +8772,10 @@ a.bg-dark:focus, a.bg-dark:hover {
   white-space: nowrap !important;
 }
 
+.text-wrap {
+  white-space: wrap !important;
+}
+
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;

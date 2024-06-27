@@ -330,7 +330,7 @@ $(document).ready(function ($) {
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -thumbRadius;
 
-                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 8px)');
+                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
             }
 
             $customRange.on('input', function () {

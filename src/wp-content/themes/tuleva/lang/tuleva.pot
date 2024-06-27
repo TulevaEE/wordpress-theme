@@ -1,4 +1,4 @@
-# Copyright (C) 2024
+# Copyright (C) 2024 
 # This file is distributed under the .
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-27T10:41:47+00:00\n"
+"POT-Creation-Date: 2024-06-27T11:41:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -1271,27 +1271,27 @@ msgstr ""
 msgid "no change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:85
-msgid "You accumulate more by retirement"
+#: templates/components/second-pillar-payment-rate-calculator.php:86
+msgid "You accumulate more by age 65"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:90
+#: templates/components/second-pillar-payment-rate-calculator.php:91
 msgid "No change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/second-pillar-payment-rate-calculator.php:94
 msgid "* When taking into account tax system changes for 2025:"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:94
+#: templates/components/second-pillar-payment-rate-calculator.php:95
 msgid "income tax is raised to 22% and tax-free basic exemption is raised to 700 euros."
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:102
-msgid "Increase contribution<span class=\"d-none d-md-inline\"> (2 min)</span>"
+#: templates/components/second-pillar-payment-rate-calculator.php:103
+msgid "Start saving more from next year<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:106
+#: templates/components/second-pillar-payment-rate-calculator.php:107
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr ""
 

@@ -83,7 +83,7 @@
                 <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('You accumulate more by retirement', TEXT_DOMAIN); ?>
+                            <?php _e('You accumulate more by age 65', TEXT_DOMAIN); ?>
                         </strong>
                     </div>
                     <h4 id="savingsSum" class="text-nowrap vertical-align text-success m-0">+33 600 €</h4>
@@ -98,9 +98,9 @@
 
             <div class="d-lg-none d-block">
                 <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
-                   class="btn btn-primary btn-lg btn-block mt-3"
+                   class="btn btn-primary btn-lg btn-block mt-3 text-wrap"
                    target="_blank">
-                    <?php _e('Increase contribution<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
+                    <?php _e('Start saving more from next year<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2 text-center">
                     <small class="text-secondary">

@@ -9322,6 +9322,10 @@ a.bg-dark:focus, a.bg-dark:hover {
   white-space: nowrap !important;
 }
 
+.text-wrap {
+  white-space: wrap !important;
+}
+
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -15028,8 +15032,8 @@ small,
   user-select: none;
   pointer-events: none;
   color: white;
-  -webkit-transform: translate(-12px, 8px);
-  transform: translate(-12px, 8px);
+  -webkit-transform: translate(-12px, 7px);
+  transform: translate(-12px, 7px);
   width: 2.5rem;
   text-align: center;
   margin-top: -12px;
