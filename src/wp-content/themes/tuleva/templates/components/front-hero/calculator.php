@@ -33,7 +33,7 @@
                 </select>
                 <div class="calculator__comparison-result">
                     <h5 class="mb-0" id="future-value">- €</h5>
-                    <small class="text-secondary text-nowrap"><?php _e("Annual fees", TEXT_DOMAIN); ?> <span id="fund-fee">1,01%</span></small>
+                    <small class="text-secondary text-nowrap"><?php _e("Annual fees", TEXT_DOMAIN); ?> <span id="fund-fee">0,86%</span></small>
                 </div>
             </div>
             <div class="p-3 calculator__comparison-row">
