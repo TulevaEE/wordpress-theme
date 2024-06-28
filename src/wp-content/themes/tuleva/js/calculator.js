@@ -1,4 +1,4 @@
-var averageFundFee = 1.09 / 100;
+var averageFundFee = 0.86 / 100;
 
 var format = function (num) {
     if (!window.LANGCODE) {
