@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-27T13:13:21+00:00\n"
+"POT-Creation-Date: 2024-06-30T17:57:22+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -500,57 +500,63 @@ msgstr ""
 msgid "Sustainability"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:90
-msgid "Reports"
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:89
+msgid "Ignoring the negative impact of investment decisions on sustainability factors"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:93
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
-msgid "Investment reports (in Estonian)"
+msgid "Reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
-msgid "Previous reports"
+#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-third-details.php:96
+msgid "Investment reports (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:100
 #: templates/components/fund-stocks-details.php:100
 #: templates/components/fund-third-details.php:100
+msgid "Previous reports"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:103
+#: templates/components/fund-stocks-details.php:103
+#: templates/components/fund-third-details.php:103
 msgid "Financial reports of fund and fund manager (in Estonian)"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:104
-#: templates/components/fund-stocks-details.php:104
-#: templates/components/fund-third-details.php:104
-msgid "Sustainability information"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:106
-#: templates/components/fund-stocks-details.php:106
-#: templates/components/fund-third-details.php:106
-msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:107
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-third-details.php:107
-msgid "%s tons / $1M turnover per year"
+msgid "Sustainability information"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:109
+#: templates/components/fund-stocks-details.php:109
+#: templates/components/fund-third-details.php:109
+msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:110
 #: templates/components/fund-stocks-details.php:110
 #: templates/components/fund-third-details.php:110
+msgid "%s tons / $1M turnover per year"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:113
+#: templates/components/fund-stocks-details.php:113
+#: templates/components/fund-third-details.php:113
 msgid "Share of investments with increased negative impact in the equity portfolio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:112
-#: templates/components/fund-stocks-details.php:112
-#: templates/components/fund-third-details.php:112
+#: templates/components/fund-bonds-details.php:115
+#: templates/components/fund-stocks-details.php:115
+#: templates/components/fund-third-details.php:115
 msgid "Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)"
 msgstr ""
 
