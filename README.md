@@ -61,12 +61,17 @@ Install wp cli:
 * `./tools/i18n/generate-pot.sh`
 * Or `wp i18n make-pot src/wp-content/themes/tuleva src/wp-content/themes/tuleva/lang/tuleva.pot --ignore-domain`
 
+> If the command fails with `PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)` then run the following command instead, which uses php from current environment and the php.ini can be modified to increase memory limit:
+```
+php /opt/homebrew/bin/wp i18n make-pot src/wp-content/themes/tuleva src/wp-content/themes/tuleva/lang/tuleva.pot --ignore-domain
+```
+
 2. Generate PO file and add Estonian translations
 * `./tools/i18n/generate-po.sh`
 * Or `wp i18n update-po src/wp-content/themes/tuleva/lang/tuleva.pot  src/wp-content/themes/tuleva/lang`
 
 3. Generate MO file to reflect them in Wordpress
-* `./tools/i18n/generate-mo.sh` 
+* `./tools/i18n/generate-mo.sh`
 * `wp i18n make-mo src/wp-content/themes/tuleva/lang`
 
 Alternatively, use POEdit for steps 2 and 3.
