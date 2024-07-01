@@ -95,7 +95,7 @@
                             <li>
                                 <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/06/TUV100-investeeringute-aruanne-31.05.2024.pdf'); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2024/07/TUV100-investeeringute-aruanne-30.06.2024.pdf'); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
