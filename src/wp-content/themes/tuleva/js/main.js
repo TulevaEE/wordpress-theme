@@ -311,6 +311,149 @@ $(document).ready(function ($) {
                 return false;
             });
             var $customRange = $('.second-pillar-payment-rate-calculator .custom-range');
+
+            $customRange.on('input', function () {
+                calculateSecondPillarPaymentRate();
+            });
+        },
+        initPayoutCalculator = function () {
+            var $input = $('.payout-calculator input');
+            $input.on('change', calculatePayout);
+            $input.on('keyup', calculatePayout);
+            var $customRange = $('.payout-calculator .custom-range');
+
+            $customRange.on('input', function () {
+                calculatePayout();
+            });
+            calculatePayout();
+        },
+        calculatePayout = function () {
+            var $calculator = $('.payout-calculator');
+
+            var portfolioSum = parseInt($calculator.find('#portfolioSum').val());
+            portfolioSum = isNaN(portfolioSum) ? 50000 : portfolioSum;
+
+            var pensionYears = parseInt($calculator.find('#pensionYears').val());
+            pensionYears = isNaN(pensionYears) ? 20 : pensionYears;
+
+            var returnRate = Number($calculator.find('#returnRate').val()) / 100;
+
+            var incomeTax = 0.1;
+
+            var recurringWithdrawal = 0;
+            for (var i = 1; i <= pensionYears; i++) {
+                var unitPrice = Math.pow(1 + returnRate, i);
+                var withdrawalUnits = portfolioSum / pensionYears;
+                var withdrawal = withdrawalUnits * unitPrice;
+                recurringWithdrawal += withdrawal;
+            }
+
+            var lumpSumWithdrawal = portfolioSum * (1 - incomeTax);
+
+            updateChart(recurringWithdrawal, lumpSumWithdrawal);
+
+            function getChartData(recurringData, lumpSumData) {
+                return {
+                    labels: [['Igakuine väljamakse', '(fondipension)'], 'Ühekordne väljamakse'],
+                    datasets: [
+                        {
+                            data: [recurringData, lumpSumData],
+                            backgroundColor: ['#51C26C', '#ff6d37'],
+                            borderWidth: 0,
+                        }
+                    ]
+                };
+            }
+
+            function getChartOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false, // Allow chart to fill container
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false // Hide the gridlines for the x-axis
+                            },
+                            border: {
+                                display: true, // Display the border
+                                color: '#002F63', // Set the color of the border
+                                width: 1, // Set the width of the border
+                                z: 1
+                            },
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                    weight: 500,
+                                    family: 'Roboto' // Set the font family for x-axis labels
+                                },
+                                color: '#002F63' // Set the color for x-axis labels
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            display: false // Hide the y-axis
+                        }
+                    },
+                    elements: {
+                        bar: {
+                            borderWidth: 0,
+                            borderRadius: 4 // Set the border radius for all bars
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false // Hide the legend
+                        },
+                        tooltip: {
+                            enabled: false // Disable the tooltip
+                        },
+                        datalabels: {
+                            anchor: 'middle',
+                            align: 'middle',
+                            color: 'white',
+                            font: {
+                                weight: 700,
+                                size: 24,
+                                family: 'Roboto'
+                            },
+                            formatter: function (value) {
+                                return format(value) + " €";
+                            }
+                        },
+                    },
+                    animation: {
+                        duration: 200
+                    },
+                    hover: {
+                        mode: null
+                    }
+                };
+            }
+
+
+            function updateChart(recurringData, lumpSumData) {
+                var ctx = document.getElementById('payoutChart').getContext('2d');
+                var data = getChartData(recurringData, lumpSumData);
+                var options = getChartOptions();
+
+                if (payoutChart) {
+                    payoutChart.data.labels = data.labels;
+                    payoutChart.data.datasets[0].data = data.datasets[0].data;
+                    payoutChart.data.datasets[0].backgroundColor = data.datasets[0].backgroundColor;
+                    payoutChart.update();
+                } else {
+                    payoutChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: data,
+                        options: options,
+                        plugins: [ChartDataLabels] // Register the datalabels plugin
+                    });
+                }
+            }
+
+        },
+        initReturnRangeSliderTooltip = function () {
+            var $customRange = $('.custom-range');
             var $customTooltip = $('#customTooltip');
 
             function updateTooltip(value) {
@@ -333,7 +476,7 @@ $(document).ready(function ($) {
                 $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
             }
 
-            $(window).on('resize', function() {
+            $(window).on('resize', function () {
                 updateTooltipPosition();
             })
 
@@ -341,7 +484,6 @@ $(document).ready(function ($) {
                 var value = $(this).val();
                 updateTooltip(value);
                 updateTooltipPosition();
-                calculateSecondPillarPaymentRate();
             });
         },
         initAccordion = function () {
@@ -422,6 +564,8 @@ $(document).ready(function ($) {
             updateClock();
         };
 
+    var payoutChart;
+
     initStickyHeader();
     initNewsletterBeaconToggle();
     initHelpBeaconToggle();
@@ -430,6 +574,8 @@ $(document).ready(function ($) {
     initModalEscClose();
     initThirdPillarCalculator();
     initSecondPillarPaymentRateCalculator();
+    initPayoutCalculator();
+    initReturnRangeSliderTooltip();
     initAccordion();
     initCountdownTimer();
     initModal('#founders', 'foundersModal');

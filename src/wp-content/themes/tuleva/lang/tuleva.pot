@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-30T17:57:22+00:00\n"
+"POT-Creation-Date: 2024-07-02T13:03:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -778,6 +778,7 @@ msgid "In progress"
 msgstr ""
 
 #: templates/components/modal-calculator.php:11
+#: templates/components/modal-payout-calculator.php:11
 #: templates/components/modal-second-pillar-payment-rate.php:11
 #: templates/components/second-pillar-payment-rate-hero.php:48
 msgid "How does the calculator work?"
@@ -796,6 +797,7 @@ msgid "In a low-cost index fund your assets grow hand-in-hand with the average r
 msgstr ""
 
 #: templates/components/modal-calculator.php:21
+#: templates/components/modal-payout-calculator.php:21
 #: templates/components/modal-second-pillar-payment-rate.php:21
 msgid "Assumptions"
 msgstr ""
@@ -902,6 +904,41 @@ msgstr ""
 
 #: templates/components/modal-founders.php:234
 msgid "Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which translates as a primer on how to get rich. Jaak devotes his time to making Estonians financially savvier, so they could make better financial decisions and enjoy a better life."
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:16
+#: templates/components/modal-second-pillar-payment-rate.php:16
+msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 7% annual return."
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:17
+#: templates/components/modal-second-pillar-payment-rate.php:17
+msgid "In 2024, income tax rate is 20%."
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:18
+#: templates/components/modal-second-pillar-payment-rate.php:18
+msgid "In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic exemption, if annual income increases from 14 400 euros to 25 200 euros, basic exemption decreases according to the following formula: 7848 – 7848 ÷ 10 800 × (income amount – 14 400), if annual income is above 25 200 euros, basic exemption is 0."
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:24
+#: templates/components/modal-second-pillar-payment-rate.php:24
+msgid "2025 income tax rate"
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:28
+#: templates/components/modal-second-pillar-payment-rate.php:28
+msgid "2025 basic exemption per month"
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:32
+#: templates/components/modal-second-pillar-payment-rate.php:32
+msgid "Retirement age"
+msgstr ""
+
+#: templates/components/modal-payout-calculator.php:33
+#: templates/components/modal-second-pillar-payment-rate.php:33
+msgid "65 y/o"
 msgstr ""
 
 #: templates/components/modal-question-fee.php:12
@@ -1054,34 +1091,6 @@ msgstr ""
 msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that <span class=\"text-highlight text-bold\">the power of thousands of smart people</span> can be used for increasing our common good."
 msgstr ""
 
-#: templates/components/modal-second-pillar-payment-rate.php:16
-msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 7% annual return."
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:17
-msgid "In 2024, income tax rate is 20%."
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:18
-msgid "In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic exemption, if annual income increases from 14 400 euros to 25 200 euros, basic exemption decreases according to the following formula: 7848 – 7848 ÷ 10 800 × (income amount – 14 400), if annual income is above 25 200 euros, basic exemption is 0."
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:24
-msgid "2025 income tax rate"
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:28
-msgid "2025 basic exemption per month"
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:32
-msgid "Retirement age"
-msgstr ""
-
-#: templates/components/modal-second-pillar-payment-rate.php:33
-msgid "65 y/o"
-msgstr ""
-
 #: templates/components/mutual-header.php:5
 msgid "Join us."
 msgstr ""
@@ -1116,6 +1125,40 @@ msgstr ""
 
 #: templates/components/notice.php:6
 msgid "New"
+msgstr ""
+
+#: templates/components/payout-calculator.php:6
+msgid "How to use the money accumulated in your pillars?"
+msgstr ""
+
+#: templates/components/payout-calculator.php:11
+msgid "Accumulated by the age of 65"
+msgstr ""
+
+#: templates/components/payout-calculator.php:21
+msgid "Length of pension in years"
+msgstr ""
+
+#: templates/components/payout-calculator.php:31
+#: templates/components/second-pillar-payment-rate-calculator.php:47
+msgid "Expected annual return"
+msgstr ""
+
+#: templates/components/payout-calculator.php:42
+msgid "You will receive"
+msgstr ""
+
+#: templates/components/payout-calculator.php:53
+msgid "See more"
+msgstr ""
+
+#: templates/components/payout-calculator.php:58
+#: templates/components/second-pillar-payment-rate-calculator.php:106
+msgid "Submitting an application is <strong>free of charge</strong>."
+msgstr ""
+
+#: templates/components/payout-hero.php:48
+msgid "How does the payout calculator work?"
 msgstr ""
 
 #: templates/components/pension-calculator.php:1
@@ -1256,10 +1299,6 @@ msgstr ""
 msgid "Your II pillar contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:47
-msgid "Expected annual return"
-msgstr ""
-
 #: templates/components/second-pillar-payment-rate-calculator.php:60
 msgid "Your net salary *"
 msgstr ""
@@ -1291,10 +1330,6 @@ msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:102
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
-msgstr ""
-
-#: templates/components/second-pillar-payment-rate-calculator.php:106
-msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr ""
 
 #: templates/components/signup-block.php:27

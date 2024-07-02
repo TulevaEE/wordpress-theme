@@ -42,6 +42,7 @@
                     get_template_part('templates/components/notice');
                 } else if (get_row_layout() === 'second_pillar_payment_rate_hero') {
                     get_template_part('templates/components/second-pillar-payment-rate-hero');
+                    get_template_part('templates/components/modal-second-pillar-payment-rate');
                 }
             }
         }
@@ -50,6 +51,5 @@
     <?php
         get_template_part('templates/components/modal-calculator');
         get_template_part('templates/components/modal-security');
-        get_template_part('templates/components/modal-second-pillar-payment-rate');
     ?>
 </div>
