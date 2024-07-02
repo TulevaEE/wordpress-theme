@@ -345,10 +345,17 @@ $(document).ready(function ($) {
                 var unitPrice = Math.pow(1 + returnRate, i);
                 var withdrawalUnits = portfolioSum / pensionYears;
                 var withdrawal = withdrawalUnits * unitPrice;
+                if (pensionYears < 20) {
+                    withdrawal *= (1 - incomeTax);
+                }
                 recurringWithdrawal += withdrawal;
             }
 
             var lumpSumWithdrawal = portfolioSum * (1 - incomeTax);
+
+            if(pensionYears < 1) {
+                recurringWithdrawal = lumpSumWithdrawal;
+            }
 
             updateChart(recurringWithdrawal, lumpSumWithdrawal);
 
@@ -417,7 +424,7 @@ $(document).ready(function ($) {
                                 family: 'Roboto'
                             },
                             formatter: function (value) {
-                                return format(value) + " €";
+                                return format(Math.round(value)) + " €";
                             }
                         },
                     },
