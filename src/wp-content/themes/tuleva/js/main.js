@@ -353,11 +353,13 @@ $(document).ready(function ($) {
 
             var lumpSumWithdrawal = portfolioSum * (1 - incomeTax);
 
-            if(pensionYears < 1) {
+            if (pensionYears < 1) {
                 recurringWithdrawal = lumpSumWithdrawal;
             }
 
-            updateChart(recurringWithdrawal, lumpSumWithdrawal);
+            if ($calculator.length) {
+                updateChart(recurringWithdrawal, lumpSumWithdrawal);
+            }
 
             function getChartData(recurringData, lumpSumData) {
                 return {
@@ -462,6 +464,8 @@ $(document).ready(function ($) {
         initReturnRangeSliderTooltip = function () {
             var $customRange = $('.custom-range');
             var $customTooltip = $('#customTooltip');
+
+            console.log("initing");
 
             function updateTooltip(value) {
                 $customTooltip.text(value + '%');
