@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-07-02T13:03:45+00:00\n"
-"PO-Revision-Date: 2024-07-02 16:07+0300\n"
+"POT-Creation-Date: 2024-07-03T12:11:55+00:00\n"
+"PO-Revision-Date: 2024-07-03 15:15+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1698,32 +1698,54 @@ msgstr "ühekordne liitumistasu"
 msgid "New"
 msgstr "Uus"
 
-#: templates/components/payout-calculator.php:6
-msgid "How to use the money accumulated in your pillars?"
-msgstr "Kuidas kasutada sammastesse kogunenud raha?"
+#: templates/components/payout-calculator.php:9
+msgid "Accumulated by pension age"
+msgstr "Pensionieaks kogutud"
 
-#: templates/components/payout-calculator.php:11
-msgid "Accumulated by the age of 65"
-msgstr "65. eluaastaks kogutud €"
+#: templates/components/payout-calculator.php:16
+msgid "euros"
+msgstr "eurot"
 
-#: templates/components/payout-calculator.php:21
-msgid "Length of pension in years"
-msgstr "Pensioni pikkus aastates"
+#: templates/components/payout-calculator.php:22
+msgid "Length of pension"
+msgstr "Eeldatav pensioni kestus"
 
-#: templates/components/payout-calculator.php:31
+#: templates/components/payout-calculator.php:29
+msgid "years"
+msgstr "aastat"
+
+#: templates/components/payout-calculator.php:35
 #: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/payout-calculator.php:42
-msgid "You will receive"
-msgstr "Saad raha kätte"
+#: templates/components/payout-calculator.php:47
+msgid "Monthly payout"
+msgstr "Iga&shy;kuine välja&shy;makse"
 
-#: templates/components/payout-calculator.php:53
+#: templates/components/payout-calculator.php:48
+msgid "(funded pension)"
+msgstr "(fondi&shy;pension)"
+
+#: templates/components/payout-calculator.php:51
+msgid "Single payout"
+msgstr "Ühe&shy;kordne välja&shy;makse"
+
+#: templates/components/payout-calculator.php:65
+#: templates/components/payout-calculator.php:69
+msgid "You will receive in cash"
+msgstr "saan rahas kätte"
+
+#: templates/components/payout-calculator.php:75
+#: templates/components/payout-calculator.php:79
+msgid "Income tax"
+msgstr "tulumaks"
+
+#: templates/components/payout-calculator.php:91
 msgid "See more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/payout-calculator.php:58
+#: templates/components/payout-calculator.php:95
 #: templates/components/second-pillar-payment-rate-calculator.php:106
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
@@ -2366,3 +2388,6 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "How to use the money accumulated in your pillars?"
+#~ msgstr "Kuidas kasutada sammastesse kogunenud raha?"

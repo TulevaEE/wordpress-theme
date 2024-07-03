@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-02T13:03:45+00:00\n"
+"POT-Creation-Date: 2024-07-03T12:11:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -1127,32 +1127,54 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: templates/components/payout-calculator.php:6
-msgid "How to use the money accumulated in your pillars?"
+#: templates/components/payout-calculator.php:9
+msgid "Accumulated by pension age"
 msgstr ""
 
-#: templates/components/payout-calculator.php:11
-msgid "Accumulated by the age of 65"
+#: templates/components/payout-calculator.php:16
+msgid "euros"
 msgstr ""
 
-#: templates/components/payout-calculator.php:21
-msgid "Length of pension in years"
+#: templates/components/payout-calculator.php:22
+msgid "Length of pension"
 msgstr ""
 
-#: templates/components/payout-calculator.php:31
+#: templates/components/payout-calculator.php:29
+msgid "years"
+msgstr ""
+
+#: templates/components/payout-calculator.php:35
 #: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Expected annual return"
 msgstr ""
 
-#: templates/components/payout-calculator.php:42
-msgid "You will receive"
+#: templates/components/payout-calculator.php:47
+msgid "Monthly payout"
 msgstr ""
 
-#: templates/components/payout-calculator.php:53
+#: templates/components/payout-calculator.php:48
+msgid "(funded pension)"
+msgstr ""
+
+#: templates/components/payout-calculator.php:51
+msgid "Single payout"
+msgstr ""
+
+#: templates/components/payout-calculator.php:65
+#: templates/components/payout-calculator.php:69
+msgid "You will receive in cash"
+msgstr ""
+
+#: templates/components/payout-calculator.php:75
+#: templates/components/payout-calculator.php:79
+msgid "Income tax"
+msgstr ""
+
+#: templates/components/payout-calculator.php:91
 msgid "See more"
 msgstr ""
 
-#: templates/components/payout-calculator.php:58
+#: templates/components/payout-calculator.php:95
 #: templates/components/second-pillar-payment-rate-calculator.php:106
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr ""

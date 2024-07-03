@@ -338,37 +338,65 @@ $(document).ready(function ($) {
 
             var returnRate = Number($calculator.find('#returnRate').val()) / 100;
 
-            var incomeTax = 0.1;
+            var lumpSumIncomeTax = 0.1;
+            var recurringPaymentIncomeTax = pensionYears < 19 ? 0.1 : 0;
 
             var recurringWithdrawal = 0;
             for (var i = 1; i <= pensionYears; i++) {
                 var unitPrice = Math.pow(1 + returnRate, i);
                 var withdrawalUnits = portfolioSum / pensionYears;
-                var withdrawal = withdrawalUnits * unitPrice;
-                if (pensionYears < 20) {
-                    withdrawal *= (1 - incomeTax);
-                }
+                var withdrawal = withdrawalUnits * unitPrice * (1 - recurringPaymentIncomeTax);
                 recurringWithdrawal += withdrawal;
             }
 
-            var lumpSumWithdrawal = portfolioSum * (1 - incomeTax);
+            var lumpSumWithdrawal = portfolioSum * (1 - lumpSumIncomeTax);
 
             if (pensionYears < 1) {
                 recurringWithdrawal = lumpSumWithdrawal;
             }
 
-            if ($calculator.length) {
-                updateChart(recurringWithdrawal, lumpSumWithdrawal);
+            if (!$calculator.length) {
+                return;
             }
 
+            if (lumpSumWithdrawal < recurringWithdrawal) {
+                updateChart(1, lumpSumWithdrawal / recurringWithdrawal);
+            } else {
+                updateChart(recurringWithdrawal / lumpSumWithdrawal, 1);
+            }
+
+            $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringWithdrawal))} €`);
+            $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumWithdrawal))} €`);
+            $calculator.find('#recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
+            $calculator.find('#singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
+
+            if (recurringPaymentIncomeTax > 0) {
+                $calculator.find('#recurringPayoutTaxRate').removeClass('text-green');
+                $calculator.find('#recurringPayoutTaxRate').addClass('text-orange');
+            } else {
+                $calculator.find('#recurringPayoutTaxRate').removeClass('text-orange');
+                $calculator.find('#recurringPayoutTaxRate').addClass('text-green');
+            }
+
+            var recurringColor = recurringWithdrawal > lumpSumWithdrawal ? 'text-green' : 'text-orange';
+            var lumpSumColor = lumpSumWithdrawal > recurringWithdrawal ? 'text-green' : 'text-orange';
+            $calculator.find('#recurringPayoutSum').removeClass(recurringColor === 'text-green' ? 'text-orange' : 'text-green');
+            $calculator.find('#recurringPayoutSum').addClass(recurringColor === 'text-green' ? 'text-green' : 'text-orange');
+            $calculator.find('#singlePayoutSum').removeClass(lumpSumColor === 'text-green' ? 'text-orange' : 'text-green');
+            $calculator.find('#singlePayoutSum').addClass(lumpSumColor === 'text-green' ? 'text-green' : 'text-orange');
+
             function getChartData(recurringData, lumpSumData) {
+                var recurringColor = recurringData > lumpSumData ? '#51C26C' : '#ff6d37';
+                var lumpSumColor = lumpSumData > recurringData ? '#51C26C' : '#ff6d37';
+
                 return {
                     labels: [['Igakuine väljamakse', '(fondipension)'], 'Ühekordne väljamakse'],
                     datasets: [
                         {
                             data: [recurringData, lumpSumData],
-                            backgroundColor: ['#51C26C', '#ff6d37'],
+                            backgroundColor: [recurringColor, lumpSumColor],
                             borderWidth: 0,
+                            maxBarThickness: 96,
                         }
                     ]
                 };
@@ -377,57 +405,63 @@ $(document).ready(function ($) {
             function getChartOptions() {
                 return {
                     responsive: true,
-                    maintainAspectRatio: false, // Allow chart to fill container
+                    maintainAspectRatio: false,
                     scales: {
                         x: {
                             grid: {
-                                display: false // Hide the gridlines for the x-axis
+                                display: false
                             },
                             border: {
-                                display: true, // Display the border
-                                color: '#002F63', // Set the color of the border
-                                width: 1, // Set the width of the border
+                                display: true,
+                                color: '#002F63',
+                                width: 1,
                                 z: 1
                             },
                             ticks: {
+                                display: false,
                                 font: {
                                     size: 14,
                                     weight: 500,
-                                    family: 'Roboto' // Set the font family for x-axis labels
+                                    family: 'Roboto'
                                 },
-                                color: '#002F63' // Set the color for x-axis labels
+                                color: '#002F63'
                             }
                         },
                         y: {
                             beginAtZero: true,
-                            display: false // Hide the y-axis
+                            display: false
                         }
                     },
                     elements: {
                         bar: {
                             borderWidth: 0,
-                            borderRadius: 4 // Set the border radius for all bars
+                            borderRadius: 8,
                         }
+                    },
+                    layout: {
+                        padding: 0
                     },
                     plugins: {
                         legend: {
-                            display: false // Hide the legend
+                            display: false
                         },
                         tooltip: {
-                            enabled: false // Disable the tooltip
+                            enabled: false
                         },
                         datalabels: {
-                            anchor: 'middle',
-                            align: 'middle',
-                            color: 'white',
+                            display: false,
+                            anchor: 'end',
+                            align: 'end',
+                            textAlign: 'center',
+                            offset: 8,
+                            color: '#002F63',
                             font: {
-                                weight: 700,
-                                size: 24,
+                                weight: 500,
+                                size: 16,
                                 family: 'Roboto'
                             },
-                            formatter: function (value) {
-                                return format(Math.round(value)) + " €";
-                            }
+                            formatter: (val, ctx) => (ctx.chart.data.labels[ctx.dataIndex])
+
                         },
                     },
                     animation: {
