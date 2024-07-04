@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2024-07-04T13:39:21+00:00\n"
-"PO-Revision-Date: 2024-07-04 16:39+0300\n"
+"PO-Revision-Date: 2024-07-04 16:58+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1721,11 +1721,11 @@ msgstr "Eeldatav tootlus aastas"
 
 #: templates/components/payout-calculator.php:47
 msgid "Monthly payout<br />(funded pension)"
-msgstr "Iga&shy;kuine välja&shy;makse<br />(fondi&shy;pension)"
+msgstr "Igakuine väljamakse<br />(fondipension)"
 
 #: templates/components/payout-calculator.php:50
 msgid "Single<br />payout"
-msgstr "Ühe&shy;kordne<br />välja&shy;makse"
+msgstr "Ühekordne<br />väljamakse"
 
 #: templates/components/payout-calculator.php:63
 msgid "You will receive in total"
