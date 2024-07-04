@@ -14694,10 +14694,6 @@ small,
   color: #002F63;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
 }
-.content h2,
-.content h3 {
-  margin-bottom: 1.5rem;
-}
 .content h1 {
   font-size: 1.75rem;
 }
@@ -14719,8 +14715,8 @@ small,
 .content .h5,
 .content h6,
 .content .h6 {
-  line-height: 1;
-  margin-bottom: 20px;
+  line-height: 1.25;
+  margin-bottom: 18px;
 }
 .content ul, .content ol, .content dl {
   margin: 0 0 2em;
