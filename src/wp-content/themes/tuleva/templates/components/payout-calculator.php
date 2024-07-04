@@ -93,20 +93,19 @@
                 </table>
 
             </div>
-
+            <!--
             <div class="d-lg-none d-block">
                 <a href="<?php echo get_app_url("/payout") ?>"
                    class="btn btn-primary btn-lg btn-block mt-3 text-wrap"
                    target="_blank">
                     <?php _e('See more', TEXT_DOMAIN); ?>
                 </a>
-                <!--
                 <div class="mt-2 text-center">
                     <small class="text-secondary">
                         <?php _e('Submitting an application is <strong>free of charge</strong>.', TEXT_DOMAIN); ?>
                     </small>
                 </div>
-                -->
             </div>
+            -->
     </div>
 </div>
