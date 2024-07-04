@@ -341,56 +341,104 @@ $(document).ready(function ($) {
             var lumpSumIncomeTax = 0.1;
             var recurringPaymentIncomeTax = pensionYears < 19 ? 0.1 : 0;
 
-            var recurringWithdrawal = 0;
+            var recurringTotal = 0;
             for (var i = 1; i <= pensionYears; i++) {
                 var unitPrice = Math.pow(1 + returnRate, i);
                 var withdrawalUnits = portfolioSum / pensionYears;
                 var withdrawal = withdrawalUnits * unitPrice * (1 - recurringPaymentIncomeTax);
-                recurringWithdrawal += withdrawal;
+                recurringTotal += withdrawal;
+                if (i === pensionYears) {
+                    var recurringMonthlyLastYear = withdrawal / 12;
+                }
             }
 
-            var lumpSumWithdrawal = portfolioSum * (1 - lumpSumIncomeTax);
+            var lumpSumTotal = portfolioSum * (1 - lumpSumIncomeTax);
+            var lumpSumMonthly = lumpSumTotal / pensionYears / 12;
 
             if (pensionYears < 1) {
-                recurringWithdrawal = lumpSumWithdrawal;
+                recurringTotal = lumpSumTotal;
             }
+
+            var recurringMonthlyFirstYear = portfolioSum * (1 - recurringPaymentIncomeTax) / pensionYears / 12;
 
             if (!$calculator.length) {
                 return;
-            }
 
-            if (lumpSumWithdrawal < recurringWithdrawal) {
-                updateChart(1, lumpSumWithdrawal / recurringWithdrawal);
+            }
+            if (lumpSumTotal < recurringTotal) {
+                updateChart(1, lumpSumTotal / recurringTotal);
             } else {
-                updateChart(recurringWithdrawal / lumpSumWithdrawal, 1);
+                updateChart(recurringTotal / lumpSumTotal, 1);
+
+            }
+            $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringTotal))} €`);
+            $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumTotal))} €`);
+
+            $calculator.find('#recurringPayoutMonthly1').text(format(Math.round(recurringMonthlyFirstYear)));
+
+            if (recurringMonthlyFirstYear !== recurringMonthlyLastYear) {
+                $calculator.find('#recurringArrow').removeClass('d-none');
+                $calculator.find('#recurringPayoutMonthly2').removeClass('d-none')
+                    .text(format(Math.round(recurringMonthlyLastYear)));
+            } else {
+                $calculator.find('#recurringArrow').addClass('d-none');
+                $calculator.find('#recurringPayoutMonthly2').addClass('d-none');
             }
 
-            $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringWithdrawal))} €`);
-            $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumWithdrawal))} €`);
+            if (recurringMonthlyLastYear < lumpSumMonthly) {
+                $calculator.find('#recurringPayoutMonthly1').removeClass('text-green').addClass('text-orange');
+                $calculator.find('#recurringArrow').removeClass('text-green').addClass('text-orange');
+                $calculator.find('#recurringPayoutMonthly2').removeClass('text-green').addClass('text-orange');
+                $calculator.find('#recurringEuro').removeClass('text-green').addClass('text-orange');
+            } else {
+                $calculator.find('#recurringPayoutMonthly1').removeClass('text-orange').addClass('text-green');
+                $calculator.find('#recurringArrow').removeClass('text-orange').addClass('text-green');
+                $calculator.find('#recurringPayoutMonthly2').removeClass('text-orange').addClass('text-green');
+                $calculator.find('#recurringEuro').removeClass('text-orange').addClass('text-green');
+            }
+
+            if(recurringMonthlyFirstYear === recurringMonthlyLastYear) {
+                $calculator.find('#receiveMonthlyDec').addClass('d-none');
+                $calculator.find('#receiveMonthlyInc').addClass('d-none');
+                $calculator.find('#receiveMonthly').removeClass('d-none');
+            }
+            if(recurringMonthlyFirstYear < recurringMonthlyLastYear) {
+                $calculator.find('#receiveMonthlyDec').addClass('d-none');
+                $calculator.find('#receiveMonthlyInc').removeClass('d-none');
+                $calculator.find('#receiveMonthly').addClass('d-none');
+            }
+            if(recurringMonthlyFirstYear > recurringMonthlyLastYear) {
+                $calculator.find('#receiveMonthlyDec').removeClass('d-none');
+                $calculator.find('#receiveMonthlyInc').addClass('d-none');
+                $calculator.find('#receiveMonthly').addClass('d-none');
+            }
+
+            $calculator.find('#singlePayoutMonthly').text(`${format(Math.round(lumpSumMonthly))} €`);
+
             $calculator.find('#recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
             $calculator.find('#singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
 
             if (recurringPaymentIncomeTax > 0) {
-                $calculator.find('#recurringPayoutTaxRate').removeClass('text-green');
-                $calculator.find('#recurringPayoutTaxRate').addClass('text-orange');
+                $calculator.find('#recurringPayoutTaxRate').removeClass('text-green').addClass('text-orange');
             } else {
-                $calculator.find('#recurringPayoutTaxRate').removeClass('text-orange');
-                $calculator.find('#recurringPayoutTaxRate').addClass('text-green');
+                $calculator.find('#recurringPayoutTaxRate').removeClass('text-orange').addClass('text-green');
             }
 
-            var recurringColor = recurringWithdrawal > lumpSumWithdrawal ? 'text-green' : 'text-orange';
-            var lumpSumColor = lumpSumWithdrawal > recurringWithdrawal ? 'text-green' : 'text-orange';
-            $calculator.find('#recurringPayoutSum').removeClass(recurringColor === 'text-green' ? 'text-orange' : 'text-green');
-            $calculator.find('#recurringPayoutSum').addClass(recurringColor === 'text-green' ? 'text-green' : 'text-orange');
-            $calculator.find('#singlePayoutSum').removeClass(lumpSumColor === 'text-green' ? 'text-orange' : 'text-green');
-            $calculator.find('#singlePayoutSum').addClass(lumpSumColor === 'text-green' ? 'text-green' : 'text-orange');
+            var recurringColor = recurringTotal > lumpSumTotal ? 'text-green' : 'text-orange';
+            var lumpSumColor = lumpSumTotal > recurringTotal ? 'text-green' : 'text-orange';
+            $calculator.find('#recurringPayoutSum')
+                .removeClass(recurringColor === 'text-green' ? 'text-orange' : 'text-green')
+                .addClass(recurringColor === 'text-green' ? 'text-green' : 'text-orange');
+            $calculator.find('#singlePayoutSum')
+                .removeClass(lumpSumColor === 'text-green' ? 'text-orange' : 'text-green')
+                .addClass(lumpSumColor === 'text-green' ? 'text-green' : 'text-orange');
 
             function getChartData(recurringData, lumpSumData) {
                 var recurringColor = recurringData > lumpSumData ? '#51C26C' : '#ff6d37';
                 var lumpSumColor = lumpSumData > recurringData ? '#51C26C' : '#ff6d37';
 
                 return {
-                    labels: [['Igakuine väljamakse', '(fondipension)'], 'Ühekordne väljamakse'],
+                    labels: [['Igakuine väljamakse', '(fondipension)'], ['Ühekordne', 'väljamakse']],
                     datasets: [
                         {
                             data: [recurringData, lumpSumData],

@@ -1,9 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
-<div class="card shadow-md">
-    <div class="card-body p-4 payout-calculator">
-            <div class="card bg-blue-washed p-3">
+<div class="card shadow-md" style="border-radius: 1rem">
+    <div class="card-body p-2 payout-calculator">
+            <div class="card bg-blue-washed p-3" style="border-radius: 1rem">
                 <div class="form-group row">
                     <label for="portfolioSum" class="col-sm-6 col-form-label vertical-align pr-0">
                         <?php _e('Accumulated by pension age', TEXT_DOMAIN); ?>
@@ -40,42 +40,53 @@
                     </div>
                 </div>
             </div>
-            <div class="results mt-4">
-                <table class="table text-center mx-2 mb-0">
+            <div class="results px-3 mt-4">
+                <table class="table text-center mb-0" style="table-layout: fixed">
                     <tr>
                         <td class="border-0 h6 text-navy px-1 pt-0 pb-3">
-                            <div><?php _e('Monthly payout', TEXT_DOMAIN); ?></div>
-                            <div><?php _e('(funded pension)', TEXT_DOMAIN); ?></div>
+                            <?php _e('Monthly payout<br />(funded pension)', TEXT_DOMAIN); ?>
                         </td>
                         <td class="border-0 h6 text-navy px-1 pt-0 pb-3">
-                            <?php _e('Single payout', TEXT_DOMAIN); ?>
+                            <?php _e('Single<br />payout', TEXT_DOMAIN); ?>
                         </td>
                     </tr>
                 </table>
-
 
                 <div style="max-height: 160px">
                     <canvas id="payoutChart" class="w-100"></canvas>
                 </div>
 
-                <table class="table text-center mb-0">
+                <table class="table text-center mb-0" style="table-layout: fixed">
                     <tr>
                         <td class="border-0 pt-0">
                             <div id="recurringPayoutSum" class="h5 text-green mb-0">50 000 €</div>
-                            <span class="small text-muted text-normal"><?php _e('You will receive in cash', TEXT_DOMAIN); ?></span>
+                            <span class="small text-muted text-normal"><?php _e('You will receive in total', TEXT_DOMAIN); ?></span>
                         </td>
                         <td class="border-0 pt-0">
                             <div id="singlePayoutSum" class="h5 text-orange mb-0">45 000 €</div>
-                            <span class="small text-muted text-normal"><?php _e('You will receive in cash', TEXT_DOMAIN); ?></span>
+                            <span class="small text-muted text-normal"><?php _e('You will receive at once', TEXT_DOMAIN); ?></span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="pb-0">
-                            <div id="recurringPayoutTaxRate" class="h5 text-green mb-0">0%</div>
+                        <td>
+                            <span id="recurringPayoutMonthly1" class="h5 text-green mb-0">208</span><span id="recurringArrow" class="h5 text-green mb-0 d-none" style="font-family: system-ui; font-size: 1.2rem">→</span><span id="recurringPayoutMonthly2" class="h5 text-green mb-0 d-none">208</span>
+                            <span id="recurringEuro" class="h5 text-green mb-0"> €</span>
+                            <div id="receiveMonthly" class="small text-muted text-normal"><?php _e('You will receive monthly', TEXT_DOMAIN); ?></div>
+                            <div id="receiveMonthlyInc" class="small text-muted text-normal d-none"><?php _e('Receive monthly, increasing', TEXT_DOMAIN); ?></div>
+                            <div id="receiveMonthlyDec" class="small text-muted text-normal d-none"><?php _e('Receive monthly, decreasing', TEXT_DOMAIN); ?></div>
+                        </td>
+                        <td>
+                            <div id="singlePayoutMonthly" class="h5 text-orange mb-0">188 €</div>
+                            <span class="small text-muted text-normal"><?php _e('You can spend monthly', TEXT_DOMAIN); ?></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pb-2">
+                            <span id="recurringPayoutTaxRate" class="text-bold text-green">0%</span>
                             <span class="small text-muted text-normal"><?php _e('Income tax', TEXT_DOMAIN); ?></span>
                         </td>
-                        <td class="pb-0">
-                            <div id="singlePayoutTaxRate" class="h5 text-orange mb-0">10%</div>
+                        <td class="pb-2">
+                            <span id="singlePayoutTaxRate" class="text-bold text-orange">10%</span>
                             <span class="small text-muted text-normal"><?php _e('Income tax', TEXT_DOMAIN); ?></span>
                         </td>
                     </tr>

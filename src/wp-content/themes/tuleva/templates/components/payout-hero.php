@@ -2,10 +2,10 @@
     <div class="bg-hero-mutual d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
-                <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
+                <div class="col-lg-6 text-center text-lg-left pr-lg-4">
                     <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
                     <?php if (get_sub_field('quote')) { ?>
-                        <p class="lead text-navy mb-3"><?php echo do_shortcode(get_sub_field('quote')); ?></p>
+                        <div class="lead text-navy mb-3"><?php echo do_shortcode(get_sub_field('quote')); ?></div>
                         <?php if (get_sub_field('source')) { ?>
                             <p class="text-navy mb-5">
                                 <?php if (get_sub_field('source_link_url')) { ?>

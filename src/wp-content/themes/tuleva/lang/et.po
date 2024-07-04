@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-07-03T12:11:55+00:00\n"
-"PO-Revision-Date: 2024-07-03 15:15+0300\n"
+"POT-Creation-Date: 2024-07-04T13:39:21+00:00\n"
+"PO-Revision-Date: 2024-07-04 16:39+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1720,32 +1720,47 @@ msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
 #: templates/components/payout-calculator.php:47
-msgid "Monthly payout"
-msgstr "Iga&shy;kuine välja&shy;makse"
+msgid "Monthly payout<br />(funded pension)"
+msgstr "Iga&shy;kuine välja&shy;makse<br />(fondi&shy;pension)"
 
-#: templates/components/payout-calculator.php:48
-msgid "(funded pension)"
-msgstr "(fondi&shy;pension)"
+#: templates/components/payout-calculator.php:50
+msgid "Single<br />payout"
+msgstr "Ühe&shy;kordne<br />välja&shy;makse"
 
-#: templates/components/payout-calculator.php:51
-msgid "Single payout"
-msgstr "Ühe&shy;kordne välja&shy;makse"
+#: templates/components/payout-calculator.php:63
+msgid "You will receive in total"
+msgstr "saan kokku kätte"
 
-#: templates/components/payout-calculator.php:65
-#: templates/components/payout-calculator.php:69
-msgid "You will receive in cash"
-msgstr "saan rahas kätte"
+#: templates/components/payout-calculator.php:67
+msgid "You will receive at once"
+msgstr "saan korraga kätte"
+
+#: templates/components/payout-calculator.php:74
+msgid "You will receive monthly"
+msgstr "laekub mulle igakuiselt"
 
 #: templates/components/payout-calculator.php:75
-#: templates/components/payout-calculator.php:79
+msgid "Receive monthly, increasing"
+msgstr "laekub igakuiselt, kasvavalt"
+
+#: templates/components/payout-calculator.php:76
+msgid "Receive monthly, decreasing"
+msgstr "laekub igakuiselt, kahanevalt"
+
+#: templates/components/payout-calculator.php:80
+msgid "You can spend monthly"
+msgstr "saan kasutada igakuiselt"
+
+#: templates/components/payout-calculator.php:86
+#: templates/components/payout-calculator.php:90
 msgid "Income tax"
 msgstr "tulumaks"
 
-#: templates/components/payout-calculator.php:91
+#: templates/components/payout-calculator.php:101
 msgid "See more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/payout-calculator.php:95
+#: templates/components/payout-calculator.php:106
 #: templates/components/second-pillar-payment-rate-calculator.php:106
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
@@ -2388,6 +2403,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Monthly payout"
+#~ msgstr "Iga&shy;kuine välja&shy;makse"
 
 #~ msgid "How to use the money accumulated in your pillars?"
 #~ msgstr "Kuidas kasutada sammastesse kogunenud raha?"
