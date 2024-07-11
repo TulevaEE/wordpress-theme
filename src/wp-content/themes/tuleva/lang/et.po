@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-07-04T13:39:21+00:00\n"
-"PO-Revision-Date: 2024-07-04 16:58+0300\n"
+"POT-Creation-Date: 2024-07-11T09:09:11+00:00\n"
+"PO-Revision-Date: 2024-07-11 12:09+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1719,49 +1719,53 @@ msgstr "aastat"
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/payout-calculator.php:47
+#: templates/components/payout-calculator.php:42
+msgid "average stock market return 7%"
+msgstr "aktsiate keskmine tootlus 7%"
+
+#: templates/components/payout-calculator.php:50
 msgid "Monthly payout<br />(funded pension)"
 msgstr "Igakuine väljamakse<br />(fondipension)"
 
-#: templates/components/payout-calculator.php:50
+#: templates/components/payout-calculator.php:53
 msgid "Single<br />payout"
 msgstr "Ühekordne<br />väljamakse"
 
-#: templates/components/payout-calculator.php:63
+#: templates/components/payout-calculator.php:67
 msgid "You will receive in total"
 msgstr "saan kokku kätte"
 
-#: templates/components/payout-calculator.php:67
+#: templates/components/payout-calculator.php:72
 msgid "You will receive at once"
 msgstr "saan korraga kätte"
 
-#: templates/components/payout-calculator.php:74
+#: templates/components/payout-calculator.php:83
 msgid "You will receive monthly"
 msgstr "laekub mulle igakuiselt"
 
-#: templates/components/payout-calculator.php:75
+#: templates/components/payout-calculator.php:85
 msgid "Receive monthly, increasing"
 msgstr "laekub igakuiselt, kasvavalt"
 
-#: templates/components/payout-calculator.php:76
+#: templates/components/payout-calculator.php:87
 msgid "Receive monthly, decreasing"
 msgstr "laekub igakuiselt, kahanevalt"
 
-#: templates/components/payout-calculator.php:80
+#: templates/components/payout-calculator.php:92
 msgid "You can spend monthly"
 msgstr "saan kasutada igakuiselt"
 
-#: templates/components/payout-calculator.php:86
-#: templates/components/payout-calculator.php:90
+#: templates/components/payout-calculator.php:98
+#: templates/components/payout-calculator.php:102
 msgid "Income tax"
 msgstr "tulumaks"
 
-#: templates/components/payout-calculator.php:101
+#: templates/components/payout-calculator.php:113
 msgid "See more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/payout-calculator.php:106
-#: templates/components/second-pillar-payment-rate-calculator.php:106
+#: templates/components/payout-calculator.php:117
+#: templates/components/second-pillar-payment-rate-calculator.php:109
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
@@ -1961,32 +1965,32 @@ msgstr "Brutopalk"
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:60
+#: templates/components/second-pillar-payment-rate-calculator.php:63
 msgid "Your net salary *"
 msgstr "Sinu netopalk *"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:70
+#: templates/components/second-pillar-payment-rate-calculator.php:73
 msgid "You accumulate more monthly"
 msgstr "Kogud igakuiselt rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:73
+#: templates/components/second-pillar-payment-rate-calculator.php:76
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:76
+#: templates/components/second-pillar-payment-rate-calculator.php:79
 msgid "no change"
 msgstr "ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:86
+#: templates/components/second-pillar-payment-rate-calculator.php:89
 msgid "You accumulate more by age 65"
 msgstr "Kogud 65. eluaastaks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:91
+#: templates/components/second-pillar-payment-rate-calculator.php:94
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:94
+#: templates/components/second-pillar-payment-rate-calculator.php:97
 msgid ""
 "* When taking into account tax system changes for 2025: <br class=\"d-none d-"
 "md-inline\">income tax is raised to 22% and tax-free basic exemption is "
@@ -1995,7 +1999,7 @@ msgstr ""
 "* Arvestades 2025 jõustuvaid maksusüsteemi muudatusi: <br class=\"d-none d-"
 "md-inline\">tulumaks tõuseb 22% peale ja maksuvaba tulu kasvab 700 eurole."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:102
+#: templates/components/second-pillar-payment-rate-calculator.php:105
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 "Hakkan rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
@@ -2403,6 +2407,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "average stock market return is 7%"
+#~ msgstr "aktsiate keskmine tootlus on 7%"
 
 #~ msgid "Monthly payout"
 #~ msgstr "Iga&shy;kuine välja&shy;makse"

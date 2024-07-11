@@ -1,0 +1,22 @@
+.return-rate {
+    .custom-range {
+        z-index: 1;
+    }
+    min-height: 38px;
+
+    #customTooltip {
+        z-index: 1;
+    }
+
+    .custom-range:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        left: calc((100% - 30px) * 0.85);
+        bottom: 0;
+        height: 13px;
+        background: $text-muted;
+        z-index: -1;
+    }
+}
+

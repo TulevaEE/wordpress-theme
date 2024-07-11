@@ -12,10 +12,5 @@
   transform: translate(-12px, 7px);
   width: $custom-range-thumb-width;
   text-align: center;
-  margin-top: -12px;
-
-  @include media-breakpoint-up(sm) {
-    margin-top: 0;
-  }
 }
 

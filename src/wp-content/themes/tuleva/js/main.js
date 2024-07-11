@@ -547,8 +547,6 @@ $(document).ready(function ($) {
             var $customRange = $('.custom-range');
             var $customTooltip = $('#customTooltip');
 
-            console.log("initing");
-
             function updateTooltip(value) {
                 $customTooltip.text(value + '%');
             }

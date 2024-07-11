@@ -43,14 +43,17 @@
                     </div>
                 </div>
                 <div class="form-group row mb-0">
-                    <label class="col-sm-6 col-form-label pr-0 vertical-align d-flex align-items-end">
+                    <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align d-flex align-items-end">
                         <?php _e('Expected annual return', TEXT_DOMAIN); ?>
 
                     </label>
-                    <div class="col-sm-6 text-center position-relative d-flex mt-2 mb-2 mt-sm-0 mb-sm-0">
+                    <div class="col-sm-6 text-center position-relative d-flex">
                         <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
                         <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
+<!--                    <div class="col-sm-6 offset-sm-6 text-center small text-muted p-0 mt-1">-->
+<!--                        --><?php //_e('average stock market return 7%', TEXT_DOMAIN); ?>
+<!--                    </div>-->
                 </div>
             </div>
             <div class="results mt-3 text-gray-700">

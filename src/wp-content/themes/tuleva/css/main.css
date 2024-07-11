@@ -15033,12 +15033,6 @@ small,
   transform: translate(-12px, 7px);
   width: 2.5rem;
   text-align: center;
-  margin-top: -12px;
-}
-@media (min-width: 576px) {
-  #customTooltip {
-    margin-top: 0;
-  }
 }
 
 #jobs-page .toggle-parent {
@@ -15099,5 +15093,25 @@ small,
 }
 #jobs-page .media-block__media:hover .media-block__media__icon {
   opacity: 1;
+}
+
+.return-rate {
+  min-height: 38px;
+}
+.return-rate .custom-range {
+  z-index: 1;
+}
+.return-rate #customTooltip {
+  z-index: 1;
+}
+.return-rate .custom-range:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  left: calc((100% - 30px) * 0.85);
+  bottom: 0;
+  height: 13px;
+  background: #868e96;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
