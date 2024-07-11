@@ -397,17 +397,17 @@ $(document).ready(function ($) {
                 $calculator.find('#recurringEuro').removeClass('text-orange').addClass('text-green');
             }
 
-            if(recurringMonthlyFirstYear === recurringMonthlyLastYear) {
+            if (recurringMonthlyFirstYear === recurringMonthlyLastYear) {
                 $calculator.find('#receiveMonthlyDec').addClass('d-none');
                 $calculator.find('#receiveMonthlyInc').addClass('d-none');
                 $calculator.find('#receiveMonthly').removeClass('d-none');
             }
-            if(recurringMonthlyFirstYear < recurringMonthlyLastYear) {
+            if (recurringMonthlyFirstYear < recurringMonthlyLastYear) {
                 $calculator.find('#receiveMonthlyDec').addClass('d-none');
                 $calculator.find('#receiveMonthlyInc').removeClass('d-none');
                 $calculator.find('#receiveMonthly').addClass('d-none');
             }
-            if(recurringMonthlyFirstYear > recurringMonthlyLastYear) {
+            if (recurringMonthlyFirstYear > recurringMonthlyLastYear) {
                 $calculator.find('#receiveMonthlyDec').removeClass('d-none');
                 $calculator.find('#receiveMonthlyInc').addClass('d-none');
                 $calculator.find('#receiveMonthly').addClass('d-none');
@@ -567,9 +567,11 @@ $(document).ready(function ($) {
                 $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
             }
 
-            $(window).on('resize', function () {
+            $(window).on('resize pageshow', function () {
+                var value = $customRange.val();
+                updateTooltip(value);
                 updateTooltipPosition();
-            })
+            });
 
             $customRange.on('input', function () {
                 var value = $(this).val();
