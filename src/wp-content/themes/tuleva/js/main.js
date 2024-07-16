@@ -655,6 +655,39 @@ $(document).ready(function ($) {
             }
 
             updateClock();
+        },
+        initCountdownTimerFull = function () {
+            var july31midnight = 1722459599000;
+            var days = 0, hours = 0, minutes = 0, seconds = 0;
+            var daysFirstNumber = document.getElementById('days-first-number');
+            var daysLastNumber = document.getElementById('days-last-number');
+            var hoursFirstNumber = document.getElementById('hours-first-number');
+            var hoursLastNumber = document.getElementById('hours-last-number');
+            var minutesFirstNumber = document.getElementById('minutes-first-number');
+            var minutesLastNumber = document.getElementById('minutes-last-number');
+
+            var countdownTimer = countdown(july31midnight, function (ts) {
+                if (ts.end > ts.start) {
+                    daysFirstNumber.innerHTML = '0';
+                    daysLastNumber.innerHTML = '0';
+                    hoursFirstNumber.innerHTML = '0';
+                    hoursLastNumber.innerHTML = '0';
+                    minutesFirstNumber.innerHTML = '0';
+                    minutesLastNumber.innerHTML = '0';
+                    window.clearInterval(countdownTimer);
+                } else {
+                    days = ('0' + ts.days).slice(-2);
+                    hours = ('0' + ts.hours).slice(-2);
+                    minutes = ('0' + ts.minutes).slice(-2);
+                    seconds = ('0' + ts.seconds).slice(-2);
+                    daysFirstNumber.innerHTML = days.substring(0, 1);
+                    daysLastNumber.innerHTML = days.substring(1, 2);
+                    hoursFirstNumber.innerHTML = hours.substring(0, 1);
+                    hoursLastNumber.innerHTML = hours.substring(1, 2);
+                    minutesFirstNumber.innerHTML = minutes.substring(0, 1);
+                    minutesLastNumber.innerHTML = minutes.substring(1, 2);
+                }
+            }, countdown.DAYS | countdown.HOURS | countdown.MINUTES);
         };
 
     var payoutChart;
@@ -671,6 +704,7 @@ $(document).ready(function ($) {
     initReturnRangeSliderTooltip();
     initAccordion();
     initCountdownTimer();
+    initCountdownTimerFull();
     initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');

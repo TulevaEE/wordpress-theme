@@ -138,6 +138,17 @@
     }
 }
 
+.bg-hero-counter {
+    background-image: url('../img/field-toned.jpg');
+    background-color: #D1F4FF;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+        text-wrap: balance;
+    }
+}
+
 .bg-blueish-gray {
     background: $blueish-gray !important;
 }

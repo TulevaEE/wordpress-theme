@@ -58,6 +58,8 @@
                 } else if (get_row_layout() === 'payout_hero') {
                     get_template_part('templates/components/payout-hero');
                     get_template_part('templates/components/modal-payout-calculator');
+                } else if (get_row_layout() === 'counter_hero') {
+                    get_template_part('templates/components/counter-hero');
                 }
             }
         }

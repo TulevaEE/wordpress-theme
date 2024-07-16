@@ -31,7 +31,7 @@ class ThemeEnqueue
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '20240711',
+                'ver' => '20240716',
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -100,10 +100,18 @@ class ThemeEnqueue
                 'enqueue' => true
             ],
             [
+                'handle' => 'countdown',
+                'src' => $js_path . 'vendor/countdown.min.js',
+                'deps' => 'jquery',
+                'ver' => '2.6.1',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '20240711_2',
+                'ver' => '20240716',
                 'js_in_header' => false,
                 'enqueue' => true
             ]

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-07-11T09:09:11+00:00\n"
-"PO-Revision-Date: 2024-07-11 12:09+0300\n"
+"POT-Creation-Date: 2024-07-16T14:55:04+00:00\n"
+"PO-Revision-Date: 2024-07-16 17:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -28,11 +28,11 @@ msgstr "%s kutsumisel esines viga"
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:541
+#: helpers/extras.php:567
 msgid "Newer articles"
 msgstr "Uuemad artiklid"
 
-#: helpers/extras.php:573
+#: helpers/extras.php:599
 msgid "Older articles"
 msgstr "Vanemad artiklid"
 
@@ -166,6 +166,18 @@ msgid ""
 msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
 "<b>tasuta.</b>"
+
+#: templates/components/counter-hero.php:15
+msgid "Days"
+msgstr "päeva"
+
+#: templates/components/counter-hero.php:22
+msgid "Hours"
+msgstr "tundi"
+
+#: templates/components/counter-hero.php:29
+msgid "Minutes"
+msgstr "minutit"
 
 #: templates/components/cta-join.php:5 templates/components/middle-cta.php:2
 msgid "Are we on the right track?"
@@ -2407,6 +2419,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Seconds"
+#~ msgstr "sekundit"
 
 #~ msgid "average stock market return is 7%"
 #~ msgstr "aktsiate keskmine tootlus on 7%"

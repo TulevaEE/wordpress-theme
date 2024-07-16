@@ -14300,6 +14300,17 @@ small,
   }
 }
 
+.bg-hero-counter {
+  background-image: url("../img/field-toned.jpg");
+  background-color: #D1F4FF;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-hero-counter h1 {
+  text-wrap: balance;
+}
+
 .bg-blueish-gray {
   background: rgb(240, 244, 247) !important;
 }
@@ -15113,5 +15124,103 @@ small,
   height: 13px;
   background: #868e96;
   z-index: -1;
+}
+
+.counter-block {
+  margin-right: 24px;
+}
+@media (max-width: 767px) {
+  .counter-block {
+    margin-right: 8px;
+  }
+}
+
+.counter-block:last-child {
+  margin: 0;
+}
+
+.counter-number {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.counter-number > div {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-variant-numeric: lining-nums;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  width: 86px;
+  color: #fff;
+  background: #002F63;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .counter-number > div {
+    font-size: 35px;
+    width: 43px;
+    height: 56px;
+  }
+}
+
+.counter-number > div:nth-child(1) {
+  margin-right: 4px;
+  border-radius: 16px 8px 8px 16px;
+}
+@media (max-width: 767px) {
+  .counter-number > div:nth-child(1) {
+    margin-right: 2px;
+    border-radius: 8px 4px 4px 8px;
+  }
+}
+
+.counter-number > div:nth-child(2) {
+  border-radius: 8px 16px 16px 8px;
+}
+@media (max-width: 767px) {
+  .counter-number > div:nth-child(2) {
+    border-radius: 4px 8px 8px 4px;
+  }
+}
+
+.counter-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #002F63;
+}
+@media (max-width: 767px) {
+  .counter-label {
+    font-size: 1.25rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
