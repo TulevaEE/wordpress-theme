@@ -88,6 +88,9 @@
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_30.06.2024.pdf" target="_blank"><?php _e('Ignoring the negative impact of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
                             </li>
+                            <li>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/07/Tuleva-Fondid-AS-tasustamise-pohimotted-.pdf" target="_blank"><?php _e('Tuleva Fondid AS principles of remuneration', TEXT_DOMAIN) ?></a>
+                            </li>
                         </ul>
 
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
