@@ -15040,10 +15040,42 @@ small,
   user-select: none;
   pointer-events: none;
   color: white;
-  -webkit-transform: translate(-12px, 7px);
-  transform: translate(-12px, 7px);
+  -webkit-transform: translate(-12px, -6px);
+  transform: translate(-12px, -6px);
   width: 2.5rem;
   text-align: center;
+  z-index: 1;
+  padding-top: 14px;
+}
+@media (max-width: 575px) {
+  #customTooltip {
+    padding-top: 0;
+  }
+}
+
+.second-pillar-calculator-range {
+  z-index: 1;
+}
+
+.stock-returns-container {
+  text-wrap: nowrap;
+  /*@media (max-width: 1200px) { padding-bottom: 50px; }*/
+}
+
+.stock-returns-tick {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  -webkit-transform: translate(60.85px);
+  transform: translate(60.85px);
+  width: 1px;
+  height: 2rem;
+  z-index: 0;
+  background-color: #909294;
+}
+
+.income-tax-savings {
+  font-size: 14px;
 }
 
 #jobs-page .toggle-parent {
