@@ -43,12 +43,11 @@
                     </div>
                 </div>
                 <div class="form-group row mb-0">
-                    <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align d-flex align-items-end">
+                    <label for="returnRate" class="col-sm-6 col-form-label pr-0 pb-3 pb-sm-2 vertical-align d-flex align-items-end">
                         <?php _e('Expected annual return', TEXT_DOMAIN); ?>
 
                     </label>
                     <div class="col-sm-6 text-center position-relative d-flex">
-                        <!--<div class="stock-returns-tick"></div>-->
                         <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
                         <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
