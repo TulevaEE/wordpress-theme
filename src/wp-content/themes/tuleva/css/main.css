@@ -15061,13 +15061,14 @@ small,
   content: "";
   width: 1px;
   left: calc((100% - 30px) * 0.85);
-  top: 13px;
+  top: 14px;
   height: 26px;
   background: #868e96;
   z-index: -1;
 }
 @media (max-width: 575px) {
   .second-pillar-calculator-range:before {
+    top: 13px;
     height: 13px;
   }
 }
