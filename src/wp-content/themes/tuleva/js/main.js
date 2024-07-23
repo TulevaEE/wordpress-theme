@@ -287,7 +287,6 @@ $(document).ready(function ($) {
             $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
             $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
-            console.log(monthlyTaxWin)
             if (yearlyTaxWin > 0) {
                 $calculator.find('#yearlyTaxWin').text(`+${format(yearlyTaxWin)} €`);
                 $calculator.find('#yearlyTaxWin').removeClass('d-none');
@@ -589,7 +588,7 @@ $(document).ready(function ($) {
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -2;
 
-                $stockReturnsTick.css('transform', 'translate(' + (newX + adjustment - 13) + ', -6px)');
+                $stockReturnsTick.css('transform', 'translate(' + (newX + adjustment - 13) + 'px)');
             }
 
             $(window).on('resize pageshow', function () {
@@ -731,7 +730,7 @@ $(document).ready(function ($) {
     initAccordion();
     initCountdownTimer();
     initCountdownTimerFull();
-    initModal('#founders', 'foundersModal');
+    initModal('#foundersModal', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');
     // initModal('#question-profit', 'questionProfitModal');
