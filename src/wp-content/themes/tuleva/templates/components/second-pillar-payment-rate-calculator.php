@@ -95,7 +95,7 @@
                 </div>
                 <div class="pt-3 text-center text-muted">
                     <small><?php _e('* When taking into account July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?><br></small>
-                    <small><?php _e('Past performance is not indicative of future results.', TEXT_DOMAIN); ?><br></small>
+                    <div class="pt-3"><small><?php _e('Past performance is not indicative of future results.', TEXT_DOMAIN); ?></small></div>
                 </div>
             </div>
 
