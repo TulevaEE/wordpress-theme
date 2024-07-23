@@ -293,9 +293,12 @@ $(document).ready(function ($) {
                 $calculator.find('#yearlyTaxWinZero').addClass('d-none');
 
                 $calculator.find('#monthlyTaxWin').text(`${format(monthlyTaxWin)} €`);
+                $calculator.find('.income-tax-savings').removeClass('d-none');
             } else {
                 $calculator.find('#yearlyTaxWinZero').removeClass('d-none');
                 $calculator.find('#yearlyTaxWin').addClass('d-none');
+
+                $calculator.find('.income-tax-savings').addClass('d-none');
             }
 
 
@@ -575,27 +578,11 @@ $(document).ready(function ($) {
                 $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, -6px)');
             }
 
-            function setTickPosition() {
-                var value = 7;
-                var max = Number($customRange.attr('max'));
-                var min = Number($customRange.attr('min'));
-
-                var percent = (value - min) / (max - min);
-
-                var rangeWidth = $customRange.outerWidth();
-                var newX = percent * rangeWidth - rangeWidth / 2;
-
-                var fractionFromCentre = (percent - 0.5) * 2;
-                var adjustment = fractionFromCentre * -2;
-
-                $stockReturnsTick.css('transform', 'translate(' + (newX + adjustment - 13) + 'px)');
-            }
 
             $(window).on('resize pageshow', function () {
                 var value = $customRange.val();
                 updateTooltip(value);
                 updateTooltipPosition();
-                setTickPosition();
             });
 
             $customRange.on('input', function () {

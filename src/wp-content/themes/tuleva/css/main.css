@@ -15056,6 +15056,21 @@ small,
 .second-pillar-calculator-range {
   z-index: 1;
 }
+.second-pillar-calculator-range:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  left: calc((100% - 30px) * 0.85);
+  top: 13px;
+  height: 26px;
+  background: #868e96;
+  z-index: -1;
+}
+@media (max-width: 575px) {
+  .second-pillar-calculator-range:before {
+    height: 13px;
+  }
+}
 
 .stock-returns-container {
   text-wrap: nowrap;
