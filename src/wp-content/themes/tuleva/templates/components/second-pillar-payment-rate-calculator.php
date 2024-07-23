@@ -48,12 +48,11 @@
 
                     </label>
                     <div class="col-sm-6 text-center position-relative d-flex">
+                        <!--<div class="stock-returns-tick"></div>-->
                         <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
                         <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
-<!--                    <div class="col-sm-6 offset-sm-6 text-center small text-muted p-0 mt-1">-->
-<!--                        --><?php //_e('average stock market return 7%', TEXT_DOMAIN); ?>
-<!--                    </div>-->
+                    <div class="col-sm-6 offset-sm-6 pr-3 pt-4 pt-sm-0 text-right text-nowrap small text-muted p-0 mt-1"><?php _e('the average return on stocks is 7%', TEXT_DOMAIN); ?></div>
                 </div>
             </div>
             <div class="results mt-3 text-gray-700">
@@ -61,11 +60,12 @@
                     <div class="mr-1">
                         <strong class="d-block">
                             <?php _e('Your net salary *', TEXT_DOMAIN); ?>
-                            <span class="text-nowrap text-success" id="netWageDiff">+38 €</span>
+                            <!--<span class="text-nowrap text-secondary" id="netWageDiff">−100 €</span>-->
+                            <span class="text-nowrap text-success font-weight-normal income-tax-savings"><span id="monthlyTaxWin">17 €</span> <?php _e('income tax savings', TEXT_DOMAIN); ?></span>
                         </strong>
 
                     </div>
-                    <h4 id="netWage" class="text-nowrap vertical-align m-0 text-gray-700">1595 €</h4>
+                    <h4 id="netWage" class="text-nowrap vertical-align m-0 text-gray-700">1457 €</h4>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
@@ -94,7 +94,8 @@
                     class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
                 <div class="pt-3 text-center text-muted">
-                    <small><?php _e('* When taking into account tax system changes for 2025: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is raised to 700 euros.', TEXT_DOMAIN); ?><br></small>
+                    <small><?php _e('* When taking into account July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?><br></small>
+                    <small><?php _e('Past performance is not indicative of future results.', TEXT_DOMAIN); ?><br></small>
                 </div>
             </div>
 

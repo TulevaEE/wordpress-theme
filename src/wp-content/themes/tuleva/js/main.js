@@ -168,12 +168,12 @@ $(document).ready(function ($) {
             return number;
         },
 
-        getTaxFreeWage = function (wage) {
-            if (wage < 14400) {
+        getTaxFreeWage = function (yearlyWage) {
+            if (yearlyWage < 14400) {
                 return 7848;
             }
-            if (wage < 25200) {
-                return 7848 - 7848 / 10800 * (wage - 14400);
+            if (yearlyWage < 25200) {
+                return 7848 - 7848 / 10800 * (yearlyWage - 14400);
             }
             return 0;
         },
@@ -228,13 +228,15 @@ $(document).ready(function ($) {
             var returnRate = Number($calculator.find('#returnRate').val());
 
             var unemploymentInsurance = 0.016 * grossSalary;
-            var taxFreeWage = 700;
             var secondPillarContribution2Percent = 0.02 * grossSalary;
 
+            //var taxFreeWage = 700;
+            var incomeTaxSavings = (pillarContribution - secondPillarContribution2Percent) * 0.22
+
             // 2024
-            var taxFreeWage2024 = getTaxFreeWage(grossSalary * 12) / 12;
+            var taxFreeWage = getTaxFreeWage(grossSalary * 12) / 12;
             var incomeTax2024 =
-                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage2024) * 0.20, 0);
+                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.20, 0);
             var netSalary2024 = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2024;
 
             // 2025 at your selected contribution rate
@@ -256,7 +258,8 @@ $(document).ready(function ($) {
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
             var monthlyContributionYouDiff = yourSecondPillarContribution - secondPillarContribution2Percent;
 
-            var yearlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent) * 12, 0);
+            var monthlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent), 0)
+            var yearlyTaxWin = monthlyTaxWin * 12;
 
             var netSalary2025vs2024 = netSalary - netSalary2024;
 
@@ -284,14 +287,19 @@ $(document).ready(function ($) {
             $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
             $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
+            console.log(monthlyTaxWin)
             if (yearlyTaxWin > 0) {
                 $calculator.find('#yearlyTaxWin').text(`+${format(yearlyTaxWin)} €`);
                 $calculator.find('#yearlyTaxWin').removeClass('d-none');
                 $calculator.find('#yearlyTaxWinZero').addClass('d-none');
+
+                $calculator.find('#monthlyTaxWin').text(`${format(monthlyTaxWin)} €`);
             } else {
                 $calculator.find('#yearlyTaxWinZero').removeClass('d-none');
                 $calculator.find('#yearlyTaxWin').addClass('d-none');
             }
+
+
 
             if (savingSum > 0) {
                 $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);
@@ -546,6 +554,7 @@ $(document).ready(function ($) {
         initReturnRangeSliderTooltip = function () {
             var $customRange = $('.custom-range');
             var $customTooltip = $('#customTooltip');
+            var $stockReturnsTick = $('.stock-returns-tick');
 
             function updateTooltip(value) {
                 $customTooltip.text(value + '%');
@@ -564,13 +573,30 @@ $(document).ready(function ($) {
                 var fractionFromCentre = (percent - 0.5) * 2;
                 var adjustment = fractionFromCentre * -thumbRadius;
 
-                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, 7px)');
+                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, -6px)');
+            }
+
+            function setTickPosition() {
+                var value = 7;
+                var max = Number($customRange.attr('max'));
+                var min = Number($customRange.attr('min'));
+
+                var percent = (value - min) / (max - min);
+
+                var rangeWidth = $customRange.outerWidth();
+                var newX = percent * rangeWidth - rangeWidth / 2;
+
+                var fractionFromCentre = (percent - 0.5) * 2;
+                var adjustment = fractionFromCentre * -2;
+
+                $stockReturnsTick.css('transform', 'translate(' + (newX + adjustment - 13) + ', -6px)');
             }
 
             $(window).on('resize pageshow', function () {
                 var value = $customRange.val();
                 updateTooltip(value);
                 updateTooltipPosition();
+                setTickPosition();
             });
 
             $customRange.on('input', function () {

@@ -1232,7 +1232,7 @@ msgid "See more"
 msgstr "Uuri lähemalt"
 
 #: templates/components/payout-calculator.php:117
-#: templates/components/second-pillar-payment-rate-calculator.php:109
+#: templates/components/second-pillar-payment-rate-calculator.php:113
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
@@ -1378,36 +1378,32 @@ msgstr "Brutopalk"
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:63
+#: templates/components/second-pillar-payment-rate-calculator.php:65
 msgid "Your net salary *"
 msgstr "Sinu netopalk *"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:73
+#: templates/components/second-pillar-payment-rate-calculator.php:76
 msgid "You accumulate more monthly"
 msgstr "Kogud igakuiselt rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:76
+#: templates/components/second-pillar-payment-rate-calculator.php:79
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:79
+#: templates/components/second-pillar-payment-rate-calculator.php:82
 msgid "no change"
 msgstr "ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:89
+#: templates/components/second-pillar-payment-rate-calculator.php:92
 msgid "You accumulate more by age 65"
 msgstr "Kogud 65. eluaastaks rohkem"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:94
+#: templates/components/second-pillar-payment-rate-calculator.php:97
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:97
-msgid "* When taking into account tax system changes for 2025: <br class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic exemption is raised to 700 euros."
-msgstr "* Arvestades 2025 jõustuvaid maksusüsteemi muudatusi: <br class=\"d-none d-md-inline\">tulumaks tõuseb 22% peale ja maksuvaba tulu kasvab 700 eurole."
-
-#: templates/components/second-pillar-payment-rate-calculator.php:105
+#: templates/components/second-pillar-payment-rate-calculator.php:109
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr "Hakkan rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
@@ -1752,3 +1748,19 @@ msgstr "Tekstirida 4:"
 #: templates/components/fund-third-details.php:92
 msgid "Tuleva Fondid AS principles of remuneration"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:67
+msgid "income tax savings"
+msgstr "tulumaksuvõitu"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:101
+msgid "Past performance is not indicative of future results."
+msgstr "Mineviku tootlus ei taga sarnast tootlust tulevikus."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:100
+msgid "* When taking into account July 2024 coalition agreement: <br class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic exemption is not raised."
+msgstr "* Arvestades juuli 2024 koalitsioonileppe plaane: <br class=\"d-none d-md-inline\">tulumaks tõuseb 22% peale ja maksuvaba tulu ei tõuse."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:54
+msgid "the average return on stocks is 7%"
+msgstr "aktsiate keskmine tootlus on 7%"
