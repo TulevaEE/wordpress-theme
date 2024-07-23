@@ -58,7 +58,7 @@
                 <div class="d-flex align-items-center justify-content-between mb-2 px-sm-3">
                     <div class="mr-1">
                         <strong class="d-block">
-                            <?php _e('Your net salary *', TEXT_DOMAIN); ?>
+                            <?php _e('Your net salary', TEXT_DOMAIN); ?>
                             <!--<span class="text-nowrap text-secondary" id="netWageDiff">−100 €</span>-->
                             <span class="text-nowrap text-success font-weight-normal income-tax-savings"><span id="monthlyTaxWin">17 €</span> <?php _e('income tax savings', TEXT_DOMAIN); ?></span>
                         </strong>
@@ -93,8 +93,7 @@
                     class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
                 </div>
                 <div class="pt-3 text-center text-muted">
-                    <small><?php _e('* When taking into account July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?><br></small>
-                    <div class="pt-3"><small><?php _e('Past performance is not indicative of future results.', TEXT_DOMAIN); ?></small></div>
+                    <small><?php _e('The calculator takes into account the July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?> <?php _e('The average return on stocks shown in the calculator has historically been 7%, but this does not guarantee similar returns in the future.', TEXT_DOMAIN); ?></small>
                 </div>
             </div>
 
