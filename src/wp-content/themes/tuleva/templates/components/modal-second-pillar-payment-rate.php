@@ -26,7 +26,7 @@
                             </div>
                             <div class="d-flex justify-content-between eeldus">
                                 <p class="mb-0"><?php _e('2025 basic exemption per month', TEXT_DOMAIN) ?></p>
-                                <p class="mb-0 text-bold text-nowrap">700 €</p>
+                                <p class="mb-0 text-bold text-nowrap"><?php _e('up to 700 €', TEXT_DOMAIN) ?></p>
                             </div>
                             <div class="d-flex justify-content-between eeldus">
                                 <p class="mb-0"><?php _e('Retirement age', TEXT_DOMAIN) ?></p>

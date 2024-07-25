@@ -1232,7 +1232,7 @@ msgid "See more"
 msgstr "Uuri lähemalt"
 
 #: templates/components/payout-calculator.php:117
-#: templates/components/second-pillar-payment-rate-calculator.php:109
+#: templates/components/second-pillar-payment-rate-calculator.php:108
 msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr "Avalduse esitamine on <strong>tasuta</strong>."
 
@@ -1399,7 +1399,7 @@ msgstr "Kogud 65. eluaastaks rohkem"
 msgid "No change"
 msgstr "Ei muutu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:105
+#: templates/components/second-pillar-payment-rate-calculator.php:104
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr "Hakkan rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
@@ -1761,6 +1761,10 @@ msgstr "Sinu netopalk"
 msgid "The calculator takes into account the July 2024 coalition agreement: <br class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic exemption is not raised."
 msgstr "Kalkulaator arvestab juuli 2024 koalitsioonileppe plaane: tulumaks tõuseb 22% peale ja maksuvaba tulu ei tõuse."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:97
+#: templates/components/second-pillar-payment-rate-calculator.php:96
 msgid "The average return on stocks shown in the calculator has historically been 7%, but this does not guarantee similar returns in the future."
 msgstr "Kalkulaatoris näidatav aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus."
+
+#: templates/components/modal-payout-calculator.php:29
+msgid "up to 700 €"
+msgstr "kuni 700 €"
