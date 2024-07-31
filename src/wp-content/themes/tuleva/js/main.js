@@ -678,6 +678,9 @@ $(document).ready(function ($) {
             var minutesFirstNumber = document.getElementById('minutes-first-number');
             var minutesLastNumber = document.getElementById('minutes-last-number');
 
+            if (!daysFirstNumber) {
+                return
+            }
             var countdownTimer = countdown(july31midnight, function (ts) {
                 if (ts.end > ts.start) {
                     daysFirstNumber.innerHTML = '0';
