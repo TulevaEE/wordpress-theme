@@ -720,7 +720,7 @@ $(document).ready(function ($) {
     initAccordion();
     initCountdownTimer();
     initCountdownTimerFull();
-    initModal('#foundersModal', 'foundersModal');
+    initModal('#founders', 'foundersModal');
     initModal('#founders-2', 'foundersModal-2');
     // initModal('#question-joining-fee', 'questionJoiningFeeModal');
     // initModal('#question-profit', 'questionProfitModal');
