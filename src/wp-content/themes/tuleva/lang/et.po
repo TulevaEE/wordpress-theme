@@ -1736,7 +1736,7 @@ msgstr "Tekstirida 4:"
 #: templates/components/fund-bonds-details.php:92
 #: templates/components/fund-stocks-details.php:92
 #: templates/components/fund-third-details.php:92
-msgid "Tuleva Fondid AS principles of remuneration"
+msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:63

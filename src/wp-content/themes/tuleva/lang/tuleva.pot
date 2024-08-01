@@ -521,7 +521,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:92
 #: templates/components/fund-stocks-details.php:92
 #: templates/components/fund-third-details.php:92
-msgid "Tuleva Fondid AS principles of remuneration"
+msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:96
