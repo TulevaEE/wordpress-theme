@@ -513,12 +513,6 @@ msgstr "Fondi vara puhasväärtuse määramise kord"
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
-#: templates/components/fund-bonds-details.php:89
-#: templates/components/fund-stocks-details.php:89
-#: templates/components/fund-third-details.php:89
-msgid "Ignoring the negative impact of investment decisions on sustainability factors"
-msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
-
 #: templates/components/fund-bonds-details.php:96
 #: templates/components/fund-stocks-details.php:96
 #: templates/components/fund-third-details.php:96
@@ -1768,3 +1762,9 @@ msgstr "Kalkulaatoris näidatav aktsiaturu keskmine tootlus on ajalooliselt olnu
 #: templates/components/modal-payout-calculator.php:29
 msgid "up to 700 €"
 msgstr "kuni 700 €"
+
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:89
+msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"

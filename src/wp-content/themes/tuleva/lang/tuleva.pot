@@ -1,4 +1,4 @@
-# Copyright (C) 2024 
+# Copyright (C) 2024
 # This file is distributed under the .
 msgid ""
 msgstr ""
@@ -515,7 +515,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:89
 #: templates/components/fund-stocks-details.php:89
 #: templates/components/fund-third-details.php:89
-msgid "Ignoring the negative impact of investment decisions on sustainability factors"
+msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:92

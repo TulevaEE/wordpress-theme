@@ -385,6 +385,16 @@ function get_esg_document_url() {
     return get_site_url() . $esg_document_path;
 }
 
+function get_esg_factors_document_url() {
+    $esg_factors_document_path = '/wp-content/uploads/2024/08/Non-consideration-of-adverse-impacts-of-investment-decisions-on-sustainability-factors_30.06.2024.pdf';
+
+    if (ICL_LANGUAGE_CODE == 'et') {
+        $esg_factors_document_path = '/wp-content/uploads/2024/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_30.06.2024.pdf';
+    }
+
+    return get_site_url() . $esg_factors_document_path;
+}
+
 function hyphenate_string($string) {
     return strtolower(preg_replace('/[^a-zA-Z0-9]+/', '-', $string));
 }
