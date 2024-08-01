@@ -707,25 +707,36 @@ $(document).ready(function ($) {
 
     var payoutChart;
 
-    initStickyHeader();
-    initNewsletterBeaconToggle();
-    initHelpBeaconToggle();
-    initPostSidebarHandler();
-    initGenericModals();
-    initModalEscClose();
-    initThirdPillarCalculator();
-    initSecondPillarPaymentRateCalculator();
-    initPayoutCalculator();
-    initReturnRangeSliderTooltip();
-    initAccordion();
-    initCountdownTimer();
-    initCountdownTimerFull();
-    initModal('#founders', 'foundersModal');
-    initModal('#founders-2', 'foundersModal-2');
-    // initModal('#question-joining-fee', 'questionJoiningFeeModal');
-    // initModal('#question-profit', 'questionProfitModal');
-    initModal('#question-vote', 'questionVoteModal');
-    initModal('#question-rights', 'questionRightsModal');
+
+    var setupFunctions = [
+        function () { initStickyHeader(); },
+        function () { initNewsletterBeaconToggle(); },
+        function () { initHelpBeaconToggle(); },
+        function () { initPostSidebarHandler(); },
+        function () { initGenericModals(); },
+        function () { initModalEscClose(); },
+        function () { initThirdPillarCalculator(); },
+        function () { initSecondPillarPaymentRateCalculator(); },
+        function () { initPayoutCalculator(); },
+        function () { initReturnRangeSliderTooltip(); },
+        function () { initAccordion(); },
+        function () { initCountdownTimer(); },
+        function () { initCountdownTimerFull(); },
+        function () { initModal('#founders', 'foundersModal'); },
+        function () { initModal('#founders-2', 'foundersModal-2'); },
+        // function () {  initModal('#question-joining-fee', 'questionJoiningFeeModal'); },
+        // function () { // initModal('#question-profit', 'questionProfitModal'); },
+        function () { initModal('#question-vote', 'questionVoteModal'); },
+        function () { initModal('#question-rights', 'questionRightsModal'); },
+    ]
+
+    setupFunctions.forEach(function (func) {
+        try {
+            func()
+        } catch(e) {
+            console.error(e)
+        }
+    })
 
     $('.testimonial-slider').unslider({
         nav: false,
