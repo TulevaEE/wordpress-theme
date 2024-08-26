@@ -16,10 +16,10 @@ $security_link_url = get_sub_field('security_link_url');
                             <img src="<?php echo get_template_directory_uri() ?>/img/icon-lock.svg"
                                  alt="<?php echo $security_text; ?>" class="mr-4"/>
                             <div class="d-flex flex-column justify-content-center">
-                                <p class="mb-2 text-navy"><?php echo $security_text; ?></p>
+                                <p class="m-0 text-navy"><?php echo $security_text; ?></p>
                                 <?php if ($security_link_url && $security_link_text) { ?>
                                     <a id="security" href="<?php echo $security_link_url; ?>"
-                                       class="text-uppercase text-medium"><?php echo $security_link_text; ?></a>
+                                       ><?php echo $security_link_text; ?></a>
                                 <?php } ?>
                             </div>
                         </div>
