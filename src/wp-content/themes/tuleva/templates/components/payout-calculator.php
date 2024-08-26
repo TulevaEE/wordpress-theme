@@ -39,7 +39,7 @@
                     <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                 </div>
                 <div class="col-sm-6 offset-sm-6 text-center small text-muted p-0 mt-1">
-                    <?php _e('average stock market return 7%', TEXT_DOMAIN); ?>
+                    <?php _e('historic stock market return 7%', TEXT_DOMAIN); ?>
                 </div>
             </div>
         </div>

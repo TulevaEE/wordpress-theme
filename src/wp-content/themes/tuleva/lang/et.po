@@ -26,16 +26,16 @@ msgstr "Tuleva"
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:439
-#: helpers/extras.php:450
+#: helpers/extras.php:460
+#: helpers/extras.php:471
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:541
+#: helpers/extras.php:562
 msgid "Newer articles"
 msgstr "Uuemad artiklid"
 
-#: helpers/extras.php:573
+#: helpers/extras.php:594
 msgid "Older articles"
 msgstr "Vanemad artiklid"
 
@@ -1180,10 +1180,6 @@ msgstr "aastat"
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/payout-calculator.php:42
-msgid "average stock market return 7%"
-msgstr "aktsiate keskmine tootlus 7%"
-
 #: templates/components/payout-calculator.php:50
 msgid "Monthly payout<br />(funded pension)"
 msgstr "Igakuine väljamakse<br />(fondipension)"
@@ -1743,10 +1739,6 @@ msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 msgid "income tax savings"
 msgstr "tulumaksuvõitu"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:54
-msgid "the average return on stocks is 7%"
-msgstr "aktsiate keskmine tootlus on 7%"
-
 #: templates/components/second-pillar-payment-rate-calculator.php:61
 msgid "Your net salary"
 msgstr "Sinu netopalk"
@@ -1760,6 +1752,7 @@ msgid "The average return on stocks shown in the calculator has historically bee
 msgstr "Kalkulaatoris näidatav aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus."
 
 #: templates/components/modal-payout-calculator.php:29
+#: templates/components/modal-second-pillar-payment-rate.php:29
 msgid "up to 700 €"
 msgstr "kuni 700 €"
 
@@ -1768,3 +1761,11 @@ msgstr "kuni 700 €"
 #: templates/components/fund-third-details.php:89
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:54
+msgid "the historic return on stocks is 7%"
+msgstr "aktsiate ajalooline tootlus on 7%"
+
+#: templates/components/payout-calculator.php:42
+msgid "historic stock market return 7%"
+msgstr "aktsiate ajalooline tootlus on 7%"

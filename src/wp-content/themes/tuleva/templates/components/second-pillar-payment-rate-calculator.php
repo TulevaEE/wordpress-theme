@@ -51,7 +51,7 @@
                         <input type="range" class="second-pillar-calculator-range custom-range" id="returnRate" min="-10" max="10" step="1">
                         <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
                     </div>
-                    <div class="col-sm-6 offset-sm-6 pr-3 pt-4 pt-sm-0 text-right text-nowrap small text-muted p-0 mt-1"><?php _e('the average return on stocks is 7%', TEXT_DOMAIN); ?></div>
+                    <div class="col-sm-6 offset-sm-6 pr-3 pt-4 pt-sm-0 text-right text-nowrap small text-muted p-0 mt-1"><?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?></div>
                 </div>
             </div>
             <div class="results mt-3 text-gray-700">
