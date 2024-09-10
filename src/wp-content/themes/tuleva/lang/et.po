@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
+"POT-Creation-Date: 2024-07-16T14:55:04+00:00\n"
+"PO-Revision-Date: 2024-09-10 16:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-16T14:55:04+00:00\n"
-"PO-Revision-Date: 2024-07-16 17:55+0300\n"
-"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: .\n"
@@ -19,15 +19,12 @@ msgstr ""
 msgid "Tuleva"
 msgstr "Tuleva"
 
-#: functions.php:25
-#: helpers/acf/init.php:18
-#: helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
 #: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:460
-#: helpers/extras.php:471
+#: helpers/extras.php:460 helpers/extras.php:471
 msgid "days"
 msgstr "päeva"
 
@@ -111,8 +108,7 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:4
-#: searchform.php:7
+#: searchform.php:4 searchform.php:7
 msgid "Search"
 msgstr ""
 
@@ -171,13 +167,11 @@ msgstr "tundi"
 msgid "Minutes"
 msgstr "minutit"
 
-#: templates/components/cta-join.php:5
-#: templates/components/middle-cta.php:2
+#: templates/components/cta-join.php:5 templates/components/middle-cta.php:2
 msgid "Are we on the right track?"
 msgstr "Kas oleme õigel teel?"
 
-#: templates/components/cta-join.php:6
-#: templates/components/middle-cta.php:3
+#: templates/components/cta-join.php:6 templates/components/middle-cta.php:3
 msgid "Join us!"
 msgstr "Ühine meiega!"
 
@@ -1190,7 +1184,7 @@ msgstr "Ühekordne<br />väljamakse"
 
 #: templates/components/payout-calculator.php:67
 msgid "You will receive in total"
-msgstr "saan kokku kätte"
+msgstr "Saan kokku kätte"
 
 #: templates/components/payout-calculator.php:72
 msgid "You will receive at once"
@@ -1198,7 +1192,7 @@ msgstr "saan korraga kätte"
 
 #: templates/components/payout-calculator.php:83
 msgid "You will receive monthly"
-msgstr "laekub mulle igakuiselt"
+msgstr "Laekub mulle igakuiselt"
 
 #: templates/components/payout-calculator.php:85
 msgid "Receive monthly, increasing"
@@ -1530,8 +1524,7 @@ msgstr "Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel v
 msgid "Send"
 msgstr "Saada"
 
-#: templates/footer/blog-beacon.php:2
-#: templates/single-content.php:107
+#: templates/footer/blog-beacon.php:2 templates/single-content.php:107
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
@@ -1556,33 +1549,27 @@ msgstr "Sinu e-maili aadress"
 msgid "Join mailing list"
 msgstr "Liitu uudiskirjaga"
 
-#: templates/fund-content-old.php:17
-#: templates/fund-content.php:17
+#: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
 msgstr "Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
 
-#: templates/fund-content-old.php:25
-#: templates/fund-content.php:25
+#: templates/fund-content-old.php:25 templates/fund-content.php:25
 msgid "This fund has been already chosen by %s people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank."
 msgstr "Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
 
-#: templates/fund-content-old.php:32
-#: templates/fund-content.php:32
+#: templates/fund-content-old.php:32 templates/fund-content.php:32
 msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">Choose Tuleva pension fund</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg\">Suuna pension Tulevasse</a>"
 
-#: templates/header/main-sticky.php:7
-#: templates/header/main.php:7
+#: templates/header/main-sticky.php:7 templates/header/main.php:7
 msgid "Toggle navigation"
 msgstr "Navigatsioon"
 
-#: templates/header/main-sticky.php:14
-#: templates/header/main.php:14
+#: templates/header/main-sticky.php:14 templates/header/main.php:14
 msgid "<a href=\"https://pension.tuleva.ee/?language=en\" class=\"btn btn-outline-primary ml-md-2 mt-4 mt-md-0\">Log in</a>"
 msgstr "<a href=\"https://pension.tuleva.ee\" class=\"btn btn-outline-primary ml-md-2 mt-4 mt-md-0\">Sisenen</a>"
 
-#: templates/header/main-sticky.php:15
-#: templates/header/main.php:15
+#: templates/header/main-sticky.php:15 templates/header/main.php:15
 msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Choose Tuleva 2nd pillar</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0\">Too II sammas Tulevasse</a>"
 
@@ -1622,13 +1609,11 @@ msgstr "CTA nupu moodul"
 msgid "Shows a CTA Button."
 msgstr "Näitab CTA nuppu."
 
-#: widgets/cta-button-widget.php:33
-#: widgets/cta-primary-widget.php:41
+#: widgets/cta-button-widget.php:33 widgets/cta-primary-widget.php:41
 msgid "Button text:"
 msgstr "Nupu tekst:"
 
-#: widgets/cta-button-widget.php:37
-#: widgets/cta-primary-widget.php:45
+#: widgets/cta-button-widget.php:37 widgets/cta-primary-widget.php:45
 msgid "Button URL:"
 msgstr "Nupu URL:"
 
@@ -1640,16 +1625,13 @@ msgstr "Peamine CTA moodul"
 msgid "Shows primary CTA widget."
 msgstr "Näitab peamist CTA moodulit."
 
-#: widgets/cta-primary-widget.php:37
-#: widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:36
-#: widgets/subscribe-widget.php:39
+#: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
+#: widgets/help-widget.php:36 widgets/subscribe-widget.php:39
 #: widgets/text-rows-widget.php:43
 msgid "Title:"
 msgstr "Pealkiri:"
 
-#: widgets/cta-primary-widget.php:49
-#: widgets/cta-secondary-widget.php:43
+#: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
 msgid "Text:"
 msgstr "Tekst:"
 

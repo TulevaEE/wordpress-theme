@@ -341,10 +341,10 @@ $(document).ready(function ($) {
             var $calculator = $('.payout-calculator');
 
             var portfolioSum = parseInt($calculator.find('#portfolioSum').val());
-            portfolioSum = isNaN(portfolioSum) ? 50000 : portfolioSum;
+            portfolioSum = isNaN(portfolioSum) ? 20000 : portfolioSum;
 
             var pensionYears = parseInt($calculator.find('#pensionYears').val());
-            pensionYears = isNaN(pensionYears) ? 20 : pensionYears;
+            pensionYears = isNaN(pensionYears) || pensionYears === 0 ? 20 : pensionYears;
 
             var returnRate = Number($calculator.find('#returnRate').val()) / 100;
 
@@ -375,12 +375,12 @@ $(document).ready(function ($) {
                 return;
 
             }
-            if (lumpSumTotal < recurringTotal) {
-                updateChart(1, lumpSumTotal / recurringTotal);
-            } else {
-                updateChart(recurringTotal / lumpSumTotal, 1);
+            // if (lumpSumTotal < recurringTotal) {
+            //     updateChart(1, lumpSumTotal / recurringTotal);
+            // } else {
+            //     updateChart(recurringTotal / lumpSumTotal, 1);
+            // }
 
-            }
             $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringTotal))} €`);
             $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumTotal))} €`);
 

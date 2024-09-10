@@ -14319,6 +14319,10 @@ small,
   background: #edf7fe !important;
 }
 
+.bg-green-washed {
+  background: rgba(81, 194, 108, 0.16) !important;
+}
+
 .bg-gray-tint {
   background-color: #f8f9fa !important;
 }
