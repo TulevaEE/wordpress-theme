@@ -4,7 +4,7 @@
     }
     min-height: 38px;
 
-    #customTooltip {
+    .custom-tooltip {
         z-index: 1;
     }
 
@@ -14,9 +14,10 @@
         width: 1px;
         left: calc((100% - 30px) * 0.85);
         bottom: 0;
-        height: 13px;
+        height: 14px;
         background: $text-muted;
         z-index: -1;
+        transform: translate(0, -4px);
     }
 }
 

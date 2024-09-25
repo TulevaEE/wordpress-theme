@@ -18,28 +18,24 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="pensionYears" class="col-sm-6 col-form-label vertical-align pr-0">
-                    <?php _e('Length of pension', TEXT_DOMAIN); ?>
+                <label for="age" class="col-sm-6 col-form-label pr-0 vertical-align">
+                    <?php _e('Age at the start of payments', TEXT_DOMAIN); ?>
                 </label>
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control form-control-lg text-right" id="pensionYears"
-                               placeholder="20" inputmode="numeric" pattern="\d{1,2}"
-                               oninput="validity.valid||(value=value.slice(0, -1))">
-                        <div class="input-group-addon" style="min-width: 70px"><?php _e('years', TEXT_DOMAIN); ?></div>
-                    </div>
+                <div class="col-sm-6 text-center">
+                    <input type="range" class="custom-range" id="age" min="60" max="70" step="1">
+                    <span class="custom-tooltip d-inline-block text-bold">65</span>
                 </div>
             </div>
             <div class="form-group row mb-0">
-                <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align d-flex align-items-end">
+                <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
-                <div class="col-sm-6 d-flex text-center position-relative return-rate">
-                    <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1">
-                    <span id="customTooltip" class="d-inline-block text-bold mb-1">0%</span>
+                <div class="col-sm-6 d-flex text-center return-rate">
+                    <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
+                    <span class="custom-tooltip d-inline-block text-bold">0%</span>
                 </div>
-                <div class="col-sm-6 offset-sm-6 text-center small text-muted p-0 mt-1">
-                    <?php _e('historic stock market return 7%', TEXT_DOMAIN); ?>
+                <div class="col-sm-6 offset-sm-6 pr-3 pt-4 pt-sm-0 text-right text-nowrap small text-muted p-0">
+                    <?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?>
                 </div>
             </div>
         </div>

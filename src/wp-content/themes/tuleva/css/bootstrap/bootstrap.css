@@ -3736,14 +3736,15 @@ tbody.collapse.show {
 
 .custom-range {
   width: 100%;
-  padding-left: 0;
+  height: 3rem;
+  padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 .custom-range:focus {
-  outline: none;
+  outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
   -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
@@ -3840,6 +3841,21 @@ tbody.collapse.show {
   margin-right: 15px;
   background-color: #dee2e6;
   border-radius: 1rem;
+}
+.custom-range:disabled::-webkit-slider-thumb {
+  background-color: #adb5bd;
+}
+.custom-range:disabled::-webkit-slider-runnable-track {
+  cursor: default;
+}
+.custom-range:disabled::-moz-range-thumb {
+  background-color: #adb5bd;
+}
+.custom-range:disabled::-moz-range-track {
+  cursor: default;
+}
+.custom-range:disabled::-ms-thumb {
+  background-color: #adb5bd;
 }
 
 .custom-control-label::before,

@@ -553,42 +553,44 @@ $(document).ready(function ($) {
             }
 
         },
-        initReturnRangeSliderTooltip = function () {
-            var $customRange = $('.custom-range');
-            var $customTooltip = $('#customTooltip');
-            var $stockReturnsTick = $('.stock-returns-tick');
+        initAllCustomRangeSliders = function () {
+            $('.custom-range').each(function () {
+                var $customRange = $(this);
+                var $customTooltip = $customRange.siblings('.custom-tooltip');
 
-            function updateTooltip(value) {
-                $customTooltip.text(value + '%');
-            }
+                function updateTooltip(value) {
+                    var unit = $customRange.data('unit') || '';
+                    $customTooltip.text(value + unit);
+                }
 
-            function updateTooltipPosition() {
-                var value = Number($customRange.val());
-                var max = Number($customRange.attr('max'));
-                var min = Number($customRange.attr('min'));
+                function updateTooltipPosition() {
+                    var value = Number($customRange.val());
+                    var max = Number($customRange.attr('max'));
+                    var min = Number($customRange.attr('min'));
 
-                var percent = (value - min) / (max - min);
-                var rangeWidth = $customRange.outerWidth();
-                var newX = percent * rangeWidth - rangeWidth / 2;
+                    var percent = (value - min) / (max - min);
+                    var rangeWidth = $customRange.outerWidth();
+                    var newX = percent * rangeWidth - rangeWidth / 2;
 
-                var thumbRadius = 38 / 2;
-                var fractionFromCentre = (percent - 0.5) * 2;
-                var adjustment = fractionFromCentre * -thumbRadius;
+                    var thumbRadius = 40 / 2; // 2.5rem = 40px
+                    var fractionFromCentre = (percent - 0.5) * 2;
+                    var adjustment = fractionFromCentre * -thumbRadius;
 
-                $customTooltip.css('transform', 'translate(' + (newX + adjustment - 12) + 'px, -6px)');
-            }
+                    $customTooltip.css('transform', 'translate(' + (newX + adjustment) + 'px, 0.75rem)');
+                }
 
 
-            $(window).on('resize pageshow', function () {
-                var value = $customRange.val();
-                updateTooltip(value);
-                updateTooltipPosition();
-            });
+                $(window).on('resize pageshow', function () {
+                    var value = $customRange.val();
+                    updateTooltip(value);
+                    updateTooltipPosition();
+                });
 
-            $customRange.on('input', function () {
-                var value = $(this).val();
-                updateTooltip(value);
-                updateTooltipPosition();
+                $customRange.on('input', function () {
+                    var value = $(this).val();
+                    updateTooltip(value);
+                    updateTooltipPosition();
+                });
             });
         },
         initAccordion = function () {
@@ -718,7 +720,7 @@ $(document).ready(function ($) {
         function () { initThirdPillarCalculator(); },
         function () { initSecondPillarPaymentRateCalculator(); },
         function () { initPayoutCalculator(); },
-        function () { initReturnRangeSliderTooltip(); },
+        function () { initAllCustomRangeSliders(); },
         function () { initAccordion(); },
         function () { initCountdownTimer(); },
         function () { initCountdownTimerFull(); },

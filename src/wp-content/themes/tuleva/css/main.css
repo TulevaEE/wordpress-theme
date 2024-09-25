@@ -4086,14 +4086,15 @@ tbody.collapse.show {
 
 .custom-range {
   width: 100%;
-  padding-left: 0;
+  height: 3rem;
+  padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 .custom-range:focus {
-  outline: none;
+  outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
   -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 129, 238, 0.25);
@@ -4190,6 +4191,21 @@ tbody.collapse.show {
   margin-right: 15px;
   background-color: #dee2e6;
   border-radius: 1rem;
+}
+.custom-range:disabled::-webkit-slider-thumb {
+  background-color: #adb5bd;
+}
+.custom-range:disabled::-webkit-slider-runnable-track {
+  cursor: default;
+}
+.custom-range:disabled::-moz-range-thumb {
+  background-color: #adb5bd;
+}
+.custom-range:disabled::-moz-range-track {
+  cursor: default;
+}
+.custom-range:disabled::-ms-thumb {
+  background-color: #adb5bd;
 }
 
 .custom-control-label::before,
@@ -15033,9 +15049,9 @@ small,
   font-weight: 700;
 }
 
-#customTooltip {
+.custom-tooltip {
   position: absolute;
-  left: calc(50% - 7px);
+  left: calc(50% - 1.25rem);
   letter-spacing: -1px;
   font-size: 1rem;
   -webkit-user-select: none;
@@ -15044,58 +15060,11 @@ small,
   user-select: none;
   pointer-events: none;
   color: white;
-  -webkit-transform: translate(-12px, -6px);
-  transform: translate(-12px, -6px);
+  -webkit-transform: translate(0, 0.75rem);
+  transform: translate(0, 0.75rem);
   width: 2.5rem;
   text-align: center;
   z-index: 1;
-  padding-top: 14px;
-}
-@media (max-width: 575px) {
-  #customTooltip {
-    padding-top: 0;
-  }
-}
-
-.second-pillar-calculator-range {
-  z-index: 1;
-}
-.second-pillar-calculator-range:before {
-  position: absolute;
-  content: "";
-  width: 1px;
-  left: calc((100% - 30px) * 0.85);
-  top: 14px;
-  height: 26px;
-  background: #868e96;
-  z-index: -1;
-}
-@media (max-width: 575px) {
-  .second-pillar-calculator-range:before {
-    top: 13px;
-    height: 13px;
-  }
-}
-
-.stock-returns-container {
-  text-wrap: nowrap;
-  /*@media (max-width: 1200px) { padding-bottom: 50px; }*/
-}
-
-.stock-returns-tick {
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  -webkit-transform: translate(60.85px);
-  transform: translate(60.85px);
-  width: 1px;
-  height: 24px;
-  z-index: 0;
-  background-color: #909294;
-}
-
-.income-tax-savings {
-  font-size: 14px;
 }
 
 #jobs-page .toggle-parent {
@@ -15164,7 +15133,7 @@ small,
 .return-rate .custom-range {
   z-index: 1;
 }
-.return-rate #customTooltip {
+.return-rate .custom-tooltip {
   z-index: 1;
 }
 .return-rate .custom-range:before {
@@ -15173,9 +15142,11 @@ small,
   width: 1px;
   left: calc((100% - 30px) * 0.85);
   bottom: 0;
-  height: 13px;
+  height: 14px;
   background: #868e96;
   z-index: -1;
+  -webkit-transform: translate(0, -4px);
+  transform: translate(0, -4px);
 }
 
 .counter-block {

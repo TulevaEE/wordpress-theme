@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-08-26T10:06:47+00:00\n"
+"POT-Creation-Date: 2024-09-25T15:21:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 
@@ -1159,66 +1159,25 @@ msgid "euros"
 msgstr ""
 
 #: templates/components/payout-calculator.php:22
-msgid "Length of pension"
+msgid "Age at the start of payments"
 msgstr ""
 
-#: templates/components/payout-calculator.php:29
-msgid "years"
-msgstr ""
-
-#: templates/components/payout-calculator.php:35
+#: templates/components/payout-calculator.php:31
 #: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Expected annual return"
 msgstr ""
 
-#: templates/components/payout-calculator.php:42
-msgid "historic stock market return 7%"
+#: templates/components/payout-calculator.php:38
+#: templates/components/second-pillar-payment-rate-calculator.php:57
+msgid "the historic return on stocks is 7%"
 msgstr ""
 
-#: templates/components/payout-calculator.php:50
-msgid "Monthly payout<br />(funded pension)"
-msgstr ""
-
-#: templates/components/payout-calculator.php:53
-msgid "Single<br />payout"
-msgstr ""
-
-#: templates/components/payout-calculator.php:67
-msgid "You will receive in total"
-msgstr ""
-
-#: templates/components/payout-calculator.php:72
-msgid "You will receive at once"
-msgstr ""
-
-#: templates/components/payout-calculator.php:83
+#: templates/components/payout-calculator.php:45
 msgid "You will receive monthly"
 msgstr ""
 
-#: templates/components/payout-calculator.php:85
-msgid "Receive monthly, increasing"
-msgstr ""
-
-#: templates/components/payout-calculator.php:87
-msgid "Receive monthly, decreasing"
-msgstr ""
-
-#: templates/components/payout-calculator.php:92
-msgid "You can spend monthly"
-msgstr ""
-
-#: templates/components/payout-calculator.php:98
-#: templates/components/payout-calculator.php:102
-msgid "Income tax"
-msgstr ""
-
-#: templates/components/payout-calculator.php:113
-msgid "See more"
-msgstr ""
-
-#: templates/components/payout-calculator.php:117
-#: templates/components/second-pillar-payment-rate-calculator.php:108
-msgid "Submitting an application is <strong>free of charge</strong>."
+#: templates/components/payout-calculator.php:57
+msgid "You will receive in total"
 msgstr ""
 
 #: templates/components/payout-hero.php:48
@@ -1363,49 +1322,49 @@ msgstr ""
 msgid "Your II pillar contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:54
-msgid "the historic return on stocks is 7%"
-msgstr ""
-
-#: templates/components/second-pillar-payment-rate-calculator.php:61
+#: templates/components/second-pillar-payment-rate-calculator.php:65
 msgid "Your net salary"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:63
+#: templates/components/second-pillar-payment-rate-calculator.php:68
 msgid "income tax savings"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:72
+#: templates/components/second-pillar-payment-rate-calculator.php:77
 msgid "You accumulate more monthly"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:75
+#: templates/components/second-pillar-payment-rate-calculator.php:80
 #: templates/components/third-pillar-calculator.php:187
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:78
+#: templates/components/second-pillar-payment-rate-calculator.php:83
 msgid "no change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:88
+#: templates/components/second-pillar-payment-rate-calculator.php:93
 msgid "You accumulate more by age 65"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:93
+#: templates/components/second-pillar-payment-rate-calculator.php:98
 msgid "No change"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:96
+#: templates/components/second-pillar-payment-rate-calculator.php:101
 msgid "The calculator takes into account the July 2024 coalition agreement: <br class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic exemption is not raised."
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:96
+#: templates/components/second-pillar-payment-rate-calculator.php:101
 msgid "The average return on stocks shown in the calculator has historically been 7%, but this does not guarantee similar returns in the future."
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:104
+#: templates/components/second-pillar-payment-rate-calculator.php:109
 msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:113
+msgid "Submitting an application is <strong>free of charge</strong>."
 msgstr ""
 
 #: templates/components/signup-block.php:27
