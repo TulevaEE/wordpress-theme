@@ -25,7 +25,9 @@
                     <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip d-inline-block text-bold">0%</span>
                 </div>
-                <div class="col-sm-6 offset-sm-6 pr-3 pt-4 pt-sm-0 text-right text-nowrap small text-muted p-0">
+            </div>
+            <div class="row">
+                <div class="col-12 text-right text-nowrap small text-muted">
                     <?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?>
                 </div>
             </div>
