@@ -472,20 +472,20 @@ function countdown_timer_function($atts) {
             $days_remaining_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__days\">{$days_count}</span> {$days_text}</span>";
             $html_output = "<span class='countdown-timer'>{$days_remaining_html_output}</span>";
         } else {
-            $total_seconds = $difference->days * 24 * 60 * 60
-                            + $difference->h * 60 * 60
-                            + $difference->i * 60
-                            + $difference->s;
+        $total_seconds = $difference->days * 24 * 60 * 60
+            + $difference->h * 60 * 60
+            + $difference->i * 60
+            + $difference->s;
 
-            $hours = str_pad(floor($total_seconds / 3600), 2, "0", STR_PAD_LEFT);
-            $minutes = str_pad(floor(($total_seconds / 60) % 60), 2, "0", STR_PAD_LEFT);
-            $seconds = str_pad($total_seconds % 60, 2, "0", STR_PAD_LEFT);
+        $hours = str_pad(floor($total_seconds / 3600), 2, "0", STR_PAD_LEFT);
+        $minutes = str_pad(floor(($total_seconds / 60) % 60), 2, "0", STR_PAD_LEFT);
+        $seconds = str_pad($total_seconds % 60, 2, "0", STR_PAD_LEFT);
 
-            $hours_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__hours\">{$hours}</span>h</span>";
-            $minutes_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__minutes\">{$minutes}</span>m</span>";
-            $seconds_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__seconds\">{$seconds}</span>s</span>";
-            $time_remaining_html_output = "{$hours_html_output} {$minutes_html_output} {$seconds_html_output}";
-            $html_output = "<span class=\"countdown-timer\" data-datetime=\"{$target_datetime->format(DateTime::ISO8601)}\">{$time_remaining_html_output}</span>";
+        $hours_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__hours\">{$hours}</span>h</span>";
+        $minutes_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__minutes\">{$minutes}</span>m</span>";
+        $seconds_html_output = "<span class=\"countdown-timer__item\"><span class=\"countdown-timer__seconds\">{$seconds}</span>s</span>";
+        $time_remaining_html_output = "{$hours_html_output} {$minutes_html_output} {$seconds_html_output}";
+        $html_output = "<span class=\"countdown-timer\" data-datetime=\"{$target_datetime->format(DateTime::ISO8601)}\">{$time_remaining_html_output}</span>";
         }
     } catch (Exception $error) {
         $error_message = $error->getMessage();
@@ -496,6 +496,13 @@ function countdown_timer_function($atts) {
 }
 
 add_shortcode('countdown_timer', 'countdown_timer_function');
+
+function payout_calculator_function() {
+    ob_start();
+    get_template_part('templates/components/payout-calculator');
+    return ob_get_clean();
+}
+add_shortcode('payout_calculator', 'payout_calculator_function');
 
 function term_link_domain_fix($term_link) {
     $site_url = get_site_url();
@@ -523,7 +530,7 @@ function force_valid_domain_redirect() {
         exit;
     }
 }
-add_action('template_redirect', 'force_valid_domain_redirect');
+//add_action('template_redirect', 'force_valid_domain_redirect');
 
 function blog_pagination() {
     if( is_singular() )

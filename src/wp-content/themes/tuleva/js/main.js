@@ -301,8 +301,6 @@ $(document).ready(function ($) {
                 $calculator.find('.income-tax-savings').addClass('d-none');
             }
 
-
-
             if (savingSum > 0) {
                 $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);
                 $calculator.find('#savingsSum').removeClass('d-none');
@@ -343,8 +341,9 @@ $(document).ready(function ($) {
             var portfolioSum = parseInt($calculator.find('#portfolioSum').val());
             portfolioSum = isNaN(portfolioSum) ? 20000 : portfolioSum;
 
-            var pensionYears = parseInt($calculator.find('#pensionYears').val());
-            pensionYears = isNaN(pensionYears) || pensionYears === 0 ? 20 : pensionYears;
+            // Elada jäänud aastad 65-aastastel
+            // source: https://www.stat.ee/et/avasta-statistikat/valdkonnad/heaolu/tervis/oodatav-eluiga
+            var pensionYears = 19;
 
             var returnRate = Number($calculator.find('#returnRate').val()) / 100;
 
@@ -373,20 +372,14 @@ $(document).ready(function ($) {
 
             if (!$calculator.length) {
                 return;
-
             }
-            // if (lumpSumTotal < recurringTotal) {
-            //     updateChart(1, lumpSumTotal / recurringTotal);
-            // } else {
-            //     updateChart(recurringTotal / lumpSumTotal, 1);
-            // }
 
             $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringTotal))} €`);
             $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumTotal))} €`);
 
             $calculator.find('#recurringPayoutMonthly1').text(format(Math.round(recurringMonthlyFirstYear)));
 
-            if (recurringMonthlyFirstYear !== recurringMonthlyLastYear) {
+            if (Math.round(recurringMonthlyFirstYear) !== Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('#recurringArrow').removeClass('d-none');
                 $calculator.find('#recurringPayoutMonthly2').removeClass('d-none')
                     .text(format(Math.round(recurringMonthlyLastYear)));
@@ -395,29 +388,17 @@ $(document).ready(function ($) {
                 $calculator.find('#recurringPayoutMonthly2').addClass('d-none');
             }
 
-            if (recurringMonthlyLastYear < lumpSumMonthly) {
-                $calculator.find('#recurringPayoutMonthly1').removeClass('text-green').addClass('text-orange');
-                $calculator.find('#recurringArrow').removeClass('text-green').addClass('text-orange');
-                $calculator.find('#recurringPayoutMonthly2').removeClass('text-green').addClass('text-orange');
-                $calculator.find('#recurringEuro').removeClass('text-green').addClass('text-orange');
-            } else {
-                $calculator.find('#recurringPayoutMonthly1').removeClass('text-orange').addClass('text-green');
-                $calculator.find('#recurringArrow').removeClass('text-orange').addClass('text-green');
-                $calculator.find('#recurringPayoutMonthly2').removeClass('text-orange').addClass('text-green');
-                $calculator.find('#recurringEuro').removeClass('text-orange').addClass('text-green');
-            }
-
-            if (recurringMonthlyFirstYear === recurringMonthlyLastYear) {
+            if (Math.round(recurringMonthlyFirstYear) === Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('#receiveMonthlyDec').addClass('d-none');
                 $calculator.find('#receiveMonthlyInc').addClass('d-none');
                 $calculator.find('#receiveMonthly').removeClass('d-none');
             }
-            if (recurringMonthlyFirstYear < recurringMonthlyLastYear) {
+            if (Math.round(recurringMonthlyFirstYear) < Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('#receiveMonthlyDec').addClass('d-none');
                 $calculator.find('#receiveMonthlyInc').removeClass('d-none');
                 $calculator.find('#receiveMonthly').addClass('d-none');
             }
-            if (recurringMonthlyFirstYear > recurringMonthlyLastYear) {
+            if (Math.round(recurringMonthlyFirstYear) > Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('#receiveMonthlyDec').removeClass('d-none');
                 $calculator.find('#receiveMonthlyInc').addClass('d-none');
                 $calculator.find('#receiveMonthly').addClass('d-none');
@@ -427,131 +408,6 @@ $(document).ready(function ($) {
 
             $calculator.find('#recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
             $calculator.find('#singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
-
-            if (recurringPaymentIncomeTax > 0) {
-                $calculator.find('#recurringPayoutTaxRate').removeClass('text-green').addClass('text-orange');
-            } else {
-                $calculator.find('#recurringPayoutTaxRate').removeClass('text-orange').addClass('text-green');
-            }
-
-            var recurringColor = recurringTotal > lumpSumTotal ? 'text-green' : 'text-orange';
-            var lumpSumColor = lumpSumTotal > recurringTotal ? 'text-green' : 'text-orange';
-            $calculator.find('#recurringPayoutSum')
-                .removeClass(recurringColor === 'text-green' ? 'text-orange' : 'text-green')
-                .addClass(recurringColor === 'text-green' ? 'text-green' : 'text-orange');
-            $calculator.find('#singlePayoutSum')
-                .removeClass(lumpSumColor === 'text-green' ? 'text-orange' : 'text-green')
-                .addClass(lumpSumColor === 'text-green' ? 'text-green' : 'text-orange');
-
-            function getChartData(recurringData, lumpSumData) {
-                var recurringColor = recurringData > lumpSumData ? '#51C26C' : '#ff6d37';
-                var lumpSumColor = lumpSumData > recurringData ? '#51C26C' : '#ff6d37';
-
-                return {
-                    labels: [['Igakuine väljamakse', '(fondipension)'], ['Ühekordne', 'väljamakse']],
-                    datasets: [
-                        {
-                            data: [recurringData, lumpSumData],
-                            backgroundColor: [recurringColor, lumpSumColor],
-                            borderWidth: 0,
-                            maxBarThickness: 96,
-                        }
-                    ]
-                };
-            }
-
-            function getChartOptions() {
-                return {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            border: {
-                                display: true,
-                                color: '#002F63',
-                                width: 1,
-                                z: 1
-                            },
-                            ticks: {
-                                display: false,
-                                font: {
-                                    size: 14,
-                                    weight: 500,
-                                    family: 'Roboto'
-                                },
-                                color: '#002F63'
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            display: false
-                        }
-                    },
-                    elements: {
-                        bar: {
-                            borderWidth: 0,
-                            borderRadius: 8,
-                        }
-                    },
-                    layout: {
-                        padding: 0
-                    },
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            enabled: false
-                        },
-                        datalabels: {
-                            display: false,
-                            anchor: 'end',
-                            align: 'end',
-                            textAlign: 'center',
-                            offset: 8,
-                            color: '#002F63',
-                            font: {
-                                weight: 500,
-                                size: 16,
-                                family: 'Roboto'
-                            },
-                            formatter: (val, ctx) => (ctx.chart.data.labels[ctx.dataIndex])
-
-                        },
-                    },
-                    animation: {
-                        duration: 200
-                    },
-                    hover: {
-                        mode: null
-                    }
-                };
-            }
-
-
-            function updateChart(recurringData, lumpSumData) {
-                var ctx = document.getElementById('payoutChart').getContext('2d');
-                var data = getChartData(recurringData, lumpSumData);
-                var options = getChartOptions();
-
-                if (payoutChart) {
-                    payoutChart.data.labels = data.labels;
-                    payoutChart.data.datasets[0].data = data.datasets[0].data;
-                    payoutChart.data.datasets[0].backgroundColor = data.datasets[0].backgroundColor;
-                    payoutChart.update();
-                } else {
-                    payoutChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: data,
-                        options: options,
-                        plugins: [ChartDataLabels] // Register the datalabels plugin
-                    });
-                }
-            }
-
         },
         initAllCustomRangeSliders = function () {
             $('.custom-range').each(function () {
@@ -578,7 +434,6 @@ $(document).ready(function ($) {
 
                     $customTooltip.css('transform', 'translate(' + (newX + adjustment) + 'px, 0.75rem)');
                 }
-
 
                 $(window).on('resize pageshow', function () {
                     var value = $customRange.val();
@@ -735,7 +590,7 @@ $(document).ready(function ($) {
     setupFunctions.forEach(function (func) {
         try {
             func()
-        } catch(e) {
+        } catch (e) {
             console.error(e)
         }
     })
