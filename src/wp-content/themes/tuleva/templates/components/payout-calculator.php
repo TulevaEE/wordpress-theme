@@ -35,20 +35,20 @@
         <div class="results row m-0">
             <div class="col-6 pl-0 pr-1">
                 <div class="card bg-blue-washed p-3 py-4 mt-2 text-center text-nowrap" style="border-radius: .5rem">
-                    <b><?php _e('You will receive monthly', TEXT_DOMAIN); ?></b>
+                <span class="text-navy font-weight-bold"><?php _e('You will receive monthly', TEXT_DOMAIN); ?></span>
                     <div class="h3 m-0 text-primary">
-                        <span id="recurringPayoutMonthly1">88</span><span id="recurringArrow" class="d-none" style="font-family: system-ui;">→</span><span id="recurringPayoutMonthly2" class="d-none">88</span>
+                        <span id="recurringPayoutMonthly1">88</span><span id="recurringArrow" class="d-none font-weight-normal" style="font-family: system-ui; line-height: 1">→</span><span id="recurringPayoutMonthly2" class="d-none">88</span>
                         <span id="recurringEuro"> €</span>
                     </div>
                 </div>
             </div>
             <div class="col-6 pl-1 pr-0">
                 <div class="card bg-blue-washed p-3 py-4 mt-2 text-center" style="border-radius: .5rem">
-                    <b><?php _e('You will receive in total', TEXT_DOMAIN); ?></b>
+                    <span class="text-navy font-weight-bold"><?php _e('You will receive in total', TEXT_DOMAIN); ?></span>
                     <div id="recurringPayoutSum" class="h3 m-0 text-primary">20 000 €</div>
                 </div>
             </div>
         </div>
-        <p class="m-0 p-3 pb-2 small text-secondary text-center">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed tulumaksuvabad. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
+        <p class="m-0 px-3 pt-3 pb-2 small text-secondary text-center" style="line-height: 1.2857">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-success">tulumaksuvabad</strong>. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
     </div>
 </div>
