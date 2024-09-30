@@ -12065,6 +12065,7 @@ p .lead, .p .lead {
 small,
 .small {
   font-size: 87.5%;
+  line-height: 1.4285;
   font-weight: inherit;
 }
 

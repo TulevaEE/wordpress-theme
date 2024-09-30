@@ -49,6 +49,6 @@
                 </div>
             </div>
         </div>
-        <p class="m-0 px-3 pt-3 pb-2 small text-secondary text-center" style="line-height: 1.2857">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-success">tulumaksuvabad</strong>. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
+        <p class="m-0 px-3 pt-3 pb-2 small text-secondary text-center">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-success">tulumaksuvabad</strong>. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
     </div>
 </div>
