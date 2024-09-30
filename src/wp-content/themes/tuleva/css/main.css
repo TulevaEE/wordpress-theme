@@ -2504,7 +2504,7 @@ select.form-control:focus::-ms-value {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
   font-size: 1.25rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .col-form-label-sm {
@@ -2559,14 +2559,14 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 2;
+  line-height: 1.5;
   border-radius: 0.3rem;
 }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: calc(3.5rem + 2px);
+  height: calc(2.875rem + 2px);
 }
 
 .form-group {
@@ -3392,7 +3392,7 @@ fieldset[disabled] a.btn {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 2;
+  line-height: 1.5;
   border-radius: 0.3rem;
 }
 
@@ -5125,7 +5125,7 @@ tbody.collapse.show {
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
@@ -12103,7 +12103,7 @@ h3, h4, h5, h6,
 }
 
 .lh-lg {
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .font-weight-light {
