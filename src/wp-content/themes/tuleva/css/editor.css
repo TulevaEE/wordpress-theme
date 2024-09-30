@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/**
- * Colors
- */
-/**
- * Brand definitions
- */
-/**
-* Fonts customization
-*/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -139,7 +130,7 @@ div:focus {
 }
 
 button {
-  font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 input::-webkit-contacts-auto-fill-button {
@@ -294,5 +285,29 @@ hr {
 .btn-plus:not([disabled]):not(.disabled).active {
   padding: 0 30px 0 0;
   background: url(../img/icon-plussign.svg) no-repeat right center;
+}
+
+.br-0 {
+  border-radius: 0;
+}
+
+.br-1 {
+  border-radius: 0.25rem;
+}
+
+.br-2 {
+  border-radius: 0.5rem;
+}
+
+.br-3 {
+  border-radius: 1rem;
+}
+
+.br-4 {
+  border-radius: 1.5rem;
+}
+
+.br-5 {
+  border-radius: 2rem;
 }
 /*# sourceMappingURL=editor.css.map */
