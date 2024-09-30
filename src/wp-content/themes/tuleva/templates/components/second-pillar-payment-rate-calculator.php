@@ -98,7 +98,10 @@
                     class="text-nowrap vertical-align text-orange m-0 d-none"><?php _e('No change', TEXT_DOMAIN); ?></h4>
             </div>
             <div class="pt-3 text-center text-muted">
-                <small><?php _e('The calculator takes into account the July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?><?php _e('The average return on stocks shown in the calculator has historically been 7%, but this does not guarantee similar returns in the future.', TEXT_DOMAIN); ?></small>
+                <small>
+                    <?php _e('The calculator takes into account the July 2024 coalition agreement: <br class="d-none d-md-inline">income tax is raised to 22% and tax-free basic exemption is not raised.', TEXT_DOMAIN); ?>
+                    <?php _e('The average return on stocks shown in the calculator has historically been 7%, but this does not guarantee similar returns in the future.', TEXT_DOMAIN); ?>
+                </small>
             </div>
         </div>
 
