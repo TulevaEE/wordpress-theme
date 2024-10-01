@@ -432,7 +432,7 @@ $(document).ready(function ($) {
                     var fractionFromCentre = (percent - 0.5) * 2;
                     var adjustment = fractionFromCentre * -thumbRadius;
 
-                    $customTooltip.css('transform', 'translate(' + (newX + adjustment) + 'px, 0.75rem)');
+                    $customTooltip.css('transform', 'translate(' + (newX + adjustment) + 'px, 0)');
                 }
 
                 $(window).on('resize pageshow', function () {

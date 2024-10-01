@@ -1,13 +1,14 @@
 .custom-tooltip {
     position: absolute;
-    left: calc(50% - 0.5 * $custom-range-thumb-width);
+    left: calc(50% - $custom-range-thumb-width / 2);
     letter-spacing: -1px;
     font-size: 1rem;
     user-select: none;
     pointer-events: none;
     color: white;
-    transform: translate(0, 0.75rem);
+    transform: translate(0, 0);
     width: $custom-range-thumb-width;
+    line-height: $custom-range-thumb-height;
     text-align: center;
     z-index: 1;
 }

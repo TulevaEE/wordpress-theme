@@ -4077,7 +4077,7 @@ tbody.collapse.show {
 
 .custom-range {
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -15124,9 +15124,10 @@ small,
   user-select: none;
   pointer-events: none;
   color: white;
-  -webkit-transform: translate(0, 0.75rem);
-  transform: translate(0, 0.75rem);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
   width: 2.5rem;
+  line-height: 2.5rem;
   text-align: center;
   z-index: 1;
 }

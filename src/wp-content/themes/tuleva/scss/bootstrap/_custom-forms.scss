@@ -265,7 +265,8 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
 
 .custom-range {
     width: 100%;
-    height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
+    //height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
+    height: $custom-range-thumb-height;
     padding: 0; // Need to reset padding
     background-color: transparent;
     appearance: none;
