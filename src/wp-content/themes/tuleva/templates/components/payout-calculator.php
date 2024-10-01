@@ -32,8 +32,8 @@
                 </div>
             </div>
         </div>
-        <div class="results row m-0">
-            <div class="col-6 pl-0 pr-1">
+        <div class="d-flex flex-column flex-sm-row m-0">
+            <div class="col-12 col-sm-6 px-0 pr-sm-1">
                 <div class="card bg-blue-washed mt-2 p-3 py-4 text-center text-nowrap br-2">
                     <span class="text-navy fw-medium"><?php _e('You will receive monthly', TEXT_DOMAIN); ?></span>
                     <div class="fs-2 mt-1 text-primary fw-bold lh-sm">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 pl-1 pr-0">
+            <div class="col-12 col-sm-6 px-0 pl-sm-1">
                 <div class="card bg-blue-washed mt-2 p-3 py-4 text-center br-2">
                     <span class="text-navy fw-medium"><?php _e('You will receive in total', TEXT_DOMAIN); ?></span>
                     <div class="fs-2 mt-1 text-primary fw-bold lh-sm" id="recurringPayoutSum">20 000 €</div>
