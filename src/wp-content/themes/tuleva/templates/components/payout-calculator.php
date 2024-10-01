@@ -21,14 +21,10 @@
                 <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
-                <div class="col-sm-6 d-flex text-center return-rate">
+                <div class="col-sm-6 return-rate">
                     <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip d-inline-block text-bold">0%</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-right text-nowrap small text-muted">
-                    <?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?>
+                    <span class="historic-return-rate small text-secondary"><?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?></span>
                 </div>
             </div>
         </div>

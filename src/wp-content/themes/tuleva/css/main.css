@@ -15115,6 +15115,7 @@ small,
 
 .custom-tooltip {
   position: absolute;
+  top: 0;
   left: calc(50% - 1.25rem);
   letter-spacing: -1px;
   font-size: 1rem;
@@ -15129,7 +15130,7 @@ small,
   width: 2.5rem;
   line-height: 2.5rem;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 #jobs-page .toggle-parent {
@@ -15193,25 +15194,35 @@ small,
 }
 
 .return-rate {
-  min-height: 38px;
+  position: relative;
+  z-index: 1;
+  min-height: 2.5rem;
 }
 .return-rate .custom-range {
-  z-index: 1;
+  display: block;
+  text-align: right;
 }
 .return-rate .custom-tooltip {
   z-index: 1;
 }
-.return-rate .custom-range:before {
+.return-rate .historic-return-rate {
+  display: block;
+  text-align: right;
+}
+.return-rate .historic-return-rate::after {
   position: absolute;
+  top: 1.625rem;
+  left: calc((100% - 30px) * 0.85);
+  z-index: -1;
   content: "";
   width: 1px;
-  left: calc((100% - 30px) * 0.85);
-  bottom: 0;
-  height: 14px;
-  background: #868e96;
-  z-index: -1;
-  -webkit-transform: translate(0, -4px);
-  transform: translate(0, -4px);
+  height: 0.875rem;
+  background: rgba(48, 48, 48, 0.64);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .counter-block {

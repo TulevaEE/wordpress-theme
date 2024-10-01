@@ -1,22 +1,33 @@
 .return-rate {
+    
+    position: relative; // needs to be there for the historic return rate pointer
+    z-index: 1;         // needs to be there for the historic return rate pointer
+    min-height: $custom-range-thumb-height;
+
     .custom-range {
-        z-index: 1;
+        display: block;
+        text-align: right;
     }
-    min-height: 38px;
 
     .custom-tooltip {
         z-index: 1;
     }
 
-    .custom-range:before {
+    .historic-return-rate {
+        display: block;
+        text-align: right;
+    }
+
+    .historic-return-rate::after {
         position: absolute;
+        top: calc(($custom-range-thumb-height - $custom-range-track-height) / 2 + $custom-range-track-height);
+        left: calc((100% - 30px) * 0.85);
+        z-index: -1; // puts it behind the slider
         content: '';
         width: 1px;
-        left: calc((100% - 30px) * 0.85);
-        bottom: 0;
-        height: 14px;
-        background: $text-muted;
-        z-index: -1;
-        transform: translate(0, -4px);
+        height: calc(($custom-range-thumb-height - $custom-range-track-height) / 2);        
+        background: $text-secondary;
+        user-select: none;
+        pointer-events: none;
     }
 }
