@@ -351,7 +351,7 @@ template {
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #dc3545;
+  --red: #FF4800;
   --orange: #FF4800;
   --yellow: #FCE228;
   --green: #51c26c;
@@ -11997,6 +11997,18 @@ hr {
   border-radius: 2rem;
 }
 
+.border-dark-1 {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.border-dark-2 {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.border-dark-3 {
+  border-color: rgba(0, 0, 0, 0.16);
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5em;
@@ -12162,6 +12174,10 @@ small,
 
 .text-green {
   color: #00ac00 !important;
+}
+
+.text-green-muted {
+  color: #51C26C !important;
 }
 
 .text-blue {

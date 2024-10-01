@@ -310,4 +310,16 @@ hr {
 .br-5 {
   border-radius: 2rem;
 }
+
+.border-dark-1 {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.border-dark-2 {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.border-dark-3 {
+  border-color: rgba(0, 0, 0, 0.16);
+}
 /*# sourceMappingURL=editor.css.map */

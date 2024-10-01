@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="form-group row mb-0">
-                <label for="returnRate" class="col-sm-6 col-form-label pr-0 vertical-align">
+                <label for="returnRate" class="col-sm-6 col-form-label py-2 pr-0">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6 return-rate">
@@ -45,6 +45,6 @@
                 </div>
             </div>
         </div>
-        <p class="m-0 px-3 pt-3 pb-2 small text-secondary text-center">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-success">tulumaksuvabad</strong>. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
+        <p class="m-0 mt-2 p-3 small text-secondary text-center">Kalkulaator eeldab, et hakkad saama väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>, sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-green-muted fw-medium">tulumaksuvabad</strong>. Aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
     </div>
 </div>
