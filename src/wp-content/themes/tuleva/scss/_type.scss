@@ -94,7 +94,7 @@ h3, h4, h5, h6,
 }
 .text-medium, /* legacy class */
 .fw-medium {
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-medium !important;
 }
 .text-bold, /* legacy class */
 .fw-bold {
