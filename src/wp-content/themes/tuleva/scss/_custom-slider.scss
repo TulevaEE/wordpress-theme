@@ -1,16 +1,29 @@
+.custom-tooltip {
+    position: absolute;
+    top: 0;
+    left: calc(50% - $custom-range-thumb-width / 2);
+    z-index: 2; // container has z-index: 1
+    width: $custom-range-thumb-width;
+    transform: translate(0, 0);
+    font-size: 1rem;
+    font-weight: $font-weight-medium;
+    font-variant-numeric: proportional-nums;
+    color: white;
+    line-height: $custom-range-thumb-height;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+}
+
 .return-rate {
     
-    position: relative; // needs to be there for the historic return rate pointer
-    z-index: 1;         // needs to be there for the historic return rate pointer
+    position: relative; // needs to be there for .historic-return-rate
+    z-index: 1;         // needs to be there for .historic-return-rate
     min-height: $custom-range-thumb-height;
 
     .custom-range {
         display: block;
         text-align: right;
-    }
-
-    .custom-tooltip {
-        z-index: 1;
     }
 
     .historic-return-rate {

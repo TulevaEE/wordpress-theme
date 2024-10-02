@@ -15129,26 +15129,6 @@ small,
   font-weight: 700;
 }
 
-.custom-tooltip {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 1.25rem);
-  letter-spacing: -1px;
-  font-size: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
-  color: white;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  width: 2.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  z-index: 2;
-}
-
 #jobs-page .toggle-parent {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #edf7fe), to(#edf7fe));
   background: linear-gradient(transparent, transparent 50%, #edf7fe 50%, #edf7fe);
@@ -15209,6 +15189,27 @@ small,
   opacity: 1;
 }
 
+.custom-tooltip {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1.25rem);
+  z-index: 2;
+  width: 2.5rem;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  font-size: 1rem;
+  font-weight: 500;
+  font-variant-numeric: proportional-nums;
+  color: white;
+  line-height: 2.5rem;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 .return-rate {
   position: relative;
   z-index: 1;
@@ -15217,9 +15218,6 @@ small,
 .return-rate .custom-range {
   display: block;
   text-align: right;
-}
-.return-rate .custom-tooltip {
-  z-index: 1;
 }
 .return-rate .historic-return-rate {
   display: block;
