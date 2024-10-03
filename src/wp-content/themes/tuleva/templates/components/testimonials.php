@@ -8,7 +8,8 @@
             <div class="carousel-inner">
                 <?php if (have_rows('testimonials')) $i = 0; {
                     while (have_rows('testimonials')) { $i++; the_row(); ?>
-                        <div class="carousel-item<?php echo $i === 1 ? ' active' : ''; ?>">
+                        <!-- min-height hack so that slides with different heights wouldn’t push content below the carousel (such as FAQ) upwards/downwards -->
+                        <div class="carousel-item<?php echo $i === 1 ? ' active' : ''; ?>" style="min-height: 374px;">
                             <div class="col-md-10 col-lg-8 bg-white m-auto p-5 shadow-sm quote">
                                 <div class="d-flex flex-column">
                                     <p class="blockquote text-left mb-5"><?php echo get_sub_field('text'); ?></p>
