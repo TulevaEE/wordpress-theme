@@ -14509,6 +14509,9 @@ small,
   min-height: 74px;
 }
 
+.navbar {
+  z-index: 0;
+}
 .navbar .bg-light {
   background-color: white !important;
 }
