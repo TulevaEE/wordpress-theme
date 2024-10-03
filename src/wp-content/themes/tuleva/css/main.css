@@ -14470,6 +14470,22 @@ small,
   box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
 }
 
+.bg-gray-1 {
+  background-color: #fafbfc;
+}
+
+.bg-gray-2 {
+  background-color: #f5f7f9;
+}
+
+.bg-blue-1 {
+  background-color: #f3fafe;
+}
+
+.bg-blue-2 {
+  background-color: #eef7fd;
+}
+
 @media (min-width: 768px) {
   .sticky-header-visible .header--sticky {
     display: block;

@@ -186,3 +186,24 @@
 .shadow-md {
     box-shadow: $shadow-md;
 }
+
+$gray-bg-1: #fafbfc;
+$gray-bg-2: #f5f7f9;
+$gray-border-1: #ebeef3;
+$gray-border-2: #e0e6ec;
+$gray-border-3: #d6dee6;
+
+$blue-bg-1: #f3fafe;
+$blue-bg-2: #eef7fd;
+$blue-border-1: #ddeefa;
+$blue-border-2: #d3e6f4;
+$blue-border-3: #cadeee;
+
+
+// Backgrounds
+
+.bg-gray-1 { background-color: $gray-bg-1; }
+.bg-gray-2 { background-color: $gray-bg-2; }
+
+.bg-blue-1 { background-color: $blue-bg-1; }
+.bg-blue-2 { background-color: $blue-bg-2; }
