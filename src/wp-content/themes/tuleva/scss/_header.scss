@@ -28,7 +28,7 @@
 
 .navbar {
 
-    z-index: 0; // fix dropdowns appearing behind page content in Safari 18.0
+    z-index: 1; // fix dropdowns appearing behind page content in Safari 18.0
 
     .bg-light {
         background-color: white !important;

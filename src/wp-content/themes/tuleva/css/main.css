@@ -14510,7 +14510,7 @@ small,
 }
 
 .navbar {
-  z-index: 0;
+  z-index: 1;
 }
 .navbar .bg-light {
   background-color: white !important;
