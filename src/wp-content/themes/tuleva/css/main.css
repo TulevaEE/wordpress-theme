@@ -1,4 +1,38 @@
 @charset "UTF-8";
+/*
+$white: #fff;
+$navy-blue: #002F63;
+$blue: #0081EE;
+$bright-blue: #00AEEA;
+$blue-light: $bright-blue;
+$yellow: #FCE228;
+$green: #51C26C;
+$red: #FF4800;
+$orange: $red;
+
+$text-primary: #293036;
+$text-secondary: #6D7276;
+$text-tertiary: #909396;
+$text-muted: $text-secondary;
+$text-hint: $text-tertiary;
+$text-green: #00AC00;
+$text-red: $red;
+
+$gray-bg-1: #FAFBFC;
+$gray-bg-2: #F5F7F9;
+$gray-border-1: #EBEEF3;
+$gray-border-2: #E0E6EC;
+$gray-border-3: #D6DEE6;
+
+$blue-bg-1: #F3FAFE;
+$blue-bg-2: #EEF7FD;
+$blue-border-1: #DDEEFA;
+$blue-border-2: #D3E6F4;
+$blue-border-3: #CADEEE;
+
+$blue-washed: $blue-bg-2;
+$gray-tint: $gray-bg-2;
+*/
 /*!
  * Bootstrap Reboot v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -15024,7 +15058,8 @@ small,
   border-color: #ee7023;
 }
 
-.swed:hover, .swed:active {
+.swed:hover,
+.swed:active {
   background-color: #de6924;
   border-color: #de6924;
   color: white;
@@ -15036,7 +15071,8 @@ small,
   color: white;
 }
 
-.seb:hover, .seb:active {
+.seb:hover,
+.seb:active {
   background-color: #47b102;
   border-color: #47b102;
   color: white;
@@ -15048,7 +15084,8 @@ small,
   color: white;
 }
 
-.lhv:hover, .lhv:active {
+.lhv:hover,
+.lhv:active {
   background-color: #4a4c4e;
   border-color: #4a4c4e;
   color: white;
