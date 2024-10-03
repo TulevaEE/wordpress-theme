@@ -129,22 +129,31 @@ small,
   padding: 0 0.1em;
 }
 
-// Colors
-.text-muted {
-  color: $text-secondary;
+// Text colors
+.text-primary {
+  color: $text-primary !important;
 }
-.text-navy,
-.text-navy p {
-  color: $navy-blue !important;
+.text-muted,
+.text-secondary {
+  color: $text-secondary !important;
+}
+.text-tertiary {
+  color: $text-tertiary !important;
+}
+.text-navy {
+  color: $text-navy !important;
+}
+.text-red {
+  color: $text-red !important;
 }
 .text-green {
-    color: #00ac00 !important;
+    color: $text-green !important;
 }
 .text-green-muted {
-  color: #51C26C !important;
+  color: $text-green-muted !important;
 }
 .text-blue {
-  color: $blue;
+  color: $text-blue !important;
 }
 
 // Font family

@@ -111,8 +111,7 @@
 
     .content {
         padding-top: 0;
-        border-bottom: 4px solid $border-gray;
-        margin-bottom: 64px;
+        margin-bottom: 5rem;
 
         p {
             font-size: 1.2rem;
@@ -180,7 +179,7 @@
 }
 
 .image-border {
-    border: 1px solid $border-gray;
+    border: 1px solid $gray-border-2;
 }
 
 .image-circle {

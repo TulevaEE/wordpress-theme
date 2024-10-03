@@ -149,10 +149,6 @@
     }
 }
 
-.bg-blueish-gray {
-    background: $blueish-gray !important;
-}
-
 .bg-blue-washed {
     background: $blue-washed !important;
 }
@@ -161,8 +157,9 @@
     background: rgba($green, 0.16) !important;
 }
 
-.bg-gray-tint {
-    background-color: $gray-tint !important;
+.bg-gray-tint,
+.bg-blueish-gray {
+    background-color: $gray-bg-2 !important;
 }
 
 .bg-alt {
