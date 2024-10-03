@@ -685,10 +685,10 @@ $(document).ready(function ($) {
 
         if (currentText === openText) {
             $(this).closest('.qa-block').find('.qa__question-wrapper').removeClass('qa__question-wrapper--collapsed');
-            $(this).text(closeText);
+            $(this).toggleClass('more').text(closeText);
         } else {
             $(this).closest('.qa-block').find('.qa__question-wrapper--collapsable').addClass('qa__question-wrapper--collapsed');
-            $(this).text(openText);
+            $(this).toggleClass('more').text(openText);
         }
     });
 

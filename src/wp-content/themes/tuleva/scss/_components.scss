@@ -1493,12 +1493,6 @@
     .qa__question-wrapper {
         border: solid $gray-border-2;
         border-width: 1px 0;
-        transition: border-color 0.3s ease-out;
-
-        &:not(:has(.collapsed)) {
-            position: relative;
-            border-color: $navy-blue;
-        }
 
         + .qa__question-wrapper {
             margin-top: -1px;
@@ -1509,10 +1503,27 @@
     }
 
     &__expand {
-        margin: 24px 0;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 1.75rem;
+        padding: .25rem;
+        font-size: $font-size-faq;
+        font-weight: $font-weight-normal;
+        white-space: nowrap;
+
+        &.more::after,
+        &:not(.more)::after {
+            display: inline-block;
+            margin-left: .25em;
+            font-family: $font-family-system;
+            text-decoration: none;;
+        }
+
+        &.more::after {
+            content: "↑";
+        }
+        &:not(.more)::after {
+            content: "↓";
+        }
     }
 }
 
@@ -1520,20 +1531,24 @@
     &__question {
         position: relative;
         display: block;
-        padding: 2rem 30px 2rem 0;
+        padding: 2rem 50px 2rem 0;
         color: $navy-blue;
-        font-size: $font-size-base;
+        font-size: $font-size-faq;
         font-weight: $font-weight-medium;
         text-align: left;
         text-decoration: none !important;
         white-space: normal;
         user-select: none;
 
+        &:hover {
+            color: $text-blue;
+        }
+
         &::after {
             content: "";
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 4px;
             width: 14px;
             height: 14px;
             margin-top: -7px;
