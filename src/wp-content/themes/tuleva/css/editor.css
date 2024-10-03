@@ -207,7 +207,7 @@ input[type=number] {
 }
 
 hr {
-  border-color: #D6DEE6;
+  border-color: #d6dee6;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -238,12 +238,12 @@ hr {
 }
 
 .alert {
-  border: solid 2px #D6DEE6;
+  border: solid 2px #d6dee6;
   border-radius: 8px;
 }
 .alert-success {
   background-color: rgba(11, 250, 67, 0.08);
-  border-color: #51C26C;
+  border-color: #51c26c;
 }
 
 .btn-xl {
@@ -261,8 +261,8 @@ hr {
 
 .btn-orange {
   color: white;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #ff4800;
+  border-color: #ff4800;
 }
 .btn-orange:hover, .btn-orange:focus, .btn-orange:active {
   color: white;
