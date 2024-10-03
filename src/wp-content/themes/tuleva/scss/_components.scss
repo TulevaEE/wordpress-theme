@@ -1557,9 +1557,18 @@
             transition: transform 0.3s ease-out;
         }
 
+        + div[id^="answer"] > * {
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+
         &.collapsed {
             &::after {
                 transform: rotate(0deg);
+            }
+
+            + div[id^="answer"] > * {
+                opacity: 0;
             }
         }
     }

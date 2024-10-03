@@ -14035,9 +14035,17 @@ small,
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
+.qa__question + div[id^=answer] > * {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
 .qa__question.collapsed::after {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
+}
+.qa__question.collapsed + div[id^=answer] > * {
+  opacity: 0;
 }
 
 .principle__item {
