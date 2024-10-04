@@ -15004,6 +15004,13 @@ small,
 .single-post .content ol li {
   margin-bottom: 1rem;
 }
+.single-post .content ul ul,
+.single-post .content ul ol,
+.single-post .content ol ul,
+.single-post .content ol ol {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 .single-post .content img,
 .single-post .content figure {
   max-width: 100%;
