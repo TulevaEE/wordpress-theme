@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6,
   text-wrap: pretty;
 
   [style] {
-    // ignore all copy-pasted or custom inline styles
+    // ignore all copy-pasted formatting and custom inline styles
     font-weight: inherit !important; 
     font-size: inherit !important;
   }
