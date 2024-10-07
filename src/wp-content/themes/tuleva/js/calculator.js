@@ -21,13 +21,15 @@ var format = function (num) {
 };
 
 var appendFunds = function () {
-    $.each(calculatorFunds, function (key, value) {
-        $("#comparisonFund").append(
-            $("<option></option>")
-                .attr("value", value["fee"])
-                .text(value["name"])
-        );
-    });
+    if (typeof calculatorFunds !== 'undefined' && calculatorFunds !== null) {
+        $.each(calculatorFunds, function (key, value) {
+            $("#comparisonFund").append(
+                $("<option></option>")
+                    .attr("value", value["fee"])
+                    .text(value["name"])
+            );
+        });
+    }
 };
 
 var getFee = function () {
@@ -53,20 +55,20 @@ var calculateSaving = function () {
     var maximumContributionYears = new Date().getFullYear() - 2003;
     var presentValueOfPensionFund = Math.ceil(
         (((grossWage * 0.06 * 12) /
-            Math.pow(
-                pastSalaryGrowth,
-                Math.min(
-                    Math.max(0, Math.min(age, 65)) - 23,
-                    maximumContributionYears
-                )
-            )) *
+                Math.pow(
+                    pastSalaryGrowth,
+                    Math.min(
+                        Math.max(0, Math.min(age, 65)) - 23,
+                        maximumContributionYears
+                    )
+                )) *
             (Math.pow(
-                pastAverageReturn,
-                Math.min(
-                    Math.max(0, Math.min(age, 65)) - 23,
-                    maximumContributionYears
-                )
-            ) -
+                    pastAverageReturn,
+                    Math.min(
+                        Math.max(0, Math.min(age, 65)) - 23,
+                        maximumContributionYears
+                    )
+                ) -
                 Math.pow(
                     pastSalaryGrowth,
                     Math.min(
@@ -74,23 +76,23 @@ var calculateSaving = function () {
                         maximumContributionYears
                     )
                 ))) /
-            (pastAverageReturn - pastSalaryGrowth)
+        (pastAverageReturn - pastSalaryGrowth)
     );
     var futureValueOfPensionFund = Math.ceil(
         (grossWage *
             0.06 *
             12 *
             (Math.pow(
-                marketReturn - comparisonFund,
-                65 - Math.max(0, Math.min(age, 65))
-            ) -
-                Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65))))) /
-            (marketReturn - comparisonFund - salaryGrowth) +
-            presentValueOfPensionFund *
-                Math.pow(
                     marketReturn - comparisonFund,
                     65 - Math.max(0, Math.min(age, 65))
-                )
+                ) -
+                Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65))))) /
+        (marketReturn - comparisonFund - salaryGrowth) +
+        presentValueOfPensionFund *
+        Math.pow(
+            marketReturn - comparisonFund,
+            65 - Math.max(0, Math.min(age, 65))
+        )
     );
     var tulevaFee = 0.0035;
     var totalSavingWithTuleva = Math.ceil(
@@ -98,17 +100,17 @@ var calculateSaving = function () {
             0.06 *
             12 *
             (Math.pow(
-                marketReturn - tulevaFee,
-                65 - Math.max(0, Math.min(age, 65))
-            ) -
-                Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65))))) /
-            (marketReturn - tulevaFee - salaryGrowth) +
-            presentValueOfPensionFund *
-                Math.pow(
                     marketReturn - tulevaFee,
                     65 - Math.max(0, Math.min(age, 65))
                 ) -
-            futureValueOfPensionFund
+                Math.pow(salaryGrowth, 65 - Math.max(0, Math.min(age, 65))))) /
+        (marketReturn - tulevaFee - salaryGrowth) +
+        presentValueOfPensionFund *
+        Math.pow(
+            marketReturn - tulevaFee,
+            65 - Math.max(0, Math.min(age, 65))
+        ) -
+        futureValueOfPensionFund
     );
     var futureValueWithTuleva =
         futureValueOfPensionFund + totalSavingWithTuleva;

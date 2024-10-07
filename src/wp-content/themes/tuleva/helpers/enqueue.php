@@ -122,7 +122,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '20240628',
+                'ver' => '20241007',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
