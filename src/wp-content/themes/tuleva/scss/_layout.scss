@@ -1,8 +1,8 @@
-$row-spacing: 100px;
-$row-spacing-half: 60px;
+$row-spacing: 5rem;
+$row-spacing-half: 5rem;
 $row-spacing-mobile: $row-spacing / 2;
 $row-spacing-half-mobile: $row-spacing-half / 2;
-$row-spacing-quarter: 40px;
+$row-spacing-quarter: 3rem;
 
 .row-spacing {
     margin-top: $row-spacing;

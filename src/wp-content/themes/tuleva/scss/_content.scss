@@ -1,52 +1,46 @@
 .page-title {
-    margin: 60px 0 50px;
+    margin: 0 0 5rem;
     text-align: center;
+
+    &:not(:first-child) {
+        margin-top: 5rem;
+    }
 }
 
-.content {
-    padding-top: 30px;
-
+.content,
+#rich-text-block-component {
     h1,
     h2,
-    h3 {
-        color: $navy-blue;
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $text-navy;
         font-family: $font-family-serif;
     }
 
+    /*
     h1 {
-        font-size: $h3-font-size;
+        font-size: $h2-font-size;
+        line-height: $h2-line-height;
     }
+    */
     h2 {
-        font-size: $h4-font-size;
+        font-size: $h3-font-size;
+        line-height: $h3-line-height;
     }
     h3 {
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
+    }
+    h4, h5, h6 {
         font-size: $h5-font-size;
-    }
-
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
-        line-height: 1.25;
-        margin-bottom: 18px;
-    }
-
-    ul, ol, dl {
-        margin: 0 0 2em;
+        line-height: $h5-line-height;
     }
 }
 
 .single-post {
     .page-title {
-        line-height: 1.25;
         margin: 2rem 0;
     }
 
@@ -60,7 +54,7 @@
     .post-title {
         margin-top: 3rem;
         @include media-breakpoint-up(md) {
-            margin-top: 6rem;
+            margin-top: 5rem;
         }
     }
 
@@ -125,16 +119,6 @@
         ul,
         ol {
             font-size: 1.2rem;
-
-            li {
-                margin-bottom: 1rem;
-            }
-
-            ul,
-            ol {
-                margin-top: 1rem;
-                margin-bottom: 0;
-            }
         }
 
         img,

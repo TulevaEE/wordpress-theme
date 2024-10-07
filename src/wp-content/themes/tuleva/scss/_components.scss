@@ -11,17 +11,15 @@
         }
     }
     &__image {
+        margin-bottom: 1rem;
         border-radius: 50%;
         @include size(160px);
-        margin-bottom: map-get($spacers, 3)
     }
     &__title {
-        @include media-breakpoint-up(md) {
-            margin-top: 1rem;
-        }
+        margin-bottom: .5rem;
     }
     &__row {
-        margin-bottom: 10px;
+        margin-bottom: .25rem;
     }
 }
 
@@ -732,6 +730,16 @@
         + .widget:has(> .cta-widget--secondary) {
             margin-top: 1.5rem;
         }
+    }
+
+    h2, h3 {
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
+    }
+
+    ul,
+    li {
+        margin-bottom: 0;
     }
 }
 
@@ -1531,7 +1539,7 @@
     &__question {
         position: relative;
         display: block;
-        padding: 2rem 50px 2rem 0;
+        padding: 1.5rem 50px 1.5rem 0;
         color: $navy-blue;
         font-size: $font-size-faq;
         font-weight: $font-weight-medium;
@@ -1539,10 +1547,7 @@
         text-decoration: none !important;
         white-space: normal;
         user-select: none;
-
-        &:hover {
-            color: $text-blue;
-        }
+        transition: color .1s ease;
 
         &::after {
             content: "";
@@ -1562,7 +1567,15 @@
             transition: opacity 0.3s ease-out;
         }
 
+        &:not(.collapsed) {
+            color: $navy-blue;
+        }
+
         &.collapsed {
+            &:hover {
+                color: $text-blue;
+            }
+
             &::after {
                 transform: rotate(0deg);
             }
