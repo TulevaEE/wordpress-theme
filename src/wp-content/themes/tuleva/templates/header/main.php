@@ -11,8 +11,8 @@
             <?php get_template_part('templates/header/menu'); ?>
             <div class="d-flex flex-column flex-md-row align-items-md-center ml-auto">
                 <?php language_picker(); ?>
-                <?php _e('<a href="https://pension.tuleva.ee/?language=en" class="btn btn-outline-primary ml-md-2 mt-4 mt-md-0">Log in</a>', TEXT_DOMAIN); ?>
-                <?php _e('<a href="/en/transfer-pension-tuleva/" class="btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0">Choose Tuleva 2nd pillar</a>', TEXT_DOMAIN); ?>
+                <a href="<?php _e('https://pension.tuleva.ee/?language=en', TEXT_DOMAIN); ?>" class="btn btn-outline-primary ml-md-2 mt-4 mt-md-0"><?php _e('Log in', TEXT_DOMAIN); ?></a>
+                <a href="<?php _e('/en/transfer-pension-tuleva/', TEXT_DOMAIN); ?>" class="btn btn-primary btn-block d-block d-md-none d-lg-block ml-md-2 mt-4 mt-md-0"><?php _e('Choose Tuleva 2nd pillar', TEXT_DOMAIN); ?></a>
             </div>
         </div>
     </nav>

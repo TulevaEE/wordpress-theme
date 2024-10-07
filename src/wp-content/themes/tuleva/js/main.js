@@ -77,24 +77,6 @@ $(document).ready(function ($) {
                 }
             });
         },
-        showStickyHeader = function () {
-            $('body').addClass('sticky-header-visible');
-        },
-        hideStickyHeader = function () {
-            $('body').removeClass('sticky-header-visible');
-        },
-        initStickyHeader = function () {
-            $(window).scroll(function () {
-                var scrollPosition = $(window).scrollTop(),
-                    headerHeight = $('.header').outerHeight();
-
-                if (scrollPosition > headerHeight) {
-                    showStickyHeader();
-                } else {
-                    hideStickyHeader();
-                }
-            });
-        },
         initModal = function (id, target) {
             $(id).animatedModal({
                 modalTarget: target,
@@ -566,7 +548,6 @@ $(document).ready(function ($) {
 
 
     var setupFunctions = [
-        function () { initStickyHeader(); },
         function () { initNewsletterBeaconToggle(); },
         function () { initHelpBeaconToggle(); },
         function () { initPostSidebarHandler(); },
