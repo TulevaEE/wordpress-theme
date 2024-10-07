@@ -97,7 +97,7 @@ $body-color-alt: $blue-washed !default;
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;
 $card-border-width: 0;
-$dropdown-box-shadow: 0 .5rem 2rem rgba(0,0,0,.16);
+$dropdown-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px -0 rgba(0, 0, 0, 0.08);
 
 // Fonts
 $font-family-sans-serif:  Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -155,7 +155,7 @@ $padding-xl-vertical: 16px !default;
 $widget-primary-bg-color: $blue-washed !default;
 
 // Navbar
-$navbar-height: 74px !default;
+$navbar-height: 78px !default;
 $navbar-padding-vertical: 25px !default;
 $navbar-default-bg: transparent !default;
 $navbar-default-border: transparent !default;

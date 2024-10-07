@@ -21,12 +21,13 @@
         transition: top 0.1s ease;
 
         .navbar {
-            min-height: 74px;
+            min-height: 78px;
         }
     }
 }
 
 .navbar {
+    padding: 1rem 1.25rem;
 
     z-index: 1; // fix dropdowns appearing behind page content in Safari 18.0
 
@@ -38,7 +39,7 @@
         color: $navbar-default-link-color;
         font-weight: $font-weight-medium;
         border-bottom: 1px solid rgba(0,0,0,.16);
-        padding: 1rem 0.25rem;
+        padding: 0.4375rem 0.75rem !important;
         @include media-breakpoint-up (md) {
             border-bottom: 0;
             padding: 0.5rem 1rem;
@@ -126,8 +127,9 @@
     }
 
     .nav-item {
+        position: relative;
         margin: 0;
-        padding: 0 0.2rem;
+        padding: 0;
     }
 
     .navbar-nav > .active > a,
@@ -135,8 +137,16 @@
 
         @include media-breakpoint-up(md) {
             color: $navbar-default-link-color;
-            font-weight: bold;
-            box-shadow: 0 2px 0 $brand-primary;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                width: calc(100% - 24px);
+                height: 2px;
+                border-radius: 2px;
+                background: $blue;
+            }
 
             &:hover {
                 color: $blue;
@@ -144,10 +154,14 @@
         }
     }
 
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+    }
+
     .brand-logo {
-        max-height: 3rem;
-        max-width:110px;
         width: 100%;
+        height: 46px;
     }
 
     // Hide dropdown caret on mobile
@@ -159,30 +173,35 @@
     }
 
     .dropdown-menu {
-        left: 0;
+        left: -4px; // align nav level1 and level2 texts
         top: 0;
         border: 0;
         background-color: $blue-washed;
         padding: 0 0 0 1rem;
         margin-top: 0;
         border-radius: 0;
+        display: none;
+        visibility: hidden;
         @include media-breakpoint-up(md) {
-            background-color: $white;
-            top: 2.5rem;
-            box-shadow: $shadow-sm;
+            display: block;
+            top: 2.375rem; // first level item height
+            transform: translateY(4px);
             padding: 0.5rem 0;
-            border-radius: 0.25rem;
+            border-radius: 0.5rem;
+            background-color: $white;
+            box-shadow: $dropdown-box-shadow;
+            opacity: 0;
+            transition: visibility 0.15s ease-out, opacity 0.15s ease-out, transform 0.15s ease-out;
         }
 
         .nav-item {
+            margin: 0;
             padding: 0;
         }
 
         .dropdown-item {
             padding: 1rem 0;
-            font-size: $font-size-sm;
             color: $navy-blue;
-            background-color: $blue-washed;
             border-bottom: 1px solid rgba(0,0,0,.16);
             &:last-of-type {
                 border-bottom: 0;
@@ -194,7 +213,7 @@
                 background-color: $white;
 
                 &:hover {
-                    background-color: $blue-washed;
+                    background-color: $blue-bg-2;
                 }
             }
         }
@@ -214,8 +233,10 @@
     }
 
     @include media-breakpoint-up(md) {
-        .dropdown:hover > .dropdown-menu {
-            display: block;
+        .nav-item:hover > .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
