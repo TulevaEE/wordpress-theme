@@ -32,21 +32,20 @@ function language_picker($isMobile = false)
     $languages = icl_get_languages('skip_missing=0&orderby=code');
 
     if (!empty($languages)) { ?>
-        <ul class="navbar-nav mr-0 pr-0">
-            <?php
-            foreach ($languages as $l) {
-                if ($l['code'] === 'ru') {
-                    continue;
-                }
-
-                $link = '<li class="nav-item"><a href="' . $l['url'] . '" class="nav-lang nav-link d-block text-uppercase">' . icl_disp_language($l['code']) . '</a></li>';
-
-                if (!$l['active']) {
-                    echo $link;
-                }
+        <?php
+        foreach ($languages as $l) {
+            if ($l['code'] === 'ru') {
+                continue;
             }
-            ?>
-        </ul>
+
+            // two language pickers: desktop and mobile have different styles
+            $link = '<a href="' . $l['url'] . '" class="nav-langpicker btn btn-link fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a><a href="' . $l['url'] . '" class="nav-langpicker btn btn-outline-primary btn-block fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a>';
+
+            if (!$l['active']) {
+                echo $link;
+            }
+        }
+        ?>
     <?php
     }
 
