@@ -14671,6 +14671,8 @@ small,
   background: transparent;
   outline: 0;
   cursor: pointer;
+  -webkit-transition: background 0.05s ease-out;
+  transition: background 0.05s ease-out;
 }
 .navbar .navbar-toggler:hover {
   background: #f5f7f9;

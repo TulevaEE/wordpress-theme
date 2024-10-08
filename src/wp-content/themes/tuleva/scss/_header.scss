@@ -29,6 +29,7 @@
         background: transparent;
         outline: 0;
         cursor: pointer;
+        transition: background 0.05s ease-out;
 
         &:hover {
             background: $gray-bg-2;
