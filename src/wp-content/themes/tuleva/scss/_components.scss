@@ -1,3 +1,8 @@
+#wpadminbar {
+    // hide overflowing items in WP toolbar
+    overflow: hidden;
+}
+
 .contacts-block {
     justify-content: center;
     &__item {
