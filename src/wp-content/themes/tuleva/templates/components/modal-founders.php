@@ -8,7 +8,7 @@
             <div class="modal-full-content">
                 <div class="row">
                     <div class="col">
-                        <h1 class="text-center mb-5"><?php _e('Founding members', TEXT_DOMAIN); ?></h1>
+                        <h1 class="text-center mb-6"><?php _e('Founding members', TEXT_DOMAIN); ?></h1>
                     </div>
                 </div>
                 <div class="row">
