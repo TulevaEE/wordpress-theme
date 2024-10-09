@@ -2,7 +2,7 @@
 $bg_class = get_component_background_color_class();
 $text = get_sub_field('text');
 $container_class = get_sub_field('is_full_width') ? 'container-fluid' : 'container';
-$column_classes = get_sub_field('is_full_width') ? 'col-md-12' : 'col-md-8 offset-md-2';
+$column_classes = get_sub_field('is_full_width') ? 'col' : 'mx-auto col-lg-9 col-xl-8';
 $padding = get_sub_field('padding');
 
 if ($padding === 'none') {

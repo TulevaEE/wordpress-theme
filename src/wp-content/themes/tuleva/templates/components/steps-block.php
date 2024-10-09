@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10">
+            <div class="mx-auto col-lg-9 col-xl-8">
                 <?php if (have_rows('list')) { $i = 0; ?>
                     <?php while (have_rows('list')) { the_row(); $i++; ?>
                        <div class="inline-register__item">

@@ -1,11 +1,11 @@
 <section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-mutual">
     <div class="container">
         <div class="row py-6">
-            <div class="col-md-10 mx-auto text-center">
-                <h1 class="m-0"><?php the_sub_field('heading'); ?></h1>
+            <div class="mx-auto col-lg-11 col-xl-9 text-center">
+                <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
             </div>
             <?php if (get_sub_field('quote')) { ?>
-                <div class="col-md-8 mt-5 mx-auto text-center">
+                <div class="mx-auto col-lg-9 col-xl-8 text-center">
                     <p class="lead text-navy mb-3">"<?php the_sub_field('quote'); ?>"</p>
                     <?php if (get_sub_field('source')) { ?>
                         <p class="text-navy mb-5">

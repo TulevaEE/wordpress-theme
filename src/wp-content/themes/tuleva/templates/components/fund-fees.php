@@ -34,7 +34,7 @@
     </div>
     <!-- TODO
     <div class="row row-spacing">
-        <div class="offset-md-2 col-md-8">
+        <div class="mx-auto col-lg-9 col-xl-8">
             <h4><?php _e('You don’t believe us?', TEXT_DOMAIN) ?></h4>
             <p><?php _e('See what <a href="#" class="inline-link">Warren Buffett</a> thinks of this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a href="#" class="inline-link">article series</a>.', TEXT_DOMAIN) ?></p>
         </div>

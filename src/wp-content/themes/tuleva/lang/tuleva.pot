@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-07T15:06:50+00:00\n"
+"POT-Creation-Date: 2024-10-09T16:17:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -25,16 +25,16 @@ msgstr ""
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: helpers/extras.php:460
-#: helpers/extras.php:471
+#: helpers/extras.php:459
+#: helpers/extras.php:470
 msgid "days"
 msgstr ""
 
-#: helpers/extras.php:569
+#: helpers/extras.php:568
 msgid "Newer articles"
 msgstr ""
 
-#: helpers/extras.php:601
+#: helpers/extras.php:600
 msgid "Older articles"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgid "Search for:"
 msgstr ""
 
 #: templates/404.php:5
-msgid "There is no such page"
+msgid "This page doesn’t exist"
 msgstr ""
 
 #: templates/404.php:6

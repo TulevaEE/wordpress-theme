@@ -14,7 +14,7 @@
 <section class="py-4 py-md-6">
     <div class="container">
         <div class="row mb-5">
-            <div class="mx-md-auto col-md-8" id="accordion">
+            <div class="mx-auto col-lg-9 col-xl-8" id="accordion">
                 <div class="qa__question-wrapper">
                     <div id="headingOne" class="principle__item">
                         <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2024-09-26T11:16:47+00:00\n"
-"PO-Revision-Date: 2024-10-07 18:10+0300\n"
+"PO-Revision-Date: 2024-10-09 19:25+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -24,15 +24,15 @@ msgstr "Tuleva"
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:460 helpers/extras.php:471
+#: helpers/extras.php:459 helpers/extras.php:470
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:569
+#: helpers/extras.php:568
 msgid "Newer articles"
 msgstr "Uuemad artiklid"
 
-#: helpers/extras.php:601
+#: helpers/extras.php:600
 msgid "Older articles"
 msgstr "Vanemad artiklid"
 
@@ -116,10 +116,6 @@ msgstr ""
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
-
-#: templates/404.php:5
-msgid "There is no such page"
-msgstr "Pole olemas sellist lehekülge"
 
 #: templates/404.php:6
 msgid "Maybe something got mixed up when entering the address?"
@@ -1710,3 +1706,7 @@ msgstr "/kuidas-tuua-pension-tulevasse/"
 #: templates/header/main.php:15
 msgid "Choose Tuleva 2nd pillar"
 msgstr "Too II sammas Tulevasse"
+
+#: templates/404.php:5
+msgid "This page doesn’t exist"
+msgstr "Sellist lehekülge ei leitud"

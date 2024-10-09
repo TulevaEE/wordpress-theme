@@ -1,6 +1,6 @@
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('qa-block qa-block--collapsed container'); ?>">
     <div class="row">
-        <div class="mx-md-auto col-md-10 col-lg-8">
+        <div class="mx-auto col-lg-9 col-xl-8">
             <?php if (have_rows('accordion')) $i = 0; {
                 while (have_rows('accordion')) { $i++; the_row(); ?>
                     <div class="qa__question-wrapper" id="accordion-block-<?php echo $i; ?>">
@@ -16,7 +16,6 @@
                             <?php echo get_sub_field('text'); ?>
                         </div>
                     </div>
-                    <hr />
                 <?php  }
             } ?>
         </div>

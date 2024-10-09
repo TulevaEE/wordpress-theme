@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="row row-spacing">
-        <div class="offset-md-2 col-md-8 mid-headline">
+        <div class="mx-auto col-lg-9 col-xl-8 mid-headline">
             <p>
                 <?php _e('Tuleva is not a typical service provider. Tuleva is owned by the pension savers themselves who decided to skip banks’ middlemen and start pension funds where they personally would like to put their money.', TEXT_DOMAIN) ?>
             </p>

@@ -33,7 +33,6 @@
     </div>
     <?php $text = get_sub_field('text'); ?>
     <?php if ($text) { ?>
-        <hr class="mb-4">
         <?php echo $text; ?>
     <?php } ?>
 </div>

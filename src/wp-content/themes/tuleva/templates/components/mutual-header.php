@@ -1,10 +1,10 @@
 <section id="mutual-header" class="bg-hero-mutual">
     <div class="container">
         <div class="row py-6">
-            <div class="col-md-10 mx-auto text-center">
+            <div class="mx-auto col-lg-11 col-xl-9 text-center">
                 <h1 class="mb-5"><?php _e("Join us.", TEXT_DOMAIN); ?></h1>
             </div>
-            <div class="col-md-8 mx-auto text-center">
+            <div class="mx-auto col-lg-9 col-xl-8 text-center">
                 <p class="lead text-navy mb-3">" <?php _e("Tuleva is two-in-one — Estonia’s most exciting social company and a civil initiative that defends people's interests.", TEXT_DOMAIN); ?>" </p>
                 <p class="text-navy mb-5"><?php _e('<a href="#founder-stories" class="text-navy text-bold"><u>Taavet Hinrikus</u></a>, Tuleva and Transferwise co-founder', TEXT_DOMAIN); ?></p>
             </div>

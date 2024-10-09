@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 m-auto">
+    <div class="mx-auto col-lg-9 col-xl-8">
       <div class="mb-5">
           <?php echo get_sub_field('text'); ?>
       </div>
