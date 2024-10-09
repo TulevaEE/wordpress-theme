@@ -12299,10 +12299,6 @@ small,
   font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#wpadminbar {
-  overflow: hidden;
-}
-
 .contacts-block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
