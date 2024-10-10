@@ -71,9 +71,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 			if ( 0 === strcasecmp( $item->attr_title, 'divider' ) && 1 === $depth ) {
-				$output .= $indent . '<li role="presentation" class="dropdown-divider d-none d-md-block">';
+				$output .= $indent . '<li role="presentation" class="dropdown-divider d-none d-lg-block">';
 			} elseif ( 0 === strcasecmp( $item->title, 'divider' ) && 1 === $depth ) {
-				$output .= $indent . '<li role="presentation" class="dropdown-divider d-none d-md-block">';
+				$output .= $indent . '<li role="presentation" class="dropdown-divider d-none d-lg-block">';
 			} else {
 				$value = '';
 				$class_names = $value;

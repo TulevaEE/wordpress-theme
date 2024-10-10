@@ -1,7 +1,7 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 1101; // larger than beacon
+    z-index: 1102; // larger than Help Scout beacon and CookieYes button
     width: 100%;
     background: $white;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.04);
@@ -38,6 +38,13 @@
         outline: 0;
         cursor: pointer;
         transition: background 0.05s ease-out;
+
+        @include media-breakpoint-down(md) {
+            position: sticky;
+            z-index: 1;
+            top: 1rem;
+            right: 1.25rem;
+        }
 
         &:hover {
             background: $gray-bg-2;
@@ -171,6 +178,13 @@
     .navbar-brand {
         margin: 0;
         padding: 0;
+
+        @include media-breakpoint-down(md) {
+            position: sticky;
+            z-index: 1;
+            top: 1rem;
+            left: 1.25rem;
+        }
 
         .brand-logo {
             width: auto;

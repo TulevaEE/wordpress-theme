@@ -325,6 +325,10 @@
     display: none;
 }
 
+.cky-btn-revisit-wrapper {
+    z-index: 1100;
+}
+
 .beacon-toggle {
     position: fixed;
     right: 1rem;
@@ -347,7 +351,7 @@
     overflow: hidden;
     height: 3rem;
     transition: all .2s ease;
-    z-index: 1100;
+    z-index: 1101;
     &:hover,
     &:focus {
         color: #fff;
