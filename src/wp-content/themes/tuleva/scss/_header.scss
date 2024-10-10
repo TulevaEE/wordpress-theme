@@ -23,8 +23,24 @@
 }
 
 .navbar {
-    padding: 1rem 1.25rem;
+    padding: 0 1.25rem 0 0;
     z-index: 1; // fix dropdowns appearing behind page content in Safari 18.0
+
+    @include media-breakpoint-down(md) {
+        padding-right: 0;
+    }
+
+    .navbar-wrap {
+        padding: 1rem 1rem 1rem 1.25rem;
+        
+        @include media-breakpoint-down(md) {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background: linear-gradient(to bottom, #fff calc(100% - 0.75rem), rgba(255,255,255,0));
+        }
+    }
 
     .navbar-toggler {
         position: relative;
@@ -38,13 +54,6 @@
         outline: 0;
         cursor: pointer;
         transition: background 0.05s ease-out;
-
-        @include media-breakpoint-down(md) {
-            position: sticky;
-            z-index: 1;
-            top: 1rem;
-            right: 1.25rem;
-        }
 
         &:hover {
             background: $gray-bg-2;
@@ -148,7 +157,7 @@
         @include media-breakpoint-down(md) {
             font-size: $font-size-lg;
             line-height: $line-height-xs;
-            padding: 1rem !important;
+            padding: 1rem 1.25rem !important;
             border-bottom: 1px solid $gray-border-2;
         }
     }
@@ -178,13 +187,6 @@
     .navbar-brand {
         margin: 0;
         padding: 0;
-
-        @include media-breakpoint-down(md) {
-            position: sticky;
-            z-index: 1;
-            top: 1rem;
-            left: 1.25rem;
-        }
 
         .brand-logo {
             width: auto;
@@ -219,7 +221,7 @@
 
             .dropdown-item {
                 padding-left: 2rem !important;
-                padding-right: 2rem !important;
+                padding-right: 2.5rem !important;
             }
         }
 
@@ -280,7 +282,7 @@
     }
     @include media-breakpoint-down(md) {
         .navbar-nav {
-            margin-top: 1.5rem;
+            
         }
         .nav-langpicker.btn-outline-primary {
             display: block;
@@ -289,7 +291,7 @@
             display: none;
         }
         .nav-helpers {
-            margin-top: 1rem;
+            padding: 1.25rem;
 
             .btn-outline-primary {
                 flex: 0 0 calc(25% - 0.25rem);

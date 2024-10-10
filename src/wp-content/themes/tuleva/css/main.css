@@ -14681,8 +14681,27 @@ small,
 }
 
 .navbar {
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem 0 0;
   z-index: 1;
+}
+@media (max-width: 991px) {
+  .navbar {
+    padding-right: 0;
+  }
+}
+.navbar .navbar-wrap {
+  padding: 1rem 1rem 1rem 1.25rem;
+}
+@media (max-width: 991px) {
+  .navbar .navbar-wrap {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to bottom, #fff calc(100% - 0.75rem), rgba(255, 255, 255, 0));
+  }
 }
 .navbar .navbar-toggler {
   position: relative;
@@ -14696,15 +14715,6 @@ small,
   cursor: pointer;
   -webkit-transition: background 0.05s ease-out;
   transition: background 0.05s ease-out;
-}
-@media (max-width: 991px) {
-  .navbar .navbar-toggler {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 1;
-    top: 1rem;
-    right: 1.25rem;
-  }
 }
 .navbar .navbar-toggler:hover {
   background: #f5f7f9;
@@ -14802,7 +14812,7 @@ small,
   .navbar .nav-link {
     font-size: 1.25rem;
     line-height: 1.2;
-    padding: 1rem !important;
+    padding: 1rem 1.25rem !important;
     border-bottom: 1px solid #e0e6ec;
   }
 }
@@ -14829,15 +14839,6 @@ small,
 .navbar .navbar-brand {
   margin: 0;
   padding: 0;
-}
-@media (max-width: 991px) {
-  .navbar .navbar-brand {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 1;
-    top: 1rem;
-    left: 1.25rem;
-  }
 }
 .navbar .navbar-brand .brand-logo {
   width: auto;
@@ -14869,7 +14870,7 @@ small,
   }
   .navbar .dropdown-menu .dropdown-item {
     padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-right: 2.5rem !important;
   }
 }
 @media (min-width: 992px) {
@@ -14928,9 +14929,6 @@ small,
   }
 }
 @media (max-width: 991px) {
-  .navbar .navbar-nav {
-    margin-top: 1.5rem;
-  }
   .navbar .nav-langpicker.btn-outline-primary {
     display: block;
   }
@@ -14938,7 +14936,7 @@ small,
     display: none;
   }
   .navbar .nav-helpers {
-    margin-top: 1rem;
+    padding: 1.25rem;
   }
   .navbar .nav-helpers .btn-outline-primary {
     -webkit-box-flex: 0;

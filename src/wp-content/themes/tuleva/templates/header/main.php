@@ -1,12 +1,14 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="<?php bloginfo('url') ?>">
-            <img class="brand-logo" alt="Tuleva" src="<?php echo get_template_directory_uri() ?>/img/tuleva-logo.svg">
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-            aria-expanded="false" aria-label="<?php _e('Toggle navigation', TEXT_DOMAIN); ?>">
-            <span class="burger-icon"></span>
-        </button>
+        <div class="navbar-wrap d-flex justify-content-between">
+            <a class="navbar-brand" href="<?php bloginfo('url') ?>">
+                <img class="brand-logo" alt="Tuleva" src="<?php echo get_template_directory_uri() ?>/img/tuleva-logo.svg">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="<?php _e('Toggle navigation', TEXT_DOMAIN); ?>">
+                <span class="burger-icon"></span>
+            </button>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <?php get_template_part('templates/header/menu'); ?>
             <div class="nav-helpers d-flex flex-row ml-lg-auto">
