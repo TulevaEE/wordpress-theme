@@ -496,12 +496,19 @@ function countdown_timer_function($atts) {
 
 add_shortcode('countdown_timer', 'countdown_timer_function');
 
-function payout_calculator_function() {
+function payout_calculator_shortcode() {
     ob_start();
     get_template_part('templates/components/payout-calculator');
     return ob_get_clean();
 }
-add_shortcode('payout_calculator', 'payout_calculator_function');
+add_shortcode('payout_calculator', 'payout_calculator_shortcode');
+
+function third_pillar_calculator_shortcode() {
+    ob_start();
+    get_template_part('templates/components/third-pillar-calculator');
+    return ob_get_clean();
+}
+add_shortcode('third_pillar_calculator', 'third_pillar_calculator_shortcode');
 
 function term_link_domain_fix($term_link) {
     $site_url = get_site_url();
