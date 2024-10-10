@@ -201,6 +201,7 @@
 
         @include media-breakpoint-down(md) {
             border-bottom: 1px solid $gray-border-2;
+            border-radius: 0;
 
             .dropdown-item {
                 padding-left: 2rem !important;

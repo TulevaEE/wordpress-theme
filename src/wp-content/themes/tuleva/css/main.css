@@ -14843,6 +14843,7 @@ small,
 @media (max-width: 991px) {
   .navbar .dropdown-menu {
     border-bottom: 1px solid #e0e6ec;
+    border-radius: 0;
   }
   .navbar .dropdown-menu .dropdown-item {
     padding-left: 2rem !important;
