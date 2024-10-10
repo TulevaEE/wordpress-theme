@@ -53,10 +53,10 @@
         background: transparent;
         outline: 0;
         cursor: pointer;
-        transition: background 0.05s ease-out;
+        transition: background-color 50ms ease-out;
 
         &:hover {
-            background: $gray-bg-2;
+            background-color: $blue-bg-2;
         }
 
         .burger-icon {
@@ -72,14 +72,14 @@
             top: 50%;
             left: 50%;
             margin: -1px 0 0 -12px;
-            background: transparent;
-            transition: background 0.2s ease-out;
+            background-color: transparent;
+            transition: background-color 0.2s ease-out;
 
             &:before,
             &:after {
                 content: "";
                 left: 0;
-                background: $navy-blue;
+                background-color: $navy-blue;
             }
             &:before {
                 top: 0;
@@ -151,7 +151,7 @@
         padding: 0.4375rem 0.75rem !important;
 
         &:hover {
-            color: $brand-primary;
+            color: $text-blue;
         }
 
         @include media-breakpoint-down(md) {
@@ -159,6 +159,10 @@
             line-height: $line-height-xs;
             padding: 1rem 1.25rem !important;
             border-bottom: 1px solid $gray-border-2;
+
+            &:hover {
+                background-color: $blue-bg-2;
+            }
         }
     }
 
@@ -221,7 +225,7 @@
 
             .dropdown-item {
                 padding-left: 2rem !important;
-                padding-right: 2.5rem !important;
+                padding-right: 2rem !important;
             }
         }
 
@@ -254,7 +258,7 @@
 
             &.active .dropdown-item {
                 font-weight: $font-weight-medium;
-                color: $brand-primary;
+                color: $text-blue;
             }
         }
 

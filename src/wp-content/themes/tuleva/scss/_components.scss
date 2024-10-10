@@ -326,17 +326,20 @@
 }
 
 .cky-btn-revisit-wrapper {
-    z-index: 1100;
+    z-index: 1100 !important; // lower than .header
 }
 
 .beacon-toggle {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
+    z-index: 1101; // lower than .header
+
     @include media-breakpoint-up(lg) {
         right: 2rem;
         bottom: 2rem;
     }
+    
     display: none;
     font-family: $font-family-serif;
     font-weight: bold;
@@ -351,7 +354,6 @@
     overflow: hidden;
     height: 3rem;
     transition: all .2s ease;
-    z-index: 1101;
     &:hover,
     &:focus {
         color: #fff;
