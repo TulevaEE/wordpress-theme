@@ -22,7 +22,7 @@
 8. Open http://localhost:8880/, http://localhost:8880/wp-admin/. To login, either:
     1. Use your production wordpress credentials.
     2. Move `tools/create-default-user.php` to `wordpress` folder, and visit http://localhost:8880/create-default-user.php. Sign in with `admin`-`admin`
-9. Consider disabling most plugins for performance reasons. If admin session expires and you are unable to log in, disable WPML Sticky Links via PHPMyAdmin, log in, and enable it again.
+9. Consider disabling most plugins for performance reasons (Wordfence Security seems to impact performance heavily). If admin session expires and you are unable to log in, disable WPML Sticky Links via PHPMyAdmin, log in, and enable it again.
 
 
 ### Diagnosing
