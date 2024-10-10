@@ -942,7 +942,7 @@
 .calculator {
     input, #marketReturn {
         display: inline-block;
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
         font-weight: $font-weight-bold;
         padding:.125em .5em;
         color: $blue;
@@ -1598,7 +1598,7 @@
     &__item {
         margin: 30px 0;
         &--link {
-            font-size: $font-size-md;
+            font-size: $font-size-lg;
             color: $navy-blue;
             background: url("../img/icon-plussign.svg") no-repeat right center;
             padding: 0 30px 0 0;
@@ -1613,7 +1613,7 @@
     }
 
     blockquote {
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
         color: $navy-blue;
     }
 }
@@ -1635,7 +1635,7 @@
         width: 100%;
         height: 48px;
         padding: 12px;
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
         outline: none;
         border: 1px solid rgba(0, 47, 99, 0.16);
         border-radius: 4px 0 0 4px;

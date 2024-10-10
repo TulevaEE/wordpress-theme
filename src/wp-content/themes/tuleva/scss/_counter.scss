@@ -62,7 +62,7 @@
     text-align: center;
     color: $navy-blue;
     @include media-breakpoint-down (sm) {
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
     }
 }
 
