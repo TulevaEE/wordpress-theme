@@ -14660,6 +14660,12 @@ small,
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04);
 }
+@media (max-width: 991px) {
+  .header {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+}
 
 .admin-bar .header {
   top: 32px;
@@ -14735,6 +14741,19 @@ small,
 .navbar .navbar-toggler.collapsed .burger-icon:after {
   bottom: -8px;
 }
+.navbar .submenu-toggle {
+  display: none;
+  /*
+  @include media-breakpoint-down(md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3.5rem;
+      height: 3.5rem;
+      background: pink;
+  }
+  */
+}
 .navbar .nav-item {
   position: relative;
   margin: 0;
@@ -14763,7 +14782,9 @@ small,
 }
 @media (max-width: 991px) {
   .navbar .nav-link {
-    padding: 0.5rem 1rem !important;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    padding: 1rem !important;
     border-bottom: 1px solid #e0e6ec;
   }
 }
@@ -14810,13 +14831,24 @@ small,
   }
 }
 .navbar .dropdown-menu {
+  display: block;
+  margin: 0;
   border: 0;
+}
+@media (max-width: 991px) {
+  .navbar .dropdown-menu {
+    border-bottom: 1px solid #e0e6ec;
+  }
+  .navbar .dropdown-menu .dropdown-item {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
 }
 @media (min-width: 992px) {
   .navbar .dropdown-menu {
     display: block;
     visibility: hidden;
-    top: calc(2.375rem - 2px);
+    top: 2.375rem;
     left: -4px;
     -webkit-transform: translateY(4px);
     transform: translateY(4px);

@@ -5,6 +5,11 @@
     width: 100%;
     background: $white;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.04);
+
+    @include media-breakpoint-down(md) {
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
 }
 // push header down to accommodate WP admin bar
 .admin-bar {
@@ -15,7 +20,6 @@
 
 .navbar {
     padding: 1rem 1.25rem;
-
     z-index: 1; // fix dropdowns appearing behind page content in Safari 18.0
 
     .navbar-toggler {
@@ -86,6 +90,20 @@
             }
         }
     }
+    
+    .submenu-toggle {
+        display: none;
+        /*
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: pink;
+        }
+        */
+    }
 
     .nav-item {
         position: relative;
@@ -117,7 +135,9 @@
         }
 
         @include media-breakpoint-down(md) {
-            padding: 0.5rem 1rem !important;
+            font-size: $font-size-lg;
+            line-height: $line-height-xs;
+            padding: 1rem !important;
             border-bottom: 1px solid $gray-border-2;
         }
     }
@@ -171,12 +191,23 @@
     }
 
     .dropdown-menu {
+        display: block;
+        margin: 0;
         border: 0;
+
+        @include media-breakpoint-down(md) {
+            border-bottom: 1px solid $gray-border-2;
+
+            .dropdown-item {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+        }
 
         @include media-breakpoint-up(lg) {
             display: block;
             visibility: hidden;
-            top: calc(2.375rem - 2px); // first level item height minus the height of active indicator
+            top: 2.375rem; // first level item height
             left: -4px; // align nav level1 and level2 texts
             transform: translateY(4px);
             padding: 0.5rem 0;

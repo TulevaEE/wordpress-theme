@@ -136,7 +136,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					$atts['id']				= 'menu-item-dropdown-' . $item->ID;
 				} elseif (0 === strcasecmp( $item->title, 'button' ) && 1 === $depth && get_field('button_text', 'option')) {
 					$atts['href'] = get_field('button_url', 'option');
-					$atts['class'] = 'btn btn-primary btn-sm d-none d-md-block';
+					$atts['class'] = 'btn btn-primary d-none d-lg-block';
 					$atts['title'] = get_field('button_text', 'option');
 					$item->title = get_field('button_text', 'option');
 				} else {
