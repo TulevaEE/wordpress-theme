@@ -14670,6 +14670,11 @@ small,
 .admin-bar .header {
   top: 32px;
 }
+@media (max-width: 991px) {
+  .admin-bar .header {
+    max-height: calc(100vh - 32px);
+  }
+}
 
 .navbar {
   padding: 1rem 1.25rem;

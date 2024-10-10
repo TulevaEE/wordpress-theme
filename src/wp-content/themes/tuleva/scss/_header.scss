@@ -15,6 +15,10 @@
 .admin-bar {
     .header {
         top: 32px;
+
+        @include media-breakpoint-down(md) {
+            max-height: calc(100vh - 32px);
+        }
     }
 }
 
