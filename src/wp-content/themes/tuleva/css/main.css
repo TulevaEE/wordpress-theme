@@ -13842,7 +13842,7 @@ small,
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin: 2.25rem 0 0.75rem;
 }
 .inline-register__number {
   -webkit-box-flex: 0;
@@ -13872,7 +13872,7 @@ small,
   line-height: 1.25;
 }
 .inline-register__content {
-  margin-left: 3rem;
+  margin: 0 0 2.25rem 3rem;
 }
 .inline-register .custom-control-indicator {
   display: none;

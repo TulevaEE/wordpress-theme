@@ -31,6 +31,7 @@
     }
 
     .navbar-wrap {
+        // calculations for a nicer optical alignment for the logo
         padding: calc(1rem - 2px) 1rem calc(1rem + 2px) 1.25rem;
         
         @include media-breakpoint-down(md) {

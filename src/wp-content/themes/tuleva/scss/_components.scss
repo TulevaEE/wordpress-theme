@@ -1341,7 +1341,7 @@
     &__item {
         display: flex;
         align-items: center;
-        margin-bottom: .75rem;
+        margin: 2.25rem 0 .75rem;
     }
 
     &__number {
@@ -1368,7 +1368,7 @@
     }
 
     &__content {
-        margin-left: 3rem;
+        margin: 0 0 2.25rem 3rem;
     }
 
     .custom-control-indicator {
