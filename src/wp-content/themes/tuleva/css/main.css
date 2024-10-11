@@ -12176,7 +12176,12 @@ h6, .h6 {
 #rich-text-block-component .h5:not(:first-child),
 #rich-text-block-component h6:not(:first-child),
 #rich-text-block-component .h6:not(:first-child) {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+}
+
+h2 + h3,
+h3 + h4 {
+  margin-top: 2rem;
 }
 
 .page-title {
@@ -13842,7 +13847,7 @@ small,
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 2.25rem 0 0.75rem;
+  margin: 2.75rem 0 1.25rem;
 }
 .inline-register__number {
   -webkit-box-flex: 0;
@@ -13872,7 +13877,7 @@ small,
   line-height: 1.25;
 }
 .inline-register__content {
-  margin: 0 0 2.25rem 3rem;
+  margin: 0 0 3rem 3rem;
 }
 .inline-register .custom-control-indicator {
   display: none;

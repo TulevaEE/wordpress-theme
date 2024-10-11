@@ -153,9 +153,14 @@ h6, .h6 {
   h5, .h5,
   h6, .h6 {
       &:not(:first-child) {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
       }
   }
+}
+
+h2 + h3,
+h3 + h4 {
+  margin-top: 2rem;
 }
 
 .page-title {
