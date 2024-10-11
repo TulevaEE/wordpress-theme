@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row py-6">
             <div class="mx-auto col-lg-11 col-xl-9 text-center">
-                <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
+                <h1 class="m-0"><?php the_sub_field('heading'); ?></h1>
             </div>
             <?php if (get_sub_field('quote')) { ?>
-                <div class="mx-auto col-lg-9 col-xl-8 text-center">
+                <div class="mx-auto mt-5 col-lg-9 col-xl-8 text-center">
                     <p class="lead text-navy mb-3">"<?php the_sub_field('quote'); ?>"</p>
                     <?php if (get_sub_field('source')) { ?>
                         <p class="text-navy mb-5">
