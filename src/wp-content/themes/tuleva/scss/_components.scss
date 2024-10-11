@@ -1336,35 +1336,39 @@
 
 //Inline signup override
 .inline-register {
-    border: 1px solid $gray-200;
+    border: 1px solid $gray-border-2;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
     &__number {
-        width: 32px;
-        height: 32px;
-        color: #0081EE;
-        background-color: rgba(5, 147, 252, 0.24);
-        border: none;
+        flex: 0 0 auto;
         display: inline-block;
-        line-height: 32px;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        border: none;
         border-radius: 50%;
+        background-color: $blue-border-1;
+        color: $text-blue;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+        line-height: 2rem;
         text-align: center;
-        z-index: 3;
-        font-weight: bold;
-        font-size: 20px;
-        margin-right: 16px;
     }
 
     &__title {
-        font-weight: 500;
-        font-size: 20px;
+        flex: 1 1 auto;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+        line-height: $line-height-sm;
     }
 
     &__content {
-        margin-left: 48px;
-    }
-
-    &__item {
-        margin-bottom: 1em;
+        margin-left: 3rem;
     }
 
     .custom-control-indicator {
