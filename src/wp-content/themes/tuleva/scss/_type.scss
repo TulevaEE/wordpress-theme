@@ -142,12 +142,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin: 0 0 1.5rem;
-
-    /*
-    &:not(:first-child) {
-      margin-top: 2.5rem;
-    }
-    */
 }
 
 .content,
@@ -183,6 +177,11 @@ h6, .h6 {
 
 p, ol, ul, dl {
   margin: 0 0 1.5em;
+  /*
+  &:is(:last-child) {
+    margin-bottom: 0;
+  }
+  */
 }
 
 ol, ul {

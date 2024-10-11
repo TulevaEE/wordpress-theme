@@ -12156,11 +12156,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin: 0 0 1.5rem;
-  /*
-  &:not(:first-child) {
-    margin-top: 2.5rem;
-  }
-  */
 }
 
 .content h1:not(:first-child), .content .h1:not(:first-child),
@@ -12200,6 +12195,11 @@ h6, .h6 {
 
 p, ol, ul, dl {
   margin: 0 0 1.5em;
+  /*
+  &:is(:last-child) {
+    margin-bottom: 0;
+  }
+  */
 }
 
 ol li, ul li {
@@ -13879,6 +13879,7 @@ small,
 }
 
 .mid-headline p {
+  margin: 0;
   color: #0081ED;
   font-size: 32px;
   line-height: 44px;
@@ -14288,8 +14289,8 @@ small,
 }
 
 .row-spacing-half {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .row-spacing-quarter {
@@ -14302,7 +14303,7 @@ small,
 }
 
 .row-spacing-top-half {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .row-spacing-bottom {
@@ -14310,7 +14311,7 @@ small,
 }
 
 .row-spacing-bottom-half {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .row-spacing-bottom-quarter {
@@ -14323,20 +14324,20 @@ small,
     margin-bottom: 2.5rem;
   }
   .row-spacing-half {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .row-spacing-top {
     margin-top: 2.5rem;
   }
   .row-spacing-top-half {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
   }
   .row-spacing-bottom {
     margin-bottom: 2.5rem;
   }
   .row-spacing-bottom-half {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 .content-area,

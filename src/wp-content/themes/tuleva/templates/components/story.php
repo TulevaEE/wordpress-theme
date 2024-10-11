@@ -1,7 +1,7 @@
 <div id="<?php the_sub_field('component_id'); ?>" class="container">
-    <div class="row row-spacing-half">
-        <div class="col">
-            <h2 class="text-center">
+    <div class="row row-spacing">
+        <div class="mx-auto col-lg-9 col-xl-8">
+            <h2 class="m-0 text-center">
                 <?php the_sub_field('heading'); ?>
             </h2>
         </div>
