@@ -165,19 +165,10 @@ input[type=number] {
 .list-style-cross li,
 .list-style-plussign li,
 .list-style-arrow li {
-  padding-left: 2em;
-  margin-bottom: 1em;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
   background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-@media (max-width: 767px) {
-  .list-style-checkmark li,
-  .list-style-cross li,
-  .list-style-plussign li,
-  .list-style-arrow li {
-    padding-left: 1.5em;
-    background-position: 0 0.5em;
-  }
+  background-position: 0 0.25rem;
 }
 .list-style-checkmark li:last-of-type,
 .list-style-cross li:last-of-type,
