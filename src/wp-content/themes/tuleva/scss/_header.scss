@@ -31,7 +31,7 @@
     }
 
     .navbar-wrap {
-        padding: 1rem 1rem 1rem 1.25rem;
+        padding: calc(1rem - 2px) 1rem calc(1rem + 2px) 1.25rem;
         
         @include media-breakpoint-down(md) {
             position: sticky;
