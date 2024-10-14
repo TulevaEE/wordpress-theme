@@ -2504,7 +2504,7 @@ select.form-control:focus::-ms-value {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .col-form-label-sm {
@@ -2559,14 +2559,14 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.6;
   border-radius: 0.3rem;
 }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: calc(2.875rem + 2px);
+  height: calc(3rem + 2px);
 }
 
 .form-group {
@@ -3392,7 +3392,7 @@ fieldset[disabled] a.btn {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.6;
   border-radius: 0.3rem;
 }
 
@@ -5125,7 +5125,7 @@ tbody.collapse.show {
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
@@ -6538,7 +6538,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   border-radius: 0 !important;
 }
 
-.clearfix::after, .tab-content::after, .pagination::after, .testimonial::after, .single-quote-box::after {
+.clearfix::after, .tab-content::after, .testimonial::after, .single-quote-box::after {
   display: block;
   clear: both;
   content: "";
@@ -12125,7 +12125,7 @@ h3, h4, h5, h6,
 }
 
 .lh-lg {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .font-weight-light {
@@ -13080,54 +13080,81 @@ small,
 }
 
 .pagination {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 1rem;
   margin-bottom: 4rem;
-  text-transform: uppercase;
-  font-size: 1.25em;
+  color: #909396;
+  font-size: 1.25rem;
+  line-height: 1.6;
   font-weight: 500;
 }
 .pagination ul {
-  list-style: none;
-  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: center;
 }
 .pagination ul li {
-  display: inline-block;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .pagination ul li.pagination__previous, .pagination ul li.pagination__next {
+    display: none;
+  }
 }
 .pagination ul li a {
   display: block;
-  padding: 0.2em;
+  padding: 0 0.5rem;
 }
 .pagination ul li a:hover, .pagination ul li a:focus {
-  color: #0058a2;
-  text-decoration: underline;
+  color: #002f63;
+  text-decoration: none;
 }
 .pagination__active a {
-  color: #0058a2;
-  text-decoration: underline;
-}
-.pagination__previous, .pagination__next {
-  display: inline-block;
-  margin-bottom: 1em;
-  background-repeat: no-repeat;
+  color: #002f63;
 }
 .pagination__previous {
-  float: left;
-  padding-left: 1.5em;
-  background-image: url("../img/icon-arrow-left.svg");
-  background-position: left center;
+  padding-right: 1rem;
 }
 .pagination__next {
-  float: right;
-  padding-right: 1.5em;
-  background-image: url("../img/icon-arrow-right.svg");
-  background-position: right center;
+  padding-left: 1rem;
+}
+.pagination__previous a, .pagination__next a {
+  white-space: nowrap;
+}
+.pagination__previous a::before, .pagination__next a::after {
+  display: inline-block;
+  font-family: system-ui, sans-serif;
+  text-decoration: none;
+}
+.pagination__previous a::before {
+  content: "←";
+  margin-right: 0.25em;
+}
+.pagination__next a::after {
+  content: "→";
+  margin-left: 0.25em;
 }
 
 .widget + .widget {
   margin-top: 3rem;
+}
+.widget:last-child {
+  margin-bottom: 3rem;
 }
 .widget:has(> .cta-widget--primary) + .widget:has(> .cta-widget--secondary) {
   margin-top: 1.5rem;
@@ -13223,10 +13250,6 @@ small,
 }
 .article-widget ul li:last-child {
   border-bottom: none;
-}
-
-.widget-area__cta {
-  margin-bottom: 3rem;
 }
 
 .tabs {

@@ -677,66 +677,87 @@
 }
 
 .pagination {
-    @extend .clearfix;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: $spacer;
     margin-bottom: $spacer * 4;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    font-weight: 500;
+    color: $text-tertiary;
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+    font-weight: $font-weight-medium;
 
     ul {
-        list-style: none;
-        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
         margin: 0;
+        padding: 0;
+        list-style: none;
         text-align: center;
 
         li {
-            display: inline-block;
+            margin: 0;
+
+            @include media-breakpoint-down(lg) {
+                &.pagination__previous,
+                &.pagination__next {
+                    display: none;
+                }
+            }
 
             a {
                 display: block;
-                padding: 0.2em;
+                padding: 0 0.5rem;
 
                 &:hover,
                 &:focus {
-                    color: #0058a2;
-                    text-decoration: $link-hover-decoration;
+                    color: $navy-blue;
+                    text-decoration: none;
                 }
+
+                
             }
         }
     }
 
     &__active {
         a {
-            color: #0058a2;
-            text-decoration: $link-hover-decoration;
+            color: $navy-blue;
         }
     }
 
-    &__previous,
-    &__next {
-        display: inline-block;
-        margin-bottom: 1em;
-        background-repeat: no-repeat;
-    }
     &__previous {
-        float: left;
-        padding-left: 1.5em;
-        background-image: url('../img/icon-arrow-left.svg');
-        background-position: left center;
+        padding-right: 1rem;
     }
     &__next {
-        float: right;
-        padding-right: 1.5em;
-        background-image: url('../img/icon-arrow-right.svg');
-        background-position: right center;
+        padding-left: 1rem;
+    }
+    &__previous a,
+    &__next a {
+        white-space: nowrap;
+    }
+    &__previous a::before,
+    &__next a::after {
+        display: inline-block;
+        font-family: $font-family-system;
+        text-decoration: none;
+    }
+    &__previous a::before {
+        content: "←";
+        margin-right: .25em;
+    }
+    &__next a::after {
+        content: "→";
+        margin-left: .25em;
     }
 }
 
 .widget {
     + .widget {
         margin-top: 3rem;
+    }
+
+    &:last-child {
+        margin-bottom: 3rem;
     }
 
     &:has(> .cta-widget--primary) {
@@ -838,10 +859,6 @@
             }
         }
     }
-}
-
-.widget-area__cta {
-    margin-bottom: 3rem;
 }
 
 .tabs {
