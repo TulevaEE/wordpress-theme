@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2024-09-26T11:16:47+00:00\n"
-"PO-Revision-Date: 2024-10-09 19:25+0300\n"
+"PO-Revision-Date: 2024-10-14 17:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: .\n"
 
 #. Theme Name of the theme
@@ -1412,7 +1412,7 @@ msgstr "Kingitused ja annetused; koolituskulud, sh lasteaiatasud. Kuni 1200 euro
 
 #: templates/components/third-pillar-calculator.php:76
 msgid "Sensible contribution to III pillar"
-msgstr "III sambasse on mõistlik panna"
+msgstr "Mõistlik kanda III sambassse kuni"
 
 #: templates/components/third-pillar-calculator.php:80
 #: templates/components/third-pillar-calculator.php:173

@@ -69,10 +69,9 @@ $isOctoberNovemberDecember = (date('m') >= 10);
                         </td>
                     </tr>
                     <tr class="calculator__summary-row first last">
-                        <td class="text-right pr-2 py-3 pl-3">
+                        <td class="text-right pr-2 py-3 pl-2">
                             <strong>
-                                <?php _e('Sensible contribution to III pillar', TEXT_DOMAIN); ?>
-                                <span
+                                <?php _e('Sensible contribution to III pillar', TEXT_DOMAIN); ?><span
                                     class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                     data-placement="top"
                                     title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
