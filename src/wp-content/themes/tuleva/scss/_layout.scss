@@ -66,33 +66,3 @@ $row-spacing-quarter: 3rem;
         margin-bottom: $row-spacing-half-mobile;
     }
 }
-
-.content-area,
-.widget-area {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 100%;
-}
-
-.content-area {
-    @include media-breakpoint-up(lg) {
-        width: 66%;
-        margin-right: 4%;
-    }
-}
-
-.widget-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    &--bottom {
-        justify-content: space-between;
-        padding-bottom: 60px;
-    }
-    @include media-breakpoint-up(lg) {
-        width: 30%;
-    }
-}

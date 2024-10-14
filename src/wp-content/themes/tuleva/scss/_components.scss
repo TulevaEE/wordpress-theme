@@ -582,6 +582,7 @@
         list-style: none;
     }
     &__item {
+        margin: 0;
         font-size: 1.25em;
         line-height: 1.6;
         a {
@@ -837,6 +838,10 @@
             }
         }
     }
+}
+
+.widget-area__cta {
+    margin-bottom: 3rem;
 }
 
 .tabs {

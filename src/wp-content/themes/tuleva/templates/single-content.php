@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="content-area">
+            <div class="col-lg-8 content-area">
                 <img class="post-image" src="<?php echo the_post_thumbnail_url('full'); ?>" alt="">
                 <?php if (get_the_content()) { ?>
                 <div class="content">
@@ -86,7 +86,7 @@
                 <?php } ?>
                 <?php get_template_part('templates/blog/recent-articles'); ?>
             </div>
-            <div class="widget-area">
+            <div class="col-lg-4 widget-area pl-lg-5">
                 <div class="article-widget d-none d-md-block">
                     <h4 class="article-widget__title">
                         <?php _e('3 important posts', TEXT_DOMAIN); ?>
