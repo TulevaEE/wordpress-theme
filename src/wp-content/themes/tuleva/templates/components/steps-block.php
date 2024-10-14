@@ -1,12 +1,8 @@
 <section id="<?php the_sub_field('component_id'); ?>">
-    <div class="container row-spacing-half">
-        <div class="row text-center row-spacing-bottom-quarter">
-            <div class="col">
-                <h2><?php the_sub_field('heading'); ?></h2>
-            </div>
-        </div>
+    <div class="container py-6">
         <div class="row">
             <div class="mx-auto col-lg-9 col-xl-8">
+            <h2 class="mb-6"><?php the_sub_field('heading'); ?></h2>
                 <?php if (have_rows('list')) { $i = 0; ?>
                     <?php while (have_rows('list')) { the_row(); $i++; ?>
                        <div class="inline-register__item">
