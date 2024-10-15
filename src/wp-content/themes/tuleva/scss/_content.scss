@@ -101,11 +101,12 @@
         margin-bottom: 5rem;
 
         p {
-            font-size: 1.2rem;
-            line-height: 1.56;
+            font-size: $font-size-lg;
+            line-height: $line-height-lg;
 
             &:first-child {
-                font-size: 1.5rem;
+                font-size: $font-size-xl;
+                line-height: $line-height-lead;
             }
         }
 

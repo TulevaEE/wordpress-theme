@@ -12224,8 +12224,9 @@ p, .p {
   font-weight: 400;
   color: #293036;
 }
-p .lead, .p .lead {
+p.lead, .p.lead {
   font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 ol, ul {
@@ -15185,11 +15186,12 @@ small,
   margin-bottom: 5rem;
 }
 .single-post .content p {
-  font-size: 1.2rem;
-  line-height: 1.56;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 .single-post .content p:first-child {
   font-size: 1.5rem;
+  line-height: 1.6666;
 }
 .single-post .content ul,
 .single-post .content ol {
