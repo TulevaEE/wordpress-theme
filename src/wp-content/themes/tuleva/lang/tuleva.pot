@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-09T16:17:09+00:00\n"
+"POT-Creation-Date: 2024-10-15T07:26:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -30,11 +30,11 @@ msgstr ""
 msgid "days"
 msgstr ""
 
-#: helpers/extras.php:568
+#: helpers/extras.php:575
 msgid "Newer articles"
 msgstr ""
 
-#: helpers/extras.php:600
+#: helpers/extras.php:607
 msgid "Older articles"
 msgstr ""
 
@@ -1306,11 +1306,11 @@ msgid "As an association of pension savers Tuleva helps to make Estonian laws be
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:4
-msgid "What does increasing your II pillar payments mean to you?"
+msgid "What does increasing II pillar payments mean for you?"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:19
-#: templates/components/third-pillar-calculator.php:123
+#: templates/components/third-pillar-calculator.php:120
 msgid "Monthly gross salary"
 msgstr ""
 
@@ -1331,7 +1331,7 @@ msgid "You accumulate more monthly"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:74
-#: templates/components/third-pillar-calculator.php:187
+#: templates/components/third-pillar-calculator.php:184
 msgid "Yearly gain from income tax"
 msgstr ""
 
@@ -1367,84 +1367,84 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:13
+#: templates/components/third-pillar-calculator.php:11
 msgid "<strong><a href=\"#modal-gross_income\">Total gross income this year</a></strong>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:24
-#: templates/components/third-pillar-calculator.php:47
-#: templates/components/third-pillar-calculator.php:69
-#: templates/components/third-pillar-calculator.php:161
+#: templates/components/third-pillar-calculator.php:22
+#: templates/components/third-pillar-calculator.php:45
+#: templates/components/third-pillar-calculator.php:67
+#: templates/components/third-pillar-calculator.php:158
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:31
+#: templates/components/third-pillar-calculator.php:29
 msgid "of which dividends"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:34
+#: templates/components/third-pillar-calculator.php:32
 msgid "Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:54
+#: templates/components/third-pillar-calculator.php:52
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:57
+#: templates/components/third-pillar-calculator.php:55
 msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:76
+#: templates/components/third-pillar-calculator.php:74
 msgid "Sensible contribution to III pillar"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:80
-#: templates/components/third-pillar-calculator.php:173
+#: templates/components/third-pillar-calculator.php:77
+#: templates/components/third-pillar-calculator.php:170
 msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:94
+#: templates/components/third-pillar-calculator.php:91
 msgid "Your gain from income tax"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:97
-#: templates/components/third-pillar-calculator.php:190
+#: templates/components/third-pillar-calculator.php:94
+#: templates/components/third-pillar-calculator.php:187
 msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:112
+#: templates/components/third-pillar-calculator.php:109
 msgid "Make a III pillar payment<span class=\"d-none d-md-inline\"> (2 min)</span>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:116
+#: templates/components/third-pillar-calculator.php:113
 msgid "Making a payment is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:126
+#: templates/components/third-pillar-calculator.php:123
 msgid "Your monthly gross salary (before tax). Including parental benefits, pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:138
+#: templates/components/third-pillar-calculator.php:135
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:145
+#: templates/components/third-pillar-calculator.php:142
 msgid "Other yearly gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:148
+#: templates/components/third-pillar-calculator.php:145
 msgid "Yearly gross income taxed at 20% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:169
+#: templates/components/third-pillar-calculator.php:166
 msgid "<span class=\"d-inline-block\">Reasonable monthly contribution</span> <span class=\"d-inline-block\">to III pillar</span>"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:205
+#: templates/components/third-pillar-calculator.php:202
 msgid "Make a contribution"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:209
+#: templates/components/third-pillar-calculator.php:206
 msgid "Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes."
 msgstr ""
 
@@ -1537,23 +1537,23 @@ msgstr ""
 msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">Choose Tuleva pension fund</a>"
 msgstr ""
 
-#: templates/header/main.php:7
+#: templates/header/main.php:8
 msgid "Toggle navigation"
 msgstr ""
 
-#: templates/header/main.php:14
+#: templates/header/main.php:16
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr ""
 
-#: templates/header/main.php:14
+#: templates/header/main.php:16
 msgid "Log in"
 msgstr ""
 
-#: templates/header/main.php:15
+#: templates/header/main.php:17
 msgid "/en/transfer-pension-tuleva/"
 msgstr ""
 
-#: templates/header/main.php:15
+#: templates/header/main.php:17
 msgid "Choose Tuleva 2nd pillar"
 msgstr ""
 
