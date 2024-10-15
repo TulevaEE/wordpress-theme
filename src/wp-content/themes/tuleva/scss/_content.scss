@@ -119,9 +119,14 @@
             max-width: 100%;
             height: auto;
         }
-
+        .wp-caption {
+            margin-bottom: 1.5rem;
+        }
         .wp-caption-text {
             margin-top: .75rem;
+            color: $text-secondary;
+            font-size: 1rem;
+            line-height: $line-height-base;
         }
 
         blockquote {

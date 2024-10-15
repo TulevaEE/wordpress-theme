@@ -15200,8 +15200,14 @@ small,
   max-width: 100%;
   height: auto;
 }
+.single-post .content .wp-caption {
+  margin-bottom: 1.5rem;
+}
 .single-post .content .wp-caption-text {
   margin-top: 0.75rem;
+  color: #6d7276;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .single-post .content blockquote {
   color: #0081ee;
