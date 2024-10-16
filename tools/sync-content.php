@@ -6,7 +6,7 @@ $remote_db = [
     'host' => 'TODO',
     'user' => 'TODO',
     'pass' => 'TODO',
-    'name' => 'TODO'
+    'name' => 'd56838_tuleva20'
 ];
 
 // Database configuration for local and remote instances
