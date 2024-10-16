@@ -47,6 +47,19 @@ docker-compose down
 docker volume rm wordpress-theme_db_data
 ```
 
+## Syncing live data
+
+1. Register your ip with the host
+   1. Logging in to db provider
+   2. Navigate to live databases
+   3. Edit `..._development` user
+   4. Add to `External hosts:` field your current ip (https://duckduckgo.com/?t=h_&q=what+is+my+ip&ia=answer)
+2. Move `tools/sync-content.php` to `wordpress` folder
+3. Set `wordpress/sync-content.php` `remote_db` variables, you can get them from step 1
+4. To get progress updates on the sync run docker container so that you will see log output without `-d` flag or alternatively monitor docker logs
+5. Visit http://localhost:8880/sync-content.php.
+6. Monitor progress and wait for finish message
+
 ## CI
 CI uses host `ftp.tuleva.ee` since CloudFlare is configured to forward to the correct machine with that url.
 Rsync uploads changed files using a key, which is configured in the host and CI.
