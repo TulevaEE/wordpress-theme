@@ -87,6 +87,20 @@ $spacers: (
   6: ($spacer * 5)
 ) !default;
 
+// Tooltips
+
+$tooltip-max-width:                 24rem !default;
+$tooltip-color:                     $text-primary !default;
+$tooltip-bg:                        $white !default;
+$tooltip-opacity:                   1 !default;
+$tooltip-padding-y:                 .75rem !default;
+$tooltip-padding-x:                 1rem !default;
+$tooltip-margin:                    .5rem !default;
+
+$tooltip-arrow-width:               0 !default;
+$tooltip-arrow-height:              0 !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
 // Brand definitions
 
 $brand-primary: $blue !default;
@@ -97,7 +111,7 @@ $body-color-alt: $blue-washed !default;
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;
 $card-border-width: 0;
-$dropdown-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px -0 rgba(0, 0, 0, 0.08);
+$dropdown-box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.04), 0 12px 24px -0 rgba(0,0,0,0.08);
 
 // Fonts
 $font-family-sans-serif:  Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -118,6 +132,8 @@ $font-weight-medium: 500 !default;
 $lead-font-weight: normal !default;
 
 $line-height-lead: 1.6666 !default;
+$line-height-s: 1.6666 !default;
+
 $line-height-lg:   1.6 !default;
 $line-height-base: 1.5 !default;
 $line-height-sm:   1.25 !default;

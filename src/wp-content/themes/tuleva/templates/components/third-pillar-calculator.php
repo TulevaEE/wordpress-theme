@@ -1,210 +1,152 @@
 <?php
 $isOctoberNovemberDecember = (date('m') >= 10);
+function get_translated_link() {
+    if (ICL_LANGUAGE_CODE == 'en') {
+        return '#modal-gross_income';
+    } elseif (ICL_LANGUAGE_CODE == 'et') {
+        return '#modal-brutotulu';
+    }
+}
 ?>
-<div class="card calculator shadow-md">
-    <div class="card-body p-4 text-center third-pillar-calculator">
+<div class="card calculator shadow-md br-3">
+    <div class="card-body p-2 third-pillar-calculator">
         <form>
             <?php if ($isOctoberNovemberDecember) { ?>
-                <table class="w-100">
-                    <tr class="calculator__summary-row first">
-                        <td class="text-right pr-2 py-3 pl-3 bg-gray-tint">
-                            <?php _e('<strong><a href="#modal-gross_income">Total gross income this year</a></strong>', TEXT_DOMAIN); ?>
-                        </td>
-                        <td style="width: 109px" class="py-3 bg-gray-tint">
+                <div class="card bg-gray-2 p-3 br-2">
+                    <div class="form-group row align-items-center">
+                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                            <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a href="<?php echo esc_url( get_translated_link() ); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
+                        </label>
+                        <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right" id="yearlyWage"
-                                       min="0" step="1" placeholder="24000" inputmode="numeric"
-                                       oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-right" id="yearlyWage" min="0" step="1" placeholder="24000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
                             </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 py-3 pr-3 bg-gray-tint">
-                            <span class="d-none d-md-inline-block">
-                                <?php _e('&euro;/year', TEXT_DOMAIN); ?>,
-                            </span>
-                            <span class="d-md-none">&euro;,</span>
-                        </td>
-                    </tr>
-                    <tr class="calculator__summary-row last">
-                        <td class="text-right pr-2 pb-3 pl-3 bg-gray-tint">
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('of which dividends', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="<?php _e('Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad.', TEXT_DOMAIN); ?>"
                             ></span>
-                        </td>
-                        <td class="pb-3 bg-gray-tint">
+                        </label>
+                        <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right"
-                                       id="wageDeduction" inputmode="numeric"
-                                       min="0" step="1" placeholder="0"
-                                       oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-right" id="wageDeduction" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
+                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
                             </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3 bg-gray-tint">
-                            <span class="d-none d-md-inline-block">
-                                <?php _e('&euro;/year', TEXT_DOMAIN); ?>
-                            </span>
-                            <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 py-3 pl-3">
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-0">
+                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('Other tax reliefs', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="<?php _e('Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia.', TEXT_DOMAIN); ?>"
                             ></span>
-                        </td>
-                        <td class="py-3">
+                        </label>
+                        <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right" id="taxReliefs"
-                                       min="0" step="1" placeholder="0" inputmode="numeric"
-                                       oninput="validity.valid||(value='');">
+                            <input type="number" class="form-control text-right" id="taxReliefs" min="0" step="1" placeholder="0" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
                             </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 py-3 pr-3">
-                            <span
-                                class="d-none d-md-inline-block"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
-                            <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr class="calculator__summary-row first last">
-                        <td class="text-right pr-2 py-3 pl-2">
-                            <strong>
-                                <?php _e('Sensible contribution to III pillar', TEXT_DOMAIN); ?><span
-                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
-                                ></span>
-                            </strong>
-                        </td>
-                        <td class="text-right pl-3 py-3">
-                            <h1 class="calculator__win" id="yearlyAmount">3600</h1>
-                        </td>
-                        <td class="text-left pl-2 py-3 pr-3">
-                            <h1 class="calculator__win">&euro;</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 pt-3 pl-3">
-                            <strong>
-                                <?php _e('Your gain from income tax', TEXT_DOMAIN); ?><span
-                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
-                                ></span>
-                            </strong>
-                        </td>
-                        <td class="text-right pl-3 pt-3">
-                            <h1 class="calculator__win text-green" id="savingsSum">720</h1>
-                        </td>
-                        <td class="text-left pl-2 pt-3 pr-3">
-                            <h1 class="calculator__win text-green">&euro;</h1>
-                        </td>
-                    </tr>
-                </table>
-                <a href="<?php echo get_app_url("/3rd-pillar-payment") ?>"
-                   class="btn btn-primary btn-lg btn-block mt-3"
-                   target="_blank">
-                    <?php _e('Make a III pillar payment<span class="d-none d-md-inline"> (2 min)</span>', TEXT_DOMAIN); ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-2 p-3 py-4 card bg-blue-2 br-2 text-navy">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="mr-3">
+                            <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                                title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
+                            ></span>
+                        </div>
+                        <div class="fs-5 lh-1 fw-bold text-nowrap"><span id="savingsSum">720</span> €</div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                        <div class="mr-3">
+                            <span class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute up to', TEXT_DOMAIN); ?></span><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                                title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
+                            ></span>
+                        </div>
+                        <div class="fs-2 lh-1 fw-bold text-nowrap"><span id="yearlyAmount">3600</span> €</div>
+                    </div>
+                </div>
+
+                <a href="<?php echo get_app_url("/3rd-pillar-payment") ?>" class="btn btn-primary btn-lg btn-block mt-2">
+                    <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
                 </a>
-                <div class="mt-2">
-                    <small class="text-secondary">
-                        <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
-                    </small>
+                <div class="mt-2 py-2 text-secondary text-center small">
+                    <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
                 </div>
             <?php } else { ?>
-                <table class="w-100">
-                    <tr>
-                        <td class="text-right pr-2 pb-3 pl-3">
-                            <?php _e('Monthly gross salary', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
+                <div class="card bg-gray-2 p-3 br-2">
+                    <div class="form-group align-items-center row">
+                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                            <?php _e('Gross salary', TEXT_DOMAIN); ?><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="<?php _e('Your monthly gross salary (before tax). Including parental benefits, pension, etc.', TEXT_DOMAIN); ?>"
                             ></span>
-                        </td>
-                        <td style="width: 109px" class="pb-3">
+                        </label>
+                        <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right" id="monthlyWage"
-                                       min="0" step="1" placeholder="2000" inputmode="numeric"
-                                       oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-right" id="monthlyWage" min="0" step="1" placeholder="2000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <div class="input-group-addon" style="min-width: 110px"><?php _e('&euro;/month', TEXT_DOMAIN); ?></div>
                             </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3">
-                            <span class="d-none d-md-inline-block">
-                                <?php _e('&euro;/month', TEXT_DOMAIN); ?>
-                            </span>
-                            <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 pb-3 pl-3">
-                            <?php _e('Other yearly gross income', TEXT_DOMAIN); ?><span
-                                class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                data-placement="top"
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center row mb-0">
+                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                            <?php _e('Other gross income', TEXT_DOMAIN); ?><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="<?php _e('Yearly gross income taxed at 20% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate.', TEXT_DOMAIN); ?>"
                             ></span>
-                        </td>
-                        <td class="pb-3">
+                        </label>
+                        <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-right"
-                                       id="wageAddition" inputmode="numeric"
-                                       min="0" step="1" placeholder="0"
-                                       oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-right" id="wageAddition" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
+                                <div class="input-group-addon" style="min-width: 110px"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
                             </div>
-                        </td>
-                        <td class="text-left text-muted pl-2 pb-3 pr-3">
-                            <span class="d-none d-md-inline-block">
-                                <?php _e('&euro;/year', TEXT_DOMAIN); ?>
-                            </span>
-                            <span class="d-md-none">&euro;</span>
-                        </td>
-                    </tr>
-                    <tr class="calculator__summary-row first last">
-                        <td class="text-right pr-2 py-3 pl-3">
-                            <strong>
-                                <?php _e('<span class="d-inline-block">Reasonable monthly contribution</span> <span class="d-inline-block">to III pillar</span>', TEXT_DOMAIN); ?>
-                                <span
-                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
-                                ></span>
-                            </strong>
-                        </td>
-                        <td class="text-right pl-3 py-3">
-                            <h1 class="calculator__win" id="monthlyAmount">300</h1>
-                        </td>
-                        <td class="text-left pl-2 py-3 pr-3">
-                            <h1 class="calculator__win d-inline-block">&euro;</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-right pr-2 pt-3 pl-3">
-                            <strong>
-                                <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?><span
-                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
-                                ></span>
-                            </strong>
-                        </td>
-                        <td class="text-right pl-3 pt-3">
-                            <h1 class="calculator__win text-green" id="savingsSum">720</h1>
-                        </td>
-                        <td class="text-left pl-2 pt-3 pr-3">
-                            <h1 class="calculator__win text-green">&euro;</h1>
-                        </td>
-                    </tr>
-                </table>
-                <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>"
-                   class="btn btn-primary btn-lg btn-block mt-3"
-                   target="_blank">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-2 p-3 py-4 card bg-blue-2 br-2 text-navy">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="mr-3">
+                            <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                                title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
+                            ></span>
+                        </div>
+                        <div class="fs-5 lh-1 fw-bold text-nowrap"><span id="savingsSum">720</span> €</div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                        <div class="mr-3">
+                            <span class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute monthly up to', TEXT_DOMAIN); ?></span><span
+                                class="inline-help d-none d-md-inline-block"
+                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                                title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
+                            ></span>
+                        </div>
+                        <div class="fs-2 lh-1 fw-bold text-nowrap"><span id="monthlyAmount">300</span> €</div>
+                    </div>
+                </div>
+                
+                <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>" class="btn btn-primary btn-lg btn-block mt-2">
                     <?php _e('Make a contribution', TEXT_DOMAIN); ?>
                 </a>
-                <div class="mt-2">
-                    <small class="text-secondary">
-                        <?php _e('Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes.', TEXT_DOMAIN); ?>
-                    </small>
+                <div class="mt-2 py-2 text-secondary text-center small">
+                    <?php _e('Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes.', TEXT_DOMAIN); ?>
                 </div>
             <?php } ?>
         </form>

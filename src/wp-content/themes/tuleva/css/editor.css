@@ -270,6 +270,10 @@ hr {
   padding: 0 !important;
 }
 
+.input-group-addon {
+  background-color: #f5f7f9;
+}
+
 .btn-plus,
 .btn-plus:active,
 .btn-plus:focus,
