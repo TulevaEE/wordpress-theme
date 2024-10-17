@@ -13373,8 +13373,8 @@ small,
 }
 
 .calculator {
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 9px 0 rgba(0, 0, 0, 0.04), 0 6px 18px 0 rgba(0, 0, 0, 0.04);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 3px 9px 0 rgba(0, 0, 0, 0.04), 0 6px 18px 0 rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 3px 9px 0 rgba(0, 0, 0, 0.04), 0 6px 18px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 3px 9px 0 rgba(0, 0, 0, 0.04), 0 6px 18px 0 rgba(0, 0, 0, 0.04);
 }
 .calculator input,
 .calculator select {
@@ -13817,8 +13817,8 @@ small,
 }
 .tooltip .tooltip-inner {
   border-radius: 0.5rem !important;
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
   text-align: left;
 }
 
@@ -14925,8 +14925,8 @@ small,
     padding: 0.5rem 0;
     border-radius: 0.5rem;
     background-color: #fff;
-    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
     opacity: 0;
     -webkit-transition: visibility 0.15s ease-out, opacity 0.15s ease-out, -webkit-transform 0.15s ease-out;
     transition: visibility 0.15s ease-out, opacity 0.15s ease-out, -webkit-transform 0.15s ease-out;
