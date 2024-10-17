@@ -968,8 +968,11 @@
 
 //Header calculator styles
 .calculator {
+    max-width: 540px; // equals to current default width in heros
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: $calculator-box-shadow;
-    
+
     input,
     select {
         font-weight: $font-weight-medium;
