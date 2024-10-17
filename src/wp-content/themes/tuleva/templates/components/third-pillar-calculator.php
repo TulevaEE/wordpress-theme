@@ -65,7 +65,7 @@ function get_translated_link() {
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
-                        <div class="fs-5 lh-1 fw-bold text-nowrap"><span id="savingsSum">720</span> €</div>
+                        <div class="fs-5 lh-1 fw-bold text-green text-nowrap"><span id="savingsSum">720</span> €</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between mt-4">
                         <div class="mr-3">
@@ -128,7 +128,7 @@ function get_translated_link() {
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
-                        <div class="fs-5 lh-1 fw-bold text-nowrap"><span id="savingsSum">720</span> €</div>
+                        <div class="fs-5 lh-1 fw-bold text-green text-nowrap"><span id="savingsSum">720</span> €</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between mt-4">
                         <div class="mr-3">
