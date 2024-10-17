@@ -1,6 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-
 <div class="card calculator br-3">
     <div class="card-body p-2 payout-calculator">
         <div class="card bg-gray-2 p-3 br-2">

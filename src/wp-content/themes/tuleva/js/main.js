@@ -544,9 +544,6 @@ $(document).ready(function ($) {
             }, countdown.DAYS | countdown.HOURS | countdown.MINUTES);
         };
 
-    var payoutChart;
-
-
     var setupFunctions = [
         function () { initNewsletterBeaconToggle(); },
         function () { initHelpBeaconToggle(); },
