@@ -49,7 +49,7 @@ function get_translated_link() {
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                            <input type="number" class="form-control text-right" id="taxReliefs" min="0" step="1" placeholder="0" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-right" id="taxReliefs" min="0" max="1200" step="1" placeholder="0" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value !== '') this.value = Math.min(this.value, this.max);">
                                 <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
                             </div>
                         </div>
