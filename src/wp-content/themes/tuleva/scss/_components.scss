@@ -968,6 +968,8 @@
 
 //Header calculator styles
 .calculator {
+    box-shadow: $calculator-box-shadow;
+    
     input,
     select {
         font-weight: $font-weight-medium;

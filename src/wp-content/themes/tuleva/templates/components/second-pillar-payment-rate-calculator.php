@@ -1,4 +1,4 @@
-<div class="card shadow-md br-3">
+<div class="card calculator br-3">
     <div class="card-body p-2 second-pillar-payment-rate-calculator">
         <h2 class="h5 m-0 mb-2 py-3 text-navy text-center">
             <?php _e('What does increasing II pillar payments mean for you?', TEXT_DOMAIN); ?>

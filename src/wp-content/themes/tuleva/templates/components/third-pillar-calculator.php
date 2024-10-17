@@ -8,7 +8,7 @@ function get_translated_link() {
     }
 }
 ?>
-<div class="card calculator shadow-md br-3">
+<div class="card calculator br-3">
     <div class="card-body p-2 third-pillar-calculator">
         <form>
             <?php if ($isOctoberNovemberDecember) { ?>
