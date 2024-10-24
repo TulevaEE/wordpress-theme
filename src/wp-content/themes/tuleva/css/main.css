@@ -840,7 +840,8 @@ hr {
 
 small,
 .small,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.footnote {
   font-size: 80%;
   font-weight: 400;
 }
@@ -11841,6 +11842,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 .list-style-checkmark,
 .list-style-cross,
 .list-style-plussign,
@@ -12186,7 +12191,7 @@ h6, .h6 {
 
 h2 + h3,
 h3 + h4 {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .page-title {
@@ -12203,7 +12208,7 @@ h3 + h4 {
   margin-bottom: 5rem;
 }
 
-p, ol, ul, dl {
+p, ol, ul, dl, table {
   margin: 0 0 1.5em;
   /*
   &:is(:last-child) {
@@ -12247,7 +12252,8 @@ a:hover {
 
 small,
 .small,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.footnote {
   font-size: 0.875rem;
   line-height: 1.4285;
   font-weight: inherit;
@@ -12260,6 +12266,21 @@ small,
   background-repeat: repeat-x;
   background-size: 0.4em 0.4em;
   padding: 0 0.1em;
+}
+
+sub,
+sup {
+  font-size: 0.875rem;
+}
+
+.footnote a {
+  padding: 0 0.125rem;
+}
+.footnote a::before {
+  content: "[";
+}
+.footnote a::after {
+  content: "]";
 }
 
 .text-primary {

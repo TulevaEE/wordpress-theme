@@ -160,7 +160,7 @@ h6, .h6 {
 
 h2 + h3,
 h3 + h4 {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .page-title {
@@ -180,7 +180,7 @@ h3 + h4 {
   }
 }
 
-p, ol, ul, dl {
+p, ol, ul, dl, table {
   margin: 0 0 1.5em;
   /*
   &:is(:last-child) {
@@ -232,7 +232,7 @@ a {
 small,
 .small {
   font-size: $font-size-small;
-  line-height: 1.4285;
+  line-height: $line-height-small-text;
   font-weight: inherit;
 }
 
@@ -242,6 +242,24 @@ small,
   background-repeat: repeat-x;
   background-size: 0.4em 0.4em;
   padding: 0 0.1em;
+}
+
+sub,
+sup {
+  font-size: $font-size-small;
+}
+.footnote {
+  @extend .small;
+  a {
+    padding: 0 .125rem;
+
+    &::before {
+      content: "["
+    }
+    &::after {
+      content: "]"
+    }
+  }
 }
 
 // Text colors

@@ -31,7 +31,7 @@ class ThemeEnqueue
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '2024.10.17.5',
+                'ver' => '2024.10.24.1',
                 'media' => 'all',
                 'enqueue' => true
             ],

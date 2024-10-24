@@ -36,6 +36,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 .list-style-checkmark,
 .list-style-cross,
 .list-style-plussign,
