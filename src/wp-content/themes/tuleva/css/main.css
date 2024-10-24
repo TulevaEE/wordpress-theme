@@ -12275,12 +12275,21 @@ sup {
 
 .footnote a {
   padding: 0 0.125rem;
+  text-decoration: none;
+}
+.footnote a::before, .footnote a::after {
+  opacity: 0.5;
 }
 .footnote a::before {
   content: "[";
+  margin-right: 0.0625rem;
 }
 .footnote a::after {
   content: "]";
+  margin-left: 0.0625rem;
+}
+.footnote a:hover::before, .footnote a:hover::after {
+  opacity: 1;
 }
 
 .text-primary {

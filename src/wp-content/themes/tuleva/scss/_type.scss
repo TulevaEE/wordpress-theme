@@ -252,12 +252,24 @@ sup {
   @extend .small;
   a {
     padding: 0 .125rem;
+    text-decoration: none;
 
+    &::before,
+    &::after {
+      opacity: 0.5;
+    }
     &::before {
-      content: "["
+      content: "[";
+      margin-right: 0.0625rem;
     }
     &::after {
-      content: "]"
+      content: "]";
+      margin-left: 0.0625rem;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
     }
   }
 }
