@@ -12274,7 +12274,7 @@ sup {
 }
 
 .footnote a {
-  padding: 0 0.125rem;
+  padding: 0 0.0625rem;
   text-decoration: none;
 }
 .footnote a::before, .footnote a::after {
