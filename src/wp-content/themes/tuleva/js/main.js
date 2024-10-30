@@ -227,11 +227,8 @@ $(document).ready(function ($) {
                 Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * 0.22, 0);
             var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
 
-            // 2025 at 2% contribution rate
-            var incomeTax2Percent =
-                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.22, 0);
-            var netSalary2Percent = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2Percent;
-            var netSalaryVs2Percent = netSalary2Percent - netSalary;
+            // 2025 at 0% contribution rate
+            var incomeTax0Percent = Math.max((grossSalary - unemploymentInsurance - taxFreeWage) * 0.22, 0);
 
             // total 2nd pillar contribution per month
             var governmentContribution = 0.04 * grossSalary;
@@ -240,7 +237,7 @@ $(document).ready(function ($) {
             var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
             var monthlyContributionYouDiff = yourSecondPillarContribution - secondPillarContribution2Percent;
 
-            var monthlyTaxWin = Math.max((monthlyContributionDiff - netSalaryVs2Percent), 0)
+            var monthlyTaxWin = Math.max((incomeTax0Percent - incomeTax), 0);
             var yearlyTaxWin = monthlyTaxWin * 12;
 
             var netSalary2025vs2024 = netSalary - netSalary2024;
@@ -254,7 +251,7 @@ $(document).ready(function ($) {
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
             $calculator.find('#netWage2024').text(`${format(netSalary2024)} €`);
 
-            if (netSalary2025vs2024 < 0) {
+            if (Math.round(netSalary2025vs2024) < 0) {
                 $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
                 $calculator.find('#netWageDiff').removeClass('text-success');
                 $calculator.find('#netWageDiff').addClass('text-secondary');
@@ -269,8 +266,8 @@ $(document).ready(function ($) {
             $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
             $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
 
-            if (yearlyTaxWin > 0) {
-                $calculator.find('#yearlyTaxWin').text(`+${format(yearlyTaxWin)} €`);
+            if (Math.round(yearlyTaxWin) > 0) {
+                $calculator.find('#yearlyTaxWin').text(`${format(yearlyTaxWin)} €`);
                 $calculator.find('#yearlyTaxWin').removeClass('d-none');
                 $calculator.find('#yearlyTaxWinZero').addClass('d-none');
 
@@ -283,7 +280,7 @@ $(document).ready(function ($) {
                 $calculator.find('.income-tax-savings').addClass('d-none');
             }
 
-            if (savingSum > 0) {
+            if (Math.round(savingSum) > 0) {
                 $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);
                 $calculator.find('#savingsSum').removeClass('d-none');
                 $calculator.find('#savingsSumZero').addClass('d-none');
