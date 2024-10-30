@@ -39,7 +39,7 @@
                     <?php get_template_part('templates/components/second-pillar-payment-rate-calculator-simple'); ?>
                     <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
                         <div class="my-3 text-center">
-                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>" target="_blank">
+                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>">
                                 <?php the_sub_field('below_calculator_link_text'); ?>
                             </a>
                         </div>
