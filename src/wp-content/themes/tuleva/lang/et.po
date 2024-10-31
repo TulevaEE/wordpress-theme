@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2024-10-30T13:57:45+00:00\n"
-"PO-Revision-Date: 2024-10-30 15:58+0200\n"
+"POT-Creation-Date: 2024-10-31T11:31:01+00:00\n"
+"PO-Revision-Date: 2024-10-31 13:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1931,9 +1931,8 @@ msgstr ""
 "pankadele ja kindlustusseltsidele."
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:4
-#: templates/components/second-pillar-payment-rate-calculator.php:4
-msgid "What does increasing II pillar payments mean for you?"
-msgstr "Mida II samba panuse tõstmine sinu jaoks tähendab?"
+msgid "How much tax benefit will I get?"
+msgstr "Kui palju maksuvõitu saad II samba makse tõstmisel?"
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:9
 #: templates/components/second-pillar-payment-rate-calculator.php:19
@@ -1952,10 +1951,6 @@ msgstr "Sinu panus brutopalgast"
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:46
-msgid "None"
-msgstr "Ei ole"
-
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:51
 msgid "Increase contribution"
 msgstr "Tõstan sissemakset"
@@ -1964,6 +1959,10 @@ msgstr "Tõstan sissemakset"
 msgid ""
 "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:4
+msgid "What does increasing II pillar payments mean for you?"
+msgstr "Mida II samba panuse tõstmine sinu jaoks tähendab?"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:61
 msgid "Your net salary"
@@ -2407,6 +2406,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "None"
+#~ msgstr "Ei ole"
 
 #~ msgid "Start saving more"
 #~ msgstr "Hakkan rohkem säästma"

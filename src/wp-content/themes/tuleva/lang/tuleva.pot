@@ -1,4 +1,4 @@
-# Copyright (C) 2024
+# Copyright (C) 2024 
 # This file is distributed under the same license as the Tuleva theme.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-30T13:57:45+00:00\n"
+"POT-Creation-Date: 2024-10-31T11:31:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1306,8 +1306,7 @@ msgid "As an association of pension savers Tuleva helps to make Estonian laws be
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:4
-#: templates/components/second-pillar-payment-rate-calculator.php:4
-msgid "What does increasing II pillar payments mean for you?"
+msgid "How much tax benefit will I get?"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:9
@@ -1327,16 +1326,16 @@ msgstr ""
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:46
-msgid "None"
-msgstr ""
-
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:51
 msgid "Increase contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:54
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:4
+msgid "What does increasing II pillar payments mean for you?"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:61
