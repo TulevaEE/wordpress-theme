@@ -49,7 +49,7 @@ docker volume rm wordpress-theme_db_data
 
 ## Syncing live data
 
-1. Register your ip with the host
+1. Connect to VPN which routes your traffic **or** register your ip with the host
    1. Logging in to db provider
    2. Navigate to live databases
    3. Edit `..._development` user
