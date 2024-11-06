@@ -37,17 +37,6 @@
                 </div>
                 <div class="col-lg-6">
                     <?php get_template_part('templates/components/second-pillar-payment-rate-calculator-simple'); ?>
-                    <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
-                        <div class="my-3 text-center">
-                            <a href="<?php the_sub_field('below_calculator_link_url'); ?>">
-                                <?php the_sub_field('below_calculator_link_text'); ?>
-                            </a>
-                        </div>
-                    <?php } else { ?>
-                        <div class="my-3 text-center">
-                            <a href="#modal-second-pillar-payment-rate"><?php _e("How does the calculator work?", TEXT_DOMAIN); ?></a>
-                        </div>
-                    <?php } ?>
                 </div>
             </div>
         </div>
