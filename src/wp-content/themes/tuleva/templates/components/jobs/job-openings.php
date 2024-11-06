@@ -5,7 +5,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
 <div class="accordion-parent <?php echo $unique_parent_id; ?>">
     <section class="d-flex flex-column">
         <div class="container my-auto">
-            <div class="row align-items-center">
+            <div class="row align-items-stretch">
                 <?php if( have_rows('job_openings') ): ?>
                     <?php while( have_rows('job_openings') ): the_row(); ?>
                         <?php
@@ -18,7 +18,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 $thumbnail_url = $image['sizes']['thumbnail'];
                             }
                         ?>
-                        <div class="col-lg-6 text-center py-5 toggle-parent">
+                        <div class="col-lg-6 d-flex align-items-center text-center py-5 toggle-parent">
                             <div class="col-12 pb-2">
                                 <?php if ($thumbnail_url) { ?>
                                     <img class="w-25 image-circle mb-2" src="<?php echo $thumbnail_url; ?>" alt="<?php the_sub_field('title'); ?>">
