@@ -37,7 +37,7 @@
         <div class="mt-2 p-3 py-4 card br-2 text-navy">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="mr-3">
-                    <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Net salary from 2025', TEXT_DOMAIN); ?></span><span
+                    <span class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2025', TEXT_DOMAIN); ?></span><span
                         class="inline-help d-inline-block"
                         tabindex="0" data-toggle="tooltip" data-placement="bottom"
                         title="<?php _e('Income tax will be 22% in 2025', TEXT_DOMAIN); ?>"
@@ -47,7 +47,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="mr-3">
-                    <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Your monthly contribution', TEXT_DOMAIN); ?></span>
+                    <span class="d-inline-block fs-6 lh-sm"><?php _e('Your monthly contribution', TEXT_DOMAIN); ?></span>
                 </div>
                 <div id="monthlyContributionYou" class="lh-1 fw-medium text-nowrap">120 €</div>
             </div>
@@ -58,8 +58,7 @@
                     </span>
                 </div>
                 <span id="yearlyTaxWin" class="fs-2 lh-1 fw-bold text-nowrap text-green">316 €</span>
-                <span id="yearlyTaxWinZero"
-                      class="fs-2 lh-1 fw-bold text-nowrap d-none">0 €</span>
+                <span id="yearlyTaxWinZero" class="fs-2 lh-1 fw-bold text-nowrap d-none">0 €</span>
             </div>
         </div>
         <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
