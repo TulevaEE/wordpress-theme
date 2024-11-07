@@ -52,6 +52,18 @@
     }
 }
 
+.home .bg-hero-mutual {
+    background-image: linear-gradient(to right, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/mees-naine-lapsega-2400.jpg');
+    background-color: rgb(209, 244, 255);
+    background-position: 0 0, -100px 50%;
+    background-size: auto, 1200px;
+    @include media-breakpoint-down (xs) {
+        background-image: linear-gradient(to right, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/mees-naine-lapsega-800.jpg');
+        background-position: 0 0, 50% 50%;
+        background-size: auto, cover;
+    }
+}
+
 .bg-hero-stocks {
     background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/nyc_w_2670.jpg');
     background-position: 0px 0px, 50% 50%;
