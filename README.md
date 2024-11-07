@@ -50,15 +50,11 @@ docker volume rm wordpress-theme_db_data
 ## Syncing live data
 
 1. Connect to VPN which routes your traffic **or** register your ip with the host
-   1. Logging in to db provider
-   2. Navigate to live databases
-   3. Edit `..._development` user
-   4. Add to `External hosts:` field your current ip (https://duckduckgo.com/?t=h_&q=what+is+my+ip&ia=answer)
-2. Move `tools/sync-content.php` to `wordpress` folder
-3. Set `wordpress/sync-content.php` `remote_db` variables, you can get them from step 1
-4. To get progress updates on the sync run docker container so that you will see log output without `-d` flag or alternatively monitor docker logs
-5. Visit http://localhost:8880/sync-content.php.
-6. Monitor progress and wait for finish message
+2. Set up variables in `tools/sync_database.sh` and `tools/sync_media.sh`, ask from team
+3. Run scripts with `sh sync_media.sh` and `sh sync_database.sh`
+   1. If needed add execution permission ` chmod +x <file name>`
+   2. The script expects you to have an SSH connected in the agent. If you do not then edit the scripts by adding `-i <path to key>` to ssh use
+4. Monitor progress and wait for finish message
 
 ## CI
 CI uses host `ftp.tuleva.ee` since CloudFlare is configured to forward to the correct machine with that url.
