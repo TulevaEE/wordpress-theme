@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-11T14:24:14+00:00\n"
+"POT-Creation-Date: 2024-11-11T15:08:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1323,7 +1323,7 @@ msgid "Net salary from 2025"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:43
-msgid "Starting from 2025, the income tax rate will increase to 22%, and the tax-exempt income will be €700 per month, regardless of the income level."
+msgid "Starting from 2025, the income tax rate will increase to 22%. The tax-exempt income is €654 per month."
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:50

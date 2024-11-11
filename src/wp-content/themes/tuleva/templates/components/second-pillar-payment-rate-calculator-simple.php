@@ -40,7 +40,7 @@
                     <span class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2025', TEXT_DOMAIN); ?></span><span
                         class="inline-help d-inline-block"
                         tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                        title="<?php _e('Starting from 2025, the income tax rate will increase to 22%, and the tax-exempt income will be €700 per month, regardless of the income level.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('Starting from 2025, the income tax rate will increase to 22%. The tax-exempt income is €654 per month.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
                 <div id="netWage" class="lh-1 fw-medium text-nowrap">1457 €</div>
