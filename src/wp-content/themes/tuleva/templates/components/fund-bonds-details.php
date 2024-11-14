@@ -31,7 +31,7 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
-                            <div>0,27%</div>
+                            <div>0,21%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold">
@@ -39,16 +39,10 @@
                                 <span
                                     class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
                                     data-placement="top"
-                                    title="<?php echo sprintf(
-                                        __("Starting from %s fund's management fee was changed and ongoing charges are %s%%. Ongoing charges based on expenses for year %d are %s%%. Ongoing charges may vary from year to year.", TEXT_DOMAIN),
-                                        "01.10.2023",
-                                        "0,38",
-                                        date("Y") - 1,
-                                        "0,40"
-                                    );  ?>"
+                                    title="<?php echo sprintf(__('Ongoing charges are determined by estimation because the management fee decreased during %s.', TEXT_DOMAIN), "2024"); ?>"
                                 ></span>
                             </div>
-                            <div>0,38%</div>
+                            <div>0,32%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
