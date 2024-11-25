@@ -1,8 +1,5 @@
 <div class="card calculator br-3">
     <div class="card-body p-2 second-pillar-payment-rate-calculator">
-        <h2 class="h5 m-0 mb-2 py-3 text-navy text-center">
-            <?php _e('How much tax benefit will I get?', TEXT_DOMAIN); ?>
-        </h2>
         <div class="card bg-gray-2 p-3 br-2">
             <div class="form-group row">
                 <label for="monthlyWage" class="col-sm-6 col-form-label vertical-align pr-0">
