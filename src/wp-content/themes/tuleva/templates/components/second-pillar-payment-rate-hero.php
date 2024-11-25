@@ -4,6 +4,39 @@
             <div class="row align-items-center py-5">
                 <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
                     <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
+
+                    <?php
+                    $current_timestamp = time() * 1000; // Current time in milliseconds
+                    $november_30_end_of_day = 1733003999000; // Timestamp for 30 Nov 2024, 23:59:59
+
+                    if ($current_timestamp < $november_30_end_of_day) { ?>
+                        <div class="counter-small d-flex justify-content-center justify-content-lg-start mb-5">
+                            <div class="d-flex flex-row">
+                                <div class="counter-block">
+                                    <div class="counter-number">
+                                        <div id="days-first-number">&nbsp;</div>
+                                        <div id="days-last-number">&nbsp;</div>
+                                    </div>
+                                    <div class="counter-label mt-2 mt-md-3"><?php _e('Days', TEXT_DOMAIN) ?></div>
+                                </div>
+                                <div class="counter-block">
+                                    <div class="counter-number">
+                                        <div id="hours-first-number">&nbsp;</div>
+                                        <div id="hours-last-number">&nbsp;</div>
+                                    </div>
+                                    <div class="counter-label mt-2 mt-md-3"><?php _e('Hours', TEXT_DOMAIN) ?></div>
+                                </div>
+                                <div class="counter-block">
+                                    <div class="counter-number">
+                                        <div id="minutes-first-number">&nbsp;</div>
+                                        <div id="minutes-last-number">&nbsp;</div>
+                                    </div>
+                                    <div class="counter-label mt-2 mt-md-3"><?php _e('Minutes', TEXT_DOMAIN) ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+
                     <?php if (get_sub_field('quote')) { ?>
                         <p class="lead text-navy mb-3"><?php echo do_shortcode(get_sub_field('quote')); ?></p>
                         <?php if (get_sub_field('source')) { ?>

@@ -505,7 +505,7 @@ $(document).ready(function ($) {
             updateClock();
         },
         initCountdownTimerFull = function () {
-            var july31midnight = 1722459599000;
+            var november31Midnight = 1733003999000;
             var days = 0, hours = 0, minutes = 0, seconds = 0;
             var daysFirstNumber = document.getElementById('days-first-number');
             var daysLastNumber = document.getElementById('days-last-number');
@@ -517,7 +517,7 @@ $(document).ready(function ($) {
             if (!daysFirstNumber) {
                 return
             }
-            var countdownTimer = countdown(july31midnight, function (ts) {
+            var countdownTimer = countdown(november31Midnight, function (ts) {
                 if (ts.end > ts.start) {
                     daysFirstNumber.innerHTML = '0';
                     daysLastNumber.innerHTML = '0';

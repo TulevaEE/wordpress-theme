@@ -15638,17 +15638,10 @@ sup {
 .counter-block {
   margin-right: 24px;
 }
-@media (max-width: 767px) {
-  .counter-block {
-    margin-right: 8px;
-  }
-}
-
 .counter-block:last-child {
   margin: 0;
 }
-
-.counter-number {
+.counter-block .counter-number {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15663,8 +15656,7 @@ sup {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-.counter-number > div {
+.counter-block .counter-number > div {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-variant-numeric: lining-nums;
   font-size: 4rem;
@@ -15692,44 +15684,63 @@ sup {
   -ms-flex-pack: center;
   justify-content: center;
 }
-@media (max-width: 767px) {
-  .counter-number > div {
-    font-size: 35px;
-    width: 43px;
-    height: 56px;
-  }
-}
-
-.counter-number > div:nth-child(1) {
+.counter-block .counter-number > div:nth-child(1) {
   margin-right: 4px;
   border-radius: 16px 8px 8px 16px;
 }
-@media (max-width: 767px) {
-  .counter-number > div:nth-child(1) {
-    margin-right: 2px;
-    border-radius: 8px 4px 4px 8px;
-  }
-}
-
-.counter-number > div:nth-child(2) {
+.counter-block .counter-number > div:nth-child(2) {
   border-radius: 8px 16px 16px 8px;
 }
-@media (max-width: 767px) {
-  .counter-number > div:nth-child(2) {
-    border-radius: 4px 8px 8px 4px;
-  }
-}
-
-.counter-label {
+.counter-block .counter-label {
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: #002f63;
 }
+
 @media (max-width: 767px) {
-  .counter-label {
+  .counter-block {
+    margin-right: 8px;
+  }
+  .counter-block:last-child {
+    margin: 0;
+  }
+  .counter-block .counter-number > div {
+    font-size: 35px;
+    width: 43px;
+    height: 56px;
+    margin-right: 2px;
+  }
+  .counter-block .counter-number > div:nth-child(1) {
+    border-radius: 8px 4px 4px 8px;
+  }
+  .counter-block .counter-number > div:nth-child(2) {
+    border-radius: 4px 8px 8px 4px;
+  }
+  .counter-block .counter-label {
     font-size: 1.25rem;
   }
+}
+.counter-small .counter-block {
+  margin-right: 8px;
+}
+.counter-small .counter-block:last-child {
+  margin: 0;
+}
+.counter-small .counter-block .counter-number > div {
+  font-size: 35px;
+  width: 43px;
+  height: 56px;
+  margin-right: 2px;
+}
+.counter-small .counter-block .counter-number > div:nth-child(1) {
+  border-radius: 8px 4px 4px 8px;
+}
+.counter-small .counter-block .counter-number > div:nth-child(2) {
+  border-radius: 4px 8px 8px 4px;
+}
+.counter-small .counter-block .counter-label {
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=main.css.map */
