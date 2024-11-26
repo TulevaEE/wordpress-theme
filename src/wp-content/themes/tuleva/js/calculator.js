@@ -1,4 +1,5 @@
 var averageFundFee = 0.86 / 100;
+var tulevaFee = 0.0032;
 
 var format = function (num) {
     if (!window.LANGCODE) {
@@ -94,7 +95,6 @@ var calculateSaving = function () {
             65 - Math.max(0, Math.min(age, 65))
         )
     );
-    var tulevaFee = 0.0035;
     var totalSavingWithTuleva = Math.ceil(
         (grossWage *
             0.06 *
