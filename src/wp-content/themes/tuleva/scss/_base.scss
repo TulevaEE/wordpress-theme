@@ -40,6 +40,12 @@ table {
     border-collapse: collapse;
 }
 
+img,
+figure {
+    max-width: 100%;
+    height: auto;
+}
+
 .list-style-checkmark,
 .list-style-cross,
 .list-style-plussign,
