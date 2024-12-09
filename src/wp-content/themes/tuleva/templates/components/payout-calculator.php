@@ -42,6 +42,6 @@
                 </div>
             </div>
         </div>
-        <p class="m-0 mt-2 p-3 small text-secondary text-center"><?php _e('Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja saad neid <strong>19 aasta jooksul</strong> (tänase 65-aastase statistliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, kuid see ei taga sarnast tootlust tulevikus.', TEXT_DOMAIN); ?></p>
+        <p class="m-0 mt-2 p-3 small text-secondary text-center"><?php _e('The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed.', TEXT_DOMAIN); ?></p>
     </div>
 </div>

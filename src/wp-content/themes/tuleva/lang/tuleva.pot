@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-09T14:56:33+00:00\n"
+"POT-Creation-Date: 2024-12-09T15:08:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1176,7 +1176,7 @@ msgid "You will receive in total"
 msgstr ""
 
 #: templates/components/payout-calculator.php:45
-msgid "Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja saad neid <strong>19 aasta jooksul</strong> (tänase 65-aastase statistliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, kuid see ei taga sarnast tootlust tulevikus."
+msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
 msgstr ""
 
 #: templates/components/payout-hero.php:48
