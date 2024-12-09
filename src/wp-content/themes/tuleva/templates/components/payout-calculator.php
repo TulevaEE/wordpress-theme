@@ -42,6 +42,6 @@
                 </div>
             </div>
         </div>
-        <p class="m-0 mt-2 p-3 small text-secondary text-center">Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja <strong>19 aasta jooksul</strong>. Sel juhul on sinu igakuised fondipensioni väljamaksed <strong class="text-green-muted fw-medium">tulumaksuvabad</strong>. Aktsiaturu ajalooline tootlus on 7%, kuid see ei taga sarnast tootlust tulevikus.</p>
+        <p class="m-0 mt-2 p-3 small text-secondary text-center"><?php _e('Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja saad neid <strong>19 aasta jooksul</strong> (tänase 65-aastase statistliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, kuid see ei taga sarnast tootlust tulevikus.', TEXT_DOMAIN); ?></p>
     </div>
 </div>
