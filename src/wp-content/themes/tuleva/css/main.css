@@ -841,9 +841,6 @@ hr {
 small,
 .small,
 .tooltip .tooltip-inner,
-.tooltip .tooltip-inner p,
-.tooltip .tooltip-inner ul,
-.tooltip .tooltip-inner ol,
 .footnote {
   font-size: 80%;
   font-weight: 400;
@@ -12270,9 +12267,6 @@ a:hover {
 small,
 .small,
 .tooltip .tooltip-inner,
-.tooltip .tooltip-inner p,
-.tooltip .tooltip-inner ul,
-.tooltip .tooltip-inner ol,
 .footnote {
   font-size: 0.875rem;
   line-height: 1.4285;
@@ -13878,11 +13872,15 @@ sup {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
   text-align: left;
 }
+.tooltip .tooltip-inner p, .tooltip .tooltip-inner ul, .tooltip .tooltip-inner ol {
+  font-size: inherit;
+  line-height: inherit;
+}
 .tooltip .tooltip-inner p {
-  margin: 0;
+  margin: 0 !important;
 }
 .tooltip .tooltip-inner p + p {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem !important;
 }
 
 .icon-info,
