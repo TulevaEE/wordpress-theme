@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2024-12-10T15:45:23+00:00\n"
-"PO-Revision-Date: 2024-12-10 19:44+0200\n"
+"PO-Revision-Date: 2024-12-10 19:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1747,9 +1747,9 @@ msgid "The range shows how much you will receive at the beginning of the payout 
 msgstr "Vahemik näitab, kui palju laekub sulle väljamaksete perioodi alguses ja kuidas see muutub perioodi lõpuks."
 
 #: templates/components/payout-calculator.php:35
-msgid "If your pension assets increase <strong>due to positive returns</strong>, the monthly amount you receive will also increase."
-msgstr "Kui sinu pensionivara kasvab <strong>tänu postiivsele tootlusele</strong>, kasvab ka sulle igakuiselt laekuv summa."
+msgid "If your pension assets increase due to positive returns, the monthly amount you receive will also increase."
+msgstr "Kui sinu pensionivara kasvab tänu postiivsele tootlusele, kasvab ka sulle igakuiselt laekuv summa."
 
 #: templates/components/payout-calculator.php:39
-msgid "If your pension assets decrease <strong>due to negative returns</strong>, the monthly amount you receive will also decrease."
-msgstr "Kui sinu pensionivara kahaneb <strong>negatiivse tootluse tõttu</strong>, kahaneb ka sulle igakuiselt laekuv summa."
+msgid "If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease."
+msgstr "Kui sinu pensionivara kahaneb negatiivse tootluse tõttu, kahaneb ka sulle igakuiselt laekuv summa."
