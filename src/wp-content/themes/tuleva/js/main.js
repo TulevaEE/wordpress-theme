@@ -368,16 +368,20 @@ $(document).ready(function ($) {
                 $calculator.find('.receiveMonthlyDec').addClass('d-none');
                 $calculator.find('.receiveMonthlyInc').addClass('d-none');
                 $calculator.find('.receiveMonthly').removeClass('d-none');
-            }
-            if (Math.round(recurringMonthlyFirstYear) < Math.round(recurringMonthlyLastYear)) {
+                $calculator.find('.increasingTooltip').addClass('d-none');
+                $calculator.find('.decreasingTooltip').addClass('d-none');
+            } else if (Math.round(recurringMonthlyFirstYear) < Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('.receiveMonthlyDec').addClass('d-none');
                 $calculator.find('.receiveMonthlyInc').removeClass('d-none');
                 $calculator.find('.receiveMonthly').addClass('d-none');
-            }
-            if (Math.round(recurringMonthlyFirstYear) > Math.round(recurringMonthlyLastYear)) {
+                $calculator.find('.increasingTooltip').removeClass('d-none');
+                $calculator.find('.decreasingTooltip').addClass('d-none');
+            } else if (Math.round(recurringMonthlyFirstYear) > Math.round(recurringMonthlyLastYear)) {
                 $calculator.find('.receiveMonthlyDec').removeClass('d-none');
                 $calculator.find('.receiveMonthlyInc').addClass('d-none');
                 $calculator.find('.receiveMonthly').addClass('d-none');
+                $calculator.find('.increasingTooltip').addClass('d-none');
+                $calculator.find('.decreasingTooltip').removeClass('d-none');
             }
 
             $calculator.find('.singlePayoutMonthly').text(`${format(Math.round(lumpSumMonthly))} €`);

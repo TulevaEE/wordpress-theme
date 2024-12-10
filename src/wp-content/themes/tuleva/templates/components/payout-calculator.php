@@ -28,7 +28,17 @@
         <div class="d-flex flex-column flex-sm-row m-0">
             <div class="col-12 col-sm-6 px-0 pr-sm-1">
                 <div class="card bg-blue-2 mt-2 p-3 py-4 text-center text-nowrap br-2">
-                    <span class="text-navy fw-medium"><?php _e('You will receive monthly', TEXT_DOMAIN); ?></span>
+                    <span class="text-navy fw-medium">
+                        <?php _e('You will receive monthly', TEXT_DOMAIN); ?><span
+                            class="increasingTooltip inline-help ml-1 d-none"
+                            tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                            title="<?php _e('If your pension assets continue to generate returns for 19 years, the monthly amount you receive will also increase.', TEXT_DOMAIN); ?>"
+                        ></span><span
+                            class="decreasingTooltip inline-help ml-1 d-none"
+                            tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                            title="<?php _e('If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease.', TEXT_DOMAIN); ?>"
+                        ></span>
+                    </span>
                     <div class="fs-3 mt-1 text-blue fw-bold lh-sm">
                         <span class="recurringPayoutMonthly1">88</span><span class="recurringArrow d-none ff-system fw-normal lh-1">&thinsp;→&thinsp;</span><span class="recurringPayoutMonthly2 d-none">88</span>
                         <span class="recurringEuro"> €</span>
