@@ -32,11 +32,11 @@
                         <?php _e('You will receive monthly', TEXT_DOMAIN); ?><span
                             class="increasingTooltip inline-help ml-2 d-none"
                             tabindex="0" data-toggle="tooltip" data-placement="bottom" data-html="true"
-                            title="<p><?php _e('If your pension assets increase due to positive returns, the monthly amount you receive will also increase.', TEXT_DOMAIN); ?></p><p><?php _e('The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period.', TEXT_DOMAIN); ?></p>"
+                            title="<p><?php _e('If your pension assets increase <strong>due to positive returns</strong>, the monthly amount you receive will also increase.', TEXT_DOMAIN); ?></p><p><?php _e('The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period.', TEXT_DOMAIN); ?></p>"
                         ></span><span
                             class="decreasingTooltip inline-help ml-2 d-none"
                             tabindex="0" data-toggle="tooltip" data-placement="bottom" data-html="true"
-                            title="<p><?php _e('If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease.', TEXT_DOMAIN); ?></p><p><?php _e('The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period.', TEXT_DOMAIN); ?></p>"
+                            title="<p><?php _e('If your pension assets decrease <strong>due to negative returns</strong>, the monthly amount you receive will also decrease.', TEXT_DOMAIN); ?></p><p><?php _e('The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period.', TEXT_DOMAIN); ?></p>"
                         ></span>
                     </span>
                     <div class="fs-3 mt-1 text-blue fw-bold lh-sm">
