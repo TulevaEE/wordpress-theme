@@ -7,7 +7,7 @@
                 </label>
                 <div class="col-sm-6">
                     <div class="input-group">
-                        <input type="text" class="form-control form-control-lg text-right" id="portfolioSum"
+                        <input type="text" class="portfolioSum form-control form-control-lg text-right"
                                placeholder="20 000" inputmode="numeric" pattern="\d{1,7}"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-addon" style="min-width: 70px"><?php _e('euros', TEXT_DOMAIN); ?></div>
@@ -19,7 +19,7 @@
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6 return-rate">
-                    <input type="range" class="custom-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
+                    <input type="range" class="returnRate custom-range" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span class="historic-return-rate small text-secondary"><?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?></span>
                 </div>
@@ -30,15 +30,15 @@
                 <div class="card bg-blue-2 mt-2 p-3 py-4 text-center text-nowrap br-2">
                     <span class="text-navy fw-medium"><?php _e('You will receive monthly', TEXT_DOMAIN); ?></span>
                     <div class="fs-3 mt-1 text-blue fw-bold lh-sm">
-                        <span id="recurringPayoutMonthly1">88</span><span id="recurringArrow" class="d-none ff-system fw-normal lh-1">&thinsp;→&thinsp;</span><span id="recurringPayoutMonthly2" class="d-none">88</span>
-                        <span id="recurringEuro"> €</span>
+                        <span class="recurringPayoutMonthly1">88</span><span class="recurringArrow d-none ff-system fw-normal lh-1">&thinsp;→&thinsp;</span><span class="recurringPayoutMonthly2 d-none">88</span>
+                        <span class="recurringEuro"> €</span>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 px-0 pl-sm-1">
                 <div class="card bg-blue-2 mt-2 p-3 py-4 text-center br-2">
                     <span class="text-navy fw-medium"><?php _e('You will receive in total', TEXT_DOMAIN); ?></span>
-                    <div class="fs-3 mt-1 text-blue fw-bold lh-sm" id="recurringPayoutSum">20 000 €</div>
+                    <div class="recurringPayoutSum fs-3 mt-1 text-blue fw-bold lh-sm">20 000 €</div>
                 </div>
             </div>
         </div>

@@ -304,27 +304,29 @@ $(document).ready(function ($) {
             });
         },
         initPayoutCalculator = function () {
-            var $input = $('.payout-calculator input');
-            $input.on('change', calculatePayout);
-            $input.on('keyup', calculatePayout);
-            var $customRange = $('.payout-calculator .custom-range');
+            $('.payout-calculator').each(function () {
+                var $calculator = $(this);
 
-            $customRange.on('input', function () {
-                calculatePayout();
+                $calculator.find('input').on('change keyup', function () {
+                    calculatePayout($calculator);
+                });
+
+                $calculator.find('.custom-range').on('input', function () {
+                    calculatePayout($calculator);
+                });
+
+                calculatePayout($calculator);
             });
-            calculatePayout();
         },
-        calculatePayout = function () {
-            var $calculator = $('.payout-calculator');
-
-            var portfolioSum = parseInt($calculator.find('#portfolioSum').val());
+        calculatePayout = function ($calculator) {
+            var portfolioSum = parseInt($calculator.find('.portfolioSum').val());
             portfolioSum = isNaN(portfolioSum) ? 20000 : portfolioSum;
 
             // Elada jäänud aastad 65-aastastel
             // source: https://www.stat.ee/et/avasta-statistikat/valdkonnad/heaolu/tervis/oodatav-eluiga
             var pensionYears = 19;
 
-            var returnRate = Number($calculator.find('#returnRate').val()) / 100;
+            var returnRate = Number($calculator.find('.returnRate').val()) / 100;
 
             var lumpSumIncomeTax = 0.1;
             var recurringPaymentIncomeTax = pensionYears < 19 ? 0.1 : 0;
@@ -349,44 +351,38 @@ $(document).ready(function ($) {
 
             var recurringMonthlyFirstYear = portfolioSum * (1 - recurringPaymentIncomeTax) / pensionYears / 12;
 
-            if (!$calculator.length) {
-                return;
-            }
-
-            $calculator.find('#recurringPayoutSum').text(`${format(Math.round(recurringTotal))} €`);
-            $calculator.find('#singlePayoutSum').text(`${format(Math.round(lumpSumTotal))} €`);
-
-            $calculator.find('#recurringPayoutMonthly1').text(format(Math.round(recurringMonthlyFirstYear)));
+            $calculator.find('.recurringPayoutSum').text(`${format(Math.round(recurringTotal))} €`);
+            $calculator.find('.singlePayoutSum').text(`${format(Math.round(lumpSumTotal))} €`);
+            $calculator.find('.recurringPayoutMonthly1').text(format(Math.round(recurringMonthlyFirstYear)));
 
             if (Math.round(recurringMonthlyFirstYear) !== Math.round(recurringMonthlyLastYear)) {
-                $calculator.find('#recurringArrow').removeClass('d-none');
-                $calculator.find('#recurringPayoutMonthly2').removeClass('d-none')
+                $calculator.find('.recurringArrow').removeClass('d-none');
+                $calculator.find('.recurringPayoutMonthly2').removeClass('d-none')
                     .text(format(Math.round(recurringMonthlyLastYear)));
             } else {
-                $calculator.find('#recurringArrow').addClass('d-none');
-                $calculator.find('#recurringPayoutMonthly2').addClass('d-none');
+                $calculator.find('.recurringArrow').addClass('d-none');
+                $calculator.find('.recurringPayoutMonthly2').addClass('d-none');
             }
 
             if (Math.round(recurringMonthlyFirstYear) === Math.round(recurringMonthlyLastYear)) {
-                $calculator.find('#receiveMonthlyDec').addClass('d-none');
-                $calculator.find('#receiveMonthlyInc').addClass('d-none');
-                $calculator.find('#receiveMonthly').removeClass('d-none');
+                $calculator.find('.receiveMonthlyDec').addClass('d-none');
+                $calculator.find('.receiveMonthlyInc').addClass('d-none');
+                $calculator.find('.receiveMonthly').removeClass('d-none');
             }
             if (Math.round(recurringMonthlyFirstYear) < Math.round(recurringMonthlyLastYear)) {
-                $calculator.find('#receiveMonthlyDec').addClass('d-none');
-                $calculator.find('#receiveMonthlyInc').removeClass('d-none');
-                $calculator.find('#receiveMonthly').addClass('d-none');
+                $calculator.find('.receiveMonthlyDec').addClass('d-none');
+                $calculator.find('.receiveMonthlyInc').removeClass('d-none');
+                $calculator.find('.receiveMonthly').addClass('d-none');
             }
             if (Math.round(recurringMonthlyFirstYear) > Math.round(recurringMonthlyLastYear)) {
-                $calculator.find('#receiveMonthlyDec').removeClass('d-none');
-                $calculator.find('#receiveMonthlyInc').addClass('d-none');
-                $calculator.find('#receiveMonthly').addClass('d-none');
+                $calculator.find('.receiveMonthlyDec').removeClass('d-none');
+                $calculator.find('.receiveMonthlyInc').addClass('d-none');
+                $calculator.find('.receiveMonthly').addClass('d-none');
             }
 
-            $calculator.find('#singlePayoutMonthly').text(`${format(Math.round(lumpSumMonthly))} €`);
-
-            $calculator.find('#recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
-            $calculator.find('#singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
+            $calculator.find('.singlePayoutMonthly').text(`${format(Math.round(lumpSumMonthly))} €`);
+            $calculator.find('.recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
+            $calculator.find('.singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
         },
         initAllCustomRangeSliders = function () {
             $('.custom-range').each(function () {
