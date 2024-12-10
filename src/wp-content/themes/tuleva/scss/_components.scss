@@ -1313,7 +1313,16 @@
         //box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.08);
         box-shadow: $dropdown-box-shadow;
         text-align: left;
-        @extend .small;
+
+        &, p, ul, ol {
+            @extend .small;
+        }
+        p {
+            margin: 0;
+            & + p {
+                margin-top: .5rem;
+            }
+        }
     }
 }
 
