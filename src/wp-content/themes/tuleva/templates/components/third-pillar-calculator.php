@@ -119,7 +119,7 @@ function get_translated_link() {
                     </div>
                 </div>
 
-                <div class="mt-2 p-3 py-4 card bg-blue-2 br-2 text-navy">
+                <div class="mt-2 p-3 py-4 card br-2 text-navy">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="mr-3">
                             <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
@@ -141,7 +141,7 @@ function get_translated_link() {
                         <div class="fs-2 lh-1 fw-bold text-nowrap"><span id="monthlyAmount">300</span> €</div>
                     </div>
                 </div>
-                
+
                 <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>" class="btn btn-primary btn-lg btn-block mt-2">
                     <?php _e('Make a contribution', TEXT_DOMAIN); ?>
                 </a>
