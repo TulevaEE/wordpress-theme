@@ -1,4 +1,4 @@
-# Copyright (C) 2024 
+# Copyright (C) 2025 
 # This file is distributed under the same license as the Tuleva theme.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-10T17:49:58+00:00\n"
+"POT-Creation-Date: 2025-01-06T15:43:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -568,18 +568,6 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-third-details.php:107
 msgid "%s tons / $1M turnover per year"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:110
-#: templates/components/fund-stocks-details.php:110
-#: templates/components/fund-third-details.php:110
-msgid "Share of investments with increased negative impact in the equity portfolio"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:112
-#: templates/components/fund-stocks-details.php:112
-#: templates/components/fund-third-details.php:112
-msgid "Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms (%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal (%s%%); Oil Sands (%s%%)"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:5
@@ -1332,11 +1320,11 @@ msgid "Your II pillar contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:37
-msgid "Net salary from 2025"
+msgid "Net salary from 2026"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:40
-msgid "Starting from 2025, the income tax will increase to 22%. The tax-free allowance is up to 654 euros per month but reduces as income grows."
+msgid "In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%."
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator-simple.php:47

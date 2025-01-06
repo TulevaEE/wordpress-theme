@@ -200,94 +200,34 @@ $(document).ready(function ($) {
         calculateSecondPillarPaymentRate = function () {
             var $calculator = $('.second-pillar-payment-rate-calculator');
 
-            var age = parseInt($calculator.find('#yourAge').val());
-            age = isNaN(age) ? 30 : age;
-
             var grossSalary = parseInt($calculator.find('#monthlyWage').val());
             grossSalary = isNaN(grossSalary) ? 2000 : grossSalary;
 
+            // 2, 4 or 6
             var pillarContribution = parseInt($calculator.find('input[name="pillarContribution"]:checked').val());
-            var returnRate = Number($calculator.find('#returnRate').val());
 
             var unemploymentInsurance = 0.016 * grossSalary;
-            var secondPillarContribution2Percent = 0.02 * grossSalary;
 
-            //var taxFreeWage = 700;
-            var incomeTaxSavings = (pillarContribution - secondPillarContribution2Percent) * 0.22
+            // 2026
+            var taxFreeWage = 700;
 
-            // 2024
-            var taxFreeWage = getTaxFreeWage(grossSalary * 12) / 12;
-            var incomeTax2024 =
-                Math.max((grossSalary - unemploymentInsurance - secondPillarContribution2Percent - taxFreeWage) * 0.20, 0);
-            var netSalary2024 = grossSalary - unemploymentInsurance - secondPillarContribution2Percent - incomeTax2024;
-
-            // 2025 at your selected contribution rate
+            // 2026 at your selected contribution rate
             var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
+            var incomeTaxRate = 0.22;
             var incomeTax =
-                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * 0.22, 0);
-            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
+                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * incomeTaxRate, 0);
+            var nationalSecurityTax = 0.02 * grossSalary;
+            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax - nationalSecurityTax;
 
-            // 2025 at 0% contribution rate
-            var incomeTax0Percent = Math.max((grossSalary - unemploymentInsurance - taxFreeWage) * 0.22, 0);
-
-            // total 2nd pillar contribution per month
-            var governmentContribution = 0.04 * grossSalary;
-            var monthlyContribution = yourSecondPillarContribution + governmentContribution;
-            var monthlyContribution2Percent = secondPillarContribution2Percent + governmentContribution;
-            var monthlyContributionDiff = monthlyContribution - monthlyContribution2Percent;
-            var monthlyContributionYouDiff = yourSecondPillarContribution - secondPillarContribution2Percent;
+            // 2026 at 0% contribution rate
+            var incomeTax0Percent = Math.max((grossSalary - unemploymentInsurance - taxFreeWage) * incomeTaxRate, 0);
 
             var monthlyTaxWin = Math.max((incomeTax0Percent - incomeTax), 0);
             var yearlyTaxWin = monthlyTaxWin * 12;
 
-            var netSalary2025vs2024 = netSalary - netSalary2024;
-
-            var years = 65 - age;
-
-            var savingSum = !returnRate ?
-                monthlyContributionDiff * 12 * years :
-                monthlyContributionDiff * 12 * (Math.pow(1 + returnRate / 100, years) - 1) / (returnRate / 100);
-
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
-            $calculator.find('#netWage2024').text(`${format(netSalary2024)} €`);
-
-            if (Math.round(netSalary2025vs2024) < 0) {
-                $calculator.find('#netWageDiff').text(`${format(netSalary2025vs2024).toString().replace('-', '−')} €`);
-                $calculator.find('#netWageDiff').removeClass('text-success');
-                $calculator.find('#netWageDiff').addClass('text-secondary');
-            } else {
-                $calculator.find('#netWageDiff').text(`+${format(netSalary2025vs2024)} €`);
-                $calculator.find('#netWageDiff').removeClass('text-secondary');
-                $calculator.find('#netWageDiff').addClass('text-success');
-            }
-
-            $calculator.find('#monthlyContribution').text(`${format(monthlyContribution)} €`);
             $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
-            $calculator.find('#monthlyContributionYouDifference').text(`${format(monthlyContributionYouDiff)} €`);
-            $calculator.find('#monthlyContributionGov').text(`${format(governmentContribution)} €`);
-
-            if (Math.round(yearlyTaxWin) > 0) {
-                $calculator.find('#yearlyTaxWin').text(`${format(yearlyTaxWin)} €`);
-                $calculator.find('#yearlyTaxWin').removeClass('d-none');
-                $calculator.find('#yearlyTaxWinZero').addClass('d-none');
-
-                $calculator.find('#monthlyTaxWin').text(`${format(monthlyTaxWin)} €`);
-                $calculator.find('.income-tax-savings').removeClass('d-none');
-            } else {
-                $calculator.find('#yearlyTaxWinZero').removeClass('d-none');
-                $calculator.find('#yearlyTaxWin').addClass('d-none');
-
-                $calculator.find('.income-tax-savings').addClass('d-none');
-            }
-
-            if (Math.round(savingSum) > 0) {
-                $calculator.find('#savingsSum').text(`+${format(savingSum)} €`);
-                $calculator.find('#savingsSum').removeClass('d-none');
-                $calculator.find('#savingsSumZero').addClass('d-none');
-            } else {
-                $calculator.find('#savingsSumZero').removeClass('d-none');
-                $calculator.find('#savingsSum').addClass('d-none');
-            }
+            $calculator.find('#yearlyTaxWin').text(`${format(yearlyTaxWin)} €`);
         },
         initSecondPillarPaymentRateCalculator = function () {
             var $input = $('.second-pillar-payment-rate-calculator input');

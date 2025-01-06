@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <?php get_template_part('templates/components/second-pillar-payment-rate-calculator-simple'); ?>
+                    <?php get_template_part('templates/components/second-pillar-payment-rate-calculator'); ?>
                 </div>
             </div>
         </div>
