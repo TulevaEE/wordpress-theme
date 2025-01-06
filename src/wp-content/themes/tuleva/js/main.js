@@ -197,6 +197,7 @@ $(document).ready(function ($) {
                 ev.preventDefault();
                 return false;
             });
+            calculateThirdPillarSavings();
         },
         calculateSecondPillarPaymentRate = function () {
             var $calculator = $('.second-pillar-payment-rate-calculator');
@@ -243,6 +244,7 @@ $(document).ready(function ($) {
             $customRange.on('input', function () {
                 calculateSecondPillarPaymentRate();
             });
+            calculateSecondPillarPaymentRate();
         },
         initPayoutCalculator = function () {
             $('.payout-calculator').each(function () {
