@@ -182,7 +182,8 @@ $(document).ready(function ($) {
                 wageTotal - taxFreeWage - deductions - taxReliefs, 0);
             var yearlyAmount = Math.min(0.15 * wageTotal, 6000, taxableWage);
             var monthlyAmount = yearlyAmount / 12;
-            var savingsSum = yearlyAmount * 0.2;
+            var incomeTaxRate = 0.22;
+            var savingsSum = yearlyAmount * incomeTaxRate;
 
             $calculator.find('#yearlyAmount').text(format(yearlyAmount));
             $calculator.find('#monthlyAmount').text(format(monthlyAmount));
