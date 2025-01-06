@@ -40,7 +40,7 @@
                         title="<?php _e('In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
-                <div id="netWage" class="lh-1 fw-medium text-nowrap">1457 €</div>
+                <div id="netWage" class="lh-1 fw-medium text-nowrap">1555 €</div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="mr-3">
