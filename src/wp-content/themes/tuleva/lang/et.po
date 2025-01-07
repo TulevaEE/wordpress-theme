@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-01-06T15:43:33+00:00\n"
-"PO-Revision-Date: 2025-01-06 18:18+0200\n"
+"PO-Revision-Date: 2025-01-07 15:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -140,32 +140,20 @@ msgstr "RSS voog"
 #: templates/components/calculator-cta.php:24
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:24
-msgid ""
-"The deadline for this fund exchange period is <b>March 31.</b> Switching "
-"funds is <b>free.</b>"
-msgstr ""
-"Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta."
-"</b>"
+msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
+msgstr "Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta.</b>"
 
 #: templates/components/calculator-cta.php:26
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:26
-msgid ""
-"The deadline for this fund exchange period is <b>July 31.</b> Switching "
-"funds is <b>free.</b>"
-msgstr ""
-"Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta."
-"</b>"
+msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
+msgstr "Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta.</b>"
 
 #: templates/components/calculator-cta.php:28
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:28
-msgid ""
-"The deadline for this fund exchange period is <b>November 30.</b> Switching "
-"funds is <b>free.</b>"
-msgstr ""
-"Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
-"<b>tasuta.</b>"
+msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
+msgstr "Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on <b>tasuta.</b>"
 
 #: templates/components/counter-hero.php:15
 #: templates/components/second-pillar-payment-rate-hero.php:20
@@ -228,47 +216,23 @@ msgstr "II sammas: Tuleva Maailma Aktsiate Pensionifond"
 
 #: templates/components/founder-stories.php:19
 #: templates/components/front-founders.php:21
-msgid ""
-"Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of "
-"creating a better pension fund. At first, Indrek politely listened to the "
-"idea and concluded that, yes, that is bad, but I do not have time to help "
-"here."
-msgstr ""
-"Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate pensionifondite "
-"loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et "
-"nojah, eks ta ole; kahjuks endal pole aega appi tulla."
+msgid "Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here."
+msgstr "Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate pensionifondite loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et nojah, eks ta ole; kahjuks endal pole aega appi tulla."
 
 #: templates/components/founder-stories.php:20
 #: templates/components/front-founders.php:23
-msgid ""
-"After a while, Indrek had a look at his pension account when opening his "
-"internet bank. What he saw, shocked him thoroughly. He called Tõnu and they "
-"decided to start working."
-msgstr ""
-"Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma "
-"pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule "
-"ja nad otsustasid tegutsema asuda."
+msgid "After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working."
+msgstr "Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule ja nad otsustasid tegutsema asuda."
 
 #: templates/components/founder-stories.php:39
 #: templates/components/front-founders.php:48
-msgid ""
-"One day, Annika did a few calculations and found, that she has paid 108 "
-"euros in fees for every 1000 euros she had on her pension account while her "
-"profit was only 77 euros."
-msgstr ""
-"Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud "
-"euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid "
-"77 eurot."
+msgid "One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros."
+msgstr "Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid 77 eurot."
 
 #: templates/components/founder-stories.php:40
 #: templates/components/front-founders.php:50
-msgid ""
-"When looking closer, she realised that banks have dealt similar injustice to "
-"hundreds of thousands of pension savers. It was clear to Annika that "
-"something had to be done."
-msgstr ""
-"Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade "
-"tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta."
+msgid "When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done."
+msgstr "Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta."
 
 #: templates/components/founder-stories.php:55
 #: templates/components/front-founders.php:65
@@ -281,37 +245,17 @@ msgstr "Tuleva asutajad"
 
 #: templates/components/founder-stories.php:59
 #: templates/components/front-founders.php:77
-msgid ""
-"One of the world’s most successful start-ups Transferwise was borne from "
-"similar frustration as Tuleva. Transferwise fights against hidden fees that "
-"banks charge for currency exchange and international payments. Tuleva fights "
-"against high management fees and hidden expenses of pension funds so that "
-"we, people of Estonia, could save money for ourselves, not banks."
-msgstr ""
-"Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest "
-"frustratsioonist nagu Tulevagi. Transferwise võitleb varjatud tasude vastu, "
-"mida pangad võtavad rahavahetuse ja rahvusvaheliste maksete eest. Tuleva "
-"võitleb kõrgete valitsemistasude ja pensionifondide varjatud kulude vastu, "
-"et meie, Eesti inimesed, saaksime raha koguda endale, mitte pankadele."
+msgid "One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks."
+msgstr "Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest frustratsioonist nagu Tulevagi. Transferwise võitleb varjatud tasude vastu, mida pangad võtavad rahavahetuse ja rahvusvaheliste maksete eest. Tuleva võitleb kõrgete valitsemistasude ja pensionifondide varjatud kulude vastu, et meie, Eesti inimesed, saaksime raha koguda endale, mitte pankadele."
 
 #: templates/components/founder-stories.php:60
 #: templates/components/front-founders.php:79
-msgid ""
-"It was logical that Kristo and Taavet wanted to support the initiative to "
-"make pensions better and be part of founding a start-up that belongs to "
-"people themselves."
-msgstr ""
-"Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks "
-"muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
-"ehitamisel."
+msgid "It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves."
+msgstr "Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles ehitamisel."
 
 #: templates/components/founder-stories.php:84
-msgid ""
-"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
-"primary\">See all founding members</a>"
-msgstr ""
-"<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
-"primary\">Vaata kõiki asutajaliikmeid</a>"
+msgid "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary\">See all founding members</a>"
+msgstr "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary\">Vaata kõiki asutajaliikmeid</a>"
 
 #: templates/components/front-hero/calculator.php:6
 msgid "If you're"
@@ -363,22 +307,12 @@ msgid "Cost of high fees"
 msgstr "Kõrgete tasude kulu"
 
 #: templates/components/front-proposal.php:7
-msgid ""
-"Tuleva is a growing mutual company. Born as a citizens’s initiative, it has "
-"%s owners or members."
-msgstr ""
-"Tuleva on kodanikualgatusena sündinud kasvav ühistuline ettevõte, millel on "
-"täna %s omanikku ehk liiget."
+msgid "Tuleva is a growing mutual company. Born as a citizens’s initiative, it has %s owners or members."
+msgstr "Tuleva on kodanikualgatusena sündinud kasvav ühistuline ettevõte, millel on täna %s omanikku ehk liiget."
 
 #: templates/components/front-proposal.php:10
-msgid ""
-"If you like Tuleva’s goals, want to support reaching them and want to "
-"benefit as an owner from everything Tuleva does in the future, then come and "
-"become a Tuleva member."
-msgstr ""
-"Kui sulle Tuleva eesmärgid meeldivad, tahad toetada nende saavutamist ja "
-"omanikuna kasu saada kõigest, mida Tuleva edaspidi ette võtab, kutsume ka "
-"sind Tuleva liikmeks astuma."
+msgid "If you like Tuleva’s goals, want to support reaching them and want to benefit as an owner from everything Tuleva does in the future, then come and become a Tuleva member."
+msgstr "Kui sulle Tuleva eesmärgid meeldivad, tahad toetada nende saavutamist ja omanikuna kasu saada kõigest, mida Tuleva edaspidi ette võtab, kutsume ka sind Tuleva liikmeks astuma."
 
 #: templates/components/front-proposal.php:17
 msgid "Become a member and choose Tuleva pension fund"
@@ -393,17 +327,11 @@ msgid "Members can earn dividends"
 msgstr "Liikmel on võimalik saada dividendi"
 
 #: templates/components/front-proposal.php:20
-msgid ""
-"Tuleva liikmed võivad saada liikmeboonust. Liikmeboonus on omanikutulu, mida "
-"saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud "
-"Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule "
-"kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest."
+msgid "Tuleva liikmed võivad saada liikmeboonust. Liikmeboonus on omanikutulu, mida saavad igal aastal kõik Tuleva liikmed, kes on oma II samba vara toonud Tuleva pensionifondidesse. Igal aastal kanname Tuleva liikme isiklikule kapitalikontole 0,05% tema Tuleva pensionifondi kogunenud osakute väärtusest."
 msgstr ""
 
 #: templates/components/front-proposal.php:21
-msgid ""
-"You support Tuleva development plans and help to improve Estonian pension "
-"system"
+msgid "You support Tuleva development plans and help to improve Estonian pension system"
 msgstr "Toetad Tuleva arengut ja aitad teha Eesti pensionisüsteemi paremaks"
 
 #: templates/components/front-proposal.php:27
@@ -415,12 +343,8 @@ msgid "Simply choose Tuleva pension fund"
 msgstr "Vali lihtsalt Tuleva pensionifond"
 
 #: templates/components/front-proposal.php:35
-msgid ""
-"Your save for your pension with a low-cost pension fund where owners care "
-"about your returns not bank’s."
-msgstr ""
-"Kogud pensioni madalate kuludega pensionifondis, mille omanikud hoolivad "
-"sinu, mitte panga vara kasvust."
+msgid "Your save for your pension with a low-cost pension fund where owners care about your returns not bank’s."
+msgstr "Kogud pensioni madalate kuludega pensionifondis, mille omanikud hoolivad sinu, mitte panga vara kasvust."
 
 #: templates/components/front-proposal.php:36
 msgid "Three times lower than average management fee"
@@ -439,12 +363,8 @@ msgid "<a class=\"link\" href=\"/en/funds/\">Learn about the funds</a>"
 msgstr "<a class=\"link\" href=\"/fondid/\">Tutvu fondidega</a>"
 
 #: templates/components/front-proposal.php:45
-msgid ""
-"<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the "
-"fund</a>"
-msgstr ""
-"<a class=\"link\" href=\"/kuidas-tuua-pension-tulevasse/\">Fondivahetuse "
-"juhend</a>"
+msgid "<a class=\"link\" href=\"/en/transfer-pension-tuleva/\">How to change the fund</a>"
+msgstr "<a class=\"link\" href=\"/kuidas-tuua-pension-tulevasse/\">Fondivahetuse juhend</a>"
 
 #: templates/components/fund-bonds-details.php:7
 #: templates/components/fund-stocks-details.php:7
@@ -496,12 +416,8 @@ msgstr "Kogukulu määr"
 #: templates/components/fund-bonds-details.php:42
 #: templates/components/fund-stocks-details.php:42
 #: templates/components/fund-third-details.php:42
-msgid ""
-"Ongoing charges are determined by estimation because the management fee "
-"decreased during %s."
-msgstr ""
-"Jooksvad tasud on kindlaks määratud hinnanguliselt, sest %s. jooksul alanes "
-"fondi valitsemistasu."
+msgid "Ongoing charges are determined by estimation because the management fee decreased during %s."
+msgstr "Jooksvad tasud on kindlaks määratud hinnanguliselt, sest %s. jooksul alanes fondi valitsemistasu."
 
 #: templates/components/fund-bonds-details.php:48
 #: templates/components/fund-stocks-details.php:48
@@ -598,12 +514,8 @@ msgstr "Jätkusuutlikkus"
 #: templates/components/fund-bonds-details.php:83
 #: templates/components/fund-stocks-details.php:83
 #: templates/components/fund-third-details.php:83
-msgid ""
-"Non-consideration of adverse impacts of investment decisions on "
-"sustainability factors"
-msgstr ""
-"Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju "
-"mittearvestamine"
+msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
 
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-stocks-details.php:86
@@ -669,35 +581,23 @@ msgstr "Sobib sulle, kui"
 
 #: templates/components/fund-bonds-header.php:20
 msgid "you have less than 10 years till retirement"
-msgstr ""
-"sul on pensionieani jäänud <span class=\"text-highlight\">vähem kui 10 "
-"aastat</span>"
+msgstr "sul on pensionieani jäänud <span class=\"text-highlight\">vähem kui 10 aastat</span>"
 
 #: templates/components/fund-bonds-header.php:21
 msgid "a long-term stable result is more important to you"
 msgstr "sulle on olulisem pikaajaline stabiilne tulemus"
 
 #: templates/components/fund-bonds-header.php:25
-msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
-msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
+msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
+msgstr "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
 
 #: templates/components/fund-calculator.php:13
 msgid "Age: 28"
 msgstr "Vanus: 28"
 
 #: templates/components/fund-calculator.php:19
-msgid ""
-"Kristi brought her II pillar assets and future contributions to Tuleva "
-"pension fund. Thanks to lower management fee, Kristi saves during her work "
-"life"
-msgstr ""
-"Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha "
-"Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule tööelu "
-"jooksul kokku"
+msgid "Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life"
+msgstr "Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule tööelu jooksul kokku"
 
 #: templates/components/fund-counter.php:7
 msgid "3600"
@@ -725,99 +625,44 @@ msgid "Lower costs create better chances for growth"
 msgstr "Madalad kulud loovad parimad eeldused kasvuks"
 
 #: templates/components/fund-fees.php:14
-msgid ""
-"The lower the costs of the pension fund, the better chances are that your "
-"money will grow the most by the time you retire. We at Tuleva did not "
-"disover this, it is the finding of most leading economists of the world."
-msgstr ""
-"Mida madalamad on pensionifondi kulud, seda paremad on eeldused selleks, et "
-"sinu vara kasvaks pensioniks võimalikult palju. Seda ei avastanud meie "
-"Tulevas, vaid maailma juhtivad majandusteadlased."
+msgid "The lower the costs of the pension fund, the better chances are that your money will grow the most by the time you retire. We at Tuleva did not disover this, it is the finding of most leading economists of the world."
+msgstr "Mida madalamad on pensionifondi kulud, seda paremad on eeldused selleks, et sinu vara kasvaks pensioniks võimalikult palju. Seda ei avastanud meie Tulevas, vaid maailma juhtivad majandusteadlased."
 
 #: templates/components/fund-fees.php:19
 msgid "Most fund managers’ costs are not justified."
 msgstr "Enamik fondivalitsejate kulutusi pole õigustatud."
 
 #: templates/components/fund-fees.php:20
-msgid ""
-"Analysing the results of investment funds over the course of world stock "
-"markets’ history, they have found a sobering fact - most costs that fund "
-"managers use for justifying high management fees do not create any value for "
-"us, pension savers."
-msgstr ""
-"Analüüsides investeerimisfondide tulemusi terve maailma väärtpaberiturgude "
-"ajaloo vältel, on nad leidnud kainestava tõsiasja -  enamik kulutusi, "
-"millega fondivalitsejad kõrgeid valitsemistasusid õigustavad, ei loo "
-"tegelikult meile, pensionikogujatele väärtust."
+msgid "Analysing the results of investment funds over the course of world stock markets’ history, they have found a sobering fact - most costs that fund managers use for justifying high management fees do not create any value for us, pension savers."
+msgstr "Analüüsides investeerimisfondide tulemusi terve maailma väärtpaberiturgude ajaloo vältel, on nad leidnud kainestava tõsiasja -  enamik kulutusi, millega fondivalitsejad kõrgeid valitsemistasusid õigustavad, ei loo tegelikult meile, pensionikogujatele väärtust."
 
 #: templates/components/fund-fees.php:31
 msgid "Fund managers have not beaten market average"
 msgstr "Fondijuhid pole suutnud turu keskmist lüüa"
 
 #: templates/components/fund-fees.php:32
-msgid ""
-"Biggest share of pension fund managers’ fees go towards parent banks’ "
-"marketing and sales expenses. Small part goes also towards salaries of the "
-"und manager, analysts and other employees. Unfortunately, the bleak "
-"experience of Estonian pension funds as well as the whole investment world "
-"shows, that fund managers’ attempts to outsmart the market give investors "
-"worse results than market average."
-msgstr ""
-"Suurem osa pankade pensionifondivalitsejate valitsemistasudest läheb "
-"emapankade tuluks ning turundus- ja müügikuludeks. Osa läheb ka fondijuhi ja "
-"analüütikute ja teiste töötajate palkadeks. Paraku näitab nii Eesti "
-"pensionifondide säratu minevik kui ka maailma kogemus, et fondijuhtide "
-"katsed turust targemad olla toovad pensionikogujale hoopis turu keskmisest "
-"halvema tulemuse."
+msgid "Biggest share of pension fund managers’ fees go towards parent banks’ marketing and sales expenses. Small part goes also towards salaries of the und manager, analysts and other employees. Unfortunately, the bleak experience of Estonian pension funds as well as the whole investment world shows, that fund managers’ attempts to outsmart the market give investors worse results than market average."
+msgstr "Suurem osa pankade pensionifondivalitsejate valitsemistasudest läheb emapankade tuluks ning turundus- ja müügikuludeks. Osa läheb ka fondijuhi ja analüütikute ja teiste töötajate palkadeks. Paraku näitab nii Eesti pensionifondide säratu minevik kui ka maailma kogemus, et fondijuhtide katsed turust targemad olla toovad pensionikogujale hoopis turu keskmisest halvema tulemuse."
 
 #: templates/components/fund-fees.php:38
 msgid "You don’t believe us?"
 msgstr "Sa ei usu meid?"
 
 #: templates/components/fund-fees.php:39
-msgid ""
-"See what <a href=\"#\" class=\"inline-link\">Warren Buffett</a> thinks of "
-"this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a "
-"href=\"#\" class=\"inline-link\">article series</a>."
-msgstr ""
-"Loe, mida arvab asjast <a href=“#” class=“inline-link”>Warren Buffett</a>. "
-"Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a href=“#” "
-"class=“inline-link”>artikliseeriat</a>."
+msgid "See what <a href=\"#\" class=\"inline-link\">Warren Buffett</a> thinks of this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a href=\"#\" class=\"inline-link\">article series</a>."
+msgstr "Loe, mida arvab asjast <a href=“#” class=“inline-link”>Warren Buffett</a>. Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a href=“#” class=“inline-link”>artikliseeriat</a>."
 
 #: templates/components/fund-manager.php:7
 msgid "fund manager"
 msgstr "fondijuht"
 
 #: templates/components/fund-manager.php:11
-msgid ""
-"I follow the principle of Jack Bogle, the founder of Vanguard index funds: "
-"keep the investment in a low-cost fund and “don’t peek” – keep the end goal "
-"in sight and don’t spend time or money worrying about small fluctuations. I "
-"waited for a long time for someone to set up this kind of fund in Estonia. "
-"We finally had to take matters into our own hands."
-msgstr ""
-"“Lähtun Vanguardi indeksifondide asutaja Jack Bogle’i põhimõttest: hoia "
-"pensionivara madalate kuludega fondis ja “ära piilu”, ehk keskendu "
-"lõppeesmärgile ja ära kuluta raha ega aega lühiajaliste kõikumiste pärast "
-"muretsemisele. Ootasin kaua, et keegi ka Eestis sellise fondi teeks. Lõpuks "
-"tuli ise teha.”"
+msgid "I follow the principle of Jack Bogle, the founder of Vanguard index funds: keep the investment in a low-cost fund and “don’t peek” – keep the end goal in sight and don’t spend time or money worrying about small fluctuations. I waited for a long time for someone to set up this kind of fund in Estonia. We finally had to take matters into our own hands."
+msgstr "“Lähtun Vanguardi indeksifondide asutaja Jack Bogle’i põhimõttest: hoia pensionivara madalate kuludega fondis ja “ära piilu”, ehk keskendu lõppeesmärgile ja ära kuluta raha ega aega lühiajaliste kõikumiste pärast muretsemisele. Ootasin kaua, et keegi ka Eestis sellise fondi teeks. Lõpuks tuli ise teha.”"
 
 #: templates/components/fund-manager.php:13
-msgid ""
-"Tõnu has been working in the investment field for over 20 years. Before "
-"founding Tuleva, he headed an investment company he part-owned, Karu "
-"Capital. Before that, Tõnu ran Eastern European financial sector development "
-"projects at the European Bank for Reconstruction and Development and worked "
-"as head of investment banking at Hansabank. He holds a master’s degree from "
-"London Business School-and a bachelor’s degree from the University of Tartu."
-msgstr ""
-"Tõnu on investeerimisalal tegutsenud üle 20 aasta. Enne Tuleva asutamist "
-"juhtis ta oma kaasosalusega investeerimisettevõtet Karu Capital. Varem on "
-"Tõnu muuhulgas vedanud Euroopa Rekonstruktsiooni- ning Arengupangas Ida-"
-"Euroopa finantssektori arendusprojekte ning töötanud Hansapangas "
-"investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London "
-"Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu "
-"Ülikoolis."
+msgid "Tõnu has been working in the investment field for over 20 years. Before founding Tuleva, he headed an investment company he part-owned, Karu Capital. Before that, Tõnu ran Eastern European financial sector development projects at the European Bank for Reconstruction and Development and worked as head of investment banking at Hansabank. He holds a master’s degree from London Business School-and a bachelor’s degree from the University of Tartu."
+msgstr "Tõnu on investeerimisalal tegutsenud üle 20 aasta. Enne Tuleva asutamist juhtis ta oma kaasosalusega investeerimisettevõtet Karu Capital. Varem on Tõnu muuhulgas vedanud Euroopa Rekonstruktsiooni- ning Arengupangas Ida-Euroopa finantssektori arendusprojekte ning töötanud Hansapangas investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu Ülikoolis."
 
 #: templates/components/fund-navigation.php:5
 msgid "Which fund to choose?"
@@ -830,8 +675,7 @@ msgstr "Kas Tuleva on turvaline?"
 #: templates/components/fund-security.php:6
 #: templates/components/modal-security.php:12
 msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
-msgstr ""
-"Kas meie raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?"
+msgstr "Kas meie raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?"
 
 #: templates/components/fund-security.php:8
 #: templates/components/modal-security.php:15
@@ -845,12 +689,8 @@ msgstr "Finantsinspektsioon"
 
 #: templates/components/fund-security.php:19
 #: templates/components/modal-security.php:31
-msgid ""
-"issued a licence to Tuleva fund manager and controls that our everyday "
-"operations comply with regulations."
-msgstr ""
-"andis Tuleva fondivalitsejale tegevusloa ja valvab, et meie igapäevane "
-"tegevus vastaks igati nõudmistele."
+msgid "issued a licence to Tuleva fund manager and controls that our everyday operations comply with regulations."
+msgstr "andis Tuleva fondivalitsejale tegevusloa ja valvab, et meie igapäevane tegevus vastaks igati nõudmistele."
 
 #: templates/components/fund-security.php:29
 #: templates/components/modal-security.php:43
@@ -859,12 +699,8 @@ msgstr ""
 
 #: templates/components/fund-security.php:30
 #: templates/components/modal-security.php:46
-msgid ""
-"is Tuleva pension funds’ depositary bank. Depositary bank approves every "
-"transaction with fund’s assets. Exactly like with bank’s own funds."
-msgstr ""
-"on Tuleva fondide depoopank. Depoopank kinnitab iga tehingu fondi varaga. "
-"Täpselt nii nagu panga enda fondide puhul."
+msgid "is Tuleva pension funds’ depositary bank. Depositary bank approves every transaction with fund’s assets. Exactly like with bank’s own funds."
+msgstr "on Tuleva fondide depoopank. Depoopank kinnitab iga tehingu fondi varaga. Täpselt nii nagu panga enda fondide puhul."
 
 #: templates/components/fund-security.php:40
 #: templates/components/modal-security.php:58
@@ -873,18 +709,11 @@ msgstr "Riiklik tagatisfond"
 
 #: templates/components/fund-security.php:41
 #: templates/components/modal-security.php:61
-msgid ""
-"protects all pension fund investors against the worst in case fund manager "
-"causes harm to investors."
-msgstr ""
-"kaitseb kõigi pensionifondide investoreid halvima vastu, kui fondivalitseja "
-"süül peaks tekkima kahju."
+msgid "protects all pension fund investors against the worst in case fund manager causes harm to investors."
+msgstr "kaitseb kõigi pensionifondide investoreid halvima vastu, kui fondivalitseja süül peaks tekkima kahju."
 
 #: templates/components/fund-security.php:46
-msgid ""
-"Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://www."
-"pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus."
-"ee</a>"
+msgid "Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus.ee</a>"
 msgstr " "
 
 #: templates/components/fund-stocks-details.php:57
@@ -906,26 +735,16 @@ msgid "you are younger than 55 years"
 msgstr "oled noorem kui 55-aastane"
 
 #: templates/components/fund-stocks-header.php:21
-msgid ""
-"you would like to earn <span class=\"text-highlight\"><strong>best expected "
-"return</strong></span> over long term and you are not disturbed by short-"
-"term fluctuations of the market"
-msgstr ""
-"tahad saavutada <span class=\"text-highlight\"><strong>parimat võimalikku "
-"tootlust</strong></span> pika aja vältel ja sind ei löö rivist välja turu "
-"lühiajalised kõikumised"
+msgid "you would like to earn <span class=\"text-highlight\"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market"
+msgstr "tahad saavutada <span class=\"text-highlight\"><strong>parimat võimalikku tootlust</strong></span> pika aja vältel ja sind ei löö rivist välja turu lühiajalised kõikumised"
 
 #: templates/components/fund-stocks-header.php:26
 msgid "of people chose this fund"
 msgstr "Tuleva pensionifondides kogujate valik"
 
 #: templates/components/fund-stocks-header.php:27
-msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
-msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
+msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
+msgstr "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-third-details.php:18
 msgid "15th October 2019"
@@ -936,20 +755,12 @@ msgid "Tuleva III Pillar Pension Fund"
 msgstr "Tuleva III Samba Pensionifond"
 
 #: templates/components/fund-third-header.php:20
-msgid ""
-"you are younger than 55 years (if you are over 55, this fund is suitable for "
-"you in combination with a low-risk fund or a bank deposit)"
-msgstr ""
-"oled noorem kui 55-aastane (kui oled üle 55, siis sobib see fond sulle "
-"kombinatsioonis madala riskiga fondi või pangahoiusega)"
+msgid "you are younger than 55 years (if you are over 55, this fund is suitable for you in combination with a low-risk fund or a bank deposit)"
+msgstr "oled noorem kui 55-aastane (kui oled üle 55, siis sobib see fond sulle kombinatsioonis madala riskiga fondi või pangahoiusega)"
 
 #: templates/components/fund-third-header.php:21
-msgid ""
-"and you want to achieve %sthe best possible return%s and you are not shaken "
-"by short-term market fluctuations"
-msgstr ""
-"ja tahad saavutada %sparimat võimalikku tootlust%s ning sind ei löö rivist "
-"välja turu lühiajalised kõikumised"
+msgid "and you want to achieve %sthe best possible return%s and you are not shaken by short-term market fluctuations"
+msgstr "ja tahad saavutada %sparimat võimalikku tootlust%s ning sind ei löö rivist välja turu lühiajalised kõikumised"
 
 #: templates/components/fund-third-header.php:25
 msgid "Select this fund"
@@ -974,35 +785,16 @@ msgid "How does the calculator work?"
 msgstr "Kuidas pensionikalkulaator töötab?"
 
 #: templates/components/modal-calculator.php:16
-msgid ""
-"The world's leading analysts have determined that fees are the surest "
-"predictor of returns: the lower the fees, the better prospects for growth. "
-"(And higher fees correlate with poorer results.)"
-msgstr ""
-"Maailma juhtivad analüütikud on leidnud, et fondi kulud on ainus "
-"tõsiseltvõetav näitaja, millel on pikaajaline seos fondi tulemustega. Mida "
-"madalamad kulud, seda paremad eeldused vara kasvuks. Ja vastupidi: mida "
-"kõrgemad kulud, seda kehvem oodatav tulemus."
+msgid "The world's leading analysts have determined that fees are the surest predictor of returns: the lower the fees, the better prospects for growth. (And higher fees correlate with poorer results.)"
+msgstr "Maailma juhtivad analüütikud on leidnud, et fondi kulud on ainus tõsiseltvõetav näitaja, millel on pikaajaline seos fondi tulemustega. Mida madalamad kulud, seda paremad eeldused vara kasvuks. Ja vastupidi: mida kõrgemad kulud, seda kehvem oodatav tulemus."
 
 #: templates/components/modal-calculator.php:17
-msgid ""
-"Expected returns depend greatly on the evolving rate of return, and neither "
-"we nor anyone else are able to guarantee a 5% annual return."
-msgstr ""
-"Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
-"keegi teine ei saa sulle tagada, et fondide tootlus on 5% aastas."
+msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 5% annual return."
+msgstr "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega keegi teine ei saa sulle tagada, et fondide tootlus on 5% aastas."
 
 #: templates/components/modal-calculator.php:18
-msgid ""
-"In a low-cost index fund your assets grow hand-in-hand with the average "
-"returns of world markets. Low-cost index funds have outperformed Estonian "
-"pension funds every year to date, but past performance is no guarantee of "
-"future performance."
-msgstr ""
-"Madala kuluga indeksifondis käib sinu vara kasv käsikäes maailmaturgude "
-"keskmisega. Seni on see olnud märkimisväärselt parem Eesti pankade "
-"pensionifondide pikaajalisest tootlusest, aga minevik pole tuleviku "
-"garantiiks."
+msgid "In a low-cost index fund your assets grow hand-in-hand with the average returns of world markets. Low-cost index funds have outperformed Estonian pension funds every year to date, but past performance is no guarantee of future performance."
+msgstr "Madala kuluga indeksifondis käib sinu vara kasv käsikäes maailmaturgude keskmisega. Seni on see olnud märkimisväärselt parem Eesti pankade pensionifondide pikaajalisest tootlusest, aga minevik pole tuleviku garantiiks."
 
 #: templates/components/modal-calculator.php:21
 #: templates/components/modal-payout-calculator.php:21
@@ -1027,237 +819,97 @@ msgid "23yrs"
 msgstr "23a"
 
 #: templates/components/modal-founders.php:24
-msgid ""
-"Tõnu Pekk is an investor with 20 years of experience, a good deal of it from "
-"the international financial sector. Having led development projects and "
-"managed investments, he is currently fund manager at Tuleva."
-msgstr ""
-"Tõnu Pekk on 20-aastase kogemusega investor. Tõnu omab rahvusvahelist "
-"kogemust finantssektorist, on vedanud arendusprojekte ning juhtinud "
-"investeeringuid. Praegu on ta Tuleva fondijuht."
+msgid "Tõnu Pekk is an investor with 20 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva."
+msgstr "Tõnu Pekk on 20-aastase kogemusega investor. Tõnu omab rahvusvahelist kogemust finantssektorist, on vedanud arendusprojekte ning juhtinud investeeringuid. Praegu on ta Tuleva fondijuht."
 
 #: templates/components/modal-founders.php:34
-msgid ""
-"Priit Lepasepp's everyday work is aimed at increasing renewable energy "
-"generation, and he also serves as one of Tuleva’s legal advisers."
-msgstr ""
-"Priit Lepasepp tegeleb igapäevaselt sellega, et aidata suurendada "
-"taastuvenergia tootmist. Lisaks on ta ka üks Tuleva juriidilistest "
-"nõustajatest."
+msgid "Priit Lepasepp's everyday work is aimed at increasing renewable energy generation, and he also serves as one of Tuleva’s legal advisers."
+msgstr "Priit Lepasepp tegeleb igapäevaselt sellega, et aidata suurendada taastuvenergia tootmist. Lisaks on ta ka üks Tuleva juriidilistest nõustajatest."
 
 #: templates/components/modal-founders.php:44
-msgid ""
-"Indrek Neivelt is the founder of Pocopay. He has been in a leading role at "
-"Hansabank and other large financial institutions in previous decades, and is "
-"now putting his knowledge to work for developing better, simpler payment "
-"solutions."
-msgstr ""
-"Indrek Neivelt on Pocopay asutaja. Indrek on olnud juhtivrollis Hansapangas "
-"ja teistes suurtes finantsinstitutsioonides ning kasutab nüüd oma teadmisi "
-"paremate ja lihtsamate makselahenduste loomiseks."
+msgid "Indrek Neivelt is the founder of Pocopay. He has been in a leading role at Hansabank and other large financial institutions in previous decades, and is now putting his knowledge to work for developing better, simpler payment solutions."
+msgstr "Indrek Neivelt on Pocopay asutaja. Indrek on olnud juhtivrollis Hansapangas ja teistes suurtes finantsinstitutsioonides ning kasutab nüüd oma teadmisi paremate ja lihtsamate makselahenduste loomiseks."
 
 #: templates/components/modal-founders.php:54
-msgid ""
-"Daniel Vaarik has dedicated his career to ensuring that people get clearer "
-"and better information they need for making important decisions. He is "
-"currently a partner at Akkadian communication agency."
-msgstr ""
-"Daniel on pühendanud oma karjääri sellele, et inimesteni jõuaksid paremad ja "
-"selgemad sõnumid, mille põhjal olulisi otsuseid teha. Täna tegutseb ta "
-"partnerina sõnumiagentuuris Akkadian."
+msgid "Daniel Vaarik has dedicated his career to ensuring that people get clearer and better information they need for making important decisions. He is currently a partner at Akkadian communication agency."
+msgstr "Daniel on pühendanud oma karjääri sellele, et inimesteni jõuaksid paremad ja selgemad sõnumid, mille põhjal olulisi otsuseid teha. Täna tegutseb ta partnerina sõnumiagentuuris Akkadian."
 
 #: templates/components/modal-founders.php:64
-msgid ""
-"Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in "
-"the financial sector, Kristo is helping to lead a revolution in the way "
-"money is moved, making currency exchange easier, clearer and more "
-"transparent all around the world."
-msgstr ""
-"Kristo Käärmann on Wise’i asutaja. Olles näinud ebaefektiivsust "
-"finantssektoris, aitab Kristo teha revolutsiooni raha liikumises, tehes "
-"valuutavahetust üle maailma lihtsamaks, selgemaks ja läbipaistvamaks."
+msgid "Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in the financial sector, Kristo is helping to lead a revolution in the way money is moved, making currency exchange easier, clearer and more transparent all around the world."
+msgstr "Kristo Käärmann on Wise’i asutaja. Olles näinud ebaefektiivsust finantssektoris, aitab Kristo teha revolutsiooni raha liikumises, tehes valuutavahetust üle maailma lihtsamaks, selgemaks ja läbipaistvamaks."
 
 #: templates/components/modal-founders.php:74
-msgid ""
-"Mall Hellam is the director of Open Estonia Fund. Mall’s activities are "
-"aimed toward making Estonia more open and tolerant, fostering serious "
-"discussion on key questions and building a robust civil society."
-msgstr ""
-"Mall Hellam juhib Avatud Eesti Fondi. Mall keskendub oma tegevuses sellele, "
-"et Eesti oleks rohkem avatud ja salliv, et ühiskonnas toimuks sisuline "
-"debatt oluliste küsimuste üle ning et meil oleks tõeliselt tugev "
-"kodanikuühiskond."
+msgid "Mall Hellam is the director of Open Estonia Fund. Mall’s activities are aimed toward making Estonia more open and tolerant, fostering serious discussion on key questions and building a robust civil society."
+msgstr "Mall Hellam juhib Avatud Eesti Fondi. Mall keskendub oma tegevuses sellele, et Eesti oleks rohkem avatud ja salliv, et ühiskonnas toimuks sisuline debatt oluliste küsimuste üle ning et meil oleks tõeliselt tugev kodanikuühiskond."
 
 #: templates/components/modal-founders.php:84
-msgid ""
-"Kirsti Pent is a partner with FORT law offices. Kirsti specializes in "
-"financial regulations, helping clients develop clear, specific solutions for "
-"financial transactions. She is also one of Tuleva’s legal advisers."
-msgstr ""
-"Kirsti Pent on partner FORT advokaadibüroos. Kirsti on spetsialiseerunud "
-"finantsvaldkonna regulatsioonidele, aidates kliente selgete ja korrektsete "
-"lahendustega finantstehingutes ning on ka üks Tuleva juriidilistest "
-"nõustajatest."
+msgid "Kirsti Pent is a partner with FORT law offices. Kirsti specializes in financial regulations, helping clients develop clear, specific solutions for financial transactions. She is also one of Tuleva’s legal advisers."
+msgstr "Kirsti Pent on partner FORT advokaadibüroos. Kirsti on spetsialiseerunud finantsvaldkonna regulatsioonidele, aidates kliente selgete ja korrektsete lahendustega finantstehingutes ning on ka üks Tuleva juriidilistest nõustajatest."
 
 #: templates/components/modal-founders.php:94
-msgid ""
-"Indrek Kasela is an entrepreneur and investor. Indrek has longstanding "
-"experience in large corporations and has also been busy developing the "
-"cultural sphere."
-msgstr ""
-"Indrek Kasela on ettevõtja ja investor. Indrek omab pikaajalist "
-"ettevõtluskogemust suurettevõtetest ning on lisaks sellele tegus ka "
-"kultuurivaldkonna arendamises."
+msgid "Indrek Kasela is an entrepreneur and investor. Indrek has longstanding experience in large corporations and has also been busy developing the cultural sphere."
+msgstr "Indrek Kasela on ettevõtja ja investor. Indrek omab pikaajalist ettevõtluskogemust suurettevõtetest ning on lisaks sellele tegus ka kultuurivaldkonna arendamises."
 
 #: templates/components/modal-founders.php:104
-msgid ""
-"Annika Uudelepp is a civil society and governance expert with the Praxis "
-"think tank, and has long been spotlighting and helping to address issues of "
-"concern in Estonian society."
-msgstr ""
-"Annika Uudelepp on kodanikuühiskonna ja riigivalitsemise ekspert Praxise "
-"mõttekojas. Ta on pikaajaliselt juhtinud tähelepanu murekohtadele Eesti "
-"ühiskonnas ning aidanud neile lahendusi leida."
+msgid "Annika Uudelepp is a civil society and governance expert with the Praxis think tank, and has long been spotlighting and helping to address issues of concern in Estonian society."
+msgstr "Annika Uudelepp on kodanikuühiskonna ja riigivalitsemise ekspert Praxise mõttekojas. Ta on pikaajaliselt juhtinud tähelepanu murekohtadele Eesti ühiskonnas ning aidanud neile lahendusi leida."
 
 #: templates/components/modal-founders.php:114
-msgid ""
-"Henrik Karmo is an investor with a broad set of experiences in building "
-"various investment companies and developing investment strategies."
-msgstr ""
-"Henrik Karmo tegutseb igapäevaselt investorina. Henrikul on laiapõhjaline "
-"kogemus erinevate investeerimisettevõtete üles ehitamisel ja "
-"investeerimisstrateegiate loomisel."
+msgid "Henrik Karmo is an investor with a broad set of experiences in building various investment companies and developing investment strategies."
+msgstr "Henrik Karmo tegutseb igapäevaselt investorina. Henrikul on laiapõhjaline kogemus erinevate investeerimisettevõtete üles ehitamisel ja investeerimisstrateegiate loomisel."
 
 #: templates/components/modal-founders.php:124
-msgid ""
-"Taavi Lepmets is an investor. Since the 1990s, Taavi has been investing into "
-"early-phase technologies, and is still on the lookout for new avenues today. "
-msgstr ""
-"Taavi Lepmets tegutseb investorina. Taavi on omandanud kogemusi varajases "
-"faasis tehnoloogia investeeringute tegemisel alates eelmisest sajandist, "
-"ning üritab selles vallas uusi elamusi otsida ka tänapäeval."
+msgid "Taavi Lepmets is an investor. Since the 1990s, Taavi has been investing into early-phase technologies, and is still on the lookout for new avenues today. "
+msgstr "Taavi Lepmets tegutseb investorina. Taavi on omandanud kogemusi varajases faasis tehnoloogia investeeringute tegemisel alates eelmisest sajandist, ning üritab selles vallas uusi elamusi otsida ka tänapäeval."
 
 #: templates/components/modal-founders.php:134
-msgid ""
-"Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear "
-"and transparent solutions and is helping to make money transfers and "
-"currency exchange easier and more convenient for everyone."
-msgstr ""
-"Taavet Hinrikus on Wise’i asutaja. Taavet usub lihtsatesse, selgetesse ja "
-"läbipaistvatesse lahendustesse, ning aitab igapäevaselt muuta raha liikumist "
-"ja valuutavahetust kõikidele paremaks ja mugavamaks."
+msgid "Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear and transparent solutions and is helping to make money transfers and currency exchange easier and more convenient for everyone."
+msgstr "Taavet Hinrikus on Wise’i asutaja. Taavet usub lihtsatesse, selgetesse ja läbipaistvatesse lahendustesse, ning aitab igapäevaselt muuta raha liikumist ja valuutavahetust kõikidele paremaks ja mugavamaks."
 
 #: templates/components/modal-founders.php:144
-msgid ""
-"Loit Linnupõld is the founder of Crowdestate. Boasting longstanding "
-"experiences in the financial sector, he is helping to bring investors and "
-"real estate developers together to develop Estonian investor culture and "
-"develop access to capital."
-msgstr ""
-"Loit Linnupõld on Crowdestate’i asutaja. Loit omab pikaajalist kogemust "
-"finantssektoris ning aitab läbi ühisrahastuse viia kokku investoreid ning "
-"kinnisvaraarendajaid, et selle läbi arendada eesti investorkultuuri ja "
-"arendada ligipääsu kapitalile."
+msgid "Loit Linnupõld is the founder of Crowdestate. Boasting longstanding experiences in the financial sector, he is helping to bring investors and real estate developers together to develop Estonian investor culture and develop access to capital."
+msgstr "Loit Linnupõld on Crowdestate’i asutaja. Loit omab pikaajalist kogemust finantssektoris ning aitab läbi ühisrahastuse viia kokku investoreid ning kinnisvaraarendajaid, et selle läbi arendada eesti investorkultuuri ja arendada ligipääsu kapitalile."
 
 #: templates/components/modal-founders.php:154
-msgid ""
-"Veljo Otsason is a co-founder of Fortumo and Mobi and an angel investor in "
-"more than 15 companies. Veljo’s passion is new technologies: his companies "
-"help create better wireless services and payment and authentication systems. "
-msgstr ""
-"Veljo Otsason on Fortumo ja Mobi kaasasutaja ning ingelinvestor rohkem kui "
-"15 ettevõttes. Veljo kireks on uued tehnoloogilised lahendused, ning tema "
-"ettevõtted aitavad luua paremaid mobiilseid teenuseid, nii maksesüsteeme kui "
-"autentimist."
+msgid "Veljo Otsason is a co-founder of Fortumo and Mobi and an angel investor in more than 15 companies. Veljo’s passion is new technologies: his companies help create better wireless services and payment and authentication systems. "
+msgstr "Veljo Otsason on Fortumo ja Mobi kaasasutaja ning ingelinvestor rohkem kui 15 ettevõttes. Veljo kireks on uued tehnoloogilised lahendused, ning tema ettevõtted aitavad luua paremaid mobiilseid teenuseid, nii maksesüsteeme kui autentimist."
 
 #: templates/components/modal-founders.php:164
-msgid ""
-"Rain Rannu is a technology entrepreneur and investor, and a founder of "
-"Fortumo and Mobi. Rain’s passion is enterprise and developing new ideas, and "
-"likes projects that would not exist without him."
-msgstr ""
-"Rain Rannu on tehnoloogiaettevõtja ja investor, Fortumo ja Mobi asutaja. "
-"Raini kireks on ettevõtlus ja uute ideede välja töötamine, talle meeldivad "
-"projektid, mida ilma temata ei oleks."
+msgid "Rain Rannu is a technology entrepreneur and investor, and a founder of Fortumo and Mobi. Rain’s passion is enterprise and developing new ideas, and likes projects that would not exist without him."
+msgstr "Rain Rannu on tehnoloogiaettevõtja ja investor, Fortumo ja Mobi asutaja. Raini kireks on ettevõtlus ja uute ideede välja töötamine, talle meeldivad projektid, mida ilma temata ei oleks."
 
 #: templates/components/modal-founders.php:174
-msgid ""
-"Sandor Liive’s passion lies in the energy sector. Sandor served as CEO of "
-"the state energy company Eesti Energia for many years and now is engaged in "
-"developing new solutions in the energy sector."
-msgstr ""
-"Sandor Liive kirg on energiasektoris. Sandor on pikaajaliselt juhtinud Eesti "
-"Energiat ning tegeleb uute lahenduste toomisega energiasektorisse."
+msgid "Sandor Liive’s passion lies in the energy sector. Sandor served as CEO of the state energy company Eesti Energia for many years and now is engaged in developing new solutions in the energy sector."
+msgstr "Sandor Liive kirg on energiasektoris. Sandor on pikaajaliselt juhtinud Eesti Energiat ning tegeleb uute lahenduste toomisega energiasektorisse."
 
 #: templates/components/modal-founders.php:184
-msgid ""
-"Heikko Mäe is an auditor with a passion for getting things done in a "
-"meticulous manner. Heikko shared his knowledge and experience in creating "
-"Tuleva funds"
-msgstr ""
-"Heikko Mäe on audiitor. Tema kireks on, et asjad saaksid tehtud õigesti ja "
-"täpselt. Heikko jagas oma teadmisi ja kogemusi Tuleva fondide loomisel"
+msgid "Heikko Mäe is an auditor with a passion for getting things done in a meticulous manner. Heikko shared his knowledge and experience in creating Tuleva funds"
+msgstr "Heikko Mäe on audiitor. Tema kireks on, et asjad saaksid tehtud õigesti ja täpselt. Heikko jagas oma teadmisi ja kogemusi Tuleva fondide loomisel"
 
 #: templates/components/modal-founders.php:194
-msgid ""
-"Gerd Laub is a legal adviser at Funderbeam. With a background in law, he "
-"specializes in providing consultation to financial companies and helps to "
-"solve complicated problems in the financial technology sector."
-msgstr ""
-"Gerd Laub on Funderbeami juriidiline nõustaja. Gerdi taust on õiguse "
-"valdkonnas, ta on spetsialiseerunud finantsettevõtete nõustamisele ning "
-"aitab lahendada keerukaid probleeme finantstehnoloogia vallas."
+msgid "Gerd Laub is a legal adviser at Funderbeam. With a background in law, he specializes in providing consultation to financial companies and helps to solve complicated problems in the financial technology sector."
+msgstr "Gerd Laub on Funderbeami juriidiline nõustaja. Gerdi taust on õiguse valdkonnas, ta on spetsialiseerunud finantsettevõtete nõustamisele ning aitab lahendada keerukaid probleeme finantstehnoloogia vallas."
 
 #: templates/components/modal-founders.php:204
-msgid ""
-"Triinu Tombak provides financial and business advisory services. She "
-"currently serves on the supervisory boards of the power utility AS Harju "
-"Elekter and the think tank Praxis."
-msgstr ""
-"Triinu Tombak tegeleb finants- ja ärinõustamisega. Praegusel hetkel võib "
-"teda leida AS-i Harju Elekter nõukogust ning mõttekoja Praxis nõukogust."
+msgid "Triinu Tombak provides financial and business advisory services. She currently serves on the supervisory boards of the power utility AS Harju Elekter and the think tank Praxis."
+msgstr "Triinu Tombak tegeleb finants- ja ärinõustamisega. Praegusel hetkel võib teda leida AS-i Harju Elekter nõukogust ning mõttekoja Praxis nõukogust."
 
 #: templates/components/modal-founders.php:214
-msgid ""
-"Kadi Lambot is a doctor who has served as CEO of a number of large "
-"enterprises. Kadi believes that the medical system needs comprehensive, user-"
-"friendly solutions and works to that end as member of the supervisory board "
-"of the Cancer Society, Healthy Estonia Foundation, and Tartu University "
-"Foundation."
-msgstr ""
-"Kadi Lambot on arst, kes on olnud mitmete suurettevõtete juht. Kadi usub, et "
-"meditsiinisüsteem vajab terviklikke ning kliendisõbralikke lahendusi ning "
-"töötab selle nimel olles Vähiliidu, Terve Eesti SA, Tartu Ülikooli SA "
-"nõukogu liige."
+msgid "Kadi Lambot is a doctor who has served as CEO of a number of large enterprises. Kadi believes that the medical system needs comprehensive, user-friendly solutions and works to that end as member of the supervisory board of the Cancer Society, Healthy Estonia Foundation, and Tartu University Foundation."
+msgstr "Kadi Lambot on arst, kes on olnud mitmete suurettevõtete juht. Kadi usub, et meditsiinisüsteem vajab terviklikke ning kliendisõbralikke lahendusi ning töötab selle nimel olles Vähiliidu, Terve Eesti SA, Tartu Ülikooli SA nõukogu liige."
 
 #: templates/components/modal-founders.php:224
-msgid ""
-"Allan Kaldoja is an entrepreneur. His passion is developing CSOs. As "
-"supervisory board chairman, he was instrumental in getting SA Vaba Lava "
-"(Open Stage Foundation) off the ground."
-msgstr ""
-"Allan Kaldoja tegeleb ettevõtlusega. Allani kireks on kodanikuühenduste "
-"arendamine, olles aidanud käivitada nõukogu esimehena SA Vaba Lava."
+msgid "Allan Kaldoja is an entrepreneur. His passion is developing CSOs. As supervisory board chairman, he was instrumental in getting SA Vaba Lava (Open Stage Foundation) off the ground."
+msgstr "Allan Kaldoja tegeleb ettevõtlusega. Allani kireks on kodanikuühenduste arendamine, olles aidanud käivitada nõukogu esimehena SA Vaba Lava."
 
 #: templates/components/modal-founders.php:234
-msgid ""
-"Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which "
-"translates as a primer on how to get rich. Jaak devotes his time to making "
-"Estonians financially savvier, so they could make better financial decisions "
-"and enjoy a better life."
-msgstr ""
-"Jaak Roosaare on investor ja Rikkaks Saamise Õpiku autor. Jaak pühendab oma "
-"aega sellele, et arendada eestlaste finantsteadlikkust, et inimesed teeksid "
-"paremaid finantsotsuseid ja läbi selle saaksid nautida paremat elu."
+msgid "Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which translates as a primer on how to get rich. Jaak devotes his time to making Estonians financially savvier, so they could make better financial decisions and enjoy a better life."
+msgstr "Jaak Roosaare on investor ja Rikkaks Saamise Õpiku autor. Jaak pühendab oma aega sellele, et arendada eestlaste finantsteadlikkust, et inimesed teeksid paremaid finantsotsuseid ja läbi selle saaksid nautida paremat elu."
 
 #: templates/components/modal-payout-calculator.php:16
 #: templates/components/modal-second-pillar-payment-rate.php:16
-msgid ""
-"Expected returns depend greatly on the evolving rate of return, and neither "
-"we nor anyone else are able to guarantee a 7% annual return."
-msgstr ""
-"Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
-"keegi teine ei saa sulle tagada fondide tootlust."
+msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 7% annual return."
+msgstr "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega keegi teine ei saa sulle tagada fondide tootlust."
 
 #: templates/components/modal-payout-calculator.php:17
 #: templates/components/modal-second-pillar-payment-rate.php:17
@@ -1266,17 +918,8 @@ msgstr "2024. aastal on tulumaksumäär 20%."
 
 #: templates/components/modal-payout-calculator.php:18
 #: templates/components/modal-second-pillar-payment-rate.php:18
-msgid ""
-"In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic "
-"exemption, if annual income increases from 14 400 euros to 25 200 euros, "
-"basic exemption decreases according to the following formula: 7848 – 7848 ÷ "
-"10 800 × (income amount – 14 400), if annual income is above 25 200 euros, "
-"basic exemption is 0."
-msgstr ""
-"2024. aastal aastatuluga kuni 14 400 eurot on maksuvaba tulu aastas 7848 "
-"eurot; aastatulu kasvades 14 400 eurolt 25 200 euroni väheneb maksuvaba tulu "
-"vastavalt valemile 7848 – 7848 ÷ 10 800 × (tulu summa – 14 400); aastatuluga "
-"üle 25 200 euro on maksuvaba tulu 0."
+msgid "In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic exemption, if annual income increases from 14 400 euros to 25 200 euros, basic exemption decreases according to the following formula: 7848 – 7848 ÷ 10 800 × (income amount – 14 400), if annual income is above 25 200 euros, basic exemption is 0."
+msgstr "2024. aastal aastatuluga kuni 14 400 eurot on maksuvaba tulu aastas 7848 eurot; aastatulu kasvades 14 400 eurolt 25 200 euroni väheneb maksuvaba tulu vastavalt valemile 7848 – 7848 ÷ 10 800 × (tulu summa – 14 400); aastatuluga üle 25 200 euro on maksuvaba tulu 0."
 
 #: templates/components/modal-payout-calculator.php:24
 #: templates/components/modal-second-pillar-payment-rate.php:24
@@ -1309,179 +952,80 @@ msgid "How do we use membership fees?"
 msgstr "Milleks me liitumistasu kasutame?"
 
 #: templates/components/modal-question-fee.php:14
-msgid ""
-"Membership fees are used to develop the Association and to represent the "
-"interests of members. The fees of our first members were used to raise the "
-"fund's initial capital, introduce Tuleva to the general public, and make "
-"preparations to start the fund, including application for an activity "
-"license from the Financial Inspectorate. From this point forward, membership "
-"fees will be used for the following activities:"
-msgstr ""
-"Liitumistasusid kasutame meie ühise ettevõtte arenduseks ja liikmete huvide "
-"eest seismiseks. Esimeste liikmete tasudest tegime vajalikud kulutused, et "
-"koguda Tuleva algkapital, tutvustada Tulevat laiemale avalikkusele ning ette "
-"valmistada kõik vajalik meie ühise fondivalitseja käivitamiseks ja "
-"Finantsinspektsioonilt tegevusloa taotluseks. Edasi katame liikmetasudest "
-"kulud järgmisteks tegevusteks:"
+msgid "Membership fees are used to develop the Association and to represent the interests of members. The fees of our first members were used to raise the fund's initial capital, introduce Tuleva to the general public, and make preparations to start the fund, including application for an activity license from the Financial Inspectorate. From this point forward, membership fees will be used for the following activities:"
+msgstr "Liitumistasusid kasutame meie ühise ettevõtte arenduseks ja liikmete huvide eest seismiseks. Esimeste liikmete tasudest tegime vajalikud kulutused, et koguda Tuleva algkapital, tutvustada Tulevat laiemale avalikkusele ning ette valmistada kõik vajalik meie ühise fondivalitseja käivitamiseks ja Finantsinspektsioonilt tegevusloa taotluseks. Edasi katame liikmetasudest kulud järgmisteks tegevusteks:"
 
 #: templates/components/modal-question-fee.php:15
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Membership community management and "
-"communication</li>\n"
-"                            <li>Development of Tuleva’s web page, blog, and "
-"other informational channels</li>\n"
-"                            <li>The creation of proposals and influence "
-"analysis to improve the Estonian pension system, in cooperation with the "
-"Ministry of Finance and other state organizations</li>\n"
+"                            <li>Membership community management and communication</li>\n"
+"                            <li>Development of Tuleva’s web page, blog, and other informational channels</li>\n"
+"                            <li>The creation of proposals and influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>\n"
 "                            <li>Development of Tuleva’s IT systems</li>\n"
-"                            <li>Preparation and analysis of voluntary "
-"savings products and Third Pillar options</li>\n"
+"                            <li>Preparation and analysis of voluntary savings products and Third Pillar options</li>\n"
 "                        </ul>"
 msgstr ""
 "\n"
 "                        <ul>\n"
 "                            <li>Liikmehaldus ja -teavitus</li>\n"
-"                            <li>Tuleva veebilehe, blogi ja teiste "
-"infokanalite arendus</li>\n"
-"                            <li>Ettepanekute väljatöötamine ja mõjuanalüüsid "
-"Eesti pensionisüsteemi paremaks muutmiseks, koostöö rahandusministeeriumi ja "
-"teiste riigiasutustega</li>\n"
+"                            <li>Tuleva veebilehe, blogi ja teiste infokanalite arendus</li>\n"
+"                            <li>Ettepanekute väljatöötamine ja mõjuanalüüsid Eesti pensionisüsteemi paremaks muutmiseks, koostöö rahandusministeeriumi ja teiste riigiasutustega</li>\n"
 "                            <li>Tuleva IT-süsteemide arendus</li>\n"
-"                            <li>Vabatahtliku pensionifondi ja muude "
-"pikaajalise investeerimise toodete analüüs ja ettevalmistus.</li>\n"
+"                            <li>Vabatahtliku pensionifondi ja muude pikaajalise investeerimise toodete analüüs ja ettevalmistus.</li>\n"
 "                        </ul>"
 
 #: templates/components/modal-question-joining-fee.php:12
-msgid ""
-"Your joining fee helps to bring well thought ideas with big impact to "
-"decision-makers."
-msgstr ""
-"Sinu liitumistasu aitab läbimõeldud, suure mõjuga ideed otsustajateni viia."
+msgid "Your joining fee helps to bring well thought ideas with big impact to decision-makers."
+msgstr "Sinu liitumistasu aitab läbimõeldud, suure mõjuga ideed otsustajateni viia."
 
 #: templates/components/modal-question-joining-fee.php:14
-msgid ""
-"Every euro saved gives a Swede almost a third higher pension than the same "
-"amount saved by Estonians. Estonia needs a smarter and measurable pension "
-"strategy."
-msgstr ""
-"Iga säästetud euro annab Rootsi inimestele umbes kolmandiku võrra rohkem "
-"pensionit kui sama raha meie inimestele. Eesti vajab targemat, mõõdetavate "
-"eesmärkidega pensionistrateegiat."
+msgid "Every euro saved gives a Swede almost a third higher pension than the same amount saved by Estonians. Estonia needs a smarter and measurable pension strategy."
+msgstr "Iga säästetud euro annab Rootsi inimestele umbes kolmandiku võrra rohkem pensionit kui sama raha meie inimestele. Eesti vajab targemat, mõõdetavate eesmärkidega pensionistrateegiat."
 
 #: templates/components/modal-question-joining-fee.php:16
-msgid ""
-"As the first and only association representing pension savers, Tuleva is a "
-"credible partner for Ministry of Finance and state legislative bodies. We "
-"participate in pension strategy discussions, where next to the officials "
-"only banks and insurance companies used to be represented."
-msgstr ""
-"Laua taga, kus varem oli lisaks ametnikele ja poliitikutele kohta vaid "
-"pankade ja kindlustusseltside esindajatel, on Tuleva Eesti esimese "
-"pensionikogujate ühendusena tõsiseks partneriks nii Rahandusministeeriumile "
-"kui teistele riigiasutustele."
+msgid "As the first and only association representing pension savers, Tuleva is a credible partner for Ministry of Finance and state legislative bodies. We participate in pension strategy discussions, where next to the officials only banks and insurance companies used to be represented."
+msgstr "Laua taga, kus varem oli lisaks ametnikele ja poliitikutele kohta vaid pankade ja kindlustusseltside esindajatel, on Tuleva Eesti esimese pensionikogujate ühendusena tõsiseks partneriks nii Rahandusministeeriumile kui teistele riigiasutustele."
 
 #: templates/components/modal-question-joining-fee.php:18
-msgid ""
-"<span class=\"text-highlight text-bold\">We help to make better laws</span>. "
-"The laws that protect the people. The laws that maximize our profits from "
-"our, not banks’ savings."
-msgstr ""
-"<span class=\"text-highlight text-bold\">Aitame teha seadused paremaks</"
-"span>, et need kaitseks eelkõige meie, inimeste huve. Et igast täna "
-"säästetud eurost saaksime tulevikus maksimaalse kasu meie ise, mitte pankade "
-"omanikud."
+msgid "<span class=\"text-highlight text-bold\">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our, not banks’ savings."
+msgstr "<span class=\"text-highlight text-bold\">Aitame teha seadused paremaks</span>, et need kaitseks eelkõige meie, inimeste huve. Et igast täna säästetud eurost saaksime tulevikus maksimaalse kasu meie ise, mitte pankade omanikud."
 
 #: templates/components/modal-question-joining-fee.php:20
 msgid "We have our first achievements. For example"
 msgstr "Esimesed võidud on käes. Näiteks:"
 
 #: templates/components/modal-question-joining-fee.php:23
-msgid ""
-"On Tuleva’s initiative, <span class=\"text-highlight text-bold\">people in "
-"Estonia saved only during last year 1.5 million euros</span>, because the "
-"fund managers are no longer allowed to charge high fees for changing the "
-"pension fund."
-msgstr ""
-"<span class=\"text-highlight text-bold\">Eesti inimesed hoidsid ainuüksi "
-"eelmisel kahel aastal kokku 1,5 miljonit eurot</span>, sest Tuleva "
-"ettepanekul keelas riik fondivalitsejatel võtta inimestelt pensionifondi "
-"vahetamise eest kõrget tasu."
+msgid "On Tuleva’s initiative, <span class=\"text-highlight text-bold\">people in Estonia saved only during last year 1.5 million euros</span>, because the fund managers are no longer allowed to charge high fees for changing the pension fund."
+msgstr "<span class=\"text-highlight text-bold\">Eesti inimesed hoidsid ainuüksi eelmisel kahel aastal kokku 1,5 miljonit eurot</span>, sest Tuleva ettepanekul keelas riik fondivalitsejatel võtta inimestelt pensionifondi vahetamise eest kõrget tasu."
 
 #: templates/components/modal-question-joining-fee.php:24
-msgid ""
-"<span class=\"text-highlight text-bold\">We sent a petition to parliament, "
-"signed by 2300 people</span>, that proposes to reform how people can use "
-"their II pillar savings."
-msgstr ""
-"<span class=\"text-highlight text-bold\">Saatsime 2300 allkirjaga riigikokku "
-"ettepaneku reformida teise pensionisamba väljamaksed</span>, et inimesed "
-"saaksid raha kasutada väiksemate kuludega ja tegelikest vajadustest "
-"lähtuvalt."
+msgid "<span class=\"text-highlight text-bold\">We sent a petition to parliament, signed by 2300 people</span>, that proposes to reform how people can use their II pillar savings."
+msgstr "<span class=\"text-highlight text-bold\">Saatsime 2300 allkirjaga riigikokku ettepaneku reformida teise pensionisamba väljamaksed</span>, et inimesed saaksid raha kasutada väiksemate kuludega ja tegelikest vajadustest lähtuvalt."
 
 #: templates/components/modal-question-joining-fee.php:27
-msgid ""
-"We do not organise demonstrations or spread random complaints. We are "
-"direct, we analyse issues and offer constructive solutions."
-msgstr ""
-"Me ei korralda pikette ega loobi tühja kriitikat. Oleme otsekohesed, "
-"analüüsime probleeme ja pakume konstruktiivseid lahendusi."
+msgid "We do not organise demonstrations or spread random complaints. We are direct, we analyse issues and offer constructive solutions."
+msgstr "Me ei korralda pikette ega loobi tühja kriitikat. Oleme otsekohesed, analüüsime probleeme ja pakume konstruktiivseid lahendusi."
 
 #: templates/components/modal-question-profit.php:12
 msgid "Tuleva is a social company with a goal to earn profit for its members."
-msgstr ""
-"Tuleva on sotsiaalne ettevõte, mille eesmärk on teenida liikmetele tulu."
+msgstr "Tuleva on sotsiaalne ettevõte, mille eesmärk on teenida liikmetele tulu."
 
 #: templates/components/modal-question-profit.php:14
-msgid ""
-"Tuleva’s main principle is that people themselves save money for their "
-"future, using contemporary technologies and bypassing unnecessary middlemen "
-"and costs as much as possible."
-msgstr ""
-"Tuleva idee on, et inimesed ise koguvad koos oma tuleviku jaoks raha, "
-"kasutades kaasaegseid tehnoloogiaid ja jättes kõrvale nii palju vahemehi "
-"ning lisakulusid kui võimalik."
+msgid "Tuleva’s main principle is that people themselves save money for their future, using contemporary technologies and bypassing unnecessary middlemen and costs as much as possible."
+msgstr "Tuleva idee on, et inimesed ise koguvad koos oma tuleviku jaoks raha, kasutades kaasaegseid tehnoloogiaid ja jättes kõrvale nii palju vahemehi ning lisakulusid kui võimalik."
 
 #: templates/components/modal-question-profit.php:16
-msgid ""
-"Every year, each member who has transferred their II pillar to Tuleva "
-"pension funds, earns a <span class=\"text-highlight text-bold\">member "
-"bonus</span>. Member bonus is very small at first, but it will grow together "
-"with member’s pension assets. Bonus is transferred to your personal capital "
-"account at Tuleva. This is your ownership stake in Tuleva capital and this "
-"stake can earn you additional profit."
-msgstr ""
-"Igal aastal <span class=\"text-highlight text-bold\">arvestame liikmeboonust "
-"kõigile liikmetele</span>, kes on oma II samba vara toonud Tuleva "
-"pensionifondi. Liikmeboonus on algul hästi tilluke, aga kasvab koos "
-"pensionivara kasvuga. Boonus kantakse sinu isiklikule kapitalikontole "
-"Tulevas. Sellega kasvab sinu osalus Tuleva omakapitalis ja see osalus teenib "
-"omakorda tulu."
+msgid "Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a <span class=\"text-highlight text-bold\">member bonus</span>. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit."
+msgstr "Igal aastal <span class=\"text-highlight text-bold\">arvestame liikmeboonust kõigile liikmetele</span>, kes on oma II samba vara toonud Tuleva pensionifondi. Liikmeboonus on algul hästi tilluke, aga kasvab koos pensionivara kasvuga. Boonus kantakse sinu isiklikule kapitalikontole Tulevas. Sellega kasvab sinu osalus Tuleva omakapitalis ja see osalus teenib omakorda tulu."
 
 #: templates/components/modal-question-profit.php:18
-msgid ""
-"When Tuleva grows, our funds under management grow and we add new products "
-"to our offering, then the association will earn profit. <span class=\"text-"
-"highlight text-bold\">The profit is then divided among members</span>, as "
-"set in our Articles of Association."
-msgstr ""
-"Kui Tuleva areneb, meie fondide maht kasvab ja loome uusi "
-"investeerimistooteid, teenib ühistu kasumit ja <span class=\"text-highlight "
-"text-bold\">kasumi jagame liikmete vahel</span>, nii nagu põhikirjas kokku "
-"lepitud."
+msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association will earn profit. <span class=\"text-highlight text-bold\">The profit is then divided among members</span>, as set in our Articles of Association."
+msgstr "Kui Tuleva areneb, meie fondide maht kasvab ja loome uusi investeerimistooteid, teenib ühistu kasumit ja <span class=\"text-highlight text-bold\">kasumi jagame liikmete vahel</span>, nii nagu põhikirjas kokku lepitud."
 
 #: templates/components/modal-question-profit.php:20
-msgid ""
-"As always with profit from entrepreneurship - this depends how well our "
-"venture is doing. The founders are convinced, that the <span class=\"text-"
-"highlight text-bold\">100-euro joining fee pays for itself many times over</"
-"span>. But we do not give promises."
-msgstr ""
-"Nagu ettevõtlustuluga ikka – see sõltub sellest, kui hästi meie ühisel "
-"ettevõttel läheb. Tuleva asutajad on ise veendunud, et <span class=\"text-"
-"highlight text-bold\">100 euro suurune liitumistasu tasub ennast kuhjaga</"
-"span> – aga lubadustest hoidume."
+msgid "As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the <span class=\"text-highlight text-bold\">100-euro joining fee pays for itself many times over</span>. But we do not give promises."
+msgstr "Nagu ettevõtlustuluga ikka – see sõltub sellest, kui hästi meie ühisel ettevõttel läheb. Tuleva asutajad on ise veendunud, et <span class=\"text-highlight text-bold\">100 euro suurune liitumistasu tasub ennast kuhjaga</span> – aga lubadustest hoidume."
 
 #: templates/components/modal-question-profit.php:22
 msgid "How is member bonus calculated?"
@@ -1492,28 +1036,16 @@ msgid "At the end of each year"
 msgstr "Aasta lõppedes"
 
 #: templates/components/modal-question-profit.php:27
-msgid ""
-"We calculate how many pension fund units each member had on average during "
-"the year in euros"
-msgstr ""
-"arvutame, kui palju oli igal Tuleva liikmel möödunud aasta jooksul "
-"keskmiselt Tuleva pensionifondide osakuid;"
+msgid "We calculate how many pension fund units each member had on average during the year in euros"
+msgstr "arvutame, kui palju oli igal Tuleva liikmel möödunud aasta jooksul keskmiselt Tuleva pensionifondide osakuid;"
 
 #: templates/components/modal-question-profit.php:28
-msgid ""
-"Multiply this by 0,05% and transfer the resulting amount to member’s capital "
-"account"
-msgstr ""
-"korrutame selle 0,05%-ga ja kanname tulemuseks saadud summa tema "
-"liikmekapitali kontole;"
+msgid "Multiply this by 0,05% and transfer the resulting amount to member’s capital account"
+msgstr "korrutame selle 0,05%-ga ja kanname tulemuseks saadud summa tema liikmekapitali kontole;"
 
 #: templates/components/modal-question-profit.php:29
-msgid ""
-"Every 5 years, members annual meeting decides whether to pay our accumulated "
-"profit as a dividend or keep it invested."
-msgstr ""
-"iga 5 aasta tagant otsustavad Tuleva liikmed üldkoosolekul, kas maksta "
-"kapitalikontodele kogunenud kasum välja või hoida see edasi investeerituna."
+msgid "Every 5 years, members annual meeting decides whether to pay our accumulated profit as a dividend or keep it invested."
+msgstr "iga 5 aasta tagant otsustavad Tuleva liikmed üldkoosolekul, kas maksta kapitalikontodele kogunenud kasum välja või hoida see edasi investeerituna."
 
 #: templates/components/modal-question-rights.php:12
 msgid "What are your rights and obligations as a Tuleva member?"
@@ -1527,41 +1059,24 @@ msgstr "Igal ühistu liikmel on õigus:"
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Have access to important documentation "
-"pertaining to all activities of the association</li>\n"
-"                            <li>Participate in the general assembly and "
-"other Tuleva events</li>\n"
-"                            <li>Elect Tuleva management and apply for "
-"management positions</li>\n"
-"                            <li>Participate in Tuleva’s profit sharing based "
-"on predetermined rules</li>\n"
-"                            <li>Use Tuleva’s services and participate in "
-"members’ information sharing (for example via e-mail or in our closed "
-"Facebook group)</li>\n"
-"                            <li>Leave the association (after 5 years of "
-"membership have passed)</li>\n"
-"                            <li>Leave their assets as an inheritance to "
-"their designated heir</li>\n"
+"                            <li>Have access to important documentation pertaining to all activities of the association</li>\n"
+"                            <li>Participate in the general assembly and other Tuleva events</li>\n"
+"                            <li>Elect Tuleva management and apply for management positions</li>\n"
+"                            <li>Participate in Tuleva’s profit sharing based on predetermined rules</li>\n"
+"                            <li>Use Tuleva’s services and participate in members’ information sharing (for example via e-mail or in our closed Facebook group)</li>\n"
+"                            <li>Leave the association (after 5 years of membership have passed)</li>\n"
+"                            <li>Leave their assets as an inheritance to their designated heir</li>\n"
 "                        </ul>"
 msgstr ""
 "\n"
 "                        <ul>\n"
-"                            <li>tutvuda Tuleva põhikirja ja teiste oluliste "
-"dokumentidega ning saada teavet ühistu tegevuse tulemuste ja plaanide kohta</"
-"li>\n"
-"                            <li>osaleda üldkoosolekul ja muudel Tuleva "
-"üritustel</li>\n"
-"                            <li>valida Tuleva juhtimis- ja kontrollorganeid "
-"ning neisse kandideerida</li>\n"
-"                            <li>osaleda Tuleva kasumi jaotamisel vastavalt "
-"põhikirjas kokku lepitule</li>\n"
-"                            <li>kasutada Tuleva teenuseid ja osaleda "
-"liikmete infovahetuses (näiteks e-mailitsi ja Tuleva liikmete kinnises "
-"facebook-i grupis)</li>\n"
-"                            <li>astuda ühistust välja (5 aasta möödumisel "
-"liikmeks astumisest)</li>\n"
-"                            <li>pärandada surma korral ühistusse kogunenud "
-"vara</li>\n"
+"                            <li>tutvuda Tuleva põhikirja ja teiste oluliste dokumentidega ning saada teavet ühistu tegevuse tulemuste ja plaanide kohta</li>\n"
+"                            <li>osaleda üldkoosolekul ja muudel Tuleva üritustel</li>\n"
+"                            <li>valida Tuleva juhtimis- ja kontrollorganeid ning neisse kandideerida</li>\n"
+"                            <li>osaleda Tuleva kasumi jaotamisel vastavalt põhikirjas kokku lepitule</li>\n"
+"                            <li>kasutada Tuleva teenuseid ja osaleda liikmete infovahetuses (näiteks e-mailitsi ja Tuleva liikmete kinnises facebook-i grupis)</li>\n"
+"                            <li>astuda ühistust välja (5 aasta möödumisel liikmeks astumisest)</li>\n"
+"                            <li>pärandada surma korral ühistusse kogunenud vara</li>\n"
 "                        </ul>"
 
 #: templates/components/modal-question-rights.php:25
@@ -1572,109 +1087,59 @@ msgstr "Tuleva liige kohustub:"
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Comply with laws and follow the decisions "
-"made by Tuleva’s managerial board</li>\n"
+"                            <li>Comply with laws and follow the decisions made by Tuleva’s managerial board</li>\n"
 "                            <li>Pay a one-time membership fee</li>\n"
 "                            <li>Keep Tuleva’s business secrets</li>\n"
-"                            <li>Pay additional fees if decided so by the "
-"general assembly*</li>\n"
+"                            <li>Pay additional fees if decided so by the general assembly*</li>\n"
 "                        </ul>"
 msgstr ""
 "\n"
 "                        <ul>\n"
-"                            <li>täitma seadusi ning ühistu juhtimis- ja "
-"kontrollorganite seaduslikke ja ühistu põhikirjaga kooskõlas olevaid "
-"otsuseid</li>\n"
+"                            <li>täitma seadusi ning ühistu juhtimis- ja kontrollorganite seaduslikke ja ühistu põhikirjaga kooskõlas olevaid otsuseid</li>\n"
 "                            <li>tasuma ühekordse liitumistasu</li>\n"
 "                            <li>hoidma Tuleva ärisaladust</li>\n"
-"                            <li>tasuma muid sihtotstarbelisi makseid "
-"vastavalt üldkoosoleku otsustele.*</li>\n"
+"                            <li>tasuma muid sihtotstarbelisi makseid vastavalt üldkoosoleku otsustele.*</li>\n"
 "                        </ul>"
 
 #: templates/components/modal-question-rights.php:33
-msgid ""
-"* This obligation has been included in our articles of association in the "
-"unlikely event that Tuleva has an unexpected need for additional capital. If "
-"a member refuses to pay additional fees which have been decided upon by the "
-"general assembly, they will lose their membership status."
-msgstr ""
-"* Sellise otsuse võimalus on ette nähtud vähetõenäoliseks juhuks, kui "
-"ühistul peaks tekkima ootamatu lisakapitali vajadus. Kui liige sel juhul "
-"keeldub üldkoosoleku otsusega kokku lepitud sihtotstarbelise makse "
-"tegemisest, arvatakse ta lihtsalt ühistust välja."
+msgid "* This obligation has been included in our articles of association in the unlikely event that Tuleva has an unexpected need for additional capital. If a member refuses to pay additional fees which have been decided upon by the general assembly, they will lose their membership status."
+msgstr "* Sellise otsuse võimalus on ette nähtud vähetõenäoliseks juhuks, kui ühistul peaks tekkima ootamatu lisakapitali vajadus. Kui liige sel juhul keeldub üldkoosoleku otsusega kokku lepitud sihtotstarbelise makse tegemisest, arvatakse ta lihtsalt ühistust välja."
 
 #: templates/components/modal-question-vote.php:12
 msgid "Tuleva is for people who care."
 msgstr "Tuleva on ärksate inimeste kogukond."
 
 #: templates/components/modal-question-vote.php:14
-msgid ""
-"Every member has a vote on annual general meeting and has a right to elect "
-"and be elected to Tuleva’s board of directors and other supervisory bodies. "
-"This is the official part and it is very important."
-msgstr ""
-"Igal ühistu liikmel on õigus hääletada üldkoosolekul ja valida Tuleva "
-"juhtimis- ja kontrollorganeid ning neisse kandideerida. See on ametlik osa "
-"ja väga tähtis."
+msgid "Every member has a vote on annual general meeting and has a right to elect and be elected to Tuleva’s board of directors and other supervisory bodies. This is the official part and it is very important."
+msgstr "Igal ühistu liikmel on õigus hääletada üldkoosolekul ja valida Tuleva juhtimis- ja kontrollorganeid ning neisse kandideerida. See on ametlik osa ja väga tähtis."
 
 #: templates/components/modal-question-vote.php:16
-msgid ""
-"Every day we share our ideas and experience among <span class=\"text-"
-"highlight text-bold\">Tuleva members in our Facebook group</span>, e-mail, "
-"phone and working groups. Among our community, there are people who care "
-"about the society and have very different skills. Many are ready to take "
-"responsibility for ensuring us a better future."
-msgstr ""
-"Igapäevaselt jagame Tuleva liikmete vahel teadmisi ja vahetame mõtteid <span "
-"class=\"text-highlight text-bold\">Tuleva liikmete facebook-i grupis</span>, "
-"e-maili ja telefoni teel ning töögruppides. Meie kogukonnas on ühiskondliku "
-"närviga erinevate eluvaldkondade tippspetsialiste ja tavalisi inimesi, kes "
-"on valmis võtma vastutuse, et leida paremaid võimalusi oma tuleviku "
-"kindlustamiseks."
+msgid "Every day we share our ideas and experience among <span class=\"text-highlight text-bold\">Tuleva members in our Facebook group</span>, e-mail, phone and working groups. Among our community, there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
+msgstr "Igapäevaselt jagame Tuleva liikmete vahel teadmisi ja vahetame mõtteid <span class=\"text-highlight text-bold\">Tuleva liikmete facebook-i grupis</span>, e-maili ja telefoni teel ning töögruppides. Meie kogukonnas on ühiskondliku närviga erinevate eluvaldkondade tippspetsialiste ja tavalisi inimesi, kes on valmis võtma vastutuse, et leida paremaid võimalusi oma tuleviku kindlustamiseks."
 
 #: templates/components/modal-question-vote.php:18
-msgid ""
-"Tuleva team listens very carefully to our members and uses their ideas for "
-"making Tuleva better. We are only starting and believe that <span "
-"class=\"text-highlight text-bold\">the power of thousands of smart people</"
-"span> can be used for increasing our common good."
-msgstr ""
-"Tuleva tiim kuulab liikmete tagasisidet ja ettepanekuid väga tõsiselt. Me "
-"oleme alles alguses ja usume, et <span class=\"text-highlight text-"
-"bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles "
-"õpime meie ühise kasu ja Eesti arengu nimel rakendama."
+msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that <span class=\"text-highlight text-bold\">the power of thousands of smart people</span> can be used for increasing our common good."
+msgstr "Tuleva tiim kuulab liikmete tagasisidet ja ettepanekuid väga tõsiselt. Me oleme alles alguses ja usume, et <span class=\"text-highlight text-bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles õpime meie ühise kasu ja Eesti arengu nimel rakendama."
 
 #: templates/components/mutual-header.php:5
 msgid "Join us."
 msgstr "Kutsume sind meiega ühinema."
 
 #: templates/components/mutual-header.php:8
-msgid ""
-"Tuleva is two-in-one — Estonia’s most exciting social company and a civil "
-"initiative that defends people's interests."
-msgstr ""
-"Tuleva on kaks-ühes — Eesti põnevaim sotsiaalne ettevõte ja inimeste huve "
-"kaitsev kodanikuühendus."
+msgid "Tuleva is two-in-one — Estonia’s most exciting social company and a civil initiative that defends people's interests."
+msgstr "Tuleva on kaks-ühes — Eesti põnevaim sotsiaalne ettevõte ja inimeste huve kaitsev kodanikuühendus."
 
 #: templates/components/mutual-header.php:9
-msgid ""
-"<a href=\"#founder-stories\" class=\"text-navy text-bold\"><u>Taavet "
-"Hinrikus</u></a>, Tuleva and Transferwise co-founder"
-msgstr ""
-"<a href=\"#founder-stories\" class=\"text-navy text-bold\"><u>Taavet "
-"Hinrikus</u></a>, Tuleva ja Transferwise'i kaasasutaja"
+msgid "<a href=\"#founder-stories\" class=\"text-navy text-bold\"><u>Taavet Hinrikus</u></a>, Tuleva and Transferwise co-founder"
+msgstr "<a href=\"#founder-stories\" class=\"text-navy text-bold\"><u>Taavet Hinrikus</u></a>, Tuleva ja Transferwise'i kaasasutaja"
 
 #: templates/components/mutual-header.php:21
 msgid "What do you gain by joining Tuleva?"
 msgstr "Mida Tuleva liikmeks astumine sulle annab?"
 
 #: templates/components/mutual-header.php:23
-msgid ""
-"Help create a <span class=\"text-highlight\">smarter pension strategy</span> "
-"for Estonia"
-msgstr ""
-"Aitad teha Eestile <span class=\"text-highlight\">targema "
-"pensionistrateegia</span>"
+msgid "Help create a <span class=\"text-highlight\">smarter pension strategy</span> for Estonia"
+msgstr "Aitad teha Eestile <span class=\"text-highlight\">targema pensionistrateegia</span>"
 
 #: templates/components/mutual-header.php:25
 msgid "Benefit from Tuleva growth"
@@ -1701,12 +1166,10 @@ msgid "euros"
 msgstr "eurot"
 
 #: templates/components/payout-calculator.php:19
-#: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
 #: templates/components/payout-calculator.php:24
-#: templates/components/second-pillar-payment-rate-calculator.php:52
 msgid "the historic return on stocks is 7%"
 msgstr "aktsiate ajalooline tootlus on 7%"
 
@@ -1715,45 +1178,25 @@ msgid "You will receive monthly"
 msgstr "Mulle laekub igakuiselt"
 
 #: templates/components/payout-calculator.php:35
-msgid ""
-"If your pension assets increase due to positive returns, the monthly amount "
-"you receive will also increase."
-msgstr ""
-"Kui sinu pensionivara kasvab tänu postiivsele tootlusele, kasvab ka sulle "
-"igakuiselt laekuv summa."
+msgid "If your pension assets increase due to positive returns, the monthly amount you receive will also increase."
+msgstr "Kui sinu pensionivara kasvab tänu postiivsele tootlusele, kasvab ka sulle igakuiselt laekuv summa."
 
 #: templates/components/payout-calculator.php:35
 #: templates/components/payout-calculator.php:39
-msgid ""
-"The range shows how much you will receive at the beginning of the payout "
-"period and how it will change by the end of the period."
-msgstr ""
-"Vahemik näitab, kui palju laekub sulle väljamaksete perioodi alguses ja "
-"kuidas see muutub perioodi lõpuks."
+msgid "The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period."
+msgstr "Vahemik näitab, kui palju laekub sulle väljamaksete perioodi alguses ja kuidas see muutub perioodi lõpuks."
 
 #: templates/components/payout-calculator.php:39
-msgid ""
-"If your pension assets decrease due to negative returns, the monthly amount "
-"you receive will also decrease."
-msgstr ""
-"Kui sinu pensionivara kahaneb negatiivse tootluse tõttu, kahaneb ka sulle "
-"igakuiselt laekuv summa."
+msgid "If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease."
+msgstr "Kui sinu pensionivara kahaneb negatiivse tootluse tõttu, kahaneb ka sulle igakuiselt laekuv summa."
 
 #: templates/components/payout-calculator.php:50
 msgid "You will receive in total"
 msgstr "Saan kokku kätte"
 
 #: templates/components/payout-calculator.php:55
-msgid ""
-"The calculator assumes you’ll start withdrawals <strong>at age 65</strong> "
-"and receive them <strong>over 19 years</strong> (the average remaining "
-"lifespan for a 65-year-old today). While the stock market’s historical "
-"return is 7%, future returns are not guaranteed."
-msgstr ""
-"Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja "
-"saad neid <strong>19 aasta jooksul</strong> (tänase 65-aastase "
-"statistiliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, "
-"kuid see ei taga sarnast tootlust tulevikus."
+msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
+msgstr "Kalkulaator eeldab, et alustad väljamakseid <strong>65-aastaselt</strong> ja saad neid <strong>19 aasta jooksul</strong> (tänase 65-aastase statistiliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, kuid see ei taga sarnast tootlust tulevikus."
 
 #: templates/components/payout-hero.php:48
 msgid "How does the payout calculator work?"
@@ -1768,7 +1211,6 @@ msgid "Net wage"
 msgstr "Netopalk"
 
 #: templates/components/pension-calculator.php:22
-#: templates/components/second-pillar-payment-rate-calculator.php:9
 msgid "Age"
 msgstr "Vanus"
 
@@ -1793,62 +1235,36 @@ msgid "Tuleva makes lives better for ourselves and for Estonia"
 msgstr "Tuleva sündis, et teha meie liikmete ja terve Eesti elu paremaks"
 
 #: templates/components/reasons.php:12
-msgid ""
-"We all need pension one day. The earlier you start thinking about it, the "
-"better is your life in the future."
-msgstr ""
-"Me kõik vajame ühel päeval pensionit. Mida varem sellele mõtled, seda parem "
-"on sinu elu tulevikus."
+msgid "We all need pension one day. The earlier you start thinking about it, the better is your life in the future."
+msgstr "Me kõik vajame ühel päeval pensionit. Mida varem sellele mõtled, seda parem on sinu elu tulevikus."
 
 #: templates/components/reasons.php:15
 msgid "But pensions are dead borning and investments complicated."
 msgstr "Aga pension on surmigav teema ja investeerimine keeruline."
 
 #: templates/components/reasons.php:18
-msgid ""
-"Boredom and complexity have made up a shield under which Estonian banks’ "
-"pension funds have charged high fees but our money has grown very little. In "
-"2016, Estonian banks’ pension funds were the worst among OECD countries."
-msgstr ""
-"Igavus ja keerukus on põimunud kilbiks, mille varjus on Eesti pankade "
-"pensionifondid aastaid võtnud kõrgeid valitsemistasusid, aga meie raha kasv "
-"neis on olnud kidur. 2016. aastal olid Eesti pankade pensionifondid OECD "
-"riikide kehvimad."
+msgid "Boredom and complexity have made up a shield under which Estonian banks’ pension funds have charged high fees but our money has grown very little. In 2016, Estonian banks’ pension funds were the worst among OECD countries."
+msgstr "Igavus ja keerukus on põimunud kilbiks, mille varjus on Eesti pankade pensionifondid aastaid võtnud kõrgeid valitsemistasusid, aga meie raha kasv neis on olnud kidur. 2016. aastal olid Eesti pankade pensionifondid OECD riikide kehvimad."
 
 #: templates/components/reasons.php:21
-msgid ""
-"Tuleva was started as a civic initiative and is of the most exciting social "
-"companies in Estonia today."
-msgstr ""
-"Tuleva sündis kodanikualgatusena ja on tänaseks arenenud Eesti põnevaimaks "
-"sotsiaalseks ettevõtteks."
+msgid "Tuleva was started as a civic initiative and is of the most exciting social companies in Estonia today."
+msgstr "Tuleva sündis kodanikualgatusena ja on tänaseks arenenud Eesti põnevaimaks sotsiaalseks ettevõtteks."
 
 #: templates/components/reasons.php:27
 msgid "Developer, Member of Tuleva"
 msgstr "Arendaja, Tuleva liige"
 
 #: templates/components/reasons.php:33
-msgid ""
-"Tuleva is not a typical service provider. Tuleva is owned by the pension "
-"savers themselves who decided to skip banks’ middlemen and start pension "
-"funds where they personally would like to put their money."
-msgstr ""
-"Tuleva ei ole tavaline teenusepakkuja. Tuleva omanikud on pensionikogujad "
-"ise, kes otsustasid pankadest vahemehed kõrvale jätta ja käivitada sellised "
-"pensionifondid, kus nad ise raha koguda tahaksid."
+msgid "Tuleva is not a typical service provider. Tuleva is owned by the pension savers themselves who decided to skip banks’ middlemen and start pension funds where they personally would like to put their money."
+msgstr "Tuleva ei ole tavaline teenusepakkuja. Tuleva omanikud on pensionikogujad ise, kes otsustasid pankadest vahemehed kõrvale jätta ja käivitada sellised pensionifondid, kus nad ise raha koguda tahaksid."
 
 #: templates/components/reasons.php:40
 msgid "We deserve better"
 msgstr "Me väärime paremat"
 
 #: templates/components/reasons.php:43
-msgid ""
-"Tuleva was started as an initiative by 22 founders who decided that we "
-"deserve better. They started an association where every member has an equal "
-"decision right."
-msgstr ""
-"Tuleva sündis 22 asutaja initsiatiivil, kes otsustasid, et me väärime "
-"paremat. Nad asutasid ühistu, kus igal liikmel on võrdne otsustusõigus."
+msgid "Tuleva was started as an initiative by 22 founders who decided that we deserve better. They started an association where every member has an equal decision right."
+msgstr "Tuleva sündis 22 asutaja initsiatiivil, kes otsustasid, et me väärime paremat. Nad asutasid ühistu, kus igal liikmel on võrdne otsustusõigus."
 
 #: templates/components/reasons.php:49
 msgid "Entrepreneur, Member of Tuleva"
@@ -1859,14 +1275,8 @@ msgid "We are stronger together"
 msgstr "Koos oleme tugevamad"
 
 #: templates/components/reasons.php:60
-msgid ""
-"<strong>%s</strong> people have already joined the founders. We invite you "
-"to become a member as well. Together we create better possibilities to save "
-"money for our future."
-msgstr ""
-"Asutajatega on juba ühinenud <strong>%s</strong> inimest. Kutsume ka sind "
-"Tuleva liikmeks. Koos loome omale paremad võimalused oma tuleviku jaoks raha "
-"kogumiseks."
+msgid "<strong>%s</strong> people have already joined the founders. We invite you to become a member as well. Together we create better possibilities to save money for our future."
+msgstr "Asutajatega on juba ühinenud <strong>%s</strong> inimest. Kutsume ka sind Tuleva liikmeks. Koos loome omale paremad võimalused oma tuleviku jaoks raha kogumiseks."
 
 #: templates/components/reasons.php:67
 msgid "Musician, Member of Tuleva"
@@ -1877,14 +1287,8 @@ msgid "We earn money for ourselves, not for the banks"
 msgstr "Teenime tulu endale, mitte pangale"
 
 #: templates/components/reasons.php:76
-msgid ""
-"Alone it would not be possible for anybody. But together with the help of "
-"smarter technologies we can rid ourselves from costly middlemen and grow "
-"our, not banks’, money."
-msgstr ""
-"Üksi poleks see kellelgi võimalik. Aga koos saame tänu tarkadele "
-"tehnoloogiatele ahnetest vahemeestest vabaneda ja kasvatada oma, mitte panga "
-"vara."
+msgid "Alone it would not be possible for anybody. But together with the help of smarter technologies we can rid ourselves from costly middlemen and grow our, not banks’, money."
+msgstr "Üksi poleks see kellelgi võimalik. Aga koos saame tänu tarkadele tehnoloogiatele ahnetest vahemeestest vabaneda ja kasvatada oma, mitte panga vara."
 
 #: templates/components/reasons.php:82
 msgid "Teacher, investor, Member of Tuleva"
@@ -1895,14 +1299,8 @@ msgid "A beginning has been made"
 msgstr "Algus on tehtud"
 
 #: templates/components/reasons.php:91
-msgid ""
-"As a first step, we started modern low cost II pillar pension funds. All "
-"Estonian people can now save for pension together with Tuleva founders and "
-"members."
-msgstr ""
-"Esimese sammuna käivitasime kaasaegsed, madalate kuludega II samba "
-"pensionifondid. Koos Tuleva asutajate ja liikmetega saavad Tuleva fondides "
-"pensioni koguda kõik Eesti inimesed."
+msgid "As a first step, we started modern low cost II pillar pension funds. All Estonian people can now save for pension together with Tuleva founders and members."
+msgstr "Esimese sammuna käivitasime kaasaegsed, madalate kuludega II samba pensionifondid. Koos Tuleva asutajate ja liikmetega saavad Tuleva fondides pensioni koguda kõik Eesti inimesed."
 
 #: templates/components/reasons.php:97
 msgid "Economist, Member of Tuleva"
@@ -1913,12 +1311,8 @@ msgid "We have many more good ideas"
 msgstr "Meil on veel palju ideid"
 
 #: templates/components/reasons.php:106
-msgid ""
-"In the future we will start a voluntary pension fund and will create other "
-"ways to increase our money through long-term savings."
-msgstr ""
-"Edaspidi teeme ka vabatahtliku pensionifondi ja loome muid paremaid "
-"pikaajalise investeerimise võimalusi oma säästude kasvatamiseks."
+msgid "In the future we will start a voluntary pension fund and will create other ways to increase our money through long-term savings."
+msgstr "Edaspidi teeme ka vabatahtliku pensionifondi ja loome muid paremaid pikaajalise investeerimise võimalusi oma säästude kasvatamiseks."
 
 #: templates/components/reasons.php:112
 msgid "Genealogist, Member of Tuleva"
@@ -1929,106 +1323,42 @@ msgid "This is not all"
 msgstr "See pole kõik"
 
 #: templates/components/reasons.php:125
-msgid ""
-"As an association of pension savers Tuleva helps to make Estonian laws "
-"better so that pension system would be useful first of all to people not "
-"banks and insurance companies."
-msgstr ""
-"Pensionikogujaid ühendava organisatsioonina aitab Tuleva teha Eesti seadused "
-"paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte "
-"pankadele ja kindlustusseltsidele."
+msgid "As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies."
+msgstr "Pensionikogujaid ühendava organisatsioonina aitab Tuleva teha Eesti seadused paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte pankadele ja kindlustusseltsidele."
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:6
-#: templates/components/second-pillar-payment-rate-calculator.php:19
+#: templates/components/second-pillar-payment-rate-calculator.php:6
 msgid "Monthly gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:16
-#: templates/components/second-pillar-payment-rate-calculator.php:29
+#: templates/components/second-pillar-payment-rate-calculator.php:16
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:37
+#: templates/components/second-pillar-payment-rate-calculator.php:37
 msgid "Net salary from 2026"
 msgstr "Netopalk alates 2026"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:40
-msgid ""
-"In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In "
-"addition, there will be a national security tax of 2%."
-msgstr ""
-"2026. aastal on tulumaks 22% ja maksuvaba tulu 700 € kuus. Lisandub veel "
-"julgeolekumaks 2% brutopalgast."
+#: templates/components/second-pillar-payment-rate-calculator.php:40
+msgid "In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%."
+msgstr "2026. aastal on tulumaks 22% ja maksuvaba tulu 700 € kuus. Lisandub veel julgeolekumaks 2% brutopalgast."
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:47
+#: templates/components/second-pillar-payment-rate-calculator.php:47
 msgid "Your monthly contribution"
 msgstr "Sinu igakuine panus"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:54
-#: templates/components/second-pillar-payment-rate-calculator.php:74
+#: templates/components/second-pillar-payment-rate-calculator.php:54
 #: templates/components/third-pillar-calculator.php:62
 #: templates/components/third-pillar-calculator.php:125
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:63
+#: templates/components/second-pillar-payment-rate-calculator.php:62
 msgid "Increase contribution"
 msgstr "Tõstan sissemakset"
 
-#: templates/components/second-pillar-payment-rate-calculator-simple.php:66
-msgid ""
-"Submitting the application is <strong>free</strong> and takes only 2 minutes."
+#: templates/components/second-pillar-payment-rate-calculator.php:65
+msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
-
-#: templates/components/second-pillar-payment-rate-calculator.php:4
-msgid "What does increasing II pillar payments mean for you?"
-msgstr "Mida II samba panuse tõstmine sinu jaoks tähendab?"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:61
-msgid "Your net salary"
-msgstr "Sinu netopalk"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:64
-msgid "income tax savings"
-msgstr "tulumaksuvõitu"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:71
-msgid "You accumulate more monthly"
-msgstr "Kogud igakuiselt rohkem"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:77
-msgid "no change"
-msgstr "ei muutu"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:86
-msgid "You accumulate more by age 65"
-msgstr "Kogud 65. eluaastaks rohkem"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:90
-msgid "No change"
-msgstr "Ei muutu"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:95
-msgid ""
-"The calculator takes into account the July 2024 coalition agreement: <br "
-"class=\"d-none d-md-inline\">income tax is raised to 22% and tax-free basic "
-"exemption is not raised."
-msgstr ""
-"Kalkulaator arvestab juuli 2024 koalitsioonileppe plaane: tulumaks tõuseb "
-"22% peale ja maksuvaba tulu ei tõuse."
-
-#: templates/components/second-pillar-payment-rate-calculator.php:96
-msgid ""
-"The average return on stocks shown in the calculator has historically been "
-"7%, but this does not guarantee similar returns in the future."
-msgstr ""
-"Kalkulaatoris näidatav aktsiaturu keskmine tootlus on ajalooliselt olnud 7%, "
-"kuid see ei taga sarnast tootlust tulevikus."
-
-#: templates/components/second-pillar-payment-rate-calculator.php:104
-msgid "Start saving more<span class=\"d-none d-md-inline\"> (2 min)</span>"
-msgstr ""
-"Hakkan rohkem säästma<span class=\"d-none d-md-inline\"> (2 min)</span>"
 
 #: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
@@ -2058,37 +1388,21 @@ msgid "of which dividends"
 msgstr "millest dividendid"
 
 #: templates/components/third-pillar-calculator.php:32
-msgid ""
-"Gross income, from which income tax has not been withheld as a private "
-"person. For example, dividends received from an Estonian company; dividends "
-"that have been taxed abroad."
-msgstr ""
-"Osa eelmise rea kogu brutotulust, millelt pole eraisikuna tulumaksu kinni "
-"peetud. Näiteks Eesti äriühingult saadud dividendid, mis on äriühingu "
-"tasandil maksustatud tavamääraga 20/80; välismaalt saadud tulud (nt "
-"dividendid, millest on välismaal juba tulumaks kinni peetud)."
+msgid "Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad."
+msgstr "Osa eelmise rea kogu brutotulust, millelt pole eraisikuna tulumaksu kinni peetud. Näiteks Eesti äriühingult saadud dividendid, mis on äriühingu tasandil maksustatud tavamääraga 20/80; välismaalt saadud tulud (nt dividendid, millest on välismaal juba tulumaks kinni peetud)."
 
 #: templates/components/third-pillar-calculator.php:44
 msgid "Other tax reliefs"
 msgstr "Muud maksu&shy;vabastused"
 
 #: templates/components/third-pillar-calculator.php:47
-msgid ""
-"Gifts and donations, education costs, including kindergarten fees. Limited "
-"to 1200 euros in total, but no more than 50 percent of taxable income in "
-"Estonia."
-msgstr ""
-"Kingitused ja annetused; koolituskulud, sh lasteaiatasud. Kuni 1200 eurot, "
-"kuid mitte rohkem kui 50% ulatuses Eestis maksustatavast tulust."
+msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
+msgstr "Kingitused ja annetused; koolituskulud, sh lasteaiatasud. Kuni 1200 eurot, kuid mitte rohkem kui 50% ulatuses Eestis maksustatavast tulust."
 
 #: templates/components/third-pillar-calculator.php:65
 #: templates/components/third-pillar-calculator.php:128
-msgid ""
-"The declaration of income for this year will start on February 15 next year. "
-"Remember that you cannot get more income tax back than you paid this year."
-msgstr ""
-"Selle aasta tulude deklareerimine algab järgmise aasta 15. veebruaril. Pea "
-"meeles, et sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
+msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
+msgstr "Selle aasta tulude deklareerimine algab järgmise aasta 15. veebruaril. Pea meeles, et sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
 
 #: templates/components/third-pillar-calculator.php:72
 msgid "Contribute up to"
@@ -2096,12 +1410,8 @@ msgstr "Pane III sambasse kuni"
 
 #: templates/components/third-pillar-calculator.php:75
 #: templates/components/third-pillar-calculator.php:138
-msgid ""
-"Contributions to the III pillar are subject to an income tax discount of up "
-"to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
-msgstr ""
-"III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis "
-"maksustatavast brutotulust, kuid mitte rohkem kui 6000&nbsp;€&nbsp;aastas"
+msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
+msgstr "III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis maksustatavast brutotulust, kuid mitte rohkem kui 6000&nbsp;€&nbsp;aastas"
 
 #: templates/components/third-pillar-calculator.php:83
 msgid "Make a III pillar payment"
@@ -2116,11 +1426,8 @@ msgid "Gross salary"
 msgstr "Brutopalk"
 
 #: templates/components/third-pillar-calculator.php:95
-msgid ""
-"Your monthly gross salary (before tax). Including parental benefits, "
-"pension, etc."
-msgstr ""
-"Sinu brutopalk, millest lähevad maksud maha k.a. vanemahüvitis, pension jms"
+msgid "Your monthly gross salary (before tax). Including parental benefits, pension, etc."
+msgstr "Sinu brutopalk, millest lähevad maksud maha k.a. vanemahüvitis, pension jms"
 
 #: templates/components/third-pillar-calculator.php:101
 msgid "&euro;/month"
@@ -2129,17 +1436,6 @@ msgstr "&euro;&nbsp;kuus"
 #: templates/components/third-pillar-calculator.php:107
 msgid "Other gross income"
 msgstr "Muu brutotulu"
-
-#: templates/components/third-pillar-calculator.php:110
-msgid ""
-"Yearly gross income taxed at 20% income tax rate such as apartment rental "
-"income, Airbnb income, interest earned. Also dividends taxed at 7% personal "
-"income tax rate."
-msgstr ""
-"Muud 20% tulumaksuga maksutatavad aasta brutotulud nagu näiteks korteri "
-"üüritulu, Airbnb tulu, ühisrahastuse portaalide makstud intressid, tulu "
-"väärtpaberite või muu vara võõrandamisest. Samuti 7% eraisiku tulumaksuga "
-"maksustatud dividendid."
 
 #: templates/components/third-pillar-calculator.php:135
 msgid "Contribute monthly up to"
@@ -2150,12 +1446,8 @@ msgid "Make a contribution"
 msgstr "Tee sissemakse"
 
 #: templates/components/third-pillar-calculator.php:149
-msgid ""
-"Setting up a recurring III pillar payment is <strong>free</strong> and takes "
-"only 2&nbsp;minutes."
-msgstr ""
-"Igakuise püsimakse seadistamine on <strong>tasuta</strong> ja võtab ainult "
-"2&nbsp;minutit."
+msgid "Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes."
+msgstr "Igakuise püsimakse seadistamine on <strong>tasuta</strong> ja võtab ainult 2&nbsp;minutit."
 
 #: templates/footer/beacon-toggle-help.php:3
 msgid "I have a question"
@@ -2198,11 +1490,8 @@ msgid "Message sent!"
 msgstr "Sõnum saadetud!"
 
 #: templates/footer/beacon-translations.php:12
-msgid ""
-"Thanks for reaching out! Someone from our team will get back to you soon."
-msgstr ""
-"Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel "
-"võimalusel ühendust!"
+msgid "Thanks for reaching out! Someone from our team will get back to you soon."
+msgstr "Aitäh, et tunned Tuleva tegemiste vastu huvi, võtame sinuga esimesel võimalusel ühendust!"
 
 #: templates/footer/beacon-translations.php:13
 msgid "Send"
@@ -2213,12 +1502,8 @@ msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
 #: templates/footer/blog-beacon.php:3
-msgid ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
-"\">See calculation</a>"
-msgstr ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
-"\">Vaata arvutust</a>"
+msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
+msgstr "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/\">Vaata arvutust</a>"
 
 #: templates/footer/not-logged-in-mailing-list-form.php:3
 msgid "Join Tuleva mailing list"
@@ -2239,27 +1524,15 @@ msgstr "Liitu uudiskirjaga"
 
 #: templates/fund-content-old.php:17 templates/fund-content.php:17
 msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
-msgstr ""
-"Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
+msgstr "Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
 
 #: templates/fund-content-old.php:25 templates/fund-content.php:25
-msgid ""
-"This fund has been already chosen by %s people - including Tuleva founders "
-"and most of the members. <br> If you are over 55, consider our bond fund."
-"<br> Changing pension fund if free for you and takes only 5 minutes in your "
-"internet bank."
-msgstr ""
-"Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja "
-"enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
-"<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
+msgid "This fund has been already chosen by %s people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank."
+msgstr "Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi.<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
 
 #: templates/fund-content-old.php:32 templates/fund-content.php:32
-msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
-"lg\">Choose Tuleva pension fund</a>"
-msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
-"lg\">Suuna pension Tulevasse</a>"
+msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">Choose Tuleva pension fund</a>"
+msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-lg\">Suuna pension Tulevasse</a>"
 
 #: templates/header/main.php:8
 msgid "Toggle navigation"
@@ -2294,12 +1567,8 @@ msgid "3 important posts"
 msgstr "3 olulist artiklit"
 
 #: templates/single-content.php:101
-msgid ""
-"<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/"
-"\">See more posts</a>"
-msgstr ""
-"<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
-"\">Vaata kõiki artikleid</a>"
+msgid "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/\">See more posts</a>"
+msgstr "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/\">Vaata kõiki artikleid</a>"
 
 #: templates/single-content.php:110
 msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
@@ -2310,12 +1579,8 @@ msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
 
 #: templates/single-content.php:120
-msgid ""
-"Our guide makes transferring your pension easy via your internet bank. 5 "
-"minutes, no costs involved."
-msgstr ""
-"Juhend aitab sul 5 minutiga fondi vahetada ilma pikemalt ekslemata. "
-"Fondivahetus on kõigile tasuta."
+msgid "Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved."
+msgstr "Juhend aitab sul 5 minutiga fondi vahetada ilma pikemalt ekslemata. Fondivahetus on kõigile tasuta."
 
 #: widgets/cta-button-widget.php:12
 msgid "CTA Button widget"
@@ -2427,25 +1692,6 @@ msgstr "Tekstirida 3:"
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
 
-#~ msgid ""
-#~ "Share of investments with increased negative impact in the equity "
-#~ "portfolio"
-#~ msgstr ""
-#~ "Kõrgendatud negatiivse mõjuga investeeringute osakaal aktsiaportfellis"
-
-#~ msgid ""
-#~ "Controversial Weapons (%s%%); Nuclear Weapons (%s%%); Civilian Firearms "
-#~ "(%s%%); Tobacco (%s%%); UN Global Compact Violators (%s%%); Thermal Coal "
-#~ "(%s%%); Oil Sands (%s%%)"
-#~ msgstr ""
-#~ "Keelatud relvade tootmine ja müük (%s%%); Tuumarelvade tootmine ja müük "
-#~ "(%s%%); Eraisikutele lahingrelvade müük (%s%%); Tubakatootmine ja müük "
-#~ "(%s%%); UN Global Compact rikkujad (%s%%); Energiasöe kaevandamine ja "
-#~ "kasutamine (%s%%); Naftaliiva kaevandamine ja kasutamine (%s%%)"
-
-#~ msgid ""
-#~ "Starting from 2025, the income tax will increase to 22%. The tax-free "
-#~ "allowance is up to 654 euros per month but reduces as income grows."
-#~ msgstr ""
-#~ "Alates 2025. aastast tõuseb tulumaks 22% peale. Maksuvaba tulu on kuni "
-#~ "654 eurot kuus ja väheneb inimese sissetuleku kasvades."
+#: templates/components/third-pillar-calculator.php:110
+msgid "Yearly gross income taxed at 22% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate."
+msgstr "Muud 22% tulumaksuga maksutatavad aasta brutotulud nagu näiteks korteri üüritulu, Airbnb tulu, ühisrahastuse portaalide makstud intressid, tulu väärtpaberite või muu vara võõrandamisest. Samuti 7% eraisiku tulumaksuga maksustatud dividendid."

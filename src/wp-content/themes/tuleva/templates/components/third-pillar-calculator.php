@@ -107,7 +107,7 @@ function get_translated_link() {
                             <?php _e('Other gross income', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                                title="<?php _e('Yearly gross income taxed at 20% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate.', TEXT_DOMAIN); ?>"
+                                title="<?php _e('Yearly gross income taxed at 22% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
