@@ -176,20 +176,14 @@ $(document).ready(function ($) {
             var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
             var taxFreeWage = getTaxFreeWage(wage);
-
-            // 2% second pillar + 1.6% unemployment insurance
-            // TODO: ask for 2nd pillar payment rate
             var deductions = wageTotal * 0.036;
 
             var taxableWage = Math.max(
                 wageTotal - taxFreeWage - deductions - taxReliefs, 0);
-            console.log('wageTotal', wageTotal, 'taxFreeWage', taxFreeWage, 'deductions', deductions, 'taxReliefs', taxReliefs, 'taxableWage', taxableWage);
             var yearlyAmount = Math.min(0.15 * wageTotal, 6000, taxableWage);
-            console.log('yearlyAmount', yearlyAmount, '0.15 * wageTotal', 0.15 * wageTotal, 'taxableWage', taxableWage);
             var monthlyAmount = yearlyAmount / 12;
             var incomeTaxRate = 0.22;
             var savingsSum = yearlyAmount * incomeTaxRate;
-            console.log('savingsSum', savingsSum);
 
             $calculator.find('#yearlyAmount').text(format(yearlyAmount));
             $calculator.find('#monthlyAmount').text(format(monthlyAmount));
