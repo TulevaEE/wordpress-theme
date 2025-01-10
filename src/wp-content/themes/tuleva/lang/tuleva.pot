@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-07T13:08:33+00:00\n"
+"POT-Creation-Date: 2025-01-10T16:53:13+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1406,7 +1406,7 @@ msgid "Gross salary"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:95
-msgid "Your monthly gross salary (before tax). Including parental benefits, pension, etc."
+msgid "Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc."
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:101
@@ -1418,7 +1418,7 @@ msgid "Other gross income"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:110
-msgid "Yearly gross income taxed at 22% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate."
+msgid "Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 20%."
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:135

@@ -92,7 +92,7 @@ function get_translated_link() {
                             <?php _e('Gross salary', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                                title="<?php _e('Your monthly gross salary (before tax). Including parental benefits, pension, etc.', TEXT_DOMAIN); ?>"
+                                title="<?php _e('Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
@@ -107,7 +107,7 @@ function get_translated_link() {
                             <?php _e('Other gross income', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                                title="<?php _e('Yearly gross income taxed at 22% income tax rate such as apartment rental income, Airbnb income, interest earned. Also dividends taxed at 7% personal income tax rate.', TEXT_DOMAIN); ?>"
+                                title="<?php _e('Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 20%.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
