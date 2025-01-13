@@ -143,7 +143,7 @@ function get_translated_link() {
                 </div>
 
                 <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>" class="btn btn-primary btn-lg btn-block mt-2">
-                    <?php _e('Make a contribution', TEXT_DOMAIN); ?>
+                    <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
                 </a>
                 <div class="mt-2 py-2 text-secondary text-center small">
                     <?php _e('Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes.', TEXT_DOMAIN); ?>

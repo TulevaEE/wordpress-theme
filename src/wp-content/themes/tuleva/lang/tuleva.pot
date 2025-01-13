@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-10T17:53:47+00:00\n"
+"POT-Creation-Date: 2025-01-13T12:11:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1394,6 +1394,7 @@ msgid "Contributions to the III pillar are subject to an income tax discount of 
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:83
+#: templates/components/third-pillar-calculator.php:146
 msgid "Make a III pillar payment"
 msgstr ""
 
@@ -1423,10 +1424,6 @@ msgstr ""
 
 #: templates/components/third-pillar-calculator.php:135
 msgid "Contribute monthly up to"
-msgstr ""
-
-#: templates/components/third-pillar-calculator.php:146
-msgid "Make a contribution"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:149
