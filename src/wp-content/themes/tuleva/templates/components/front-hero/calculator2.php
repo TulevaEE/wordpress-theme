@@ -3,10 +3,10 @@
     <div class="card-body p-2">
         <div class="bg-gray-2 p-3 br-2">
             <div class="form-group align-items-center row">
-                <label for="age" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                <label for="age" class="col-sm-6 col-form-label pr-0">
                     <?php _e('Your age', TEXT_DOMAIN); ?>
                 </label>
-                <div class="col-sm-6 col-lg-7 col-xl-6">
+                <div class="col-sm-6">
                     <div class="input-group">
                         <input type="number" class="form-control text-right" id="age" inputmode="numeric"
                                min="0" step="1" placeholder="30" pattern="\d{1,7}"
@@ -19,10 +19,10 @@
 
             <div class="form-group align-items-center row">
                 <!-- TODO: from net to gross -->
-                <label for="netWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                <label for="netWage" class="col-sm-6 col-form-label pr-0">
                     <?php _e('Gross salary', TEXT_DOMAIN); ?>
                 </label>
-                <div class="col-sm-6 col-lg-7 col-xl-6">
+                <div class="col-sm-6">
                     <div class="input-group">
                         <!-- TODO: from net to gross -->
                         <input type="number" id="netWage" class="form-control text-right" min="0" step="1"
@@ -61,12 +61,12 @@
                     <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span
-                        class="historic-return-rate small text-secondary"><?php _e('the historic return on stocks is 7%', TEXT_DOMAIN); ?></span>
+                        class="historic-return-rate small text-secondary"><?php _e('historic return on stocks 7%', TEXT_DOMAIN); ?></span>
                 </div>
             </div>
         </div>
 
-        <select class="custom-select mt-2 fs-6 lh-sm fw-medium bg-gray-1" name="pensionFunds" id="comparisonFund"
+        <select class="custom-select mt-2 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds" id="comparisonFund"
                 onchange="calculateSaving()">
             <option value="average">
                 <?php _e("Estonian average II pillar fund", TEXT_DOMAIN); ?>
@@ -77,9 +77,8 @@
         <div class="mt-3 px-3 card br-2 text-navy">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="mr-3">
-                    <span
-                        class="d-inline-block"><?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?></span><span
-                        class="inline-help d-none d-md-inline-block"
+                    <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
+                        class="inline-help d-inline-block"
                         tabindex="0" data-toggle="tooltip" data-placement="bottom"
                         title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. Actual amounts depend greatly on the expected rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
                     ></span>
@@ -91,16 +90,16 @@
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="mr-3">
                     <span class="more-fees-high">
-                        <?php _e('You pay <strong class="text-danger"><span class="tuleva-saving">- €</span> more</strong> in fees', TEXT_DOMAIN); ?>
+                        <?php _e('You pay <strong class="text-danger text-nowrap"><span class="tuleva-saving">- €</span> more</strong> in fees', TEXT_DOMAIN); ?>
                     </span>
                     <span class="more-fees d-none">
-                        <?php _e('You pay <span class="tuleva-saving">- €</span> more in fees', TEXT_DOMAIN); ?>
+                        <?php _e('You pay <span class="text-nowrap"><span class="tuleva-saving">- €</span> more</span> in fees', TEXT_DOMAIN); ?>
                     </span>
                     <span class="same-fees d-none">
                         <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                     </span>
                     <span class="less-fees d-none">
-                        <?php _e('You pay <span class="tuleva-saving">- €</span> less in fees', TEXT_DOMAIN); ?>
+                        <?php _e('You pay <span class="text-nowrap"><span class="tuleva-saving">- €</span> less</span> in fees', TEXT_DOMAIN); ?>
                     </span>
                 </div>
                 <div class="text-nowrap"><span id="fund-fee">0,86%</span> <?php _e('per year', TEXT_DOMAIN); ?></div>
@@ -110,12 +109,8 @@
         <div class="mt-3 px-3 card br-2 text-navy mb-2">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="mr-3">
-                    <span class="d-inline-block fs-6 lh-sm fw-medium">
-                        <?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?><span
-                            class="inline-help d-none d-md-inline-block"
-                            tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                            title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. Actual amounts depend greatly on the expected rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
-                        ></span>
+                    <span class="fs-6 lh-sm fw-medium">
+                        <?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                     </span>
                 </div>
                 <div class="fs-5 lh-1 fw-bold text-nowrap">
@@ -124,7 +119,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="mr-3">
-                    <span class="d-inline-block"><?php _e('You pay in fees', TEXT_DOMAIN); ?></span>
+                    <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                 </div>
                 <div class="text-nowrap">0,32% <?php _e('per year', TEXT_DOMAIN); ?></div>
             </div>

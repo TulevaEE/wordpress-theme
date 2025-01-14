@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-01-14T12:15:16+00:00\n"
-"PO-Revision-Date: 2025-01-14 14:15+0200\n"
+"POT-Creation-Date: 2025-01-14T13:58:32+00:00\n"
+"PO-Revision-Date: 2025-01-14 15:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -395,8 +395,8 @@ msgstr "Eeldatav tootlus aastas"
 
 #: templates/components/front-hero/calculator2.php:64
 #: templates/components/payout-calculator.php:24
-msgid "the historic return on stocks is 7%"
-msgstr "aktsiate ajalooline tootlus on 7%"
+msgid "historic return on stocks 7%"
+msgstr "aktsiate ajalooline tootlus 7%"
 
 #: templates/components/front-hero/calculator2.php:72
 msgid "Estonian average II pillar fund"
@@ -407,7 +407,6 @@ msgid "Could accumulate by age 65"
 msgstr "Kogud 65. eluaastaks eelduslikult"
 
 #: templates/components/front-hero/calculator2.php:84
-#: templates/components/front-hero/calculator2.php:117
 msgid ""
 "We assume you started saving for your retirement at the age of 21 and a "
 "salary growth of 3% per year. Actual amounts depend greatly on the expected "
@@ -420,27 +419,35 @@ msgstr ""
 
 #: templates/components/front-hero/calculator2.php:94
 msgid ""
-"You pay <strong class=\"text-danger\"><span class=\"tuleva-saving\">- €</"
-"span> more</strong> in fees"
+"You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-"
+"saving\">- €</span> more</strong> in fees"
 msgstr ""
-"Maksad kokku tasudeks <strong class=\"text-danger\"><span class=\"tuleva-"
-"saving\">- €</span> rohkem</strong>"
+"Maksad kokku tasudeks <strong class=\"text-danger text-nowrap\"><span "
+"class=\"tuleva-saving\">- €</span> rohkem</strong>"
 
 #: templates/components/front-hero/calculator2.php:97
-msgid "You pay <span class=\"tuleva-saving\">- €</span> more in fees"
-msgstr "Maksad kokku tasudeks <span class=\"tuleva-saving\">- €</span> rohkem"
+msgid ""
+"You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
+"more</span> in fees"
+msgstr ""
+"Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
+"saving\">- €</span> rohkem</span>"
 
 #: templates/components/front-hero/calculator2.php:100
-#: templates/components/front-hero/calculator2.php:127
+#: templates/components/front-hero/calculator2.php:123
 msgid "You pay in fees"
 msgstr "Maksad tasudeks"
 
 #: templates/components/front-hero/calculator2.php:103
-msgid "You pay <span class=\"tuleva-saving\">- €</span> less in fees"
-msgstr "Maksad kokku tasudeks <span class=\"tuleva-saving\">- €</span> vähem"
+msgid ""
+"You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
+"less</span> in fees"
+msgstr ""
+"Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
+"saving\">- €</span> vähem</span>"
 
 #: templates/components/front-hero/calculator2.php:106
-#: templates/components/front-hero/calculator2.php:129
+#: templates/components/front-hero/calculator2.php:125
 msgid "per year"
 msgstr "aastas"
 
@@ -2431,3 +2438,15 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid ""
+#~ "You pay <span class=\"tuleva-saving text-nowrap\">- €</span> more in fees"
+#~ msgstr ""
+#~ "Maksad kokku tasudeks <span class=\"tuleva-saving text-nowrap\">- €</"
+#~ "span> rohkem"
+
+#~ msgid ""
+#~ "You pay <span class=\"tuleva-saving text-nowrap\">- €</span> less in fees"
+#~ msgstr ""
+#~ "Maksad kokku tasudeks <span class=\"tuleva-saving text-nowrap\">- €</"
+#~ "span> vähem"

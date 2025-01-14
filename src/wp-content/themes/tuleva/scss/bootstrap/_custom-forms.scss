@@ -149,7 +149,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
   &:focus {
     border-color: $custom-select-focus-border-color;
     outline: none;
-    @include box-shadow($custom-select-focus-box-shadow);
+    box-shadow: $custom-select-focus-box-shadow;
 
     &::-ms-value {
       // For visual consistency with other platforms/browsers,
@@ -310,6 +310,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         border: $input-btn-border-width solid $input-border-color;
         @include border-radius($custom-range-track-border-radius);
         @include box-shadow($custom-range-track-box-shadow);
+        box-sizing: border-box;
     }
 
     &::-moz-range-thumb {
@@ -336,6 +337,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         border: $input-btn-border-width solid $input-border-color;
         @include border-radius($custom-range-track-border-radius);
         @include box-shadow($custom-range-track-box-shadow);
+        box-sizing: border-box;
     }
 
     &::-ms-thumb {
@@ -364,6 +366,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         background-color: transparent;
         border: $input-btn-border-width solid $input-border-color;
         @include box-shadow($custom-range-track-box-shadow);
+        box-sizing: border-box;
     }
 
     &::-ms-fill-lower {

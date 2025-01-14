@@ -3992,6 +3992,8 @@ tbody.collapse.show {
 .custom-select:focus {
   border-color: #6fbdff;
   outline: none;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 129, 238, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 129, 238, 0.25);
 }
 .custom-select:focus::-ms-value {
   color: #495057;
@@ -4127,6 +4129,8 @@ tbody.collapse.show {
   background-color: white;
   border: 1px solid #ced4da;
   border-radius: 1rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .custom-range::-moz-range-thumb {
   width: 2.5rem;
@@ -4150,6 +4154,7 @@ tbody.collapse.show {
   background-color: white;
   border: 1px solid #ced4da;
   border-radius: 1rem;
+  box-sizing: border-box;
 }
 .custom-range::-ms-thumb {
   width: 2.5rem;
@@ -4174,6 +4179,7 @@ tbody.collapse.show {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #ced4da;
+  box-sizing: border-box;
 }
 .custom-range::-ms-fill-lower {
   background-color: white;
