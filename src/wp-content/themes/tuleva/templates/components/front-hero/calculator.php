@@ -11,10 +11,10 @@
                     <?php _e("euros per month (net),", TEXT_DOMAIN); ?>
                     <?php _e("at", TEXT_DOMAIN); ?>
                     <select class="form-control mx-1 d-inline-block" id="marketReturn" onchange="calculateSaving()">
-                        <option value="1.08">8%</option>
-                        <option value="1.05">5%</option>
-                        <option value="1" selected>0%</option>
-                        <option value="0.99">-1%</option>
+                        <option value="8">8%</option>
+                        <option value="5">5%</option>
+                        <option value="0" selected>0%</option>
+                        <option value="-1">-1%</option>
                     </select>
                     <?php _e("return", TEXT_DOMAIN); ?>
                     <?php _e("your second pillar", TEXT_DOMAIN); ?>
@@ -46,7 +46,7 @@
         </div>
         <div class="calculator__savings">
             <h6 class="calculator__savings-title"><?php _e("Cost of high fees", TEXT_DOMAIN); ?></h6>
-            <h1 class="calculator__sum" id="tuleva-saving">- €</h1>
+            <h1 class="calculator__sum tuleva-saving">- €</h1>
         </div>
     </div>
 </div>

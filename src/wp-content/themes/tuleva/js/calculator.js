@@ -44,9 +44,14 @@ var getFee = function () {
 };
 
 var calculateSaving = function () {
-    var age = $("#age").val();
-    var netWage = $("#netWage").val();
-    var marketReturn = $("#marketReturn").val();
+    var parsedAge = parseInt($("#age").val());
+    var age = isNaN(parsedAge) ? 29 : parsedAge;
+    var parsedNetWage = parseInt($("#netWage").val());
+    var netWage = isNaN(parsedNetWage) ? 1800 : parsedNetWage;
+    var marketReturn = 1 + Number($("#marketReturn").val()) / 100;
+    var parsedContribution = parseInt($('input[name="pillarContribution"]:checked').val());
+    var contribution = 0.04 + (isNaN(parsedContribution) ? 0.02 : parsedContribution / 100);
+
     var salaryGrowth = 1.03;
     var comparisonFund = getFee();
     var comparisonFundPercentage = (comparisonFund * 100).toFixed(2) + "%";
@@ -55,7 +60,7 @@ var calculateSaving = function () {
     var pastSalaryGrowth = 1.03;
     var maximumContributionYears = new Date().getFullYear() - 2003;
     var presentValueOfPensionFund = Math.ceil(
-        (((grossWage * 0.06 * 12) /
+        (((grossWage * contribution * 12) /
                 Math.pow(
                     pastSalaryGrowth,
                     Math.min(
@@ -81,7 +86,7 @@ var calculateSaving = function () {
     );
     var futureValueOfPensionFund = Math.ceil(
         (grossWage *
-            0.06 *
+            contribution *
             12 *
             (Math.pow(
                     marketReturn - comparisonFund,
@@ -97,7 +102,7 @@ var calculateSaving = function () {
     );
     var totalSavingWithTuleva = Math.ceil(
         (grossWage *
-            0.06 *
+            contribution *
             12 *
             (Math.pow(
                     marketReturn - tulevaFee,
@@ -121,9 +126,49 @@ var calculateSaving = function () {
 
     $("#future-value").text(format(futureValueOfPensionFund) + " €");
     $("#future-value-tuleva").text(format(futureValueWithTuleva) + " €");
-    $("#tuleva-saving").text(format(totalSavingWithTuleva) + " €");
+    $(".tuleva-saving").text(format(totalSavingWithTuleva) + " €");
     $("#fund-fee").text(comparisonFundPercentage);
+
+    if (comparisonFund > 0.005) {
+        $(".more-fees-high").removeClass('d-none');
+        $(".more-fees").addClass('d-none');
+        $(".same-fees").addClass('d-none');
+        $(".less-fees").addClass('d-none');
+    } else if (totalSavingWithTuleva > 0) {
+        $(".more-fees-high").addClass('d-none');
+        $(".more-fees").removeClass('d-none');
+        $(".same-fees").addClass('d-none');
+        $(".less-fees").addClass('d-none');
+    } else if (Math.round(totalSavingWithTuleva) === 0) {
+        $(".more-fees-high").addClass('d-none');
+        $(".more-fees").addClass('d-none');
+        $(".same-fees").removeClass('d-none');
+        $(".less-fees").addClass('d-none');
+    } else {
+        $(".more-fees-high").addClass('d-none');
+        $(".more-fees").addClass('d-none');
+        $(".same-fees").addClass('d-none');
+        $(".less-fees").removeClass('d-none');
+    }
 };
 
 appendFunds();
 calculateSaving();
+
+var initCalculator = function () {
+    $('.second-pillar-calculator').each(function () {
+        var $calculator = $(this);
+
+        $calculator.find('input').on('change keyup', function () {
+            calculateSaving();
+        });
+
+        $calculator.find('.custom-range').on('input', function () {
+            calculateSaving();
+        });
+
+        calculateSaving();
+    });
+};
+
+initCalculator();

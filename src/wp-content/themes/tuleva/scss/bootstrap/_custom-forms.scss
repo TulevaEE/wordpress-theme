@@ -307,7 +307,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         color: transparent; // Why?
         cursor: $custom-range-track-cursor;
         background-color: $custom-range-track-bg;
-        border-color: transparent;
+        border: $input-btn-border-width solid $input-border-color;
         @include border-radius($custom-range-track-border-radius);
         @include box-shadow($custom-range-track-box-shadow);
     }
@@ -333,7 +333,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         color: transparent;
         cursor: $custom-range-track-cursor;
         background-color: $custom-range-track-bg;
-        border-color: transparent; // Firefox specific?
+        border: $input-btn-border-width solid $input-border-color;
         @include border-radius($custom-range-track-border-radius);
         @include box-shadow($custom-range-track-box-shadow);
     }
@@ -362,8 +362,7 @@ top: ($line-height-base - $custom-control-indicator-size) / 2;
         color: transparent;
         cursor: $custom-range-track-cursor;
         background-color: transparent;
-        border-color: transparent;
-        border-width: $custom-range-thumb-height * .5;
+        border: $input-btn-border-width solid $input-border-color;
         @include box-shadow($custom-range-track-box-shadow);
     }
 
