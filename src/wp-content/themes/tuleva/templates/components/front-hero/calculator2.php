@@ -9,7 +9,7 @@
                 <div class="col-sm-6">
                     <div class="input-group">
                         <input type="number" class="form-control text-right" id="age" inputmode="numeric"
-                               min="0" step="1" placeholder="30" pattern="\d{1,7}"
+                               min="0" max="99" step="1" placeholder="30"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-addon"
                              style="min-width: 77px"><?php _e('years', TEXT_DOMAIN); ?></div>
@@ -18,15 +18,13 @@
             </div>
 
             <div class="form-group align-items-center row">
-                <!-- TODO: from net to gross -->
-                <label for="netWage" class="col-sm-6 col-form-label pr-0">
+                <label for="grossWage" class="col-sm-6 col-form-label pr-0">
                     <?php _e('Gross salary', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
                     <div class="input-group">
-                        <!-- TODO: from net to gross -->
-                        <input type="number" id="netWage" class="form-control text-right" min="0" step="1"
-                               placeholder="2000" inputmode="numeric" pattern="\d{1,7}"
+                        <input type="number" id="grossWage" class="form-control text-right"
+                               min="0" step="1" max="999999" placeholder="2000" inputmode="numeric"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-addon"
                              style="min-width: 77px"><?php _e('&euro;/month', TEXT_DOMAIN); ?></div>

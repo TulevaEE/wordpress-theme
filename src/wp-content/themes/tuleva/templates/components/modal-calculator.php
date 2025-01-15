@@ -30,7 +30,7 @@
                 </div>
                 <div class="d-flex justify-content-between eeldus">
                   <p class="mb-0"><?php _e('Minimum eligible age', TEXT_DOMAIN) ?></p>
-                  <p class="mb-0 text-bold"><?php _e('23yrs', TEXT_DOMAIN) ?></p>
+                  <p class="mb-0 text-bold"><?php _e('21yrs', TEXT_DOMAIN) ?></p>
                 </div>
               </div>
             </div>

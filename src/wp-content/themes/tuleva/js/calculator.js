@@ -45,9 +45,12 @@ var getFee = function () {
 
 var calculateSaving = function () {
     var parsedAge = parseInt($("#age").val());
-    var age = isNaN(parsedAge) ? 29 : parsedAge;
+    var age = isNaN(parsedAge) ? 30 : parsedAge;
     var parsedNetWage = parseInt($("#netWage").val());
     var netWage = isNaN(parsedNetWage) ? 1800 : parsedNetWage;
+    var parsedGrossWage = parseInt($("#grossWage").val());
+    let incomeTax = 0.78;
+    var grossWage = isNaN(parsedNetWage) ? isNaN(parsedGrossWage) ? 2000 : parsedGrossWage : netWage / incomeTax;
     var marketReturn = 1 + Number($("#marketReturn").val()) / 100;
     var parsedContribution = parseInt($('input[name="pillarContribution"]:checked').val());
     var contribution = 0.04 + (isNaN(parsedContribution) ? 0.02 : parsedContribution / 100);
@@ -55,30 +58,31 @@ var calculateSaving = function () {
     var salaryGrowth = 1.03;
     var comparisonFund = getFee();
     var comparisonFundPercentage = (comparisonFund * 100).toFixed(2) + "%";
-    var grossWage = netWage / 0.8;
     var pastAverageReturn = 1.039;
     var pastSalaryGrowth = 1.03;
     var maximumContributionYears = new Date().getFullYear() - 2003;
+    let startingAge = 21;
+
     var presentValueOfPensionFund = Math.ceil(
         (((grossWage * contribution * 12) /
                 Math.pow(
                     pastSalaryGrowth,
                     Math.min(
-                        Math.max(0, Math.min(age, 65)) - 23,
+                        Math.max(0, Math.min(age, 65)) - startingAge,
                         maximumContributionYears
                     )
                 )) *
             (Math.pow(
                     pastAverageReturn,
                     Math.min(
-                        Math.max(0, Math.min(age, 65)) - 23,
+                        Math.max(0, Math.min(age, 65)) - startingAge,
                         maximumContributionYears
                     )
                 ) -
                 Math.pow(
                     pastSalaryGrowth,
                     Math.min(
-                        Math.max(0, Math.min(age, 65)) - 23,
+                        Math.max(0, Math.min(age, 65)) - startingAge,
                         maximumContributionYears
                     )
                 ))) /
@@ -124,11 +128,6 @@ var calculateSaving = function () {
         comparisonFundPercentage = comparisonFundPercentage.replace(".", ",");
     }
 
-    $("#future-value").text(format(futureValueOfPensionFund) + " €");
-    $("#future-value-tuleva").text(format(futureValueWithTuleva) + " €");
-    $(".tuleva-saving").text(format(totalSavingWithTuleva) + " €");
-    $("#fund-fee").text(comparisonFundPercentage);
-
     if (comparisonFund > 0.005) {
         $(".more-fees-high").removeClass('d-none');
         $(".more-fees").addClass('d-none');
@@ -150,6 +149,12 @@ var calculateSaving = function () {
         $(".same-fees").addClass('d-none');
         $(".less-fees").removeClass('d-none');
     }
+
+    $("#future-value").text(format(futureValueOfPensionFund) + " €");
+    $("#future-value-tuleva").text(format(futureValueWithTuleva) + " €");
+    $("#tuleva-saving").text(format(totalSavingWithTuleva) + " €");
+    $(".tuleva-saving").text(format(Math.abs(totalSavingWithTuleva)) + " €");
+    $("#fund-fee").text(comparisonFundPercentage);
 };
 
 appendFunds();

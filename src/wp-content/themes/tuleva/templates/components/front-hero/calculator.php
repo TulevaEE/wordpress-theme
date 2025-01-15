@@ -4,7 +4,7 @@
         <form class="d-flex flex-row justify-content-center pb-3">
             <div class="d-inline-block align-items-center text-medium mr-2">
                 <span class="calculator__heading"><?php _e("If you're", TEXT_DOMAIN); ?></span>
-                <input class="form-control d-inline-block mx-1" id="age" type="number" value="29" min="18" max="65" onkeyup="calculateSaving()" onchange="calculateSaving()">
+                <input class="form-control d-inline-block mx-1" id="age" type="number" value="30" min="18" max="65" onkeyup="calculateSaving()" onchange="calculateSaving()">
                 <span class="calculator__heading"><?php _e("years old and earn", TEXT_DOMAIN); ?></span>
                 <input class="form-control d-inline-block mx-1" id="netWage" type="number" value="1800" onkeyup="calculateSaving()" onchange="calculateSaving()">
                 <span class="calculator__heading">
@@ -46,7 +46,7 @@
         </div>
         <div class="calculator__savings">
             <h6 class="calculator__savings-title"><?php _e("Cost of high fees", TEXT_DOMAIN); ?></h6>
-            <h1 class="calculator__sum tuleva-saving">- €</h1>
+            <h1 class="calculator__sum" id="tuleva-saving">- €</h1>
         </div>
     </div>
 </div>
