@@ -63,7 +63,7 @@
                     <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span
-                        class="historic-return-rate small text-secondary"><?php _e('historic return on stocks 7%', TEXT_DOMAIN); ?></span>
+                        class="historic-return-rate small text-secondary"><?php _e('7% historic return on stocks', TEXT_DOMAIN); ?></span>
                 </div>
             </div>
         </div>

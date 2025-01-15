@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-01-15T10:12:34+00:00\n"
-"PO-Revision-Date: 2025-01-15 12:13+0200\n"
+"POT-Creation-Date: 2025-01-15T10:17:44+00:00\n"
+"PO-Revision-Date: 2025-01-15 12:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -398,12 +398,12 @@ msgid ""
 "Actual amounts depend greatly on the rate of return, and neither we nor "
 "anyone else can guarantee you a specific return."
 msgstr ""
-"Oodatav summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi "
-"teine ei saa sulle kindlat tootlust tagada."
+"Kogunev summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi "
+"teine ei saa kindlat tootlust tagada."
 
 #: templates/components/front-hero/calculator2.php:66
 #: templates/components/payout-calculator.php:24
-msgid "historic return on stocks 7%"
+msgid "7% historic return on stocks"
 msgstr "aktsiate ajalooline tootlus 7%"
 
 #: templates/components/front-hero/calculator2.php:74
