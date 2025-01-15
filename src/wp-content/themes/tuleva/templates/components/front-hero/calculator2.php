@@ -53,7 +53,11 @@
 
             <div class="form-group row mb-0">
                 <label for="marketReturn" class="col-sm-6 col-form-label py-2 pr-0">
-                    <?php _e('Expected annual return', TEXT_DOMAIN); ?>
+                    <?php _e('Expected annual return', TEXT_DOMAIN); ?><span
+                        class="inline-help d-inline-block"
+                        tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                        title="<?php _e('Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
+                    ></span>
                 </label>
                 <div class="col-sm-6 return-rate">
                     <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1" data-unit="%">
@@ -78,7 +82,7 @@
                     <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
                         tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                        title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. Actual amounts depend greatly on the expected rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
                 <div class="fs-5 lh-1 fw-bold text-nowrap">

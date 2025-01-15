@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-01-15T09:34:48+00:00\n"
-"PO-Revision-Date: 2025-01-15 11:35+0200\n"
+"POT-Creation-Date: 2025-01-15T10:12:34+00:00\n"
+"PO-Revision-Date: 2025-01-15 12:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -393,31 +393,35 @@ msgstr "Sinu panus brutopalgast"
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/front-hero/calculator2.php:62
+#: templates/components/front-hero/calculator2.php:59
+msgid ""
+"Actual amounts depend greatly on the rate of return, and neither we nor "
+"anyone else can guarantee you a specific return."
+msgstr ""
+"Oodatav summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi "
+"teine ei saa sulle kindlat tootlust tagada."
+
+#: templates/components/front-hero/calculator2.php:66
 #: templates/components/payout-calculator.php:24
 msgid "historic return on stocks 7%"
 msgstr "aktsiate ajalooline tootlus 7%"
 
-#: templates/components/front-hero/calculator2.php:70
+#: templates/components/front-hero/calculator2.php:74
 msgid "Estonian average II pillar fund"
 msgstr "Eesti keskmine II samba fond"
 
-#: templates/components/front-hero/calculator2.php:78
+#: templates/components/front-hero/calculator2.php:82
 msgid "Could accumulate by age 65"
 msgstr "Kogud 65. eluaastaks eelduslikult"
 
-#: templates/components/front-hero/calculator2.php:81
+#: templates/components/front-hero/calculator2.php:85
 msgid ""
 "We assume you started saving for your retirement at the age of 21 and a "
-"salary growth of 3% per year. Actual amounts depend greatly on the expected "
-"rate of return, and neither we nor anyone else can guarantee you a specific "
-"return."
+"salary growth of 3% per year."
 msgstr ""
-"Eeldame, et hakkasid pensioni koguma 21-aastaselt ja palgakasv on 3% aastas. "
-"Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega "
-"keegi teine ei saa sulle kindlat tootlust tagada."
+"Eeldame, et hakkasid pensioni koguma 21-aastaselt ja palgakasv on 3% aastas."
 
-#: templates/components/front-hero/calculator2.php:91
+#: templates/components/front-hero/calculator2.php:95
 msgid ""
 "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> more</strong> in fees"
@@ -425,7 +429,7 @@ msgstr ""
 "Maksad kokku tasudeks <strong class=\"text-danger text-nowrap\"><span "
 "class=\"tuleva-saving\">- €</span> rohkem</strong>"
 
-#: templates/components/front-hero/calculator2.php:94
+#: templates/components/front-hero/calculator2.php:98
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "more</span> in fees"
@@ -433,12 +437,12 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> rohkem</span>"
 
-#: templates/components/front-hero/calculator2.php:97
-#: templates/components/front-hero/calculator2.php:120
+#: templates/components/front-hero/calculator2.php:101
+#: templates/components/front-hero/calculator2.php:124
 msgid "You pay in fees"
 msgstr "Maksad tasudeks"
 
-#: templates/components/front-hero/calculator2.php:100
+#: templates/components/front-hero/calculator2.php:104
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "less</span> in fees"
@@ -446,12 +450,12 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> vähem</span>"
 
-#: templates/components/front-hero/calculator2.php:103
-#: templates/components/front-hero/calculator2.php:122
+#: templates/components/front-hero/calculator2.php:107
+#: templates/components/front-hero/calculator2.php:126
 msgid "per year"
 msgstr "aastas"
 
-#: templates/components/front-hero/calculator2.php:111
+#: templates/components/front-hero/calculator2.php:115
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
