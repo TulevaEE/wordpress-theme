@@ -1,7 +1,7 @@
 <?php print_funds_js(); ?>
 <div class="card br-3 shadow-md second-pillar-calculator">
     <div class="card-body p-2">
-        <div class="bg-gray-2 p-3 br-2">
+        <div class="bg-blue-2 p-3 br-2">
             <div class="form-group align-items-center row">
                 <label for="age" class="col-sm-6 col-form-label pr-0">
                     <?php _e('Your age', TEXT_DOMAIN); ?>
