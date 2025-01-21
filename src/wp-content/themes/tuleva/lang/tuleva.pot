@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-15T10:17:44+00:00\n"
+"POT-Creation-Date: 2025-01-21T14:09:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -381,13 +381,16 @@ msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</
 msgstr ""
 
 #: templates/components/front-hero/calculator2.php:107
-#: templates/components/front-hero/calculator2.php:126
 msgid "per year"
 msgstr ""
 
 #: templates/components/front-hero/calculator2.php:115
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
+msgstr ""
+
+#: templates/components/front-hero/calculator2.php:126
+msgid "0.32% per year"
 msgstr ""
 
 #: templates/components/front-proposal.php:7

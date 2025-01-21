@@ -104,7 +104,7 @@
                         <?php _e('You pay <span class="text-nowrap"><span class="tuleva-saving">- €</span> less</span> in fees', TEXT_DOMAIN); ?>
                     </span>
                 </div>
-                <div class="text-nowrap"><span id="fund-fee">0,86%</span> <?php _e('per year', TEXT_DOMAIN); ?></div>
+                <div class="text-nowrap"><span id="fund-fee">0,83%</span> <?php _e('per year', TEXT_DOMAIN); ?></div>
             </div>
         </div>
         <hr class="my-3"/>
@@ -123,7 +123,7 @@
                 <div class="mr-3">
                     <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                 </div>
-                <div class="text-nowrap">0,32% <?php _e('per year', TEXT_DOMAIN); ?></div>
+                <div class="text-nowrap"><?php _e('0.32% per year', TEXT_DOMAIN); ?></div>
             </div>
         </div>
     </div>
