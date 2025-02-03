@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <select class="custom-select mt-2 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds" id="comparisonFund"
+        <select class="custom-select mt-2 pl-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds" id="comparisonFund"
                 onchange="calculateSaving()">
             <option value="average">
                 <?php _e("Estonian average II pillar fund", TEXT_DOMAIN); ?>
