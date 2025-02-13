@@ -15312,7 +15312,7 @@ sup {
   font-size: 1.25rem;
   line-height: 1.6;
 }
-.single-post .content p:first-child {
+.single-post .content > p:first-child {
   font-size: 1.5rem;
   line-height: 1.6666;
 }
