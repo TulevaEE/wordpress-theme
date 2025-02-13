@@ -39,7 +39,7 @@ function language_picker($isMobile = false)
             }
 
             // two language pickers: desktop and mobile have different styles
-            $link = '<a href="' . $l['url'] . '" class="nav-langpicker btn btn-link fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a><a href="' . $l['url'] . '" class="nav-langpicker btn btn-outline-primary btn-block fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a>';
+            $link = '<a href="' . $l['url'] . '" class="nav-langpicker btn btn-link fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a><a href="' . $l['url'] . '" class="nav-langpicker btn btn-outline-primary fw-medium text-uppercase">' . icl_disp_language($l['code']) . '</a>';
 
             if (!$l['active']) {
                 echo $link;

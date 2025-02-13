@@ -43,6 +43,10 @@
         }
     }
 
+    .nav-langpicker.btn-outline-primary {
+        display: none;
+    }
+
     .navbar-toggler {
         position: relative;
         // same as logo height
@@ -114,16 +118,6 @@
     
     .submenu-toggle {
         display: none;
-        /*
-        @include media-breakpoint-down(md) {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 3.5rem;
-            height: 3.5rem;
-            background: pink;
-        }
-        */
     }
 
     .nav-item {
@@ -273,12 +267,6 @@
         .btn-primary {
             display: none;
         }
-        .nav-langpicker.btn-outline-primary {
-            display: none;
-        }
-        .nav-langpicker.btn-link {
-            display: block;
-        }
     }
     @include media-breakpoint-up(xl) {
         .btn-primary {
@@ -287,35 +275,7 @@
     }
     @include media-breakpoint-down(md) {
         .navbar-nav {
-            
-        }
-        .nav-langpicker.btn-outline-primary {
-            display: block;
-        }
-        .nav-langpicker.btn-link {
-            display: none;
-        }
-        .nav-helpers {
-            padding: 1.25rem;
-
-            .btn-outline-primary {
-                flex: 0 0 calc(25% - 0.25rem);
-            }
-            .btn-primary {
-                flex: 0 0 calc(50% - 0.5rem);
-            }
-        }
-    }
-    @include media-breakpoint-down(sm) {
-        .nav-helpers {
-            flex-wrap: wrap;
-
-            .btn-outline-primary {
-                flex: 0 0 calc(50% - 0.25rem);
-            }
-            .btn-primary {
-                flex: 0 0 100%;
-            }
+            padding-bottom: 3.5rem;
         }
     }
 }

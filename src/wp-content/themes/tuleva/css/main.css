@@ -35,7 +35,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   background-color: #fff;
 }
@@ -90,13 +90,12 @@ ul ol {
   margin-bottom: 0;
 }
 
-dt, dd {
-  margin-bottom: 0.5rem;
-}
 dt {
   font-weight: 700;
 }
+
 dd {
+  margin-bottom: 0.5rem;
   margin-left: 0;
 }
 
@@ -465,7 +464,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   background-color: #fff;
 }
@@ -3485,7 +3484,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -5501,7 +5500,7 @@ tbody.collapse.show {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: $text-primary;
+  color: #293036;
   background-color: #e9ecef;
 }
 
@@ -5992,7 +5991,7 @@ button.close {
 .tooltip-inner {
   max-width: 24rem;
   padding: 0.75rem 1rem;
-  color: $text-primary;
+  color: #293036;
   text-align: center;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -6154,7 +6153,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: $text-primary;
+  color: #293036;
 }
 
 .carousel {
@@ -12252,6 +12251,7 @@ hr {
 p, .p {
   font-size: 1rem;
   font-weight: 400;
+  color: #293036;
 }
 p.lead, .p.lead {
   font-size: 1.25rem;
@@ -12312,7 +12312,7 @@ sup {
 }
 
 .text-primary {
-  color: $text-primary !important;
+  color: #293036 !important;
 }
 
 .text-muted, .post-list__item__meta,
@@ -14823,6 +14823,9 @@ sup {
     background: linear-gradient(to bottom, #fff calc(100% - 0.75rem), rgba(255, 255, 255, 0));
   }
 }
+.navbar .nav-langpicker.btn-outline-primary {
+  display: none;
+}
 .navbar .navbar-toggler {
   position: relative;
   width: 46px;
@@ -14891,16 +14894,6 @@ sup {
 }
 .navbar .submenu-toggle {
   display: none;
-  /*
-  @include media-breakpoint-down(md) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 3.5rem;
-      height: 3.5rem;
-      background: pink;
-  }
-  */
 }
 .navbar .nav-item {
   position: relative;
@@ -15039,12 +15032,6 @@ sup {
   .navbar .btn-primary {
     display: none;
   }
-  .navbar .nav-langpicker.btn-outline-primary {
-    display: none;
-  }
-  .navbar .nav-langpicker.btn-link {
-    display: block;
-  }
 }
 @media (min-width: 1200px) {
   .navbar .btn-primary {
@@ -15052,45 +15039,8 @@ sup {
   }
 }
 @media (max-width: 991px) {
-  .navbar .nav-langpicker.btn-outline-primary {
-    display: block;
-  }
-  .navbar .nav-langpicker.btn-link {
-    display: none;
-  }
-  .navbar .nav-helpers {
-    padding: 1.25rem;
-  }
-  .navbar .nav-helpers .btn-outline-primary {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 calc(25% - 0.25rem);
-    -ms-flex: 0 0 calc(25% - 0.25rem);
-    flex: 0 0 calc(25% - 0.25rem);
-  }
-  .navbar .nav-helpers .btn-primary {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 calc(50% - 0.5rem);
-    -ms-flex: 0 0 calc(50% - 0.5rem);
-    flex: 0 0 calc(50% - 0.5rem);
-  }
-}
-@media (max-width: 767px) {
-  .navbar .nav-helpers {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .navbar .nav-helpers .btn-outline-primary {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 calc(50% - 0.25rem);
-    -ms-flex: 0 0 calc(50% - 0.25rem);
-    flex: 0 0 calc(50% - 0.25rem);
-  }
-  .navbar .nav-helpers .btn-primary {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+  .navbar .navbar-nav {
+    padding-bottom: 3.5rem;
   }
 }
 
@@ -15304,16 +15254,15 @@ sup {
 .single-post .post-social:last-child {
   margin-right: 0;
 }
-.single-post .content,
-.single-post .content p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
 .single-post .content {
   padding-top: 0;
   margin-bottom: 5rem;
 }
-.single-post .content > p:first-child {
+.single-post .content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.single-post .content p:first-child {
   font-size: 1.5rem;
   line-height: 1.6666;
 }
