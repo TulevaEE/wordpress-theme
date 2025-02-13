@@ -35,7 +35,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #293036;
+  color: $text-primary;
   text-align: left;
   background-color: #fff;
 }
@@ -465,7 +465,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #293036;
+  color: $text-primary;
   text-align: left;
   background-color: #fff;
 }
@@ -3485,7 +3485,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #293036;
+  color: $text-primary;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -5501,7 +5501,7 @@ tbody.collapse.show {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #293036;
+  color: $text-primary;
   background-color: #e9ecef;
 }
 
@@ -5992,7 +5992,7 @@ button.close {
 .tooltip-inner {
   max-width: 24rem;
   padding: 0.75rem 1rem;
-  color: #293036;
+  color: $text-primary;
   text-align: center;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -6154,7 +6154,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #293036;
+  color: $text-primary;
 }
 
 .carousel {
@@ -12252,7 +12252,6 @@ hr {
 p, .p {
   font-size: 1rem;
   font-weight: 400;
-  color: #293036;
 }
 p.lead, .p.lead {
   font-size: 1.25rem;
@@ -12313,7 +12312,7 @@ sup {
 }
 
 .text-primary {
-  color: #293036 !important;
+  color: $text-primary !important;
 }
 
 .text-muted, .post-list__item__meta,
