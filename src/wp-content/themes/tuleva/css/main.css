@@ -15304,13 +15304,14 @@ sup {
 .single-post .post-social:last-child {
   margin-right: 0;
 }
-.single-post .content {
-  padding-top: 0;
-  margin-bottom: 5rem;
-}
+.single-post .content,
 .single-post .content p {
   font-size: 1.25rem;
   line-height: 1.6;
+}
+.single-post .content {
+  padding-top: 0;
+  margin-bottom: 5rem;
 }
 .single-post .content > p:first-child {
   font-size: 1.5rem;
