@@ -7,7 +7,7 @@
                 <div style="flex: 1 0 0;">
                     <span class="badge badge-pill badge-primary fs-6 fw-medium" style="position: absolute; left: 50%; transform: translate(-50%); margin-top: -37px;">95% Tuleva II sambas kogujate valik</span>
                     <h2 class="mt-2 mb-2 h4">Tuleva Maailma Aktsiate Pensionifond</h2>
-                    <p class="m-0">Madala tasuga riskantne indeksfond, mis investeerib täielikult aktsiatesse. Sobib sulle, kui soovid <strong>parimat pikaajalist tootlust</strong> ja sind ei löö rivist välja turu lühiajalised kõikumised.</p>
+                    <p class="m-0">Madala tasuga indeksfond, mis investeerib täielikult aktsiatesse. Sobib sulle, kui soovid <strong>parimat pikaajalist tootlust</strong> ja sind ei löö rivist välja turu lühiajalised kõikumised.</p>
                 </div>
                 <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
                     <div style="flex: 1 0 0;">
@@ -29,7 +29,7 @@
             <div class="card shadow-sm d-flex flex-column m-0 p-4 br-4 text-left">
                 <div style="flex: 1 0 0;">
                     <h2 class="mt-2 mb-2 h4">Tuleva Maailma Võlakirjade Pensionifond</h2>
-                    <p class="m-0">Madala tasuga konservatiivne indeksfond, mis investeerib täielikult võlakirjadesse. Võib sulle sobida, kui otsid <strong>stabiilsust ja kaitset</strong> turukõikumiste eest, isegi kui see tähendab väiksemat tootlust.</p>
+                    <p class="m-0">Madala tasuga indeksfond, mis investeerib täielikult võlakirjadesse. Võib sulle sobida, kui otsid stabiilsust ja kaitset turukõikumiste eest, isegi kui see tähendab väiksemat tootlust.</p>
                 </div>
                 <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
                     <div style="flex: 1 0 0;">
