@@ -12,7 +12,7 @@
                 <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
                     <div style="flex: 1 0 0;">
                         <div class="bg-gray-2 p-4 br-2">
-                            <p class="m-0"><span class="d-block text-secondary">Investeerib</span> <span class="mt-1 d-block lead fw-medium first-letter-capitalize">aktsiatesse</span></p>
+                            <p class="m-0"><span class="d-block text-secondary">Investeerib</span> <span class="mt-1 d-block lead fw-medium">aktsiatesse</span></p>
                         </div>
                     </div>
                     <div style="flex: 1 0 0;">
@@ -34,7 +34,7 @@
                 <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
                     <div style="flex: 1 0 0;">
                         <div class="bg-gray-2 p-4 br-2">
-                            <p class="m-0"><span class="d-block text-secondary">Investeerib</span> <span class="mt-1 d-block lead fw-medium first-letter-capitalize">võlakirjadesse</span></p>
+                            <p class="m-0"><span class="d-block text-secondary">Investeerib</span> <span class="mt-1 d-block lead fw-medium">võlakirjadesse</span></p>
                         </div>
                     </div>
                     <div style="flex: 1 0 0;">
