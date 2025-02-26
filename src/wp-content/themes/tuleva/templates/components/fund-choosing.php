@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-sm-row" style="gap: 8px">
-                    <a class="btn btn-lg btn-link border fw-normal" role="button" href="https://tuleva.ee/tuleva-maailma-aktsiate-pensionifond/" style="flex: 1 0 0;">Fondi info</a>
+                    <a class="btn btn-lg border fw-normal" role="button" href="https://tuleva.ee/tuleva-maailma-aktsiate-pensionifond/" style="flex: 1 0 0;">Fondi info</a>
                     <a class="btn btn-lg btn-outline-primary fw-medium" role="button" href="https://pension.tuleva.ee/2nd-pillar-flow/"  style="flex: 1 0 0;">Valin aktsiafondi</a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-sm-row" style="gap: 8px">
-                    <a class="btn btn-lg btn-link border fw-normal" role="button" href="https://tuleva.ee/tuleva-maailma-volakirjade-pensionifond/" style="flex: 1 0 0;">Fondi info</a>
+                    <a class="btn btn-lg border fw-normal" role="button" href="https://tuleva.ee/tuleva-maailma-volakirjade-pensionifond/" style="flex: 1 0 0;">Fondi info</a>
                     <a class="btn btn-lg btn-outline-primary fw-medium" role="button" href="https://pension.tuleva.ee/2nd-pillar-flow/"  style="flex: 1 0 0;">Valin võlakirjafondi</a>
                 </div>
             </div>
