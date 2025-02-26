@@ -29,7 +29,7 @@
             <div class="card shadow-sm d-flex flex-column m-0 p-4 br-4 text-left">
                 <div style="flex: 1 0 0;">
                     <h2 class="mt-2 mb-2 h4">Tuleva Maailma Võlakirjade Pensionifond</h2>
-                    <p class="m-0">Madala tasuga indeksfond, mis investeerib täielikult võlakirjadesse. Võib sulle sobida, kui otsid stabiilsust ja kaitset turukõikumiste eest, isegi kui see tähendab väiksemat tootlust.</p>
+                    <p class="m-0">Konservatiivne indeksfond, mis investeerib täielikult võlakirjadesse. Võib sulle sobida, kui otsid stabiilsust ja kaitset turukõikumiste eest, isegi kui see tähendab loobumist võimalikust tootlusest.</p>
                 </div>
                 <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
                     <div style="flex: 1 0 0;">
