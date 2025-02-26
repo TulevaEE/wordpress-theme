@@ -1,5 +1,29 @@
 <section id="choose-fund" class="py-6">
     <div class="container text-center">
+        <h1 class="m-0"><?php the_title(); ?></h1>
+
+        <div class="mt-6 card-deck flex-column flex-lg-row-reverse mx-auto" style="gap: 24px;">
+            <?php if ( have_rows('box_right') ) : ?>
+                <?php while ( have_rows('box_right') ) : the_row(); ?>
+                    <?php get_template_part('templates/components/fund-choosing-card'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php if ( have_rows('box_left') ) : ?>
+                <?php while ( have_rows('box_left') ) : the_row(); ?>
+                    <?php get_template_part('templates/components/fund-choosing-card'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+
+        <div class="mt-6 text-secondary">
+            <?php echo get_field('rich_text'); ?>
+        </div>
+    </div>
+</section>
+
+<section id="choose-fund" class="py-6">
+    <div class="container text-center">
         <h1 class="m-0">Milline Tuleva pensionifond valida?</h1>
 
         <div class="mt-6 card-deck flex-column flex-lg-row-reverse mx-auto" style="gap: 24px;">
@@ -55,30 +79,6 @@
 
             <p class="m-0">Loe lähemalt <a href="https://tuleva.ee/analuusid/tuleva-ei-spekuleeri/">Tuleva pensionifondide investeerimisstrateegiast</a>.</p>
             <p class="m-0">Kui tekib küsimusi, kirjuta <a href="mailto:tuleva@tuleva.ee">tuleva@tuleva.ee</a> või helista <a href="tel:+3726445100">644 5100</a>.</p>
-        </div>
-    </div>
-</section>
-
-<section id="choose-fund" class="py-6">
-    <div class="container text-center">
-        <h2 class="mb-5">
-            <?php the_title() ?>
-        </h2>
-        <div class="row">
-            <div class="col">
-                <div class="card-deck">
-                    <div class="card shadow-sm">
-                        <?php if( have_rows('left_box') ) while ( have_rows('left_box') ) : the_row(); ?>
-                            <?php get_template_part('templates/components/fund-choosing-card'); ?>
-                        <?php endwhile; ?>
-                    </div>
-                    <div class="card shadow-sm">
-                        <?php if( have_rows('right_box') ) while ( have_rows('right_box') ) : the_row(); ?>
-                            <?php get_template_part('templates/components/fund-choosing-card'); ?>
-                        <?php endwhile; ?>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
