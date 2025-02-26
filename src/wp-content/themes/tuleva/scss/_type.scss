@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: $font-family-serif;
   font-weight: $font-weight-bold;
   line-height: $line-height-sm;
-  text-wrap: pretty;
+  text-wrap: balance;
 
   [style] {
     // ignore all copy-pasted formatting and custom inline styles
@@ -50,6 +50,7 @@ h1, .h1 {
 h3, h4, h5, h6,
 .h3, .h4, .h5, .h6 {
   font-family: $font-family-sans-serif;
+  color: $text-primary;
 }
 
 .page-title {
@@ -212,6 +213,10 @@ hr {
   margin: 1.5rem 0;
 }
 
+.first-letter-capitalize::first-letter {
+  text-transform: uppercase;
+}
+
 // Elements
 
 p, .p {
@@ -283,6 +288,7 @@ sup {
 }
 
 // Text colors
+
 .text-primary {
   color: $text-primary !important;
 }

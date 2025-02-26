@@ -1767,3 +1767,9 @@
 .countdown-timer__seconds {
     font-weight: bold;
 }
+
+/* card */
+
+.card-deck .card-selected {
+    border: 2px solid $blue;
+}

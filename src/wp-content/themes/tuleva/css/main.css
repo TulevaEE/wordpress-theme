@@ -35,7 +35,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   background-color: #fff;
 }
@@ -90,13 +90,12 @@ ul ol {
   margin-bottom: 0;
 }
 
-dt, dd {
-  margin-bottom: 0.5rem;
-}
 dt {
   font-weight: 700;
 }
+
 dd {
+  margin-bottom: 0.5rem;
   margin-left: 0;
 }
 
@@ -465,7 +464,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   background-color: #fff;
 }
@@ -3485,7 +3484,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: $text-primary;
+  color: #293036;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -5501,7 +5500,7 @@ tbody.collapse.show {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: $text-primary;
+  color: #293036;
   background-color: #e9ecef;
 }
 
@@ -5992,7 +5991,7 @@ button.close {
 .tooltip-inner {
   max-width: 24rem;
   padding: 0.75rem 1rem;
-  color: $text-primary;
+  color: #293036;
   text-align: center;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -6154,7 +6153,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: $text-primary;
+  color: #293036;
 }
 
 .carousel {
@@ -12030,7 +12029,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.25;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 h1 [style], h2 [style], h3 [style], h4 [style], h5 [style], h6 [style],
 .h1 [style], .h2 [style], .h3 [style], .h4 [style], .h5 [style], .h6 [style] {
@@ -12077,6 +12076,7 @@ h6, .h6 {
 h3, h4, h5, h6,
 .h3, .h4, .h5, .h6 {
   font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #293036;
 }
 
 .page-title {
@@ -12249,10 +12249,14 @@ hr {
   margin: 1.5rem 0;
 }
 
+.first-letter-capitalize::first-letter {
+  text-transform: uppercase;
+}
+
 p, .p {
   font-size: 1rem;
   font-weight: 400;
-  color: $text-primary;
+  color: #293036;
 }
 p.lead, .p.lead {
   font-size: 1.25rem;
@@ -12313,7 +12317,7 @@ sup {
 }
 
 .text-primary {
-  color: $text-primary !important;
+  color: #293036 !important;
 }
 
 .text-muted, .post-list__item__meta,
@@ -14425,6 +14429,11 @@ sup {
   font-weight: bold;
 }
 
+/* card */
+.card-deck .card-selected {
+  border: 2px solid #0081ee;
+}
+
 .row-spacing {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -15259,12 +15268,11 @@ sup {
   padding-top: 0;
   margin-bottom: 5rem;
 }
-.single-post .content,
 .single-post .content p {
   font-size: 1.25rem;
   line-height: 1.6;
 }
-.single-post .content > p:first-child {
+.single-post .content p:first-child {
   font-size: 1.5rem;
   line-height: 1.6666;
 }
