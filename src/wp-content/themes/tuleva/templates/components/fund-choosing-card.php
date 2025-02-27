@@ -7,7 +7,7 @@
             </span>
         <?php endif; ?>
         <h2 class="mt-2 mb-2 h4"><?php echo get_sub_field('title'); ?></h2>
-        <p class="m-0"><?php echo get_sub_field('content'); ?></p>
+        <?php echo get_sub_field('content'); ?>
     </div>
     <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
         <?php $card_left = get_sub_field('card_left'); ?>
