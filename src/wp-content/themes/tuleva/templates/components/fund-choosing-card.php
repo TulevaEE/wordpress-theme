@@ -6,30 +6,26 @@
                 <?php echo get_sub_field('pill'); ?>
             </span>
         <?php endif; ?>
-        <h2 class="mt-2 mb-2 h4"><?php echo get_sub_field('title'); ?></h2>
+        <h2 class="my-2 h4"><?php echo get_sub_field('title'); ?></h2>
         <?php echo get_sub_field('content'); ?>
     </div>
-    <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
+    <div class="my-4 d-flex flex-column flex-sm-row bg-gray-2 br-2 px-4 px-sm-0 py-sm-4 text-center tiles">
         <?php $tile_first = get_sub_field('tile_first'); ?>
         <?php if ($tile_first) : ?>
-            <div style="flex: 1 0 0;">
-                <div class="bg-gray-2 p-4 br-2">
-                    <p class="m-0">
-                        <span class="d-block text-secondary"><?php echo $tile_first['label']; ?></span>
-                        <span class="mt-1 d-block lead fw-medium"><?php echo $tile_first['value']; ?></span>
-                    </p>
-                </div>
+            <div class="py-4 px-sm-4 py-sm-0" style="flex: 1 0 0;">
+                <p class="m-0">
+                    <span class="d-block text-secondary"><?php echo $tile_first['label']; ?></span>
+                    <span class="mt-1 d-block lead fw-medium"><?php echo $tile_first['value']; ?></span>
+                </p>
             </div>
         <?php endif; ?>
         <?php $tile_second = get_sub_field('tile_second'); ?>
         <?php if ($tile_second) : ?>
-            <div style="flex: 1 0 0;">
-                <div class="bg-gray-2 p-4 br-2">
-                    <p class="m-0">
-                        <span class="d-block text-secondary"><?php echo $tile_second['label']; ?></span>
-                        <span class="mt-1 d-block lead fw-medium"><?php echo $tile_second['value']; ?></span>
-                    </p>
-                </div>
+            <div class="py-4 px-sm-4 py-sm-0" style="flex: 1 0 0;">
+                <p class="m-0">
+                    <span class="d-block text-secondary"><?php echo $tile_second['label']; ?></span>
+                    <span class="mt-1 d-block lead fw-medium"><?php echo $tile_second['value']; ?></span>
+                </p>
             </div>
         <?php endif; ?>
     </div>
