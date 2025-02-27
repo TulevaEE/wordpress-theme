@@ -3,14 +3,14 @@
         <h1 class="m-0"><?php the_title(); ?></h1>
 
         <div class="mt-6 card-deck flex-column flex-lg-row-reverse mx-auto" style="gap: 24px;">
-            <?php if ( have_rows('box_right') ) : ?>
-                <?php while ( have_rows('box_right') ) : the_row(); ?>
+            <?php if ( have_rows('box_primary') ) : ?>
+                <?php while ( have_rows('box_primary') ) : the_row(); ?>
                     <?php get_template_part('templates/components/fund-choosing-card'); ?>
                 <?php endwhile; ?>
             <?php endif; ?>
 
-            <?php if ( have_rows('box_left') ) : ?>
-                <?php while ( have_rows('box_left') ) : the_row(); ?>
+            <?php if ( have_rows('box_secondary') ) : ?>
+                <?php while ( have_rows('box_secondary') ) : the_row(); ?>
                     <?php get_template_part('templates/components/fund-choosing-card'); ?>
                 <?php endwhile; ?>
             <?php endif; ?>

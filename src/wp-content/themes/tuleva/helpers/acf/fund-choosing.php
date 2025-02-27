@@ -7,8 +7,8 @@ if (function_exists('acf_add_local_field_group')):
         'fields' => array(
             array(
                 'key' => 'field_63b73cd6e9f80',
-                'label' => 'Box Left',
-                'name' => 'box_left',
+                'label' => 'Box Secondary',
+                'name' => 'box_secondary',
                 'aria-label' => '',
                 'type' => 'group',
                 'instructions' => '',
@@ -87,8 +87,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf1835244ed',
-                        'label' => 'Card Left',
-                        'name' => 'card_left',
+                        'label' => 'Tile First',
+                        'name' => 'tile_first',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -104,8 +104,8 @@ if (function_exists('acf_add_local_field_group')):
                         'sub_fields' => array(
                             array(
                                 'key' => 'field_67bf1841244f3',
-                                'label' => 'Title',
-                                'name' => 'title',
+                                'label' => 'Label',
+                                'name' => 'label',
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
@@ -148,8 +148,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf186e244f4',
-                        'label' => 'Card Right',
-                        'name' => 'card_right',
+                        'label' => 'Tile Second',
+                        'name' => 'tile_second',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -165,8 +165,8 @@ if (function_exists('acf_add_local_field_group')):
                         'sub_fields' => array(
                             array(
                                 'key' => 'field_67bf186e244f5',
-                                'label' => 'Title',
-                                'name' => 'title',
+                                'label' => 'Label',
+                                'name' => 'label',
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
@@ -209,8 +209,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_63b73cd6ed0b9',
-                        'label' => 'Button Left',
-                        'name' => 'button_left',
+                        'label' => 'Button Secondary',
+                        'name' => 'button_secondary',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -273,8 +273,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf1795244e7',
-                        'label' => 'Button Right',
-                        'name' => 'button_right',
+                        'label' => 'Button Primary',
+                        'name' => 'button_primary',
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',
@@ -292,8 +292,8 @@ if (function_exists('acf_add_local_field_group')):
             ),
             array(
                 'key' => 'field_67bf1948244f9',
-                'label' => 'Box Right',
-                'name' => 'box_right',
+                'label' => 'Box Primary',
+                'name' => 'box_primary',
                 'aria-label' => '',
                 'type' => 'group',
                 'instructions' => '',
@@ -372,8 +372,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf194824503',
-                        'label' => 'Card Left',
-                        'name' => 'card_left',
+                        'label' => 'Tile First',
+                        'name' => 'tile_first',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -389,8 +389,8 @@ if (function_exists('acf_add_local_field_group')):
                         'sub_fields' => array(
                             array(
                                 'key' => 'field_67bf194824504',
-                                'label' => 'Title',
-                                'name' => 'title',
+                                'label' => 'Label',
+                                'name' => 'label',
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
@@ -433,8 +433,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf194824506',
-                        'label' => 'Card Right',
-                        'name' => 'card_right',
+                        'label' => 'Tile Second',
+                        'name' => 'tile_second',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -450,8 +450,8 @@ if (function_exists('acf_add_local_field_group')):
                         'sub_fields' => array(
                             array(
                                 'key' => 'field_67bf194824507',
-                                'label' => 'Title',
-                                'name' => 'title',
+                                'label' => 'Label',
+                                'name' => 'label',
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
@@ -494,8 +494,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf253a48659',
-                        'label' => 'Button Left',
-                        'name' => 'button_left',
+                        'label' => 'Button Secondary',
+                        'name' => 'button_secondary',
                         'aria-label' => '',
                         'type' => 'group',
                         'instructions' => '',
@@ -558,8 +558,8 @@ if (function_exists('acf_add_local_field_group')):
                     ),
                     array(
                         'key' => 'field_67bf19482450c',
-                        'label' => 'Button Right',
-                        'name' => 'button_right',
+                        'label' => 'Button Primary',
+                        'name' => 'button_primary',
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',

@@ -10,42 +10,42 @@
         <?php echo get_sub_field('content'); ?>
     </div>
     <div class="my-5 d-flex flex-column flex-sm-row text-center" style="gap: 8px">
-        <?php $card_left = get_sub_field('card_left'); ?>
-        <?php if ($card_left) : ?>
+        <?php $tile_first = get_sub_field('tile_first'); ?>
+        <?php if ($tile_first) : ?>
             <div style="flex: 1 0 0;">
                 <div class="bg-gray-2 p-4 br-2">
                     <p class="m-0">
-                        <span class="d-block text-secondary"><?php echo $card_left['title']; ?></span>
-                        <span class="mt-1 d-block lead fw-medium"><?php echo $card_left['value']; ?></span>
+                        <span class="d-block text-secondary"><?php echo $tile_first['label']; ?></span>
+                        <span class="mt-1 d-block lead fw-medium"><?php echo $tile_first['value']; ?></span>
                     </p>
                 </div>
             </div>
         <?php endif; ?>
-        <?php $card_right = get_sub_field('card_right'); ?>
-        <?php if ($card_right) : ?>
+        <?php $tile_second = get_sub_field('tile_second'); ?>
+        <?php if ($tile_second) : ?>
             <div style="flex: 1 0 0;">
                 <div class="bg-gray-2 p-4 br-2">
                     <p class="m-0">
-                        <span class="d-block text-secondary"><?php echo $card_right['title']; ?></span>
-                        <span class="mt-1 d-block lead fw-medium"><?php echo $card_right['value']; ?></span>
+                        <span class="d-block text-secondary"><?php echo $tile_second['label']; ?></span>
+                        <span class="mt-1 d-block lead fw-medium"><?php echo $tile_second['value']; ?></span>
                     </p>
                 </div>
             </div>
         <?php endif; ?>
     </div>
     <div class="d-flex flex-column flex-sm-row" style="gap: 8px">
-        <?php $button_left = get_sub_field('button_left'); ?>
-        <?php if ($button_left) : ?>
+        <?php $button_secondary = get_sub_field('button_secondary'); ?>
+        <?php if ($button_secondary) : ?>
             <a class="btn btn-lg border fw-normal" role="button"
-               href="<?php echo $button_left['link']; ?>" style="flex: 1 0 0;">
-                <?php echo $button_left['button_text']; ?>
+               href="<?php echo $button_secondary['link']; ?>" style="flex: 1 0 0;">
+                <?php echo $button_secondary['button_text']; ?>
             </a>
         <?php endif; ?>
-        <?php $button_right = get_sub_field('button_right'); ?>
-        <?php if ($button_right) : ?>
+        <?php $button_primary = get_sub_field('button_primary'); ?>
+        <?php if ($button_primary) : ?>
             <a class="btn btn-lg btn-outline-primary fw-medium" role="button"
-               href="<?php echo $button_right['url']; ?>" style="flex: 1 0 0;">
-                <?php echo $button_right['title']; ?>
+               href="<?php echo $button_primary['url']; ?>" style="flex: 1 0 0;">
+                <?php echo $button_primary['title']; ?>
             </a>
         <?php endif; ?>
     </div>
