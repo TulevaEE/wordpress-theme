@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-03-03T17:01:40+00:00\n"
-"PO-Revision-Date: 2025-03-03 19:02+0200\n"
+"POT-Creation-Date: 2025-03-03T17:28:57+00:00\n"
+"PO-Revision-Date: 2025-03-03 19:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -460,8 +460,8 @@ msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
 #: templates/components/front-hero/calculator2.php:126
-msgid "0.32% per year"
-msgstr "0,32% aastas"
+msgid "0.31% per year"
+msgstr "0,31% aastas"
 
 #: templates/components/front-proposal.php:7
 msgid ""

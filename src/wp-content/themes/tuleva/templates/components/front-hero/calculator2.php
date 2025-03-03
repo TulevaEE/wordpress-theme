@@ -123,7 +123,7 @@
                 <div class="mr-3">
                     <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                 </div>
-                <div class="text-nowrap"><?php _e('0.32% per year', TEXT_DOMAIN); ?></div>
+                <div class="text-nowrap"><?php _e('0.31% per year', TEXT_DOMAIN); ?></div>
             </div>
         </div>
     </div>

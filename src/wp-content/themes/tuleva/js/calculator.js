@@ -1,5 +1,5 @@
 var averageFundFee = 0.83 / 100;
-var tulevaFee = 0.0032;
+var tulevaFee = 0.0031;
 
 var format = function (num) {
     if (!window.LANGCODE) {

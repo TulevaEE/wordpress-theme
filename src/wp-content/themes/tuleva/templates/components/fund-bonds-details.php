@@ -42,7 +42,7 @@
                                     title="<?php echo sprintf(__('Ongoing charges are determined by estimation because the management fee decreased during %s.', TEXT_DOMAIN), "2024"); ?>"
                                 ></span>
                             </div>
-                            <div>0,32%</div>
+                            <div>0,31%</div>
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
