@@ -31,17 +31,10 @@
                         </div>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
-                            <div>0,21%</div>
+                            <div>0,20%</div>
                         </div>
                         <div class="fund-info__item">
-                            <div class="small text-bold">
-                                <?php _e('Total expense ratio', TEXT_DOMAIN) ?>
-                                <span
-                                    class="icon-info d-none d-md-inline-block" data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="<?php echo sprintf(__('Ongoing charges are determined by estimation because the management fee decreased during %s.', TEXT_DOMAIN), "2024"); ?>"
-                                ></span>
-                            </div>
+                            <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
                             <div>0,31%</div>
                         </div>
                         <div class="fund-info__item">
