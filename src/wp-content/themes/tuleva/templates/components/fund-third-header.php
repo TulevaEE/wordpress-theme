@@ -18,7 +18,7 @@
                         <h5 class="ml-md-3 mb-3"><?php _e('Suitable for you if:', TEXT_DOMAIN); ?></h5>
                         <ul class="list-style-checkmark text-navy">
                             <li><?php _e('You seek the best long‑term returns and are not unsettled by short‑term market fluctuations.', TEXT_DOMAIN); ?></li>
-                            <li><?php _e('You do not plan to withdraw your entire II pillar within the next 5 years.', TEXT_DOMAIN); ?></li>
+                            <li><?php _e('You do not plan to withdraw your entire III pillar within the next 5 years.', TEXT_DOMAIN); ?></li>
                         </ul>
                     </div>
                     <div class="proposal__cta">
