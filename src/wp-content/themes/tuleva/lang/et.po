@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-01-21T14:09:06+00:00\n"
-"PO-Revision-Date: 2025-01-21 16:09+0200\n"
+"POT-Creation-Date: 2025-03-03T12:54:13+00:00\n"
+"PO-Revision-Date: 2025-03-03 15:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -765,18 +765,21 @@ msgstr "Võlakirjade osakaal %s%%"
 #: templates/components/fund-bonds-header.php:18
 #: templates/components/fund-stocks-header.php:18
 #: templates/components/fund-third-header.php:18
-msgid "Suitable for you if"
+msgid "Suitable for you if:"
 msgstr "Sobib sulle, kui"
 
 #: templates/components/fund-bonds-header.php:20
-msgid "you have less than 10 years till retirement"
-msgstr ""
-"sul on pensionieani jäänud <span class=\"text-highlight\">vähem kui 10 "
-"aastat</span>"
+msgid ""
+"You plan to withdraw your entire II pillar savings within the next 5 years."
+msgstr "plaanid järgmise 5 aasta jooksul kogu II sammast välja võtta,"
 
 #: templates/components/fund-bonds-header.php:21
-msgid "a long-term stable result is more important to you"
-msgstr "sulle on olulisem pikaajaline stabiilne tulemus"
+msgid ""
+"You want protection against market fluctuations and are willing to give up "
+"returns for it."
+msgstr ""
+"otsid kaitset turu kõikumiste eest ja oled selle nimel valmis loobuma "
+"tootlusest."
 
 #: templates/components/fund-bonds-header.php:25
 msgid ""
@@ -999,18 +1002,19 @@ msgid "Share of shares %s%%"
 msgstr "Aktsiate osakaal %s%%"
 
 #: templates/components/fund-stocks-header.php:20
-msgid "you are younger than 55 years"
-msgstr "oled noorem kui 55-aastane"
+#: templates/components/fund-third-header.php:20
+msgid ""
+"You seek the best long‑term returns and are not unsettled by short‑term "
+"market fluctuations."
+msgstr ""
+"soovid parimat pikaajalist tootlust ja sind ei löö rivist välja turu "
+"lühiajalised kõikumised,"
 
 #: templates/components/fund-stocks-header.php:21
+#: templates/components/fund-third-header.php:21
 msgid ""
-"you would like to earn <span class=\"text-highlight\"><strong>best expected "
-"return</strong></span> over long term and you are not disturbed by short-"
-"term fluctuations of the market"
-msgstr ""
-"tahad saavutada <span class=\"text-highlight\"><strong>parimat võimalikku "
-"tootlust</strong></span> pika aja vältel ja sind ei löö rivist välja turu "
-"lühiajalised kõikumised"
+"You do not plan to withdraw your entire II pillar within the next 5 years."
+msgstr "sa ei plaani järgmise 5 aasta jooksul kogu II sammast välja võtta."
 
 #: templates/components/fund-stocks-header.php:26
 msgid "of people chose this fund"
@@ -1031,22 +1035,6 @@ msgstr "15. oktoober 2019"
 #: templates/components/fund-third-header.php:5
 msgid "Tuleva III Pillar Pension Fund"
 msgstr "Tuleva III Samba Pensionifond"
-
-#: templates/components/fund-third-header.php:20
-msgid ""
-"you are younger than 55 years (if you are over 55, this fund is suitable for "
-"you in combination with a low-risk fund or a bank deposit)"
-msgstr ""
-"oled noorem kui 55-aastane (kui oled üle 55, siis sobib see fond sulle "
-"kombinatsioonis madala riskiga fondi või pangahoiusega)"
-
-#: templates/components/fund-third-header.php:21
-msgid ""
-"and you want to achieve %sthe best possible return%s and you are not shaken "
-"by short-term market fluctuations"
-msgstr ""
-"ja tahad saavutada %sparimat võimalikku tootlust%s ning sind ei löö rivist "
-"välja turu lühiajalised kõikumised"
 
 #: templates/components/fund-third-header.php:25
 msgid "Select this fund"
@@ -2280,23 +2268,23 @@ msgstr ""
 "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
 "lg\">Suuna pension Tulevasse</a>"
 
-#: templates/header/main.php:8
-msgid "Toggle navigation"
-msgstr "Navigatsioon"
-
-#: templates/header/main.php:16
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr "https://pension.tuleva.ee"
 
-#: templates/header/main.php:16
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "Log in"
 msgstr "Sisenen"
 
-#: templates/header/main.php:17
+#: templates/header/main.php:11
+msgid "Toggle navigation"
+msgstr "Navigatsioon"
+
+#: templates/header/main.php:21
 msgid "/en/transfer-pension-tuleva/"
 msgstr "/kuidas-tuua-pension-tulevasse/"
 
-#: templates/header/main.php:17
+#: templates/header/main.php:21
 msgid "Choose Tuleva 2nd pillar"
 msgstr "Too II sammas Tulevasse"
 
@@ -2445,6 +2433,33 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "you have less than 10 years till retirement"
+#~ msgstr ""
+#~ "sul on pensionieani jäänud <span class=\"text-highlight\">vähem kui 10 "
+#~ "aastat</span>"
+
+#~ msgid "a long-term stable result is more important to you"
+#~ msgstr "sulle on olulisem pikaajaline stabiilne tulemus"
+
+#~ msgid "you are younger than 55 years"
+#~ msgstr "oled noorem kui 55-aastane"
+
+#~ msgid ""
+#~ "you would like to earn <span class=\"text-highlight\"><strong>best "
+#~ "expected return</strong></span> over long term and you are not disturbed "
+#~ "by short-term fluctuations of the market"
+#~ msgstr ""
+#~ "tahad saavutada <span class=\"text-highlight\"><strong>parimat võimalikku "
+#~ "tootlust</strong></span> pika aja vältel ja sind ei löö rivist välja turu "
+#~ "lühiajalised kõikumised"
+
+#~ msgid ""
+#~ "you are younger than 55 years (if you are over 55, this fund is suitable "
+#~ "for you in combination with a low-risk fund or a bank deposit)"
+#~ msgstr ""
+#~ "oled noorem kui 55-aastane (kui oled üle 55, siis sobib see fond sulle "
+#~ "kombinatsioonis madala riskiga fondi või pangahoiusega)"
 
 #~ msgid "23yrs"
 #~ msgstr "23a"

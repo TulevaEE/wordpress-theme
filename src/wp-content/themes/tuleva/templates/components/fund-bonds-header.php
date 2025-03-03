@@ -15,10 +15,10 @@
             <div class="col-lg-10 m-auto">
                 <div class="proposal">
                     <div class="proposal__body">
-                        <h5 class="ml-md-3 mb-3"><?php _e('Suitable for you if', TEXT_DOMAIN) ?></h5>
+                        <h5 class="ml-md-3 mb-3"><?php _e('Suitable for you if:', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-checkmark text-navy">
-                            <li><?php _e('you have less than 10 years till retirement', TEXT_DOMAIN) ?></li>
-                            <li><?php _e('a long-term stable result is more important to you', TEXT_DOMAIN) ?></li>
+                            <li><?php _e('You plan to withdraw your entire II pillar savings within the next 5 years.', TEXT_DOMAIN) ?></li>
+                            <li><?php _e('You want protection against market fluctuations and are willing to give up returns for it.', TEXT_DOMAIN) ?></li>
                         </ul>
                     </div>
                     <div class="proposal__cta">

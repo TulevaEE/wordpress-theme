@@ -1767,3 +1767,22 @@
 .countdown-timer__seconds {
     font-weight: bold;
 }
+
+/* card */
+
+.card-deck .card-selected {
+    border: 2px solid $blue;
+}
+
+/* tiles */
+
+.tiles > div + div {
+    border: solid $gray-border-3;
+    border-width: 1px 0 0;
+
+    @media (min-width: 576px) {
+        & {
+            border-width: 0 0 0 1px;
+        }
+      }
+}

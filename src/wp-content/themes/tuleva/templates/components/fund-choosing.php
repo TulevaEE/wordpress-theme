@@ -1,23 +1,23 @@
 <section id="choose-fund" class="py-6">
     <div class="container text-center">
-        <h2 class="mb-5">
-            <?php the_title() ?>
-        </h2>
-        <div class="row">
-            <div class="col">
-                <div class="card-deck">
-                    <div class="card shadow-sm">
-                        <?php if( have_rows('left_box') ) while ( have_rows('left_box') ) : the_row(); ?>
-                            <?php get_template_part('templates/components/fund-choosing-card'); ?>
-                        <?php endwhile; ?>
-                    </div>
-                    <div class="card shadow-sm">
-                        <?php if( have_rows('right_box') ) while ( have_rows('right_box') ) : the_row(); ?>
-                            <?php get_template_part('templates/components/fund-choosing-card'); ?>
-                        <?php endwhile; ?>
-                    </div>
-                </div>
-            </div>
+        <h1 class="m-0"><?php the_title(); ?></h1>
+
+        <div class="mt-6 card-deck flex-column flex-lg-row mx-auto" style="gap: 24px;">
+            <?php if ( have_rows('box_primary') ) : ?>
+                <?php while ( have_rows('box_primary') ) : the_row(); ?>
+                    <?php get_template_part('templates/components/fund-choosing-card'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php if ( have_rows('box_secondary') ) : ?>
+                <?php while ( have_rows('box_secondary') ) : the_row(); ?>
+                    <?php get_template_part('templates/components/fund-choosing-card'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+
+        <div class="mt-6 text-secondary">
+            <?php echo get_field('rich_text'); ?>
         </div>
     </div>
 </section>
