@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-21T14:09:06+00:00\n"
+"POT-Creation-Date: 2025-03-03T12:54:13+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -663,15 +663,15 @@ msgstr ""
 #: templates/components/fund-bonds-header.php:18
 #: templates/components/fund-stocks-header.php:18
 #: templates/components/fund-third-header.php:18
-msgid "Suitable for you if"
+msgid "Suitable for you if:"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:20
-msgid "you have less than 10 years till retirement"
+msgid "You plan to withdraw your entire II pillar savings within the next 5 years."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:21
-msgid "a long-term stable result is more important to you"
+msgid "You want protection against market fluctuations and are willing to give up returns for it."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:25
@@ -814,11 +814,13 @@ msgid "Share of shares %s%%"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:20
-msgid "you are younger than 55 years"
+#: templates/components/fund-third-header.php:20
+msgid "You seek the best long‑term returns and are not unsettled by short‑term market fluctuations."
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:21
-msgid "you would like to earn <span class=\"text-highlight\"><strong>best expected return</strong></span> over long term and you are not disturbed by short-term fluctuations of the market"
+#: templates/components/fund-third-header.php:21
+msgid "You do not plan to withdraw your entire II pillar within the next 5 years."
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:26
@@ -835,14 +837,6 @@ msgstr ""
 
 #: templates/components/fund-third-header.php:5
 msgid "Tuleva III Pillar Pension Fund"
-msgstr ""
-
-#: templates/components/fund-third-header.php:20
-msgid "you are younger than 55 years (if you are over 55, this fund is suitable for you in combination with a low-risk fund or a bank deposit)"
-msgstr ""
-
-#: templates/components/fund-third-header.php:21
-msgid "and you want to achieve %sthe best possible return%s and you are not shaken by short-term market fluctuations"
 msgstr ""
 
 #: templates/components/fund-third-header.php:25
@@ -1577,23 +1571,25 @@ msgstr ""
 msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">Choose Tuleva pension fund</a>"
 msgstr ""
 
-#: templates/header/main.php:8
-msgid "Toggle navigation"
-msgstr ""
-
-#: templates/header/main.php:16
+#: templates/header/main.php:9
+#: templates/header/main.php:20
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr ""
 
-#: templates/header/main.php:16
+#: templates/header/main.php:9
+#: templates/header/main.php:20
 msgid "Log in"
 msgstr ""
 
-#: templates/header/main.php:17
+#: templates/header/main.php:11
+msgid "Toggle navigation"
+msgstr ""
+
+#: templates/header/main.php:21
 msgid "/en/transfer-pension-tuleva/"
 msgstr ""
 
-#: templates/header/main.php:17
+#: templates/header/main.php:21
 msgid "Choose Tuleva 2nd pillar"
 msgstr ""
 
