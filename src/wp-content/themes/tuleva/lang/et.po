@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-03T17:28:57+00:00\n"
-"PO-Revision-Date: 2025-03-04 19:50+0700\n"
+"PO-Revision-Date: 2025-03-04 15:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1725,4 +1725,4 @@ msgstr "Sobib sulle, kui soovid teenida <strong>parimat pikaajalist tootlust</st
 
 #: templates/components/fund-third-header.php:18
 msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire III pillar within the next 5 years."
-msgstr "Sobib sulle, kui soovid teenida <strong>parimat pikaajalist tootlust</strong> ja ei plaani järgmise 5 aasta jooksul kogu II sammast välja võtta."
+msgstr "Sobib sulle, kui soovid teenida <strong>parimat pikaajalist tootlust</strong> ja ei plaani järgmise 5 aasta jooksul kogu III sammast välja võtta."
