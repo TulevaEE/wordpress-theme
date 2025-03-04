@@ -151,7 +151,7 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <h4>Tekkis küsimusi?</h4>
                 <p>
-                    Helista +372 644 5100 või kirjuta <a href="mailto:info@tuleva.ee">info@tuleva.ee</a>
+                    Helista +372 644 5100 või kirjuta <a href="mailto:tuleva@tuleva.ee">tuleva@tuleva.ee</a>
                 </p>
             </div>
         </div>
