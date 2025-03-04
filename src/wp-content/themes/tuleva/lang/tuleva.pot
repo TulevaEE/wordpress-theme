@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-03T17:28:57+00:00\n"
+"POT-Creation-Date: 2025-03-04T08:01:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -494,161 +494,155 @@ msgstr ""
 msgid "Management fee"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:38
-#: templates/components/fund-stocks-details.php:38
-#: templates/components/fund-third-details.php:38
+#: templates/components/fund-bonds-details.php:37
+#: templates/components/fund-stocks-details.php:37
+#: templates/components/fund-third-details.php:37
 msgid "Total expense ratio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:42
-#: templates/components/fund-stocks-details.php:42
-#: templates/components/fund-third-details.php:42
-msgid "Ongoing charges are determined by estimation because the management fee decreased during %s."
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:48
-#: templates/components/fund-stocks-details.php:48
-#: templates/components/fund-third-details.php:48
+#: templates/components/fund-bonds-details.php:41
+#: templates/components/fund-stocks-details.php:41
+#: templates/components/fund-third-details.php:41
 msgid "Redemption fee and issue fee"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:52
-#: templates/components/fund-stocks-details.php:52
-#: templates/components/fund-third-details.php:52
+#: templates/components/fund-bonds-details.php:45
+#: templates/components/fund-stocks-details.php:45
+#: templates/components/fund-third-details.php:45
 msgid "Fund manager's participation rate in fund"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:46
+#: templates/components/fund-stocks-details.php:46
+#: templates/components/fund-third-details.php:46
+msgid "units"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:49
+#: templates/components/fund-stocks-details.php:49
+#: templates/components/fund-third-details.php:49
+msgid "Risk profile"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:50
+msgid "Conservative"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:53
 #: templates/components/fund-stocks-details.php:53
 #: templates/components/fund-third-details.php:53
-msgid "units"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:56
-#: templates/components/fund-stocks-details.php:56
-#: templates/components/fund-third-details.php:56
-msgid "Risk profile"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:57
-msgid "Conservative"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:60
-#: templates/components/fund-stocks-details.php:60
-#: templates/components/fund-third-details.php:60
 msgid "Comparison index"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-bonds-details.php:54
 msgid "and"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:65
-#: templates/components/fund-stocks-details.php:65
-#: templates/components/fund-third-details.php:65
+#: templates/components/fund-bonds-details.php:58
+#: templates/components/fund-stocks-details.php:58
+#: templates/components/fund-third-details.php:58
 msgid "Documents"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:68
-#: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:61
+#: templates/components/fund-third-details.php:61
 msgid "Prospectus"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:68
-#: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:61
+#: templates/components/fund-third-details.php:61
 msgid " and "
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:68
-#: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:61
+#: templates/components/fund-third-details.php:61
 msgid "Terms and conditions"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:68
-#: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:61
+#: templates/components/fund-third-details.php:61
 msgid " (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:71
-#: templates/components/fund-stocks-details.php:71
-#: templates/components/fund-third-details.php:71
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:64
+#: templates/components/fund-third-details.php:64
 msgid "Model portfolio (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:74
-#: templates/components/fund-stocks-details.php:74
-#: templates/components/fund-third-details.php:74
+#: templates/components/fund-bonds-details.php:67
+#: templates/components/fund-stocks-details.php:67
+#: templates/components/fund-third-details.php:67
 msgid "Key Investor Information (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:77
-#: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:77
+#: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-stocks-details.php:70
+#: templates/components/fund-third-details.php:70
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-stocks-details.php:80
-#: templates/components/fund-third-details.php:80
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-third-details.php:73
 msgid "Sustainability"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:76
+#: templates/components/fund-stocks-details.php:76
+#: templates/components/fund-third-details.php:76
+msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:79
+#: templates/components/fund-stocks-details.php:79
+#: templates/components/fund-third-details.php:79
+msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:83
 #: templates/components/fund-stocks-details.php:83
 #: templates/components/fund-third-details.php:83
-msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-stocks-details.php:86
 #: templates/components/fund-third-details.php:86
-msgid "Remuneration Policy of Tuleva Fondid AS"
+msgid "Investment reports (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-stocks-details.php:90
 #: templates/components/fund-third-details.php:90
-msgid "Reports"
+msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:93
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
-msgid "Investment reports (in Estonian)"
+msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-stocks-details.php:97
 #: templates/components/fund-third-details.php:97
-msgid "Previous reports"
+msgid "Sustainability information"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:99
+#: templates/components/fund-stocks-details.php:99
+#: templates/components/fund-third-details.php:99
+msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:100
 #: templates/components/fund-stocks-details.php:100
 #: templates/components/fund-third-details.php:100
-msgid "Financial reports of fund and fund manager (in Estonian)"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:104
-#: templates/components/fund-stocks-details.php:104
-#: templates/components/fund-third-details.php:104
-msgid "Sustainability information"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:106
-#: templates/components/fund-stocks-details.php:106
-#: templates/components/fund-third-details.php:106
-msgid "CO2 intensity"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:107
-#: templates/components/fund-stocks-details.php:107
-#: templates/components/fund-third-details.php:107
 msgid "%s tons / $1M turnover per year"
 msgstr ""
 
@@ -657,7 +651,7 @@ msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:6
-msgid "Share of bonds %s%%"
+msgid "Conservative index fund that invests fully in bonds."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:18
@@ -803,14 +797,14 @@ msgstr ""
 msgid "Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus.ee</a>"
 msgstr ""
 
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-stocks-details.php:50
+#: templates/components/fund-third-details.php:50
 msgid "Aggressive"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:6
 #: templates/components/fund-third-header.php:6
-msgid "Share of shares %s%%"
+msgid "Low-cost index fund that invests fully in stocks."
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:20
@@ -823,7 +817,7 @@ msgid "You do not plan to withdraw your entire II pillar within the next 5 yea
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:26
-msgid "of people chose this fund"
+msgid "of Tuleva II pillar investors’ choice"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:27

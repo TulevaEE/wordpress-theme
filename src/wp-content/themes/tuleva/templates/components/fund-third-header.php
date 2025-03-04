@@ -1,9 +1,9 @@
-<section id="mutual-header" class="bg-hero-stocks">
+<section id="mutual-header" class="bg-hero-stocks text-navy">
     <div class="container">
         <div class="row py-6">
             <div class="col-lg-10 mx-auto text-center">
                 <h1 class="mb-4"><?php _e('Tuleva III Pillar Pension Fund', TEXT_DOMAIN) ?></h1>
-                <h5 class=" text-normal mb-4"><?php echo sprintf(__('Share of shares %s%%', TEXT_DOMAIN), '100') ?></h5>
+                <p class="lead mb-4"><?php _e('Low-cost index fund that invests fully in stocks.', TEXT_DOMAIN) ?></p>
             </div>
         </div>
     </div>
@@ -15,8 +15,8 @@
             <div class="col-lg-10 m-auto">
                 <div class="proposal">
                     <div class="proposal__body">
-                        <h5 class="ml-md-3 mb-3"><?php _e('Suitable for you if:', TEXT_DOMAIN); ?></h5>
-                        <ul class="list-style-checkmark text-navy">
+                        <p class="mb-3 lead fw-bold"><?php _e('Suitable for you if:', TEXT_DOMAIN); ?></p>
+                        <ul class="list-style-checkmark">
                             <li><?php _e('You seek the best long‑term returns and are not unsettled by short‑term market fluctuations.', TEXT_DOMAIN); ?></li>
                             <li><?php _e('You do not plan to withdraw your entire III pillar within the next 5 years.', TEXT_DOMAIN); ?></li>
                         </ul>

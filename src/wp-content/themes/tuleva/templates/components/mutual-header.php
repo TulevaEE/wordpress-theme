@@ -1,4 +1,4 @@
-<section id="mutual-header" class="bg-hero-mutual">
+<section id="mutual-header" class="bg-hero-mutual text-navy">
     <div class="container">
         <div class="row py-6">
             <div class="mx-auto col-lg-11 col-xl-9 text-center">
