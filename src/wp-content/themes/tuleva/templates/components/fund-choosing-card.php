@@ -6,7 +6,7 @@
                 <?php echo get_sub_field('pill'); ?>
             </span>
         <?php endif; ?>
-        <h2 class="my-2 h4"><?php echo get_sub_field('title'); ?></h2>
+        <h2 class="my-3 h4"><?php echo get_sub_field('title'); ?></h2>
         <?php echo get_sub_field('content'); ?>
     </div>
     <div class="my-4 d-flex flex-column flex-sm-row bg-gray-2 br-2 px-4 px-sm-0 py-sm-4 text-center tiles">
