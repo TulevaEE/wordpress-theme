@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-04T08:01:39+00:00\n"
+"POT-Creation-Date: 2025-03-04T12:42:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -650,25 +650,15 @@ msgstr ""
 msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
 
-#: templates/components/fund-bonds-header.php:6
-msgid "Conservative index fund that invests fully in bonds."
+#: templates/components/fund-bonds-header.php:17
+msgid "<strong>A conservative index fund that invests entirely in low-risk bonds.</strong> The expected return of this fund is significantly lower than that of the stock fund. It is impossible to achieve good returns with low risk."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:18
-#: templates/components/fund-stocks-header.php:18
-#: templates/components/fund-third-header.php:18
-msgid "Suitable for you if:"
-msgstr ""
-
-#: templates/components/fund-bonds-header.php:20
-msgid "You plan to withdraw your entire II pillar savings within the next 5 years."
+msgid "Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:21
-msgid "You want protection against market fluctuations and are willing to give up returns for it."
-msgstr ""
-
-#: templates/components/fund-bonds-header.php:25
 msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
 
@@ -802,25 +792,20 @@ msgstr ""
 msgid "Aggressive"
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:6
-#: templates/components/fund-third-header.php:6
-msgid "Low-cost index fund that invests fully in stocks."
+#: templates/components/fund-stocks-header.php:17
+#: templates/components/fund-third-header.php:17
+msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The performance of this fund can fluctuate sharply from year to year. However, the expected return is significantly higher than that of the bond fund."
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:20
-#: templates/components/fund-third-header.php:20
-msgid "You seek the best long‑term returns and are not unsettled by short‑term market fluctuations."
+#: templates/components/fund-stocks-header.php:18
+msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire II pillar within the next 5 years."
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:21
-msgid "You do not plan to withdraw your entire II pillar within the next 5 years."
-msgstr ""
-
-#: templates/components/fund-stocks-header.php:26
+#: templates/components/fund-stocks-header.php:22
 msgid "of Tuleva II pillar investors’ choice"
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:27
+#: templates/components/fund-stocks-header.php:23
 msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
@@ -832,11 +817,11 @@ msgstr ""
 msgid "Tuleva III Pillar Pension Fund"
 msgstr ""
 
-#: templates/components/fund-third-header.php:21
-msgid "You do not plan to withdraw your entire III pillar within the next 5 years."
+#: templates/components/fund-third-header.php:18
+msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire III pillar within the next 5 years."
 msgstr ""
 
-#: templates/components/fund-third-header.php:25
+#: templates/components/fund-third-header.php:21
 msgid "Select this fund"
 msgstr ""
 
