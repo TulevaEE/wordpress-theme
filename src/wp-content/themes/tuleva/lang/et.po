@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-05 18:28+0700\n"
+"PO-Revision-Date: 2025-03-05 19:47+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -802,10 +802,6 @@ msgstr "15. oktoober 2019"
 #: templates/components/fund-third-header.php:5
 msgid "Tuleva III Pillar Pension Fund"
 msgstr "Tuleva III Samba Pensionifond"
-
-#: templates/components/fund-third-header.php:17
-msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply. However, projected long-term returns are nevertheless significantly higher than for a bond fund."
-msgstr "<strong>Madala tasuga indeksfond, mis investeerib täielikult aktsiatesse.</strong> Selle fondi tootlus võib järsult aastast-aastasse kõikuda. Oodatav tootlus on sellegipoolest oluliselt kõrgem kui mõnel võlakirjafondil."
 
 #: templates/components/fund-third-header.php:18
 msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire III pillar within the next 5 years."
@@ -1729,3 +1725,7 @@ msgstr "<strong>Konservatiivne indeksfond, mis investeerib täielikult madala ri
 #: templates/components/fund-bonds-header.php:18
 msgid "Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security."
 msgstr ""
+
+#: templates/components/fund-third-header.php:17
+msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply, yet without consciously taking risks, achieving high returns is impossible."
+msgstr "<strong>Madala tasuga indeksfond, mis investeerib täielikult aktsiatesse.</strong> Selle fondi tootlus võib järsult aastast-aastasse kõikuda, ent teadlikku riski võtmata ei ole võimalik kõrget tootlust teenida."

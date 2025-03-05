@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-05T11:18:47+00:00\n"
+"POT-Creation-Date: 2025-03-05T12:46:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -817,7 +817,7 @@ msgid "Tuleva III Pillar Pension Fund"
 msgstr ""
 
 #: templates/components/fund-third-header.php:17
-msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply. However, projected long-term returns are nevertheless significantly higher than for a bond fund."
+msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply, yet without consciously taking risks, achieving high returns is impossible."
 msgstr ""
 
 #: templates/components/fund-third-header.php:18
