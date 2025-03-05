@@ -1,12 +1,13 @@
 <div class="page-container">
-    <?php if ( have_posts() ) while ( have_posts() ) : the_post();
+    <?php if (have_posts()) while (have_posts()) : the_post();
 
         get_template_part('templates/components/fund-stocks-header');
         get_template_part('templates/components/fund-stocks-details');
         get_template_part('templates/components/fund-manager');
 
         if (have_rows('fund_components')) {
-            while (have_rows('fund_components')) { the_row();
+            while (have_rows('fund_components')) {
+                the_row();
                 if (get_row_layout() === 'qa_block') {
                     get_template_part('templates/components/qa-block');
                 }
@@ -24,19 +25,34 @@
             ]
         ]
     );
-    $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
+    if ($_SERVER['SERVER_NAME'] !== 'localhost') {
+        $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
+    } else {
+        $json = '[
+          {
+            "fundManager": {
+              "name": "Tuleva"
+            },
+            "isin": "EE3600109435",
+            "name": "Tuleva World Stocks Pension Fund",
+            "managementFeeRate": 0.0024,
+            "pillar": 2,
+            "ongoingChargesFigure": 0.0031,
+            "nav": 1.28834,
+            "volume": 732956944.21689
+          }
+        ]';
+    }
+
     $funds = json_decode($json, true);
     $stock = array_search('EE3600109435', array_column($funds, 'isin'));
-    $bond = array_search('EE3600109443', array_column($funds, 'isin'));
-    $third = array_search('EE3600001707', array_column($funds, 'isin'));
+
     ?>
 
     <script type="text/javascript">
         $(function () {
             $('#stock-fund-volume').html('<?php echo number_format($funds[$stock]['volume'], 0, '.', ' ') ?>');
             $('#stock-fund-nav').html('<?php echo $funds[$stock]['nav'] ?>');
-            $('#bond-fund-volume').html('<?php echo number_format($funds[$bond]['volume'], 0, '.', ' ') ?>');
-            $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
         });
     </script>
 </div>
