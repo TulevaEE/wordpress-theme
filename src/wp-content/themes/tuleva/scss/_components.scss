@@ -1284,9 +1284,14 @@
         }
     }
     &__body {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
         border-bottom: 1px solid $gray-border-3;
         @include media-breakpoint-up (md) {
+            margin-right: 2rem;
+            margin-bottom: 0;
             padding-right: 2rem;
+            padding-bottom: 0;
             border-bottom: none;
             border-right: 1px solid $gray-border-3;
         }
@@ -1297,7 +1302,6 @@
     &__cta {
         @include media-breakpoint-up (md) {
             min-width: 35%;
-            padding-left: 2rem;
         }
     }
 }

@@ -13857,11 +13857,16 @@ sup {
   padding-left: 2rem;
 }
 .proposal__body {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid #d6dee6;
 }
 @media (min-width: 768px) {
   .proposal__body {
+    margin-right: 2rem;
+    margin-bottom: 0;
     padding-right: 2rem;
+    padding-bottom: 0;
     border-bottom: none;
     border-right: 1px solid #d6dee6;
   }
@@ -13872,7 +13877,6 @@ sup {
 @media (min-width: 768px) {
   .proposal__cta {
     min-width: 35%;
-    padding-left: 2rem;
   }
 }
 
