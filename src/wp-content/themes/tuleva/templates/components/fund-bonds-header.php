@@ -14,7 +14,7 @@
             <div class="col-lg-10 m-auto">
                 <div class="proposal">
                     <div class="proposal__body">
-                        <p class="mb-3"><?php _e('<strong>A conservative index fund that invests entirely in low-risk bonds.</strong> Lower risk also means lower returns compared to the stock fund. It is impossible to combine low risk with high returns.', TEXT_DOMAIN) ?></p>
+                        <p class="mb-3"><?php _e('<strong>A conservative index fund that invests entirely in low-risk bonds.</strong> Lower risk also means lower returns compared to the stock fund. It is impossible to combine low risk with high returns.', TEXT_DOMAIN) ?></p>
                         <p class="m-0"><?php _e('Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security.', TEXT_DOMAIN) ?></p>
                     </div>
                     <div class="proposal__cta">

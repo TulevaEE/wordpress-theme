@@ -14,7 +14,7 @@
             <div class="col-lg-10 m-auto">
                 <div class="proposal">
                     <div class="proposal__body">
-                        <p class="mb-3"><?php _e('<strong>A low-cost index fund that invests entirely in stocks.</strong> The performance of this fund can fluctuate sharply from year to year. However, the expected return is significantly higher than that of the bond fund.', TEXT_DOMAIN) ?></p>
+                        <p class="mb-3"><?php _e('<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply. However, projected long-term returns are nevertheless significantly higher than for the bond fund.', TEXT_DOMAIN) ?></p>
                         <p class="m-0"><?php _e('Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire II pillar within the next 5 years.', TEXT_DOMAIN) ?></p>
                     </div>
                     <div class="proposal__cta">
