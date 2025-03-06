@@ -1,4 +1,4 @@
-var averageFundFee = 0.85 / 100;
+var averageFundFee = 0.79 / 100;
 var tulevaFee = 0.0031;
 
 var format = function (num) {
