@@ -82,7 +82,7 @@
                     <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
                         tabindex="0" data-toggle="tooltip" data-placement="bottom"
-                        title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
                 <div class="fs-5 lh-1 fw-bold text-nowrap">
