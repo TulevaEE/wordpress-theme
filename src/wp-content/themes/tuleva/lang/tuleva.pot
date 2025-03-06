@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-06T10:36:37+00:00\n"
+"POT-Creation-Date: 2025-03-06T11:25:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1677,8 +1677,8 @@ msgstr ""
 msgid "See also our %sFAQ%s page."
 msgstr ""
 
-#: widgets/help-widget.php:80
-msgid "Ask Pirje from Tuleva team."
+#: widgets/help-widget.php:79
+msgid "Ask Pirje from Tuleva team"
 msgstr ""
 
 #: widgets/subscribe-widget.php:14

@@ -47,7 +47,7 @@ function tu_widgets_init() {
     register_sidebar( [
         'name'          => 'Footer bottom widget area',
         'id'            => 'footer_bottom_widget_area',
-        'before_widget' => '<div class="col-md-12 footer__text">',
+        'before_widget' => '<div class="mt-5 col-md-12 footer__text">',
         'after_widget'  => '</div>',
     ] );
 

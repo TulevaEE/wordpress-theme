@@ -1,20 +1,16 @@
 .footer {
     background-color: $footer-bg-color;
-    padding: 70px 0;
+    padding: 80px 0;
 
     @include media-breakpoint-down(sm) {
-        padding: 30px 0;
+        padding: 48px 0;
     }
 
     &__title {
-        text-transform: uppercase;
-        color: $heading-primary;
-        font-size: 1em;
-        margin-bottom: 24px;
-
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 12px;
-        }
+        margin: 0 0 .25em;
+        color: $text-primary;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
 
         &--light {
             text-transform: inherit;
@@ -24,22 +20,17 @@
 
     &__column {
         @include media-breakpoint-down(sm) {
-            margin-bottom: 24px;
+            margin-bottom: 1em;
         }
     }
 
     &__column__text {
-        font-size: .875em;
-        color: #373A3C;
-
         &__row {
-            margin-bottom: 5px;
+            margin-bottom: .25em;
         }
     }
 
     &__text {
-        margin-top: 70px;
-        font-size: .875em;
         color: $text-secondary;
 
         @include media-breakpoint-down(sm) {
@@ -48,22 +39,6 @@
 
         p {
             color: $text-secondary;
-        }
-    }
-
-    &__social {
-        padding: 16px 0;
-
-        a {
-            margin-right: 10px;
-        }
-
-        &__facebook {
-            width: 62px;
-        }
-
-        &__twitter {
-            width: 80px;
         }
     }
 

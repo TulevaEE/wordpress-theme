@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-06 17:37+0700\n"
+"PO-Revision-Date: 2025-03-06 18:25+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1666,10 +1666,6 @@ msgstr "KKK lehe URL:"
 msgid "See also our %sFAQ%s page."
 msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
 
-#: widgets/help-widget.php:80
-msgid "Ask Pirje from Tuleva team."
-msgstr "Vastab Pirje Tuleva tiimist."
-
 #: widgets/subscribe-widget.php:14
 msgid "Subscribe form"
 msgstr "Tellimisvorm"
@@ -1729,3 +1725,7 @@ msgstr "<strong>Konservatiivne indeksfond, mis investeerib täielikult madala ri
 #: templates/components/front-hero/calculator2.php:85
 msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
 msgstr "Eeldame, et hakkasid pensioni koguma 21-aastaselt ja palgatõus on 3% aastas. “Eesti keskmine II samba fond” esindab kõiki II samba fonde ühise tervikuna. Kuvame selle tasu mahu järgi kaalutud keskmisena."
+
+#: widgets/help-widget.php:79
+msgid "Ask Pirje from Tuleva team"
+msgstr "Vastab Pirje Tuleva tiimist"
