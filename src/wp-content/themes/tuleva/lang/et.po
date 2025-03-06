@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-06 17:34+0700\n"
+"PO-Revision-Date: 2025-03-06 17:37+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1727,5 +1727,5 @@ msgid "<strong>A conservative index fund that invests entirely in low-risk bonds
 msgstr "<strong>Konservatiivne indeksfond, mis investeerib täielikult madala riskiga võlakirjadesse.</strong> Selle fondi oodatav tootlus on oluliselt madalam kui aktsiafondil. Madala riskiga on võimatu head tootlust teenida."
 
 #: templates/components/front-hero/calculator2.php:85
-msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
+msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
 msgstr "Eeldame, et hakkasid pensioni koguma 21-aastaselt ja palgatõus on 3% aastas. “Eesti keskmine II samba fond” esindab kõiki II samba fonde ühise tervikuna. Kuvame selle tasu mahu järgi kaalutud keskmisena."
