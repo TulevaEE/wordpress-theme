@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-06 18:25+0700\n"
+"PO-Revision-Date: 2025-03-17 17:22+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -1708,7 +1708,7 @@ msgstr "Tekstirida 4:"
 
 #: templates/components/fund-bonds-header.php:18
 msgid "Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security."
-msgstr ""
+msgstr "Sobib sulle, kui plaanid järgmise 5 aasta jooksul kogu II samba välja võtta ning oled kindluse nimel valmis tootlusest loobuma."
 
 #: templates/components/fund-third-header.php:17
 msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply, yet without consciously taking risks, achieving high returns is impossible."
