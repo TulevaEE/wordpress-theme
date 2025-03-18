@@ -15650,15 +15650,6 @@ sup {
   justify-content: center;
 }
 .counter-block .counter-number > div {
-  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-  font-variant-numeric: lining-nums;
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 8px 0;
-  width: 86px;
-  color: #fff;
-  background: #002f63;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15676,6 +15667,15 @@ sup {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 4.5rem;
+  background: #002f63;
+  color: #fff;
+  font-size: 3.5rem;
+  line-height: 6rem;
+  font-weight: bold;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-variant-numeric: lining-nums;
+  text-align: center;
 }
 .counter-block .counter-number > div:nth-child(1) {
   margin-right: 4px;
@@ -15700,12 +15700,12 @@ sup {
     margin: 0;
   }
   .counter-block .counter-number > div {
-    font-size: 35px;
-    width: 43px;
-    height: 56px;
-    margin-right: 2px;
+    width: 3rem;
+    font-size: 2.5rem;
+    line-height: 4rem;
   }
   .counter-block .counter-number > div:nth-child(1) {
+    margin-right: 2px;
     border-radius: 8px 4px 4px 8px;
   }
   .counter-block .counter-number > div:nth-child(2) {
@@ -15722,12 +15722,12 @@ sup {
   margin: 0;
 }
 .counter-small .counter-block .counter-number > div {
-  font-size: 35px;
-  width: 43px;
-  height: 56px;
-  margin-right: 2px;
+  width: 3rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
 }
 .counter-small .counter-block .counter-number > div:nth-child(1) {
+  margin-right: 2px;
   border-radius: 8px 4px 4px 8px;
 }
 .counter-small .counter-block .counter-number > div:nth-child(2) {
