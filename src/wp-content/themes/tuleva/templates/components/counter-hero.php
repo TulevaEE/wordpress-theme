@@ -34,13 +34,13 @@
                     <div class="text-center">
                         <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
                             <a href="<?php echo get_sub_field('button_url'); ?>"
-                               class="btn btn-primary btn-lg mb-3">
+                               class="btn btn-primary btn-lg">
                                 <?php the_sub_field('button_text'); ?>
                             </a>
                         <?php } ?>
 
                         <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>
-                            <div class="small text-center">
+                            <div class="mt-4 text-center">
                                 <?php the_sub_field('small_text'); ?>
                             </div>
                         <?php } ?>
