@@ -5,7 +5,7 @@
                 <div class="col text-center text-lg-left text-navy py-md-5">
                     <h1 class="text-center mb-5"><?php the_sub_field('heading'); ?></h1>
 
-                    <div class="d-flex justify-content-center mb-5 py-4">
+                    <div class="d-flex justify-content-center mb-5 py-md-4">
                         <div class="d-flex flex-row">
                             <div class="counter-block">
                                 <div class="counter-number">
