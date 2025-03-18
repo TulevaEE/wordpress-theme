@@ -1,5 +1,5 @@
 <section id="<?php the_sub_field('component_id'); ?>">
-    <div class="bg-hero-counter d-flex flex-column">
+    <div class="bg-hero-counter bg-hero-spring d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
                 <div class="col text-center text-lg-left py-md-5">
