@@ -14,7 +14,7 @@ function get_translated_link() {
             <?php if ($isOctoberNovemberDecember) { ?>
                 <div class="card bg-gray-2 p-3 br-2">
                     <div class="form-group row align-items-center">
-                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                        <label for="yearlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a href="<?php echo esc_url( get_translated_link() ); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
@@ -25,7 +25,7 @@ function get_translated_link() {
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                        <label for="wageDeduction" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('of which dividends', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
@@ -40,7 +40,7 @@ function get_translated_link() {
                         </div>
                     </div>
                     <div class="form-group row align-items-center mb-0">
-                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                        <label for="taxReliefs" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('Other tax reliefs', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
@@ -88,7 +88,7 @@ function get_translated_link() {
             <?php } else { ?>
                 <div class="card bg-gray-2 p-3 br-2">
                     <div class="form-group align-items-center row">
-                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                        <label for="monthlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('Gross salary', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
@@ -103,7 +103,7 @@ function get_translated_link() {
                         </div>
                     </div>
                     <div class="form-group align-items-center row mb-0">
-                        <label for="portfolioSum" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
+                        <label for="wageAddition" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pr-0">
                             <?php _e('Other gross income', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"

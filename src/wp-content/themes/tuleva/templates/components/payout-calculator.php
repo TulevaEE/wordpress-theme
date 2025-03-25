@@ -8,7 +8,7 @@
                 <div class="col-sm-6">
                     <div class="input-group">
                         <input type="text" class="portfolioSum form-control form-control-lg text-right"
-                               placeholder="20 000" inputmode="numeric" pattern="\d{1,7}"
+                               id="portfolioSum" placeholder="20 000" inputmode="numeric" pattern="\d{1,7}"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-addon" style="min-width: 70px"><?php _e('euros', TEXT_DOMAIN); ?></div>
                     </div>
@@ -19,7 +19,7 @@
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6 return-rate">
-                    <input type="range" class="returnRate custom-range" min="-10" max="10" step="1" data-unit="%">
+                    <input type="range" class="returnRate custom-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span class="historic-return-rate small text-secondary"><?php _e('7% historic return on stocks', TEXT_DOMAIN); ?></span>
                 </div>
