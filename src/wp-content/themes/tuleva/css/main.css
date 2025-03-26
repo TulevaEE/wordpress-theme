@@ -12023,6 +12023,8 @@ hr {
 }
 
 body {
+  font-size: 1rem;
+  font-weight: 400;
   color: #293036;
 }
 
@@ -12257,11 +12259,7 @@ hr {
   text-transform: uppercase;
 }
 
-p, .p {
-  font-size: 1rem;
-  font-weight: 400;
-}
-p.lead, .p.lead {
+.lead {
   font-size: 1.25rem;
   line-height: 1.6;
 }
