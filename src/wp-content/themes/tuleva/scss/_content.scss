@@ -97,22 +97,15 @@
     }
 
     .content {
-        padding-top: 0;
         margin-bottom: 5rem;
+        padding-top: 0;
+        font-size: $font-size-lg;
+        line-height: $line-height-lg;
 
-        p {
-            font-size: $font-size-lg;
-            line-height: $line-height-lg;
-
-            &:first-child {
-                font-size: $font-size-xl;
-                line-height: $line-height-lead;
-            }
-        }
-
-        ul,
-        ol {
-            font-size: 1.2rem;
+        .lead,
+        p:first-child {
+            font-size: $font-size-xl;
+            line-height: $line-height-lead;
         }
 
         img,

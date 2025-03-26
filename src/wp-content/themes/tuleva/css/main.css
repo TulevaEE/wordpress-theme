@@ -15269,20 +15269,15 @@ sup {
   margin-right: 0;
 }
 .single-post .content {
-  padding-top: 0;
   margin-bottom: 5rem;
-}
-.single-post .content p {
+  padding-top: 0;
   font-size: 1.25rem;
   line-height: 1.6;
 }
+.single-post .content .lead,
 .single-post .content p:first-child {
   font-size: 1.5rem;
   line-height: 1.6666;
-}
-.single-post .content ul,
-.single-post .content ol {
-  font-size: 1.2rem;
 }
 .single-post .content img,
 .single-post .content figure {
