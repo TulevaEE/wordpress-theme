@@ -13849,13 +13849,16 @@ sup {
 @media (min-width: 768px) {
   .proposal ul {
     margin-bottom: 0;
-    padding-left: 1rem;
   }
 }
 .proposal ul li {
   padding-left: 2rem;
 }
 .proposal__body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #d6dee6;

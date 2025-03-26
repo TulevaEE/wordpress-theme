@@ -6,7 +6,7 @@
             </div>
             <?php if (get_sub_field('quote')) { ?>
                 <div class="mx-auto mt-5 col-lg-9 col-xl-8 text-center">
-                    <p class="lead text-navy mb-3">"<?php the_sub_field('quote'); ?>"</p>
+                    <p class="mb-3 lead text-navy text-balance">“<?php the_sub_field('quote'); ?>”</p>
                     <?php if (get_sub_field('source')) { ?>
                         <p class="text-navy mb-5">
                             <?php if (get_sub_field('source_link_url')) { ?>

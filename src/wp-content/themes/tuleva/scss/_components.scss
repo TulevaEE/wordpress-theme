@@ -1278,13 +1278,13 @@
         padding-left: 0;
         @include media-breakpoint-up (md) {
             margin-bottom: 0;
-            padding-left: 1rem;
         }
         li {
             padding-left: 2rem;
         }
     }
     &__body {
+        flex: 1 1 auto;
         margin-bottom: 2rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid $gray-border-3;
