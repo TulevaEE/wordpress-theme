@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-26 19:45+0700\n"
+"PO-Revision-Date: 2025-03-27 12:48+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -185,7 +185,7 @@ msgstr "Ühine meiega!"
 #: templates/components/front-proposal.php:29
 #: templates/components/middle-cta.php:5
 #: templates/components/mutual-header.php:37
-#: templates/components/signup-block.php:28
+#: templates/components/signup-block.php:26
 msgid "Become a member"
 msgstr "Astu liikmeks"
 
@@ -1352,7 +1352,7 @@ msgstr "Geeniteadlane, Tuleva liige"
 
 #: templates/components/goals.php:7 templates/components/reasons.php:118
 msgid "This is not all"
-msgstr "See pole kõik"
+msgstr "See pole veel kõik"
 
 #: templates/components/goals.php:8 templates/components/reasons.php:125
 msgid "As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies."
@@ -1388,7 +1388,7 @@ msgstr "Tõstan sissemakset"
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
 
-#: templates/components/signup-block.php:27
+#: templates/components/signup-block.php:25
 msgid "To become a member please log in to your pension account."
 msgstr "Liikmeks astumiseks sisene oma pensionikontole."
 

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-26T12:44:57+00:00\n"
+"POT-Creation-Date: 2025-03-27T05:47:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -190,7 +190,7 @@ msgstr ""
 #: templates/components/front-proposal.php:29
 #: templates/components/middle-cta.php:5
 #: templates/components/mutual-header.php:37
-#: templates/components/signup-block.php:28
+#: templates/components/signup-block.php:26
 msgid "Become a member"
 msgstr ""
 
@@ -1390,7 +1390,7 @@ msgstr ""
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
-#: templates/components/signup-block.php:27
+#: templates/components/signup-block.php:25
 msgid "To become a member please log in to your pension account."
 msgstr ""
 
