@@ -18,7 +18,7 @@
 
                     if ($status === 'partially-done') {
                         $label = __('Partially done', TEXT_DOMAIN);
-                        $badge_class = 'badge-secondary';
+                        $badge_class = 'badge-success-outline';
                     } else if ($status === 'in-progress') {
                         $label = __('In progress', TEXT_DOMAIN);
                         $badge_class = 'badge-primary';
