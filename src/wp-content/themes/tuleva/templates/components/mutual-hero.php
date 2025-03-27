@@ -5,10 +5,10 @@
                 <h1 class="m-0"><?php the_sub_field('heading'); ?></h1>
             </div>
             <?php if (get_sub_field('quote')) { ?>
-                <div class="mx-auto mt-5 col-lg-9 col-xl-8 text-center">
+                <div class="mx-auto mt-5 pb-6 col-lg-9 col-xl-8 text-center">
                     <p class="mb-4 fs-4 text-balance">“<?php the_sub_field('quote'); ?>”</p>
                     <?php if (get_sub_field('source')) { ?>
-                        <p class="mb-5 fs-5">
+                        <p class="m-0 fs-5">
                             <?php if (get_sub_field('source_link_url')) { ?>
                                 <a href="<?php the_sub_field('source_link_url'); ?>" class="text-navy text-bold">
                             <?php } ?>

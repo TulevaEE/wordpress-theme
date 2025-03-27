@@ -3,7 +3,7 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="py-6">
     <div class="container-fluid mb-4">
-        <h2 class="text-center"><?php echo $heading; ?></h2>
+        <h2 class="mb-5 text-center"><?php echo $heading; ?></h2>
         <?php if (have_rows('founders')) { $i = 0; ?>
             <!-- CAROUSEL -->
             <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -16,9 +16,9 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
                                         <div class="founder-story">
                                             <div class="founder-story__person" style="background-image: url(<?php the_sub_field('image'); ?>)"></div>
                                             <div class="founder-story__content">
-                                                <h3 class="mb-0"><?php the_sub_field('name'); ?></h3>
-                                                <p class="text-navy mb-4"><?php the_sub_field('description'); ?></p>
-                                                <p class="text-navy mb-4"><?php the_sub_field('fund'); ?></p>
+                                                <h3 class="mb-0 h4"><?php the_sub_field('name'); ?></h3>
+                                                <p class="mb-4"><?php the_sub_field('description'); ?></p>
+                                                <p class="mb-4"><?php the_sub_field('fund'); ?></p>
                                                <?php echo get_sub_field('text'); ?>
                                             </div>
                                         </div>

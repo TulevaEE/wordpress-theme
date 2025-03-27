@@ -953,7 +953,7 @@
 
 .carousel-item {
     overflow: visible;
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 .quote {
@@ -1266,7 +1266,7 @@
     background: $white;
     border-radius: $border-radius-md;
     padding: 2rem;
-    margin-top: -4rem;
+    margin-top: -6rem;
     @include media-breakpoint-up (md) {
         flex-direction: row;
         align-items: center;
@@ -1306,6 +1306,9 @@
         }
     }
 }
+
+// Taimar: remove Middle CTA component from page (perhaps delete the whole component?) and delete the following line:
+#goals + #join-cta { display: none; }
 
 .tooltip {
     .arrow {
@@ -1362,7 +1365,7 @@
     display: flex;
     flex-direction: column;
     border-radius: $border-radius-md;
-    box-shadow: $shadow-md;
+    box-shadow: $shadow-sm;
     @include media-breakpoint-up (lg) {
         flex-direction: row;
     }
@@ -1442,48 +1445,15 @@
 //REASONS BLOCK
 .mid-headline p {
     margin: 0;
-    color: #0081ED;
-    font-size: 32px;
-    line-height: 44px;
+    color: $blue;
+    font-size: $font-size-xxl;
+    line-height: $line-height-xxl;
 }
 
-// INLINE SIGNUP
-
-
+// GOALS
 .goal-box {
-    min-height: 211px;
-    border: 2px solid rgba(0, 47, 99, 0.16);
-    border-radius: 8px;
-    margin: 16px 0;
-    padding: 28px 24px;
-
-    &--in-progress {
-        background-color: #ebf7ff;
-        border: 0;
-    }
-
-    &__title {
-        border-radius: 4px;
-        padding: 4px 8px;
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 23px;
-
-        &--done {
-            background-color: #00C90C;
-        }
-        &--partially-done {
-            background-color: #3FCF7F;
-        }
-        &--in-progress {
-            background-color: #00AEEA;
-        }
-    }
-
-    &__content {
-        margin-top: 23px;
-    }
+    flex: 0 0 calc((100% - 48px) / 3);
+    border-radius: $border-radius-2;
 }
 
 .security-block {
@@ -1579,7 +1549,7 @@
 
 .qa-block {
     .qa__question-wrapper {
-        border: solid $gray-border-2;
+        border: solid $gray-border-1;
         border-width: 1px 0;
 
         + .qa__question-wrapper {

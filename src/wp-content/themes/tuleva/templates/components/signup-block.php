@@ -1,29 +1,27 @@
-<section id="<?php the_sub_field('component_id'); ?>">
+<section id="<?php the_sub_field('component_id'); ?>" class="border border-left-0 border-right-0">
     <div id="inline-signup-anchor"></div>
-    <div class="container row-spacing-half">
-        <div class="row row-spacing-bottom-quarter">
+    <div class="container py-6">
+        <div class="row">
             <div class="mx-auto col-lg-9 col-xl-8 text-center">
                 <h2><?php the_sub_field('heading'); ?></h2>
                 <?php echo get_sub_field('text'); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-7">
+            <div class="mx-auto col-md-10 col-lg-8 col-xl-7">
                 <?php if (have_rows('list')) { $i = 0; ?>
                     <?php while (have_rows('list')) { the_row(); $i++; ?>
-                       <div class="inline-register__item">
-                           <span class="inline-register__number"><?php echo $i; ?></span><span class="inline-register__title"><?php the_sub_field('heading'); ?></span>
-                       </div>
-                       <p class="inline-register__content">
-                            <?php remove_filter('acf_the_content', 'wpautop'); ?>
-                            <?php echo get_sub_field('text'); ?>
-                            <?php add_filter('acf_the_content', 'wpautop'); ?>
-                       </p>
+                    <div class="inline-register__item">
+                        <span class="inline-register__number"><?php echo $i; ?></span><span class="inline-register__title"><?php the_sub_field('heading'); ?></span>
+                    </div>
+                    <p class="inline-register__content">
+                        <?php remove_filter('acf_the_content', 'wpautop'); ?>
+                        <?php echo get_sub_field('text'); ?>
+                        <?php add_filter('acf_the_content', 'wpautop'); ?>
+                    </p>
                     <?php } ?>
                 <?php } ?>
-            </div>
-            <div class="col-md-5">
-                <div id="inline-signup" class="card p-4 bg-light text-center">
+                <div id="inline-signup" class="card p-4 bg-blue-washed text-center">
                     <p class="mb-4"><?php _e('To become a member please log in to your pension account.', TEXT_DOMAIN); ?></p>
                     <a href="https://pension.tuleva.ee/join" class="btn btn-primary btn-lg"><?php _e('Become a member', TEXT_DOMAIN); ?></a>
                 </div>

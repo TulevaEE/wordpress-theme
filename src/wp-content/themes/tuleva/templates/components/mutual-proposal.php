@@ -20,7 +20,7 @@
                     </div>
                     <div class="proposal__cta text-center">
                         <?php if (get_sub_field('price')) { ?>
-                            <strong class="d-block mb-1 fs-1 lh-1"><?php the_sub_field('price'); ?></strong>
+                            <strong class="d-block mb-1 fs-2 lh-1"><?php the_sub_field('price'); ?></strong>
                         <?php } ?>
                         <?php if (get_sub_field('price_description')) { ?>
                             <span class="d-block">

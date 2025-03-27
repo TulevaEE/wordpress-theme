@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-03-04T14:04:19+00:00\n"
-"PO-Revision-Date: 2025-03-17 17:22+0700\n"
+"PO-Revision-Date: 2025-03-26 19:45+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -572,68 +572,71 @@ msgid "Key Investor Information (in Estonian)"
 msgstr "Põhiteave"
 
 #: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-bonds-details.php:73
 #: templates/components/fund-stocks-details.php:70
+#: templates/components/fund-stocks-details.php:73
 #: templates/components/fund-third-details.php:70
+#: templates/components/fund-third-details.php:73
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr "Fondi vara puhasväärtuse määramise kord"
-
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-stocks-details.php:73
-#: templates/components/fund-third-details.php:73
-msgid "Sustainability"
-msgstr "Jätkusuutlikkus"
 
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-stocks-details.php:76
 #: templates/components/fund-third-details.php:76
-msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
-msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
+msgid "Sustainability"
+msgstr "Jätkusuutlikkus"
 
 #: templates/components/fund-bonds-details.php:79
 #: templates/components/fund-stocks-details.php:79
 #: templates/components/fund-third-details.php:79
+msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
+
+#: templates/components/fund-bonds-details.php:82
+#: templates/components/fund-stocks-details.php:82
+#: templates/components/fund-third-details.php:82
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
-
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-stocks-details.php:83
-#: templates/components/fund-third-details.php:83
-msgid "Reports"
-msgstr "Aruanded"
 
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-stocks-details.php:86
 #: templates/components/fund-third-details.php:86
+msgid "Reports"
+msgstr "Aruanded"
+
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:89
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
-
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:90
-msgid "Previous reports"
-msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:93
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
+msgid "Previous reports"
+msgstr "Eelnevad aruanded"
+
+#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-third-details.php:96
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
-
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
-msgid "Sustainability information"
-msgstr "Jätkusuutlikkuse info"
-
-#: templates/components/fund-bonds-details.php:99
-#: templates/components/fund-stocks-details.php:99
-#: templates/components/fund-third-details.php:99
-msgid "CO2 intensity"
-msgstr "CO2 intensiivsus"
 
 #: templates/components/fund-bonds-details.php:100
 #: templates/components/fund-stocks-details.php:100
 #: templates/components/fund-third-details.php:100
+msgid "Sustainability information"
+msgstr "Jätkusuutlikkuse info"
+
+#: templates/components/fund-bonds-details.php:102
+#: templates/components/fund-stocks-details.php:102
+#: templates/components/fund-third-details.php:102
+msgid "CO2 intensity"
+msgstr "CO2 intensiivsus"
+
+#: templates/components/fund-bonds-details.php:103
+#: templates/components/fund-stocks-details.php:103
+#: templates/components/fund-third-details.php:103
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
 
@@ -803,15 +806,15 @@ msgstr "Sobib sulle, kui soovid teenida <strong>parimat pikaajalist tootlust</st
 msgid "Select this fund"
 msgstr "Valin selle fondi"
 
-#: templates/components/goals.php:7
+#: templates/components/goals.php:16
 msgid "Done"
 msgstr "Tehtud"
 
-#: templates/components/goals.php:10
+#: templates/components/goals.php:20
 msgid "Partially done"
 msgstr "Osaliselt tehtud"
 
-#: templates/components/goals.php:12
+#: templates/components/goals.php:23
 msgid "In progress"
 msgstr "Töös"
 
@@ -1347,11 +1350,11 @@ msgstr "Edaspidi teeme ka vabatahtliku pensionifondi ja loome muid paremaid pika
 msgid "Genealogist, Member of Tuleva"
 msgstr "Geeniteadlane, Tuleva liige"
 
-#: templates/components/reasons.php:118
+#: templates/components/goals.php:7 templates/components/reasons.php:118
 msgid "This is not all"
 msgstr "See pole kõik"
 
-#: templates/components/reasons.php:125
+#: templates/components/goals.php:8 templates/components/reasons.php:125
 msgid "As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies."
 msgstr "Pensionikogujaid ühendava organisatsioonina aitab Tuleva teha Eesti seadused paremaks, et pensionisüsteem oleks kasulik eelkõige inimestele, mitte pankadele ja kindlustusseltsidele."
 
@@ -1387,7 +1390,7 @@ msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit.
 
 #: templates/components/signup-block.php:27
 msgid "To become a member please log in to your pension account."
-msgstr "Liikmeks astumiseks logi sisse oma pensionikontole."
+msgstr "Liikmeks astumiseks sisene oma pensionikontole."
 
 #: templates/components/single-quote-block.php:1
 msgid "Who manages Tuleva funds?"

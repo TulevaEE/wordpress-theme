@@ -31,10 +31,11 @@ $white: #fff;
 $black: #000;
 $navy-blue: #002f63;
 $blue: #0081ee;
-$bright-blue: #00aeea;
-$blue-light: $bright-blue;
+$blue-light: #00aeea;
+$bright-blue: $blue-light;
 $yellow: #fce228;
-$green: #51c26c;
+$green: #00ac00;
+$green-light: #51c26c;
 $red: #ff4800;
 $orange: $red;
 
@@ -85,7 +86,7 @@ $spacers: (
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3),
-  6: ($spacer * 5)
+  6: ($spacer * 6)
 ) !default;
 
 // Tooltips
@@ -125,7 +126,8 @@ $font-size-base: 1rem !default;
 $font-size-sm: .875rem !default;
 $font-size-md: 1rem !default;
 $font-size-lg: 1.25rem !default;
-$font-size-xl: 1.5rem !default; // ~24px;
+$font-size-xl: 1.5rem !default; // 24px;
+$font-size-xxl: 1.75rem !default; // 28px;
 $font-size-longread: 1.175rem !default; // 19px
 $font-size-blockquote: 2rem !default; // 32px
 $font-size-faq: 1.125rem !default;
@@ -136,6 +138,8 @@ $lead-font-weight: normal !default;
 $line-height-lead: 1.6666 !default;
 $line-height-small-text: 1.4285 !default;
 
+$line-height-xxl:  1.4285 !default;
+$line-height-xl:   1.5 !default;
 $line-height-lg:   1.6 !default;
 $line-height-base: 1.5 !default;
 $line-height-sm:   1.25 !default;
