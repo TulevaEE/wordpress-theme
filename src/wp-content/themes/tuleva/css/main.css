@@ -12396,6 +12396,8 @@ sup {
 .contacts-block__image {
   margin-bottom: 1rem;
   border-radius: 50%;
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  outline-offset: -1px;
   width: 160px;
   height: 160px;
 }
