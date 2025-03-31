@@ -15072,7 +15072,7 @@ sup {
   }
 }
 
-:target {
+[id] {
   scroll-margin-top: 78px;
 }
 
