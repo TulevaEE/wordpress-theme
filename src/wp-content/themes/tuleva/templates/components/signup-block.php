@@ -1,5 +1,4 @@
 <section id="<?php the_sub_field('component_id'); ?>" class="border border-left-0 border-right-0">
-    <div id="inline-signup-anchor"></div>
     <div class="container py-6">
         <div class="row">
             <div class="mx-auto col-lg-9 col-xl-8 text-center">

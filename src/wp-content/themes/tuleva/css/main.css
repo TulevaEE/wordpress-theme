@@ -11812,6 +11812,7 @@ input[type=range]:focus + .rangeslider .rangeslider__handle {
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15071,11 +15072,10 @@ sup {
   }
 }
 
-@media (min-height: 78px) {
-  [id] {
-    scroll-margin-top: 158px;
-  }
+[id] {
+  scroll-margin-top: 78px;
 }
+
 .footer {
   background-color: #f5f7f9;
   padding: 80px 0;

@@ -280,8 +280,6 @@
     }
 }
 
-@media (min-height: $navbar-height) {
-    [id] {
-        scroll-margin-top: 158px;
-    }
+[id] {
+    scroll-margin-top: $navbar-height;
 }

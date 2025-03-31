@@ -543,46 +543,35 @@ $(document).ready(function ($) {
         .not('[data-toggle="collapse"]')
         .not('[href="#carouselControls"]')
         .on('click', function (ev) {
-            // Figure out element to scroll to
-            var target = $(this.hash),
-                $target = $(target),
-                result = true;
-
-            // On-page links
+            // Only handle on-page links
             if (
-                location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
-                &&
-                location.hostname === this.hostname
+              location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
+              location.hostname === this.hostname
             ) {
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    ev.preventDefault();
-
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        $target.focus();
-
-                        // Checking if the target was focused
-                        if ($target.is(":focus")) {
-                            result = false;
-                        } else {
-                            // Adding tabindex for elements not focusable
-                            $target.attr('tabindex', '-1');
-                            // Set focus again
-                            $target.focus();
-                        }
-
-                        return result;
-                    });
-                }
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          
+              if (target.length) {
+                // Prevent default scroll behavior
+                ev.preventDefault();
+          
+                // Use scrollIntoView API for smooth scrolling
+                target.get(0).scrollIntoView({ behavior: 'smooth' });
+          
+                // Update the URL hash without jumping
+                history.pushState(null, null, this.hash);
+          
+                // Handle focus after scrolling completes
+                setTimeout(function () {
+                  target.focus();
+                  if (!target.is(":focus")) {
+                    target.attr('tabindex', '-1');
+                    target.focus();
+                  }
+                }, 500);
+              }
             }
-        });
+          });
 
     $('.popper').popover({
         container: 'body',
