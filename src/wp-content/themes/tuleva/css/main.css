@@ -791,15 +791,15 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
-}
-
-h5, .h5 {
   font-size: 1.25rem;
 }
 
+h5, .h5 {
+  font-size: 1.125rem;
+}
+
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .lead {
@@ -12066,18 +12066,18 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.3333;
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.3333;
 }
 
 h6, .h6 {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.125rem;
+  line-height: 1.3333;
 }
 
 @media (max-width: 767px) {
@@ -12111,16 +12111,16 @@ h3, h4, h5, h6,
 }
 
 .fs-4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .text-lg,
 .fs-5 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .fs-6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .fs-base {
@@ -13240,7 +13240,7 @@ sup {
   margin-top: 1.5rem;
 }
 .widget h2, .widget h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.3333;
 }
 .widget ul,
@@ -13262,7 +13262,7 @@ sup {
   box-shadow: 0 0 0 1px #ebeef3;
 }
 .cta-widget__title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   margin-bottom: 1rem;
 }
@@ -15190,15 +15190,15 @@ sup {
 }
 .content h3,
 #rich-text-block-component h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.3333;
 }
 .content h4, .content h5, .content h6,
 #rich-text-block-component h4,
 #rich-text-block-component h5,
 #rich-text-block-component h6 {
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.3333;
 }
 
 .single-post .page-title {

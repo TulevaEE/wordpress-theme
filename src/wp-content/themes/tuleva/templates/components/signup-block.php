@@ -11,7 +11,7 @@
             <div class="mx-auto col-md-10 col-lg-8 col-xl-7">
                 <?php if (have_rows('list')) { $i = 0; ?>
                     <?php while (have_rows('list')) { the_row(); $i++; ?>
-                    <div class="inline-register__item">
+                    <div class="inline-register__item mb-0">
                         <span class="inline-register__number"><?php echo $i; ?></span><span class="inline-register__title"><?php the_sub_field('heading'); ?></span>
                     </div>
                     <p class="inline-register__content">

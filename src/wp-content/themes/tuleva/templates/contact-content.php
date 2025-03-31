@@ -78,7 +78,7 @@
                 <div class="container">
                     <div class="row my-6">
                         <div class="col">
-                            <h2 class="text-center">
+                            <h2 class="m-0 text-center">
                                 <?php the_sub_field('block_title'); ?>
                             </h2>
                         </div>
@@ -87,7 +87,7 @@
                         <?php while (have_rows('contact_categories')) { the_row(); ?>
                             <div class="row my-6">
                                 <div class="col-md-12">
-                                    <h3 class="text-center">
+                                    <h3 class="m-0 text-center">
                                         <?php the_sub_field('category_title'); ?>
                                     </h3>
                                     <div class="row contacts-block">
