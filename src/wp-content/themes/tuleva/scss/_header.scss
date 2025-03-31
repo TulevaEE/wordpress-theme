@@ -283,3 +283,6 @@
 [id] {
     scroll-margin-top: $navbar-height;
 }
+.admin-bar [id] {
+    scroll-margin-top: calc($navbar-height - 32px);
+}
