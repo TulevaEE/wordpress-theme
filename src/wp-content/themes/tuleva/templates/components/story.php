@@ -21,12 +21,4 @@
             <?php } ?>
         <?php } ?>
     <?php } ?>
-    <?php /* Taimar: move from Story component to Goals component
-    <div class="row text-center row-spacing-bottom-quarter">
-        <div class="mx-auto col-lg-9 col-xl-8 text-center">
-            <h2><?php the_sub_field('bottom_heading'); ?></h2>
-            <?php the_sub_field('bottom_text'); ?>
-        </div>
-    </div>
-    */ ?>
 </div>

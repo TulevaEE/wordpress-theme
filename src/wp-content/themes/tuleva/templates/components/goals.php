@@ -1,11 +1,10 @@
 <div id="<?php the_sub_field('component_id'); ?>" class="py-6 bg-blue-washed">
     <div class="container">
 
-        <?php /* Taimar: replace hardcoded values with field values from Story component; delete reasons.php file? */ ?>
         <div class="row text-center pb-6">
             <div class="mx-auto col-lg-9 col-xl-8 text-center">
-                <h2 class="mb-4"><?php _e('This is not all', TEXT_DOMAIN) ?></h2>
-                <p class="m-0 lead text-balance"><?php _e('As an association of pension savers Tuleva helps to make Estonian laws better so that pension system would be useful first of all to people not banks and insurance companies.', TEXT_DOMAIN) ?></p>
+                <h2 class="mb-4"><?php the_sub_field('goals_title'); ?></h2>
+                <?php the_sub_field('goals_description'); ?>
             </div>
         </div>
 
