@@ -15072,12 +15072,8 @@ sup {
   }
 }
 
-[id] {
+:target {
   scroll-margin-top: 78px;
-}
-
-.admin-bar [id] {
-  scroll-margin-top: 46px;
 }
 
 .footer {
