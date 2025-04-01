@@ -9,7 +9,7 @@
         </div>
 
         <?php if (have_rows('goals')) { ?>
-            <div class="d-flex flex-wrap align-items-stretch" style="gap: 24px;">
+            <div class="d-flex flex-column flex-md-row flex-md-wrap align-items-stretch" style="gap: 24px;">
                 <?php while (have_rows('goals')) { the_row();
                     $status = get_sub_field('status');
                     $label = __('Done', TEXT_DOMAIN);

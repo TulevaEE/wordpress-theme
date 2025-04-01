@@ -14060,6 +14060,22 @@ sup {
   flex: 0 0 calc((100% - 48px) / 3);
   border-radius: 0.5rem;
 }
+@media (max-width: 1199.98px) {
+  .goal-box {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 calc((100% - 48px) / 2);
+    -ms-flex: 0 0 calc((100% - 48px) / 2);
+    flex: 0 0 calc((100% - 48px) / 2);
+  }
+}
+@media (max-width: 991.98px) {
+  .goal-box {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
 
 .security-block {
   display: -webkit-box;

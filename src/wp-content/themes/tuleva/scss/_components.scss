@@ -1456,6 +1456,18 @@
 .goal-box {
     flex: 0 0 calc((100% - 48px) / 3);
     border-radius: $border-radius-2;
+
+    @media (max-width: 1199.98px) {
+        & {
+            flex: 0 0 calc((100% - 48px) / 2);
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        & {
+            flex: 0 0 100%;
+        }
+    }
 }
 
 .security-block {
@@ -1758,5 +1770,5 @@
         & {
             border-width: 0 0 0 1px;
         }
-      }
+    }
 }
