@@ -10,9 +10,9 @@
                         </h1>
                         <?php } ?>
                         <?php if (get_field('subheading')) { ?>
-                        <h4 class="text-center text-normal">
+                        <p class="m-0 fs-4 text-center text-secondary">
                             <?php the_field('subheading'); ?>
-                        </h4>
+                        </p>
                         <?php } ?>
                     </div>
                 </div>
