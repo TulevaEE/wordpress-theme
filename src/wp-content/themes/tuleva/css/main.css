@@ -13892,10 +13892,6 @@ sup {
   }
 }
 
-#goals + #join-cta {
-  display: none;
-}
-
 .tooltip .arrow {
   display: none;
 }
