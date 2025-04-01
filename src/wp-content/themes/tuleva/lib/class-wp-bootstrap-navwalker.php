@@ -134,12 +134,13 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					$atts['aria-expanded']	= 'false';
 					$atts['class']			= 'dropdown-toggle nav-link';
 					$atts['id']				= 'menu-item-dropdown-' . $item->ID;
-				} elseif (0 === strcasecmp( $item->title, 'button' ) && 1 === $depth && get_field('button_text', 'option')) {
-					$atts['href'] = get_field('button_url', 'option');
-					$atts['class'] = 'btn btn-primary d-none d-lg-block';
-					$atts['title'] = get_field('button_text', 'option');
-					$item->title = get_field('button_text', 'option');
-				} else {
+				} elseif (0 === stripos($item->title, 'button:') && 1 === $depth) {
+                    $atts['href'] = $item->url;
+                    $atts['class'] = 'btn btn-primary d-none d-lg-block';
+                    $button_text = trim(substr($item->title, strlen('button:')));
+                    $atts['title'] = $button_text;
+                    $item->title = $button_text;
+                } else {
 					$atts['href'] 	= ! empty( $item->url ) ? $item->url : '';
 					// if we are in a dropdown then the the class .dropdown-item
 					// should be used instead of .nav-link.
