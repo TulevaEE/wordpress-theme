@@ -18,10 +18,6 @@
     background-position: 0px 0px, 50% 0px;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
-    @include media-breakpoint-up (lg) {
-        height: 100vh;
-        max-height: 720px;
-    }
     @include media-breakpoint-down (md) {
         background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/dog-p-1600.jpeg');
     }
