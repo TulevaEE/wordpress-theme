@@ -15271,7 +15271,7 @@ sup {
   line-height: 1.6;
 }
 .single-post .content .lead,
-.single-post .content p:first-child {
+.single-post .content > p:first-child {
   font-size: 1.5rem;
   line-height: 1.6666;
 }
@@ -15290,19 +15290,10 @@ sup {
   line-height: 1.5;
 }
 .single-post .content blockquote {
-  color: #0081ee;
-  font-size: 2rem;
-  line-height: 1.375;
-  border: none;
+  margin: 5rem 0;
   padding: 0;
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-.single-post .content blockquote p {
+  border: none;
   color: #0081ee;
-  font-size: 2rem;
-}
-.single-post .content blockquote p:first-child {
   font-size: 2rem;
 }
 .single-post .content .alignright {

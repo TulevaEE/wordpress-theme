@@ -103,7 +103,7 @@
         line-height: $line-height-lg;
 
         .lead,
-        p:first-child {
+        > p:first-child {
             font-size: $font-size-xl;
             line-height: $line-height-lead;
         }
@@ -124,22 +124,11 @@
         }
 
         blockquote {
+            margin: 5rem 0;
+            padding: 0;
+            border: none;
             color: $blue;
             font-size: $font-size-blockquote;
-            line-height: 1.375;
-            border: none;
-            padding: 0;
-            margin-top: 70px;
-            margin-bottom: 70px;
-
-            p {
-                color: $blue;
-                font-size: $font-size-blockquote;
-
-                &:first-child {
-                    font-size: $font-size-blockquote;
-                }
-            }
         }
 
         .alignright {
