@@ -13136,6 +13136,7 @@ sup {
   margin-bottom: 5px;
 }
 .post-list__item__title a {
+  display: inline-block;
   color: #002f63;
 }
 .post-list__item__meta {

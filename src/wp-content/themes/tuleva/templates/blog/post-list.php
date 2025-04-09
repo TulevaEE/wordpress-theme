@@ -45,7 +45,7 @@
                     <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>"></a>
                 </div>
             <?php } ?>
-            <h5 class="post-list__item__title text-serif<?php if ($is_featured) { echo ' h4'; } ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+            <h2 class="post-list__item__title text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <div class="post-list__item__meta">
                 <span class="post-list__item__author text-uppercase text-navy text-medium"><?php echo get_the_author(); ?></span> <?php the_date(); ?>
             </div>
