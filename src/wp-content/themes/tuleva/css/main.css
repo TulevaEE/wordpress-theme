@@ -13133,7 +13133,7 @@ sup {
   max-height: 550px;
 }
 .post-list__item__title {
-  margin-bottom: 5px;
+  margin-bottom: 0.25em;
 }
 .post-list__item__title a {
   display: inline-block;
@@ -13144,7 +13144,7 @@ sup {
   font-size: 0.875em;
 }
 .post-list__item__author {
-  margin-right: 5px;
+  margin-right: 0.5em;
 }
 .post-list__item.post-list__item--wide {
   width: 100%;

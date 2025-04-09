@@ -644,7 +644,7 @@
             max-height: 550px;
         }
         &__title {
-            margin-bottom: 5px;
+            margin-bottom: .25em;
             a {
                 display: inline-block;
                 color: $heading-primary;
@@ -656,7 +656,7 @@
             @extend .text-muted;
         }
         &__author {
-            margin-right: 5px;
+            margin-right: .5em;
         }
         &#{&}--wide {
             width: 100%;
