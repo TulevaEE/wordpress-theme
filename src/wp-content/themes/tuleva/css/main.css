@@ -13109,7 +13109,7 @@ sup {
 }
 .post-list__item {
   width: 50%;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .post-list__item:nth-child(odd) {
   padding-left: 15px;
@@ -13133,14 +13133,14 @@ sup {
   max-height: 550px;
 }
 .post-list__item__title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5rem;
 }
 .post-list__item__title a {
   display: inline-block;
   color: #002f63;
 }
 .post-list__item__meta {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-size: 0.875em;
 }
 .post-list__item__author {

@@ -621,7 +621,7 @@
     margin: 0;
     &__item {
         width: 50%;
-        margin-bottom: 48px;
+        margin-bottom: 3rem;
         &:nth-child(odd) {
             padding-left: 15px;
         }
@@ -644,14 +644,14 @@
             max-height: 550px;
         }
         &__title {
-            margin-bottom: .25em;
+            margin-bottom: .5rem;
             a {
                 display: inline-block;
                 color: $heading-primary;
             }
         }
         &__meta {
-            margin-bottom: 1em;
+            margin-bottom: 1rem;
             font-size: .875em;
             @extend .text-muted;
         }
