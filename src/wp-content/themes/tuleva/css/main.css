@@ -15295,6 +15295,7 @@ sup {
   border: none;
   color: #0081ee;
   font-size: 2rem;
+  text-wrap: balance;
 }
 .single-post .content .alignright {
   float: right;
