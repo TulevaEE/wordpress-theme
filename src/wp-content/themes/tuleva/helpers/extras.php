@@ -420,11 +420,14 @@ function generate_report_link($url, $link_text = null) {
         $year--;
     }
 
-    $year_str = substr(strval($year), -2);
+    $year_str = strval($year);
     $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
 
-    if ($link_text === null) {
-        $link_text = sprintf('%s.%s', $month_str, $year_str);
+    $default_text = sprintf('%s.%s', $month_str, $year_str);
+    if ($link_text !== null) {
+        $link_text = sprintf('%s (%s)', $link_text, $default_text);
+    } else {
+        $link_text = $default_text;
     }
 
     if (filter_var($url, FILTER_VALIDATE_URL)) {

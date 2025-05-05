@@ -83,9 +83,7 @@
                         <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow">
                             <li>
-                                <?php _e('Investment reports (in Estonian)', TEXT_DOMAIN) ?>
-                                <br>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/04/Tuleva-Maailma-Volakirjade-Pensionifondi-investeeringute-aruanne-marts-2025-1.pdf'); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/04/Tuleva-Maailma-Volakirjade-Pensionifondi-investeeringute-aruanne-marts-2025-1.pdf',__('Investment reports (in Estonian)', TEXT_DOMAIN)); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
