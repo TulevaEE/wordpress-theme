@@ -58,7 +58,9 @@
                         <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
                         <ul class="list-style-arrow mb-5">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/TUK75-ja-TUK00-Prospekt-19.02.2025-kehtib-alates-03.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused_01.09.2022-1.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/TUK75-ja-TUK00-Prospekt-19.02.2025-kehtib-alates-03.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused_01.09.2022-1.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <br />
+                                <a href="https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-tapsemaks"><?php _e('Change of terms from 01.09.2025', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/20250301_Mudelportfell_Tuleva.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
