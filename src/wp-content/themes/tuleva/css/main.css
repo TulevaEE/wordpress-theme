@@ -3176,6 +3176,7 @@ textarea.form-control {
   font-weight: 500;
   color: #293036;
   text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
