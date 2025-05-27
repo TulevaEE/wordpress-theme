@@ -19150,8 +19150,8 @@ sup {
 
 /* card */
 .card-deck .card-selected {
-  -webkit-box-shadow: 0 0 0 2px #0081ee;
-  box-shadow: 0 0 0 2px #0081ee;
+  -webkit-box-shadow: 0 0 0 2px #0081ee !important;
+  box-shadow: 0 0 0 2px #0081ee !important;
 }
 
 /* tiles */
