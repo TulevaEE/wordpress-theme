@@ -10,11 +10,9 @@
                         <input type="text" class="portfolioSum form-control form-control-lg text-end"
                                id="portfolioSum" placeholder="20 000" inputmode="numeric" pattern="\d{1,7}"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <div class="input-group-append">
-                            <span class="input-group-text" style="min-width: 70px">
-                                <?php _e('euros', TEXT_DOMAIN); ?>
-                            </span>
-                        </div>
+                        <span class="input-group-text" style="min-width: 70px">
+                            <?php _e('euros', TEXT_DOMAIN); ?>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -23,9 +21,11 @@
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6 return-rate">
-                    <input type="range" class="returnRate form-range" id="returnRate" min="-10" max="10" step="1" data-unit="%">
+                    <input type="range" class="returnRate form-range" id="returnRate" min="-10" max="10" step="1"
+                           data-unit="%">
                     <span class="custom-tooltip">0%</span>
-                    <span class="historic-return-rate small text-secondary"><?php _e('7% historic return on stocks', TEXT_DOMAIN); ?></span>
+                    <span
+                        class="historic-return-rate small text-secondary"><?php _e('7% historic return on stocks', TEXT_DOMAIN); ?></span>
                 </div>
             </div>
         </div>
@@ -44,7 +44,9 @@
                         ></span>
                     </span>
                     <div class="fs-3 mt-1 text-blue fw-bold lh-sm">
-                        <span class="recurringPayoutMonthly1">88</span><span class="recurringArrow d-none ff-system fw-normal lh-1">&thinsp;→&thinsp;</span><span class="recurringPayoutMonthly2 d-none">88</span>
+                        <span class="recurringPayoutMonthly1">88</span><span
+                            class="recurringArrow d-none ff-system fw-normal lh-1">&thinsp;→&thinsp;</span><span
+                            class="recurringPayoutMonthly2 d-none">88</span>
                         <span class="recurringEuro"> €</span>
                     </div>
                 </div>
