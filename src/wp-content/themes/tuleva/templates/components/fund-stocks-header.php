@@ -20,7 +20,7 @@
                     <div class="proposal__cta">
                         <h3 class="text-center mb-0">95%</h3>
                         <p class="small text-center mb-4"><?php _e('of Tuleva II pillar investors’ choice', TEXT_DOMAIN) ?></p>
-                        <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?>
+                        <div class="d-grid"><?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?></div>
                     </div>
                 </div>
             </div>
