@@ -10,7 +10,11 @@
                         <input type="text" class="portfolioSum form-control form-control-lg text-right"
                                id="portfolioSum" placeholder="20 000" inputmode="numeric" pattern="\d{1,7}"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <div class="input-group-addon" style="min-width: 70px"><?php _e('euros', TEXT_DOMAIN); ?></div>
+                        <div class="input-group-append">
+                            <span class="input-group-text" style="min-width: 70px">
+                                <?php _e('euros', TEXT_DOMAIN); ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

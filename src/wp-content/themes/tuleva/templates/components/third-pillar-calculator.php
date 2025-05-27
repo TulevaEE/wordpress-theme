@@ -20,7 +20,9 @@ function get_translated_link() {
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="yearlyWage" min="0" step="1" placeholder="24000" inputmode="numeric" oninput="validity.valid||(value='');">
-                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -35,7 +37,9 @@ function get_translated_link() {
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="wageDeduction" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
-                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -50,7 +54,9 @@ function get_translated_link() {
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="taxReliefs" min="0" max="1200" step="1" placeholder="0" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value !== '') this.value = Math.min(this.value, this.max);">
-                                <div class="input-group-addon"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,7 +104,11 @@ function get_translated_link() {
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="monthlyWage" min="0" step="1" placeholder="2000" inputmode="numeric" oninput="validity.valid||(value='');">
-                                <div class="input-group-addon" style="min-width: 110px"><?php _e('&euro;/month', TEXT_DOMAIN); ?></div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="min-width: 110px">
+                                        <?php _e('&euro;/month', TEXT_DOMAIN); ?>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,7 +123,11 @@ function get_translated_link() {
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
                                 <input type="number" class="form-control text-right" id="wageAddition" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
-                                <div class="input-group-addon" style="min-width: 110px"><?php _e('&euro;/year', TEXT_DOMAIN); ?></div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="min-width: 110px">
+                                        <?php _e('&euro;/year', TEXT_DOMAIN); ?>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
