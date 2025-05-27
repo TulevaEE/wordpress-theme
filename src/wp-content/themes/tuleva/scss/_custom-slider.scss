@@ -16,7 +16,7 @@
 }
 
 .return-rate {
-    
+
     position: relative; // needs to be there for .historic-return-rate
     z-index: 1;         // needs to be there for .historic-return-rate
     min-height: $custom-range-thumb-height;
@@ -24,6 +24,22 @@
     .custom-range {
         display: block;
         text-align: right;
+        height: $custom-range-thumb-height;
+
+        &::-webkit-slider-runnable-track {
+            border: $input-btn-border-width solid $input-border-color;
+            box-sizing: border-box;
+        }
+
+        &::-moz-range-track {
+            border: $input-btn-border-width solid $input-border-color;
+            box-sizing: border-box;
+        }
+
+        &::-ms-track {
+            border: $input-btn-border-width solid $input-border-color;
+            box-sizing: border-box;
+        }
     }
 
     .historic-return-rate {

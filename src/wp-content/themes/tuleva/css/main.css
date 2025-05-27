@@ -4618,7 +4618,7 @@ input[type=button].btn-block {
 
 .custom-range {
   width: 100%;
-  height: 1.4rem;
+  height: 2.9rem;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -4642,12 +4642,12 @@ input[type=button].btn-block {
   border: 0;
 }
 .custom-range::-webkit-slider-thumb {
-  width: 1rem;
-  height: 1rem;
-  margin-top: -0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -0.75rem;
   background-color: #0081ee;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 100%;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4666,19 +4666,19 @@ input[type=button].btn-block {
 }
 .custom-range::-webkit-slider-runnable-track {
   width: 100%;
-  height: 0.5rem;
+  height: 1rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: white;
   border-color: transparent;
   border-radius: 1rem;
 }
 .custom-range::-moz-range-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #0081ee;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 100%;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
@@ -4695,22 +4695,22 @@ input[type=button].btn-block {
 }
 .custom-range::-moz-range-track {
   width: 100%;
-  height: 0.5rem;
+  height: 1rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: white;
   border-color: transparent;
   border-radius: 1rem;
 }
 .custom-range::-ms-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-top: 0;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
   background-color: #0081ee;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 100%;
   -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -4726,20 +4726,20 @@ input[type=button].btn-block {
 }
 .custom-range::-ms-track {
   width: 100%;
-  height: 0.5rem;
+  height: 1rem;
   color: transparent;
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
-  border-width: 0.5rem;
+  border-width: 1.25rem;
 }
 .custom-range::-ms-fill-lower {
-  background-color: #dee2e6;
+  background-color: white;
   border-radius: 1rem;
 }
 .custom-range::-ms-fill-upper {
   margin-right: 15px;
-  background-color: #dee2e6;
+  background-color: white;
   border-radius: 1rem;
 }
 .custom-range:disabled::-webkit-slider-thumb {
@@ -16682,7 +16682,7 @@ hr {
   padding: 0 !important;
 }
 
-.input-group-addon {
+.input-group-text {
   background-color: #f5f7f9;
 }
 
@@ -20268,16 +20268,16 @@ sup {
 .custom-tooltip {
   position: absolute;
   top: 0;
-  left: calc(50% - 0.5rem);
+  left: calc(50% - 1.25rem);
   z-index: 2;
-  width: 1rem;
+  width: 2.5rem;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   font-size: 1rem;
   font-weight: 500;
   font-variant-numeric: proportional-nums;
   color: white;
-  line-height: 1rem;
+  line-height: 2.5rem;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -20289,11 +20289,25 @@ sup {
 .return-rate {
   position: relative;
   z-index: 1;
-  min-height: 1rem;
+  min-height: 2.5rem;
 }
 .return-rate .custom-range {
   display: block;
   text-align: right;
+  height: 2.5rem;
+}
+.return-rate .custom-range::-webkit-slider-runnable-track {
+  border: 1px solid #ced4da;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.return-rate .custom-range::-moz-range-track {
+  border: 1px solid #ced4da;
+  box-sizing: border-box;
+}
+.return-rate .custom-range::-ms-track {
+  border: 1px solid #ced4da;
+  box-sizing: border-box;
 }
 .return-rate .historic-return-rate {
   display: block;
@@ -20302,7 +20316,7 @@ sup {
 }
 .return-rate .historic-return-rate::after {
   position: absolute;
-  top: 0.75rem;
+  top: 1.75rem;
   left: calc((100% - 30px) * 0.85);
   z-index: -1;
   content: "";
