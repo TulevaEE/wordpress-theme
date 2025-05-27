@@ -140,12 +140,12 @@
 
 
 	// Constructors
-	
+
 	function Timer(fn){
 		var callback = fn,
 		    active = false,
 		    running = false;
-		
+
 		function trigger(time) {
 			if (active){
 				callback();
@@ -157,17 +157,17 @@
 				running = false;
 			}
 		}
-		
+
 		this.kick = function(fn) {
 			active = true;
 			if (!running) { trigger(); }
 		};
-		
+
 		this.end = function(fn) {
 			var cb = callback;
-			
+
 			if (!fn) { return; }
-			
+
 			// If the timer is not running, simply call the end callback.
 			if (!running) {
 				fn();
@@ -177,9 +177,9 @@
 			// just the end callback.
 			else {
 				callback = active ?
-					function(){ cb(); fn(); } : 
+					function(){ cb(); fn(); } :
 					fn ;
-				
+
 				active = true;
 			}
 		};
@@ -189,13 +189,13 @@
 	// Functions
 
 	function noop() {}
-	
+
 	function preventDefault(e) {
 		e.preventDefault();
 	}
 
 	function isIgnoreTag(e) {
-		return !!ignoreTags[e.target.tagName.toLowerCase()];
+        return !!e.target.tagName && !!ignoreTags[e.target.tagName.toLowerCase()];
 	}
 
 	function isPrimaryButton(e) {
@@ -210,13 +210,13 @@
 		if (touchList.identifiedTouch) {
 			return touchList.identifiedTouch(id);
 		}
-		
+
 		// touchList.identifiedTouch() does not exist in
 		// webkit yet… we must do the search ourselves...
-		
+
 		i = -1;
 		l = touchList.length;
-		
+
 		while (++i < l) {
 			if (touchList[i].identifier === id) {
 				return touchList[i];
@@ -240,7 +240,7 @@
 
 
 	// Handlers that decide when the first movestart is triggered
-	
+
 	function mousedown(e){
 		// Ignore non-primary buttons
 		if (!isPrimaryButton(e)) { return; }
@@ -432,7 +432,7 @@
 		event.distY =  touch.pageY - event.startY;
 		event.deltaX = touch.pageX - event.pageX;
 		event.deltaY = touch.pageY - event.pageY;
-		
+
 		// Average the velocity of the last few events using a decay
 		// curve to even out spurious jumps in values.
 		event.velocityX = 0.3 * event.velocityX + 0.7 * event.deltaX / time;
