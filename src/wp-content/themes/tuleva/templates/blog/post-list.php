@@ -42,7 +42,7 @@
         <li class="post-list__item<?php if ($is_featured) { echo ' post-list__item--wide'; } ?>">
             <?php if (has_post_thumbnail()) { ?>
                 <div class="post-list__item__image">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
                 </div>
             <?php } ?>
             <h2 class="post-list__item__title text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
