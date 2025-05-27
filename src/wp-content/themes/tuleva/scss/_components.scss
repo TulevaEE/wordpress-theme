@@ -1139,23 +1139,12 @@
 
 .read-blog {
     .card {
-        max-width: 100%;
-        transition: all 300ms ease;
+        transition: transform 200ms ease-in-out;
 
         &:hover {
-            box-shadow: $shadow-md;
-            transform: translate(0, -8px);
-            .card-body a {
-                text-decoration: underline;
-            }
+            text-decoration: none;
+            transform: translate(0, -0.5rem);
         }
-        .card-body a {
-            font-weight: $font-weight-medium;
-            color: $navy-blue;
-        }
-@include media-breakpoint-up (md) {
-    max-width: 33%;
-}
     }
 }
 

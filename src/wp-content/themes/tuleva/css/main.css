@@ -16396,27 +16396,15 @@ sup {
 }
 
 .read-blog .card {
-  max-width: 100%;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 .read-blog .card:hover {
-  -webkit-box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
-  -webkit-transform: translate(0, -8px);
-  transform: translate(0, -8px);
-}
-.read-blog .card:hover .card-body a {
-  text-decoration: underline;
-}
-.read-blog .card .card-body a {
-  font-weight: 500;
-  color: #002f63;
-}
-@media (min-width: 768px) {
-  .read-blog .card {
-    max-width: 33%;
-  }
+  text-decoration: none;
+  -webkit-transform: translate(0, -0.5rem);
+  transform: translate(0, -0.5rem);
 }
 
 .animated {
