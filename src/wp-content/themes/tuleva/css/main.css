@@ -15035,13 +15035,6 @@ ol, ul {
   padding-left: 2em;
 }
 
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
 small,
 .small,
 .tooltip .tooltip-inner,
