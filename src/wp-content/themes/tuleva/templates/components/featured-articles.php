@@ -7,7 +7,7 @@
         <?php if (get_sub_field('article_' . $i)) { ?>
         <a href="<?php the_permalink(get_sub_field('article_' . $i)); ?>">
           <div class="card shadow-sm">
-            <img src="<?php echo get_the_post_thumbnail_url(get_sub_field('article_' . $i), 'max-width-500'); ?>" alt="<?php echo get_the_title(get_sub_field('article_' . $i)); ?>" class="card-img-top rounded-top">
+            <img src="<?php echo get_the_post_thumbnail_url(get_sub_field('article_' . $i), 'max-width-500'); ?>" alt="" class="card-img-top rounded-top">
             <div class="card-body">
               <a href="<?php the_permalink(get_sub_field('article_' . $i)); ?>" class="card-text">
                 <?php echo get_the_title(get_sub_field('article_' . $i)); ?>
