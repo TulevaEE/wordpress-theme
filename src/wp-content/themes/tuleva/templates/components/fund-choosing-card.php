@@ -1,4 +1,4 @@
-<div class="<?php echo 'card shadow-sm d-flex flex-column m-0 p-4 br-4 text-left' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
+<div class="<?php echo 'card shadow d-flex flex-column m-0 p-4 br-4 text-left' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
     <div style="flex: 1 0 0;">
         <?php if (get_sub_field('pill')) : ?>
             <span class="badge badge-pill badge-primary fs-6 fw-medium"

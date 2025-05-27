@@ -341,7 +341,7 @@
         right: 2rem;
         bottom: 2rem;
     }
-    
+
     display: none;
     font-family: $font-family-serif;
     font-weight: bold;
@@ -717,7 +717,7 @@
                     text-decoration: none;
                 }
 
-                
+
             }
         }
     }
@@ -799,7 +799,7 @@
             margin-bottom: 1rem;
             font-weight: $font-weight-medium;
             font-family: $font-family-sans-serif;
-            
+
             a {
                 display: inline-block;
                 padding-right: 1.25em;
@@ -1755,7 +1755,7 @@
 /* card */
 
 .card-deck .card-selected {
-    box-shadow: 0 0 0 2px $blue;
+    box-shadow: 0 0 0 2px $blue !important;
 }
 
 /* tiles */
