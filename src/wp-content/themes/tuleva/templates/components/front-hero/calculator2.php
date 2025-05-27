@@ -43,15 +43,19 @@
                     <?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
-                    <div class="btn-group btn-group-toggle d-flex" role="group" data-bs-toggle="buttons">
+                    <div class="btn-group btn-group-toggle d-flex" role="group"
+                         aria-label="<?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>">
                         <label class="btn btn-outline-primary w-100">
-                            <input type="radio" name="pillarContribution" id="payment2" value="2"> 2%
+                            <input type="radio" class="btn-check" name="pillarContribution" id="payment2" value="2"
+                                   autocomplete="off"> 2%
                         </label>
                         <label class="btn btn-outline-primary w-100">
-                            <input type="radio" name="pillarContribution" id="payment4" value="4"> 4%
+                            <input type="radio" class="btn-check" name="pillarContribution" id="payment4" value="4"
+                                   autocomplete="off"> 4%
                         </label>
                         <label class="btn btn-outline-primary w-100 active">
-                            <input type="radio" name="pillarContribution" id="payment6" value="6" checked> 6%
+                            <input type="radio" class="btn-check" name="pillarContribution" id="payment6" value="6"
+                                   autocomplete="off" checked> 6%
                         </label>
                     </div>
                 </div>
