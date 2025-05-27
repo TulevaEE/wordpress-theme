@@ -15,7 +15,8 @@
         border-radius: 50%;
         outline: 1px solid rgba(0,0,0,0.08);
         outline-offset: -1px;
-        @include size(160px);
+        width: 160px;
+        height: 160px;
     }
     &__title {
         margin-bottom: .5rem;
@@ -155,7 +156,8 @@
     &__image {
         margin-bottom: 10px;
         border-radius: 50%;
-        @include size(192px);
+        width: 192px;
+        height: 192px;
     }
     blockquote {
         font-family: $font-family-serif;
@@ -172,7 +174,8 @@
     @extend .clearfix;
     &__image {
         border-radius: 50%;
-        @include size(160px);
+        width: 160px;
+        height: 160px;
     }
     &__text {
         position: relative;
@@ -222,7 +225,8 @@
     &__author {
         &__image {
             border-radius: 50%;
-            @include size(40px);
+            width: 40px;
+            height: 40px;
             margin-right: 1em;
             @include media-breakpoint-down(sm) {
                 float: left;
@@ -261,9 +265,11 @@
     }
     &__image {
         border-radius: 50%;
-        @include size(96px);
+        width: 96px;
+        height: 96px;
         @include media-breakpoint-down(sm) {
-            @include size(72px);
+            width: 72px;
+            height: 72px;
         }
     }
     &__title {

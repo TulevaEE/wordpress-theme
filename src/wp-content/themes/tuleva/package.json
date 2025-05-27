@@ -16,9 +16,9 @@
         "gulp-clean-css": "^4.3.0",
         "gulp-exit": "^0.0.2",
         "gulp-if": "^3.0.0",
-        "gulp-sass": "^5.1.0",
+        "gulp-sass": "^6.0.1",
         "gulp-sourcemaps": "^3.0.0",
         "gulp-watch": "^5.0.1",
-        "sass": "^1.56.2"
+        "sass": "^1.89.0"
     }
 }

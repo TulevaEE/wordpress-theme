@@ -168,7 +168,7 @@ var initCalculator = function () {
             calculateSaving();
         });
 
-        $calculator.find('.custom-range').on('input', function () {
+        $calculator.find('.form-range').on('input', function () {
             calculateSaving();
         });
 

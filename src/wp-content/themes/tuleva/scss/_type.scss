@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6,
 
   [style] {
     // ignore all copy-pasted formatting and custom inline styles
-    font-weight: inherit !important; 
+    font-weight: inherit !important;
     font-size: inherit !important;
   }
 }
@@ -89,28 +89,6 @@ h3, h4, h5, h6,
 }
 .fs-base {
   font-size: $font-size-base;
-}
-
-// Display classes
-.display-1 {
-  font-size: $display1-size;
-  font-weight: $display1-weight;
-  line-height: $line-height-sm;
-}
-.display-2 {
-  font-size: $display2-size;
-  font-weight: $display2-weight;
-  line-height: $line-height-sm;
-}
-.display-3 {
-  font-size: $display3-size;
-  font-weight: $display3-weight;
-  line-height: $line-height-sm;
-}
-.display-4 {
-  font-size: $display4-size;
-  font-weight: $display4-weight;
-  line-height: $line-height-sm;
 }
 
 // Line heights

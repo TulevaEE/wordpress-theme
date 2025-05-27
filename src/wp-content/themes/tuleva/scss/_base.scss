@@ -113,7 +113,6 @@ hr {
     @include button-size($padding-xl-vertical,
     $padding-xl-horizontal,
     $font-size-xl,
-    $line-height-sm,
     $btn-border-radius-xl);
     @include media-breakpoint-down(sm) {
         padding: $padding-xl-vertical;

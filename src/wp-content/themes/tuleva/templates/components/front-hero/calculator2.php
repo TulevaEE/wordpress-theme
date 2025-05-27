@@ -66,7 +66,7 @@
                     ></span>
                 </label>
                 <div class="col-sm-6 return-rate">
-                    <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1"
+                    <input type="range" id="marketReturn" class="form-range" min="-10" max="10" step="1"
                            data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span
