@@ -5,7 +5,7 @@
                 while (have_rows('accordion')) { $i++; the_row(); ?>
                     <div class="qa__question-wrapper" id="accordion-block-<?php echo $i; ?>">
                         <div class="principle__item">
-                            <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapsed-text-<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapsed-text-<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne">
                                 <?php the_sub_field('title'); ?>
                             </button>
                             <?php if (get_sub_field('lead_text')) { ?>

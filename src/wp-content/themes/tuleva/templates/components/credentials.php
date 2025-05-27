@@ -26,7 +26,7 @@ $security_link_url = get_sub_field('security_link_url');
                     <?php } ?>
                     <?php if ($members_count && $members_count_description) { ?>
                         <div class="col-md-6 d-none d-md-flex align-items-center">
-                            <span class="membercount text-nowrap mr-4">
+                            <span class="membercount text-nowrap me-4">
                                 <?php echo number_format($members_count, 0, '', ' '); ?>
                             </span>
                             <p class="mb-0 text-navy"><?php echo $members_count_description; ?></p>

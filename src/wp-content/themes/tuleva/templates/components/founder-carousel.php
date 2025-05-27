@@ -6,7 +6,7 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
         <h2 class="mb-5 text-center"><?php echo $heading; ?></h2>
         <?php if (have_rows('founders')) { $i = 0; ?>
             <!-- CAROUSEL -->
-            <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                     <?php while (have_rows('founders')) { the_row(); $i++; ?>
                         <div class="carousel-item<?php if ($i === 1) { echo ' active'; } ?>">
@@ -28,13 +28,13 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
                         </div>
                     <?php } ?>
                 </div>
-                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="visually-hidden">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="visually-hidden">Next</span>
                 </a>
             </div>
         <?php } ?>

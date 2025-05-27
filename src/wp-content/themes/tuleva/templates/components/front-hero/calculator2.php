@@ -2,13 +2,13 @@
 <div class="card br-3 shadow-md second-pillar-calculator">
     <div class="card-body p-2">
         <div class="bg-blue-2 p-3 br-2">
-            <div class="form-group align-items-center row">
-                <label for="age" class="col-sm-6 col-form-label pr-0">
+            <div class="mb-3 align-items-center row">
+                <label for="age" class="col-sm-6 col-form-label pe-0">
                     <?php _e('Your age', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
                     <div class="input-group">
-                        <input type="number" class="form-control text-right" id="age" inputmode="numeric"
+                        <input type="number" class="form-control text-end" id="age" inputmode="numeric"
                                min="0" max="99" step="1" placeholder="30"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-append">
@@ -20,13 +20,13 @@
                 </div>
             </div>
 
-            <div class="form-group align-items-center row">
-                <label for="grossWage" class="col-sm-6 col-form-label pr-0">
+            <div class="mb-3 align-items-center row">
+                <label for="grossWage" class="col-sm-6 col-form-label pe-0">
                     <?php _e('Gross salary', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
                     <div class="input-group">
-                        <input type="number" id="grossWage" class="form-control text-right"
+                        <input type="number" id="grossWage" class="form-control text-end"
                                min="0" step="1" max="999999" placeholder="2000" inputmode="numeric"
                                oninput="validity.valid||(value=value.slice(0, -1))">
                         <div class="input-group-append">
@@ -38,12 +38,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label class="col-sm-6 col-form-label pr-0">
+            <div class="mb-3 row">
+                <label class="col-sm-6 col-form-label pe-0">
                     <?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
-                    <div class="btn-group btn-group-toggle d-flex" role="group" data-toggle="buttons">
+                    <div class="btn-group btn-group-toggle d-flex" role="group" data-bs-toggle="buttons">
                         <label class="btn btn-outline-primary w-100">
                             <input type="radio" name="pillarContribution" id="payment2" value="2"> 2%
                         </label>
@@ -57,11 +57,11 @@
                 </div>
             </div>
 
-            <div class="form-group row mb-0">
-                <label for="marketReturn" class="col-sm-6 col-form-label py-2 pr-0">
+            <div class="mb-3 row mb-0">
+                <label for="marketReturn" class="col-sm-6 col-form-label py-2 pe-0">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
-                        tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                        tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="<?php _e('Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
                     ></span>
                 </label>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <select class="custom-select mt-2 pl-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds"
+        <select class="form-select mt-2 ps-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds"
                 id="comparisonFund"
                 onchange="calculateSaving()">
             <option value="average">
@@ -86,10 +86,10 @@
 
         <div class="mt-3 px-3 card br-2 text-navy">
             <div class="d-flex align-items-center justify-content-between">
-                <div class="mr-3">
+                <div class="me-3">
                     <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
-                        tabindex="0" data-toggle="tooltip" data-placement="bottom"
+                        tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
-                <div class="mr-3">
+                <div class="me-3">
                     <span class="more-fees-high">
                         <?php _e('You pay <strong class="text-danger text-nowrap"><span class="tuleva-saving">- €</span> more</strong> in fees', TEXT_DOMAIN); ?>
                     </span>
@@ -118,7 +118,7 @@
         <hr class="my-3"/>
         <div class="mt-3 px-3 card br-2 text-navy mb-2">
             <div class="d-flex align-items-center justify-content-between">
-                <div class="mr-3">
+                <div class="me-3">
                     <span class="fs-6 lh-sm fw-medium">
                         <?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN); ?>
                     </span>
@@ -128,7 +128,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
-                <div class="mr-3">
+                <div class="me-3">
                     <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                 </div>
                 <div class="text-nowrap"><?php _e('0.31% per year', TEXT_DOMAIN); ?></div>

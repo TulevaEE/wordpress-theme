@@ -4,7 +4,7 @@
             <div class="mx-md-auto col-md-10" id="accordion">
                 <div class="qa__question-wrapper">
                     <div id="headingOne" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
                             <span class="inline-register__number">1</span>Mõtle, millal sa tegelikult pensionile plaanid jääda?
                         </button>
@@ -27,7 +27,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingTwo" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
                             <span class="inline-register__number">2</span>Hakka muutma strateegiat: asenda aktsiad võlakirjadega.
                         </button>
@@ -48,7 +48,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingThree" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
                             <span class="inline-register__number">3</span>Kulud on tähtsamad kui sa arvad: ära maksa tasudeks rohkem kui pool protsenti.
                         </button>
@@ -69,7 +69,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingFour" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
                             <span class="inline-register__number">4</span>Tee endale selgeks II sambasse kogutud vara kasutamise võimalused.
                         </button>
@@ -98,7 +98,7 @@
                 <a href="/tuleva-maailma-volakirjade-pensionifond/" class="btn btn-link btn-block text-uppercase text-medium mb-5">Vaata pensionifondi infot</a>
 
                 <div class="text-center">
-                    <div class="text-left">
+                    <div class="text-start">
                         <h5 class="mb-3">Tuleva pensionifondide filosoofia</h5>
                         <ul class="list-style-checkmark">
                             <li>Juhindume maailma juhtivate majandusteadlaste <span class="text-highlight text-bold">faktidel</span> põhinevatest veendumustest. Mitte fantaasiatest ega usust targa fondijuhi maagiasse.</li>

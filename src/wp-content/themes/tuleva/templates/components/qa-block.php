@@ -8,7 +8,7 @@ $visible_questions_count = 10;
             <?php if (have_rows('questions')) $i = 0; {
                 while (have_rows('questions')) { $i++; the_row(); ?>
                     <div class="<?php echo get_qa_question_wrapper_classes(['qa__question-wrapper'], $i, $visible_questions_count); ?>" id="kkk-<?php echo $i; ?>">
-                        <a class="qa__question collapsed" data-toggle="collapse" href="#answer-<?php echo $i; ?>">
+                        <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-<?php echo $i; ?>">
                             <?php echo get_sub_field('question'); ?>
                         </a>
                         <div id="answer-<?php echo $i; ?>" class="collapse">

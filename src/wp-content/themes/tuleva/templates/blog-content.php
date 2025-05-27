@@ -11,7 +11,7 @@
                 <?php get_template_part('templates/blog/pagination'); ?>
                 <?php wp_reset_postdata(); ?>
             </div>
-            <div class="col-lg-4 widget-area pl-lg-5">
+            <div class="col-lg-4 widget-area ps-lg-5">
                 <?php if ( is_active_sidebar( 'blog_sidebar_widget_area' ) ) : ?>
                    <?php dynamic_sidebar( 'blog_sidebar_widget_area' ); ?>
                 <?php endif; ?>

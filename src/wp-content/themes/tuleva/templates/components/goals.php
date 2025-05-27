@@ -17,10 +17,10 @@
 
                     if ($status === 'partially-done') {
                         $label = __('Partially done', TEXT_DOMAIN);
-                        $badge_class = 'badge-success-outline';
+                        $badge_class = 'text-bg-success-outline';
                     } else if ($status === 'in-progress') {
                         $label = __('In progress', TEXT_DOMAIN);
-                        $badge_class = 'badge-primary';
+                        $badge_class = 'text-bg-primary';
                     } ?>
                     <div class="goal-box goal-box--<?php echo $status; ?> p-4 bg-white shadow-sm">
                         <span class="badge <?php echo $badge_class; ?> fs-6">

@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <p class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-md-baseline m-0 text-center">
-          <span class="mb-4 mb-md-0 mr-md-4 fs-5">
+          <span class="mb-4 mb-md-0 me-md-4 fs-5">
               <?php
               $isMarch = (date('m') == 3);
               $isJuly = (date('m') == 7);

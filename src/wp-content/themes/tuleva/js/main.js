@@ -391,7 +391,7 @@ $(document).ready(function ($) {
                 this.scrollIntoView();
             });
 
-            $('.accordion-parent [data-toggle="collapse"]').click(function () {
+            $('.accordion-parent [data-bs-toggle="collapse"]').click(function () {
                 var target = $(this).attr('data-target');
                 var $target = $(target);
                 var $parent = $($target.attr('data-parent'));
@@ -539,8 +539,8 @@ $(document).ready(function ($) {
         .not('[href="#"]')
         .not('[href="#0"]')
         .not('[href^="#modal-"]')
-        .not('[data-toggle="tab"]')
-        .not('[data-toggle="collapse"]')
+        .not('[data-bs-toggle="tab"]')
+        .not('[data-bs-toggle="collapse"]')
         .not('[href="#carouselControls"]')
         .on('click', function (ev) {
             // Only handle on-page links
@@ -581,7 +581,7 @@ $(document).ready(function ($) {
         }
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-bs-toggle="tooltip"]').tooltip();
 
     $('.qa-block__expand').on('click', function (ev) {
         var currentText = $(this).text(),

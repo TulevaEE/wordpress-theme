@@ -17,7 +17,7 @@
             <div class="mx-auto col-lg-9 col-xl-8" id="accordion">
                 <div class="qa__question-wrapper">
                     <div id="headingOne" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Täpsemalt on peamine muidugi tootlus.
                         </button>
                         <p>Aga andmenohikud on leidnud, et mida madalamad kulud, seda paremad eeldused, et tootlus tuleb hea.</p>
@@ -39,7 +39,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingTwo" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Meie usume nohikuid.</button>
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Meie usume nohikuid.</button>
                         <p>Me usume, et pangad usuvad tegelikult ka. Lihtsalt nemad peavad omanikele kasumit teenima.</p>
                     </div>
                     <div id="collapseTwo" class="collapse mt-2 mb-5" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -58,7 +58,7 @@
                 <hr />
                 <div class="qa__question-wrapper">
                     <div id="headingThree" class="principle__item">
-                        <button class="btn btn-link btn-block principle__item--link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="btn btn-link btn-block principle__item--link" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Müük, turundus ja panga kasum.
                         </button>
                         <p>Enamus inimeste rahast võetud valitsemistasudest kulubki pankade fondivalitsejatel just nendele asjadele.</p>
@@ -74,7 +74,7 @@
                 </div>
                 <hr />
                 <div class="qa__question-wrapper">
-                    <div id="headingFour" class="principle__item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <div id="headingFour" class="principle__item" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         <button class="btn btn-link btn-block principle__item--link">
                             Tulevas jälgime kulusid kullipilguga.
                         </button>
@@ -130,7 +130,7 @@
             <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="text-center emphasis-box p-4 p-md-5">
                     <h4 class="mb-4">5 soovitust — kuidas pensionifondi valida?</h4>
-                    <a class="btn btn-primary btn-lg d-block d-md-inline-block mb-4 mb-md-0 mr-md-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Vanus 18-55</a>
+                    <a class="btn btn-primary btn-lg d-block d-md-inline-block mb-4 mb-md-0 me-md-4" href="https://tuleva.ee/vali-pensionifond-targalt/">Vanus 18-55</a>
                     <a class="btn btn-primary btn-lg d-block d-md-inline-block" href="https://tuleva.ee/oluline/kuidas-kasutada-pensionivara/">Vanus üle 55</a>
                 </div>
             </div>

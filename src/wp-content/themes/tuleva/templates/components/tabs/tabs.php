@@ -6,7 +6,7 @@
                     echo ' class="active"';
                 }
             ?>>
-                <a href="#<?php echo to_slug(get_sub_field('name')); ?>" role="tab" data-toggle="tab"><?php the_sub_field('name'); ?></a>
+                <a href="#<?php echo to_slug(get_sub_field('name')); ?>" role="tab" data-bs-toggle="tab"><?php the_sub_field('name'); ?></a>
             </li>
     <?php  }
     } ?>

@@ -2,7 +2,7 @@
     <div class="bg-hero-counter bg-hero-spring d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
-                <div class="col text-center text-lg-left text-navy py-md-5">
+                <div class="col text-center text-lg-start text-navy py-md-5">
                     <h1 class="text-center mb-5"><?php the_sub_field('heading'); ?></h1>
 
                     <div class="d-flex justify-content-center mb-5 py-md-4">

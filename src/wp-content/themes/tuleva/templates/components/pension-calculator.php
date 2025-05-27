@@ -5,7 +5,7 @@
         <div class="col-xs-6 text-uppercase slider-title">
             <?php _e('Net wage', TEXT_DOMAIN); ?>
         </div>
-        <div class="col-xs-6 text-right slider-title">
+        <div class="col-xs-6 text-end slider-title">
             <span><span id="wage">1000</span> &euro;</span>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="col-xs-6 text-uppercase slider-title">
             <?php _e('Age', TEXT_DOMAIN); ?>
         </div>
-        <div class="col-xs-6 text-right slider-title">
+        <div class="col-xs-6 text-end slider-title">
             <span><span id="age">30</span> <?php _e('y/o', TEXT_DOMAIN); ?></span>
         </div>
     </div>
