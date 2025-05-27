@@ -310,3 +310,18 @@ sup {
 .ff-sans-serif {
   font-family: $font-family-sans-serif;
 }
+
+/* Bootstrap 5 Migration */
+
+a:not(.btn),
+.btn.btn-link {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-color: rgba($link-hover-color, var(--bs-link-underline-opacity, 1));
+    text-decoration-thickness: 0.0625em;
+    text-underline-offset: 0.125em;
+    --bs-link-underline-opacity: 0.75;
+  }
+}

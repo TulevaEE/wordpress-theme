@@ -15128,6 +15128,22 @@ sup {
   font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Bootstrap 5 Migration */
+a:not(.btn),
+.btn.btn-link {
+  text-decoration: none;
+}
+a:not(.btn):hover, a:not(.btn):focus,
+.btn.btn-link:hover,
+.btn.btn-link:focus {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(0, 91.2, 188.8, var(--bs-link-underline-opacity, 1));
+  text-decoration-color: rgba(0, 91.2, 188.8, var(--bs-link-underline-opacity, 1));
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em;
+  --bs-link-underline-opacity: 0.75;
+}
+
 .contacts-block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
