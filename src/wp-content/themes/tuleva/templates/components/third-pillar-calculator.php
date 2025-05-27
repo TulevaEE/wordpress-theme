@@ -117,7 +117,7 @@ function get_translated_link()
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3 align-items-center row mb-0">
+                    <div class="mb-0 align-items-center row">
                         <label for="wageAddition" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Other gross income', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
