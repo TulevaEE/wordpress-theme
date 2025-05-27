@@ -17176,7 +17176,7 @@ sup {
 }
 
 /* card */
-.card-deck .card-selected {
+.card-selected {
   -webkit-box-shadow: 0 0 0 2px #0072EC !important;
   box-shadow: 0 0 0 2px #0072EC !important;
 }

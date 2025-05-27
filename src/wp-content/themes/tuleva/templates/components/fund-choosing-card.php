@@ -29,7 +29,7 @@
             </div>
         <?php endif; ?>
     </div>
-    <div class="d-flex flex-column flex-sm-row" style="gap: 8px">
+    <div class="d-flex flex-column flex-sm-row gap-2">
         <?php $button_secondary = get_sub_field('button_secondary'); ?>
         <?php if ($button_secondary) : ?>
             <a class="btn btn-lg border fw-normal" role="button"
