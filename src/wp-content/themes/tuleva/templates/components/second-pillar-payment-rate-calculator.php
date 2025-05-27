@@ -63,10 +63,13 @@
                 <span id="yearlyTaxWin" class="fs-2 lh-1 fw-bold text-nowrap text-green">316 €</span>
             </div>
         </div>
-        <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
-           class="btn btn-primary btn-lg btn-block mt-2 text-wrap">
-            <?php _e('Increase contribution', TEXT_DOMAIN); ?>
-        </a>
+        <!-- CTA -->
+        <div class="d-grid">
+            <a href="<?php echo get_app_url("/2nd-pillar-payment-rate") ?>"
+               class="btn btn-primary btn-lg mt-2 text-wrap">
+                <?php _e('Increase contribution', TEXT_DOMAIN); ?>
+            </a>
+        </div>
         <div class="mt-2 py-2 text-secondary text-center small">
             <?php _e('Submitting the application is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
         </div>

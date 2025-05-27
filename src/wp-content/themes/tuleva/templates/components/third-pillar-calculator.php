@@ -1,12 +1,14 @@
 <?php
 $isOctoberNovemberDecember = (date('m') >= 10);
-function get_translated_link() {
+function get_translated_link()
+{
     if (ICL_LANGUAGE_CODE == 'en') {
         return '#modal-gross_income';
     } elseif (ICL_LANGUAGE_CODE == 'et') {
         return '#modal-brutotulu';
     }
 }
+
 ?>
 <div class="card calculator br-3">
     <div class="card-body p-2 third-pillar-calculator">
@@ -15,11 +17,13 @@ function get_translated_link() {
                 <div class="card bg-gray-2 p-3 br-2">
                     <div class="mb-3 row align-items-center">
                         <label for="yearlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
-                            <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a href="<?php echo esc_url( get_translated_link() ); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
+                            <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a
+                                href="<?php echo esc_url(get_translated_link()); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="yearlyWage" min="0" step="1" placeholder="24000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-end" id="yearlyWage" min="0" step="1"
+                                       placeholder="24000" inputmode="numeric" oninput="validity.valid||(value='');">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                                 </div>
@@ -36,7 +40,9 @@ function get_translated_link() {
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="wageDeduction" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-end" id="wageDeduction"
+                                       inputmode="numeric" min="0" step="1" placeholder="0"
+                                       oninput="validity.valid||(value='');">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                                 </div>
@@ -53,7 +59,9 @@ function get_translated_link() {
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="taxReliefs" min="0" max="1200" step="1" placeholder="0" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value !== '') this.value = Math.min(this.value, this.max);">
+                                <input type="number" class="form-control text-end" id="taxReliefs" min="0" max="1200"
+                                       step="1" placeholder="0" inputmode="numeric"
+                                       oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value !== '') this.value = Math.min(this.value, this.max);">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                                 </div>
@@ -65,7 +73,8 @@ function get_translated_link() {
                 <div class="mt-2 p-3 py-4 card br-2 text-navy">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="me-3">
-                            <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                            <span
+                                class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
@@ -75,7 +84,8 @@ function get_translated_link() {
                     </div>
                     <div class="d-flex align-items-center justify-content-between mt-4">
                         <div class="me-3">
-                            <span class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute up to', TEXT_DOMAIN); ?></span><span
+                            <span
+                                class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute up to', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
@@ -84,10 +94,12 @@ function get_translated_link() {
                         <div class="fs-2 lh-1 fw-bold text-nowrap"><span id="yearlyAmount">3600</span> €</div>
                     </div>
                 </div>
-
-                <a href="<?php echo get_app_url("/3rd-pillar-payment") ?>" class="btn btn-primary btn-lg btn-block mt-2">
-                    <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
-                </a>
+                <!-- CTA -->
+                <div class="d-grid">
+                    <a href="<?php echo get_app_url("/3rd-pillar-payment") ?>" class="btn btn-primary btn-lg mt-2">
+                        <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
+                    </a>
+                </div>
                 <div class="mt-2 py-2 text-secondary text-center small">
                     <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
                 </div>
@@ -103,7 +115,8 @@ function get_translated_link() {
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="monthlyWage" min="0" step="1" placeholder="2000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-end" id="monthlyWage" min="0" step="1"
+                                       placeholder="2000" inputmode="numeric" oninput="validity.valid||(value='');">
                                 <div class="input-group-append">
                                     <span class="input-group-text" style="min-width: 110px">
                                         <?php _e('&euro;/month', TEXT_DOMAIN); ?>
@@ -122,7 +135,8 @@ function get_translated_link() {
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="wageAddition" inputmode="numeric" min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
+                                <input type="number" class="form-control text-end" id="wageAddition" inputmode="numeric"
+                                       min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
                                 <div class="input-group-append">
                                     <span class="input-group-text" style="min-width: 110px">
                                         <?php _e('&euro;/year', TEXT_DOMAIN); ?>
@@ -136,7 +150,8 @@ function get_translated_link() {
                 <div class="mt-2 p-3 py-4 card br-2 text-navy">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="me-3">
-                            <span class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                            <span
+                                class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
@@ -146,7 +161,8 @@ function get_translated_link() {
                     </div>
                     <div class="d-flex align-items-center justify-content-between mt-4">
                         <div class="me-3">
-                            <span class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute monthly up to', TEXT_DOMAIN); ?></span><span
+                            <span
+                                class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute monthly up to', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
@@ -155,10 +171,12 @@ function get_translated_link() {
                         <div class="fs-2 lh-1 fw-bold text-nowrap"><span id="monthlyAmount">300</span> €</div>
                     </div>
                 </div>
-
-                <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>" class="btn btn-primary btn-lg btn-block mt-2">
-                    <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
-                </a>
+                <!-- CTA -->
+                <div class="d-grid">
+                    <a href="<?php echo get_app_url("/3rd-pillar-flow") ?>" class="btn btn-primary btn-lg mt-2">
+                        <?php _e('Make a III pillar payment', TEXT_DOMAIN); ?>
+                    </a>
+                </div>
                 <div class="mt-2 py-2 text-secondary text-center small">
                     <?php _e('Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes.', TEXT_DOMAIN); ?>
                 </div>
