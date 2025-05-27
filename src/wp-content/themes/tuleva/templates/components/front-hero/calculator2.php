@@ -11,8 +11,11 @@
                         <input type="number" class="form-control text-right" id="age" inputmode="numeric"
                                min="0" max="99" step="1" placeholder="30"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <div class="input-group-addon"
-                             style="min-width: 77px"><?php _e('years', TEXT_DOMAIN); ?></div>
+                        <div class="input-group-append">
+                            <span class="input-group-text" style="min-width: 77px">
+                                <?php _e('years', TEXT_DOMAIN); ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -26,8 +29,11 @@
                         <input type="number" id="grossWage" class="form-control text-right"
                                min="0" step="1" max="999999" placeholder="2000" inputmode="numeric"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <div class="input-group-addon"
-                             style="min-width: 77px"><?php _e('&euro;/month', TEXT_DOMAIN); ?></div>
+                        <div class="input-group-append">
+                            <span class="input-group-text" style="min-width: 77px">
+                                <?php _e('&euro;/month', TEXT_DOMAIN); ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,7 +66,8 @@
                     ></span>
                 </label>
                 <div class="col-sm-6 return-rate">
-                    <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1" data-unit="%">
+                    <input type="range" id="marketReturn" class="custom-range" min="-10" max="10" step="1"
+                           data-unit="%">
                     <span class="custom-tooltip">0%</span>
                     <span
                         class="historic-return-rate small text-secondary"><?php _e('7% historic return on stocks', TEXT_DOMAIN); ?></span>
@@ -68,7 +75,8 @@
             </div>
         </div>
 
-        <select class="custom-select mt-2 pl-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds" id="comparisonFund"
+        <select class="custom-select mt-2 pl-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds"
+                id="comparisonFund"
                 onchange="calculateSaving()">
             <option value="average">
                 <?php _e("Estonian average II pillar fund", TEXT_DOMAIN); ?>
