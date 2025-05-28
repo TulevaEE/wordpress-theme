@@ -26,7 +26,7 @@
     padding: 0 1.25rem 0 0;
     z-index: 1; // fix dropdowns appearing behind page content in Safari 18.0
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         padding-right: 0;
     }
 
@@ -34,12 +34,8 @@
         // calculations for a nicer optical alignment for the logo
         padding: calc(1rem - 2px) 1rem calc(1rem + 2px) 1.25rem;
         
-        @include media-breakpoint-down(md) {
-            position: sticky;
-            top: 0;
-            z-index: 1;
+        @include media-breakpoint-down(lg) {
             width: 100%;
-            background: linear-gradient(to bottom, #fff calc(100% - 0.75rem), rgba(255,255,255,0));
         }
     }
 
