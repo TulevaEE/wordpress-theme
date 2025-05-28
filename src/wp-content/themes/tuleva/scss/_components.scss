@@ -1741,7 +1741,7 @@
 /* card */
 
 .card-selected {
-    box-shadow: 0 0 0 2px $blue !important;
+    border: 2px solid $blue !important;
 }
 
 /* tiles */

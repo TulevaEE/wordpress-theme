@@ -1,4 +1,4 @@
-<div class="<?php echo 'card shadow d-flex flex-column m-0 p-4 br-4 text-left' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
+<div class="<?php echo 'card shadow d-flex flex-column m-0 p-4 br-4' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
     <div style="flex: 1 0 0;">
         <?php if (get_sub_field('pill')) : ?>
             <span class="badge rounded-pill text-bg-primary fs-6 fw-medium"
@@ -32,7 +32,7 @@
     <div class="d-flex flex-column flex-sm-row gap-2">
         <?php $button_secondary = get_sub_field('button_secondary'); ?>
         <?php if ($button_secondary) : ?>
-            <a class="btn btn-lg border fw-normal" role="button"
+            <a class="btn btn-lg btn-light fw-normal" role="button"
                href="<?php echo $button_secondary['link']; ?>" style="flex: 1 0 0;">
                 <?php echo $button_secondary['button_text']; ?>
             </a>
