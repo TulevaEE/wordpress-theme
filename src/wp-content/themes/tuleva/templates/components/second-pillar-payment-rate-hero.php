@@ -55,10 +55,12 @@
 
                     <div class="d-none d-lg-block">
                         <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
-                            <a href="<?php echo get_sub_field('button_url'); ?>"
-                               class="btn btn-primary btn-lg btn-block mb-3">
-                                <?php the_sub_field('button_text'); ?>
-                            </a>
+                            <div class="d-grid mb-3">
+                                <a href="<?php echo get_sub_field('button_url'); ?>"
+                               class="btn btn-primary btn-lg">
+                                    <?php the_sub_field('button_text'); ?>
+                                </a>
+                            </div>
                         <?php } ?>
 
                         <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>
