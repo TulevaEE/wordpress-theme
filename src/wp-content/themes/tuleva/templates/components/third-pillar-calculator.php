@@ -45,7 +45,7 @@ function get_translated_link()
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3 row align-items-center mb-0">
+                    <div class="mb-0 row align-items-center">
                         <label for="taxReliefs" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Other tax reliefs', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"

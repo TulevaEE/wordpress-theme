@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-3 row mb-0">
+            <div class="mb-0 row">
                 <label for="returnRate" class="col-sm-6 col-form-label py-2 pe-0">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?>
                 </label>

@@ -11,7 +11,7 @@
                            oninput="validity.valid||(value=value.slice(0, -1))">
                 </div>
             </div>
-            <div class="mb-3 row mb-0">
+            <div class="mb-0 row">
                 <label class="col-sm-6 col-form-label pe-0">
                     <?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>
                 </label>
