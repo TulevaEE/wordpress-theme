@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-05-28T11:44:19+00:00\n"
-"PO-Revision-Date: 2025-05-28 14:55+0300\n"
+"POT-Creation-Date: 2025-05-28T13:37:49+00:00\n"
+"PO-Revision-Date: 2025-05-28 16:38+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -136,7 +136,6 @@ msgstr "RSS voog"
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:24
-#: templates/components/front-hero2.php:24
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -147,7 +146,6 @@ msgstr ""
 #: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:26
-#: templates/components/front-hero2.php:26
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -158,7 +156,6 @@ msgstr ""
 #: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:28
-#: templates/components/front-hero2.php:28
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
@@ -267,86 +264,37 @@ msgstr ""
 "muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
 "ehitamisel."
 
-#: templates/components/front-hero/calculator.php:6
-msgid "If you're"
-msgstr "Kui oled"
-
-#: templates/components/front-hero/calculator.php:8
-msgid "years old and earn"
-msgstr "ja teenid kuus"
-
-#: templates/components/front-hero/calculator.php:11
-msgid "euros per month (net),"
-msgstr "eurot neto,"
-
-#: templates/components/front-hero/calculator.php:12
-msgid "at"
-msgstr "siis"
-
-#: templates/components/front-hero/calculator.php:19
-msgid "return"
-msgstr "tootlusega"
-
-#: templates/components/front-hero/calculator.php:20
-msgid "your second pillar"
-msgstr "kogud"
-
-#: templates/components/front-hero/calculator.php:21
-msgid "could"
-msgstr "eelduslikult"
-
-#: templates/components/front-hero/calculator.php:22
-msgid "grow"
-msgstr "pensioniks"
-
-#: templates/components/front-hero/calculator.php:30
-msgid "Estonian pension fund average"
-msgstr "Eesti keskmises pensionifondis"
-
-#: templates/components/front-hero/calculator.php:36
-#: templates/components/front-hero/calculator.php:43
-msgid "Annual fees"
-msgstr "Tasud aastas"
-
-#: templates/components/front-hero/calculator.php:40
-msgid "In Tuleva World Stocks Pension Fund"
-msgstr "Tuleva Maailma Aktsiate Pensionifond"
-
-#: templates/components/front-hero/calculator.php:48
-msgid "Cost of high fees"
-msgstr "Kõrgete tasude kulu"
-
-#: templates/components/front-hero/calculator2.php:7
+#: templates/components/front-hero/calculator.php:7
 msgid "Your age"
 msgstr "Sinu vanus"
 
-#: templates/components/front-hero/calculator2.php:15
+#: templates/components/front-hero/calculator.php:15
 msgid "years"
 msgstr "aastat"
 
-#: templates/components/front-hero/calculator2.php:23
+#: templates/components/front-hero/calculator.php:23
 #: templates/components/third-pillar-calculator.php:104
 msgid "Gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/front-hero/calculator2.php:31
+#: templates/components/front-hero/calculator.php:31
 #: templates/components/third-pillar-calculator.php:115
 msgid "&euro;/month"
 msgstr "&euro;&nbsp;kuus"
 
-#: templates/components/front-hero/calculator2.php:39
-#: templates/components/front-hero/calculator2.php:43
+#: templates/components/front-hero/calculator.php:39
+#: templates/components/front-hero/calculator.php:43
 #: templates/components/second-pillar-payment-rate-calculator.php:16
 #: templates/components/second-pillar-payment-rate-calculator.php:20
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/front-hero/calculator2.php:61
+#: templates/components/front-hero/calculator.php:61
 #: templates/components/payout-calculator.php:21
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/front-hero/calculator2.php:64
+#: templates/components/front-hero/calculator.php:64
 msgid ""
 "Actual amounts depend greatly on the rate of return, and neither we nor "
 "anyone else can guarantee you a specific return."
@@ -354,20 +302,20 @@ msgstr ""
 "Kogunev summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi "
 "teine ei saa kindlat tootlust tagada."
 
-#: templates/components/front-hero/calculator2.php:72
+#: templates/components/front-hero/calculator.php:72
 #: templates/components/payout-calculator.php:28
 msgid "7% historic return on stocks"
 msgstr "aktsiate ajalooline tootlus 7%"
 
-#: templates/components/front-hero/calculator2.php:81
+#: templates/components/front-hero/calculator.php:81
 msgid "Estonian average II pillar fund"
 msgstr "Eesti keskmine II samba fond"
 
-#: templates/components/front-hero/calculator2.php:89
+#: templates/components/front-hero/calculator.php:89
 msgid "Could accumulate by age 65"
 msgstr "Kogud 65. eluaastaks eelduslikult"
 
-#: templates/components/front-hero/calculator2.php:92
+#: templates/components/front-hero/calculator.php:92
 msgid ""
 "We assume you started saving for your retirement at the age of 21 and a "
 "salary growth of 3% per year. The ‘Estonian average II pillar fund’ "
@@ -378,7 +326,7 @@ msgstr ""
 "“Eesti keskmine II samba fond” esindab kõiki II samba fonde ühise tervikuna. "
 "Kuvame selle tasu mahu järgi kaalutud keskmisena."
 
-#: templates/components/front-hero/calculator2.php:102
+#: templates/components/front-hero/calculator.php:102
 msgid ""
 "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> more</strong> in fees"
@@ -386,7 +334,7 @@ msgstr ""
 "Maksad kokku tasudeks <strong class=\"text-danger text-nowrap\"><span "
 "class=\"tuleva-saving\">- €</span> rohkem</strong>"
 
-#: templates/components/front-hero/calculator2.php:105
+#: templates/components/front-hero/calculator.php:105
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "more</span> in fees"
@@ -394,12 +342,12 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> rohkem</span>"
 
-#: templates/components/front-hero/calculator2.php:108
-#: templates/components/front-hero/calculator2.php:131
+#: templates/components/front-hero/calculator.php:108
+#: templates/components/front-hero/calculator.php:131
 msgid "You pay in fees"
 msgstr "Maksad tasudeks"
 
-#: templates/components/front-hero/calculator2.php:111
+#: templates/components/front-hero/calculator.php:111
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "less</span> in fees"
@@ -407,16 +355,16 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> vähem</span>"
 
-#: templates/components/front-hero/calculator2.php:114
+#: templates/components/front-hero/calculator.php:114
 msgid "per year"
 msgstr "aastas"
 
-#: templates/components/front-hero/calculator2.php:122
+#: templates/components/front-hero/calculator.php:122
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
-#: templates/components/front-hero/calculator2.php:133
+#: templates/components/front-hero/calculator.php:133
 msgid "0.31% per year"
 msgstr "0,31% aastas"
 
@@ -1686,7 +1634,7 @@ msgstr ""
 "statistiliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, "
 "kuid see ei taga sarnast tootlust tulevikus."
 
-#: templates/components/payout-hero.php:48
+#: templates/components/payout-hero.php:50
 msgid "How does the payout calculator work?"
 msgstr "Kuidas väljamaksete kalkulaator töötab?"
 
@@ -1921,18 +1869,6 @@ msgstr ""
 msgid "Send"
 msgstr "Saada"
 
-#: templates/footer/blog-beacon.php:2 templates/single-content.php:107
-msgid "How much would you lose to high fees?"
-msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
-
-#: templates/footer/blog-beacon.php:3
-msgid ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
-"\">See calculation</a>"
-msgstr ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
-"\">Vaata arvutust</a>"
-
 #: templates/footer/not-logged-in-mailing-list-form.php:3
 msgid "Join Tuleva mailing list"
 msgstr "Liitu Tuleva uudiskirjaga"
@@ -2013,6 +1949,10 @@ msgid ""
 msgstr ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
 "\">Vaata kõiki artikleid</a>"
+
+#: templates/single-content.php:107
+msgid "How much would you lose to high fees?"
+msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
 #: templates/single-content.php:110
 msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
@@ -2139,6 +2079,49 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "If you're"
+#~ msgstr "Kui oled"
+
+#~ msgid "years old and earn"
+#~ msgstr "ja teenid kuus"
+
+#~ msgid "euros per month (net),"
+#~ msgstr "eurot neto,"
+
+#~ msgid "at"
+#~ msgstr "siis"
+
+#~ msgid "return"
+#~ msgstr "tootlusega"
+
+#~ msgid "your second pillar"
+#~ msgstr "kogud"
+
+#~ msgid "could"
+#~ msgstr "eelduslikult"
+
+#~ msgid "grow"
+#~ msgstr "pensioniks"
+
+#~ msgid "Estonian pension fund average"
+#~ msgstr "Eesti keskmises pensionifondis"
+
+#~ msgid "Annual fees"
+#~ msgstr "Tasud aastas"
+
+#~ msgid "In Tuleva World Stocks Pension Fund"
+#~ msgstr "Tuleva Maailma Aktsiate Pensionifond"
+
+#~ msgid "Cost of high fees"
+#~ msgstr "Kõrgete tasude kulu"
+
+#~ msgid ""
+#~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
+#~ "\">See calculation</a>"
+#~ msgstr ""
+#~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+#~ "\">Vaata arvutust</a>"
 
 #~ msgid ""
 #~ "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg "

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-28T11:55:38+00:00\n"
+"POT-Creation-Date: 2025-05-28T13:37:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -139,21 +139,18 @@ msgstr ""
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:24
-#: templates/components/front-hero2.php:24
 msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:26
-#: templates/components/front-hero2.php:26
 msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:28
-#: templates/components/front-hero2.php:28
 msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
@@ -218,133 +215,84 @@ msgstr ""
 msgid "It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves."
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:6
-msgid "If you're"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:8
-msgid "years old and earn"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:11
-msgid "euros per month (net),"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:12
-msgid "at"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:19
-msgid "return"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:20
-msgid "your second pillar"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:21
-msgid "could"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:22
-msgid "grow"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:30
-msgid "Estonian pension fund average"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:36
-#: templates/components/front-hero/calculator.php:43
-msgid "Annual fees"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:40
-msgid "In Tuleva World Stocks Pension Fund"
-msgstr ""
-
-#: templates/components/front-hero/calculator.php:48
-msgid "Cost of high fees"
-msgstr ""
-
-#: templates/components/front-hero/calculator2.php:7
+#: templates/components/front-hero/calculator.php:7
 msgid "Your age"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:15
+#: templates/components/front-hero/calculator.php:15
 msgid "years"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:23
+#: templates/components/front-hero/calculator.php:23
 #: templates/components/third-pillar-calculator.php:104
 msgid "Gross salary"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:31
+#: templates/components/front-hero/calculator.php:31
 #: templates/components/third-pillar-calculator.php:115
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:39
-#: templates/components/front-hero/calculator2.php:43
+#: templates/components/front-hero/calculator.php:39
+#: templates/components/front-hero/calculator.php:43
 #: templates/components/second-pillar-payment-rate-calculator.php:16
 #: templates/components/second-pillar-payment-rate-calculator.php:20
 msgid "Your II pillar contribution"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:61
+#: templates/components/front-hero/calculator.php:61
 #: templates/components/payout-calculator.php:21
 msgid "Expected annual return"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:64
+#: templates/components/front-hero/calculator.php:64
 msgid "Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return."
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:72
+#: templates/components/front-hero/calculator.php:72
 #: templates/components/payout-calculator.php:28
 msgid "7% historic return on stocks"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:81
+#: templates/components/front-hero/calculator.php:81
 msgid "Estonian average II pillar fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:89
+#: templates/components/front-hero/calculator.php:89
 msgid "Could accumulate by age 65"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:92
+#: templates/components/front-hero/calculator.php:92
 msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:102
+#: templates/components/front-hero/calculator.php:102
 msgid "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</strong> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:105
+#: templates/components/front-hero/calculator.php:105
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:108
-#: templates/components/front-hero/calculator2.php:131
+#: templates/components/front-hero/calculator.php:108
+#: templates/components/front-hero/calculator.php:131
 msgid "You pay in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:111
+#: templates/components/front-hero/calculator.php:111
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> less</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:114
+#: templates/components/front-hero/calculator.php:114
 msgid "per year"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:122
+#: templates/components/front-hero/calculator.php:122
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:133
+#: templates/components/front-hero/calculator.php:133
 msgid "0.31% per year"
 msgstr ""
 
@@ -1114,7 +1062,7 @@ msgstr ""
 msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
 msgstr ""
 
-#: templates/components/payout-hero.php:48
+#: templates/components/payout-hero.php:50
 msgid "How does the payout calculator work?"
 msgstr ""
 
@@ -1306,15 +1254,6 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: templates/footer/blog-beacon.php:2
-#: templates/single-content.php:107
-msgid "How much would you lose to high fees?"
-msgstr ""
-
-#: templates/footer/blog-beacon.php:3
-msgid "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/\">See calculation</a>"
-msgstr ""
-
 #: templates/footer/not-logged-in-mailing-list-form.php:3
 msgid "Join Tuleva mailing list"
 msgstr ""
@@ -1383,6 +1322,10 @@ msgstr ""
 
 #: templates/single-content.php:101
 msgid "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/\">See more posts</a>"
+msgstr ""
+
+#: templates/single-content.php:107
+msgid "How much would you lose to high fees?"
 msgstr ""
 
 #: templates/single-content.php:110
