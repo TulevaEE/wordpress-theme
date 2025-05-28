@@ -494,29 +494,6 @@
     }
 }
 
-.blog-beacon {
-    position: fixed;
-    right: 29px;
-    bottom: 29px;
-    display: none;
-    max-width: 12rem;
-    text-align: center;
-    font-size: 1.125em;
-    line-height: 1;
-    background: #FFFFFF;
-    border-radius: 16px;
-    padding: 8px;
-    transition: all .4s ease;
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.12);
-    .btn {
-        border-radius: 8px;
-    }
-    .btn-link {
-        padding-right: 2em;
-        background: url(../img/icon-arrow-right.svg) no-repeat 95%;
-    }
-}
-
 .recent-articles {
     margin-bottom: 3rem;
     @include media-breakpoint-up(md) {
