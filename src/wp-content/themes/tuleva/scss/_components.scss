@@ -1338,7 +1338,14 @@
 }
 .icon-info:focus,
 .inline-help:focus {
-    outline: none;
+    border-color: $btn-link-hover-color;
+    outline: 0;
+    @if $enable-shadows {
+        box-shadow: $btn-box-shadow, $btn-focus-box-shadow;
+    } @else {
+        box-shadow: $btn-focus-box-shadow;
+    }
+    border-radius: 50%;
 }
 
 .fund-info__item {

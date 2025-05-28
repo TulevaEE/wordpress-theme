@@ -16679,7 +16679,11 @@ sup {
 
 .icon-info:focus,
 .inline-help:focus {
-  outline: none;
+  border-color: var(--bs-link-hover-color);
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 114, 236, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 114, 236, 0.25);
+  border-radius: 50%;
 }
 
 .fund-info__item {
