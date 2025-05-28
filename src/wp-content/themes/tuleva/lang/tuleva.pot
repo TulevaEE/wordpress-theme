@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-14T13:33:29+00:00\n"
+"POT-Creation-Date: 2025-05-28T11:55:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -48,10 +48,6 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Contact page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Difference"
 msgstr ""
 
 #. Template Name of the theme
@@ -140,21 +136,21 @@ msgstr ""
 msgid "RSS feed"
 msgstr ""
 
-#: templates/components/calculator-cta.php:24
+#: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:24
 #: templates/components/front-hero2.php:24
 msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/calculator-cta.php:26
+#: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:26
 #: templates/components/front-hero2.php:26
 msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/calculator-cta.php:28
+#: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:28
 #: templates/components/front-hero2.php:28
@@ -176,27 +172,17 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
-#: templates/components/featured-articles-et.php:3
-msgid "Read our blog"
-msgstr ""
-
 #: templates/components/founder-carousel.php:2
-#: templates/components/founder-stories.php:3
 #: templates/components/modal-founders.php:11
 msgid "Founding members"
 msgstr ""
 
-#: templates/components/founder-stories.php:16
-#: templates/components/founder-stories.php:36
 #: templates/components/front-founders.php:12
 #: templates/components/front-founders.php:39
 #: templates/components/front-founders.php:68
 msgid "Tuleva founder"
 msgstr ""
 
-#: templates/components/founder-stories.php:17
-#: templates/components/founder-stories.php:37
-#: templates/components/founder-stories.php:57
 #: templates/components/front-founders.php:18
 #: templates/components/front-founders.php:45
 #: templates/components/front-founders.php:74
@@ -204,47 +190,32 @@ msgstr ""
 msgid "II pillar: Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/founder-stories.php:19
 #: templates/components/front-founders.php:21
 msgid "Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here."
 msgstr ""
 
-#: templates/components/founder-stories.php:20
 #: templates/components/front-founders.php:23
 msgid "After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working."
 msgstr ""
 
-#: templates/components/founder-stories.php:39
 #: templates/components/front-founders.php:48
 msgid "One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros."
 msgstr ""
 
-#: templates/components/founder-stories.php:40
 #: templates/components/front-founders.php:50
 msgid "When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done."
 msgstr ""
 
-#: templates/components/founder-stories.php:55
 #: templates/components/front-founders.php:65
 msgid "Kristo Käärmann and Taavet Hinrikus"
 msgstr ""
 
-#: templates/components/founder-stories.php:56
-msgid "Tuleva founders"
-msgstr ""
-
-#: templates/components/founder-stories.php:59
 #: templates/components/front-founders.php:77
 msgid "One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks."
 msgstr ""
 
-#: templates/components/founder-stories.php:60
 #: templates/components/front-founders.php:79
 msgid "It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves."
-msgstr ""
-
-#: templates/components/founder-stories.php:84
-msgid "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-primary\">See all founding members</a>"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:6
@@ -304,74 +275,76 @@ msgstr ""
 msgid "years"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:22
-#: templates/components/third-pillar-calculator.php:92
+#: templates/components/front-hero/calculator2.php:23
+#: templates/components/third-pillar-calculator.php:104
 msgid "Gross salary"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:30
-#: templates/components/third-pillar-calculator.php:101
+#: templates/components/front-hero/calculator2.php:31
+#: templates/components/third-pillar-calculator.php:115
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:37
+#: templates/components/front-hero/calculator2.php:39
+#: templates/components/front-hero/calculator2.php:43
 #: templates/components/second-pillar-payment-rate-calculator.php:16
+#: templates/components/second-pillar-payment-rate-calculator.php:20
 msgid "Your II pillar contribution"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:56
-#: templates/components/payout-calculator.php:19
+#: templates/components/front-hero/calculator2.php:61
+#: templates/components/payout-calculator.php:21
 msgid "Expected annual return"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:59
+#: templates/components/front-hero/calculator2.php:64
 msgid "Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return."
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:66
-#: templates/components/payout-calculator.php:24
+#: templates/components/front-hero/calculator2.php:72
+#: templates/components/payout-calculator.php:28
 msgid "7% historic return on stocks"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:74
+#: templates/components/front-hero/calculator2.php:81
 msgid "Estonian average II pillar fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:82
+#: templates/components/front-hero/calculator2.php:89
 msgid "Could accumulate by age 65"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:85
+#: templates/components/front-hero/calculator2.php:92
 msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:95
+#: templates/components/front-hero/calculator2.php:102
 msgid "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</strong> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:98
+#: templates/components/front-hero/calculator2.php:105
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:101
-#: templates/components/front-hero/calculator2.php:124
+#: templates/components/front-hero/calculator2.php:108
+#: templates/components/front-hero/calculator2.php:131
 msgid "You pay in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:104
+#: templates/components/front-hero/calculator2.php:111
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> less</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:107
+#: templates/components/front-hero/calculator2.php:114
 msgid "per year"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:115
+#: templates/components/front-hero/calculator2.php:122
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator2.php:126
+#: templates/components/front-hero/calculator2.php:133
 msgid "0.31% per year"
 msgstr ""
 
@@ -485,20 +458,17 @@ msgid "Terms and conditions"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:61
-msgid " (in Estonian)"
+#: templates/components/fund-stocks-details.php:63
+#: templates/components/fund-third-details.php:61
+#: templates/components/fund-third-details.php:63
+msgid " (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:63
 msgid "Change of terms from 01.09.2025"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:63
-#: templates/components/fund-stocks-details.php:63
-#: templates/components/fund-third-details.php:61
-#: templates/components/fund-third-details.php:63
-msgid " (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:66
@@ -592,7 +562,7 @@ msgid "Suitable for you if you plan to withdraw your entire II pillar within th
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:21
-msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
+msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-calculator.php:13
@@ -738,7 +708,7 @@ msgid "of Tuleva II pillar investors’ choice"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:23
-msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
+msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-third-details.php:18
@@ -1115,32 +1085,32 @@ msgstr ""
 msgid "Accumulated by age 65"
 msgstr ""
 
-#: templates/components/payout-calculator.php:13
+#: templates/components/payout-calculator.php:14
 msgid "euros"
 msgstr ""
 
-#: templates/components/payout-calculator.php:32
+#: templates/components/payout-calculator.php:36
 msgid "You will receive monthly"
 msgstr ""
 
-#: templates/components/payout-calculator.php:35
+#: templates/components/payout-calculator.php:39
 msgid "If your pension assets increase due to positive returns, the monthly amount you receive will also increase."
 msgstr ""
 
-#: templates/components/payout-calculator.php:35
 #: templates/components/payout-calculator.php:39
+#: templates/components/payout-calculator.php:43
 msgid "The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period."
 msgstr ""
 
-#: templates/components/payout-calculator.php:39
+#: templates/components/payout-calculator.php:43
 msgid "If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease."
 msgstr ""
 
-#: templates/components/payout-calculator.php:50
+#: templates/components/payout-calculator.php:56
 msgid "You will receive in total"
 msgstr ""
 
-#: templates/components/payout-calculator.php:55
+#: templates/components/payout-calculator.php:61
 msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
 msgstr ""
 
@@ -1180,29 +1150,29 @@ msgstr ""
 msgid "Monthly gross salary"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:37
+#: templates/components/second-pillar-payment-rate-calculator.php:41
 msgid "Net salary from 2026"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:40
+#: templates/components/second-pillar-payment-rate-calculator.php:44
 msgid "In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%."
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:47
+#: templates/components/second-pillar-payment-rate-calculator.php:52
 msgid "Your monthly contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:54
-#: templates/components/third-pillar-calculator.php:62
-#: templates/components/third-pillar-calculator.php:125
+#: templates/components/second-pillar-payment-rate-calculator.php:59
+#: templates/components/third-pillar-calculator.php:71
+#: templates/components/third-pillar-calculator.php:144
 msgid "Yearly gain from income tax"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:62
+#: templates/components/second-pillar-payment-rate-calculator.php:69
 msgid "Increase contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:65
+#: templates/components/second-pillar-payment-rate-calculator.php:73
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
@@ -1214,77 +1184,77 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:18
+#: templates/components/third-pillar-calculator.php:20
 msgid "Total gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:18
+#: templates/components/third-pillar-calculator.php:21
 msgid "view"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:23
-#: templates/components/third-pillar-calculator.php:38
-#: templates/components/third-pillar-calculator.php:53
-#: templates/components/third-pillar-calculator.php:116
+#: templates/components/third-pillar-calculator.php:27
+#: templates/components/third-pillar-calculator.php:44
+#: templates/components/third-pillar-calculator.php:61
+#: templates/components/third-pillar-calculator.php:133
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:29
+#: templates/components/third-pillar-calculator.php:33
 msgid "of which dividends"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:32
+#: templates/components/third-pillar-calculator.php:36
 msgid "Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:44
+#: templates/components/third-pillar-calculator.php:50
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:47
+#: templates/components/third-pillar-calculator.php:53
 msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:65
-#: templates/components/third-pillar-calculator.php:128
+#: templates/components/third-pillar-calculator.php:74
+#: templates/components/third-pillar-calculator.php:147
 msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:72
+#: templates/components/third-pillar-calculator.php:82
 msgid "Contribute up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:75
-#: templates/components/third-pillar-calculator.php:138
+#: templates/components/third-pillar-calculator.php:85
+#: templates/components/third-pillar-calculator.php:158
 msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:83
-#: templates/components/third-pillar-calculator.php:146
+#: templates/components/third-pillar-calculator.php:94
+#: templates/components/third-pillar-calculator.php:167
 msgid "Make a III pillar payment"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:86
+#: templates/components/third-pillar-calculator.php:98
 msgid "Making a payment is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:95
+#: templates/components/third-pillar-calculator.php:107
 msgid "Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:107
+#: templates/components/third-pillar-calculator.php:122
 msgid "Other gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:110
+#: templates/components/third-pillar-calculator.php:125
 msgid "Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 22%."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:135
+#: templates/components/third-pillar-calculator.php:155
 msgid "Contribute monthly up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:149
+#: templates/components/third-pillar-calculator.php:171
 msgid "Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes."
 msgstr ""
 
