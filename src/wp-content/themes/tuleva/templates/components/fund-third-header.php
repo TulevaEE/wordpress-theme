@@ -18,7 +18,7 @@
                         <p class="m-0"><?php _e('Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire III pillar within the next 5 years.', TEXT_DOMAIN) ?></p>
                     </div>
                     <div class="proposal__cta">
-                        <div class="d-grid"><a href="<?php echo get_site_url(); ?>/iii-sammas-juhend" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-stocks"><?php _e('Select this fund', TEXT_DOMAIN); ?></a></div>
+                        <div class="d-grid"><a href="<?php echo get_site_url(); ?>/iii-sammas-juhend" class="btn btn-primary btn-lg btn-block" data-label="fund-details-choose-stocks"><?php _e('Select this fund', TEXT_DOMAIN); ?></a></div>
                     </div>
                 </div>
             </div>
