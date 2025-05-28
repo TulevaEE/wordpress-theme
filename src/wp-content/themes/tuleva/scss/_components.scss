@@ -1336,8 +1336,8 @@
 .inline-help:focus {
     background-position: -18px 0;
 }
-.icon-info:focus,
-.inline-help:focus {
+.icon-info:focus-visible,
+.inline-help:focus-visible {
     border-color: $btn-link-hover-color;
     outline: 0;
     @if $enable-shadows {
