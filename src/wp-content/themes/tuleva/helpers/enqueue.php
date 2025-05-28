@@ -38,8 +38,8 @@ class ThemeEnqueue
             // JS assets
             [
                 'handle' => 'jquery',
-                'src' => $js_path . 'vendor/jquery-1.12.4.min.js',
-                'ver' => '1.12.4',
+                'src' => $js_path . 'vendor/jquery-3.7.1.min.js',
+                'ver' => '3.7.1',
                 'js_in_header' => true,
                 'enqueue' => true
             ],
