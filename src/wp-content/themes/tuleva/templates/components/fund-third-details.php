@@ -26,10 +26,6 @@
                             <div><span id="third-fund-nav"></span> EUR</div>
                         </div>
                         <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Change in value', TEXT_DOMAIN) ?></div>
-                            <div>0%</div>
-                        </div>
-                        <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
                             <div>0,21%</div>
                         </div>
