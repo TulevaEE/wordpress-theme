@@ -10,7 +10,7 @@ $lead_text = get_sub_field('lead_text');
                     <p class="lead text-navy"><?php echo do_shortcode($lead_text); ?></p>
 
                     <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
-                        <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg btn-block mt-5 mb-3"><?php the_sub_field('button_text'); ?></a>
+                        <div class="d-grid mt-5 mb-3"><a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('button_text'); ?></a></div>
                     <?php } ?>
 
                     <p class="small text-center text-navy mb-md-5 mb-lg-0">
@@ -35,7 +35,7 @@ $lead_text = get_sub_field('lead_text');
                 <div class="col-lg-6">
                     <?php get_template_part('templates/components/front-hero/calculator'); ?>
                     <?php if (get_sub_field('below_calculator_link_url') && get_sub_field('below_calculator_link_text')) { ?>
-                        <a href="<?php the_sub_field('below_calculator_link_url'); ?>" class="btn btn-link btn-block text-medium text-uppercase text-center my-3"><?php the_sub_field('below_calculator_link_text'); ?></a>
+                        <div class="d-grid my-3"><a href="<?php the_sub_field('below_calculator_link_url'); ?>" class="btn btn-link text-medium text-uppercase text-center"><?php the_sub_field('below_calculator_link_text'); ?></a>
                     <?php } ?>
                 </div>
             </div>
