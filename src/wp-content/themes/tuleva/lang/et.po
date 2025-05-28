@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-05-28T14:44:46+00:00\n"
-"PO-Revision-Date: 2025-05-28 17:46+0300\n"
+"POT-Creation-Date: 2025-05-28T15:13:12+00:00\n"
+"PO-Revision-Date: 2025-05-28 18:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -544,11 +544,11 @@ msgstr " "
 #: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:63
 msgid ""
-"<a href=\"https://tuleva.ee/en/uncategorized/we-made-the-terms-of-our-"
-"pension-funds-more-precise/\">Change of terms from 01.09.2025</a>"
+"<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
+"funds-more-precise/\">Change of terms from 01.09.2025</a>"
 msgstr ""
 "<a href=\"https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-"
-"tapsemaks\">Tingimuste muudatus alates 01.09.2025</a>"
+"tapsemaks/\">Tingimuste muudatus alates 01.09.2025</a>"
 
 #: templates/components/fund-bonds-details.php:66
 #: templates/components/fund-stocks-details.php:66
@@ -906,11 +906,11 @@ msgstr "15. oktoober 2019"
 
 #: templates/components/fund-third-details.php:63
 msgid ""
-"<a href=\"https://tuleva.ee/en/uncategorized/we-made-the-terms-of-our-"
-"pension-funds-more-precise/\">Change of terms from 15.06.2025</a>"
+"<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
+"funds-more-precise/\">Change of terms from 15.06.2025</a>"
 msgstr ""
 "<a href=\"https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-"
-"tapsemaks\">Tingimuste muudatus alates 15.06.2025</a>"
+"tapsemaks/\">Tingimuste muudatus alates 15.06.2025</a>"
 
 #: templates/components/fund-third-header.php:5
 msgid "Tuleva III Pillar Pension Fund"
