@@ -611,11 +611,6 @@ $(document).ready(function ($) {
         window.Beacon('toggle');
         $(this).toggleClass('footer-help-close--open');
     });
-
-    $('.cookie-bar__btn').on('click', function (ev) {
-        setCookie('cookie-consent', 1, 365);
-        $('#cookie-bar').fadeOut();
-    });
 });
 
 function getTimeRemaining(endtime) {

@@ -17110,43 +17110,6 @@ sup {
   border-top-right-radius: 0.5rem !important;
 }
 
-.cookie-bar {
-  opacity: 1;
-  max-height: 999px;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  z-index: 1100;
-  overflow: hidden;
-  color: #002f63;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #eef7fd;
-  padding: 15px 20px 15px;
-}
-.cookie-bar__inner {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-.cookie-bar__right {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 .countdown-timer__item {
   color: white;
   background-color: #ff4800;
