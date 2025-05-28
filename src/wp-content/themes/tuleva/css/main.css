@@ -16210,9 +16210,6 @@ sup {
   background: #fff;
   line-height: 1;
 }
-.calculator .btn-lg.btn-block, .calculator .btn-group-lg > .btn-block.btn {
-  border-radius: 0.5rem;
-}
 .calculator input#age {
   max-width: 3rem;
 }
