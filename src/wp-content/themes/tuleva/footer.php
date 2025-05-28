@@ -20,11 +20,6 @@
 
 <?php get_template_part('templates/components/modal'); ?>
 
-<?php if (ICL_LANGUAGE_CODE == 'et') {
-    // Include newsletter subscription form toggle button
-    // get_template_part('templates/footer/beacon-toggle-newsletter');
-} ?>
-
 <?php wp_footer(); ?>
 
 <?php get_template_part('templates/footer/cookie-bar'); ?>
