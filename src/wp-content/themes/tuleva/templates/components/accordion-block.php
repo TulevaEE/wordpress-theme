@@ -9,16 +9,16 @@
                     the_row(); ?>
                     <div class="qa__question-wrapper" id="accordion-block-<?php echo $i; ?>">
                         <a href="#collapsed-text-<?php echo $i; ?>"
-                           class="qa__question fs-4 collapsed"
+                           class="qa__question collapsed"
                            data-bs-toggle="collapse"
                            data-bs-target="#collapsed-text-<?php echo $i; ?>"
                            aria-expanded="true"
                            aria-controls="collapsed-text-<?php echo $i; ?>">
-                            <?php the_sub_field('title'); ?>
+                            <p class="m-0 fs-4 lh-sm"><?php the_sub_field('title'); ?></p>
+                            <?php if (get_sub_field('lead_text')) { ?>
+                                <p class="m-0 mt-2 fs-6 fw-normal"><?php the_sub_field('lead_text'); ?></p>
+                            <?php } ?>
                         </a>
-                        <?php if (get_sub_field('lead_text')) { ?>
-                            <p><?php the_sub_field('lead_text'); ?></p>
-                        <?php } ?>
                         <div id="collapsed-text-<?php echo $i; ?>" class="collapse" data-parent="#accordion">
                             <?php echo get_sub_field('text'); ?>
                         </div>
