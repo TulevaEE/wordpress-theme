@@ -18,8 +18,10 @@ $security_link_url = get_sub_field('security_link_url');
                             <div class="d-flex flex-column justify-content-center">
                                 <p class="m-0 text-navy"><?php echo $security_text; ?></p>
                                 <?php if ($security_link_url && $security_link_text) { ?>
-                                    <a id="security" href="<?php echo $security_link_url; ?>"
-                                       ><?php echo $security_link_text; ?></a>
+                                    <p class="m-0">
+                                        <a id="security" href="<?php echo $security_link_url; ?>"
+                                        ><?php echo $security_link_text; ?></a>
+                                    </p>
                                 <?php } ?>
                             </div>
                         </div>
