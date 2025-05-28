@@ -28,9 +28,11 @@
                             </span>
                         <?php } ?>
                         <?php if (get_sub_field('button_text') && get_sub_field('button_url')) { ?>
-                            <a href="<?php echo get_sub_field('button_url'); ?>" class="mt-4 mb-3 btn btn-primary btn-lg btn-block">
+                            <div class="d-grid">
+                                <a href="<?php echo get_sub_field('button_url'); ?>" class="mt-4 mb-3 btn btn-primary btn-lg">
                                 <?php the_sub_field('button_text'); ?>
-                            </a>
+                                </a>
+                            </div>
                         <?php } ?>
                         <?php if (get_sub_field('link_text') && get_sub_field('link_url')) { ?>
                             <a href="<?php the_sub_field('link_url'); ?>" class="small">
