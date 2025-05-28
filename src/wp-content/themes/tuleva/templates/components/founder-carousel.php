@@ -6,7 +6,7 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
         <h2 class="mb-5 text-center"><?php echo $heading; ?></h2>
         <?php if (have_rows('founders')) { $i = 0; ?>
             <!-- CAROUSEL -->
-            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselControls" class="carousel slide">
                 <div class="carousel-inner">
                     <?php while (have_rows('founders')) { the_row(); $i++; ?>
                         <div class="carousel-item<?php if ($i === 1) { echo ' active'; } ?>">
