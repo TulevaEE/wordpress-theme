@@ -2973,7 +2973,7 @@ textarea.form-control-lg {
 
 .form-range {
   width: 100%;
-  height: 3rem;
+  height: calc(38px + 0.5rem);
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2994,9 +2994,9 @@ textarea.form-control-lg {
   border: 0;
 }
 .form-range::-webkit-slider-thumb {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: -0.75rem;
+  width: 38px;
+  height: 38px;
+  margin-top: -11px;
   -webkit-appearance: none;
   appearance: none;
   background-color: #0072EC;
@@ -3018,16 +3018,16 @@ textarea.form-control-lg {
 }
 .form-range::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1rem;
+  height: 16px;
   color: transparent;
   cursor: pointer;
-  background-color: white;
+  background-color: #fff;
   border-color: transparent;
   border-radius: 1rem;
 }
 .form-range::-moz-range-thumb {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 38px;
+  height: 38px;
   -moz-appearance: none;
   appearance: none;
   background-color: #0072EC;
@@ -3047,10 +3047,10 @@ textarea.form-control-lg {
 }
 .form-range::-moz-range-track {
   width: 100%;
-  height: 1rem;
+  height: 16px;
   color: transparent;
   cursor: pointer;
-  background-color: white;
+  background-color: #fff;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -18256,16 +18256,16 @@ sup {
 .custom-tooltip {
   position: absolute;
   top: 0;
-  left: calc(50% - 1.25rem);
+  left: calc(50% - 19px);
   z-index: 2;
-  width: 2.5rem;
+  width: 38px;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   font-size: 1rem;
   font-weight: 500;
   font-variant-numeric: proportional-nums;
   color: white;
-  line-height: 2.5rem;
+  line-height: 38px;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -18277,12 +18277,12 @@ sup {
 .return-rate {
   position: relative;
   z-index: 1;
-  min-height: 2.5rem;
+  min-height: 38px;
 }
 .return-rate .form-range {
   display: block;
   text-align: right;
-  height: 2.5rem;
+  height: 38px;
 }
 .return-rate .form-range::-webkit-slider-runnable-track {
   border: var(--bs-border-width) solid var(--bs-border-color);
@@ -18304,7 +18304,7 @@ sup {
 }
 .return-rate .historic-return-rate::after {
   position: absolute;
-  top: 1.75rem;
+  top: 27px;
   left: calc((100% - 30px) * 0.85);
   z-index: -1;
   content: "";
