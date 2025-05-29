@@ -2,15 +2,12 @@ version: 2.1
 jobs:
     deploy:
         docker:
-            - image: cimg/base:stable
+            - image: instrumentisto/rsync-ssh
         steps:
             - checkout
             - add_ssh_keys:
                   fingerprints:
                       - "SHA256:zcVjxTrI9vhVjRczUZxlxnmuWT0Gu2DFUFfsHNSwwCs"
-            - run:
-                  name: Install rsync
-                  command: sudo apt-get update && sudo apt-get install -y rsync
             - run:
                   name: Sync files to production
                   command: |
