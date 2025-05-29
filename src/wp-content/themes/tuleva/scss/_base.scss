@@ -137,6 +137,9 @@ hr {
 
 // Badge
 
+.badge.text-bg-success {
+    color: #fff !important;
+}
 .text-bg-success-outline {
     box-shadow: inset 0 0 0 1.5px $green-light;
     background-color: $white;
