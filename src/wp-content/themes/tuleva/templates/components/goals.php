@@ -13,7 +13,7 @@
                 <?php while (have_rows('goals')) { the_row();
                     $status = get_sub_field('status');
                     $label = __('Done', TEXT_DOMAIN);
-                    $badge_class = 'badge-success';
+                    $badge_class = 'text-bg-success';
 
                     if ($status === 'partially-done') {
                         $label = __('Partially done', TEXT_DOMAIN);

@@ -14765,7 +14765,7 @@ hr {
   border-color: rgba(0, 0, 0, 0.16);
 }
 
-.badge-success-outline {
+.text-bg-success-outline {
   -webkit-box-shadow: inset 0 0 0 1.5px #51c26c;
   box-shadow: inset 0 0 0 1.5px #51c26c;
   background-color: #fff;
