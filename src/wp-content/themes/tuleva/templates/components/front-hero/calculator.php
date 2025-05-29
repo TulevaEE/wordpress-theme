@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <select class="form-select mt-2 ps-3 fs-6 lh-sm fw-medium bg-gray-1 text-navy" name="pensionFunds"
+        <select class="form-select mt-2 ps-3 fw-medium bg-gray-1 text-navy" name="pensionFunds"
                 id="comparisonFund"
                 onchange="calculateSaving()">
             <option value="average">
