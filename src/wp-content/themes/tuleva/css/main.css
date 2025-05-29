@@ -17504,7 +17504,7 @@ sup {
   -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04);
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .header {
     max-height: 100vh;
     overflow-y: scroll;
@@ -17514,7 +17514,7 @@ sup {
 .admin-bar .header {
   top: 32px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .admin-bar .header {
     max-height: calc(100vh - 32px);
   }
@@ -17530,7 +17530,7 @@ sup {
   }
 }
 .navbar .navbar-wrap {
-  padding: calc(1rem - 2px) 1rem calc(1rem + 2px) 1.25rem;
+  padding: 1rem 1rem 1rem 1.25rem;
 }
 @media (max-width: 991.98px) {
   .navbar .navbar-wrap {
@@ -17622,7 +17622,7 @@ sup {
     opacity: 1;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .navbar .nav-item:first-child .nav-link {
     border-top: 1px solid #e0e6ec;
   }
@@ -17635,7 +17635,7 @@ sup {
 .navbar .nav-link:hover {
   color: #0072EC;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .navbar .nav-link {
     font-size: 1.25rem;
     line-height: 1.2;
@@ -17667,8 +17667,8 @@ sup {
   }
 }
 .navbar .navbar-brand {
-  margin: 0;
-  padding: 0;
+  margin: -2px 0 0;
+  padding: 0 0 2px;
 }
 .navbar .navbar-brand .brand-logo {
   width: auto;
@@ -17693,7 +17693,7 @@ sup {
   margin: 0;
   border: 0;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .navbar .dropdown-menu {
     border-bottom: 1px solid #e0e6ec;
     border-radius: 0;
@@ -17752,7 +17752,7 @@ sup {
     display: block;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .navbar .navbar-nav {
     padding-bottom: 5rem;
   }

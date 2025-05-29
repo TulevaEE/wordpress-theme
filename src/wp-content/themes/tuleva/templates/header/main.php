@@ -7,7 +7,7 @@
             <div class="d-flex align-items-center">
                 <span class="d-block d-lg-none me-2"><?php language_picker(); ?></span>
                 <a href="<?php _e('https://pension.tuleva.ee/?language=en', TEXT_DOMAIN); ?>" class="d-block d-lg-none me-3 btn btn-outline-primary"><?php _e('Log in', TEXT_DOMAIN); ?></a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                <button class="navbar-toggler focus-ring collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                     aria-expanded="false" aria-label="<?php _e('Toggle navigation', TEXT_DOMAIN); ?>">
                     <span class="burger-icon"></span>
                 </button>
