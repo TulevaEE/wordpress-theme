@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-05-28T15:13:12+00:00\n"
-"PO-Revision-Date: 2025-05-28 18:14+0300\n"
+"POT-Creation-Date: 2025-05-29T06:54:55+00:00\n"
+"PO-Revision-Date: 2025-05-29 10:05+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -268,7 +268,7 @@ msgstr ""
 msgid "Your age"
 msgstr "Sinu vanus"
 
-#: templates/components/front-hero/calculator.php:16
+#: templates/components/front-hero/calculator.php:15
 msgid "years"
 msgstr "aastat"
 
@@ -472,28 +472,19 @@ msgid "Terms and conditions"
 msgstr "tingimused"
 
 #: templates/components/fund-bonds-details.php:57
-#: templates/components/fund-bonds-details.php:59
 #: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-stocks-details.php:59
 #: templates/components/fund-third-details.php:57
-#: templates/components/fund-third-details.php:59
-#: templates/components/fund-third-details.php:61
 msgid " (in Estonian)"
 msgstr " "
 
-#: templates/components/fund-bonds-details.php:63
-#: templates/components/fund-stocks-details.php:63
+#: templates/components/fund-bonds-details.php:59
+#: templates/components/fund-stocks-details.php:59
 msgid ""
 "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
 "funds-more-precise/\">Change of terms from 01.09.2025</a>"
 msgstr ""
 "<a href=\"https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-"
 "tapsemaks/\">Tingimuste muudatus alates 01.09.2025</a>"
-
-#: templates/components/fund-bonds-details.php:59
-#: templates/components/fund-stocks-details.php:59
-msgid "Change of terms from 01.09.2025"
-msgstr "Tingimuste muudatus alates 01.09.2025"
 
 #: templates/components/fund-bonds-details.php:62
 #: templates/components/fund-stocks-details.php:62
@@ -849,7 +840,7 @@ msgstr ""
 msgid "15th October 2019"
 msgstr "15. oktoober 2019"
 
-#: templates/components/fund-third-details.php:63
+#: templates/components/fund-third-details.php:59
 msgid ""
 "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
 "funds-more-precise/\">Change of terms from 15.06.2025</a>"
@@ -1803,7 +1794,7 @@ msgstr ""
 msgid "Other gross income"
 msgstr "Muu brutotulu"
 
-#: templates/components/third-pillar-calculator.php:120
+#: templates/components/third-pillar-calculator.php:125
 msgid ""
 "Yearly gross income taxed at 22% including rental, Airbnb, interest, income "
 "from the sale of securities or other assets; dividends taxed at 7%; and II/"
@@ -2087,6 +2078,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Change of terms from 01.09.2025"
+#~ msgstr "Tingimuste muudatus alates 01.09.2025"
 
 #~ msgid "Change in value"
 #~ msgstr "Puhasväärtuse muutus"
