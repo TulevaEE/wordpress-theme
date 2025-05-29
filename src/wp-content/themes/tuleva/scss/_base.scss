@@ -109,32 +109,6 @@ hr {
     }
 }
 
-.btn-xl {
-    @include button-size($padding-xl-vertical,
-    $padding-xl-horizontal,
-    $font-size-xl,
-    $line-height-sm,
-    $btn-border-radius-xl);
-    @include media-breakpoint-down(sm) {
-        padding: $padding-xl-vertical;
-        width: 100%;
-    }
-}
-
-.btn-orange {
-    color: white;
-    background-color: $orange;
-    border-color: $orange;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: white;
-        background-color: #e1470a;
-        border-color: #e1470a;
-    }
-}
-
 .no-margin {
     margin: 0 !important;
 }
@@ -145,15 +119,6 @@ hr {
 
 .input-group-text {
     background-color: $gray-bg-2;
-}
-
-.btn-plus,
-.btn-plus:active,
-.btn-plus:focus,
-.btn-plus:not([disabled]):not(.disabled):active,
-.btn-plus:not([disabled]):not(.disabled).active {
-    padding: 0 30px 0 0;
-    background: url(../img/icon-plussign.svg) no-repeat right center;
 }
 
 // Border radius
@@ -176,4 +141,58 @@ hr {
     box-shadow: inset 0 0 0 1.5px $green-light;
     background-color: $white;
     color: $text-green;
+}
+
+// Buttons
+
+.btn-xl {
+    @include button-size($padding-xl-vertical,
+        $padding-xl-horizontal,
+        $font-size-xl,
+        $btn-border-radius-xl);
+    @include media-breakpoint-down(sm) {
+        padding: $padding-xl-vertical;
+        width: 100%;
+    }
+}
+
+.btn-orange {
+    color: white;
+    background-color: $orange;
+    border-color: $orange;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: white;
+        background-color: #e1470a;
+        border-color: #e1470a;
+    }
+}
+
+.btn-plus,
+.btn-plus:active,
+.btn-plus:focus,
+.btn-plus:not([disabled]):not(.disabled):active,
+.btn-plus:not([disabled]):not(.disabled).active {
+    padding: 0 30px 0 0;
+    background: url(../img/icon-plussign.svg) no-repeat right center;
+}
+
+.btn {
+    .btn-check:focus + & {
+        border-color: var(--#{$prefix}btn-hover-border-color);
+        outline: 0;
+        @if $enable-shadows {
+            box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+        } @else {
+            box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+        }
+    }
+
+    .btn-check + &:hover {
+        color: var(--#{$prefix}btn-hover-color);
+        background-color: var(--#{$prefix}btn-hover-bg);
+        border-color: var(--#{$prefix}btn-hover-border-color);
+    }
 }

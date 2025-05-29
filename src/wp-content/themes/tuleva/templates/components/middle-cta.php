@@ -8,7 +8,7 @@ $button_text = get_sub_field('button_text') ? get_sub_field('button_text') : __(
     <div class="container">
       <div class="row text-center">
         <div class="d-flex w-100 justify-content-center align-items-center">
-          <h5 class="mb-0 mr-3"><?php echo $text;  ?>
+          <h5 class="mb-0 me-3"><?php echo $text;  ?>
             <span class="d-none d-lg-inline-block"> <?php echo $additional_text; ?></span>
           </h5>
           <a href="<?php echo $button_url; ?>" class="btn btn-primary btn-lg"><?php echo $button_text; ?></a>

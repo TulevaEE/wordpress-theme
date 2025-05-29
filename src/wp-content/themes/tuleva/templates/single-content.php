@@ -86,7 +86,7 @@
                 <?php } ?>
                 <?php get_template_part('templates/blog/recent-articles'); ?>
             </div>
-            <div class="col-lg-4 widget-area pl-lg-5">
+            <div class="col-lg-4 widget-area ps-lg-5">
                 <div class="article-widget d-none d-md-block">
                     <h4 class="article-widget__title">
                         <?php _e('3 important posts', TEXT_DOMAIN); ?>

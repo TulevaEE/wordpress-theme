@@ -239,9 +239,9 @@ $(document).ready(function ($) {
                 ev.preventDefault();
                 return false;
             });
-            var $customRange = $('.second-pillar-payment-rate-calculator .custom-range');
+            var $formRange = $('.second-pillar-payment-rate-calculator .form-range');
 
-            $customRange.on('input', function () {
+            $formRange.on('input', function () {
                 calculateSecondPillarPaymentRate();
             });
             calculateSecondPillarPaymentRate();
@@ -254,7 +254,7 @@ $(document).ready(function ($) {
                     calculatePayout($calculator);
                 });
 
-                $calculator.find('.custom-range').on('input', function () {
+                $calculator.find('.form-range').on('input', function () {
                     calculatePayout($calculator);
                 });
 
@@ -331,23 +331,23 @@ $(document).ready(function ($) {
             $calculator.find('.recurringPayoutTaxRate').text(`${(recurringPaymentIncomeTax * 100).toFixed(0)}%`);
             $calculator.find('.singlePayoutTaxRate').text(`${(lumpSumIncomeTax * 100).toFixed(0)}%`);
         },
-        initAllCustomRangeSliders = function () {
-            $('.custom-range').each(function () {
-                var $customRange = $(this);
-                var $customTooltip = $customRange.siblings('.custom-tooltip');
+        initAllFormRangeSliders = function () {
+            $('.form-range').each(function () {
+                var $formRange = $(this);
+                var $customTooltip = $formRange.siblings('.custom-tooltip');
 
                 function updateTooltip(value) {
-                    var unit = $customRange.data('unit') || '';
+                    var unit = $formRange.data('unit') || '';
                     $customTooltip.text(value + unit);
                 }
 
                 function updateTooltipPosition() {
-                    var value = Number($customRange.val());
-                    var max = Number($customRange.attr('max'));
-                    var min = Number($customRange.attr('min'));
+                    var value = Number($formRange.val());
+                    var max = Number($formRange.attr('max'));
+                    var min = Number($formRange.attr('min'));
 
                     var percent = (value - min) / (max - min);
-                    var rangeWidth = $customRange.outerWidth();
+                    var rangeWidth = $formRange.outerWidth();
                     var newX = percent * rangeWidth - rangeWidth / 2;
 
                     var thumbRadius = 40 / 2; // 2.5rem = 40px
@@ -358,12 +358,12 @@ $(document).ready(function ($) {
                 }
 
                 $(window).on('resize pageshow', function () {
-                    var value = $customRange.val();
+                    var value = $formRange.val();
                     updateTooltip(value);
                     updateTooltipPosition();
                 });
 
-                $customRange.on('input', function () {
+                $formRange.on('input', function () {
                     var value = $(this).val();
                     updateTooltip(value);
                     updateTooltipPosition();
@@ -391,7 +391,7 @@ $(document).ready(function ($) {
                 this.scrollIntoView();
             });
 
-            $('.accordion-parent [data-toggle="collapse"]').click(function () {
+            $('.accordion-parent [data-bs-toggle="collapse"]').click(function () {
                 var target = $(this).attr('data-target');
                 var $target = $(target);
                 var $parent = $($target.attr('data-parent'));
@@ -493,7 +493,7 @@ $(document).ready(function ($) {
         function () { initThirdPillarCalculator(); },
         function () { initSecondPillarPaymentRateCalculator(); },
         function () { initPayoutCalculator(); },
-        function () { initAllCustomRangeSliders(); },
+        function () { initAllFormRangeSliders(); },
         function () { initAccordion(); },
         function () { initCountdownTimer(); },
         function () { initCountdownTimerFull(); },
@@ -539,8 +539,8 @@ $(document).ready(function ($) {
         .not('[href="#"]')
         .not('[href="#0"]')
         .not('[href^="#modal-"]')
-        .not('[data-toggle="tab"]')
-        .not('[data-toggle="collapse"]')
+        .not('[data-bs-toggle="tab"]')
+        .not('[data-bs-toggle="collapse"]')
         .not('[href="#carouselControls"]')
         .on('click', function (ev) {
             // Only handle on-page links
@@ -550,17 +550,17 @@ $(document).ready(function ($) {
             ) {
               var target = $(this.hash);
               target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          
+
               if (target.length) {
                 // Prevent default scroll behavior
                 ev.preventDefault();
-          
+
                 // Use scrollIntoView API for smooth scrolling
                 target.get(0).scrollIntoView({ behavior: 'smooth' });
-          
+
                 // Update the URL hash without jumping
                 history.pushState(null, null, this.hash);
-          
+
                 // Handle focus after scrolling completes
                 setTimeout(function () {
                   target.focus();
@@ -581,7 +581,7 @@ $(document).ready(function ($) {
         }
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-bs-toggle="tooltip"]').tooltip();
 
     $('.qa-block__expand').on('click', function (ev) {
         var currentText = $(this).text(),
@@ -610,11 +610,6 @@ $(document).ready(function ($) {
         ev.preventDefault();
         window.Beacon('toggle');
         $(this).toggleClass('footer-help-close--open');
-    });
-
-    $('.cookie-bar__btn').on('click', function (ev) {
-        setCookie('cookie-consent', 1, 365);
-        $('#cookie-bar').fadeOut();
     });
 });
 

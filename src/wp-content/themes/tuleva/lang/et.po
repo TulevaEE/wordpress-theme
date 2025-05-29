@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-05-28T15:13:12+00:00\n"
-"PO-Revision-Date: 2025-05-28 18:14+0300\n"
+"POT-Creation-Date: 2025-05-29T06:54:55+00:00\n"
+"PO-Revision-Date: 2025-05-29 10:05+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -24,15 +24,15 @@ msgstr "Tuleva"
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
-#: helpers/extras.php:462 helpers/extras.php:473
+#: helpers/extras.php:455 helpers/extras.php:466
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:578
+#: helpers/extras.php:571
 msgid "Newer articles"
 msgstr "Uuemad artiklid"
 
-#: helpers/extras.php:610
+#: helpers/extras.php:603
 msgid "Older articles"
 msgstr "Vanemad artiklid"
 
@@ -47,10 +47,6 @@ msgstr "Blogi esileht"
 #. Template Name of the theme
 msgid "Contact page"
 msgstr "Kontaktileht"
-
-#. Template Name of the theme
-msgid "Difference"
-msgstr "Erinevus"
 
 #. Template Name of the theme
 msgid "Front page"
@@ -137,10 +133,9 @@ msgstr "Kõik artiklid"
 msgid "RSS feed"
 msgstr "RSS voog"
 
-#: templates/components/calculator-cta.php:24
+#: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:24
-#: templates/components/front-hero2.php:24
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -148,10 +143,9 @@ msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta."
 "</b>"
 
-#: templates/components/calculator-cta.php:26
+#: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:26
-#: templates/components/front-hero2.php:26
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -159,10 +153,9 @@ msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta."
 "</b>"
 
-#: templates/components/calculator-cta.php:28
+#: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:28
-#: templates/components/front-hero2.php:28
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
@@ -184,10 +177,6 @@ msgstr "tundi"
 #: templates/components/second-pillar-payment-rate-hero.php:34
 msgid "Minutes"
 msgstr "minutit"
-
-#: templates/components/featured-articles-et.php:3
-msgid "Read our blog"
-msgstr "Loe meie blogi"
 
 #: templates/components/founder-carousel.php:2
 #: templates/components/modal-founders.php:11
@@ -275,84 +264,37 @@ msgstr ""
 "muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
 "ehitamisel."
 
-#: templates/components/front-hero/calculator.php:6
-msgid "If you're"
-msgstr "Kui oled"
-
-#: templates/components/front-hero/calculator.php:8
-msgid "years old and earn"
-msgstr "ja teenid kuus"
-
-#: templates/components/front-hero/calculator.php:11
-msgid "euros per month (net),"
-msgstr "eurot neto,"
-
-#: templates/components/front-hero/calculator.php:12
-msgid "at"
-msgstr "siis"
-
-#: templates/components/front-hero/calculator.php:19
-msgid "return"
-msgstr "tootlusega"
-
-#: templates/components/front-hero/calculator.php:20
-msgid "your second pillar"
-msgstr "kogud"
-
-#: templates/components/front-hero/calculator.php:21
-msgid "could"
-msgstr "eelduslikult"
-
-#: templates/components/front-hero/calculator.php:22
-msgid "grow"
-msgstr "pensioniks"
-
-#: templates/components/front-hero/calculator.php:30
-msgid "Estonian pension fund average"
-msgstr "Eesti keskmises pensionifondis"
-
-#: templates/components/front-hero/calculator.php:36
-#: templates/components/front-hero/calculator.php:43
-msgid "Annual fees"
-msgstr "Tasud aastas"
-
-#: templates/components/front-hero/calculator.php:40
-msgid "In Tuleva World Stocks Pension Fund"
-msgstr "Tuleva Maailma Aktsiate Pensionifond"
-
-#: templates/components/front-hero/calculator.php:48
-msgid "Cost of high fees"
-msgstr "Kõrgete tasude kulu"
-
-#: templates/components/front-hero/calculator2.php:7
+#: templates/components/front-hero/calculator.php:7
 msgid "Your age"
 msgstr "Sinu vanus"
 
-#: templates/components/front-hero/calculator2.php:16
+#: templates/components/front-hero/calculator.php:15
 msgid "years"
 msgstr "aastat"
 
-#: templates/components/front-hero/calculator2.php:25
-#: templates/components/third-pillar-calculator.php:98
+#: templates/components/front-hero/calculator.php:23
+#: templates/components/third-pillar-calculator.php:104
 msgid "Gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/front-hero/calculator2.php:34
-#: templates/components/third-pillar-calculator.php:109
+#: templates/components/front-hero/calculator.php:31
+#: templates/components/third-pillar-calculator.php:115
 msgid "&euro;/month"
 msgstr "&euro;&nbsp;kuus"
 
-#: templates/components/front-hero/calculator2.php:43
+#: templates/components/front-hero/calculator.php:39
+#: templates/components/front-hero/calculator.php:43
 #: templates/components/second-pillar-payment-rate-calculator.php:16
+#: templates/components/second-pillar-payment-rate-calculator.php:20
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/front-hero/calculator2.php:62
-#: templates/components/payout-calculator.php:23
+#: templates/components/front-hero/calculator.php:61
+#: templates/components/payout-calculator.php:21
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
-#: templates/components/front-hero/calculator2.php:65
+#: templates/components/front-hero/calculator.php:64
 msgid ""
 "Actual amounts depend greatly on the rate of return, and neither we nor "
 "anyone else can guarantee you a specific return."
@@ -360,20 +302,20 @@ msgstr ""
 "Kogunev summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi "
 "teine ei saa kindlat tootlust tagada."
 
-#: templates/components/front-hero/calculator2.php:73
+#: templates/components/front-hero/calculator.php:72
 #: templates/components/payout-calculator.php:28
 msgid "7% historic return on stocks"
 msgstr "aktsiate ajalooline tootlus 7%"
 
-#: templates/components/front-hero/calculator2.php:82
+#: templates/components/front-hero/calculator.php:81
 msgid "Estonian average II pillar fund"
 msgstr "Eesti keskmine II samba fond"
 
-#: templates/components/front-hero/calculator2.php:90
+#: templates/components/front-hero/calculator.php:89
 msgid "Could accumulate by age 65"
 msgstr "Kogud 65. eluaastaks eelduslikult"
 
-#: templates/components/front-hero/calculator2.php:93
+#: templates/components/front-hero/calculator.php:92
 msgid ""
 "We assume you started saving for your retirement at the age of 21 and a "
 "salary growth of 3% per year. The ‘Estonian average II pillar fund’ "
@@ -384,7 +326,7 @@ msgstr ""
 "“Eesti keskmine II samba fond” esindab kõiki II samba fonde ühise tervikuna. "
 "Kuvame selle tasu mahu järgi kaalutud keskmisena."
 
-#: templates/components/front-hero/calculator2.php:103
+#: templates/components/front-hero/calculator.php:102
 msgid ""
 "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> more</strong> in fees"
@@ -392,7 +334,7 @@ msgstr ""
 "Maksad kokku tasudeks <strong class=\"text-danger text-nowrap\"><span "
 "class=\"tuleva-saving\">- €</span> rohkem</strong>"
 
-#: templates/components/front-hero/calculator2.php:106
+#: templates/components/front-hero/calculator.php:105
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "more</span> in fees"
@@ -400,12 +342,12 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> rohkem</span>"
 
-#: templates/components/front-hero/calculator2.php:109
-#: templates/components/front-hero/calculator2.php:132
+#: templates/components/front-hero/calculator.php:108
+#: templates/components/front-hero/calculator.php:131
 msgid "You pay in fees"
 msgstr "Maksad tasudeks"
 
-#: templates/components/front-hero/calculator2.php:112
+#: templates/components/front-hero/calculator.php:111
 msgid ""
 "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
 "less</span> in fees"
@@ -413,16 +355,16 @@ msgstr ""
 "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-"
 "saving\">- €</span> vähem</span>"
 
-#: templates/components/front-hero/calculator2.php:115
+#: templates/components/front-hero/calculator.php:114
 msgid "per year"
 msgstr "aastas"
 
-#: templates/components/front-hero/calculator2.php:123
+#: templates/components/front-hero/calculator.php:122
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
-#: templates/components/front-hero/calculator2.php:134
+#: templates/components/front-hero/calculator.php:133
 msgid "0.31% per year"
 msgstr "0,31% aastas"
 
@@ -458,91 +400,85 @@ msgstr "Fondi maht"
 #: templates/components/fund-bonds-details.php:29
 #: templates/components/fund-stocks-details.php:29
 #: templates/components/fund-third-details.php:29
-msgid "Change in value"
-msgstr "Puhasväärtuse muutus"
+msgid "Management fee"
+msgstr "Valitsemistasu"
 
 #: templates/components/fund-bonds-details.php:33
 #: templates/components/fund-stocks-details.php:33
 #: templates/components/fund-third-details.php:33
-msgid "Management fee"
-msgstr "Valitsemistasu"
+msgid "Total expense ratio"
+msgstr "Kogukulu määr"
 
 #: templates/components/fund-bonds-details.php:37
 #: templates/components/fund-stocks-details.php:37
 #: templates/components/fund-third-details.php:37
-msgid "Total expense ratio"
-msgstr "Kogukulu määr"
+msgid "Redemption fee and issue fee"
+msgstr "Väljalasketasu ja tagasivõtmistasu"
 
 #: templates/components/fund-bonds-details.php:41
 #: templates/components/fund-stocks-details.php:41
 #: templates/components/fund-third-details.php:41
-msgid "Redemption fee and issue fee"
-msgstr "Väljalasketasu ja tagasivõtmistasu"
+msgid "Fund manager's participation rate in fund"
+msgstr "Fondivalitseja osalus fondis"
+
+#: templates/components/fund-bonds-details.php:42
+#: templates/components/fund-stocks-details.php:42
+#: templates/components/fund-third-details.php:42
+msgid "units"
+msgstr "osakut"
 
 #: templates/components/fund-bonds-details.php:45
 #: templates/components/fund-stocks-details.php:45
 #: templates/components/fund-third-details.php:45
-msgid "Fund manager's participation rate in fund"
-msgstr "Fondivalitseja osalus fondis"
+msgid "Risk profile"
+msgstr "Riskiprofiil"
 
 #: templates/components/fund-bonds-details.php:46
-#: templates/components/fund-stocks-details.php:46
-#: templates/components/fund-third-details.php:46
-msgid "units"
-msgstr "osakut"
+msgid "Conservative"
+msgstr "Konservatiivne"
 
 #: templates/components/fund-bonds-details.php:49
 #: templates/components/fund-stocks-details.php:49
 #: templates/components/fund-third-details.php:49
-msgid "Risk profile"
-msgstr "Riskiprofiil"
-
-#: templates/components/fund-bonds-details.php:50
-msgid "Conservative"
-msgstr "Konservatiivne"
-
-#: templates/components/fund-bonds-details.php:53
-#: templates/components/fund-stocks-details.php:53
-#: templates/components/fund-third-details.php:53
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
-#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-bonds-details.php:50
 msgid "and"
 msgstr "ja"
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-stocks-details.php:58
-#: templates/components/fund-third-details.php:58
+#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-stocks-details.php:54
+#: templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr "Dokumendid"
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr "Prospekt"
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid " and "
 msgstr " ja "
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
 msgstr "tingimused"
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-stocks-details.php:61
-#: templates/components/fund-third-details.php:61
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid " (in Estonian)"
 msgstr " "
 
-#: templates/components/fund-bonds-details.php:63
-#: templates/components/fund-stocks-details.php:63
+#: templates/components/fund-bonds-details.php:59
+#: templates/components/fund-stocks-details.php:59
 msgid ""
 "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
 "funds-more-precise/\">Change of terms from 01.09.2025</a>"
@@ -550,33 +486,33 @@ msgstr ""
 "<a href=\"https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-"
 "tapsemaks/\">Tingimuste muudatus alates 01.09.2025</a>"
 
-#: templates/components/fund-bonds-details.php:66
-#: templates/components/fund-stocks-details.php:66
-#: templates/components/fund-third-details.php:66
+#: templates/components/fund-bonds-details.php:62
+#: templates/components/fund-stocks-details.php:62
+#: templates/components/fund-third-details.php:62
 msgid "Model portfolio (in Estonian)"
 msgstr "Mudelportfell"
 
-#: templates/components/fund-bonds-details.php:69
-#: templates/components/fund-stocks-details.php:69
-#: templates/components/fund-third-details.php:69
+#: templates/components/fund-bonds-details.php:65
+#: templates/components/fund-stocks-details.php:65
+#: templates/components/fund-third-details.php:65
 msgid "Key Investor Information (in Estonian)"
 msgstr "Põhiteave"
 
-#: templates/components/fund-bonds-details.php:72
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:72
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
-#: templates/components/fund-bonds-details.php:75
-#: templates/components/fund-stocks-details.php:75
-#: templates/components/fund-third-details.php:75
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-third-details.php:71
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
-#: templates/components/fund-bonds-details.php:78
-#: templates/components/fund-stocks-details.php:78
-#: templates/components/fund-third-details.php:78
+#: templates/components/fund-bonds-details.php:74
+#: templates/components/fund-stocks-details.php:74
+#: templates/components/fund-third-details.php:74
 msgid ""
 "Non-consideration of adverse impacts of investment decisions on "
 "sustainability factors"
@@ -584,51 +520,51 @@ msgstr ""
 "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju "
 "mittearvestamine"
 
-#: templates/components/fund-bonds-details.php:81
-#: templates/components/fund-stocks-details.php:81
-#: templates/components/fund-third-details.php:81
+#: templates/components/fund-bonds-details.php:77
+#: templates/components/fund-stocks-details.php:77
+#: templates/components/fund-third-details.php:77
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
-#: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-stocks-details.php:85
-#: templates/components/fund-third-details.php:85
+#: templates/components/fund-bonds-details.php:81
+#: templates/components/fund-stocks-details.php:81
+#: templates/components/fund-third-details.php:81
 msgid "Reports"
 msgstr "Aruanded"
 
-#: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-stocks-details.php:88
-#: templates/components/fund-third-details.php:88
+#: templates/components/fund-bonds-details.php:84
+#: templates/components/fund-stocks-details.php:84
+#: templates/components/fund-third-details.php:84
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
 
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:90
+#: templates/components/fund-bonds-details.php:86
+#: templates/components/fund-stocks-details.php:86
+#: templates/components/fund-third-details.php:86
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
+
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:89
+msgid "Financial reports of fund and fund manager (in Estonian)"
+msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-details.php:93
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
-msgid "Financial reports of fund and fund manager (in Estonian)"
-msgstr "Fondi ja fondivalitseja finantsaruanded"
-
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
-#: templates/components/fund-bonds-details.php:99
-#: templates/components/fund-stocks-details.php:99
-#: templates/components/fund-third-details.php:99
+#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-stocks-details.php:95
+#: templates/components/fund-third-details.php:95
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
-#: templates/components/fund-bonds-details.php:100
-#: templates/components/fund-stocks-details.php:100
-#: templates/components/fund-third-details.php:100
+#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-third-details.php:96
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
 
@@ -656,11 +592,11 @@ msgstr ""
 
 #: templates/components/fund-bonds-header.php:21
 msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" "
+"data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg\" data-"
+"label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-calculator.php:13
 msgid "Age: 28"
@@ -864,8 +800,8 @@ msgid ""
 "\">pensionikeskus.ee</a>"
 msgstr " "
 
-#: templates/components/fund-stocks-details.php:50
-#: templates/components/fund-third-details.php:50
+#: templates/components/fund-stocks-details.php:46
+#: templates/components/fund-third-details.php:46
 msgid "Aggressive"
 msgstr "Agressiivne"
 
@@ -894,17 +830,17 @@ msgstr "Tuleva II sambas kogujate valik"
 
 #: templates/components/fund-stocks-header.php:23
 msgid ""
-"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg btn-"
-"block ga\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" "
+"data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
-"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg btn-block ga\" "
-"data-label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
+"<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg\" data-"
+"label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
 #: templates/components/fund-third-details.php:18
 msgid "15th October 2019"
 msgstr "15. oktoober 2019"
 
-#: templates/components/fund-third-details.php:63
+#: templates/components/fund-third-details.php:59
 msgid ""
 "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
 "funds-more-precise/\">Change of terms from 15.06.2025</a>"
@@ -1648,7 +1584,7 @@ msgstr "Uus"
 msgid "Accumulated by age 65"
 msgstr "Olen 65. eluaastaks kogunud"
 
-#: templates/components/payout-calculator.php:15
+#: templates/components/payout-calculator.php:14
 msgid "euros"
 msgstr "eurot"
 
@@ -1681,11 +1617,11 @@ msgstr ""
 "Kui sinu pensionivara kahaneb negatiivse tootluse tõttu, kahaneb ka sulle "
 "igakuiselt laekuv summa."
 
-#: templates/components/payout-calculator.php:54
+#: templates/components/payout-calculator.php:56
 msgid "You will receive in total"
 msgstr "Saan kokku kätte"
 
-#: templates/components/payout-calculator.php:59
+#: templates/components/payout-calculator.php:61
 msgid ""
 "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> "
 "and receive them <strong>over 19 years</strong> (the average remaining "
@@ -1697,7 +1633,7 @@ msgstr ""
 "statistiliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, "
 "kuid see ei taga sarnast tootlust tulevikus."
 
-#: templates/components/payout-hero.php:48
+#: templates/components/payout-hero.php:50
 msgid "How does the payout calculator work?"
 msgstr "Kuidas väljamaksete kalkulaator töötab?"
 
@@ -1733,11 +1669,11 @@ msgstr "Vähem küsimusi"
 msgid "Monthly gross salary"
 msgstr "Brutopalk"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:37
+#: templates/components/second-pillar-payment-rate-calculator.php:41
 msgid "Net salary from 2026"
 msgstr "Netopalk alates 2026"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:40
+#: templates/components/second-pillar-payment-rate-calculator.php:44
 msgid ""
 "In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In "
 "addition, there will be a national security tax of 2%."
@@ -1745,21 +1681,21 @@ msgstr ""
 "2026. aastal on tulumaks 22% ja maksuvaba tulu 700 € kuus. Lisandub veel "
 "julgeolekumaks 2% brutopalgast."
 
-#: templates/components/second-pillar-payment-rate-calculator.php:47
+#: templates/components/second-pillar-payment-rate-calculator.php:52
 msgid "Your monthly contribution"
 msgstr "Sinu igakuine panus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:54
-#: templates/components/third-pillar-calculator.php:68
-#: templates/components/third-pillar-calculator.php:139
+#: templates/components/second-pillar-payment-rate-calculator.php:59
+#: templates/components/third-pillar-calculator.php:71
+#: templates/components/third-pillar-calculator.php:144
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:62
+#: templates/components/second-pillar-payment-rate-calculator.php:69
 msgid "Increase contribution"
 msgstr "Tõstan sissemakset"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:65
+#: templates/components/second-pillar-payment-rate-calculator.php:73
 msgid ""
 "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
@@ -1772,26 +1708,26 @@ msgstr "Liikmeks astumiseks sisene oma pensionikontole."
 msgid "Who manages Tuleva funds?"
 msgstr "Kes juhib Tuleva fonde?"
 
-#: templates/components/third-pillar-calculator.php:18
+#: templates/components/third-pillar-calculator.php:20
 msgid "Total gross income"
 msgstr "Brutotulu kokku"
 
-#: templates/components/third-pillar-calculator.php:18
+#: templates/components/third-pillar-calculator.php:21
 msgid "view"
 msgstr "vaata"
 
-#: templates/components/third-pillar-calculator.php:24
-#: templates/components/third-pillar-calculator.php:41
-#: templates/components/third-pillar-calculator.php:58
-#: templates/components/third-pillar-calculator.php:128
+#: templates/components/third-pillar-calculator.php:27
+#: templates/components/third-pillar-calculator.php:44
+#: templates/components/third-pillar-calculator.php:61
+#: templates/components/third-pillar-calculator.php:133
 msgid "&euro;/year"
 msgstr "&euro;&nbsp;aastas"
 
-#: templates/components/third-pillar-calculator.php:31
+#: templates/components/third-pillar-calculator.php:33
 msgid "of which dividends"
 msgstr "millest dividendid"
 
-#: templates/components/third-pillar-calculator.php:34
+#: templates/components/third-pillar-calculator.php:36
 msgid ""
 "Gross income, from which income tax has not been withheld as a private "
 "person. For example, dividends received from an Estonian company; dividends "
@@ -1802,11 +1738,11 @@ msgstr ""
 "tasandil maksustatud tavamääraga 20/80; välismaalt saadud tulud (nt "
 "dividendid, millest on välismaal juba tulumaks kinni peetud)."
 
-#: templates/components/third-pillar-calculator.php:48
+#: templates/components/third-pillar-calculator.php:50
 msgid "Other tax reliefs"
 msgstr "Muud maksu&shy;vabastused"
 
-#: templates/components/third-pillar-calculator.php:51
+#: templates/components/third-pillar-calculator.php:53
 msgid ""
 "Gifts and donations, education costs, including kindergarten fees. Limited "
 "to 1200 euros in total, but no more than 50 percent of taxable income in "
@@ -1815,8 +1751,8 @@ msgstr ""
 "Kingitused ja annetused; koolituskulud, sh lasteaiatasud. Kuni 1200 eurot, "
 "kuid mitte rohkem kui 50% ulatuses Eestis maksustatavast tulust."
 
-#: templates/components/third-pillar-calculator.php:71
-#: templates/components/third-pillar-calculator.php:142
+#: templates/components/third-pillar-calculator.php:74
+#: templates/components/third-pillar-calculator.php:147
 msgid ""
 "The declaration of income for this year will start on February 15 next year. "
 "Remember that you cannot get more income tax back than you paid this year."
@@ -1824,12 +1760,12 @@ msgstr ""
 "Selle aasta tulude deklareerimine algab järgmise aasta 15. veebruaril. Pea "
 "meeles, et sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
 
-#: templates/components/third-pillar-calculator.php:78
+#: templates/components/third-pillar-calculator.php:82
 msgid "Contribute up to"
 msgstr "Pane III sambasse kuni"
 
-#: templates/components/third-pillar-calculator.php:81
-#: templates/components/third-pillar-calculator.php:152
+#: templates/components/third-pillar-calculator.php:85
+#: templates/components/third-pillar-calculator.php:158
 msgid ""
 "Contributions to the III pillar are subject to an income tax discount of up "
 "to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
@@ -1837,16 +1773,16 @@ msgstr ""
 "III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis "
 "maksustatavast brutotulust, kuid mitte rohkem kui 6000 € aastas."
 
-#: templates/components/third-pillar-calculator.php:89
-#: templates/components/third-pillar-calculator.php:160
+#: templates/components/third-pillar-calculator.php:94
+#: templates/components/third-pillar-calculator.php:167
 msgid "Make a III pillar payment"
 msgstr "Tee III samba sissemakse"
 
-#: templates/components/third-pillar-calculator.php:92
+#: templates/components/third-pillar-calculator.php:98
 msgid "Making a payment is <strong>free</strong> and takes only 2 minutes."
 msgstr "Makse tegemine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
 
-#: templates/components/third-pillar-calculator.php:101
+#: templates/components/third-pillar-calculator.php:107
 msgid ""
 "Your monthly gross salary (before tax). Including parental benefits, "
 "unemployment insurance benefits, sickness benefits, pension, etc."
@@ -1854,11 +1790,11 @@ msgstr ""
 "Sinu brutopalk, millest lähevad maksud maha k.a. vanemahüvitis, "
 "töötuskindlustushüvitis, haigushüvitis, pension jms."
 
-#: templates/components/third-pillar-calculator.php:117
+#: templates/components/third-pillar-calculator.php:122
 msgid "Other gross income"
 msgstr "Muu brutotulu"
 
-#: templates/components/third-pillar-calculator.php:120
+#: templates/components/third-pillar-calculator.php:125
 msgid ""
 "Yearly gross income taxed at 22% including rental, Airbnb, interest, income "
 "from the sale of securities or other assets; dividends taxed at 7%; and II/"
@@ -1869,11 +1805,11 @@ msgstr ""
 "võõrandamisest; 7% eraisiku tulumaksuga maksustatud dividendid; II ja III "
 "samba väljamaksed, millelt on kinni peetud tulumaks 22% või 10%."
 
-#: templates/components/third-pillar-calculator.php:149
+#: templates/components/third-pillar-calculator.php:155
 msgid "Contribute monthly up to"
 msgstr "Pane iga kuu III sambasse kuni"
 
-#: templates/components/third-pillar-calculator.php:163
+#: templates/components/third-pillar-calculator.php:171
 msgid ""
 "Setting up a recurring III pillar payment is <strong>free</strong> and takes "
 "only 2&nbsp;minutes."
@@ -1931,18 +1867,6 @@ msgstr ""
 #: templates/footer/beacon-translations.php:13
 msgid "Send"
 msgstr "Saada"
-
-#: templates/footer/blog-beacon.php:2 templates/single-content.php:107
-msgid "How much would you lose to high fees?"
-msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
-
-#: templates/footer/blog-beacon.php:3
-msgid ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
-"\">See calculation</a>"
-msgstr ""
-"<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
-"\">Vaata arvutust</a>"
 
 #: templates/footer/not-logged-in-mailing-list-form.php:3
 msgid "Join Tuleva mailing list"
@@ -2024,6 +1948,10 @@ msgid ""
 msgstr ""
 "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/blogi/"
 "\">Vaata kõiki artikleid</a>"
+
+#: templates/single-content.php:107
+msgid "How much would you lose to high fees?"
+msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
 #: templates/single-content.php:110
 msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
@@ -2150,3 +2078,78 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Change of terms from 01.09.2025"
+#~ msgstr "Tingimuste muudatus alates 01.09.2025"
+
+#~ msgid "Change in value"
+#~ msgstr "Puhasväärtuse muutus"
+
+#~ msgid "If you're"
+#~ msgstr "Kui oled"
+
+#~ msgid "years old and earn"
+#~ msgstr "ja teenid kuus"
+
+#~ msgid "euros per month (net),"
+#~ msgstr "eurot neto,"
+
+#~ msgid "at"
+#~ msgstr "siis"
+
+#~ msgid "return"
+#~ msgstr "tootlusega"
+
+#~ msgid "your second pillar"
+#~ msgstr "kogud"
+
+#~ msgid "could"
+#~ msgstr "eelduslikult"
+
+#~ msgid "grow"
+#~ msgstr "pensioniks"
+
+#~ msgid "Estonian pension fund average"
+#~ msgstr "Eesti keskmises pensionifondis"
+
+#~ msgid "Annual fees"
+#~ msgstr "Tasud aastas"
+
+#~ msgid "In Tuleva World Stocks Pension Fund"
+#~ msgstr "Tuleva Maailma Aktsiate Pensionifond"
+
+#~ msgid "Cost of high fees"
+#~ msgstr "Kõrgete tasude kulu"
+
+#~ msgid ""
+#~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/en/"
+#~ "\">See calculation</a>"
+#~ msgstr ""
+#~ "<a class=\"btn btn-primary btn-lg btn-block\" href=\"https://tuleva.ee/"
+#~ "\">Vaata arvutust</a>"
+
+#~ msgid ""
+#~ "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg "
+#~ "btn-block\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg\" data-"
+#~ "label=\"fund-details-choose-bonds\">Valin selle fondi</a>"
+
+#~ msgid "Difference"
+#~ msgstr "Erinevus"
+
+#~ msgid "Read our blog"
+#~ msgstr "Loe meie blogi"
+
+#~ msgid "Tuleva founders"
+#~ msgstr "Tuleva asutajad"
+
+#~ msgid ""
+#~ "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
+#~ "primary\">See all founding members</a>"
+#~ msgstr ""
+#~ "<a id=\"founders\" href=\"#foundersModal\" class=\"btn btn-outline-"
+#~ "primary\">Vaata kõiki asutajaliikmeid</a>"
+
+#~ msgid " (in Estonian)"
+#~ msgstr " "

@@ -2,7 +2,7 @@
     <div class="bg-hero-mutual d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
-                <div class="col-lg-6 text-center text-lg-left pr-lg-5 pr-lg-6">
+                <div class="col-lg-6 text-center text-lg-start pr-lg-5 pe-lg-6">
                     <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
                     <?php
@@ -55,10 +55,12 @@
 
                     <div class="d-none d-lg-block">
                         <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
-                            <a href="<?php echo get_sub_field('button_url'); ?>"
-                               class="btn btn-primary btn-lg btn-block mb-3">
-                                <?php the_sub_field('button_text'); ?>
-                            </a>
+                            <div class="d-grid mb-3">
+                                <a href="<?php echo get_sub_field('button_url'); ?>"
+                               class="btn btn-primary btn-lg">
+                                    <?php the_sub_field('button_text'); ?>
+                                </a>
+                            </div>
                         <?php } ?>
 
                         <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>

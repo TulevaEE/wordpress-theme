@@ -18,7 +18,7 @@
                         <p class="m-0"><?php _e('Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security.', TEXT_DOMAIN) ?></p>
                     </div>
                     <div class="proposal__cta">
-                        <?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg btn-block ga" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?>
+                        <div class="d-grid"><?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg" data-label="fund-details-choose-bonds">Select this fund</a>', TEXT_DOMAIN); ?></div>
                     </div>
                 </div>
             </div>

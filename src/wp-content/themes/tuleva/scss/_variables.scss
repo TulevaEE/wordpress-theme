@@ -1,10 +1,25 @@
+// Container max-widths
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px // override xxl
+);
+
+// Links
+
+$link-decoration:       none !default;
+$link-hover-decoration: underline !default;
+
 // Colors
 
 $text-primary: #303030;
 $text-secondary: rgba(48, 48, 48, 0.64);
 $text-hint: rgba(48, 48, 48, 0.32);
 
-$blue: #0081ee;
+$blue: #0072EC;
 $navy-blue: #002f63;
 $blue-light: #00aeea;
 $blue-washed: #edf7fe;
@@ -30,7 +45,7 @@ $heading-primary: $navy-blue;
 $white: #fff;
 $black: #000;
 $navy-blue: #002f63;
-$blue: #0081ee;
+$blue: #0072EC;
 $blue-light: #00aeea;
 $bright-blue: $blue-light;
 $yellow: #fce228;
@@ -151,7 +166,7 @@ $h2-font-size: 2rem !default;     // 32
 $h3-font-size: 1.75rem !default;  // 28
 $h4-font-size: 1.25rem !default;  // 24
 $h5-font-size: 1.125rem !default; // 18
-$h6-font-size: 1.125rem !default; // 18
+$h6-font-size: 1rem !default;     // 16
 
 $h1-line-height: 1.2;
 $h2-line-height: 1.25;
@@ -202,8 +217,8 @@ $carousel-control-icon-width:                 48px !default;
 $carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
 $carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
 
-// Custom range slider
-$custom-range-track-height:         1rem !default;
-$custom-range-track-bg:             white !default;
-$custom-range-thumb-width:                   2.5rem !default;
-$custom-range-thumb-border-radius:           100% !default;
+// Range slider
+$form-range-track-height: 1rem !default;
+$form-range-track-bg: white !default;
+$form-range-thumb-width: 2.5rem !default;
+$form-range-thumb-border-radius: 100% !default;

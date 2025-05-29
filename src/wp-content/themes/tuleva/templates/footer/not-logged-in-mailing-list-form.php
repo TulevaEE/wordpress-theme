@@ -6,7 +6,7 @@
          <div style="flex-grow: 1">
             <input type="email" name="EMAIL" class="form-control required email" id="mce-EMAIL" required="" value="" placeholder="<?php _e('Your e-mail address', TEXT_DOMAIN) ?>">
          </div>
-         <div class="pt-3 pt-md-0 pl-0 pl-md-3">
+         <div class="pt-3 pt-md-0 pl-0 ps-md-3">
             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-primary" value="<?php _e('Join mailing list', TEXT_DOMAIN) ?>">
          </div>
       </div>

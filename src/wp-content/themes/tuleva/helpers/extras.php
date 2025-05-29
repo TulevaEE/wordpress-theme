@@ -328,13 +328,6 @@ function get_member_count()
     return $memberCount;
 }
 
-function is_cookie_consent()
-{
-    // TODO: Disabling. Needs to be removed completely, when new cookie banner is implemented.
-    // return !empty($_COOKIE['cookie-consent']);
-    return true;
-}
-
 function print_funds_js()
 {
     $context = stream_context_create(

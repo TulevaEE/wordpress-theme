@@ -15,7 +15,8 @@
         border-radius: 50%;
         outline: 1px solid rgba(0,0,0,0.08);
         outline-offset: -1px;
-        @include size(160px);
+        width: 160px;
+        height: 160px;
     }
     &__title {
         margin-bottom: .5rem;
@@ -155,7 +156,8 @@
     &__image {
         margin-bottom: 10px;
         border-radius: 50%;
-        @include size(192px);
+        width: 192px;
+        height: 192px;
     }
     blockquote {
         font-family: $font-family-serif;
@@ -172,7 +174,8 @@
     @extend .clearfix;
     &__image {
         border-radius: 50%;
-        @include size(160px);
+        width: 160px;
+        height: 160px;
     }
     &__text {
         position: relative;
@@ -222,7 +225,8 @@
     &__author {
         &__image {
             border-radius: 50%;
-            @include size(40px);
+            width: 40px;
+            height: 40px;
             margin-right: 1em;
             @include media-breakpoint-down(sm) {
                 float: left;
@@ -261,9 +265,11 @@
     }
     &__image {
         border-radius: 50%;
-        @include size(96px);
+        width: 96px;
+        height: 96px;
         @include media-breakpoint-down(sm) {
-            @include size(72px);
+            width: 72px;
+            height: 72px;
         }
     }
     &__title {
@@ -485,29 +491,6 @@
     }
     &--open {
         display: block;
-    }
-}
-
-.blog-beacon {
-    position: fixed;
-    right: 29px;
-    bottom: 29px;
-    display: none;
-    max-width: 12rem;
-    text-align: center;
-    font-size: 1.125em;
-    line-height: 1;
-    background: #FFFFFF;
-    border-radius: 16px;
-    padding: 8px;
-    transition: all .4s ease;
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.12);
-    .btn {
-        border-radius: 8px;
-    }
-    .btn-link {
-        padding-right: 2em;
-        background: url(../img/icon-arrow-right.svg) no-repeat 95%;
     }
 }
 
@@ -985,10 +968,6 @@
         line-height: 1;
     }
 
-    .btn-lg.btn-block {
-        border-radius: $border-radius-2;
-    }
-
     input#age {
         max-width: 3rem;
     }
@@ -1133,23 +1112,12 @@
 
 .read-blog {
     .card {
-        max-width: 100%;
-        transition: all 300ms ease;
+        transition: transform 200ms ease-in-out;
 
         &:hover {
-            box-shadow: $shadow-md;
-            transform: translate(0, -8px);
-            .card-body a {
-                text-decoration: underline;
-            }
+            text-decoration: none;
+            transform: translate(0, -0.5rem);
         }
-        .card-body a {
-            font-weight: $font-weight-medium;
-            color: $navy-blue;
-        }
-@include media-breakpoint-up (md) {
-    max-width: 33%;
-}
     }
 }
 
@@ -1345,9 +1313,16 @@
 .inline-help:focus {
     background-position: -18px 0;
 }
-.icon-info:focus,
-.inline-help:focus {
-    outline: none;
+.icon-info:focus-visible,
+.inline-help:focus-visible {
+    border-color: $btn-link-hover-color;
+    outline: 0;
+    @if $enable-shadows {
+        box-shadow: $btn-box-shadow, $btn-focus-box-shadow;
+    } @else {
+        box-shadow: $btn-focus-box-shadow;
+    }
+    border-radius: 50%;
 }
 
 .fund-info__item {
@@ -1450,13 +1425,13 @@
     flex: 0 0 calc((100% - 48px) / 3);
     border-radius: $border-radius-2;
 
-    @media (max-width: 1199.98px) {
+    @include media-breakpoint-down(xl) {
         & {
             flex: 0 0 calc((100% - 48px) / 2);
         }
     }
 
-    @media (max-width: 991.98px) {
+    @include media-breakpoint-down(lg) {
         & {
             flex: 0 0 100%;
         }
@@ -1703,34 +1678,7 @@
     border-top-right-radius: $border-radius-md !important;
 }
 
-// Cookie consent bar
-.cookie-bar {
-    opacity: 1;
-    max-height: 999px;
-    min-height: 30px;
-    box-sizing: border-box;
-    z-index: 1100;
-    overflow: hidden;
-    color: $navy-blue;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: $blue-washed;
-    padding: 15px 20px 15px;
-
-    &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    &__right {
-        flex-shrink: 0;
-    }
-}
-
+// Countdown
 .countdown-timer__item {
     color: white;
     background-color: $orange;
@@ -1749,8 +1697,8 @@
 
 /* card */
 
-.card-deck .card-selected {
-    box-shadow: 0 0 0 2px $blue !important;
+.card-selected {
+    border: 2px solid $blue !important;
 }
 
 /* tiles */
