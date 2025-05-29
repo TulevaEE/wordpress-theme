@@ -47,7 +47,7 @@ class ThemeEnqueue
                 'handle' => 'bootstrap',
                 'src' => $js_path . 'vendor/bootstrap.bundle.min.js',
                 'deps' => 'jquery',
-                'ver' => '4.0.0-beta-2-1',
+                'ver' => '5.3.6',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
@@ -122,7 +122,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '2025.03.06',
+                'ver' => '2025.05.29',
                 'js_in_header' => false,
                 'enqueue' => true
             ]
