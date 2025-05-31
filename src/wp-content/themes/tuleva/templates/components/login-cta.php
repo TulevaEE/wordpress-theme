@@ -5,7 +5,7 @@ $bg_class = get_component_background_color_class();
     <div class="d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
-                <div class="col-lg-12 text-center text-lg-start pr-lg-5 pe-lg-6">
+                <div class="col-lg-12 text-center text-lg-start pe-lg-6">
                     <h1><?php the_sub_field('heading'); ?></h1>
                 </div>
                 <div class="col-lg-6">

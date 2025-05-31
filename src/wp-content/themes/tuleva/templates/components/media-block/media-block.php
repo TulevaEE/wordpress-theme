@@ -5,8 +5,8 @@ $original_image_url = get_sub_field('image');
 $image_id = attachment_url_to_postid($original_image_url);
 $image_url = wp_get_attachment_image_url($image_id, 'large');
 $content_class = $image_url ? 'col-lg-6' : 'col-lg-12';
-$content_spacing_class = $image_alignment === 'right' ? 'pr-lg-4' : 'pl-lg-4';
-$image_spacing_class = $image_alignment === 'right' ? 'pl-lg-4' : 'pr-lg-4';
+$content_spacing_class = $image_alignment === 'right' ? 'pe-lg-4' : 'ps-lg-4';
+$image_spacing_class = $image_alignment === 'right' ? 'ps-lg-4' : 'pe-lg-4';
 $left_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-block d-lg-none' : '';
 $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-none d-lg-block' : '';
 ?>

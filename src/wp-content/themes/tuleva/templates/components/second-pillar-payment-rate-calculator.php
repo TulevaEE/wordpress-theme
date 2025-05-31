@@ -16,7 +16,7 @@
                     <?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>
                 </label>
                 <div class="col-sm-6">
-                    <div class="btn-group btn-group-toggle d-flex" role="group"
+                    <div class="btn-group d-flex" role="group"
                          aria-label="<?php _e('Your II pillar contribution', TEXT_DOMAIN); ?>">
                         <input type="radio" class="btn-check" name="pillarContribution" id="payment2" value="2"
                                autocomplete="off">

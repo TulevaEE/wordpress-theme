@@ -5,7 +5,7 @@ $lead_text = get_sub_field('lead_text');
     <div class="bg-hero-main d-flex flex-column">
         <div class="container my-auto">
             <div class="row align-items-center py-5">
-                <div class="col-lg-6 text-center text-lg-start pr-lg-5 pe-lg-6">
+                <div class="col-lg-6 text-center text-lg-start pe-lg-6">
                     <h1><?php the_sub_field('heading'); ?></h1>
                     <p class="lead text-navy"><?php echo do_shortcode($lead_text); ?></p>
 
