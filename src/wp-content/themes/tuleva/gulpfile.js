@@ -7,6 +7,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const watch = require("gulp-watch");
 const log = require("fancy-log");
 const exit = require("gulp-exit");
+const crypto = require("crypto");
 const fs = require("node:fs/promises");
 const enqueueVersionFile = "helpers/enqueue_versions.php";
 const cssDir = "css";
@@ -34,19 +35,29 @@ const updateEnqueueVersion = async function (name) {
     const jsEnqueueRegex = /\$JS_ENQUEUE_VERSION.+\n/;
     const cssEnqueueRegex = /\$CSS_ENQUEUE_VERSION.+\n/;
 
-    const getRandomPostfix = () =>
-        Math.floor(Math.random() * Math.pow(2, 48)).toString(16);
-
     const getDateString = () => new Date().toISOString().split("T")[0];
+
+    const getFileHash = async (filePath) => {
+        const content = await fs.readFile(filePath);
+        return crypto
+            .createHash("sha256")
+            .update(content)
+            .digest("hex")
+            .slice(0, 16);
+    };
 
     const newEnqueueFileContents = data
         .replace(
             jsEnqueueRegex,
-            `$JS_ENQUEUE_VERSION="${getDateString()}-${getRandomPostfix()}";\n`
+            `$JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "css/main.css"
+            )}";\n`
         )
         .replace(
             cssEnqueueRegex,
-            `$CSS_ENQUEUE_VERSION="${getDateString()}-${getRandomPostfix()}";\n`
+            `$CSS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/main.js"
+            )}";\n`
         );
 
     await fs.writeFile(enqueueVersionFile, newEnqueueFileContents, {
