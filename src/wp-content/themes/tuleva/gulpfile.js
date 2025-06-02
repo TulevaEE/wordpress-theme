@@ -7,6 +7,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const watch = require("gulp-watch");
 const log = require("fancy-log");
 const exit = require("gulp-exit");
+const fs = require("node:fs/promises");
+const enqueueVersionFile = "helpers/enqueue_versions.php";
 const cssDir = "css";
 const sassSrc = "scss/**/*.scss";
 
@@ -24,6 +26,32 @@ const logFinishedTask = function (name) {
     return function () {
         log(name + " task finished.");
     };
+};
+
+const updateEnqueueVersion = async function (name) {
+    const data = await fs.readFile(enqueueVersionFile, { encoding: "utf8" });
+
+    const jsEnqueueRegex = /\$JS_ENQUEUE_VERSION.+\n/;
+    const cssEnqueueRegex = /\$CSS_ENQUEUE_VERSION.+\n/;
+
+    const getRandomPostfix = () =>
+        Math.floor(Math.random() * Math.pow(2, 48)).toString(16);
+
+    const getDateString = () => new Date().toISOString().split("T")[0];
+
+    const newEnqueueFileContents = data
+        .replace(
+            jsEnqueueRegex,
+            `$JS_ENQUEUE_VERSION="${getDateString()}-${getRandomPostfix()}";\n`
+        )
+        .replace(
+            cssEnqueueRegex,
+            `$CSS_ENQUEUE_VERSION="${getDateString()}-${getRandomPostfix()}";\n`
+        );
+
+    await fs.writeFile(enqueueVersionFile, newEnqueueFileContents, {
+        encoding: "utf8",
+    });
 };
 
 const buildCss = function (isCompressed) {
@@ -78,6 +106,7 @@ gulp.task("default", function () {
     })
         .on("change", function (path) {
             log("Changed: " + path);
+            updateEnqueueVersion();
         })
         .on("error", onError);
 });
