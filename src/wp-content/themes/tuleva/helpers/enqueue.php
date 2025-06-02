@@ -14,6 +14,7 @@ class ThemeEnqueue
 
     public function enqueue_assets()
     {
+        include_once './enqueue_versions.php';
         $css_path = get_template_directory_uri() . '/css/';
         $js_path = get_template_directory_uri() . '/js/';
 
@@ -31,7 +32,7 @@ class ThemeEnqueue
                 'handle' => 'main-style',
                 'src' => $css_path . 'main.css',
                 'deps' => 'normalize',
-                'ver' => '2025.05.29.9',
+                'ver' => $CSS_ENQUEUE_VERSION,
                 'media' => 'all',
                 'enqueue' => true
             ],
@@ -111,7 +112,7 @@ class ThemeEnqueue
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
-                'ver' => '2025.05.29',
+                'ver' => $JS_ENQUEUE_VERSION,
                 'js_in_header' => false,
                 'enqueue' => true
             ]
@@ -122,7 +123,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => '2025.05.29',
+                'ver' => $CALCULATOR_JS_ENQUEUE_VERSION,
                 'js_in_header' => false,
                 'enqueue' => true
             ]
