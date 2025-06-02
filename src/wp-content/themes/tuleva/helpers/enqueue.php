@@ -14,7 +14,7 @@ class ThemeEnqueue
 
     public function enqueue_assets()
     {
-        include_once './enqueue_versions.php';
+        include_once 'enqueue_versions.php';
         $css_path = get_template_directory_uri() . '/css/';
         $js_path = get_template_directory_uri() . '/js/';
 
@@ -123,7 +123,7 @@ class ThemeEnqueue
                 'handle' => 'calculator',
                 'src' => $js_path . 'calculator.js',
                 'deps' => 'jquery',
-                'ver' => $CALCULATOR_JS_ENQUEUE_VERSION,
+                'ver' => $JS_ENQUEUE_VERSION,
                 'js_in_header' => false,
                 'enqueue' => true
             ]
