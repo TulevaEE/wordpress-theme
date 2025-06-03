@@ -34,6 +34,7 @@ const updateEnqueueVersion = async function (name) {
 
     const jsEnqueueRegex = /\$JS_ENQUEUE_VERSION.+\n/;
     const cssEnqueueRegex = /\$CSS_ENQUEUE_VERSION.+\n/;
+    const calculatorEnqueueRegex = /\$CALCULATOR_JS_ENQUEUE_VERSION.+\n/;
 
     const getDateString = () => new Date().toISOString().split("T")[0];
 
@@ -57,6 +58,12 @@ const updateEnqueueVersion = async function (name) {
             cssEnqueueRegex,
             `$CSS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/main.js"
+            )}";\n`
+        )
+        .replace(
+            calculatorEnqueueRegex,
+            `$CALCULATOR_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/calculator.js"
             )}";\n`
         );
 
