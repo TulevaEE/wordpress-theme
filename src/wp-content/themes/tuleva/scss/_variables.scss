@@ -18,24 +18,29 @@ $link-hover-decoration: underline !default;
 $yellow-light: #ffeeba;
 $yellow-dark: #856404;
 
-$white: #fff;
 $black: #000;
+$white: #fff;
+
 $navy-blue: #002f63;
-$blue: #0072EC;
+$bright-blue: #00aeea;
+
+$red: #DB2200;
+$red-light: #FF4614;
+$green: #008300;
+$green-light: #00A100;
+$blue: #006CE6;
 $blue-light: #00aeea;
-$bright-blue: $blue-light;
+
 $yellow: #fce228;
-$green: #00ac00;
-$green-light: #51c26c;
-$red: #ff4800;
+
 $orange: $red;
 
 $text-primary: #293036;
-$text-secondary: #6d7276;
-$text-tertiary: #909396;
+$text-secondary: #6B7074;
+$text-tertiary: #8A8D91;
 $text-muted: $text-secondary;
 $text-hint: $text-tertiary;
-$text-green: #00ac00;
+$text-green: $green;
 $text-green-muted: $green;
 $text-red: $red;
 $text-blue: $blue;
