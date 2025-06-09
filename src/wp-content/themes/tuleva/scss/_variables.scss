@@ -21,15 +21,15 @@ $yellow-dark: #856404;
 $black: #000;
 $white: #fff;
 
-$navy-blue: #002f63;
+$navy-blue:   #002f63;
 $bright-blue: #00aeea;
 
-$red: #DB2200;
-$red-light: #FF4614;
-$green: #008300;
+$red:         #DB2200;
+$red-light:   #FF4614;
+$green:       #008300;
 $green-light: #00A100;
-$blue: #006CE6;
-$blue-light: #00aeea;
+$blue:        #006CE6;
+$blue-light:  #00aeea;
 
 $yellow: #fce228;
 
@@ -68,6 +68,7 @@ $blue-washed: $blue-bg-2;
 $blueish-gray: $gray-bg-2;
 $gray-washed: $gray-bg-2;
 $gray-mid: $gray-border-3;
+$body-color-alt: $blue-washed !default;
 
 // Shadows
 
@@ -103,10 +104,7 @@ $tooltip-arrow-color:               $tooltip-bg !default;
 
 // Brand definitions
 
-$brand-primary: $blue !default;
-$brand-success: $green !default;
 $body-color: $text-primary !default;
-$body-color-alt: $blue-washed !default;
 
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;
@@ -181,13 +179,13 @@ $widget-primary-bg-color: $blue-washed !default;
 
 // Navbar
 $navbar-height: 78px !default;
-$navbar-padding-vertical: 25px !default;
-$navbar-default-bg: transparent !default;
-$navbar-default-border: transparent !default;
-$navbar-default-link-color: $navy-blue !default;
-$navbar-toggle-color: $navy-blue !default;
-$navbar-default-brand-hover-color: $brand-primary !default;
-$navbar-default-brand-hover-bg: transparent !default;
+// $navbar-padding-vertical: 25px !default;
+// $navbar-default-bg: transparent !default;
+// $navbar-default-border: transparent !default;
+// $navbar-default-link-color: $navy-blue !default;
+// $navbar-toggle-color: $navy-blue !default;
+// $navbar-default-brand-hover-color: $blue !default;
+// $navbar-default-brand-hover-bg: transparent !default;
 
 // Footer
 $footer-bg-color: $blueish-gray !default;

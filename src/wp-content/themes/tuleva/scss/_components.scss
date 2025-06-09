@@ -530,7 +530,7 @@
         margin-bottom: 4rem;
     }
     &__heading {
-        color: $brand-primary;
+        color: $blue;
         text-transform: uppercase;
         margin-bottom: 1em;
     }
@@ -577,7 +577,7 @@
         }
         &--current a {
             font-weight: bold;
-            box-shadow: inset 0 -4px 0 0 $brand-primary;
+            box-shadow: inset 0 -4px 0 0 $blue;
         }
     }
     @include media-breakpoint-down(sm) {
@@ -810,8 +810,8 @@
     padding: 1rem 0 1rem;
     margin-bottom: 3em;
     background-color: $white;
-    border-top: 4px solid $brand-primary;
-    border-bottom: 4px solid $brand-primary;
+    border-top: 4px solid $blue;
+    border-bottom: 4px solid $blue;
     &__title {
         text-align: center;
         font-size: 1.5em;
