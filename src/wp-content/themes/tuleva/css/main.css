@@ -18270,7 +18270,7 @@ sup {
   font-size: 1rem;
   font-weight: 500;
   font-variant-numeric: proportional-nums;
-  line-height: 38px;
+  line-height: 1;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
