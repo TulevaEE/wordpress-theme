@@ -137,7 +137,7 @@
     }
 
     .nav-link {
-        color: $navbar-default-link-color;
+        color: $text-navy;
         font-weight: $font-weight-medium;
         padding: 0.4375rem 0.75rem !important;
 
@@ -161,7 +161,7 @@
     .navbar-nav > .active > a:focus {
 
         @include media-breakpoint-up(lg) {
-            color: $navbar-default-link-color;
+            color: $text-navy;
 
             &::before {
                 content: "";
