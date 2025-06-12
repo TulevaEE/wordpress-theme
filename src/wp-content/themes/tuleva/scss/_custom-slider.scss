@@ -1,10 +1,11 @@
 .custom-tooltip {
     position: absolute;
-    top: 0;
-    left: calc(50% - $form-range-thumb-width / 2);
     z-index: 2; // container has z-index: 1
-    width: $form-range-thumb-width;
+    top: calc(($form-range-thumb-height - 1rem) / 2);
+    left: calc(50% - $form-range-thumb-width / 2 + 2px); // push rightwards by 2px because of the width correction below
+    width: calc($form-range-thumb-width - 4px);
     transform: translate(0, 0);
+    background: $blue;
     font-size: 1rem;
     font-weight: $font-weight-medium;
     font-variant-numeric: proportional-nums;

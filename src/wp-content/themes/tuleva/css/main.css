@@ -18259,12 +18259,13 @@ sup {
 
 .custom-tooltip {
   position: absolute;
-  top: 0;
-  left: calc(50% - 19px);
   z-index: 2;
-  width: 38px;
+  top: calc((38px - 1rem) / 2);
+  left: calc(50% - 19px + 2px);
+  width: 34px;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
+  background: #006CE6;
   font-size: 1rem;
   font-weight: 500;
   font-variant-numeric: proportional-nums;
