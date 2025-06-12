@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-29T06:54:55+00:00\n"
+"POT-Creation-Date: 2025-06-12T11:15:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -254,45 +254,49 @@ msgstr ""
 msgid "7% historic return on stocks"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:81
+#: templates/components/front-hero/calculator.php:77
+msgid "Compare with a fund"
+msgstr ""
+
+#: templates/components/front-hero/calculator.php:82
 msgid "Estonian average II pillar fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:89
+#: templates/components/front-hero/calculator.php:90
 msgid "Could accumulate by age 65"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:92
+#: templates/components/front-hero/calculator.php:93
 msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:102
+#: templates/components/front-hero/calculator.php:103
 msgid "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</strong> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:105
+#: templates/components/front-hero/calculator.php:106
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:108
-#: templates/components/front-hero/calculator.php:131
+#: templates/components/front-hero/calculator.php:109
+#: templates/components/front-hero/calculator.php:132
 msgid "You pay in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:111
+#: templates/components/front-hero/calculator.php:112
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> less</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:114
+#: templates/components/front-hero/calculator.php:115
 msgid "per year"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:122
+#: templates/components/front-hero/calculator.php:123
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:133
+#: templates/components/front-hero/calculator.php:134
 msgid "0.31% per year"
 msgstr ""
 

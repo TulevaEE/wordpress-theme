@@ -74,6 +74,7 @@
             </div>
         </div>
 
+        <label for="comparisonFund" class="form-label visually-hidden"><?php _e('Compare with a fund', TEXT_DOMAIN); ?></label>
         <select class="form-select mt-2 ps-3 fw-medium bg-gray-1 text-navy" name="pensionFunds"
                 id="comparisonFund"
                 onchange="calculateSaving()">
