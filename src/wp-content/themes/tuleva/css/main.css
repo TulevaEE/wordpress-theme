@@ -18289,6 +18289,9 @@ sup {
   text-align: right;
   height: 38px;
 }
+.return-rate .form-range::-moz-range-thumb {
+  background: #006CE6 !important;
+}
 .return-rate .form-range::-webkit-slider-runnable-track {
   border: var(--bs-border-width) solid var(--bs-border-color);
   -webkit-box-sizing: border-box;
