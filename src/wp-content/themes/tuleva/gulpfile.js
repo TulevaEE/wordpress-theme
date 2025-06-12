@@ -49,14 +49,14 @@ const updateEnqueueVersion = async function (name) {
 
     const newEnqueueFileContents = data
         .replace(
-            jsEnqueueRegex,
-            `$JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+            cssEnqueueRegex,
+            `$CSS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "css/main.css"
             )}";\n`
         )
         .replace(
-            cssEnqueueRegex,
-            `$CSS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+            jsEnqueueRegex,
+            `$JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/main.js"
             )}";\n`
         )
