@@ -8,7 +8,7 @@
                         <li>
                             <div class="row testimonial">
                                 <div class="col-sm-2 offset-sm-1 d-none d-sm-block testimonial__media">
-                                    <img class="testimonial__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
+                                    <img class="testimonial__image" src="<?php the_sub_field('image'); ?>" alt="">
                                 </div>
                                 <div class="col-sm-7 col-xs-10 offset-1 testimonial__body">
                                     <div class="testimonial__text"><?php echo get_sub_field('text'); ?></div>

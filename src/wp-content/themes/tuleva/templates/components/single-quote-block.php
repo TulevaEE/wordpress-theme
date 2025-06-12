@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row single-quote-box">
             <div class="col-md-4 single-quote-box__media">
-                <img class="single-quote-box__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
+                <img class="single-quote-box__image" src="<?php the_sub_field('image'); ?>" alt="">
                 <h3><?php the_sub_field('name'); ?></h3>
             </div>
             <div class="col-md-8 single-quote-box__body">

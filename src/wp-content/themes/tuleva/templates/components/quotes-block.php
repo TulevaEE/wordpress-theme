@@ -10,7 +10,7 @@
                         <div class="quotes-box__content">
                             <div class="quotes-box__text"><?php the_sub_field('quote_' . $i . '_text'); ?></div>
                             <div class="quotes-box__author">
-                                <img class="quotes-box__author__image" src="<?php the_sub_field('quote_' . $i . '_author_image'); ?>" alt="<?php the_sub_field('quote_' . $i . '_author'); ?>">
+                                <img class="quotes-box__author__image" src="<?php the_sub_field('quote_' . $i . '_author_image'); ?>" alt="">
                                 <span class="quotes-box__author__info">
                                     <?php if (get_sub_field('quote_' . $i . '_author_url')) { ?>
                                         <a href="<?php the_sub_field('quote_' . $i . '_author_url'); ?>">

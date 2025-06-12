@@ -15,7 +15,7 @@
                                     <?php foreach ($value as $key2 => $value2) { ?>
                                         <div class="media-box">
                                             <div class="media-box__media">
-                                                <img class="media-box__image" src="<?php echo $value2['image']; ?>" alt="<?php echo $value2['name']; ?>">
+                                                <img class="media-box__image" src="<?php echo $value2['image']; ?>" alt="">
                                             </div>
                                             <div class="media-box__body">
                                                 <h2 class="media-box__title"><?php echo $value2['name']; ?></h2>
@@ -37,7 +37,7 @@
                         <li>
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
+                                    <img class="media-box__image" src="<?php the_sub_field('image'); ?>" alt="">
                                 </div>
                                 <div class="media-box__body">
                                     <h2 class="media-box__title"><?php the_sub_field('name'); ?></h2>
