@@ -27,6 +27,10 @@
         text-align: right;
         height: $form-range-thumb-height;
 
+        &::-webkit-slider-thumb {
+            background: $blue !important;
+        }
+
         &::-moz-range-thumb {
             background: $blue !important;
         }
