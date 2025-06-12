@@ -6,10 +6,10 @@
     width: calc($form-range-thumb-width - 4px);
     transform: translate(0, 0);
     background: $blue;
+    color: white;
     font-size: 1rem;
     font-weight: $font-weight-medium;
     font-variant-numeric: proportional-nums;
-    color: white;
     line-height: $form-range-thumb-height;
     text-align: center;
     user-select: none;

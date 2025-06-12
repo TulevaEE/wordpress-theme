@@ -18266,10 +18266,10 @@ sup {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   background: #006CE6;
+  color: white;
   font-size: 1rem;
   font-weight: 500;
   font-variant-numeric: proportional-nums;
-  color: white;
   line-height: 38px;
   text-align: center;
   -webkit-user-select: none;
