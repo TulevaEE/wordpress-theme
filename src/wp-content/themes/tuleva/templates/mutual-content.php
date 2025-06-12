@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post();
 
         if (have_rows('page_components')) {
@@ -29,4 +29,4 @@
         get_template_part('templates/components/modal-question-rights');
 
     endwhile; ?>
-</div>
+</main>

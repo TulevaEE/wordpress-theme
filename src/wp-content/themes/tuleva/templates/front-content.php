@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <script>
         var LANGCODE = '<?php echo apply_filters( "wpml_current_language", NULL );  ?>'; // eslint-disable-line
     </script>
@@ -57,4 +57,4 @@
         get_template_part('templates/components/modal-calculator');
         get_template_part('templates/components/modal-security');
     ?>
-</div>
+</main>

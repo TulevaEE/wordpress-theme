@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <?php if (have_posts()) while (have_posts()) : the_post();
 
         get_template_part('templates/components/fund-stocks-header');
@@ -55,4 +55,4 @@
             $('#stock-fund-nav').html('<?php echo $funds[$stock]['nav'] ?>');
         });
     </script>
-</div>
+</main>

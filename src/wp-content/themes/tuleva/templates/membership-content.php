@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="container row-spacing-half">
             <div class="offset-md-1 col-md-10">
@@ -9,4 +9,4 @@
             </div>
         </div>
     <?php endwhile; ?>
-</div>
+</main>

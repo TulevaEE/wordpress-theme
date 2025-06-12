@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div>
             <div class="container py-6">
@@ -134,4 +134,4 @@
             </section>
         <?php endwhile; ?>
     <?php endwhile; ?>
-</div>
+</main>

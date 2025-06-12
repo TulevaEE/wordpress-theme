@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <script>
         var LANGCODE = '<?php echo apply_filters( '
         wpml_current_language ', NULL );  ?>';
@@ -126,4 +126,4 @@
         </div>
     </div>
     <?php endwhile; ?>
-</div>
+</main>

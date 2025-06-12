@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <script>
         var LANGCODE = '<?php echo apply_filters( 'wpml_current_language', NULL );  ?>';
     </script>
@@ -7,4 +7,4 @@
     get_template_part('templates/components/fund-choosing');
 
     ?>
-</div>
+</main>

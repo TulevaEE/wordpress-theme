@@ -1,4 +1,4 @@
-<div id="jobs-page" class="page-container">
+<main id="jobs-page" class="page-container">
     <?php if ( post_password_required(get_post()) ) : ?>
         <div class="page-container">
             <div class="container">
@@ -27,4 +27,4 @@
             } ?>
         <?php endwhile; ?>
     <?php endif; ?>
-</div>
+</main>

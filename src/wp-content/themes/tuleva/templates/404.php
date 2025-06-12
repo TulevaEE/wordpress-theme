@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <div class="container">
         <div class="row row-spacing">
             <div class="mx-auto col-lg-9 col-xl-8 text-center py-6">
@@ -7,4 +7,4 @@
             </div>
         </div>
     </div>
-</div>
+</main>

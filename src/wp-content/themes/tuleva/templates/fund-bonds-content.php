@@ -1,4 +1,4 @@
-<div class="page-container">
+<main class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post();
 
         get_template_part('templates/components/fund-bonds-header');
@@ -52,4 +52,4 @@
             $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
         });
     </script>
-</div>
+</main>
