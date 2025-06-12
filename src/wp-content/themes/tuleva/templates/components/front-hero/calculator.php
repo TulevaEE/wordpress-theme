@@ -60,7 +60,7 @@
                 <label for="marketReturn" class="col-sm-6 col-form-label py-2 pe-0">
                     <?php _e('Expected annual return', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
-                        tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="<?php _e('Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return.', TEXT_DOMAIN); ?>"
                     ></span>
                 </label>
@@ -89,7 +89,7 @@
                 <div class="me-3">
                     <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
                         class="inline-help d-inline-block"
-                        tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="<?php _e('We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
