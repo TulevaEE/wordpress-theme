@@ -32,7 +32,7 @@ function get_translated_link()
                         <label for="wageDeduction" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('of which dividends', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
@@ -49,7 +49,7 @@ function get_translated_link()
                         <label for="taxReliefs" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Other tax reliefs', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
@@ -70,7 +70,7 @@ function get_translated_link()
                             <span
                                 class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
@@ -81,7 +81,7 @@ function get_translated_link()
                             <span
                                 class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute up to', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
@@ -103,7 +103,7 @@ function get_translated_link()
                         <label for="monthlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Gross salary', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
@@ -121,7 +121,7 @@ function get_translated_link()
                         <label for="wageAddition" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Other gross income', TEXT_DOMAIN); ?><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 22%.', TEXT_DOMAIN); ?>"
                             ></span>
                         </label>
@@ -143,7 +143,7 @@ function get_translated_link()
                             <span
                                 class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
@@ -154,7 +154,7 @@ function get_translated_link()
                             <span
                                 class="d-inline-block fs-5 lh-sm fw-medium"><?php _e('Contribute monthly up to', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
-                                tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year', TEXT_DOMAIN); ?>"
                             ></span>
                         </div>
