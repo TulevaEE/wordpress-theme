@@ -1121,44 +1121,10 @@
     }
 }
 
-// Modal animations
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
+// Modals
 
-.animated.infinite {
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fadeIn {
-    animation-name: fadeIn;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.fadeOut {
-    animation-name: fadeOut;
-}
-
-// Modal styles
 .modal-full {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1167,6 +1133,10 @@
     overflow-y: auto;
     z-index: -9999;
     opacity: 0;
+
+    &.fadeIn {
+        display: inherit;
+    }
 
     &__container {
         display: flex;
