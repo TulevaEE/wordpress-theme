@@ -10,8 +10,8 @@ body {
 
 a {
   text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent) !important;
-  text-underline-offset: $link-underline-offset;
-  text-decoration-thickness: $link-underline-thickness;
+  text-underline-offset: $link-underline-offset !important;
+  text-decoration-thickness: $link-underline-thickness !important;
 }
 
 a:hover,

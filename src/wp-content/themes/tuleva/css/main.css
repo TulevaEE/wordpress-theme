@@ -14828,8 +14828,8 @@ body {
 a {
   -webkit-text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
-  text-underline-offset: 0.125em;
-  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em !important;
+  text-decoration-thickness: 0.0625em !important;
 }
 
 a:hover,
