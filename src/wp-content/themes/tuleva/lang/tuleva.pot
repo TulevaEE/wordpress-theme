@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-12T11:15:38+00:00\n"
+"POT-Creation-Date: 2025-06-16T14:32:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -416,79 +416,79 @@ msgstr ""
 
 #: templates/components/fund-bonds-details.php:62
 #: templates/components/fund-stocks-details.php:62
-#: templates/components/fund-third-details.php:62
+#: templates/components/fund-third-details.php:60
 msgid "Model portfolio (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:65
 #: templates/components/fund-stocks-details.php:65
-#: templates/components/fund-third-details.php:65
+#: templates/components/fund-third-details.php:63
 msgid "Key Investor Information (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:68
 #: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:71
 #: templates/components/fund-stocks-details.php:71
-#: templates/components/fund-third-details.php:71
+#: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:74
 #: templates/components/fund-stocks-details.php:74
-#: templates/components/fund-third-details.php:74
+#: templates/components/fund-third-details.php:72
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:77
 #: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-third-details.php:77
+#: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:81
 #: templates/components/fund-stocks-details.php:81
-#: templates/components/fund-third-details.php:81
+#: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:84
 #: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:84
+#: templates/components/fund-third-details.php:82
 msgid "Investment reports (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-stocks-details.php:86
-#: templates/components/fund-third-details.php:86
+#: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:89
 #: templates/components/fund-stocks-details.php:89
-#: templates/components/fund-third-details.php:89
+#: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:93
 #: templates/components/fund-stocks-details.php:93
-#: templates/components/fund-third-details.php:93
+#: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:95
 #: templates/components/fund-stocks-details.php:95
-#: templates/components/fund-third-details.php:95
+#: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:96
 #: templates/components/fund-stocks-details.php:96
-#: templates/components/fund-third-details.php:96
+#: templates/components/fund-third-details.php:94
 msgid "%s tons / $1M turnover per year"
 msgstr ""
 
@@ -658,10 +658,6 @@ msgstr ""
 msgid "15th October 2019"
 msgstr ""
 
-#: templates/components/fund-third-details.php:59
-msgid "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-funds-more-precise/\">Change of terms from 15.06.2025</a>"
-msgstr ""
-
 #: templates/components/fund-third-header.php:5
 msgid "Tuleva III Pillar Pension Fund"
 msgstr ""
@@ -701,6 +697,20 @@ msgstr ""
 #: templates/components/middle-cta.php:5
 #: templates/components/signup-block.php:25
 msgid "Become a member"
+msgstr ""
+
+#: templates/components/modal-calculator.php:3
+#: templates/components/modal-founders.php:3
+#: templates/components/modal-payout-calculator.php:3
+#: templates/components/modal-question-fee.php:3
+#: templates/components/modal-question-joining-fee.php:3
+#: templates/components/modal-question-profit.php:3
+#: templates/components/modal-question-rights.php:3
+#: templates/components/modal-question-vote.php:3
+#: templates/components/modal-second-pillar-payment-rate.php:3
+#: templates/components/modal-security.php:3
+#: templates/components/modal.php:5
+msgid "Close"
 msgstr ""
 
 #: templates/components/modal-calculator.php:11

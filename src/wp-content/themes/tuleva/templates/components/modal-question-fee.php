@@ -1,6 +1,6 @@
 <div id="questionFeeModal" tabindex="-1">
     <div class="close-button-questionFeeModal">
-        <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
+        <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="<?php _e('Close', TEXT_DOMAIN) ?>">
     </div>
     <div class="modal-full__container">
 
