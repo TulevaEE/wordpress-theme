@@ -10,8 +10,8 @@ $container-max-widths: (
 
 // Links
 
-$link-decoration:       none !default;
-$link-hover-decoration: underline !default;
+$link-underline-opacity: 0.25 !default;
+$link-underline-offset: 0.125em !default;
 
 // Colors
 
