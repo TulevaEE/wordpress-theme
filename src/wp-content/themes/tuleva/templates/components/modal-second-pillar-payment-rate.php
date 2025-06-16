@@ -1,4 +1,4 @@
-<div id="modal-second-pillar-payment-rate" class="modal-full">
+<div id="modal-second-pillar-payment-rate" class="modal-full" tabindex="-1">
     <div class="close-button-modal-second-pillar-payment-rate">
         <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>

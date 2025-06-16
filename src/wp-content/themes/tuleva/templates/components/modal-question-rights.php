@@ -1,4 +1,4 @@
-<div id="questionRightsModal" class="modal-full">
+<div id="questionRightsModal" class="modal-full" tabindex="-1">
     <div class="close-button-questionRightsModal">
         <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>

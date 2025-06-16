@@ -1,4 +1,4 @@
-<div id="questionProfitModal">
+<div id="questionProfitModal" tabindex="-1">
     <div class="close-button-questionProfitModal">
         <img src="<?php echo get_template_directory_uri() ?>/img/icon-close.svg" alt="Close">
     </div>
