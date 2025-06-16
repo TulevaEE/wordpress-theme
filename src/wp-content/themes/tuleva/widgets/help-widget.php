@@ -67,7 +67,7 @@ class Help_Widget extends WP_Widget {
         ?>
 
         <?php if ( ! empty( $title ) ) { ?>
-            <h4 class="footer__title"><?php echo $title; ?></h4>
+            <h2 class="footer__title h4"><?php echo $title; ?></h2>
         <?php } ?>
 
         <?php if ( ! empty( $faq_url ) ) { ?>

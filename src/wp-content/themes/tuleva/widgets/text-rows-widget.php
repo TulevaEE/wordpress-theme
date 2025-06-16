@@ -88,7 +88,7 @@ class Text_Rows_Widget extends WP_Widget
     ?>
 
         <?php if (!empty($title)) { ?>
-            <h4 class="footer__title"><?php echo $title; ?></h4>
+            <h2 class="footer__title h4"><?php echo $title; ?></h2>
         <?php } ?>
 
         <div class="footer__column__text">
