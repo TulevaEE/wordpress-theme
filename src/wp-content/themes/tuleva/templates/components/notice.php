@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="py-2 notice bg-notice">
+<section id="<?php the_sub_field('component_id'); ?>" class="py-2 notice bg-notice" role="alert">
     <div class="container">
         <div class="row text-center">
             <div class="d-flex flex-row w-100 justify-content-center align-items-center">
