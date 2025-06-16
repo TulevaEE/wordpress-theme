@@ -8127,7 +8127,7 @@ textarea.form-control-lg {
   align-items: center;
   -webkit-text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
   text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
-  text-underline-offset: 0.25em;
+  text-underline-offset: 0.125em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -14829,6 +14829,7 @@ a {
   -webkit-text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   text-underline-offset: 0.125em;
+  text-decoration-thickness: 0.0625em;
 }
 
 a:hover,
