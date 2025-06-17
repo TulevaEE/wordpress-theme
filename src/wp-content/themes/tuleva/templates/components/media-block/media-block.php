@@ -20,7 +20,7 @@ $right_image_visibility_class = $image_url && $image_alignment === 'right' ? 'd-
             <?php } ?>
 
             <div class="<?php echo $content_class ?> <?php echo $content_spacing_class; ?> mx-auto">
-                <h3 class="mb-4"><?php the_sub_field('heading') ?></h3>
+                <h2 class="mb-4"><?php the_sub_field('heading') ?></h2>
                 <?php if (get_sub_field('lead_text')): ?>
                     <p class="lead mb-3"><?php the_sub_field('lead_text') ?></p>
                 <?php endif; ?>
