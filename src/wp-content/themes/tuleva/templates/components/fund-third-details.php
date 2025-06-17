@@ -5,11 +5,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2 class="mb-4 h4"><?php _e('Fund details', TEXT_DOMAIN) ?></h2>
-                        <div class="hidden-xs fund-info__item">
+                        <div class="fund-info__item">
                             <div class="small text-bold">ISIN</div>
                             <div>EE3600001707</div>
                         </div>
-                        <div class="hidden-xs fund-info__item">
+                        <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('Currency', TEXT_DOMAIN) ?></div>
                             <div>EUR</div>
                         </div>

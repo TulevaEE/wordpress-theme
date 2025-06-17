@@ -1,4 +1,4 @@
-<div id="calculator" class="container hidden-xs">
+<div id="calculator" class="container">
 	<div class="funds-calculator-block">
 		<div>
 	        <div class="container row-spacing-half">
