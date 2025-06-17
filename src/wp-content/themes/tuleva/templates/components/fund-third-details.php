@@ -4,7 +4,7 @@
             <div class="col-md-10 mx-auto">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="mb-4"><?php _e('Fund details', TEXT_DOMAIN) ?></h5>
+                        <h2 class="mb-4 h4"><?php _e('Fund details', TEXT_DOMAIN) ?></h2>
                         <div class="hidden-xs fund-info__item">
                             <div class="small text-bold">ISIN</div>
                             <div>EE3600001707</div>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-md-5 offset-md-1">
-                        <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
+                        <h2 class="mb-4 h4"><?php _e('Documents', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow mb-5">
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/06/TUV100-Prospekt-kehtib-alates-04.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/05/Tuleva-III-Samba-Pensionifondi-tingimused-15.06.2025.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
@@ -76,7 +76,7 @@
                             </li>
                         </ul>
 
-                        <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
+                        <h2 class="mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow mb-5">
                             <li>
                                 <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/06/Tuleva-III-Samba-Pensionifondi-investeeringute-aruanne-mai-2025.pdf',__('Investment reports (in Estonian)', TEXT_DOMAIN)); ?>
@@ -88,7 +88,7 @@
                             </li>
                         </ul>
 
-                        <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
+                        <h2 class="mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                         <div class="fund-info__item">
                             <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
                             <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 78.97) ?>

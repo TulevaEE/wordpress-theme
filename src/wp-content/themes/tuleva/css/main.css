@@ -16588,8 +16588,11 @@ sup {
 }
 
 .fund-info__item {
-  border-bottom: 1px solid #D6DEE6;
-  padding: 0.75rem 0;
+  padding-bottom: 0.75rem;
+}
+.fund-info__item + .fund-info__item {
+  padding-top: 0.75rem;
+  border-top: 1px solid #D6DEE6;
 }
 
 .founder-story {
