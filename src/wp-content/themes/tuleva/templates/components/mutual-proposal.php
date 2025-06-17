@@ -11,7 +11,7 @@
                             <ul class="list-style-checkmark">
                                 <?php while (have_rows('list')) { the_row();
                                     remove_filter('acf_the_content', 'wpautop'); ?>
-                                    <li><?php echo get_sub_field('text'); ?><a href="<?php the_sub_field('info_icon_link_url'); ?>"><span class="icon-info"></span></a>
+                                    <li><?php echo get_sub_field('text'); ?><a href="<?php the_sub_field('info_icon_link_url'); ?>" class="icon-info" aria-label="<?php _e('Read more', TEXT_DOMAIN) ?>"></a>
                                     </li>
                                 <?php add_filter('acf_the_content', 'wpautop');
                                 } ?>
