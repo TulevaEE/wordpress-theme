@@ -18,8 +18,10 @@
                         <p class="m-0"><?php _e('Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire II pillar within the next 5 years.', TEXT_DOMAIN) ?></p>
                     </div>
                     <div class="proposal__cta">
-                        <h3 class="text-center mb-0">95%</h3>
-                        <p class="small text-center mb-4"><?php _e('of Tuleva II pillar investors’ choice', TEXT_DOMAIN) ?></p>
+                        <p class="d-flex flex-column text-center mb-4">
+                            <strong class="text-center mb-0 fs-3 lh-sm">95%</strong>
+                            <?php _e('of Tuleva II pillar investors’ choice', TEXT_DOMAIN) ?>
+                        </p>
                         <div class="d-grid"><?php _e('<a href="/en/online-bank-instructions/" class="btn btn-primary btn-lg" data-label="fund-details-choose-stocks">Select this fund</a>', TEXT_DOMAIN); ?></div>
                     </div>
                 </div>
