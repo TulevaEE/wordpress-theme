@@ -5,7 +5,7 @@ $current_post_categories = get_the_category($current_post_id);
 $current_post_cat_id = $current_post_categories[0]->term_id;
 ?>
 <div class="recent-articles">
-    <h5 class="recent-articles__heading"><?php _e('Recent articles', TEXT_DOMAIN); ?></h5>
+    <h2 class="recent-articles__heading"><?php _e('Recent articles', TEXT_DOMAIN); ?></h2>
     <ul class="recent-articles__list">
         <?php
             $args = [
