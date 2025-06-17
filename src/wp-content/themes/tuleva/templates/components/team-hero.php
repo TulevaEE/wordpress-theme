@@ -17,7 +17,7 @@ $lead_text = get_sub_field('lead_text');
         <div class="row align-items-center py-5">
             <div class="col-lg-6 pe-lg-4 mx-auto">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
-                    <p class="lead text-navy mb-3"><?php echo do_shortcode($lead_text); ?></p>
+                <p class="lead text-navy mb-3"><?php echo do_shortcode($lead_text); ?></p>
                 <div class="text-navy mb-5"><?php echo get_sub_field('text'); ?></div>
                 <?php if (get_sub_field('button_text')) { ?>
                     <div class="d-grid mb-3">
@@ -34,7 +34,7 @@ $lead_text = get_sub_field('lead_text');
                 <?php if ($shortcode) { ?>
                     <?php echo do_shortcode($shortcode); ?>
                 <?php } else if ($image_url) { ?>
-                    <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="">
+                    <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?>" alt="">
                 <?php } ?>
             </div>
         </div>

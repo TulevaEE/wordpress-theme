@@ -13,7 +13,7 @@ $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
                 <div class="text-navy mb-5"><?php the_sub_field('text'); ?></div>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?> alt="">
+                <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?>" alt="">
             </div>
         </div>
     </div>
