@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-17T10:06:24+00:00\n"
+"POT-Creation-Date: 2025-06-17T12:15:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -679,6 +679,18 @@ msgstr ""
 
 #: templates/components/goals.php:22
 msgid "In progress"
+msgstr ""
+
+#: templates/components/login-cta.php:21
+msgid "ID-card"
+msgstr ""
+
+#: templates/components/login-cta.php:24
+msgid "Mobile-ID"
+msgstr ""
+
+#: templates/components/login-cta.php:27
+msgid "Smart-ID"
 msgstr ""
 
 #: templates/components/middle-cta.php:2

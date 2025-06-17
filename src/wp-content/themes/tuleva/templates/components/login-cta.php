@@ -18,13 +18,13 @@ $bg_class = get_component_background_color_class();
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-center mb-2">
                             <div class="p-2">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/id-card-logo.png" style="max-height:32px;" class="img-fluid" alt="Logo 1">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/id-card-logo.png" style="max-height:32px;" class="img-fluid" alt="<?php esc_attr_e( 'ID-card', '' ); ?>">
                             </div>
                             <div class="p-2">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/mobile-id-logo.png" style="max-height:32px;" class="img-fluid" alt="Logo 2">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/mobile-id-logo.png" style="max-height:32px;" class="img-fluid" alt="<?php esc_attr_e( 'Mobile-ID', '' ); ?>">
                             </div>
                             <div class="p-2">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/smart-id-logo.png" style="max-height: 32px;" class="img-fluid" alt="Logo 3">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/smart-id-logo.png" style="max-height: 32px;" class="img-fluid" alt="<?php esc_attr_e( 'Smart-ID', '' ); ?>">
                             </div>
                         </div>
                         <div class="text-center">

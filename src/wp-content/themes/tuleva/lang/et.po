@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-06-17T10:06:24+00:00\n"
-"PO-Revision-Date: 2025-06-17 13:06+0300\n"
+"POT-Creation-Date: 2025-06-17T12:15:02+00:00\n"
+"PO-Revision-Date: 2025-06-17 15:48+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -878,6 +878,18 @@ msgstr "Osaliselt tehtud"
 #: templates/components/goals.php:22
 msgid "In progress"
 msgstr "Töös"
+
+#: templates/components/login-cta.php:21
+msgid "ID-card"
+msgstr "ID-kaart"
+
+#: templates/components/login-cta.php:24
+msgid "Mobile-ID"
+msgstr "Mobiil-ID"
+
+#: templates/components/login-cta.php:27
+msgid "Smart-ID"
+msgstr "Smart-ID"
 
 #: templates/components/middle-cta.php:2
 msgid "Are we on the right track?"
