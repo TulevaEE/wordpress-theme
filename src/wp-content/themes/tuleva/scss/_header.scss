@@ -121,7 +121,8 @@
         margin: 0;
         padding: 0;
 
-        &:hover > .dropdown-menu {
+        &:hover > .dropdown-menu,
+        &:focus-within > .dropdown-menu {
             @include media-breakpoint-up(lg) {
                 visibility: visible;
                 transform: translateY(0);
@@ -140,6 +141,7 @@
         color: $text-navy;
         font-weight: $font-weight-medium;
         padding: 0.4375rem 0.75rem !important;
+        border-radius: $border-radius-sm;
 
         &:hover {
             color: $text-blue;
@@ -150,6 +152,7 @@
             line-height: $line-height-xs;
             padding: 1rem 1.25rem !important;
             border-bottom: 1px solid $gray-border-2;
+            border-radius: 0;
 
             &:hover {
                 background-color: $blue-bg-2;

@@ -17550,7 +17550,7 @@ sup {
   padding: 0;
 }
 @media (min-width: 992px) {
-  .navbar .nav-item:hover > .dropdown-menu {
+  .navbar .nav-item:hover > .dropdown-menu, .navbar .nav-item:focus-within > .dropdown-menu {
     visibility: visible;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -17566,6 +17566,7 @@ sup {
   color: #002f63;
   font-weight: 500;
   padding: 0.4375rem 0.75rem !important;
+  border-radius: 0.25rem;
 }
 .navbar .nav-link:hover {
   color: #006CE6;
@@ -17576,6 +17577,7 @@ sup {
     line-height: 1.2;
     padding: 1rem 1.25rem !important;
     border-bottom: 1px solid #D6DEE6;
+    border-radius: 0;
   }
   .navbar .nav-link:hover {
     background-color: #EDF7FD;
