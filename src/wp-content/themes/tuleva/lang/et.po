@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-06-16T14:32:29+00:00\n"
-"PO-Revision-Date: 2025-06-16 17:33+0300\n"
+"POT-Creation-Date: 2025-06-17T08:52:42+00:00\n"
+"PO-Revision-Date: 2025-06-17 11:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -100,17 +100,12 @@ msgstr "Soovitus 55+"
 msgid "Referral 18-55"
 msgstr ""
 
-#: searchform.php:3
-msgid "Search for:"
-msgstr ""
+#: searchform.php:2
+msgid "Search blog"
+msgstr "Otsi blogist"
 
-#: searchform.php:4 searchform.php:7
+#: searchform.php:5
 msgid "Search"
-msgstr ""
-
-#: searchform.php:4
-msgctxt "label"
-msgid "Search for:"
 msgstr ""
 
 #: templates/404.php:5
@@ -629,6 +624,7 @@ msgid "As secure as bank’s pension fund."
 msgstr "Sama turvaline kui panga pensionifond."
 
 #: templates/components/fund-counter.php:22
+#: templates/components/mutual-proposal.php:14
 msgid "Read more"
 msgstr "Uuri lähemalt"
 
@@ -2088,6 +2084,9 @@ msgstr "Tekstirida 3:"
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
 
+#~ msgid "Enter keyword"
+#~ msgstr "Sisesta märksõna"
+
 #~ msgid ""
 #~ "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
 #~ "funds-more-precise/\">Change of terms from 15.06.2025</a>"
@@ -2153,9 +2152,6 @@ msgstr "Tekstirida 4:"
 
 #~ msgid "Difference"
 #~ msgstr "Erinevus"
-
-#~ msgid "Read our blog"
-#~ msgstr "Loe meie blogi"
 
 #~ msgid "Tuleva founders"
 #~ msgstr "Tuleva asutajad"
