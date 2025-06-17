@@ -67,7 +67,7 @@ class CTA_Secondary_Widget extends WP_Widget {
 
         <div class="cta-widget cta-widget--secondary">
             <?php if ( ! empty( $title ) ) { ?>
-                <h5 class="cta-widget__title--link"><a href="<?php echo $title_url; ?>"><?php echo $title; ?></a></h5>
+                <h2 class="cta-widget__title--link h4"><a href="<?php echo $title_url; ?>"><?php echo $title; ?></a></h2>
             <?php } ?>
 
             <p><?php echo $text; ?></p>

@@ -103,19 +103,19 @@
                 <div class="widget-area__cta">
                     <div class="widget">
                         <div class="cta-widget cta-widget--primary">
-                            <h4 class="cta-widget__title">
+                            <h2 class="cta-widget__title h4 text-navy">
                                 <?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?>
-                            </h4>
-                            <h5 class="cta-widget__title--link">
+                            </h2>
+                            <p class="cta-widget__title--link h4">
                                 <?php _e('<a href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
-                            </h5>
+                            </p>
                         </div>
                     </div>
                     <div class="widget">
                         <div class="cta-widget cta-widget--secondary">
-                            <h5 class="cta-widget__title--link">
+                            <h2 class="cta-widget__title--link h4">
                                 <?php _e('<a href="/en/transfer-pension-tuleva/">Transfer pension to Tuleva</a>', TEXT_DOMAIN); ?>
-                            </h5>
+                            </h2>
                             <p>
                                 <?php _e('Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved.', TEXT_DOMAIN); ?>
                             </p>
