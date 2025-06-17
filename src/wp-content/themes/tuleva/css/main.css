@@ -15845,71 +15845,56 @@ sup {
 }
 
 .post-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  row-gap: 4rem;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .post-list__item {
-  width: 50%;
-  margin-bottom: 3rem;
-}
-.post-list__item:nth-child(odd) {
-  padding-left: 15px;
-}
-.post-list__item:nth-child(even) {
-  padding-right: 15px;
+  margin: 0;
 }
 .post-list__item__image {
   overflow: hidden;
-  max-height: 350px;
-  border-radius: 4px;
+  max-height: 184px;
+  border-radius: 0.25rem;
   margin-bottom: 1rem;
-}
-.post-list__item__image a {
-  display: block;
 }
 .post-list__item__image img {
   width: 100%;
 }
-.post-list__item:first-child .post-list__item__image {
-  max-height: 550px;
-}
 .post-list__item__title {
-  margin-bottom: 0.5rem;
-}
-.post-list__item__title a {
-  display: inline-block;
+  display: block;
+  margin-bottom: 1rem;
   color: #002f63;
+}
+.post-list__item__title h2, .post-list__item__title .h2 {
+  margin: 0;
+  color: inherit;
 }
 .post-list__item__meta {
   margin-bottom: 1rem;
   font-size: 0.875em;
 }
+.post-list__item__description p {
+  margin: 0;
+}
 .post-list__item__author {
   margin-right: 0.5em;
 }
 .post-list__item.post-list__item--wide {
-  width: 100%;
-  padding: 0;
+  grid-column: span 2;
+}
+.post-list__item.post-list__item--wide .post-list__item__image {
+  max-height: 384px;
+  border-radius: 0.5rem;
 }
 @media (max-width: 575.98px) {
   .post-list__item.post-list__item {
-    width: 100%;
-    padding: 0;
+    grid-column: span 2;
   }
-}
-.post-list--paged .post-list__item:nth-child(even) {
-  padding-left: 15px;
-}
-.post-list--paged .post-list__item:nth-child(odd) {
-  padding-right: 15px;
 }
 
 .pagination {
@@ -15921,8 +15906,8 @@ sup {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
   color: #8A8D91;
   font-size: 1.25rem;
   line-height: 1.6;

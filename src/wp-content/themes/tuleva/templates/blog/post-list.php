@@ -40,12 +40,14 @@
         ?>
 
         <li class="post-list__item<?php if ($is_featured) { echo ' post-list__item--wide'; } ?>">
-            <?php if (has_post_thumbnail()) { ?>
-                <div class="post-list__item__image">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('large'); ?>" alt=""></a>
-                </div>
-            <?php } ?>
-            <h2 class="post-list__item__title text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a class="post-list__item__title<?php echo ($is_featured ? ' h3' : ' h4'); ?>" href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) { ?>
+                    <div class="post-list__item__image">
+                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
+                    </div>
+                <?php } ?>
+                <h2 class="text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><?php the_title(); ?></h2>
+            </a>
             <div class="post-list__item__meta">
                 <span class="post-list__item__author text-uppercase text-navy text-medium"><?php echo get_the_author(); ?></span> <?php the_date(); ?>
             </div>
