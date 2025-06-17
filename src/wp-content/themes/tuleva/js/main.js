@@ -447,6 +447,46 @@ $(document).ready(function ($) {
 
             updateClock();
         },
+        initHighContrastMode = function() {
+            // synced with onboarding-client
+            const HIGH_CONTRAST_MODE_COOKIE_NAME = 'high-contrast';
+
+            const domain = window.location.host.includes('localhost') ? 'localhost' : '.tuleva.ee'
+
+            const isHighContrastModeEnabled = () => document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME);
+
+            const toggleHighContrastMode = () => {
+                const oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+                const unixEpoch = new Date(1);
+                // if enabled, set expiry to UTC epoch to delete, if not enabled then set it to 12 months in future
+                const expiry = isHighContrastModeEnabled() ? unixEpoch : oneYearFromNow;
+                document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry};domain=${domain};path=/`;
+            };
+
+
+            const updateButtonText = () => {
+                $(`#contrast-mode-switch span[data-contrast-mode='${isHighContrastModeEnabled()}']`).css('display', 'none');
+                $(`#contrast-mode-switch span[data-contrast-mode='${!isHighContrastModeEnabled()}']`).css('display', 'inherit');
+            }
+
+            const applyHighContrastModeStyles = () => {
+                updateButtonText();
+
+                if (isHighContrastModeEnabled()) {
+                    // TODO apply styles
+                } else {
+                    // TODO remove styles
+                }
+            };
+
+            $('#contrast-mode-switch').click(() => {
+                toggleHighContrastMode();
+                applyHighContrastModeStyles();
+            });
+
+            applyHighContrastModeStyles();
+
+        },
         initCountdownTimerFull = function () {
             var march31midnight = 1743454799000;
             var days = 0, hours = 0, minutes = 0, seconds = 0;
@@ -503,6 +543,7 @@ $(document).ready(function ($) {
         // function () { // initModal('#question-profit', 'questionProfitModal'); },
         function () { initModal('#question-vote', 'questionVoteModal'); },
         function () { initModal('#question-rights', 'questionRightsModal'); },
+        function () { initHighContrastMode(); },
     ]
 
     setupFunctions.forEach(function (func) {
