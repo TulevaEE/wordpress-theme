@@ -1,58 +1,58 @@
-<section id="details" class="py-6">
+<section id="details" class="pt-5 pb-6">
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="mb-4"><?php _e('Fund details', TEXT_DOMAIN) ?></h5>
-                        <div class="fund-info__item">
-                            <div class="small text-bold">ISIN</div>
-                            <div>EE3600109435</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Currency', TEXT_DOMAIN) ?></div>
-                            <div>EUR</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Date of inception', TEXT_DOMAIN) ?></div>
-                            <div><?php _e('27 March 2017', TEXT_DOMAIN) ?></div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Fund volume', TEXT_DOMAIN) ?></div>
-                            <div><span id="stock-fund-volume"></span> EUR</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold">NAV</div>
-                            <div><span id="stock-fund-nav"></span> EUR</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></div>
-                            <div>0,24%</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></div>
-                            <div>0,31%</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></div>
-                            <div>0%</div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></div>
-                            <div>5 747 351 <?php _e('units', TEXT_DOMAIN) ?></div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></div>
-                            <div><?php _e('Aggressive', TEXT_DOMAIN) ?></div>
-                        </div>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('Comparison index', TEXT_DOMAIN) ?></div>
-                            <div>100% MSCI ACWI (EUR) </div>
-                        </div>
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Fund details', TEXT_DOMAIN) ?></h2>
+                        <p class="fund-info__item">
+                            <span class="small text-bold">ISIN</span>
+                            <span>EE3600109435</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Currency', TEXT_DOMAIN) ?></span>
+                            <span>EUR</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Date of inception', TEXT_DOMAIN) ?></span>
+                            <span><?php _e('27 March 2017', TEXT_DOMAIN) ?></span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Fund volume', TEXT_DOMAIN) ?></span>
+                            <span><span id="stock-fund-volume"></span> EUR</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold">NAV</span>
+                            <span><span id="stock-fund-nav"></span> EUR</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
+                            <span>0,24%</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></span>
+                            <span>0,31%</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
+                            <span>0%</span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></span>
+                            <span>5 747 351 <?php _e('units', TEXT_DOMAIN) ?></span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></span>
+                            <span><?php _e('Aggressive', TEXT_DOMAIN) ?></span>
+                        </p>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('Comparison index', TEXT_DOMAIN) ?></span>
+                            <span>100% MSCI ACWI (EUR)</span>
+                        </p>
                     </div>
-                    <div class="col-md-5 offset-md-1">
-                        <h5 class="mb-4"><?php _e('Documents', TEXT_DOMAIN) ?></h5>
-                        <ul class="list-style-arrow mb-5">
+                    <div class="col-md-6 ps-md-6">
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Documents', TEXT_DOMAIN) ?></h2>
+                        <ul class="list-style-arrow mb-5 text-secondary">
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/06/TUK75-ja-TUK00-Prospekt-kehtib-alates-04.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2022/09/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused_01.09.2022-1.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 <br />
@@ -78,8 +78,8 @@
                             </li>
                         </ul>
 
-                        <h5 class="mb-4"><?php _e('Reports', TEXT_DOMAIN) ?></h5>
-                        <ul class="list-style-arrow mb-5">
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
+                        <ul class="list-style-arrow mb-5 text-secondary">
                             <li>
                                 <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/06/Tuleva-Maailma-Aktsiate-Pensionifondi-investeeringute-aruanne-mai-2025.pdf',__('Investment reports (in Estonian)', TEXT_DOMAIN)); ?>
                                 <br>
@@ -90,11 +90,11 @@
                             </li>
                         </ul>
 
-                        <h5 class="mb-4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h5>
-                        <div class="fund-info__item">
-                            <div class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></div>
-                            <?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 78.81) ?>
-                        </div>
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
+                        <p class="fund-info__item">
+                            <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
+                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 78.81) ?></span>
+                        </p>
                     </div>
                 </div>
             </div>

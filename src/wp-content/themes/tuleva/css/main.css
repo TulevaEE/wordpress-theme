@@ -16588,6 +16588,16 @@ sup {
 }
 
 .fund-info__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
   padding-bottom: 0.75rem;
 }
 .fund-info__item + .fund-info__item {
