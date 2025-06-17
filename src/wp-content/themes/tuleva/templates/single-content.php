@@ -87,39 +87,39 @@
                 <?php get_template_part('templates/blog/recent-articles'); ?>
             </div>
             <div class="col-lg-4 widget-area ps-lg-5">
-                <div class="article-widget d-none d-md-block">
-                    <h4 class="article-widget__title">
-                        <?php _e('3 important posts', TEXT_DOMAIN); ?>
-                    </h4>
-                    <?php
-                        if (ICL_LANGUAGE_CODE=='et') {
-                            get_template_part('templates/blog/sidebar-articles-et');
-                        } elseif (ICL_LANGUAGE_CODE=='en') {
-                            get_template_part('templates/blog/sidebar-articles');
-                        }
+                <div class="widget">
+                    <div class="cta-widget cta-widget--secondary d-none d-md-block">
+                        <h2 class="cta-widget__title h4">
+                            <?php _e('3 important posts', TEXT_DOMAIN); ?>
+                        </h2>
+                        <?php
+                            if (ICL_LANGUAGE_CODE=='et') {
+                                get_template_part('templates/blog/sidebar-articles-et');
+                            } elseif (ICL_LANGUAGE_CODE=='en') {
+                                get_template_part('templates/blog/sidebar-articles');
+                            }
                         ?>
-                        <?php _e('<a class="d-block text-uppercase text-medium text-center" href="/en/blog/">See more posts</a>', TEXT_DOMAIN); ?>
-                </div>
-                <div class="widget-area__cta">
-                    <div class="widget">
-                        <div class="cta-widget cta-widget--primary">
-                            <h2 class="cta-widget__title h4 text-navy">
-                                <?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?>
-                            </h2>
-                            <p class="cta-widget__title--link h4">
-                                <?php _e('<a href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
-                            </p>
-                        </div>
+                        <p class="widget-more"><?php _e('<a href="/en/blog/">See more posts</a>', TEXT_DOMAIN); ?></p>
                     </div>
-                    <div class="widget">
-                        <div class="cta-widget cta-widget--secondary">
-                            <h2 class="cta-widget__title--link h4">
-                                <?php _e('<a href="/en/transfer-pension-tuleva/">Transfer pension to Tuleva</a>', TEXT_DOMAIN); ?>
-                            </h2>
-                            <p>
-                                <?php _e('Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved.', TEXT_DOMAIN); ?>
-                            </p>
-                        </div>
+                </div>
+                <div class="widget">
+                    <div class="cta-widget cta-widget--primary">
+                        <h2 class="cta-widget__title h4 text-navy">
+                            <?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?>
+                        </h2>
+                        <p class="cta-widget__title--link h4">
+                            <?php _e('<a href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
+                        </p>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="cta-widget cta-widget--secondary">
+                        <h2 class="cta-widget__title--link h4">
+                            <?php _e('<a href="/en/transfer-pension-tuleva/">Transfer pension to Tuleva</a>', TEXT_DOMAIN); ?>
+                        </h2>
+                        <p>
+                            <?php _e('Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved.', TEXT_DOMAIN); ?>
+                        </p>
                     </div>
                 </div>
             </div>

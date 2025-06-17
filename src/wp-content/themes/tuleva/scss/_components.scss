@@ -733,24 +733,55 @@
         margin-top: 3rem;
     }
 
-    &:last-child {
-        margin-bottom: 3rem;
-    }
-
     &:has(> .cta-widget--primary) {
-        + .widget:has(> .cta-widget--secondary) {
+        + .widget:has(> .cta-widget) {
             margin-top: 1.5rem;
         }
     }
 
+    &:last-child {
+        margin-bottom: 3rem;
+    }
+
     h2, h3 {
+        margin: 0 0 1rem;
         font-size: $h4-font-size;
         line-height: $h4-line-height;
     }
 
-    ul,
-    li {
-        margin-bottom: 0;
+    p {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0 0 0 1.5rem;
+            padding: 0;
+            
+            a {
+                display: inline-block;
+                color: $text-navy;
+            }
+        }
+
+        &.widget-articles {
+            list-style: none;
+
+            li {
+                margin: 0 0 1rem;
+
+                a {
+                    font-weight: $font-weight-medium;
+                }
+            }
+        }
+    }
+
+    .cat-item a {
+        display: inline-block;
     }
 }
 
@@ -766,9 +797,11 @@
         box-shadow: 0 0 0 1px $gray-border-1;
     }
     &__title {
+        margin-bottom: 1rem;
         font-size: $h4-font-size;
         font-family: $font-family-serif;
-        margin-bottom: 1rem;
+        line-height: $h4-line-height;
+        color: $text-navy;
         &--link {
             margin-bottom: 1rem;
             font-weight: $font-weight-medium;
@@ -784,8 +817,6 @@
         }
     }
     .btn {
-        display: block;
-        white-space: pre-line;
         margin: 1.5rem 0;
         &:last-child {
             margin-bottom: 0;
@@ -794,47 +825,6 @@
     p,
     h5:last-child {
         margin-bottom: 0;
-    }
-}
-
-.article-widget {
-    padding: 1rem 0 1rem;
-    margin-bottom: 3em;
-    background-color: $white;
-    border-top: 4px solid $blue;
-    border-bottom: 4px solid $blue;
-    &__title {
-        text-align: center;
-        font-size: 1.5em;
-        font-family: $font-family-base;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        &--link {
-            display: inline-block;
-            text-align: left;
-            font-weight: 500;
-            font-family: $font-family-sans-serif;
-            padding-right: 1.5em;
-            background-image: url('../img/icon-arrow-right.svg');
-            background-position: right center;
-            background-repeat: no-repeat;
-        }
-    }
-    p {
-        margin-bottom: 1.5em;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        border-top: 1px solid $gray-border-2;
-        border-bottom: 1px solid $gray-border-2;
-        li {
-            padding: 1rem 0 1rem;
-            border-bottom: 1px solid $gray-border-2;
-            &:last-child {
-                border-bottom: none;
-            }
-        }
     }
 }
 

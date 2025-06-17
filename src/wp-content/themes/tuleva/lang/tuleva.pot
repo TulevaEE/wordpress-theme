@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-17T08:52:42+00:00\n"
+"POT-Creation-Date: 2025-06-17T10:06:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1316,27 +1316,27 @@ msgstr ""
 msgid "Share with a friend:"
 msgstr ""
 
-#: templates/single-content.php:92
+#: templates/single-content.php:93
 msgid "3 important posts"
 msgstr ""
 
-#: templates/single-content.php:101
-msgid "<a class=\"d-block text-uppercase text-medium text-center\" href=\"/en/blog/\">See more posts</a>"
+#: templates/single-content.php:102
+msgid "<a href=\"/en/blog/\">See more posts</a>"
 msgstr ""
 
-#: templates/single-content.php:107
+#: templates/single-content.php:108
 msgid "How much would you lose to high fees?"
 msgstr ""
 
-#: templates/single-content.php:110
+#: templates/single-content.php:111
 msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
 msgstr ""
 
-#: templates/single-content.php:117
+#: templates/single-content.php:118
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr ""
 
-#: templates/single-content.php:120
+#: templates/single-content.php:121
 msgid "Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved."
 msgstr ""
 

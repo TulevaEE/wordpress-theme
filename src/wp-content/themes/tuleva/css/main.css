@@ -15971,19 +15971,43 @@ sup {
 .widget + .widget {
   margin-top: 3rem;
 }
+.widget:has(> .cta-widget--primary) + .widget:has(> .cta-widget) {
+  margin-top: 1.5rem;
+}
 .widget:last-child {
   margin-bottom: 3rem;
 }
-.widget:has(> .cta-widget--primary) + .widget:has(> .cta-widget--secondary) {
-  margin-top: 1.5rem;
-}
 .widget h2, .widget .h2, .widget h3, .widget .h3 {
+  margin: 0 0 1rem;
   font-size: 1.25rem;
   line-height: 1.3333;
 }
-.widget ul,
-.widget li {
-  margin-bottom: 0;
+.widget p {
+  margin: 0;
+}
+.widget ul {
+  margin: 0;
+  padding: 0;
+}
+.widget ul li {
+  margin: 0 0 0 1.5rem;
+  padding: 0;
+}
+.widget ul li a {
+  display: inline-block;
+  color: #002f63;
+}
+.widget ul.widget-articles {
+  list-style: none;
+}
+.widget ul.widget-articles li {
+  margin: 0 0 1rem;
+}
+.widget ul.widget-articles li a {
+  font-weight: 500;
+}
+.widget .cat-item a {
+  display: inline-block;
 }
 
 .cta-widget {
@@ -16000,9 +16024,11 @@ sup {
   box-shadow: 0 0 0 1px #E0E6EC;
 }
 .cta-widget__title {
+  margin-bottom: 1rem;
   font-size: 1.25rem;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-  margin-bottom: 1rem;
+  line-height: 1.3333;
+  color: #002f63;
 }
 .cta-widget__title--link {
   margin-bottom: 1rem;
@@ -16017,8 +16043,6 @@ sup {
   background-repeat: no-repeat;
 }
 .cta-widget .btn {
-  display: block;
-  white-space: pre-line;
   margin: 1.5rem 0;
 }
 .cta-widget .btn:last-child {
@@ -16028,47 +16052,6 @@ sup {
 .cta-widget h5:last-child,
 .cta-widget .h5:last-child {
   margin-bottom: 0;
-}
-
-.article-widget {
-  padding: 1rem 0 1rem;
-  margin-bottom: 3em;
-  background-color: #fff;
-  border-top: 4px solid #006CE6;
-  border-bottom: 4px solid #006CE6;
-}
-.article-widget__title {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.article-widget__title--link {
-  display: inline-block;
-  text-align: left;
-  font-weight: 500;
-  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  padding-right: 1.5em;
-  background-image: url("../img/icon-arrow-right.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
-}
-.article-widget p {
-  margin-bottom: 1.5em;
-}
-.article-widget ul {
-  list-style: none;
-  padding: 0;
-  border-top: 1px solid #D6DEE6;
-  border-bottom: 1px solid #D6DEE6;
-}
-.article-widget ul li {
-  padding: 1rem 0 1rem;
-  border-bottom: 1px solid #D6DEE6;
-}
-.article-widget ul li:last-child {
-  border-bottom: none;
 }
 
 .tabs {
