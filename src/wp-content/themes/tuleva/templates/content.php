@@ -1,4 +1,4 @@
-<main class="page-container">
+<main id="main" class="page-container">
     <div class="container">
         <div class="row row-spacing">
             <div class="mx-auto col-lg-9 col-xl-8">

@@ -15150,6 +15150,20 @@ sup {
   font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100000;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  color: #002f63;
+}
+
 .contacts-block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;

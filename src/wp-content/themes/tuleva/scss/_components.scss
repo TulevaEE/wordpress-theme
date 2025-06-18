@@ -1,3 +1,17 @@
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 100000; // wpadminbar is 99999
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: $border-radius-sm;
+    background: #fff;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    color: $text-navy;
+}
+
 .contacts-block {
     justify-content: center;
     &__item {

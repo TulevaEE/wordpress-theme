@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-06-17T12:15:02+00:00\n"
-"PO-Revision-Date: 2025-06-17 15:48+0300\n"
+"POT-Creation-Date: 2025-06-18T06:56:16+00:00\n"
+"PO-Revision-Date: 2025-06-18 09:56+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -23,6 +23,10 @@ msgstr "Tuleva"
 #: widgets/init.php:15
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
+
+#: header.php:8
+msgid "Skip to content"
+msgstr "Liigu edasi sisu juurde"
 
 #: helpers/extras.php:455 helpers/extras.php:466
 msgid "days"
@@ -155,8 +159,6 @@ msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
-"Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
-"<b>tasuta.</b>"
 
 #: templates/components/counter-hero.php:15
 #: templates/components/second-pillar-payment-rate-hero.php:20
@@ -442,41 +444,37 @@ msgstr "Konservatiivne"
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
-#: templates/components/fund-bonds-details.php:50
-msgid "and"
-msgstr "ja"
-
-#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-bonds-details.php:55
 #: templates/components/fund-stocks-details.php:54
 #: templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr "Dokumendid"
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr "Prospekt"
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " and "
 msgstr " ja "
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
 msgstr "tingimused"
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " (in Estonian)"
 msgstr " "
 
-#: templates/components/fund-bonds-details.php:59
+#: templates/components/fund-bonds-details.php:60
 #: templates/components/fund-stocks-details.php:59
 msgid ""
 "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-"
@@ -485,31 +483,31 @@ msgstr ""
 "<a href=\"https://tuleva.ee/uudised/muutsime-pensionifondide-tingimusi-"
 "tapsemaks/\">Tingimuste muudatus alates 01.09.2025</a>"
 
-#: templates/components/fund-bonds-details.php:62
+#: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:62
 #: templates/components/fund-third-details.php:60
 msgid "Model portfolio (in Estonian)"
 msgstr "Mudelportfell"
 
-#: templates/components/fund-bonds-details.php:65
+#: templates/components/fund-bonds-details.php:66
 #: templates/components/fund-stocks-details.php:65
 #: templates/components/fund-third-details.php:63
 msgid "Key Investor Information (in Estonian)"
 msgstr "Põhiteave"
 
-#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-bonds-details.php:69
 #: templates/components/fund-stocks-details.php:68
 #: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
-#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-bonds-details.php:72
 #: templates/components/fund-stocks-details.php:71
 #: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
-#: templates/components/fund-bonds-details.php:74
+#: templates/components/fund-bonds-details.php:75
 #: templates/components/fund-stocks-details.php:74
 #: templates/components/fund-third-details.php:72
 msgid ""
@@ -519,49 +517,49 @@ msgstr ""
 "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju "
 "mittearvestamine"
 
-#: templates/components/fund-bonds-details.php:77
+#: templates/components/fund-bonds-details.php:78
 #: templates/components/fund-stocks-details.php:77
 #: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
-#: templates/components/fund-bonds-details.php:81
+#: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-stocks-details.php:81
 #: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr "Aruanded"
 
-#: templates/components/fund-bonds-details.php:84
+#: templates/components/fund-bonds-details.php:85
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:82
 msgid "Investment reports (in Estonian)"
 msgstr "Investeeringute aruanded"
 
-#: templates/components/fund-bonds-details.php:86
+#: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:86
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
-#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-stocks-details.php:89
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
-#: templates/components/fund-bonds-details.php:93
+#: templates/components/fund-bonds-details.php:94
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
-#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-bonds-details.php:96
 #: templates/components/fund-stocks-details.php:95
 #: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
-#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-stocks-details.php:96
 #: templates/components/fund-third-details.php:94
 msgid "%s tons / $1M turnover per year"
@@ -824,11 +822,11 @@ msgstr ""
 "Sobib sulle, kui soovid teenida <strong>parimat pikaajalist tootlust</"
 "strong> ja ei plaani järgmise 5 aasta jooksul kogu II sammast välja võtta."
 
-#: templates/components/fund-stocks-header.php:22
+#: templates/components/fund-stocks-header.php:23
 msgid "of Tuleva II pillar investors’ choice"
 msgstr "Tuleva II sambas kogujate valik"
 
-#: templates/components/fund-stocks-header.php:23
+#: templates/components/fund-stocks-header.php:25
 msgid ""
 "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" "
 "data-label=\"fund-details-choose-stocks\">Select this fund</a>"
@@ -2091,6 +2089,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "and"
+#~ msgstr "ja"
 
 #~ msgid "Enter keyword"
 #~ msgstr "Sisesta märksõna"

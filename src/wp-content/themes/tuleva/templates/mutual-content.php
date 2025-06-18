@@ -1,4 +1,4 @@
-<main class="page-container">
+<main id="main" class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post();
 
         if (have_rows('page_components')) {

@@ -1,4 +1,4 @@
-<main class="page-container">
+<main id="main" class="page-container">
     <script>
         var LANGCODE = '<?php echo apply_filters( 'wpml_current_language', NULL );  ?>';
     </script>

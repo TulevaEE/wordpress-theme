@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-17T12:15:02+00:00\n"
+"POT-Creation-Date: 2025-06-18T06:56:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -23,6 +23,10 @@ msgstr ""
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
 msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: header.php:8
+msgid "Skip to content"
 msgstr ""
 
 #: helpers/extras.php:455
@@ -369,118 +373,114 @@ msgstr ""
 msgid "Comparison index"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:50
-msgid "and"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-bonds-details.php:55
 #: templates/components/fund-stocks-details.php:54
 #: templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " and "
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:59
+#: templates/components/fund-bonds-details.php:60
 #: templates/components/fund-stocks-details.php:59
 msgid "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-funds-more-precise/\">Change of terms from 01.09.2025</a>"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:62
+#: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:62
 #: templates/components/fund-third-details.php:60
 msgid "Model portfolio (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:65
+#: templates/components/fund-bonds-details.php:66
 #: templates/components/fund-stocks-details.php:65
 #: templates/components/fund-third-details.php:63
 msgid "Key Investor Information (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-bonds-details.php:69
 #: templates/components/fund-stocks-details.php:68
 #: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-bonds-details.php:72
 #: templates/components/fund-stocks-details.php:71
 #: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:74
+#: templates/components/fund-bonds-details.php:75
 #: templates/components/fund-stocks-details.php:74
 #: templates/components/fund-third-details.php:72
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:77
+#: templates/components/fund-bonds-details.php:78
 #: templates/components/fund-stocks-details.php:77
 #: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:81
+#: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-stocks-details.php:81
 #: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:84
+#: templates/components/fund-bonds-details.php:85
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:82
 msgid "Investment reports (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:86
+#: templates/components/fund-bonds-details.php:87
 #: templates/components/fund-stocks-details.php:86
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-stocks-details.php:89
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:93
+#: templates/components/fund-bonds-details.php:94
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-bonds-details.php:96
 #: templates/components/fund-stocks-details.php:95
 #: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-stocks-details.php:96
 #: templates/components/fund-third-details.php:94
 msgid "%s tons / $1M turnover per year"
@@ -641,11 +641,11 @@ msgstr ""
 msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire II pillar within the next 5 years."
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:22
+#: templates/components/fund-stocks-header.php:23
 msgid "of Tuleva II pillar investors’ choice"
 msgstr ""
 
-#: templates/components/fund-stocks-header.php:23
+#: templates/components/fund-stocks-header.php:25
 msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
