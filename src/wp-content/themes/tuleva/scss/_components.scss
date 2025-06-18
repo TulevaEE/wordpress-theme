@@ -370,7 +370,7 @@
     font-size: $font-size-base;
     line-height: 1;
     border-radius: 1.5rem;
-    background-color: $orange;
+    background-color: $red;
     padding: 1rem 2rem;
     white-space: nowrap;
     overflow: hidden;
@@ -632,7 +632,7 @@
         &__title {
             display: block;
             margin-bottom: 1rem;
-            color: $heading-primary;
+            color: $text-navy;
 
             h2 {
                 margin: 0;
@@ -1073,7 +1073,7 @@
     }
 
     &__sum {
-        color: $orange;
+        color: $text-red;
         font-family: $font-family-base;
         margin-bottom: 0;
         @include media-breakpoint-up(sm) {
@@ -1652,9 +1652,9 @@
 
 // Countdown
 .countdown-timer__item {
-    color: white;
-    background-color: $orange;
-    border-color: $orange;
+    color: $white;
+    background-color: $red;
+    border-color: $red;
     padding: $input-btn-padding-y;
     border-radius: $btn-border-radius;
     text-wrap: nowrap;

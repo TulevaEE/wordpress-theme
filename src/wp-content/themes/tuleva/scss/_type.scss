@@ -24,7 +24,7 @@ a:focus {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5em;
-  color: $heading-primary;
+  color: $text-navy;
   font-family: $font-family-serif;
   font-weight: $font-weight-bold;
   line-height: $line-height-sm;
@@ -295,9 +295,6 @@ sup {
 }
 .text-green {
     color: $text-green !important;
-}
-.text-green-muted {
-  color: $text-green-muted !important;
 }
 .text-blue {
   color: $text-blue !important;

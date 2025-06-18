@@ -181,14 +181,14 @@
 }
 
 .bg-notice {
-    background-color: $yellow-light !important;
-    color: $yellow-dark;
+    background-color: $note-bg !important;
+    color: $warning-text-emphasis;
     a {
-        color: $yellow-dark;
+        color: $warning-text-emphasis;
     }
     .badge-notice {
-        background-color: $yellow-dark;
-        color: $yellow-light;
+        background-color: $warning-text-emphasis;
+        color: $white;
     }
 }
 
