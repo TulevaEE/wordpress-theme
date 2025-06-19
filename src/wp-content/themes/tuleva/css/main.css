@@ -14838,7 +14838,7 @@ a:focus {
   text-decoration-color: currentColor !important;
 }
 
-a abbr {
+a abbr[title] {
   cursor: inherit;
 }
 
