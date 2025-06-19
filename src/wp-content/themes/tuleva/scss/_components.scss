@@ -163,12 +163,8 @@
     padding: 110px 0;
     margin-bottom: -2em;
     @extend .clearfix;
-    &__media {
-        text-align: center;
-        font-style: italic;
-    }
     &__image {
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         border-radius: 50%;
         width: 192px;
         height: 192px;
