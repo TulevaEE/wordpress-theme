@@ -57,7 +57,7 @@ figure {
         padding-left: 2rem;
         margin-bottom: 1rem;
         background-repeat: no-repeat;
-        background-position: 0 .25rem;
+        background-position: 0 calc(1lh - 1.25em);
         &:last-of-type {
             margin-bottom: 0;
         }

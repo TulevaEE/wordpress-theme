@@ -14640,7 +14640,7 @@ figure {
   padding-left: 2rem;
   margin-bottom: 1rem;
   background-repeat: no-repeat;
-  background-position: 0 0.25rem;
+  background-position: 0 calc(1lh - 1.25em);
 }
 .list-style-checkmark li:last-of-type,
 .list-style-cross li:last-of-type,
