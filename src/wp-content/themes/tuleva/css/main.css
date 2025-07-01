@@ -16025,7 +16025,7 @@ sup {
 }
 
 .cta-widget {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   padding: 1.5rem;
 }
 .cta-widget--primary {
@@ -17888,6 +17888,10 @@ sup {
   margin: 0 10px;
   font-weight: bold;
   color: #6B7074;
+}
+.single-post .post-image,
+.single-post img[class*=wp-image-] {
+  border-radius: 0.5rem;
 }
 .single-post .post-image {
   max-width: 100%;

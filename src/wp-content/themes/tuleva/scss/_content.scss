@@ -72,6 +72,11 @@
         }
     }
 
+    .post-image,
+    img[class*="wp-image-"] {
+        border-radius: .5rem;
+    }
+
     .post-image {
         max-width: 100%;
         margin-bottom: 3rem;
