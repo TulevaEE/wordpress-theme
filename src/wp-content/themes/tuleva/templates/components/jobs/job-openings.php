@@ -1,62 +1,69 @@
 <?php
-$unique_id = uniqid('_');
-$unique_parent_id = 'accordion-parent' . $unique_id;
-?>
-<div class="accordion-parent <?php echo $unique_parent_id; ?>">
-    <section class="d-flex flex-column">
-        <div class="container my-auto">
-            <div class="row align-items-stretch">
-                <?php if( have_rows('job_openings') ): ?>
-                    <?php while( have_rows('job_openings') ): the_row(); ?>
-                        <?php
-                            $job_id = hyphenate_string(get_sub_field('title'));
-                            $job_id_with_hash = hyphenate_string(get_sub_field('title') . $unique_id);
-                            $thumbnail_url = '';
-                            $image = get_sub_field('image');
 
-                            if ($image) {
-                                $thumbnail_url = $image['sizes']['thumbnail'];
-                            }
-                        ?>
-                        <div class="col-lg-6 text-center py-5 toggle-parent">
-                            <div class="col-12 pb-2">
-                                <?php if ($thumbnail_url) { ?>
-                                    <img class="w-25 image-circle mb-2" src="<?php echo $thumbnail_url; ?>" alt="">
-                                <?php } ?>
-                                <h2 class="mb-3"><?php the_sub_field('title'); ?></h2>
-                                <a role="button" class="btn btn-outline-primary btn-lg collapsed" data-bs-toggle="collapse" data-bs-target="#<?php echo $job_id_with_hash; ?>" href="#<?php echo $job_id; ?>" aria-controls="<?php echo $job_id; ?>">
-                                    <span class="collapsed__shown"><?php the_sub_field('open_link_text'); ?></span>
-                                    <span class="collapsed__hidden"><?php the_sub_field('close_link_text'); ?></span>
-                                </a>
-                            </div>
-                            <div class="col-12 text-start collapse-lg-none mt-5">
-                                <?php echo get_sub_field('text'); ?>
-                            </div>
-                             <div class="col-12 pt-5 text-center collapse-lg-none">
-                                <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>
+$jobs      = get_field( 'job_openings' ) ?: [];
+$block_uid = uniqid();
+?>
+
+<?php if ( $jobs ) : ?>
+
+    <section class="d-flex flex-column section-spacing">
+        <div class="container">
+
+            <div class="row align-items-start section-spacing-bottom">
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto text-center">
+                    <h2 class="m-0 mb-4"><?php _e('Open positions', TEXT_DOMAIN); ?></h2>
+                    <p class="lead m-0"><?php _e('Come and join us – help bring to life the plans for the years ahead.', TEXT_DOMAIN); ?></p>
+                </div>
+            </div>
+
+            <div class="accordion accordion-flush" id="jobs-<?php echo esc_attr( $block_uid ); ?>">
+
+                <?php foreach ( $jobs as $i => $job ) :
+
+                    $row_idx   = $i + 1;
+                    $slug      = sanitize_title_with_dashes( $job['title'] );
+                    $base_id   = "{$slug}-{$row_idx}-{$block_uid}";
+                    ?>
+
+                    <section class="accordion-item">
+                        <h3 class="accordion-header" id="heading-<?php echo esc_attr( $base_id ); ?>">
+                            <button class="accordion-button collapsed px-0 px-md-3 py-4"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-<?php echo esc_attr( $base_id ); ?>"
+                                    aria-controls="collapse-<?php echo esc_attr( $base_id ); ?>"
+                                    aria-expanded="false">
+                                <span class="m-0 h3 fw-medium text-color-inherit"><?php echo esc_html( $job['title'] ); ?></span>
+                            </button>
+                        </h3>
+
+                        <div id="collapse-<?php echo esc_attr( $base_id ); ?>"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#jobs-<?php echo esc_attr( $block_uid ); ?>">
+
+                            <div class="accordion-body px-0 px-md-3 py-4 py-lg-5">
+
+                                <div class="column-lg-2 gap-4 gap-lg-5">
+                                    <?php echo wp_kses_post( $job['text'] ); ?>
+                                </div>
+
+                                <?php if ( ! empty( $job['cta_button_url'] ) ) : ?>
+                                    <p class="m-0 mt-5 text-center">
+                                        <a href="<?php echo esc_url( $job['cta_button_url'] ); ?>"
+                                        class="btn btn-primary btn-lg fs-3">
+                                            <?php echo esc_html( $job['cta_button_text'] ?: __( 'Apply for this job', 'textdomain' ) ); ?>
+                                        </a>
+                                    </p>
+                                <?php endif; ?>
+
                             </div>
                         </div>
+                    </section>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                <?php endforeach; ?>
+
             </div>
+
         </div>
     </section>
-    <?php if( have_rows('job_openings') ): ?>
-        <?php while( have_rows('job_openings') ): the_row(); ?>
-            <?php $job_id = hyphenate_string(get_sub_field('title') . $unique_id); ?>
-            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block section-spacing" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
-                <div class="container my-auto">
-                    <div class="row align-items-center">
-                        <div class="col-12 column-lg-2">
-                            <?php echo get_sub_field('text'); ?>
-                        </div>
-                        <div class="col-12 pt-5 text-center">
-                            <a href="<?php the_sub_field('cta_button_url'); ?>" class="btn btn-primary btn-lg"><?php the_sub_field('cta_button_text'); ?></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
+<?php endif; ?>

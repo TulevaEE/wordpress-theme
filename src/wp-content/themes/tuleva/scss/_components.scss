@@ -882,9 +882,6 @@
 
 .tab-content {
     @extend .clearfix;
-    @include media-breakpoint-up(md) {
-        padding: 70px 0;
-    }
 }
 
 .media {

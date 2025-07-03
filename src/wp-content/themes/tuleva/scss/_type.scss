@@ -281,6 +281,9 @@ sup {
 
 // Text colors
 
+.text-color-inherit {
+  color: inherit !important;
+}
 .text-primary {
   color: $text-primary !important;
 }

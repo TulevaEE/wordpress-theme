@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-18T06:56:16+00:00\n"
+"POT-Creation-Date: 2025-07-03T17:50:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -63,19 +63,11 @@ msgid "Fund bonds page"
 msgstr ""
 
 #. Template Name of the theme
-msgid "Fund details page"
-msgstr ""
-
-#. Template Name of the theme
 msgid "Fund stocks page"
 msgstr ""
 
 #. Template Name of the theme
 msgid "Fund third page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Fund page"
 msgstr ""
 
 #. Template Name of the theme
@@ -91,19 +83,7 @@ msgid "Jobs"
 msgstr ""
 
 #. Template Name of the theme
-msgid "Membership success"
-msgstr ""
-
-#. Template Name of the theme
 msgid "Mutual company page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Referral 55+"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Referral 18-55"
 msgstr ""
 
 #: searchform.php:2
@@ -136,81 +116,40 @@ msgstr ""
 
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:24
+#: templates/components/front-hero.php:23
 msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:26
+#: templates/components/front-hero.php:25
 msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:28
+#: templates/components/front-hero.php:27
 msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/counter-hero.php:15
-#: templates/components/second-pillar-payment-rate-hero.php:20
+#: templates/components/counter-hero.php:14
+#: templates/components/second-pillar-payment-rate-hero.php:19
 msgid "Days"
 msgstr ""
 
-#: templates/components/counter-hero.php:22
-#: templates/components/second-pillar-payment-rate-hero.php:27
+#: templates/components/counter-hero.php:21
+#: templates/components/second-pillar-payment-rate-hero.php:26
 msgid "Hours"
 msgstr ""
 
-#: templates/components/counter-hero.php:29
-#: templates/components/second-pillar-payment-rate-hero.php:34
+#: templates/components/counter-hero.php:28
+#: templates/components/second-pillar-payment-rate-hero.php:33
 msgid "Minutes"
 msgstr ""
 
 #: templates/components/founder-carousel.php:2
 #: templates/components/modal-founders.php:11
 msgid "Founding members"
-msgstr ""
-
-#: templates/components/front-founders.php:12
-#: templates/components/front-founders.php:39
-#: templates/components/front-founders.php:68
-msgid "Tuleva founder"
-msgstr ""
-
-#: templates/components/front-founders.php:18
-#: templates/components/front-founders.php:45
-#: templates/components/front-founders.php:74
-#: templates/components/fund-calculator.php:16
-msgid "II pillar: Tuleva World Stocks Pension Fund"
-msgstr ""
-
-#: templates/components/front-founders.php:21
-msgid "Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of creating a better pension fund. At first, Indrek politely listened to the idea and concluded that, yes, that is bad, but I do not have time to help here."
-msgstr ""
-
-#: templates/components/front-founders.php:23
-msgid "After a while, Indrek had a look at his pension account when opening his internet bank. What he saw, shocked him thoroughly. He called Tõnu and they decided to start working."
-msgstr ""
-
-#: templates/components/front-founders.php:48
-msgid "One day, Annika did a few calculations and found, that she has paid 108 euros in fees for every 1000 euros she had on her pension account while her profit was only 77 euros."
-msgstr ""
-
-#: templates/components/front-founders.php:50
-msgid "When looking closer, she realised that banks have dealt similar injustice to hundreds of thousands of pension savers. It was clear to Annika that something had to be done."
-msgstr ""
-
-#: templates/components/front-founders.php:65
-msgid "Kristo Käärmann and Taavet Hinrikus"
-msgstr ""
-
-#: templates/components/front-founders.php:77
-msgid "One of the world’s most successful start-ups Transferwise was borne from similar frustration as Tuleva. Transferwise fights against hidden fees that banks charge for currency exchange and international payments. Tuleva fights against high management fees and hidden expenses of pension funds so that we, people of Estonia, could save money for ourselves, not banks."
-msgstr ""
-
-#: templates/components/front-founders.php:79
-msgid "It was logical that Kristo and Taavet wanted to support the initiative to make pensions better and be part of founding a start-up that belongs to people themselves."
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:7
@@ -502,130 +441,16 @@ msgstr ""
 msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
 
-#: templates/components/fund-calculator.php:13
-msgid "Age: 28"
-msgstr ""
-
-#: templates/components/fund-calculator.php:19
-msgid "Kristi brought her II pillar assets and future contributions to Tuleva pension fund. Thanks to lower management fee, Kristi saves during her work life"
-msgstr ""
-
-#: templates/components/fund-counter.php:7
-msgid "3600"
-msgstr ""
-
-#: templates/components/fund-counter.php:11
-msgid "people of Estonia have already chosen Tuleva pension fund."
-msgstr ""
-
-#: templates/components/fund-counter.php:21
-msgid "As secure as bank’s pension fund."
-msgstr ""
-
-#: templates/components/fund-counter.php:22
-#: templates/components/mutual-proposal.php:14
-msgid "Read more"
-msgstr ""
-
-#: templates/components/fund-fees.php:5
-#: templates/components/fund-navigation.php:25
-msgid "Why costs matter?"
-msgstr ""
-
-#: templates/components/fund-fees.php:13
-msgid "Lower costs create better chances for growth"
-msgstr ""
-
-#: templates/components/fund-fees.php:14
-msgid "The lower the costs of the pension fund, the better chances are that your money will grow the most by the time you retire. We at Tuleva did not disover this, it is the finding of most leading economists of the world."
-msgstr ""
-
-#: templates/components/fund-fees.php:19
-msgid "Most fund managers’ costs are not justified."
-msgstr ""
-
-#: templates/components/fund-fees.php:20
-msgid "Analysing the results of investment funds over the course of world stock markets’ history, they have found a sobering fact - most costs that fund managers use for justifying high management fees do not create any value for us, pension savers."
-msgstr ""
-
-#: templates/components/fund-fees.php:31
-msgid "Fund managers have not beaten market average"
-msgstr ""
-
-#: templates/components/fund-fees.php:32
-msgid "Biggest share of pension fund managers’ fees go towards parent banks’ marketing and sales expenses. Small part goes also towards salaries of the und manager, analysts and other employees. Unfortunately, the bleak experience of Estonian pension funds as well as the whole investment world shows, that fund managers’ attempts to outsmart the market give investors worse results than market average."
-msgstr ""
-
-#: templates/components/fund-fees.php:38
-msgid "You don’t believe us?"
-msgstr ""
-
-#: templates/components/fund-fees.php:39
-msgid "See what <a href=\"#\" class=\"inline-link\">Warren Buffett</a> thinks of this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a href=\"#\" class=\"inline-link\">article series</a>."
-msgstr ""
-
-#: templates/components/fund-manager.php:7
+#: templates/components/fund-manager.php:8
 msgid "fund manager"
 msgstr ""
 
-#: templates/components/fund-manager.php:11
+#: templates/components/fund-manager.php:13
 msgid "I follow the principle of Jack Bogle, the founder of Vanguard index funds: keep the investment in a low-cost fund and “don’t peek” – keep the end goal in sight and don’t spend time or money worrying about small fluctuations. I waited for a long time for someone to set up this kind of fund in Estonia. We finally had to take matters into our own hands."
 msgstr ""
 
-#: templates/components/fund-manager.php:13
+#: templates/components/fund-manager.php:15
 msgid "Tõnu has been working in the investment field for over 20 years. Before founding Tuleva, he headed an investment company he part-owned, Karu Capital. Before that, Tõnu ran Eastern European financial sector development projects at the European Bank for Reconstruction and Development and worked as head of investment banking at Hansabank. He holds a master’s degree from London Business School-and a bachelor’s degree from the University of Tartu."
-msgstr ""
-
-#: templates/components/fund-navigation.php:5
-msgid "Which fund to choose?"
-msgstr ""
-
-#: templates/components/fund-navigation.php:15
-msgid "Is Tuleva safe?"
-msgstr ""
-
-#: templates/components/fund-security.php:6
-#: templates/components/modal-security.php:12
-msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
-msgstr ""
-
-#: templates/components/fund-security.php:8
-#: templates/components/modal-security.php:15
-msgid "YES!"
-msgstr ""
-
-#: templates/components/fund-security.php:18
-#: templates/components/modal-security.php:28
-msgid "Financial Inspection"
-msgstr ""
-
-#: templates/components/fund-security.php:19
-#: templates/components/modal-security.php:31
-msgid "issued a licence to Tuleva fund manager and controls that our everyday operations comply with regulations."
-msgstr ""
-
-#: templates/components/fund-security.php:29
-#: templates/components/modal-security.php:43
-msgid "Swedbank"
-msgstr ""
-
-#: templates/components/fund-security.php:30
-#: templates/components/modal-security.php:46
-msgid "is Tuleva pension funds’ depositary bank. Depositary bank approves every transaction with fund’s assets. Exactly like with bank’s own funds."
-msgstr ""
-
-#: templates/components/fund-security.php:40
-#: templates/components/modal-security.php:58
-msgid "State guarantee fund"
-msgstr ""
-
-#: templates/components/fund-security.php:41
-#: templates/components/modal-security.php:61
-msgid "protects all pension fund investors against the worst in case fund manager causes harm to investors."
-msgstr ""
-
-#: templates/components/fund-security.php:46
-msgid "Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/\">pensionikeskus.ee</a>"
 msgstr ""
 
 #: templates/components/fund-stocks-details.php:46
@@ -681,15 +506,27 @@ msgstr ""
 msgid "In progress"
 msgstr ""
 
-#: templates/components/login-cta.php:21
+#: templates/components/jobs/job-openings.php:23
+msgid "Open positions"
+msgstr ""
+
+#: templates/components/jobs/job-openings.php:24
+msgid "Come and join us – help bring to life the plans for the years ahead."
+msgstr ""
+
+#: templates/components/jobs/job-openings.php:70
+msgid "Apply for this job"
+msgstr ""
+
+#: templates/components/login-cta.php:20
 msgid "ID-card"
 msgstr ""
 
-#: templates/components/login-cta.php:24
+#: templates/components/login-cta.php:23
 msgid "Mobile-ID"
 msgstr ""
 
-#: templates/components/login-cta.php:27
+#: templates/components/login-cta.php:26
 msgid "Smart-ID"
 msgstr ""
 
@@ -1037,6 +874,42 @@ msgstr ""
 msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that <span class=\"text-highlight text-bold\">the power of thousands of smart people</span> can be used for increasing our common good."
 msgstr ""
 
+#: templates/components/modal-security.php:12
+msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
+msgstr ""
+
+#: templates/components/modal-security.php:15
+msgid "YES!"
+msgstr ""
+
+#: templates/components/modal-security.php:28
+msgid "Financial Inspection"
+msgstr ""
+
+#: templates/components/modal-security.php:31
+msgid "issued a licence to Tuleva fund manager and controls that our everyday operations comply with regulations."
+msgstr ""
+
+#: templates/components/modal-security.php:43
+msgid "Swedbank"
+msgstr ""
+
+#: templates/components/modal-security.php:46
+msgid "is Tuleva pension funds’ depositary bank. Depositary bank approves every transaction with fund’s assets. Exactly like with bank’s own funds."
+msgstr ""
+
+#: templates/components/modal-security.php:58
+msgid "State guarantee fund"
+msgstr ""
+
+#: templates/components/modal-security.php:61
+msgid "protects all pension fund investors against the worst in case fund manager causes harm to investors."
+msgstr ""
+
+#: templates/components/mutual-proposal.php:14
+msgid "Read more"
+msgstr ""
+
 #: templates/components/notice.php:6
 msgid "New"
 msgstr ""
@@ -1074,7 +947,7 @@ msgstr ""
 msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
 msgstr ""
 
-#: templates/components/payout-hero.php:50
+#: templates/components/payout-hero.php:49
 msgid "How does the payout calculator work?"
 msgstr ""
 
@@ -1281,21 +1154,6 @@ msgstr ""
 
 #: templates/footer/not-logged-in-mailing-list-form.php:10
 msgid "Join mailing list"
-msgstr ""
-
-#: templates/fund-content-old.php:17
-#: templates/fund-content.php:17
-msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
-msgstr ""
-
-#: templates/fund-content-old.php:25
-#: templates/fund-content.php:25
-msgid "This fund has been already chosen by %s people - including Tuleva founders and most of the members. <br> If you are over 55, consider our bond fund.<br> Changing pension fund if free for you and takes only 5 minutes in your internet bank."
-msgstr ""
-
-#: templates/fund-content-old.php:32
-#: templates/fund-content.php:32
-msgid "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-lg\">Choose Tuleva pension fund</a>"
 msgstr ""
 
 #: templates/header/main.php:9

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-06-18T06:56:16+00:00\n"
-"PO-Revision-Date: 2025-06-18 09:56+0300\n"
+"POT-Creation-Date: 2025-07-03T17:50:56+00:00\n"
+"PO-Revision-Date: 2025-07-03 20:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -61,20 +61,12 @@ msgid "Fund bonds page"
 msgstr "Võlakirja fondi leht"
 
 #. Template Name of the theme
-msgid "Fund details page"
-msgstr "Fondi info"
-
-#. Template Name of the theme
 msgid "Fund stocks page"
 msgstr "Aktsiate fondi leht"
 
 #. Template Name of the theme
 msgid "Fund third page"
 msgstr "III samba fondi leht"
-
-#. Template Name of the theme
-msgid "Fund page"
-msgstr "Fondide leht"
 
 #. Template Name of the theme
 msgid "General page"
@@ -89,20 +81,8 @@ msgid "Jobs"
 msgstr ""
 
 #. Template Name of the theme
-msgid "Membership success"
-msgstr "Liikmeks astutud"
-
-#. Template Name of the theme
 msgid "Mutual company page"
 msgstr "Ühistu leht"
-
-#. Template Name of the theme
-msgid "Referral 55+"
-msgstr "Soovitus 55+"
-
-#. Template Name of the theme
-msgid "Referral 18-55"
-msgstr ""
 
 #: searchform.php:2
 msgid "Search blog"
@@ -134,7 +114,7 @@ msgstr "RSS voog"
 
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:24
+#: templates/components/front-hero.php:23
 msgid ""
 "The deadline for this fund exchange period is <b>March 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -144,7 +124,7 @@ msgstr ""
 
 #: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:26
+#: templates/components/front-hero.php:25
 msgid ""
 "The deadline for this fund exchange period is <b>July 31.</b> Switching "
 "funds is <b>free.</b>"
@@ -154,24 +134,24 @@ msgstr ""
 
 #: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:28
+#: templates/components/front-hero.php:27
 msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/counter-hero.php:15
-#: templates/components/second-pillar-payment-rate-hero.php:20
+#: templates/components/counter-hero.php:14
+#: templates/components/second-pillar-payment-rate-hero.php:19
 msgid "Days"
 msgstr "päeva"
 
-#: templates/components/counter-hero.php:22
-#: templates/components/second-pillar-payment-rate-hero.php:27
+#: templates/components/counter-hero.php:21
+#: templates/components/second-pillar-payment-rate-hero.php:26
 msgid "Hours"
 msgstr "tundi"
 
-#: templates/components/counter-hero.php:29
-#: templates/components/second-pillar-payment-rate-hero.php:34
+#: templates/components/counter-hero.php:28
+#: templates/components/second-pillar-payment-rate-hero.php:33
 msgid "Minutes"
 msgstr "minutit"
 
@@ -179,87 +159,6 @@ msgstr "minutit"
 #: templates/components/modal-founders.php:11
 msgid "Founding members"
 msgstr "Asutajaliikmed"
-
-#: templates/components/front-founders.php:12
-#: templates/components/front-founders.php:39
-#: templates/components/front-founders.php:68
-msgid "Tuleva founder"
-msgstr "Tuleva asutaja"
-
-#: templates/components/front-founders.php:18
-#: templates/components/front-founders.php:45
-#: templates/components/front-founders.php:74
-#: templates/components/fund-calculator.php:16
-msgid "II pillar: Tuleva World Stocks Pension Fund"
-msgstr "II sammas: Tuleva Maailma Aktsiate Pensionifond"
-
-#: templates/components/front-founders.php:21
-msgid ""
-"Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea of "
-"creating a better pension fund. At first, Indrek politely listened to the "
-"idea and concluded that, yes, that is bad, but I do not have time to help "
-"here."
-msgstr ""
-"Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate pensionifondite "
-"loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt ära ja ütles, et "
-"nojah, eks ta ole; kahjuks endal pole aega appi tulla."
-
-#: templates/components/front-founders.php:23
-msgid ""
-"After a while, Indrek had a look at his pension account when opening his "
-"internet bank. What he saw, shocked him thoroughly. He called Tõnu and they "
-"decided to start working."
-msgstr ""
-"Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma "
-"pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas Tõnule "
-"ja nad otsustasid tegutsema asuda."
-
-#: templates/components/front-founders.php:48
-msgid ""
-"One day, Annika did a few calculations and found, that she has paid 108 "
-"euros in fees for every 1000 euros she had on her pension account while her "
-"profit was only 77 euros."
-msgstr ""
-"Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud "
-"euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud vaid "
-"77 eurot."
-
-#: templates/components/front-founders.php:50
-msgid ""
-"When looking closer, she realised that banks have dealt similar injustice to "
-"hundreds of thousands of pension savers. It was clear to Annika that "
-"something had to be done."
-msgstr ""
-"Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud sadade "
-"tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb ette võtta."
-
-#: templates/components/front-founders.php:65
-msgid "Kristo Käärmann and Taavet Hinrikus"
-msgstr "Kristo Käärmann ja Taavet Hinrikus"
-
-#: templates/components/front-founders.php:77
-msgid ""
-"One of the world’s most successful start-ups Transferwise was borne from "
-"similar frustration as Tuleva. Transferwise fights against hidden fees that "
-"banks charge for currency exchange and international payments. Tuleva fights "
-"against high management fees and hidden expenses of pension funds so that "
-"we, people of Estonia, could save money for ourselves, not banks."
-msgstr ""
-"Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest "
-"frustratsioonist nagu Tulevagi. Transferwise võitleb varjatud tasude vastu, "
-"mida pangad võtavad rahavahetuse ja rahvusvaheliste maksete eest. Tuleva "
-"võitleb kõrgete valitsemistasude ja pensionifondide varjatud kulude vastu, "
-"et meie, Eesti inimesed, saaksime raha koguda endale, mitte pankadele."
-
-#: templates/components/front-founders.php:79
-msgid ""
-"It was logical that Kristo and Taavet wanted to support the initiative to "
-"make pensions better and be part of founding a start-up that belongs to "
-"people themselves."
-msgstr ""
-"Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi paremaks "
-"muutmist ja olla osalised Eesti inimestele endile kuuluva idufirma üles "
-"ehitamisel."
 
 #: templates/components/front-hero/calculator.php:7
 msgid "Your age"
@@ -595,111 +494,11 @@ msgstr ""
 "<a href=\"/netipanga-juhend/\" class=\"btn btn-primary btn-lg\" data-"
 "label=\"fund-details-choose-stocks\">Valin selle fondi</a>"
 
-#: templates/components/fund-calculator.php:13
-msgid "Age: 28"
-msgstr "Vanus: 28"
-
-#: templates/components/fund-calculator.php:19
-msgid ""
-"Kristi brought her II pillar assets and future contributions to Tuleva "
-"pension fund. Thanks to lower management fee, Kristi saves during her work "
-"life"
-msgstr ""
-"Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha "
-"Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule tööelu "
-"jooksul kokku"
-
-#: templates/components/fund-counter.php:7
-msgid "3600"
-msgstr ""
-
-#: templates/components/fund-counter.php:11
-msgid "people of Estonia have already chosen Tuleva pension fund."
-msgstr "Eesti inimest on juba valinud Tuleva pensionifondi."
-
-#: templates/components/fund-counter.php:21
-msgid "As secure as bank’s pension fund."
-msgstr "Sama turvaline kui panga pensionifond."
-
-#: templates/components/fund-counter.php:22
-#: templates/components/mutual-proposal.php:14
-msgid "Read more"
-msgstr "Uuri lähemalt"
-
-#: templates/components/fund-fees.php:5
-#: templates/components/fund-navigation.php:25
-msgid "Why costs matter?"
-msgstr "Miks kulud loevad?"
-
-#: templates/components/fund-fees.php:13
-msgid "Lower costs create better chances for growth"
-msgstr "Madalad kulud loovad parimad eeldused kasvuks"
-
-#: templates/components/fund-fees.php:14
-msgid ""
-"The lower the costs of the pension fund, the better chances are that your "
-"money will grow the most by the time you retire. We at Tuleva did not "
-"disover this, it is the finding of most leading economists of the world."
-msgstr ""
-"Mida madalamad on pensionifondi kulud, seda paremad on eeldused selleks, et "
-"sinu vara kasvaks pensioniks võimalikult palju. Seda ei avastanud meie "
-"Tulevas, vaid maailma juhtivad majandusteadlased."
-
-#: templates/components/fund-fees.php:19
-msgid "Most fund managers’ costs are not justified."
-msgstr "Enamik fondivalitsejate kulutusi pole õigustatud."
-
-#: templates/components/fund-fees.php:20
-msgid ""
-"Analysing the results of investment funds over the course of world stock "
-"markets’ history, they have found a sobering fact - most costs that fund "
-"managers use for justifying high management fees do not create any value for "
-"us, pension savers."
-msgstr ""
-"Analüüsides investeerimisfondide tulemusi terve maailma väärtpaberiturgude "
-"ajaloo vältel, on nad leidnud kainestava tõsiasja -  enamik kulutusi, "
-"millega fondivalitsejad kõrgeid valitsemistasusid õigustavad, ei loo "
-"tegelikult meile, pensionikogujatele väärtust."
-
-#: templates/components/fund-fees.php:31
-msgid "Fund managers have not beaten market average"
-msgstr "Fondijuhid pole suutnud turu keskmist lüüa"
-
-#: templates/components/fund-fees.php:32
-msgid ""
-"Biggest share of pension fund managers’ fees go towards parent banks’ "
-"marketing and sales expenses. Small part goes also towards salaries of the "
-"und manager, analysts and other employees. Unfortunately, the bleak "
-"experience of Estonian pension funds as well as the whole investment world "
-"shows, that fund managers’ attempts to outsmart the market give investors "
-"worse results than market average."
-msgstr ""
-"Suurem osa pankade pensionifondivalitsejate valitsemistasudest läheb "
-"emapankade tuluks ning turundus- ja müügikuludeks. Osa läheb ka fondijuhi ja "
-"analüütikute ja teiste töötajate palkadeks. Paraku näitab nii Eesti "
-"pensionifondide säratu minevik kui ka maailma kogemus, et fondijuhtide "
-"katsed turust targemad olla toovad pensionikogujale hoopis turu keskmisest "
-"halvema tulemuse."
-
-#: templates/components/fund-fees.php:38
-msgid "You don’t believe us?"
-msgstr "Sa ei usu meid?"
-
-#: templates/components/fund-fees.php:39
-msgid ""
-"See what <a href=\"#\" class=\"inline-link\">Warren Buffett</a> thinks of "
-"this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a "
-"href=\"#\" class=\"inline-link\">article series</a>."
-msgstr ""
-"Loe, mida arvab asjast <a href=“#” class=“inline-link”>Warren Buffett</a>. "
-"Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a href=“#” "
-"class=“inline-link”>artikliseeriat</a>."
-
-#: templates/components/fund-manager.php:7
+#: templates/components/fund-manager.php:8
 msgid "fund manager"
 msgstr "fondijuht"
 
-#: templates/components/fund-manager.php:11
+#: templates/components/fund-manager.php:13
 msgid ""
 "I follow the principle of Jack Bogle, the founder of Vanguard index funds: "
 "keep the investment in a low-cost fund and “don’t peek” – keep the end goal "
@@ -713,7 +512,7 @@ msgstr ""
 "muretsemisele. Ootasin kaua, et keegi ka Eestis sellise fondi teeks. Lõpuks "
 "tuli ise teha.”"
 
-#: templates/components/fund-manager.php:13
+#: templates/components/fund-manager.php:15
 msgid ""
 "Tõnu has been working in the investment field for over 20 years. Before "
 "founding Tuleva, he headed an investment company he part-owned, Karu "
@@ -729,74 +528,6 @@ msgstr ""
 "investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London "
 "Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu "
 "Ülikoolis."
-
-#: templates/components/fund-navigation.php:5
-msgid "Which fund to choose?"
-msgstr "Kuidas fondi valida?"
-
-#: templates/components/fund-navigation.php:15
-msgid "Is Tuleva safe?"
-msgstr "Kas Tuleva on turvaline?"
-
-#: templates/components/fund-security.php:6
-#: templates/components/modal-security.php:12
-msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
-msgstr ""
-"Kas meie raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?"
-
-#: templates/components/fund-security.php:8
-#: templates/components/modal-security.php:15
-msgid "YES!"
-msgstr "JAH!"
-
-#: templates/components/fund-security.php:18
-#: templates/components/modal-security.php:28
-msgid "Financial Inspection"
-msgstr "Finantsinspektsioon"
-
-#: templates/components/fund-security.php:19
-#: templates/components/modal-security.php:31
-msgid ""
-"issued a licence to Tuleva fund manager and controls that our everyday "
-"operations comply with regulations."
-msgstr ""
-"andis Tuleva fondivalitsejale tegevusloa ja valvab, et meie igapäevane "
-"tegevus vastaks igati nõudmistele."
-
-#: templates/components/fund-security.php:29
-#: templates/components/modal-security.php:43
-msgid "Swedbank"
-msgstr ""
-
-#: templates/components/fund-security.php:30
-#: templates/components/modal-security.php:46
-msgid ""
-"is Tuleva pension funds’ depositary bank. Depositary bank approves every "
-"transaction with fund’s assets. Exactly like with bank’s own funds."
-msgstr ""
-"on Tuleva fondide depoopank. Depoopank kinnitab iga tehingu fondi varaga. "
-"Täpselt nii nagu panga enda fondide puhul."
-
-#: templates/components/fund-security.php:40
-#: templates/components/modal-security.php:58
-msgid "State guarantee fund"
-msgstr "Riiklik tagatisfond"
-
-#: templates/components/fund-security.php:41
-#: templates/components/modal-security.php:61
-msgid ""
-"protects all pension fund investors against the worst in case fund manager "
-"causes harm to investors."
-msgstr ""
-"kaitseb kõigi pensionifondide investoreid halvima vastu, kui fondivalitseja "
-"süül peaks tekkima kahju."
-
-#: templates/components/fund-security.php:46
-msgid ""
-"Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://"
-"www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/"
-"\">pensionikeskus.ee</a>"
-msgstr " "
 
 #: templates/components/fund-stocks-details.php:46
 #: templates/components/fund-third-details.php:46
@@ -877,15 +608,27 @@ msgstr "Osaliselt tehtud"
 msgid "In progress"
 msgstr "Töös"
 
-#: templates/components/login-cta.php:21
+#: templates/components/jobs/job-openings.php:23
+msgid "Open positions"
+msgstr "Avatud positsioonid"
+
+#: templates/components/jobs/job-openings.php:24
+msgid "Come and join us – help bring to life the plans for the years ahead."
+msgstr "Tule anna oma panus ja aita viia ellu järgmiste aastate plaanid."
+
+#: templates/components/jobs/job-openings.php:70
+msgid "Apply for this job"
+msgstr "Kandideerin kohale"
+
+#: templates/components/login-cta.php:20
 msgid "ID-card"
 msgstr "ID-kaart"
 
-#: templates/components/login-cta.php:24
+#: templates/components/login-cta.php:23
 msgid "Mobile-ID"
 msgstr "Mobiil-ID"
 
-#: templates/components/login-cta.php:27
+#: templates/components/login-cta.php:26
 msgid "Smart-ID"
 msgstr "Smart-ID"
 
@@ -1591,6 +1334,55 @@ msgstr ""
 "bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles "
 "õpime meie ühise kasu ja Eesti arengu nimel rakendama."
 
+#: templates/components/modal-security.php:12
+msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
+msgstr ""
+"Kas meie raha on Tulevas ikka sama hästi kaitstud kui panga pensionifondis?"
+
+#: templates/components/modal-security.php:15
+msgid "YES!"
+msgstr "JAH!"
+
+#: templates/components/modal-security.php:28
+msgid "Financial Inspection"
+msgstr "Finantsinspektsioon"
+
+#: templates/components/modal-security.php:31
+msgid ""
+"issued a licence to Tuleva fund manager and controls that our everyday "
+"operations comply with regulations."
+msgstr ""
+"andis Tuleva fondivalitsejale tegevusloa ja valvab, et meie igapäevane "
+"tegevus vastaks igati nõudmistele."
+
+#: templates/components/modal-security.php:43
+msgid "Swedbank"
+msgstr ""
+
+#: templates/components/modal-security.php:46
+msgid ""
+"is Tuleva pension funds’ depositary bank. Depositary bank approves every "
+"transaction with fund’s assets. Exactly like with bank’s own funds."
+msgstr ""
+"on Tuleva fondide depoopank. Depoopank kinnitab iga tehingu fondi varaga. "
+"Täpselt nii nagu panga enda fondide puhul."
+
+#: templates/components/modal-security.php:58
+msgid "State guarantee fund"
+msgstr "Riiklik tagatisfond"
+
+#: templates/components/modal-security.php:61
+msgid ""
+"protects all pension fund investors against the worst in case fund manager "
+"causes harm to investors."
+msgstr ""
+"kaitseb kõigi pensionifondide investoreid halvima vastu, kui fondivalitseja "
+"süül peaks tekkima kahju."
+
+#: templates/components/mutual-proposal.php:14
+msgid "Read more"
+msgstr "Uuri lähemalt"
+
 #: templates/components/notice.php:6
 msgid "New"
 msgstr "Uus"
@@ -1648,7 +1440,7 @@ msgstr ""
 "statistiliselt elada jäänud aastad). Aktsiaturu ajalooline tootlus on 7%, "
 "kuid see ei taga sarnast tootlust tulevikus."
 
-#: templates/components/payout-hero.php:50
+#: templates/components/payout-hero.php:49
 msgid "How does the payout calculator work?"
 msgstr "Kuidas väljamaksete kalkulaator töötab?"
 
@@ -1900,30 +1692,6 @@ msgstr "Sinu e-maili aadress"
 msgid "Join mailing list"
 msgstr "Liitu uudiskirjaga"
 
-#: templates/fund-content-old.php:17 templates/fund-content.php:17
-msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
-msgstr ""
-"Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
-
-#: templates/fund-content-old.php:25 templates/fund-content.php:25
-msgid ""
-"This fund has been already chosen by %s people - including Tuleva founders "
-"and most of the members. <br> If you are over 55, consider our bond fund."
-"<br> Changing pension fund if free for you and takes only 5 minutes in your "
-"internet bank."
-msgstr ""
-"Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja "
-"enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
-"<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
-
-#: templates/fund-content-old.php:32 templates/fund-content.php:32
-msgid ""
-"<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
-"lg\">Choose Tuleva pension fund</a>"
-msgstr ""
-"<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
-"lg\">Suuna pension Tulevasse</a>"
-
 #: templates/header/main.php:9 templates/header/main.php:20
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr "https://pension.tuleva.ee"
@@ -2089,6 +1857,206 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid ""
+#~ "We are looking for new colleagues to help strengthen our team and achieve "
+#~ "the goals set for the coming years."
+#~ msgstr "Tule anna oma panus ja aita viia ellu järgmiste aastate plaanid!"
+
+#~ msgid "Apply now"
+#~ msgstr "Kandideeri kohale"
+
+#~ msgid "Fund details page"
+#~ msgstr "Fondi info"
+
+#~ msgid "Fund page"
+#~ msgstr "Fondide leht"
+
+#~ msgid "Membership success"
+#~ msgstr "Liikmeks astutud"
+
+#~ msgid "Referral 55+"
+#~ msgstr "Soovitus 55+"
+
+#~ msgid "Tuleva founder"
+#~ msgstr "Tuleva asutaja"
+
+#~ msgid "II pillar: Tuleva World Stocks Pension Fund"
+#~ msgstr "II sammas: Tuleva Maailma Aktsiate Pensionifond"
+
+#~ msgid ""
+#~ "Indrek Neivelt was one of the first to whom Tõnu Pekk told about the idea "
+#~ "of creating a better pension fund. At first, Indrek politely listened to "
+#~ "the idea and concluded that, yes, that is bad, but I do not have time to "
+#~ "help here."
+#~ msgstr ""
+#~ "Indrek Neivelt oli üks esimesi, kellele Tõnu Pekk paremate "
+#~ "pensionifondite loomise ideest rääkis. Indrek kuulas algul Tõnu viisakalt "
+#~ "ära ja ütles, et nojah, eks ta ole; kahjuks endal pole aega appi tulla."
+
+#~ msgid ""
+#~ "After a while, Indrek had a look at his pension account when opening his "
+#~ "internet bank. What he saw, shocked him thoroughly. He called Tõnu and "
+#~ "they decided to start working."
+#~ msgstr ""
+#~ "Natukese aja pärast kiikas Indrek siiski huvi pärast internetipangas oma "
+#~ "pensionikontole. See, mida ta seal nägi, oli talle shokk. Ta helistas "
+#~ "Tõnule ja nad otsustasid tegutsema asuda."
+
+#~ msgid ""
+#~ "One day, Annika did a few calculations and found, that she has paid 108 "
+#~ "euros in fees for every 1000 euros she had on her pension account while "
+#~ "her profit was only 77 euros."
+#~ msgstr ""
+#~ "Ühel päeval arvutas Annika kokku, et ta on iga 1000 pensionifondi kogutud "
+#~ "euro pealt maksnud pangale 108 eurot teenustasu, aga ise tulu teeninud "
+#~ "vaid 77 eurot."
+
+#~ msgid ""
+#~ "When looking closer, she realised that banks have dealt similar injustice "
+#~ "to hundreds of thousands of pension savers. It was clear to Annika that "
+#~ "something had to be done."
+#~ msgstr ""
+#~ "Lähemalt uurides avastas ta, et sama ebaõiglaselt on pangad käitunud "
+#~ "sadade tuhandete inimeste rahaga. Annikale oli selge, et midagi tuleb "
+#~ "ette võtta."
+
+#~ msgid "Kristo Käärmann and Taavet Hinrikus"
+#~ msgstr "Kristo Käärmann ja Taavet Hinrikus"
+
+#~ msgid ""
+#~ "One of the world’s most successful start-ups Transferwise was borne from "
+#~ "similar frustration as Tuleva. Transferwise fights against hidden fees "
+#~ "that banks charge for currency exchange and international payments. "
+#~ "Tuleva fights against high management fees and hidden expenses of pension "
+#~ "funds so that we, people of Estonia, could save money for ourselves, not "
+#~ "banks."
+#~ msgstr ""
+#~ "Maailma üks edukaimad idufirmasid Transferwise sündis samasugusest "
+#~ "frustratsioonist nagu Tulevagi. Transferwise võitleb varjatud tasude "
+#~ "vastu, mida pangad võtavad rahavahetuse ja rahvusvaheliste maksete eest. "
+#~ "Tuleva võitleb kõrgete valitsemistasude ja pensionifondide varjatud "
+#~ "kulude vastu, et meie, Eesti inimesed, saaksime raha koguda endale, mitte "
+#~ "pankadele."
+
+#~ msgid ""
+#~ "It was logical that Kristo and Taavet wanted to support the initiative to "
+#~ "make pensions better and be part of founding a start-up that belongs to "
+#~ "people themselves."
+#~ msgstr ""
+#~ "Oli loomulik, et Kristo ja Taavet tahtsid toetada pensionisüsteemi "
+#~ "paremaks muutmist ja olla osalised Eesti inimestele endile kuuluva "
+#~ "idufirma üles ehitamisel."
+
+#~ msgid "Age: 28"
+#~ msgstr "Vanus: 28"
+
+#~ msgid ""
+#~ "Kristi brought her II pillar assets and future contributions to Tuleva "
+#~ "pension fund. Thanks to lower management fee, Kristi saves during her "
+#~ "work life"
+#~ msgstr ""
+#~ "Kristi tõi oma II sambasse kogunenud vara üle ja kogub ka edaspidi raha "
+#~ "Tuleva pensionifondi. Kristi hoiab tänu madalamale valitsemistasule "
+#~ "tööelu jooksul kokku"
+
+#~ msgid "people of Estonia have already chosen Tuleva pension fund."
+#~ msgstr "Eesti inimest on juba valinud Tuleva pensionifondi."
+
+#~ msgid "As secure as bank’s pension fund."
+#~ msgstr "Sama turvaline kui panga pensionifond."
+
+#~ msgid "Why costs matter?"
+#~ msgstr "Miks kulud loevad?"
+
+#~ msgid "Lower costs create better chances for growth"
+#~ msgstr "Madalad kulud loovad parimad eeldused kasvuks"
+
+#~ msgid ""
+#~ "The lower the costs of the pension fund, the better chances are that your "
+#~ "money will grow the most by the time you retire. We at Tuleva did not "
+#~ "disover this, it is the finding of most leading economists of the world."
+#~ msgstr ""
+#~ "Mida madalamad on pensionifondi kulud, seda paremad on eeldused selleks, "
+#~ "et sinu vara kasvaks pensioniks võimalikult palju. Seda ei avastanud meie "
+#~ "Tulevas, vaid maailma juhtivad majandusteadlased."
+
+#~ msgid "Most fund managers’ costs are not justified."
+#~ msgstr "Enamik fondivalitsejate kulutusi pole õigustatud."
+
+#~ msgid ""
+#~ "Analysing the results of investment funds over the course of world stock "
+#~ "markets’ history, they have found a sobering fact - most costs that fund "
+#~ "managers use for justifying high management fees do not create any value "
+#~ "for us, pension savers."
+#~ msgstr ""
+#~ "Analüüsides investeerimisfondide tulemusi terve maailma "
+#~ "väärtpaberiturgude ajaloo vältel, on nad leidnud kainestava tõsiasja -  "
+#~ "enamik kulutusi, millega fondivalitsejad kõrgeid valitsemistasusid "
+#~ "õigustavad, ei loo tegelikult meile, pensionikogujatele väärtust."
+
+#~ msgid "Fund managers have not beaten market average"
+#~ msgstr "Fondijuhid pole suutnud turu keskmist lüüa"
+
+#~ msgid ""
+#~ "Biggest share of pension fund managers’ fees go towards parent banks’ "
+#~ "marketing and sales expenses. Small part goes also towards salaries of "
+#~ "the und manager, analysts and other employees. Unfortunately, the bleak "
+#~ "experience of Estonian pension funds as well as the whole investment "
+#~ "world shows, that fund managers’ attempts to outsmart the market give "
+#~ "investors worse results than market average."
+#~ msgstr ""
+#~ "Suurem osa pankade pensionifondivalitsejate valitsemistasudest läheb "
+#~ "emapankade tuluks ning turundus- ja müügikuludeks. Osa läheb ka fondijuhi "
+#~ "ja analüütikute ja teiste töötajate palkadeks. Paraku näitab nii Eesti "
+#~ "pensionifondide säratu minevik kui ka maailma kogemus, et fondijuhtide "
+#~ "katsed turust targemad olla toovad pensionikogujale hoopis turu "
+#~ "keskmisest halvema tulemuse."
+
+#~ msgid "You don’t believe us?"
+#~ msgstr "Sa ei usu meid?"
+
+#~ msgid ""
+#~ "See what <a href=\"#\" class=\"inline-link\">Warren Buffett</a> thinks of "
+#~ "this.  If you want to dig deeper, read Tuleva fund manager Tõnu Pekk’s <a "
+#~ "href=\"#\" class=\"inline-link\">article series</a>."
+#~ msgstr ""
+#~ "Loe, mida arvab asjast <a href=“#” class=“inline-link”>Warren Buffett</"
+#~ "a>. Kui tahad tõsisemalt süveneda, loe Tuleva fondijuht Tõnu Peki <a "
+#~ "href=“#” class=“inline-link”>artikliseeriat</a>."
+
+#~ msgid "Which fund to choose?"
+#~ msgstr "Kuidas fondi valida?"
+
+#~ msgid "Is Tuleva safe?"
+#~ msgstr "Kas Tuleva on turvaline?"
+
+#~ msgid ""
+#~ "Loe lähemalt, kuidas sinu varad kaitstud on: <a href=\"https://"
+#~ "www.pensionikeskus.ee/ii-sammas/investorkaitse/varade-kaitse/"
+#~ "\">pensionikeskus.ee</a>"
+#~ msgstr " "
+
+#~ msgid "Aged 18 - 55? For you suits <br>Tuleva World Stocks Pension Fund."
+#~ msgstr ""
+#~ "Vanust 18 - 55? Sulle on mõeldud<br>Tuleva Maailma Aktsiate Pensionifond."
+
+#~ msgid ""
+#~ "This fund has been already chosen by %s people - including Tuleva "
+#~ "founders and most of the members. <br> If you are over 55, consider our "
+#~ "bond fund.<br> Changing pension fund if free for you and takes only 5 "
+#~ "minutes in your internet bank."
+#~ msgstr ""
+#~ "Selle fondi on juba valinud %s inimest - nende seas ka Tuleva asutajad ja "
+#~ "enamik liikmeid.<br>Kui oled üle 55-aastane, kaalu meie võlakirjafondi."
+#~ "<br>Pensionifondi vahetus on sulle tasuta ja võtab netipangas 5 minutit."
+
+#~ msgid ""
+#~ "<a href=\"/en/transfer-pension-tuleva/\" class=\"btn btn-primary btn-"
+#~ "lg\">Choose Tuleva pension fund</a>"
+#~ msgstr ""
+#~ "<a href=\"/kuidas-tuua-pension-tulevasse/\" class=\"btn btn-primary btn-"
+#~ "lg\">Suuna pension Tulevasse</a>"
 
 #~ msgid "and"
 #~ msgstr "ja"

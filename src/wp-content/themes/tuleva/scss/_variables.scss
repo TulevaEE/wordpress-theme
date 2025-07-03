@@ -37,12 +37,12 @@ $text-primary:        #293036;
 $text-secondary:      #6B7074;
 $text-tertiary:       #8A8D91;
 
+$text-navy:           $navy-blue;
 $text-navy-secondary: #5C738C;
 
 $text-green: $green;
 $text-red:   $red;
 $text-blue:  $blue;
-$text-navy:  $navy-blue;
 
 $note-bg: #fff6d9;
 $note-border: #faeed0;
@@ -90,6 +90,12 @@ $spacers: (
   5: ($spacer * 3),
   6: ($spacer * 6)
 ) !default;
+
+// Accordion
+
+$accordion-button-color:            $blue;
+$accordion-button-active-bg:        transparent;
+$accordion-button-active-color:     $text-navy;
 
 // Tooltips
 
