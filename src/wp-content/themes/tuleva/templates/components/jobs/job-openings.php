@@ -10,7 +10,7 @@ $block_uid = uniqid();
         <div class="container">
 
             <div class="row align-items-start section-spacing-bottom">
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto text-center">
+                <div class="col-lg-9 col-xl-8 mx-auto text-center">
                     <h2 class="m-0 mb-4"><?php _e('Open positions', TEXT_DOMAIN); ?></h2>
                     <p class="lead m-0"><?php _e('Come and join us – help bring to life the plans for the years ahead.', TEXT_DOMAIN); ?></p>
                 </div>

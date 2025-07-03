@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
 "POT-Creation-Date: 2025-07-03T17:50:56+00:00\n"
-"PO-Revision-Date: 2025-07-03 21:48+0300\n"
+"PO-Revision-Date: 2025-07-03 22:04+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -614,7 +614,8 @@ msgstr "Avatud positsioonid"
 
 #: templates/components/jobs/job-openings.php:24
 msgid "Come and join us – help bring to life the plans for the years ahead."
-msgstr "Tule anna oma panus ja aita viia ellu järgmiste aastate plaanid."
+msgstr ""
+"Tule anna oma panus ja aita viia ellu järgmisteks aastateks seatud eesmärgid."
 
 #: templates/components/jobs/job-openings.php:70
 msgid "Apply for this job"

@@ -15172,6 +15172,10 @@ sup {
   color: #002f63;
 }
 
+.hero-content > :last-child {
+  margin-bottom: 0;
+}
+
 .contacts-block {
   -webkit-box-pack: center;
   -webkit-justify-content: center;

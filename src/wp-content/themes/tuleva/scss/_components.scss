@@ -12,6 +12,12 @@
     color: $text-navy;
 }
 
+.hero {
+    &-content > :last-child {
+        margin-bottom: 0;
+    }
+}
+
 .contacts-block {
     justify-content: center;
     &__item {
