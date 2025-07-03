@@ -23,8 +23,8 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
                                 <?php if ($thumbnail_url) { ?>
                                     <img class="w-25 image-circle mb-2" src="<?php echo $thumbnail_url; ?>" alt="">
                                 <?php } ?>
-                                <h3 class="mb-3"><?php the_sub_field('title'); ?></h3>
-                                <a class="btn btn-outline-primary btn-lg collapsed" data-bs-toggle="collapse" data-bs-target="#<?php echo $job_id_with_hash; ?>" href="#<?php echo $job_id; ?>" aria-controls="<?php echo $job_id; ?>">
+                                <h2 class="mb-3"><?php the_sub_field('title'); ?></h2>
+                                <a role="button" class="btn btn-outline-primary btn-lg collapsed" data-bs-toggle="collapse" data-bs-target="#<?php echo $job_id_with_hash; ?>" href="#<?php echo $job_id; ?>" aria-controls="<?php echo $job_id; ?>">
                                     <span class="collapsed__shown"><?php the_sub_field('open_link_text'); ?></span>
                                     <span class="collapsed__hidden"><?php the_sub_field('close_link_text'); ?></span>
                                 </a>
@@ -45,7 +45,7 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
     <?php if( have_rows('job_openings') ): ?>
         <?php while( have_rows('job_openings') ): the_row(); ?>
             <?php $job_id = hyphenate_string(get_sub_field('title') . $unique_id); ?>
-            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block bg-blue-washed section-spacing" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
+            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block section-spacing" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
                 <div class="container my-auto">
                     <div class="row align-items-center">
                         <div class="col-12 column-lg-2">

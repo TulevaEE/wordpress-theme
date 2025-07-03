@@ -5,6 +5,6 @@
 
 <body <?php body_class(''); ?>>
 
-<a class="skip-link visually-hidden-focusable" tabindex="1" href="#main"><?php _e('Skip to content', TEXT_DOMAIN); ?></a>
+<a class="skip-link visually-hidden-focusable" href="#main"><?php _e('Skip to content', TEXT_DOMAIN); ?></a>
 
 <?php get_template_part('templates/header/main'); ?>
