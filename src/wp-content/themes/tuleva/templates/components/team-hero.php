@@ -12,9 +12,9 @@ $security_link_url = get_sub_field('security_link_url');
 $shortcode = get_sub_field('shortcode');
 $lead_text = get_sub_field('lead_text');
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-team d-flex flex-column">
+<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-team d-flex flex-column section-spacing">
     <div class="container my-auto">
-        <div class="row align-items-center py-5">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6 pe-lg-4 mx-auto">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
                 <p class="lead text-navy mb-3"><?php echo do_shortcode($lead_text); ?></p>

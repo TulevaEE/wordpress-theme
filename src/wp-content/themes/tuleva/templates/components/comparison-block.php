@@ -1,4 +1,4 @@
-<div id="comparison-block" class="row row-spacing-quarter"></div>
+<div id="comparison-block" class="row section-spacing-half"></div>
 <div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('container'); ?>">
     <div class="row columns-block comparison-component">
         <div class="col-md-6">

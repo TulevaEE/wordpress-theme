@@ -61,7 +61,7 @@ function tu_widgets_init() {
     register_sidebar( [
         'name'          => 'Landing page widget area',
         'id'            => 'landing_page_widget_area',
-        'before_widget' => '<div class="text-center row-spacing-half">',
+        'before_widget' => '<div class="text-center section-spacing-half">',
         'after_widget'  => '</div>',
     ] );
 

@@ -9,7 +9,7 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
 $image_caption = wp_get_attachment_caption($image_id);
 ?>
 
-<div class="media-block__media mb-4">
+<div class="media-block__media">
     <div class="media-block__media__image">
         <?php if ($image_link_url) { ?>
             <a href="<?php echo $image_link_url; ?>">
@@ -25,6 +25,6 @@ $image_caption = wp_get_attachment_caption($image_id);
         <?php } ?>
     </div>
     <?php if ($image_caption) { ?>
-        <p class="image-caption small mt-2"><?php echo esc_html($image_caption); ?></p>
+        <p class="m-0 mt-2 image-caption small"><?php echo esc_html($image_caption); ?></p>
     <?php } ?>
 </div>

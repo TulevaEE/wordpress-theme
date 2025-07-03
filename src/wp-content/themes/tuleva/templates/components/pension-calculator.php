@@ -1,6 +1,6 @@
-<h2 class="row-spacing-bottom-quarter text-center"><?php _e('Average management fee savings with Tuleva', TEXT_DOMAIN); ?></h2>
+<h2 class="section-spacing-half-bottom text-center"><?php _e('Average management fee savings with Tuleva', TEXT_DOMAIN); ?></h2>
 
-<div class="row-spacing-bottom-quarter">
+<div class="section-spacing-half-bottom">
     <div class="row">
         <div class="col-xs-6 text-uppercase slider-title">
             <?php _e('Net wage', TEXT_DOMAIN); ?>
@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<div class="row-spacing-bottom-quarter">
+<div class="section-spacing-half-bottom">
     <div class="row">
         <div class="col-xs-6 text-uppercase slider-title">
             <?php _e('Age', TEXT_DOMAIN); ?>

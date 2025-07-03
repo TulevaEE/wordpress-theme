@@ -45,9 +45,9 @@ $unique_parent_id = 'accordion-parent' . $unique_id;
     <?php if( have_rows('job_openings') ): ?>
         <?php while( have_rows('job_openings') ): the_row(); ?>
             <?php $job_id = hyphenate_string(get_sub_field('title') . $unique_id); ?>
-            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block bg-blue-washed" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
+            <section id="<?php echo $job_id; ?>" class="collapse collapse-lg-block bg-blue-washed section-spacing" data-parent=".<?php echo $unique_parent_id; ?>" aria-expanded="false">
                 <div class="container my-auto">
-                    <div class="row align-items-center py-5">
+                    <div class="row align-items-center">
                         <div class="col-12 column-lg-2">
                             <?php echo get_sub_field('text'); ?>
                         </div>

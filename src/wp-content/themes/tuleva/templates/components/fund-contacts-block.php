@@ -10,7 +10,7 @@
                 </div>
             <?php } ?>
     </div>
-    <div class="row row-spacing-top-half">
+    <div class="row section-spacing-half-top">
         <div class="col-md-6 offset-md-3 text-center">
             <?php echo get_sub_field('text'); ?>
         </div>

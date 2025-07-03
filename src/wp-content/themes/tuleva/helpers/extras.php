@@ -68,9 +68,9 @@ function get_component_classes($classes = [])
     }
 
     if (get_sub_field('spacing') === 'half') {
-        $classes[] = 'row-spacing-half';
+        $classes[] = 'section-spacing-half';
     } else {
-        $classes[] = 'row-spacing';
+        $classes[] = 'section-spacing';
     }
 
     return implode(' ', $classes);

@@ -1,68 +1,76 @@
-$row-spacing: 6rem;
-$row-spacing-half: 3rem;
-$row-spacing-mobile: $row-spacing / 2;
-$row-spacing-half-mobile: $row-spacing-half / 2;
-$row-spacing-quarter: 3rem;
+$section-spacing: 6rem;
+$section-spacing-mobile: $section-spacing / 2;
 
-.row-spacing {
-    margin-top: $row-spacing;
-    margin-bottom: $row-spacing;
+$section-spacing-double: 12rem;
+$section-spacing-double-mobile: $section-spacing-double / 2;
+
+$section-spacing-half: 3rem;
+$section-spacing-half-mobile: $section-spacing-half / 2;
+
+.section-spacing {
+    padding-top: $section-spacing;
+    padding-bottom: $section-spacing;
+}
+.section-spacing-top {
+    padding-top: $section-spacing;
+}
+.section-spacing-bottom {
+    padding-bottom: $section-spacing;
 }
 
-.row-spacing-half {
-    margin-top: $row-spacing-half;
-    margin-bottom: $row-spacing-half;
+.section-spacing-double {
+    padding-top: $section-spacing-double;
+    padding-bottom: $section-spacing-double;
+}
+.section-spacing-double-top {
+    padding-top: $section-spacing-double;
+}
+.section-spacing-double-bottom {
+    padding-bottom: $section-spacing-double;
 }
 
-.row-spacing-quarter {
-    margin-top: $row-spacing-quarter;
-    margin-bottom: $row-spacing-quarter;
+.section-spacing-half {
+    padding-top: $section-spacing-half;
+    padding-bottom: $section-spacing-half;
 }
-
-.row-spacing-top {
-    margin-top: $row-spacing;
+.section-spacing-half-top {
+    padding-top: $section-spacing-half;
 }
-
-.row-spacing-top-half {
-    margin-top: $row-spacing-half;
-}
-
-.row-spacing-bottom {
-    margin-bottom: $row-spacing;
-}
-
-.row-spacing-bottom-half {
-    margin-bottom: $row-spacing-half;
-}
-
-.row-spacing-bottom-quarter {
-    margin-bottom: $row-spacing-quarter;
+.section-spacing-half-bottom {
+    padding-bottom: $section-spacing-half;
 }
 
 @include media-breakpoint-down(sm) {
-    .row-spacing {
-        margin-top: $row-spacing-mobile;
-        margin-bottom: $row-spacing-mobile;
+    .section-spacing {
+        padding-top: $section-spacing-mobile;
+        padding-bottom: $section-spacing-mobile;
+    }
+    .section-spacing-top {
+        padding-top: $section-spacing-mobile;
+    }
+    .section-spacing-bottom {
+        padding-bottom: $section-spacing-mobile;
     }
 
-    .row-spacing-half {
-        margin-top: $row-spacing-half-mobile;
-        margin-bottom: $row-spacing-half-mobile;
+    .section-spacing-double {
+        padding-top: $section-spacing-double-mobile;
+        padding-bottom: $section-spacing-double-mobile;
+    }
+    .section-spacing-double-top {
+        padding-top: $section-spacing-double-mobile;
+    }
+    .section-spacing-double-bottom {
+        padding-bottom: $section-spacing-double-mobile;
     }
 
-    .row-spacing-top {
-        margin-top: $row-spacing-mobile;
+    .section-spacing-half {
+        padding-top: $section-spacing-half-mobile;
+        padding-bottom: $section-spacing-half-mobile;
     }
-
-    .row-spacing-top-half {
-        margin-top: $row-spacing-half-mobile;
+    .section-spacing-half-top {
+        padding-top: $section-spacing-half-mobile;
     }
-
-    .row-spacing-bottom {
-        margin-bottom: $row-spacing-mobile;
-    }
-
-    .row-spacing-bottom-half {
-        margin-bottom: $row-spacing-half-mobile;
+    .section-spacing-half-bottom {
+        padding-bottom: $section-spacing-half-mobile;
     }
 }

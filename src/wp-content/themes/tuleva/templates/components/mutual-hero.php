@@ -1,6 +1,6 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-mutual">
+<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-mutual section-spacing">
     <div class="container">
-        <div class="row py-6 text-navy">
+        <div class="row text-navy">
             <div class="mx-auto col-lg-11 col-xl-9 text-center">
                 <h1 class="m-0"><?php the_sub_field('heading'); ?></h1>
             </div>
