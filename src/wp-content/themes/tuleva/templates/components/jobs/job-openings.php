@@ -16,7 +16,7 @@ $block_uid = uniqid();
                 </div>
             </div>
 
-            <div class="accordion accordion-flush" id="jobs-<?php echo esc_attr( $block_uid ); ?>">
+            <div class="accordion accordion-flush border-top border-bottom" id="jobs-<?php echo esc_attr( $block_uid ); ?>">
 
                 <?php foreach ( $jobs as $i => $job ) :
 
@@ -50,7 +50,7 @@ $block_uid = uniqid();
                                 <?php if ( ! empty( $job['cta_button_url'] ) ) : ?>
                                     <p class="m-0 mt-5 text-center">
                                         <a href="<?php echo esc_url( $job['cta_button_url'] ); ?>"
-                                        class="btn btn-primary btn-lg fs-3">
+                                        class="btn btn-primary btn-lg fs-3 px-4">
                                             <?php echo esc_html( $job['cta_button_text'] ?: __( 'Apply for this job', 'textdomain' ) ); ?>
                                         </a>
                                     </p>
