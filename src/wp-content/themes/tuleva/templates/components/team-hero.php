@@ -12,19 +12,19 @@ $security_link_url = get_sub_field('security_link_url');
 $shortcode = get_sub_field('shortcode');
 $lead_text = get_sub_field('lead_text');
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-team d-flex flex-column section-spacing">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-team d-flex flex-column section-spacing">
     <div class="container my-auto">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6 pe-lg-4 mx-auto">
+        <div class="row align-items-center gy-5 gy-sm-6 gx-xl-5">
+            <div class="col-lg-6 pe-lg-4 mx-auto text-navy">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
-                <p class="lead text-navy mb-3"><?php echo do_shortcode($lead_text); ?></p>
-                <div class="text-navy mb-5"><?php echo get_sub_field('text'); ?></div>
+                <p class="lead mb-3"><?php echo do_shortcode($lead_text); ?></p>
+                <div><?php echo get_sub_field('text'); ?></div>
                 <?php if (get_sub_field('button_text')) { ?>
-                    <div class="d-grid mb-3">
+                    <div class="d-grid mt-5 mb-3">
                         <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-lg <?php echo $button_color_class; ?>"><?php the_sub_field('button_text'); ?></a>
                     </div>
                     <?php if (get_sub_field('small_text')): ?>
-                        <p class="small text-navy mb-md-5 mb-lg-0">
+                        <p class="small mb-md-5 mb-lg-0">
                             <?php the_sub_field('small_text'); ?>
                         </p>
                     <?php endif; ?>

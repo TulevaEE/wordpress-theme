@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-fees">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-fees">
     <div class="container">
          <div class="row py-6">
             <div class="col-lg-8 mx-auto text-center text-navy">

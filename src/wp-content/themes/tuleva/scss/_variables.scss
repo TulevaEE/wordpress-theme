@@ -1,4 +1,4 @@
-// Container max-widths
+// Layout
 
 $container-max-widths: (
   sm: 540px,
@@ -7,6 +7,9 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1140px // override xxl
 );
+
+$container-padding-x: 2rem;
+$grid-gutter-width: 2rem;
 
 // Links
 

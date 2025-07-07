@@ -3,8 +3,8 @@ $bg_class = get_component_background_color_class();
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="d-flex flex-column section-spacing <?php echo $bg_class; ?>">
     <div class="container my-auto">
-        <div class="row align-items-center">
-            <div class="col-lg-12 text-center text-lg-start pe-lg-6">
+        <div class="row align-items-center gx-xl-5">
+            <div class="col-lg-12 text-center text-lg-start">
                 <h1><?php the_sub_field('heading'); ?></h1>
             </div>
             <div class="col-lg-6">

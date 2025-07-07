@@ -6,13 +6,13 @@ $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
 ?>
 <section class="hero bg-hero-team d-flex flex-column section-spacing">
     <div class="container my-auto">
-        <div class="row align-items-center g-5">
-            <div class="hero-content col-lg-6 text-navy">
+        <div class="row align-items-center gy-5 gy-sm-6 gx-xl-5">
+            <div class="hero-main col-lg-6 text-navy">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
-                <p class="lead text-navy mb-3"><?php the_sub_field('lead_text'); ?></p>
+                <p class="lead mb-3"><?php the_sub_field('lead_text'); ?></p>
                 <?php the_sub_field('text'); ?>
             </div>
-            <div class="hero-media col-lg-6">
+            <div class="hero-aside col-lg-6">
                 <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?>" alt="">
             </div>
         </div>

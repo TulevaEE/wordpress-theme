@@ -1,3 +1,9 @@
+.hero {
+    &-main > :last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
 $section-spacing: 6rem;
 $section-spacing-mobile: $section-spacing / 2;
 
@@ -44,6 +50,14 @@ $section-spacing-half-mobile: $section-spacing-half / 2;
     .section-spacing {
         padding-top: $section-spacing-mobile;
         padding-bottom: $section-spacing-mobile;
+
+        &:is(.section-media):has(.section-media-slot) {
+            padding-top: $container-padding-x / 2;
+        }
+        &:is(.hero):has(.hero-aside) {
+            padding-bottom: $container-padding-x / 2;
+        }
+        
     }
     .section-spacing-top {
         padding-top: $section-spacing-mobile;

@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-mutual section-spacing">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-mutual section-spacing">
     <div class="container">
         <div class="row text-navy">
             <div class="mx-auto col-lg-11 col-xl-9 text-center">

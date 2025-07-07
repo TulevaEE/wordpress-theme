@@ -12,12 +12,6 @@
     color: $text-navy;
 }
 
-.hero {
-    &-content > :last-child {
-        margin-bottom: 0;
-    }
-}
-
 .contacts-block {
     justify-content: center;
     &__item {
@@ -1198,11 +1192,8 @@
         justify-content: space-between;
     }
     ul {
-        margin-bottom: 2rem;
+        margin: 0;
         padding-left: 0;
-        @include media-breakpoint-up (md) {
-            margin-bottom: 0;
-        }
         li {
             padding-left: 2rem;
         }

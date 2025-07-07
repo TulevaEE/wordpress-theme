@@ -1,4 +1,4 @@
-<section id="bonds-header" class="bg-hero-stocks text-navy">
+<section id="bonds-header" class="hero bg-hero-stocks text-navy">
     <div class="container">
         <div class="row py-6">
             <div class="col-lg-10 mx-auto pb-6 text-center">

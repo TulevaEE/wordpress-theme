@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-hero-counter bg-hero-spring d-flex flex-column section-spacing">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-spring d-flex flex-column section-spacing">
     <div class="container my-auto">
         <div class="row align-items-center">
             <div class="col text-center text-lg-start text-navy py-md-5">
