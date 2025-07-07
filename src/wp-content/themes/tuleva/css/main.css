@@ -15877,7 +15877,6 @@ sup {
 .post-list__item__image {
   overflow: hidden;
   max-height: 184px;
-  border-radius: 0.25rem;
   margin-bottom: 1rem;
 }
 .post-list__item__image img {
@@ -15907,7 +15906,6 @@ sup {
 }
 .post-list__item.post-list__item--wide .post-list__item__image {
   max-height: 384px;
-  border-radius: 0.5rem;
 }
 @media (max-width: 575.98px) {
   .post-list__item.post-list__item {
@@ -17899,10 +17897,6 @@ sup {
   margin: 0 10px;
   font-weight: bold;
   color: #6B7074;
-}
-.single-post .post-image,
-.single-post img[class*=wp-image-] {
-  border-radius: 0.5rem;
 }
 .single-post .post-image {
   max-width: 100%;

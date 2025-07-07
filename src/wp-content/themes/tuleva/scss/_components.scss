@@ -619,7 +619,6 @@
         &__image {
             overflow: hidden;
             max-height: 184px;
-            border-radius: $border-radius-sm;
             margin-bottom: 1rem;
             img {
                 width: 100%;
@@ -652,7 +651,6 @@
             grid-column: span 2;
             .post-list__item__image {
                 max-height: 384px;
-                border-radius: $border-radius-lg;
             }
         }
         @include media-breakpoint-down(sm) {
