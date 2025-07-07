@@ -4,19 +4,24 @@ $jobs      = get_field( 'job_openings' ) ?: [];
 $block_uid = uniqid();
 ?>
 
-<?php if ( $jobs ) : ?>
+<section class="d-flex flex-column section-spacing">
+    <div class="container">
 
-    <section class="d-flex flex-column section-spacing">
-        <div class="container">
-
-            <div class="row align-items-start section-spacing-bottom">
-                <div class="col-lg-9 col-xl-8 mx-auto text-center">
-                    <h2 class="m-0 mb-4"><?php _e('Open positions', TEXT_DOMAIN); ?></h2>
-                    <p class="lead m-0"><?php _e('Come and join us – help bring to life the plans for the years ahead.', TEXT_DOMAIN); ?></p>
-                </div>
+        <div class="row align-items-start">
+            <div class="col-lg-9 col-xl-8 mx-auto text-center">
+                <h2 class="m-0 mb-4"><?php _e('Open positions', TEXT_DOMAIN); ?></h2>
+                <p class="lead m-0">
+                <?php if ( $jobs ) : ?>
+                    <?php _e('Come and join us – help bring to life the plans for the years ahead.', TEXT_DOMAIN); ?>
+                <?php else : ?>
+                    <?php _e('We’re not actively hiring right now.', TEXT_DOMAIN); ?>
+                <?php endif; ?>
+                </p>
             </div>
+        </div>
 
-            <div class="accordion accordion-flush border-top border-bottom" id="jobs-<?php echo esc_attr( $block_uid ); ?>">
+        <?php if ( $jobs ) : ?>
+            <div class="accordion accordion-flush border-top border-bottom mt-5 mt-sm-6" id="jobs-<?php echo esc_attr( $block_uid ); ?>">
 
                 <?php foreach ( $jobs as $i => $job ) :
 
@@ -63,7 +68,7 @@ $block_uid = uniqid();
                 <?php endforeach; ?>
 
             </div>
+        <?php endif; ?>
 
-        </div>
-    </section>
-<?php endif; ?>
+    </div>
+</section>

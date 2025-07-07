@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-07-03T17:50:56+00:00\n"
-"PO-Revision-Date: 2025-07-03 22:04+0300\n"
+"POT-Creation-Date: 2025-07-07T12:55:50+00:00\n"
+"PO-Revision-Date: 2025-07-07 16:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -608,16 +608,20 @@ msgstr "Osaliselt tehtud"
 msgid "In progress"
 msgstr "Töös"
 
-#: templates/components/jobs/job-openings.php:23
+#: templates/components/jobs/job-openings.php:12
 msgid "Open positions"
 msgstr "Avatud positsioonid"
 
-#: templates/components/jobs/job-openings.php:24
+#: templates/components/jobs/job-openings.php:15
 msgid "Come and join us – help bring to life the plans for the years ahead."
 msgstr ""
 "Tule anna oma panus ja aita viia ellu järgmisteks aastateks seatud eesmärgid."
 
-#: templates/components/jobs/job-openings.php:70
+#: templates/components/jobs/job-openings.php:17
+msgid "We’re not actively hiring right now."
+msgstr "Hetkel me uusi inimesi aktiivselt ei otsi."
+
+#: templates/components/jobs/job-openings.php:59
 msgid "Apply for this job"
 msgstr "Kandideerin tööle"
 

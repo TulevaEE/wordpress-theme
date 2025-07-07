@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-03T17:50:56+00:00\n"
+"POT-Creation-Date: 2025-07-07T12:55:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -506,15 +506,19 @@ msgstr ""
 msgid "In progress"
 msgstr ""
 
-#: templates/components/jobs/job-openings.php:23
+#: templates/components/jobs/job-openings.php:12
 msgid "Open positions"
 msgstr ""
 
-#: templates/components/jobs/job-openings.php:24
+#: templates/components/jobs/job-openings.php:15
 msgid "Come and join us – help bring to life the plans for the years ahead."
 msgstr ""
 
-#: templates/components/jobs/job-openings.php:70
+#: templates/components/jobs/job-openings.php:17
+msgid "We’re not actively hiring right now."
+msgstr ""
+
+#: templates/components/jobs/job-openings.php:59
 msgid "Apply for this job"
 msgstr ""
 
