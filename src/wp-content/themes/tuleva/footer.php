@@ -15,12 +15,6 @@
                 <?php dynamic_sidebar('footer_bottom_widget_area'); ?>
             <?php endif; ?>
         </div>
-        <div class="row">
-            <div class="form-check form-switch">
-                <input class="form-check-input high-contrast-toggle" type="checkbox" role="switch" id="high-contrast-toggle">
-                <label class="form-check-label" for="high-contrast-toggle">Suurenda kontrasti</label>
-            </div>
-        </div>
     </div>
 </footer>
 
