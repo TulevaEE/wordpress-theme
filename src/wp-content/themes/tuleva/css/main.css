@@ -15558,7 +15558,7 @@ sup {
 .cky-btn-revisit-wrapper {
   z-index: 1100 !important;
 }
-.cky-btn-revisit-wrapper .cky-revisit-bottom-left {
+.cky-btn-revisit-wrapper.cky-revisit-bottom-left {
   left: 1.5rem;
   bottom: 1.5rem;
 }
