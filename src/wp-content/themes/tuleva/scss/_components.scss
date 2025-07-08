@@ -345,37 +345,29 @@
 
 .cky-btn-revisit-wrapper {
     z-index: 1100 !important; // lower than .header
+
+    .cky-revisit-bottom-left {
+        left: 1.5rem;
+        bottom: 1.5rem;
+    }
 }
 
 .beacon-toggle {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
     z-index: 1101; // lower than .header
 
-    @include media-breakpoint-up(lg) {
-        right: 2rem;
-        bottom: 2rem;
-    }
-
     display: none;
+    height: 3rem;
+    padding: calc(.75rem - 1px) 1.5rem; // minus border
     font-family: $font-family-serif;
     font-weight: bold;
-    color: #fff;
-    text-align: center;
     font-size: $font-size-base;
-    line-height: 1;
-    border-radius: 1.5rem;
-    background-color: $red;
-    padding: 1rem 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 3rem;
-    transition: all .2s ease;
-    &:hover,
-    &:focus {
-        color: #fff;
-    }
+    line-height: $line-height-base;
+    border-radius: 2rem;
+    transition: all .3s ease !important;
+
     &__icon {
         background: $white;
         position: absolute;
@@ -385,9 +377,9 @@
         width: 18px;
         height: 2px;
         transform: rotate(-45deg);
-        transition: opacity .2s ease;
         backface-visibility: hidden;
         opacity: 0;
+
         &::before {
             content: ' ';
             background: inherit;
@@ -397,69 +389,38 @@
             width: 18px;
             height: 2px;
             transform: rotate(90deg);
-            transition: opacity .2s ease;
             backface-visibility: hidden;
             opacity: 0;
         }
     }
+    &__text {
+        opacity: 1;
+    }
     &--open {
-        background-color: $gray-600;
         width: 3rem;
         height: 3rem;
         padding: 0;
+
         .beacon-toggle__icon {
             opacity: 1;
-            transition: opacity .1s;
-            transition-delay: .3s;
+
             &::before {
                 opacity: 1;
-                transition: opacity .1s;
-                transition-delay: .3s;
             }
         }
         .beacon-toggle__text {
-            visibility: hidden;
+            opacity: 0;
         }
     }
 }
 
-.beacon-content {
-    display: none;
-    padding: 1.5rem;
-    position: fixed;
-    background-color: $white;
-    box-shadow: $shadow-md;
-    z-index: 1090;
-    @include media-breakpoint-only(xs) {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-    }
-    @include media-breakpoint-up(sm) {
-        right: 1rem;
-        bottom: 5rem;
-        max-width: 420px;
-        min-width: 300px;
-        border-radius: $border-radius-md;
-    }
-    @include media-breakpoint-up(lg) {
-        right: 2rem;
-        bottom: 6rem;
-    }
-    label {
-        margin-bottom: .25rem;
-        font-size: $font-size-sm;
-        font-weight: $font-weight-medium;
-    }
+.BeaconContainer {
+    --hs-beacon-window-v-offset: 6rem;
+    --hs-beacon-window-h-offset-right: 1.5rem;
 
-    input {
-        margin-bottom: 1rem;
-    }
-    &--open {
-        display: block;
-    }
+    --hs-beacon-v-offset: 1.5rem;
+
+    height: calc(100vh - var(--hs-beacon-window-v-offset) - min(var(--hs-beacon-v-offset),40px) - 78px) !important;
 }
 
 .footer-help-close {

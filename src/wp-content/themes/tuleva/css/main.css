@@ -15558,36 +15558,26 @@ sup {
 .cky-btn-revisit-wrapper {
   z-index: 1100 !important;
 }
+.cky-btn-revisit-wrapper .cky-revisit-bottom-left {
+  left: 1.5rem;
+  bottom: 1.5rem;
+}
 
 .beacon-toggle {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
   z-index: 1101;
   display: none;
+  height: 3rem;
+  padding: calc(0.75rem - 1px) 1.5rem;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
-  color: #fff;
-  text-align: center;
   font-size: 1rem;
-  line-height: 1;
-  border-radius: 1.5rem;
-  background-color: #DB2200;
-  padding: 1rem 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  height: 3rem;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-@media (min-width: 992px) {
-  .beacon-toggle {
-    right: 2rem;
-    bottom: 2rem;
-  }
-}
-.beacon-toggle:hover, .beacon-toggle:focus {
-  color: #fff;
+  line-height: 1.5;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
 }
 .beacon-toggle__icon {
   background: #fff;
@@ -15599,8 +15589,6 @@ sup {
   height: 2px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   opacity: 0;
@@ -15615,79 +15603,33 @@ sup {
   height: 2px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   opacity: 0;
 }
+.beacon-toggle__text {
+  opacity: 1;
+}
 .beacon-toggle--open {
-  background-color: #6c757d;
   width: 3rem;
   height: 3rem;
   padding: 0;
 }
 .beacon-toggle--open .beacon-toggle__icon {
   opacity: 1;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
 }
 .beacon-toggle--open .beacon-toggle__icon::before {
   opacity: 1;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
 }
 .beacon-toggle--open .beacon-toggle__text {
-  visibility: hidden;
+  opacity: 0;
 }
 
-.beacon-content {
-  display: none;
-  padding: 1.5rem;
-  position: fixed;
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.12);
-  z-index: 1090;
-}
-@media (max-width: 575.98px) {
-  .beacon-content {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-  }
-}
-@media (min-width: 576px) {
-  .beacon-content {
-    right: 1rem;
-    bottom: 5rem;
-    max-width: 420px;
-    min-width: 300px;
-    border-radius: 0.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .beacon-content {
-    right: 2rem;
-    bottom: 6rem;
-  }
-}
-.beacon-content label {
-  margin-bottom: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-.beacon-content input {
-  margin-bottom: 1rem;
-}
-.beacon-content--open {
-  display: block;
+.BeaconContainer {
+  --hs-beacon-window-v-offset: 6rem;
+  --hs-beacon-window-h-offset-right: 1.5rem;
+  --hs-beacon-v-offset: 1.5rem;
+  height: calc(100vh - var(--hs-beacon-window-v-offset) - min(var(--hs-beacon-v-offset), 40px) - 78px) !important;
 }
 
 .footer-help-close {

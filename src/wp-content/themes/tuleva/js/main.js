@@ -34,30 +34,12 @@ $(document).ready(function ($) {
                 }
             });
         },
-        initNewsletterBeaconToggle = function () {
-            var $beaconToggle = $('.beacon-toggle--newsletter');
-
-            $beaconToggle.on('click', function (ev) {
-                ev.preventDefault();
-                $(this).toggleClass('beacon-toggle--open');
-                $('.beacon-content--newsletter').toggleClass('beacon-content--open');
-            });
-
-            $(window).scroll(function () {
-                var scrollPosition = $(window).scrollTop(),
-                    viewportHeight = $(window).height();
-
-                if (scrollPosition > viewportHeight && !$('.footer-help-close').hasClass('footer-help-close--open')) {
-                    $beaconToggle.addClass('d-block');
-                }
-            });
-        },
         initHelpBeaconToggle = function () {
             var $beaconToggle = $('.beacon-toggle--help');
 
             $beaconToggle.on('click', function (ev) {
                 ev.preventDefault();
-                $(this).toggleClass('beacon-toggle--open');
+                $(this).toggleClass('beacon-toggle--open btn-danger btn-secondary');
                 window.Beacon('toggle');
             });
 
@@ -522,7 +504,6 @@ $(document).ready(function ($) {
         };
 
     var setupFunctions = [
-        function () { initNewsletterBeaconToggle(); },
         function () { initHelpBeaconToggle(); },
         function () { initPostSidebarHandler(); },
         function () { initGenericModals(); },
