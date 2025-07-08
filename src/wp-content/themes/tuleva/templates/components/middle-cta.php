@@ -4,7 +4,7 @@ $additional_text = get_sub_field('additional_text') ? get_sub_field('additional_
 $button_url = get_sub_field('button_url') ? get_sub_field('button_url') : '#signup-block';
 $button_text = get_sub_field('button_text') ? get_sub_field('button_text') : __('Become a member', TEXT_DOMAIN);
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="py-5 bg-blue-washed">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing-half bg-blue-washed">
     <div class="container">
       <div class="row text-center">
         <div class="d-flex w-100 justify-content-center align-items-center">

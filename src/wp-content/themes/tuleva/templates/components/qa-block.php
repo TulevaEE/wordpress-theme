@@ -1,8 +1,8 @@
 <?php
 $visible_questions_count = 10;
 ?>
-<div id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('mt-0 pt-6 qa-block qa-block--collapsed container'); ?>">
-    <h2 class="m-0 mb-6 text-center"><?php _e('Frequently asked questions', TEXT_DOMAIN) ?></h2>
+<section id="<?php the_sub_field('component_id'); ?>" class="<?php echo get_component_classes('mt-0 qa-block qa-block--collapsed container'); ?>">
+    <h2 class="m-0 section-spacing-bottom text-center"><?php _e('Frequently asked questions', TEXT_DOMAIN) ?></h2>
     <div class="row">
         <div class="mx-auto col-lg-9 col-xl-8">
             <?php if (have_rows('questions')) $i = 0; {
@@ -26,4 +26,4 @@ $visible_questions_count = 10;
             </div>
         </div>
     <?php } ?>
-</div>
+</section>

@@ -1,4 +1,4 @@
-<section id="details" class="pt-5 pb-6">
+<section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">

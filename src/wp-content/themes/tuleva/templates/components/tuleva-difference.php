@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="py-6">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing">
   <div class="container">
     <div class="row text-center">
       <div class="mx-auto col-lg-11 col-xl-9">
@@ -6,7 +6,7 @@
         <p class="lead m-0"><?php the_sub_field('lead_text'); ?></p>
       </div>
     </div>
-    <div class="row py-5 text-center">
+    <div class="row section-spacing text-center">
       <div class="mx-auto col-lg-11 col-xl-9">
         <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid">
       </div>

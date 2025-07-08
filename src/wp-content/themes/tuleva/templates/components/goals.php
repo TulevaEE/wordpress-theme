@@ -1,7 +1,7 @@
-<div id="<?php the_sub_field('component_id'); ?>" class="py-6 bg-blue-washed">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing bg-blue-washed">
     <div class="container">
 
-        <div class="row text-center pb-6">
+        <div class="row text-center section-spacing-bottom">
             <div class="mx-auto col-lg-9 col-xl-8 text-center">
                 <h2 class="mb-4"><?php the_sub_field('goals_title'); ?></h2>
                 <?php the_sub_field('goals_description'); ?>
@@ -9,7 +9,7 @@
         </div>
 
         <?php if (have_rows('goals')) { ?>
-            <div class="d-flex flex-column flex-md-row flex-md-wrap align-items-stretch" style="gap: 24px;">
+            <div class="d-flex flex-column flex-md-row flex-md-wrap align-items-stretch gap-3 gap-sm-4">
                 <?php while (have_rows('goals')) { the_row();
                     $status = get_sub_field('status');
                     $label = __('Done', TEXT_DOMAIN);
@@ -35,4 +35,4 @@
         <?php } ?>
 
     </div>
-</div>
+</section>

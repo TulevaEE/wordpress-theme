@@ -1,4 +1,4 @@
-<footer id="footer" class="footer">
+<footer id="footer" class="footer section-spacing">
     <?php if (isset($_GET['development'])) : ?>
         <div class="px-3 d-flex align-items-center justify-content-center">
             <?php get_template_part('templates/footer/not-logged-in-mailing-list-form'); ?>

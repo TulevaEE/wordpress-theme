@@ -1,8 +1,8 @@
-<section id="choose-fund" class="py-6">
+<section id="choose-fund" class="section-spacing">
     <div class="container">
         <h1 class="m-0 text-center"><?php the_title(); ?></h1>
 
-        <div class="mt-6 d-flex flex-column flex-lg-row mx-auto gap-4">
+        <div class="section-spacing-top d-flex flex-column flex-lg-row mx-auto gap-3 gap-sm-4">
             <?php if ( have_rows('box_primary') ) : ?>
                 <?php while ( have_rows('box_primary') ) : the_row(); ?>
                     <?php get_template_part('templates/components/fund-choosing-card'); ?>
@@ -16,7 +16,7 @@
             <?php endif; ?>
         </div>
 
-        <div class="mt-6 text-secondary text-center">
+        <div class="section-spacing-top text-secondary text-center">
             <?php echo get_field('rich_text'); ?>
         </div>
     </div>

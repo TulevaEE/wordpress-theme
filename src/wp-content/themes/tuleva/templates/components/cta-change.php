@@ -1,8 +1,8 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="py-5 cta-change<?php echo get_sub_field('background_color') === 'blue' ? ' bg-blue-washed' : ''; ?>">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing-half cta-change<?php echo get_sub_field('background_color') === 'blue' ? ' bg-blue-washed' : ''; ?>">
     <div class="container">
       <div class="row">
-        <p class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-md-baseline m-0 text-center">
-          <span class="mb-4 mb-md-0 me-md-4 fs-5">
+        <p class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-md-baseline m-0 text-center gap-4">
+          <span class="fs-5">
               <?php
               $isMarch = (date('m') == 3);
               $isJuly = (date('m') == 7);

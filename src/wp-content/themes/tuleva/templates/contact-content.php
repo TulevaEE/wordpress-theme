@@ -1,7 +1,7 @@
 <main id="main" class="page-container">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div>
-            <div class="container py-6">
+            <div class="container section-spacing">
                 <div class="row">
                     <div class="col">
                         <?php if (get_field('heading')) { ?>
@@ -74,9 +74,9 @@
             }
         ?>
         <?php if( have_rows('contacts_block') ) while ( have_rows('contacts_block') ) : the_row(); ?>
-            <section class="d-flex flex-column <?php echo get_component_background_color_class(); ?>">
+            <section class="d-flex flex-column <?php echo get_component_background_color_class(); ?> section-spacing">
                 <div class="container">
-                    <div class="row my-6">
+                    <div class="row">
                         <div class="col">
                             <h2 class="m-0 text-center">
                                 <?php the_sub_field('block_title'); ?>
@@ -85,7 +85,7 @@
                     </div>
                     <?php if (have_rows('contact_categories')) { ?>
                         <?php while (have_rows('contact_categories')) { the_row(); ?>
-                            <div class="row my-6">
+                            <div class="row section-spacing-top">
                                 <div class="col-md-12">
                                     <h3 class="m-0 text-center">
                                         <?php the_sub_field('category_title'); ?>

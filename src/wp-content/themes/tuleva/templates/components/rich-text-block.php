@@ -8,13 +8,13 @@ $padding = get_sub_field('padding');
 if ($padding === 'none') {
     $padding_class = '';
 } elseif ($padding === 'both') {
-    $padding_class = 'py-6';
+    $padding_class = 'section-spacing';
 } elseif ($padding === 'top') {
-    $padding_class = 'pt-6';
+    $padding_class = 'section-spacing-top';
 } elseif ($padding === 'bottom') {
-    $padding_class = 'pb-6';
+    $padding_class = 'section-spacing-bottom';
 } else {
-    $padding_class = 'py-6';
+    $padding_class = 'section-spacing';
 }
 ?>
 <?php if (!$text) return; ?>

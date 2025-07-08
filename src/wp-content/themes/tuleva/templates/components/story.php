@@ -1,5 +1,5 @@
-<div id="<?php the_sub_field('component_id'); ?>" class="container py-6">
-    <div class="row pb-6">
+<section id="<?php the_sub_field('component_id'); ?>" class="container section-spacing">
+    <div class="row section-spacing-bottom">
         <div class="mx-auto col-lg-9 col-xl-8">
             <h2 class="m-0 text-center">
                 <?php the_sub_field('heading'); ?>
@@ -11,7 +11,7 @@
         <?php while (have_rows('quotes')) { the_row(); $i++; ?>
             <?php if ($i === 1) { ?>
                 <?php get_template_part('templates/components/story/first-quote'); ?>
-                <div class="row py-6">
+                <div class="row section-spacing">
                     <div class="mx-auto col-lg-9 col-xl-8 mid-headline text-center">
                         <p><?php echo $large_quote ?></p>
                     </div>
@@ -21,4 +21,4 @@
             <?php } ?>
         <?php } ?>
     <?php } ?>
-</div>
+</section>

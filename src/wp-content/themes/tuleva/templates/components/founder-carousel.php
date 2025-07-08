@@ -1,8 +1,8 @@
 <?php
 $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding members', TEXT_DOMAIN);
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="py-6">
-    <div class="container-fluid mb-4">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing">
+    <div class="container-fluid">
         <h2 class="mb-5 text-center"><?php echo $heading; ?></h2>
         <?php if (have_rows('founders')) { $i = 0; ?>
             <!-- CAROUSEL -->
@@ -40,10 +40,9 @@ $heading = get_sub_field('heading') ? get_sub_field('heading') : __('Founding me
         <?php } ?>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row section-spacing-top">
             <div class="col text-center">
-                <img src="<?php echo get_template_directory_uri() ?>/img/founder-thumbnails.jpg" alt="" class="mb-4">
-                <br>
+                <img src="<?php echo get_template_directory_uri() ?>/img/founder-thumbnails.jpg" alt="" class="d-block mx-auto mb-4">
                 <a id="founders" href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-outline-primary"><?php the_sub_field('button_text'); ?></a>
             </div>
         </div>

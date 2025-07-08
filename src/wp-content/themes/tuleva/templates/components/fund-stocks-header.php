@@ -1,6 +1,6 @@
 <section id="mutual-header" class="hero bg-hero-stocks text-navy">
     <div class="container">
-        <div class="row py-6">
+        <div class="row section-spacing">
             <div class="col-lg-10 mx-auto pb-6 text-center">
                 <h1 class="m-0"><?php _e('Tuleva World Stocks Pension Fund', TEXT_DOMAIN) ?></h1>
             </div>

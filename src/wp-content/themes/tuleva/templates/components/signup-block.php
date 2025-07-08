@@ -1,5 +1,5 @@
 <section id="<?php the_sub_field('component_id'); ?>">
-    <div class="container py-6">
+    <div class="container section-spacing">
         <div class="row">
             <div class="mx-auto col-lg-9 col-xl-8 text-center">
                 <h2><?php the_sub_field('heading'); ?></h2>

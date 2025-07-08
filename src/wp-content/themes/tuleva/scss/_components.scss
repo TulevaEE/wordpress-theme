@@ -20,7 +20,6 @@
         min-width: 12rem;
         margin-top: 3rem;
         @include media-breakpoint-down(sm) {
-            margin-bottom: 30px;
             width: 100%;
         }
     }
@@ -571,7 +570,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $spacer * 1.5;
-    row-gap: $spacer * 4;
+    row-gap: $spacer * 4.5;
+
+    @include media-breakpoint-down(sm) {
+        row-gap: $spacer * 3;
+    }
+
     margin: 0;
     padding: 0;
     list-style: none;

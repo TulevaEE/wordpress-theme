@@ -1,6 +1,6 @@
-<section id="single-quote-block-component" class="bg-blue-washed py-6">
+<section id="single-quote-block-component" class="bg-blue-washed section-spacing">
     <div class="container">
-        <div class="row">
+        <div class="row row-gap-4">
             <div class="col-md-3 offset-md-1 single-quote-box__media">
                 <p class="m-0 d-flex flex-column align-items-center text-navy text-serif">
                     <img class="single-quote-box__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk-lg.png" alt="">
