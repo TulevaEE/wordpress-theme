@@ -6,23 +6,6 @@ body {
   color: $text-primary;
 }
 
-// Links
-
-a {
-  text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent) !important;
-  text-underline-offset: $link-underline-offset !important;
-  text-decoration-thickness: $link-underline-thickness !important;
-}
-
-a:hover,
-a:focus {
-  text-decoration-color: currentColor !important;
-}
-
-a abbr[title] {
-  cursor: inherit;
-}
-
 // Heading classes
 
 h1, h2, h3, h4, h5, h6,

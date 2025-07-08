@@ -455,7 +455,7 @@ $(document).ready(function ($) {
 
             const isHighContrastModeEnabled = () => document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME);
 
-            const toggleHighContrastMode = () => {
+            const updateHighContrastCookie = () => {
                 const oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
                 const unixEpoch = new Date(1);
                 // if enabled, set expiry to UTC epoch to delete, if not enabled then set it to 12 months in future
@@ -463,28 +463,25 @@ $(document).ready(function ($) {
                 document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry};domain=${domain};path=/`;
             };
 
+            var $toggleSwitch = $('#high-contrast-toggle');
 
-            const updateButtonText = () => {
-                $(`#contrast-mode-switch span[data-contrast-mode='${isHighContrastModeEnabled()}']`).css('display', 'none');
-                $(`#contrast-mode-switch span[data-contrast-mode='${!isHighContrastModeEnabled()}']`).css('display', 'inherit');
-            }
-
-            const applyHighContrastModeStyles = () => {
-                updateButtonText();
+            const toggleHighContrastMode = () => {
+                const root = document.documentElement;
 
                 if (isHighContrastModeEnabled()) {
-                    // TODO apply styles
+                    root.classList.add('high-contrast');
                 } else {
-                    // TODO remove styles
+                    root.classList.remove('high-contrast');
                 }
+                $toggleSwitch.prop('checked', isHighContrastModeEnabled());
             };
 
-            $('#contrast-mode-switch').click(() => {
+            $toggleSwitch.on('change', function() {
+                updateHighContrastCookie();
                 toggleHighContrastMode();
-                applyHighContrastModeStyles();
             });
 
-            applyHighContrastModeStyles();
+            toggleHighContrastMode();
 
         },
         initCountdownTimerFull = function () {

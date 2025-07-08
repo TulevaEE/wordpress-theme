@@ -5,10 +5,6 @@
         </div>
     <?php endif; ?>
     <div class="container">
-        <!--<a href="#highContrastMode" id="contrast-mode-switch">
-            <span data-contrast-mode="true">Lülita kõrge kontrasti režiim sisse</span>
-            <span data-contrast-mode="false" style="display: none;">Lülita kõrge kontrasti režiim välja</span>
-        </a>-->
         <div class="row">
             <?php if (is_active_sidebar('footer_widget_area')) : ?>
                 <?php dynamic_sidebar('footer_widget_area'); ?>

@@ -168,6 +168,11 @@ $h4-line-height: 1.3333;
 $h5-line-height: 1.3333;
 $h6-line-height: 1.3333;
 
+// Borders
+$border-color: $gray-border-3 !default;
+$form-check-input-focus-border: $blue !default;
+$input-focus-border-color: $blue !default;
+
 // Radius
 $border-radius-0: 0 !default;
 $border-radius-1: .25rem !default;
