@@ -14836,7 +14836,7 @@ hr {
   border-color: var(--bs-btn-hover-border-color);
 }
 
-#high-contrast-toggle {
+.high-contrast-toggle {
   --bs-border-color: #8A8D91;
 }
 

@@ -463,7 +463,7 @@ $(document).ready(function ($) {
                 document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry};domain=${domain};path=/`;
             };
 
-            var $toggleSwitch = $('#high-contrast-toggle');
+            var $toggleSwitches = $('.high-contrast-toggle');
 
             const toggleHighContrastMode = () => {
                 const root = document.documentElement;
@@ -473,10 +473,10 @@ $(document).ready(function ($) {
                 } else {
                     root.classList.remove('high-contrast');
                 }
-                $toggleSwitch.prop('checked', isHighContrastModeEnabled());
+                $toggleSwitches.prop('checked', isHighContrastModeEnabled());
             };
 
-            $toggleSwitch.on('change', function() {
+            $toggleSwitches.on('change', function() {
                 updateHighContrastCookie();
                 toggleHighContrastMode();
             });
