@@ -17859,9 +17859,9 @@ sup {
 .single-post .content .wp-caption-text {
   display: block;
   margin-top: 0.75rem;
-  color: #6B7074;
   font-size: 1rem;
   line-height: 1.5;
+  color: #6B7074;
 }
 .single-post .content blockquote {
   margin: 5rem 0;
