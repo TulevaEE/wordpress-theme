@@ -435,7 +435,12 @@ $(document).ready(function ($) {
 
             const domain = window.location.host.includes('localhost') ? 'localhost' : '.tuleva.ee'
 
-            const isHighContrastModeEnabled = () => document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME);
+            const isHighContrastModeEnabled = () => {
+                if (document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME)) {
+                    return document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME);
+                }
+                return window.matchMedia('(prefers-contrast: more)').matches;
+            };
 
             const updateHighContrastCookie = () => {
                 const oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
@@ -461,6 +466,14 @@ $(document).ready(function ($) {
             $toggleSwitches.on('change', function() {
                 updateHighContrastCookie();
                 toggleHighContrastMode();
+            });
+
+            const contrastMediaQuery = window.matchMedia('(prefers-contrast: more)');
+
+            contrastMediaQuery.addEventListener('change', () => {
+                if (!document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME)) {
+                    toggleHighContrastMode();
+                }
             });
 
             toggleHighContrastMode();
