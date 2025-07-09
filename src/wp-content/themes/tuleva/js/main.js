@@ -442,7 +442,7 @@ $(document).ready(function ($) {
                 const unixEpoch = new Date(1);
                 // if enabled, set expiry to UTC epoch to delete, if not enabled then set it to 12 months in future
                 const expiry = isHighContrastModeEnabled() ? unixEpoch : oneYearFromNow;
-                document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry};domain=${domain};path=/`;
+                document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry.toUTCString()};domain=${domain};path=/`;
             };
 
             var $toggleSwitches = $('.high-contrast-toggle');
