@@ -115,10 +115,6 @@ hr {
     width: 100%;
 }
 
-.form-control::placeholder {
-    color: $text-hint;
-}
-
 .alert {
     border: solid 2px $gray-mid;
     border-radius: 8px;

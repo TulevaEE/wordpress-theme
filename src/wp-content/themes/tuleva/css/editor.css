@@ -14478,26 +14478,6 @@ hr {
   width: 100%;
 }
 
-.form-control::-webkit-input-placeholder {
-  color: #8A8D91;
-}
-
-.form-control::-moz-placeholder {
-  color: #8A8D91;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #8A8D91;
-}
-
-.form-control::-ms-input-placeholder {
-  color: #8A8D91;
-}
-
-.form-control::placeholder {
-  color: #8A8D91;
-}
-
 .alert {
   border: solid 2px #C8D0D8;
   border-radius: 8px;
