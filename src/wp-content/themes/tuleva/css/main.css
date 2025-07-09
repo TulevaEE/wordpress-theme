@@ -15897,7 +15897,7 @@ sup {
 }
 .post-list__item__title {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #002f63;
 }
 .post-list__item__title h2, .post-list__item__title .h2 {
@@ -15965,14 +15965,21 @@ sup {
 }
 .pagination ul li a {
   display: block;
-  padding: 0 0.5rem;
+  padding: 0 0.5em;
 }
-.pagination ul li a:hover, .pagination ul li a:focus {
-  color: #002f63;
-  text-decoration: none;
+.pagination__active {
+  margin: 0 0.25rem !important;
 }
 .pagination__active a {
-  color: #002f63;
+  min-width: 1lh;
+  background: #006CE6;
+  border-radius: 1lh;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none;
+}
+.pagination__ellipsis {
+  margin: 0 0.25rem !important;
 }
 .pagination__previous {
   padding-right: 1rem;

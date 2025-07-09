@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-07-07T12:55:50+00:00\n"
-"PO-Revision-Date: 2025-07-07 17:11+0300\n"
+"POT-Creation-Date: 2025-07-09T17:28:18+00:00\n"
+"PO-Revision-Date: 2025-07-09 20:29+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -32,13 +32,17 @@ msgstr "Liigu edasi sisu juurde"
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:571
-msgid "Newer articles"
-msgstr "Uuemad artiklid"
+#: helpers/extras.php:567
+msgid "Pagination"
+msgstr "Leheküljed"
 
-#: helpers/extras.php:603
-msgid "Older articles"
-msgstr "Vanemad artiklid"
+#: helpers/extras.php:571
+msgid "Newer"
+msgstr "Uuemad"
+
+#: helpers/extras.php:614
+msgid "Older"
+msgstr "Vanemad"
 
 #: helpers/setup.php:25
 msgid "Primary Navigation"
@@ -1717,35 +1721,31 @@ msgstr "/kuidas-tuua-pension-tulevasse/"
 msgid "Choose Tuleva 2nd pillar"
 msgstr "Too II sammas Tulevasse"
 
-#: templates/single-content.php:57
-msgid "Category:"
-msgstr "Teema:"
-
-#: templates/single-content.php:72
+#: templates/single-content.php:49
 msgid "Share with a friend:"
 msgstr "Jaga sõbraga:"
 
-#: templates/single-content.php:93
+#: templates/single-content.php:70
 msgid "3 important posts"
 msgstr "3 olulist artiklit"
 
-#: templates/single-content.php:102
+#: templates/single-content.php:79
 msgid "<a href=\"/en/blog/\">See more posts</a>"
 msgstr "<a href=\"/blogi/\">Vaata kõiki artikleid</a>"
 
-#: templates/single-content.php:108
+#: templates/single-content.php:85
 msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
-#: templates/single-content.php:111
+#: templates/single-content.php:88
 msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
 msgstr "<a href=\"https://tuleva.ee/\">Vaata arvutust</a>"
 
-#: templates/single-content.php:118
+#: templates/single-content.php:95
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr "<a href=\"/kuidas-tuua-pension-tulevasse/\">Too pension Tulevasse</a>"
 
-#: templates/single-content.php:121
+#: templates/single-content.php:98
 msgid ""
 "Our guide makes transferring your pension easy via your internet bank. 5 "
 "minutes, no costs involved."
@@ -1862,6 +1862,15 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Newer articles"
+#~ msgstr "Uuemad artiklid"
+
+#~ msgid "Older articles"
+#~ msgstr "Vanemad artiklid"
+
+#~ msgid "Category:"
+#~ msgstr "Teema:"
 
 #~ msgid ""
 #~ "We are looking for new colleagues to help strengthen our team and achieve "

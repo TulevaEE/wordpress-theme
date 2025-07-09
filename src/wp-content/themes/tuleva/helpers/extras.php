@@ -564,11 +564,11 @@ function blog_pagination() {
         $links[] = $paged + 1;
     }
 
-    echo '<div class="pagination"><ul>' . "\n";
+    echo '<nav class="pagination" aria-label="' . esc_attr__( 'Pagination', TEXT_DOMAIN ) . '"><ul>' . "\n";
 
     /** Previous Post Link */
     if ( get_previous_posts_link() ) {
-        printf( '<li class="pagination__previous">%s</li>' . "\n", get_previous_posts_link(__('Newer articles', TEXT_DOMAIN)) );
+        printf( '<li class="pagination__previous">%s</li>' . "\n", get_previous_posts_link(__('Newer', TEXT_DOMAIN)) );
     }
 
     /** Link to first page, plus ellipses if necessary */
@@ -578,20 +578,31 @@ function blog_pagination() {
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
         if ( ! in_array( 2, $links ) )
-            echo '<li>…</li>';
+            echo '<li class="pagination__ellipsis">…</li>';
     }
 
     /** Link to current page, plus 2 pages in either direction if necessary */
     sort( $links );
     foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="pagination__active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+        if ( $paged == $link ) {
+            printf(
+                '<li class="pagination__active"><a href="%s" aria-current="page">%s</a></li>' . "\n",
+                esc_url( get_pagenum_link( $link ) ),
+                $link
+            );
+        } else {
+            printf(
+                '<li><a href="%s">%s</a></li>' . "\n",
+                esc_url( get_pagenum_link( $link ) ),
+                $link
+            );
+        }
     }
 
     /** Link to last page, plus ellipses if necessary */
     if ( ! in_array( $max, $links ) ) {
         if ( ! in_array( $max - 1, $links ) ) {
-            echo '<li>…</li>' . "\n";
+            echo '<li class="pagination__ellipsis">…</li>' . "\n";
         }
 
         $class = $paged == $max ? ' class="active"' : '';
@@ -600,10 +611,10 @@ function blog_pagination() {
 
     /** Next Post Link */
     if ( get_next_posts_link() ) {
-        printf( '<li class="pagination__next">%s</li>' . "\n", get_next_posts_link(__('Older articles', TEXT_DOMAIN)) );
+        printf( '<li class="pagination__next">%s</li>' . "\n", get_next_posts_link(__('Older', TEXT_DOMAIN)) );
     }
 
-    echo '</ul></div>' . "\n";
+    echo '</ul></nav>' . "\n";
 }
 
 function highlight_search_results($text){

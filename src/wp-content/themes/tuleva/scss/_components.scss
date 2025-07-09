@@ -591,7 +591,7 @@
         }
         &__title {
             display: block;
-            margin-bottom: .5rem;
+            margin-bottom: 1rem;
             color: $text-navy;
 
             h2 {
@@ -656,23 +656,26 @@
 
             a {
                 display: block;
-                padding: 0 0.5rem;
-
-                &:hover,
-                &:focus {
-                    color: $navy-blue;
-                    text-decoration: none;
-                }
-
-
+                padding: 0 0.5em;
             }
         }
     }
 
     &__active {
+        margin: 0 .25rem !important;
+
         a {
-            color: $navy-blue;
+            min-width: 1lh;
+            background: $blue;
+            border-radius: 1lh;
+            color: $white !important;
+            text-align: center;
+            text-decoration: none;
         }
+    }
+
+    &__ellipsis {
+        margin: 0 .25rem !important;
     }
 
     &__previous {
