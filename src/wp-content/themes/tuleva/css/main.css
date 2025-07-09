@@ -15966,7 +15966,7 @@ sup {
   padding: 0 0.5em;
 }
 .pagination__active {
-  margin: 0 0.25rem !important;
+  margin: 0 0.5rem !important;
 }
 .pagination__active a {
   min-width: 1lh;
