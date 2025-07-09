@@ -10,7 +10,7 @@
     $temp = $wp_query;
     $wp_query = null;
     $is_paged = $paged > 1;
-    $posts_number = $is_paged ? 8 : 9; // 9 on first page (featured + 8), 8 on others
+    $posts_number = 9;
     $i = 0;
     $args = [
         'posts_per_page' => $posts_number,
