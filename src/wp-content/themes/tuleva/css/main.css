@@ -17890,19 +17890,14 @@ sup {
 }
 .single-post .post-meta {
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 1rem;
   color: #002f63;
 }
 .single-post .post-meta__author {
-  font-weight: bold;
-}
-.single-post .post-meta__category {
-  font-weight: bold;
+  font-weight: 500;
 }
 .single-post .post-meta__separator {
-  margin: 0 10px;
-  font-weight: bold;
+  margin: 0 0.5em;
   color: #6B7074;
 }
 .single-post .post-image {
@@ -17911,7 +17906,6 @@ sup {
 }
 .single-post .post-social {
   text-align: center;
-  text-transform: uppercase;
   color: #002f63;
 }
 .single-post .post-social iframe {

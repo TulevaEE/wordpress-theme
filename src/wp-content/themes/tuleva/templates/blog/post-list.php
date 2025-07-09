@@ -49,7 +49,7 @@
                 <h2 class="text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><?php the_title(); ?></h2>
             </a>
             <div class="post-list__item__meta">
-                <span class="post-list__item__author text-uppercase text-navy text-medium"><?php echo get_the_author(); ?></span> <?php the_date(); ?>
+                <span class="post-list__item__author text-navy text-medium"><?php echo get_the_author(); ?></span> <?php the_date(); ?>
             </div>
             <div class="post-list__item__description"><?php the_excerpt(); ?></div>
         </li>

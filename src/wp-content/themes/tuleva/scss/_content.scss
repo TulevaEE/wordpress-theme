@@ -53,21 +53,15 @@
 
     .post-meta {
         text-align: center;
-        text-transform: uppercase;
         margin-bottom: 1rem;
         color: $navy-blue;
 
         &__author {
-            font-weight: bold;
-        }
-
-        &__category {
-            font-weight: bold;
+            font-weight: $font-weight-medium;
         }
 
         &__separator {
-            margin: 0 10px;
-            font-weight: bold;
+            margin: 0 .5em;
             color: $text-secondary;
         }
     }
@@ -79,7 +73,6 @@
 
     .post-social {
         text-align: center;
-        text-transform: uppercase;
         color: $navy-blue;
 
         iframe {
