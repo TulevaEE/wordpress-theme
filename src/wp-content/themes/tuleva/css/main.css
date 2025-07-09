@@ -15922,12 +15922,18 @@ sup {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 6rem;
   margin-bottom: 6rem;
   color: #8A8D91;
   font-size: 1.25rem;
   line-height: 1.6;
   font-weight: 500;
+}
+@media (max-width: 575.98px) {
+  .pagination {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 .pagination ul {
   display: -webkit-box;

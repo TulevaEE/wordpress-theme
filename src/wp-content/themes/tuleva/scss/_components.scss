@@ -623,12 +623,17 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: $spacer * 4;
+    margin-top: $spacer * 6;
     margin-bottom: $spacer * 6;
     color: $text-tertiary;
     font-size: $font-size-lg;
     line-height: $line-height-lg;
     font-weight: $font-weight-medium;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: $spacer * 3;
+        margin-bottom: $spacer * 3;
+    }
 
     ul {
         display: flex;
