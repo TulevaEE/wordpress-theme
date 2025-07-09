@@ -10,7 +10,7 @@
     $temp = $wp_query;
     $wp_query = null;
     $is_paged = $paged > 1;
-    $posts_number = 7;
+    $posts_number = $is_paged ? 8 : 9; // 9 on first page (featured + 8), 8 on others
     $i = 0;
     $args = [
         'posts_per_page' => $posts_number,
@@ -38,7 +38,6 @@
         $i++;
         $is_featured = !$is_paged && $i === 1;
         ?>
-
         <li class="post-list__item<?php if ($is_featured) { echo ' post-list__item--wide'; } ?>">
             <a class="post-list__item__title<?php echo ($is_featured ? ' h3' : ' h4'); ?>" href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()) { ?>
@@ -53,6 +52,5 @@
             </div>
             <div class="post-list__item__description"><?php the_excerpt(); ?></div>
         </li>
-
     <?php } ?>
 </ul>

@@ -647,8 +647,12 @@
         li {
             margin: 0;
 
-            @include media-breakpoint-down(lg) {
-                &.pagination__previous,
+            @include media-breakpoint-down(xl) {
+                &.pagination__previous {
+                    display: none;
+                }
+            }
+            @include media-breakpoint-down(md) {
                 &.pagination__next {
                     display: none;
                 }
