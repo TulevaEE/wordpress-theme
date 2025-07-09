@@ -28,5 +28,4 @@
             </li>
         <?php } ?>
     </ul>
-    <a class="d-none d-md-inline-block" href="<?php bloginfo('url'); ?>/feed/rss2/"><?php _e('RSS feed', TEXT_DOMAIN); ?></a>
 </nav>
