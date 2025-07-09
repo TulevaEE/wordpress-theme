@@ -4,37 +4,15 @@
         wpml_current_language ', NULL );  ?>';
 
     </script>
-    <div id="fb-root"></div>
+
     <!-- FB share button -->
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
     </script>
+
     <!-- Twitter share button -->
-    <script>
-        window.twttr = (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-
-            t._e = [];
-            t.ready = function (f) {
-                t._e.push(f);
-            };
-
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="container">
@@ -67,9 +45,9 @@
                         }
                     ?>
                 </div>
-                <div class="post-social">
+                <div class="post-social d-flex flex-wrap justify-content-center align-items-center gap-3">
                     <span><?php _e('Share with a friend:', TEXT_DOMAIN); ?></span>
-                    <div class="fb-share-button" data-layout="button_count"></div>
+                    <div class="fb-share-button" data-href="<?php echo esc_url( get_permalink() ); ?>" data-layout="button_count"></div>
                     <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
                     Tweet</a>
                 </div>

@@ -17889,8 +17889,8 @@ sup {
   }
 }
 .single-post .post-meta {
+  margin-bottom: 1.5rem;
   text-align: center;
-  margin-bottom: 1rem;
   color: #002f63;
 }
 .single-post .post-meta__author {
@@ -17907,16 +17907,7 @@ sup {
 .single-post .post-social {
   text-align: center;
   color: #002f63;
-}
-.single-post .post-social iframe {
-  vertical-align: middle;
-}
-.single-post .post-social > * {
-  display: inline-block;
-  margin-right: 0.25em;
-}
-.single-post .post-social:last-child {
-  margin-right: 0;
+  line-height: 1;
 }
 .single-post .content {
   margin-bottom: 5rem;

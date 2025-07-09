@@ -52,8 +52,8 @@
     }
 
     .post-meta {
+        margin-bottom: 1.5rem;
         text-align: center;
-        margin-bottom: 1rem;
         color: $navy-blue;
 
         &__author {
@@ -74,19 +74,7 @@
     .post-social {
         text-align: center;
         color: $navy-blue;
-
-        iframe {
-            vertical-align: middle;
-        }
-
-        & > * {
-            display: inline-block;
-            margin-right: .25em;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
+        line-height: 1;
     }
 
     .content {
