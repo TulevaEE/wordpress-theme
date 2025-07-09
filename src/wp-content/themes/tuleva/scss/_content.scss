@@ -117,9 +117,10 @@
             margin-bottom: 1.5rem;
         }
         .wp-caption-text {
+            display: block;
             margin-top: .75rem;
             color: $text-secondary;
-            font-size: 1rem;
+            font-size: $font-size-base;
             line-height: $line-height-base;
         }
 

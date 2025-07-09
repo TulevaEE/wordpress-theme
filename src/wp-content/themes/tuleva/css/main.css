@@ -17857,6 +17857,7 @@ sup {
   margin-bottom: 1.5rem;
 }
 .single-post .content .wp-caption-text {
+  display: block;
   margin-top: 0.75rem;
   color: #6B7074;
   font-size: 1rem;
