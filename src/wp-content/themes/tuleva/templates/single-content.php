@@ -54,7 +54,6 @@
                         <?php the_date(); ?>
                     </span>
                     <span class="post-meta__separator">·</span>
-                    <span><?php _e('Category:', TEXT_DOMAIN); ?></span>
                     <?php
                         $categories = get_the_category();
                         $copy = $categories;

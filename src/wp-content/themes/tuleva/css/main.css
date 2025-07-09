@@ -15897,7 +15897,7 @@ sup {
 }
 .post-list__item__title {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #002f63;
 }
 .post-list__item__title h2, .post-list__item__title .h2 {
@@ -17873,7 +17873,7 @@ sup {
   margin: 2rem 0;
 }
 .single-post .post-header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
   .single-post .post-header {
