@@ -13,9 +13,9 @@
         }
     }
 
-    &__column {
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 1em;
+    &__column + &__column {
+        @include media-breakpoint-down(md) {
+            margin-top: 1em;
         }
     }
 
@@ -27,14 +27,6 @@
 
     &__text {
         color: $text-secondary;
-
-        @include media-breakpoint-down(sm) {
-            margin-top: 0;
-        }
-
-        p {
-            color: $text-secondary;
-        }
     }
 
     &__subscribe {

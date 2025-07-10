@@ -17764,23 +17764,15 @@ sup {
   text-transform: inherit;
   font-weight: 500;
 }
-@media (max-width: 575.98px) {
-  .footer__column {
-    margin-bottom: 1em;
+@media (max-width: 767.98px) {
+  .footer__column + .footer__column {
+    margin-top: 1em;
   }
 }
 .footer__column__text__row {
   margin-bottom: 0.25em;
 }
 .footer__text {
-  color: #6B7074;
-}
-@media (max-width: 575.98px) {
-  .footer__text {
-    margin-top: 0;
-  }
-}
-.footer__text p {
   color: #6B7074;
 }
 .footer__subscribe {
@@ -18298,6 +18290,9 @@ sup {
 
 .high-contrast-toggle {
   --bs-border-color: #8A8D91;
+}
+.high-contrast-toggle, .high-contrast-toggle + .form-check-label {
+  cursor: pointer;
 }
 .high-contrast-toggle + .form-check-label {
   -webkit-user-select: none;
