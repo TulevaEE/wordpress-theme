@@ -2,6 +2,10 @@
 
 .high-contrast-toggle {
     --bs-border-color: #{$text-tertiary};
+    & + .form-check-label {
+        user-select: none;
+        white-space: nowrap;
+    }
 }
 
 .form-switch .form-check-input {
