@@ -57,7 +57,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/06/TUV100-Prospekt-kehtib-alates-04.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/05/Tuleva-III-Samba-Pensionifondi-tingimused-15.06.2025.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/20250301_Mudelportfell_Tuleva.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/20250301_Mudelportfell_Tuleva.pdf" target="_blank"><?php _e('Model portfolio (in Estonian)', TEXT_DOMAIN) ?></a>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/Pohiteave-TUV100-19.02.2025-kehtib-alates-03.03.2025.pdf" target="_blank"><?php _e('Key Investor Information (in Estonian)', TEXT_DOMAIN) ?></a>
@@ -79,7 +79,7 @@
                         <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow text-secondary">
                             <li>
-                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/06/Tuleva-III-Samba-Pensionifondi-investeeringute-aruanne-mai-2025.pdf',__('Investment reports (in Estonian)', TEXT_DOMAIN)); ?>
+                                <?php echo generate_report_link('https://tuleva.ee/wp-content/uploads/2025/07/Tuleva-III-Samba-Pensionifondi-investeeringute-aruanne-juuni-2025.pdf',__('Investment reports (in Estonian)', TEXT_DOMAIN)); ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
