@@ -18157,8 +18157,6 @@ sup {
 }
 
 .high-contrast {
-  --gray-bg-1: var(--gray-bg-2);
-  --blue-bg-1: var(--blue-bg-2);
   --bs-border-color: #8A8D91;
   --gray-border-1: #8A8D91;
   --gray-border-2: #8A8D91;

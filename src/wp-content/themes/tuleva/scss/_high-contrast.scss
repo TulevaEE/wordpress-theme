@@ -22,9 +22,6 @@
 // High contrast styles
 
 .high-contrast {
-    --gray-bg-1: var(--gray-bg-2);
-    --blue-bg-1: var(--blue-bg-2);
-
     --bs-border-color: #{$gray-border-hc};
 
     @each $n in (1, 2, 3) {
