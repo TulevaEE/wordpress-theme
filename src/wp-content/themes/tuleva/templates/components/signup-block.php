@@ -20,7 +20,7 @@
                     </p>
                     <?php } ?>
                 <?php } ?>
-                <div id="inline-signup" class="card p-4 bg-blue-washed text-center">
+                <div id="inline-signup" class="card p-4 bg-blue-2 text-center">
                     <p class="mb-4"><?php _e('To become a member please log in to your pension account.', TEXT_DOMAIN); ?></p>
                     <a href="https://pension.tuleva.ee/join" class="btn btn-primary btn-lg"><?php _e('Become a member', TEXT_DOMAIN); ?></a>
                 </div>

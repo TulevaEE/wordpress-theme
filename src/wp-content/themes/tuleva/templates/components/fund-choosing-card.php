@@ -1,8 +1,7 @@
-<div class="<?php echo 'card shadow d-flex flex-column m-0 p-4 br-4' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
+<div class="<?php echo 'card border shadow-sm d-flex flex-column m-0 p-4 br-4' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
     <div style="flex: 1 0 0;">
         <?php if (get_sub_field('pill')) : ?>
-            <span class="badge rounded-pill text-bg-primary fs-6 fw-medium"
-                  style="position: absolute; left: 50%; transform: translate(-50%); margin-top: -37px;">
+            <span class="badge rounded-pill text-bg-primary fs-6 fw-medium position-absolute top-0 start-50 translate-middle">
                 <?php echo get_sub_field('pill'); ?>
             </span>
         <?php endif; ?>

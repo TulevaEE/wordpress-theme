@@ -1,11 +1,11 @@
 // Layout
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1140px // override xxl
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1140px // override xxl
 );
 
 $container-padding-x: 2rem;
@@ -20,6 +20,36 @@ $link-underline-thickness: 0.0625em !default;
 $icon-link-underline-offset: $link-underline-offset;
 
 // Colors
+
+:root {
+    --gray-bg-1:     #FAFBFC;
+    --gray-bg-2:     #F5F7F9;
+    --gray-border-1: #E0E6EC;
+    --gray-border-2: #D6DEE6;
+    --gray-border-3: #C8D0D8;
+
+    --blue-bg-1:     #F2FAFE;
+    --blue-bg-2:     #EDF7FD;
+    --blue-border-1: #D3E8F5;
+    --blue-border-2: #C9E0EE;
+    --blue-border-3: #BAD2E4;
+
+    --bs-box-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+
+    --box-shadow-dropdown:
+        0 0 0 1px rgba(0,0,0,0.04),
+        0 1px 2px 0 rgba(0,0,0,0.04),
+        0 4px 8px 0 rgba(0,0,0,0.04),
+        0 12px 24px 0 rgba(0,0,0,0.08);
+
+    --box-shadow-calculator:
+        0 0 0 1px rgba(0,0,0,0.02),
+        0 1px 3px 0 rgba(0,0,0,0.04),
+        0 3px 9px 0 rgba(0,0,0,0.04),
+        0 6px 18px 0 rgba(0,0,0,0.04);
+
+    --box-shadow-hc: 0 0 0 1px #8A8D91;
+}
 
 $black:               #000;
 $white:               #fff;
@@ -42,25 +72,28 @@ $text-tertiary:       #8A8D91;
 
 $text-navy:           $navy-blue;
 $text-navy-secondary: #5C738C;
+$text-navy-tertiary:  #7D8FA3;
 
 $text-green: $green;
 $text-red:   $red;
 $text-blue:  $blue;
 
-$note-bg: #fff6d9;
+$note-bg:     #fff6d9;
 $note-border: #faeed0;
 
-$gray-bg-1: #FAFBFC;
-$gray-bg-2: #F5F7F9;
-$gray-border-1: #E0E6EC;
-$gray-border-2: #D6DEE6;
-$gray-border-3: #C8D0D8;
+$gray-bg-1:     var(--gray-bg-1)     !default;
+$gray-bg-2:     var(--gray-bg-2)     !default;
+$gray-border-1: var(--gray-border-1) !default;
+$gray-border-2: var(--gray-border-2) !default;
+$gray-border-3: var(--gray-border-3) !default;
+$gray-border-hc: $text-tertiary;
 
-$blue-bg-1: #F2FAFE;
-$blue-bg-2: #EDF7FD;
-$blue-border-1: #D3E8F5;
-$blue-border-2: #C9E0EE;
-$blue-border-3: #BAD2E4;
+$blue-bg-1:     var(--blue-bg-1)     !default;
+$blue-bg-2:     var(--blue-bg-2)     !default;
+$blue-border-1: var(--blue-border-1) !default;
+$blue-border-2: var(--blue-border-2) !default;
+$blue-border-3: var(--blue-border-3) !default;
+$blue-border-hc: $text-navy-tertiary;
 
 $table-color: $text-primary;
 $text-body-primary: $text-primary;
@@ -76,22 +109,17 @@ $gray-washed: $gray-bg-2;
 $gray-mid: $gray-border-3;
 $body-color-alt: $blue-washed !default;
 
-// Shadows
-
-$shadow-sm: 0 0 48px 0 rgba(0, 0, 0, .08);
-$shadow-md: 0 0 64px 0 rgba(0, 0, 0, .12);
-
 // Spacing
 
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3),
-  6: ($spacer * 6)
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 6)
 ) !default;
 
 // Accordion
@@ -120,10 +148,6 @@ $body-color: $text-primary !default;
 
 $body-gradient-start: #fff !default;
 $body-gradient-stop: $body-color-alt !default;
-$card-border-width: 0;
-$dropdown-box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 1px 2px 0 rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.04), 0 12px 24px 0 rgba(0,0,0,0.08);
-$calculator-box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 1px 3px 0 rgba(0,0,0,0.04), 0 3px 9px 0 rgba(0,0,0,0.04), 0 6px 18px 0 rgba(0,0,0,0.04);
-$dropdown-box-shadow-hc: 0 0 0 1px rgba(0,0,0,0.08), 0 1px 2px 0 rgba(0,0,0,0.08), 0 4px 8px 0 rgba(0,0,0,0.08), 0 12px 24px 0 rgba(0,0,0,0.16);
 
 // Fonts
 $font-family-sans-serif:  Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;

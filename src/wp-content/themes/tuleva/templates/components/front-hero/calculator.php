@@ -1,5 +1,5 @@
 <?php print_funds_js(); ?>
-<div class="card br-3 shadow-md second-pillar-calculator">
+<div class="card calculator br-3 second-pillar-calculator">
     <div class="card-body p-2">
         <div class="bg-blue-2 p-3 br-2">
             <div class="mb-3 align-items-center row">

@@ -1,4 +1,4 @@
-<section id="single-quote-block-component" class="bg-blue-washed section-spacing">
+<section id="single-quote-block-component" class="bg-blue-2 section-spacing">
     <div class="container">
         <div class="row row-gap-4">
             <div class="col-md-3 offset-md-1 single-quote-box__media">

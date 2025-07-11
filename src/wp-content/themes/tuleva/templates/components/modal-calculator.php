@@ -17,7 +17,7 @@
               <p><?php _e('Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 5% annual return.', TEXT_DOMAIN) ?></p>
               <p><?php _e('In a low-cost index fund your assets grow hand-in-hand with the average returns of world markets. Low-cost index funds have outperformed Estonian pension funds every year to date, but past performance is no guarantee of future performance.', TEXT_DOMAIN) ?></p>
             </div>
-            <div class="col-md-5 p-4 bg-blue-washed rounded">
+            <div class="col-md-5 p-4 bg-blue-2 rounded">
               <h3 class="mb-3"><?php _e('Assumptions', TEXT_DOMAIN) ?></h3>
               <div class="d-flex flex-row flex-wrap">
                 <div class="d-flex justify-content-between eeldus">

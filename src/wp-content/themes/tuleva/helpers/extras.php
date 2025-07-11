@@ -77,7 +77,7 @@ function get_component_classes($classes = [])
 }
 
 function get_component_background_color_class() {
-    $bg_class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-washed' : '';
+    $bg_class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-2' : '';
 
     return $bg_class;
 }

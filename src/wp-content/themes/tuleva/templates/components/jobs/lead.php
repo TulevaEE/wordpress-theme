@@ -1,5 +1,5 @@
 <?php
-$class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-washed' : '';
+$class = strtolower(get_sub_field('background_color')) === 'blue' ? 'bg-blue-2' : '';
 ?>
 <section class="d-flex flex-column section-spacing <?php echo $class ?>">
     <div class="container container my-auto">

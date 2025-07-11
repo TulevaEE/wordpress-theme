@@ -116,6 +116,11 @@
         display: none;
     }
 
+    .dropdown-divider {
+        border-color: $gray-border-1;
+        opacity: 1;
+    }
+
     .nav-item {
         position: relative;
         margin: 0;
@@ -233,7 +238,7 @@
             padding: 0.5rem 0;
             border-radius: 0.5rem;
             background-color: $white;
-            box-shadow: $dropdown-box-shadow;
+            box-shadow: var(--box-shadow-dropdown);
             opacity: 0;
             transition: visibility 0.15s ease-out, opacity 0.15s ease-out, transform 0.15s ease-out;
         }

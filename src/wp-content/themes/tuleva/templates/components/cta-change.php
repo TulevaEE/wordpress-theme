@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing-half cta-change<?php echo get_sub_field('background_color') === 'blue' ? ' bg-blue-washed' : ''; ?>">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing-half cta-change<?php echo get_sub_field('background_color') === 'blue' ? ' bg-blue-2' : ''; ?>">
     <div class="container">
       <div class="row">
         <p class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-md-baseline m-0 text-center gap-4">

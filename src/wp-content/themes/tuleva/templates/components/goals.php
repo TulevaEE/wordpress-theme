@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing bg-blue-washed">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-spacing bg-blue-2">
     <div class="container">
 
         <div class="row text-center section-spacing-bottom">

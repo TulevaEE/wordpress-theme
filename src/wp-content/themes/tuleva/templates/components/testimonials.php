@@ -1,4 +1,4 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="d-none d-md-block section-spacing bg-blue-washed">
+<section id="<?php the_sub_field('component_id'); ?>" class="d-none d-md-block section-spacing bg-blue-2">
     <div class="container text-center">
         <?php if (get_sub_field('heading')) { ?>
             <h2 class="mb-5"><?php the_sub_field('heading'); ?></h2>

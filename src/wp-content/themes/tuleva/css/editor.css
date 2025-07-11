@@ -1,4 +1,29 @@
 @charset "UTF-8";
+:root {
+  --gray-bg-1: #FAFBFC;
+  --gray-bg-2: #F5F7F9;
+  --gray-border-1: #E0E6EC;
+  --gray-border-2: #D6DEE6;
+  --gray-border-3: #C8D0D8;
+  --blue-bg-1: #F2FAFE;
+  --blue-bg-2: #EDF7FD;
+  --blue-border-1: #D3E8F5;
+  --blue-border-2: #C9E0EE;
+  --blue-border-3: #BAD2E4;
+  --bs-box-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+  --box-shadow-dropdown:
+      0 0 0 1px rgba(0,0,0,0.04),
+      0 1px 2px 0 rgba(0,0,0,0.04),
+      0 4px 8px 0 rgba(0,0,0,0.04),
+      0 12px 24px 0 rgba(0,0,0,0.08);
+  --box-shadow-calculator:
+      0 0 0 1px rgba(0,0,0,0.02),
+      0 1px 3px 0 rgba(0,0,0,0.04),
+      0 3px 9px 0 rgba(0,0,0,0.04),
+      0 6px 18px 0 rgba(0,0,0,0.04);
+  --box-shadow-hc: 0 0 0 1px #8A8D91;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -103,7 +128,7 @@
   --bs-highlight-bg: rgb(254.4, 249.2, 212);
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #C8D0D8;
+  --bs-border-color: var(--gray-border-3);
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -3977,7 +4002,7 @@ textarea.form-control-lg {
   --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
-  --bs-dropdown-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+  --bs-dropdown-box-shadow: var(--bs-box-shadow);
   --bs-dropdown-link-color: var(--bs-body-color);
   --bs-dropdown-link-hover-color: var(--bs-body-color);
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
@@ -5152,11 +5177,11 @@ textarea.form-control-lg {
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
-  --bs-card-border-width: 0;
+  --bs-card-border-width: var(--bs-border-width);
   --bs-card-border-color: var(--bs-border-color-translucent);
   --bs-card-border-radius: 0.5rem;
   --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: 0.5rem;
+  --bs-card-inner-border-radius: calc(0.5rem - (var(--bs-border-width)));
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
@@ -14555,10 +14580,10 @@ figure {
 }
 
 hr {
-  border-color: #C8D0D8;
-  background-color: white;
   margin: 0;
   padding: 0;
+  border-color: var(--gray-border-1);
+  opacity: 1;
 }
 
 .custom-select {
@@ -14566,7 +14591,7 @@ hr {
 }
 
 .alert {
-  border: solid 2px #C8D0D8;
+  border: solid 2px var(--gray-border-3);
   border-radius: 8px;
 }
 .alert-success {
@@ -14583,7 +14608,7 @@ hr {
 }
 
 .input-group-text {
-  background-color: #F5F7F9;
+  background-color: var(--gray-bg-2);
 }
 
 .br-0 {

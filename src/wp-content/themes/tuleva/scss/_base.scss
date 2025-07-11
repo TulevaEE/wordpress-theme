@@ -116,10 +116,10 @@ figure {
 }
 
 hr {
-    border-color: $gray-mid;
-    background-color: white;
     margin: 0;
     padding: 0;
+    border-color: $gray-border-1;
+    opacity: 1;
 }
 
 .custom-select {

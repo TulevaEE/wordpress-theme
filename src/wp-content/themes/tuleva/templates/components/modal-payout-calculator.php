@@ -17,7 +17,7 @@
                         <p><?php _e('In 2024, income tax rate is 20%.', TEXT_DOMAIN) ?></p>
                         <p><?php _e('In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic exemption, if annual income increases from 14 400 euros to 25 200 euros, basic exemption decreases according to the following formula: 7848 – 7848 ÷ 10 800 × (income amount – 14 400), if annual income is above 25 200 euros, basic exemption is 0.', TEXT_DOMAIN) ?></p>
                     </div>
-                    <div class="col-md-5 p-4 bg-blue-washed rounded">
+                    <div class="col-md-5 p-4 bg-blue-2 rounded">
                         <h3 class="mb-3"><?php _e('Assumptions', TEXT_DOMAIN) ?></h3>
                         <div class="d-flex flex-row flex-wrap">
                             <div class="d-flex justify-content-between eeldus">
