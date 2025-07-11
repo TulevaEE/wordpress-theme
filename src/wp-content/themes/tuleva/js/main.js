@@ -101,16 +101,20 @@ $(document).ready(function ($) {
                 }
             }
         },
-        setCookie = function (cookieName, cookieValue, nDays) {
-            var today = new Date(),
-                expire = new Date();
+        getCookie = function (name) {
+            const match = document.cookie.match(
+                new RegExp('(?:^|;)\\s*' + name + '=([^;]*)')
+            );
+            return match ? decodeURIComponent(match[1]) : null;
+        },
+        setCookie = function (name, value, nDays = 1, domain) {
+            const maxAge = nDays * 86400;
+            let cookieString =
+                `${name}=${encodeURIComponent(value)};path=/;max-age=${maxAge}`;
 
-            if (nDays === null || nDays === 0) {
-                nDays = 1;
-            }
+            if (domain) cookieString += `;domain=${domain}`;
 
-            expire.setTime(today.getTime() + 3600000 * 24 * nDays);
-            document.cookie = cookieName + "=" + escape(cookieValue) + ";expires=" + expire.toGMTString() + "; path=/";
+            document.cookie = cookieString;
         },
         format = function (number) {
             number = Math.floor(number);
@@ -429,55 +433,51 @@ $(document).ready(function ($) {
 
             updateClock();
         },
-        initHighContrastMode = function() {
+        initHighContrast = function() {
             // synced with onboarding-client
-            const HIGH_CONTRAST_MODE_COOKIE_NAME = 'high-contrast';
-
-            const domain = window.location.host.includes('localhost') ? 'localhost' : '.tuleva.ee'
-
-            const isHighContrastModeEnabled = () => {
-                if (document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME)) {
-                    return document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME);
-                }
-                return window.matchMedia('(prefers-contrast: more)').matches;
-            };
-
-            const updateHighContrastCookie = () => {
-                const oneYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
-                const unixEpoch = new Date(1);
-                // if enabled, set expiry to UTC epoch to delete, if not enabled then set it to 12 months in future
-                const expiry = isHighContrastModeEnabled() ? unixEpoch : oneYearFromNow;
-                document.cookie = `${HIGH_CONTRAST_MODE_COOKIE_NAME}=true;expires=${expiry.toUTCString()};domain=${domain};path=/`;
-            };
-
-            var $toggleSwitches = $('.high-contrast-toggle');
-
-            const toggleHighContrastMode = () => {
-                const root = document.documentElement;
-
-                if (isHighContrastModeEnabled()) {
-                    root.classList.add('high-contrast');
-                } else {
-                    root.classList.remove('high-contrast');
-                }
-                $toggleSwitches.prop('checked', isHighContrastModeEnabled());
-            };
-
-            $toggleSwitches.on('change', function() {
-                updateHighContrastCookie();
-                toggleHighContrastMode();
-            });
-
+            const COOKIE_NAME        = 'high-contrast';
+            const COOKIE_DOMAIN      = location.hostname === 'localhost' ? null : '.tuleva.ee';
+            const $contrastToggles   = $('.high-contrast-toggle');
+            const contrastChannel    = new BroadcastChannel(COOKIE_NAME);
             const contrastMediaQuery = window.matchMedia('(prefers-contrast: more)');
 
-            contrastMediaQuery.addEventListener('change', () => {
-                if (!document.cookie.includes(HIGH_CONTRAST_MODE_COOKIE_NAME)) {
-                    toggleHighContrastMode();
-                }
+            const systemPref = () => contrastMediaQuery.matches;
+
+            const currentPref = () => {
+                const storedPref = getCookie(COOKIE_NAME);
+                if (storedPref === 'true')  return true;
+                if (storedPref === 'false') return false;
+                return systemPref();
+            };
+
+            const applyContrastState = isHighContrast => {
+                document.documentElement.classList.toggle('high-contrast', isHighContrast);
+                $contrastToggles.prop('checked', isHighContrast).attr('aria-checked', isHighContrast);
+            };
+
+            $contrastToggles.on('change', function () {
+                const isHighContrast = this.checked;
+                const matchesSystemPref = isHighContrast === systemPref();
+
+                matchesSystemPref
+                ? setCookie(COOKIE_NAME, '', 0, COOKIE_DOMAIN)
+                : setCookie(COOKIE_NAME, isHighContrast, 400, COOKIE_DOMAIN);
+
+                applyContrastState(isHighContrast);
+                contrastChannel.postMessage(isHighContrast);
             });
 
-            toggleHighContrastMode();
+            contrastChannel.onmessage = ev => applyContrastState(ev.data);
 
+            contrastMediaQuery.addEventListener('change', () => {
+                const storedPref = getCookie(COOKIE_NAME);
+                if ((storedPref === 'true' && systemPref()) || (storedPref === 'false' && !systemPref())) {
+                    setCookie(COOKIE_NAME, '', 0, COOKIE_DOMAIN);
+                }
+                applyContrastState(currentPref());
+            });
+
+            applyContrastState(currentPref());
         },
         initCountdownTimerFull = function () {
             var march31midnight = 1743454799000;
@@ -534,7 +534,7 @@ $(document).ready(function ($) {
         // function () { // initModal('#question-profit', 'questionProfitModal'); },
         function () { initModal('#question-vote', 'questionVoteModal'); },
         function () { initModal('#question-rights', 'questionRightsModal'); },
-        function () { initHighContrastMode(); },
+        function () { initHighContrast(); },
     ]
 
     setupFunctions.forEach(function (func) {
