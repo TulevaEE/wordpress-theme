@@ -565,6 +565,31 @@ $(document).ready(function ($) {
         $(this).closest('.navbar-collapse').removeClass('in');
     });
 
+    function initHeaderMenuKeyboardNav() {
+        $('.navbar-nav').on('keydown', '.nav-link, .dropdown-item', function(e) {
+            var key = e.key || e.keyCode;
+            var $target = $(e.target);
+            var $navLinks = $('.navbar-nav > .nav-item > .nav-link');
+            var $currentLink;
+            if ($target.is('.dropdown-item')) {
+                $currentLink = $target.closest('.nav-item.dropdown').children('.nav-link');
+            } else {
+                $currentLink = $target;
+            }
+            var idx = $navLinks.index($currentLink);
+            if (idx === -1) return;
+            var total = $navLinks.length;
+            if (key === 'ArrowRight' || key === 39) {
+                e.preventDefault();
+                $navLinks.eq((idx + 1) % total).focus();
+            } else if (key === 'ArrowLeft' || key === 37) {
+                e.preventDefault();
+                $navLinks.eq((idx - 1 + total) % total).focus();
+            }
+        });
+    }
+    initHeaderMenuKeyboardNav();
+
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
