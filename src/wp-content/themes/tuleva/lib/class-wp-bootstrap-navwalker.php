@@ -132,7 +132,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					// $atts['data-toggle']	= 'dropdown';
 					$atts['aria-haspopup']	= 'true';
 					$atts['aria-expanded']	= 'false';
-					$atts['data-bs-toggle']	= 'dropdown';
+					//$atts['data-bs-toggle']	= 'dropdown';
 					$atts['class']			= 'dropdown-toggle nav-link';
 					$atts['id']				= 'menu-item-dropdown-' . $item->ID;
 				} elseif (0 === stripos($item->title, 'button:') && 1 === $depth) {
