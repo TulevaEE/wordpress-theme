@@ -101,21 +101,6 @@ $(document).ready(function ($) {
                 }
             }
         },
-        getCookie = function (name) {
-            const match = document.cookie.match(
-                new RegExp('(?:^|;)\\s*' + name + '=([^;]*)')
-            );
-            return match ? decodeURIComponent(match[1]) : null;
-        },
-        setCookie = function (name, value, nDays = 1, domain) {
-            const maxAge = nDays * 86400;
-            let cookieString =
-                `${name}=${encodeURIComponent(value)};path=/;max-age=${maxAge}`;
-
-            if (domain) cookieString += `;domain=${domain}`;
-
-            document.cookie = cookieString;
-        },
         format = function (number) {
             number = Math.floor(number);
 
@@ -436,48 +421,65 @@ $(document).ready(function ($) {
         initHighContrast = function() {
             // synced with onboarding-client
             const COOKIE_NAME        = 'high-contrast';
-            const COOKIE_DOMAIN      = location.hostname === 'localhost' ? null : '.tuleva.ee';
+            const COOKIE_DOMAIN      = location.hostname === 'localhost' ? 'localhost' : '.tuleva.ee';
             const $contrastToggles   = $('.high-contrast-toggle');
-            const contrastChannel    = new BroadcastChannel(COOKIE_NAME);
-            const contrastMediaQuery = window.matchMedia('(prefers-contrast: more)');
+            const contrastSyncBroadcastChannel    = new BroadcastChannel(COOKIE_NAME);
+            const prefersMoreContrastMediaQuery = window.matchMedia('(prefers-contrast: more)'); // matches is computed when accessed
 
-            const systemPref = () => contrastMediaQuery.matches;
+            const getInitialCookieState = () => {
+                return prefersMoreContrastMediaQuery.matches;
+            }
 
-            const currentPref = () => {
-                const storedPref = getCookie(COOKIE_NAME);
-                if (storedPref === 'true')  return true;
-                if (storedPref === 'false') return false;
-                return systemPref();
-            };
 
-            const applyContrastState = isHighContrast => {
-                document.documentElement.classList.toggle('high-contrast', isHighContrast);
-                $contrastToggles.prop('checked', isHighContrast).attr('aria-checked', isHighContrast);
-            };
+            const getSwitchState = () => {
+                const match = document.cookie.match(
+                    new RegExp('(?:^|;)\\s*' + COOKIE_NAME + '=([^;]*)')
+                );
 
-            $contrastToggles.on('change', function () {
-                const isHighContrast = this.checked;
-                const matchesSystemPref = isHighContrast === systemPref();
-
-                matchesSystemPref
-                ? setCookie(COOKIE_NAME, '', 0, COOKIE_DOMAIN)
-                : setCookie(COOKIE_NAME, isHighContrast, 400, COOKIE_DOMAIN);
-
-                applyContrastState(isHighContrast);
-                contrastChannel.postMessage(isHighContrast);
-            });
-
-            contrastChannel.onmessage = ev => applyContrastState(ev.data);
-
-            contrastMediaQuery.addEventListener('change', () => {
-                const storedPref = getCookie(COOKIE_NAME);
-                if ((storedPref === 'true' && systemPref()) || (storedPref === 'false' && !systemPref())) {
-                    setCookie(COOKIE_NAME, '', 0, COOKIE_DOMAIN);
+                if (!match) {
+                    return null
                 }
-                applyContrastState(currentPref());
+
+                return match[1] === 'true'
+            }
+
+
+            const setSwitchState = (switchOn) => {
+                const oneDayInSeconds = 60*60*24;
+                const cookieLifetimeInSeconds = oneDayInSeconds * 400;
+                // if enabled, set max age to 0 to delete, if not enabled then set it to 400 days
+                document.cookie = `${COOKIE_NAME}=${switchOn};max-age=${cookieLifetimeInSeconds};domain=${COOKIE_DOMAIN};path=/`;
+            };
+
+
+            const applyContrastState = () => {
+                const switchState = getSwitchState()
+
+                document.documentElement.classList.toggle('high-contrast', switchState);
+                $contrastToggles.prop('checked', switchState).attr('aria-checked', switchState);
+            };
+
+
+            $contrastToggles.on('change', () => {
+                setSwitchState(!getSwitchState());
+
+                applyContrastState();
+                contrastSyncBroadcastChannel.postMessage('');
             });
 
-            applyContrastState(currentPref());
+            contrastSyncBroadcastChannel.onmessage = () => applyContrastState();
+
+            prefersMoreContrastMediaQuery.addEventListener('change', () => {
+                setSwitchState(getInitialCookieState())
+                applyContrastState();
+                contrastSyncBroadcastChannel.postMessage('');
+            });
+
+            if (getSwitchState() === null) {
+                // no cookie yet
+                setSwitchState(getInitialCookieState())
+            }
+            applyContrastState();
         },
         initCountdownTimerFull = function () {
             var march31midnight = 1743454799000;
