@@ -10,11 +10,11 @@ function get_translated_link()
 }
 
 ?>
-<div class="card calculator br-3">
+<div class="card calculator rounded-4">
     <div class="card-body p-2 third-pillar-calculator">
         <form>
             <?php if ($isOctoberNovemberDecember) { ?>
-                <div class="card bg-gray-2 p-3 br-2">
+                <div class="card bg-gray-2 p-3 rounded-3">
                     <div class="mb-3 row align-items-center">
                         <label for="yearlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a
@@ -64,11 +64,11 @@ function get_translated_link()
                     </div>
                 </div>
 
-                <div class="mt-2 p-3 py-4 card br-2 text-navy">
+                <div class="mt-2 p-3 py-4 text-navy">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="me-3">
                             <span
-                                class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                                class="d-inline-block fs-6 lh-sm"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"
@@ -98,7 +98,7 @@ function get_translated_link()
                     <?php _e('Making a payment is <strong>free</strong> and takes only 2 minutes.', TEXT_DOMAIN); ?>
                 </div>
             <?php } else { ?>
-                <div class="card bg-gray-2 p-3 br-2">
+                <div class="card bg-gray-2 p-3 rounded-3">
                     <div class="mb-3 align-items-center row">
                         <label for="monthlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Gross salary', TEXT_DOMAIN); ?><span
@@ -137,11 +137,11 @@ function get_translated_link()
                     </div>
                 </div>
 
-                <div class="mt-2 p-3 py-4 card br-2 text-navy">
+                <div class="mt-2 p-3 py-4 text-navy">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="me-3">
                             <span
-                                class="d-inline-block fs-6 lh-sm fw-medium"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
+                                class="d-inline-block fs-6 lh-sm"><?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?></span><span
                                 class="inline-help d-none d-md-inline-block"
                                 role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="<?php _e('The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year.', TEXT_DOMAIN); ?>"

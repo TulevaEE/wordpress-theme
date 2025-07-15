@@ -1,6 +1,6 @@
-<div class="card calculator br-3">
+<div class="card calculator rounded-4">
     <div class="card-body p-2 payout-calculator">
-        <div class="card bg-gray-2 p-3 br-2">
+        <div class="card bg-gray-2 p-3 rounded-3">
             <div class="mb-3 row">
                 <label for="portfolioSum" class="col-sm-6 col-form-label vertical-align pe-0">
                     <?php _e('Accumulated by age 65', TEXT_DOMAIN); ?>
@@ -31,7 +31,7 @@
         </div>
         <div class="d-flex flex-column flex-sm-row m-0">
             <div class="col-12 col-sm-6 px-0 pe-sm-1">
-                <div class="card bg-blue-2 mt-2 p-3 py-4 text-center text-nowrap br-2">
+                <div class="card bg-blue-2 mt-2 p-3 py-4 text-center text-nowrap rounded-3">
                     <span class="text-navy fw-medium">
                         <?php _e('You will receive monthly', TEXT_DOMAIN); ?><span
                             class="increasingTooltip inline-help ms-2 d-none"
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 px-0 ps-sm-1">
-                <div class="card bg-blue-2 mt-2 p-3 py-4 text-center br-2">
+                <div class="card bg-blue-2 mt-2 p-3 py-4 text-center rounded-3">
                     <span class="text-navy fw-medium"><?php _e('You will receive in total', TEXT_DOMAIN); ?></span>
                     <div class="recurringPayoutSum fs-3 mt-1 text-blue fw-bold lh-sm">20 000 €</div>
                 </div>

@@ -1,6 +1,6 @@
-<div class="card calculator br-3">
+<div class="card calculator rounded-4">
     <div class="card-body p-2 second-pillar-payment-rate-calculator">
-        <div class="card bg-gray-2 p-3 br-2">
+        <div class="card bg-gray-2 p-3 rounded-3">
             <div class="mb-3 row">
                 <label for="monthlyWage" class="col-sm-6 col-form-label vertical-align pe-0">
                     <?php _e('Monthly gross salary', TEXT_DOMAIN); ?>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <!-- results -->
-        <div class="mt-2 p-3 py-4 card br-2 text-navy">
+        <div class="mt-2 p-3 py-4 card rounded-3 text-navy">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="me-3">
                     <span

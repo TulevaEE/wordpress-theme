@@ -1,7 +1,7 @@
 <?php print_funds_js(); ?>
-<div class="card calculator br-3 second-pillar-calculator">
+<div class="card calculator rounded-4 second-pillar-calculator">
     <div class="card-body p-2">
-        <div class="bg-blue-2 p-3 br-2">
+        <div class="bg-blue-2 p-3 rounded-3">
             <div class="mb-3 align-items-center row">
                 <label for="age" class="col-sm-6 col-form-label pe-0">
                     <?php _e('Your age', TEXT_DOMAIN); ?>
@@ -84,7 +84,7 @@
             </option>
         </select>
 
-        <div class="mt-3 px-3 card br-2 text-navy">
+        <div class="mt-3 px-3 text-navy">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="me-3">
                     <?php _e('Could accumulate by age 65', TEXT_DOMAIN); ?><span
@@ -116,7 +116,7 @@
             </div>
         </div>
         <hr class="my-3"/>
-        <div class="mt-3 px-3 card br-2 text-navy mb-2">
+        <div class="mt-3 px-3 text-navy mb-2">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="me-3">
                     <span class="fs-6 lh-sm fw-medium">

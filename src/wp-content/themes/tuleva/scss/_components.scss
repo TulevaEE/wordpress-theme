@@ -1029,7 +1029,7 @@
     width: 100%;
     box-shadow: 0 0 64px 0 rgba(0, 0, 0, .12);
     background: $white;
-    border-radius: $border-radius-md;
+    border-radius: $border-radius-xl;
     padding: 2rem;
     margin-top: -6rem;
     @include media-breakpoint-up (md) {
@@ -1137,7 +1137,7 @@
 .founder-story {
     display: flex;
     flex-direction: column;
-    border-radius: $border-radius-md;
+    border-radius: $border-radius-xl;
     background-color: $gray-bg-2;
     @include media-breakpoint-up (lg) {
         flex-direction: row;
@@ -1148,9 +1148,9 @@
         background-size: cover;
         background-position: 50% 25%;
         background-repeat: no-repeat;
-        border-radius: $border-radius-md $border-radius-md 0 0;
+        border-radius: $border-radius-xl $border-radius-xl 0 0;
         @include media-breakpoint-up (lg) {
-            border-radius: $border-radius-md 0 0 $border-radius-md;
+            border-radius: $border-radius-xl 0 0 $border-radius-xl;
             background-position: 45% 50%;
         }
 
@@ -1227,7 +1227,7 @@
 // GOALS
 .goal-box {
     flex: 0 0 calc((100% - 48px) / 3);
-    border-radius: $border-radius-2;
+    border-radius: $border-radius-lg;
 
     @include media-breakpoint-down(xl) {
         & {
@@ -1450,7 +1450,7 @@
 
 .emphasis-box {
     background-color: $blue-bg-2;
-    border-radius: $border-radius-md;
+    border-radius: $border-radius-lg;
 }
 
 //Subscribe section in main header
@@ -1478,8 +1478,8 @@
 
 //Card header image border radius override
 .rounded-top {
-    border-top-left-radius: $border-radius-md !important;
-    border-top-right-radius: $border-radius-md !important;
+    border-top-left-radius: $border-radius-lg !important;
+    border-top-right-radius: $border-radius-lg !important;
 }
 
 // Countdown

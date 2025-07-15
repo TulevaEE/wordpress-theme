@@ -1,4 +1,4 @@
-<div class="<?php echo 'card border shadow-sm d-flex flex-column m-0 p-4 br-4' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
+<div class="<?php echo 'card border shadow-sm d-flex flex-column m-0 p-4 rounded-4' . (get_sub_field('pill') ? ' card-selected' : ''); ?>">
     <div style="flex: 1 0 0;">
         <?php if (get_sub_field('pill')) : ?>
             <span class="badge rounded-pill text-bg-primary fs-6 fw-medium position-absolute top-0 start-50 translate-middle">
@@ -8,7 +8,7 @@
         <h2 class="my-3 h4"><?php echo get_sub_field('title'); ?></h2>
         <?php echo get_sub_field('content'); ?>
     </div>
-    <div class="my-4 d-flex flex-column flex-sm-row bg-gray-2 br-2 px-4 px-sm-0 py-sm-4 text-center tiles">
+    <div class="my-4 d-flex flex-column flex-sm-row bg-gray-2 rounded-2 px-4 px-sm-0 py-sm-4 text-center tiles">
         <?php $tile_first = get_sub_field('tile_first'); ?>
         <?php if ($tile_first) : ?>
             <div class="py-4 px-sm-4 py-sm-0" style="flex: 1 0 0;">

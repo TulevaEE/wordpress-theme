@@ -152,6 +152,56 @@ $tooltip-arrow-width:               0 !default;
 $tooltip-arrow-height:              0 !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
+// Borders
+
+$border-radius-xxl: 1.5rem;
+
+$border-color: $gray-border-3 !default;
+$form-check-input-focus-border: $blue !default;
+$input-focus-border-color: $blue !default;
+$table-border-color: $gray-border-2 !default;
+
+$border-radius:               .375rem;
+$border-radius-sm:            .25rem;
+$border-radius-lg:            .5rem;
+$border-radius-xl:            1rem;
+$border-radius-xxl:           1.5rem;
+
+$card-border-radius: $border-radius-lg;
+
+// Buttons
+
+$btn-padding-x:   1em !default;
+$btn-font-weight: 450 !default;
+$btn-white-space: nowrap !default;
+
+// Form controls
+
+$form-range-track-height: 16px !default;
+$form-range-track-bg: #fff !default;
+$form-range-thumb-width: 38px !default;
+$form-range-thumb-border-radius: 100% !default;
+
+// Widgets
+
+$widget-primary-bg-color: $blue-washed !default;
+
+// Navbar
+
+$navbar-height: 78px !default;
+
+// Carousel
+
+$carousel-control-opacity: .32 !default;
+$carousel-control-icon-width: 48px !default;
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
+
+// Footer
+
+$footer-bg-color: $gray-bg-2 !default;
+
 // Typography
 
 $font-family-sans-serif:  Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -196,52 +246,3 @@ $h3-line-height: 1.2857;
 $h4-line-height: 1.3333;
 $h5-line-height: 1.3333;
 $h6-line-height: 1.3333;
-
-// Borders
-
-$border-color: $gray-border-3 !default;
-$form-check-input-focus-border: $blue !default;
-$input-focus-border-color: $blue !default;
-
-$border-radius-0: 0 !default;
-$border-radius-1: .25rem !default;
-$border-radius-2: .5rem !default;
-$border-radius-3: 1rem !default;
-$border-radius-4: 1.5rem !default;
-$border-radius-5: 2rem !default;
-
-$border-radius-md: $border-radius-2;
-$card-border-radius: $border-radius-md;
-
-// Buttons
-
-$btn-padding-x:   1em !default;
-$btn-font-weight: 450 !default;
-$btn-white-space: nowrap !default;
-
-// Form controls
-
-$form-range-track-height: 16px !default;
-$form-range-track-bg: #fff !default;
-$form-range-thumb-width: 38px !default;
-$form-range-thumb-border-radius: 100% !default;
-
-// Widgets
-
-$widget-primary-bg-color: $blue-washed !default;
-
-// Navbar
-
-$navbar-height: 78px !default;
-
-// Carousel
-
-$carousel-control-opacity: .32 !default;
-$carousel-control-icon-width: 48px !default;
-
-$carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
-$carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
-
-// Footer
-
-$footer-bg-color: $gray-bg-2 !default;
