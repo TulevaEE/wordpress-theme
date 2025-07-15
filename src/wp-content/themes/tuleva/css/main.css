@@ -24,6 +24,12 @@
   --box-shadow-hc: 0 0 0 1px #8A8D91;
 }
 
+:root {
+  --red: #DB2200;
+  --green: #008300;
+  --blue: #006CE6;
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -3520,11 +3526,11 @@ textarea.form-control-lg {
 }
 
 .btn {
-  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-x: 1em;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 500;
+  --bs-btn-font-weight: 450;
   --bs-btn-line-height: 1.5;
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: transparent;
@@ -4348,8 +4354,8 @@ textarea.form-control-lg {
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
   margin-left: 0;
@@ -8145,7 +8151,7 @@ textarea.form-control-lg {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  gap: 0.375rem;
+  gap: 0.25em;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -14878,35 +14884,6 @@ hr {
   color: #008300;
 }
 
-.btn-xl {
-  --bs-btn-padding-y: 16px;
-  --bs-btn-padding-x: 60px;
-  --bs-btn-font-size: calc(1.275rem + 0.3vw);
-  --bs-btn-border-radius: 8px;
-}
-@media (min-width: 1200px) {
-  .btn-xl {
-    --bs-btn-font-size: 1.5rem;
-  }
-}
-@media (max-width: 575.98px) {
-  .btn-xl {
-    padding: 16px;
-    width: 100%;
-  }
-}
-
-.btn-orange {
-  color: #fff;
-  background-color: #DB2200;
-  border-color: #DB2200;
-}
-.btn-orange:hover, .btn-orange:focus, .btn-orange:active {
-  color: #fff;
-  background-color: #DB2200;
-  border-color: #DB2200;
-}
-
 .btn-plus,
 .btn-plus:active,
 .btn-plus:focus,
@@ -17045,14 +17022,6 @@ sup {
     padding-bottom: 1.5rem;
   }
 }
-.page-template-page_contact {
-  background: #fff;
-}
-
-.page-template-page_fund {
-  background: linear-gradient(to bottom, #fff 130px, var(--blue-bg-2) 530px, #fff 530px);
-}
-
 .bg-hero-main {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/dog.jpg");
   background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/dog.jpg");

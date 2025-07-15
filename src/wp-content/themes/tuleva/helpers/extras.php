@@ -91,7 +91,7 @@ function get_component_button_color_class() {
     } else if ($button_color === 'outlined') {
         $button_color_class = 'btn-outline-primary';
     } else if ($button_color === 'orange') {
-        $button_color_class = 'btn-orange';
+        $button_color_class = 'btn-danger';
     }
 
     return $button_color_class;

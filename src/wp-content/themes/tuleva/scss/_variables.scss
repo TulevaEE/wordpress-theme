@@ -11,12 +11,24 @@ $container-max-widths: (
 $container-padding-x: 2rem;
 $grid-gutter-width: 2rem;
 
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 6)
+) !default;
+
 // Links
 
 $link-underline-opacity: 25% !default;
 $link-underline-offset: 0.125em !default;
 $link-underline-thickness: 0.0625em !default;
 
+$icon-link-gap: 0.25em;
 $icon-link-underline-offset: $link-underline-offset;
 
 // Colors
@@ -66,39 +78,50 @@ $blue-light:          #00aeea;
 
 $yellow:              #fce228;
 
+$note-bg:             #fff6d9;
+$note-border:         #faeed0;
+
 $text-primary:        #293036;
 $text-secondary:      #6B7074;
 $text-tertiary:       #8A8D91;
 
-$text-navy:           $navy-blue;
+$text-navy:           #002f63;
 $text-navy-secondary: #5C738C;
 $text-navy-tertiary:  #7D8FA3;
+
+:root {
+    --red: #{$red};
+    --green: #{$green};
+    --blue: #{$blue};
+}
+
+$body-color: $text-primary !default;
 
 $text-green: $green;
 $text-red:   $red;
 $text-blue:  $blue;
+$text-navy:  $navy-blue;
 
-$note-bg:     #fff6d9;
-$note-border: #faeed0;
-
-$gray-bg-1:     var(--gray-bg-1)     !default;
-$gray-bg-2:     var(--gray-bg-2)     !default;
-$gray-border-1: var(--gray-border-1) !default;
-$gray-border-2: var(--gray-border-2) !default;
-$gray-border-3: var(--gray-border-3) !default;
+$gray-bg-1:      var(--gray-bg-1)     !default;
+$gray-bg-2:      var(--gray-bg-2)     !default;
+$gray-border-1:  var(--gray-border-1) !default;
+$gray-border-2:  var(--gray-border-2) !default;
+$gray-border-3:  var(--gray-border-3) !default;
 $gray-border-hc: $text-tertiary;
 
-$blue-bg-1:     var(--blue-bg-1)     !default;
-$blue-bg-2:     var(--blue-bg-2)     !default;
-$blue-border-1: var(--blue-border-1) !default;
-$blue-border-2: var(--blue-border-2) !default;
-$blue-border-3: var(--blue-border-3) !default;
+$blue-bg-1:      var(--blue-bg-1)     !default;
+$blue-bg-2:      var(--blue-bg-2)     !default;
+$blue-border-1:  var(--blue-border-1) !default;
+$blue-border-2:  var(--blue-border-2) !default;
+$blue-border-3:  var(--blue-border-3) !default;
 $blue-border-hc: $text-navy-tertiary;
 
 $table-color: $text-primary;
 $text-body-primary: $text-primary;
 $text-body-secondary: $text-secondary;
 $text-body-tertiary: $text-tertiary;
+
+// Keep for backwards compatibility
 
 $orange: $red;
 $text-muted: $text-secondary;
@@ -108,19 +131,6 @@ $blueish-gray: $gray-bg-2;
 $gray-washed: $gray-bg-2;
 $gray-mid: $gray-border-3;
 $body-color-alt: $blue-washed !default;
-
-// Spacing
-
-$spacer: 1rem !default;
-$spacers: (
-    0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3),
-    6: ($spacer * 6)
-) !default;
 
 // Accordion
 
@@ -142,14 +152,8 @@ $tooltip-arrow-width:               0 !default;
 $tooltip-arrow-height:              0 !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
-// Brand definitions
+// Typography
 
-$body-color: $text-primary !default;
-
-$body-gradient-start: #fff !default;
-$body-gradient-stop: $body-color-alt !default;
-
-// Fonts
 $font-family-sans-serif:  Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif !default;
 $font-family-system: system-ui, sans-serif !default;
@@ -194,11 +198,11 @@ $h5-line-height: 1.3333;
 $h6-line-height: 1.3333;
 
 // Borders
+
 $border-color: $gray-border-3 !default;
 $form-check-input-focus-border: $blue !default;
 $input-focus-border-color: $blue !default;
 
-// Radius
 $border-radius-0: 0 !default;
 $border-radius-1: .25rem !default;
 $border-radius-2: .5rem !default;
@@ -210,31 +214,34 @@ $border-radius-md: $border-radius-2;
 $card-border-radius: $border-radius-md;
 
 // Buttons
-$btn-font-weight: 500 !default;
-$btn-border-radius-xl: 8px !default;
+
+$btn-padding-x:   1em !default;
+$btn-font-weight: 450 !default;
 $btn-white-space: nowrap !default;
-$padding-xl-horizontal: 60px !default;
-$padding-xl-vertical: 16px !default;
 
-// Widgets
-$widget-primary-bg-color: $blue-washed !default;
+// Form controls
 
-// Navbar
-$navbar-height: 78px !default;
-
-// Footer
-$footer-bg-color: $blueish-gray !default;
-
-// Carousel
-
-$carousel-control-opacity:                    .32 !default;
-$carousel-control-icon-width:                 48px !default;
-
-$carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
-$carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
-
-// Range slider
 $form-range-track-height: 16px !default;
 $form-range-track-bg: #fff !default;
 $form-range-thumb-width: 38px !default;
 $form-range-thumb-border-radius: 100% !default;
+
+// Widgets
+
+$widget-primary-bg-color: $blue-washed !default;
+
+// Navbar
+
+$navbar-height: 78px !default;
+
+// Carousel
+
+$carousel-control-opacity: .32 !default;
+$carousel-control-icon-width: 48px !default;
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z'/%3E%3Cpath d='M0-.5h24v24H0z' fill='none'/%3E%3C/svg%3E");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg fill='%23002F63' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z'/%3E%3Cpath d='M0-.25h24v24H0z' fill='none'/%3E%3C/svg%3E");
+
+// Footer
+
+$footer-bg-color: $gray-bg-2 !default;

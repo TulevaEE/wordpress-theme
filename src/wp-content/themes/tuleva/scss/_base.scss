@@ -174,31 +174,6 @@ hr {
 
 // Buttons
 
-.btn-xl {
-    @include button-size($padding-xl-vertical,
-        $padding-xl-horizontal,
-        $font-size-xl,
-        $btn-border-radius-xl);
-    @include media-breakpoint-down(sm) {
-        padding: $padding-xl-vertical;
-        width: 100%;
-    }
-}
-
-.btn-orange {
-    color: $white;
-    background-color: $red;
-    border-color: $red;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $white;
-        background-color: $red;
-        border-color: $red;
-    }
-}
-
 .btn-plus,
 .btn-plus:active,
 .btn-plus:focus,

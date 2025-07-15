@@ -57,7 +57,7 @@ class CTA_Button_Widget extends WP_Widget {
         echo $before_widget;
         ?>
 
-        <a href="<?php echo $button_url; ?>" class="btn btn-primary btn-xl"><?php echo $button_text; ?></a>
+        <a href="<?php echo $button_url; ?>" class="btn btn-lg btn-primary"><?php echo $button_text; ?></a>
 
         <?php
         echo $after_widget;
