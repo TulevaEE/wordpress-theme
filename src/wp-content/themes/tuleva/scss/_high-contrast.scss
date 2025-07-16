@@ -1,15 +1,18 @@
 // Toggle needs to meet WCAG AA contrast requirements
 
 .high-contrast-toggle {
+  .form-check-input {
     --bs-border-color: #{$text-tertiary};
-    &, 
-    & + .form-check-label {
-        cursor: pointer;
-    }
-    & + .form-check-label {
-        user-select: none;
-        white-space: nowrap;
-    }
+  }
+  .form-check-input,
+  .form-check-label {
+    cursor: pointer;
+  }
+  .form-check-label {
+    color: #{$text-body-primary};
+    user-select: none;
+    white-space: nowrap;
+  }
 }
 
 .form-switch .form-check-input {
@@ -45,11 +48,7 @@
     .header {
         box-shadow: 0 1px 0 0 #{$gray-border-hc};
     }
-    .navbar .dropdown-menu {
-        @include media-breakpoint-up(lg) {
-            box-shadow: var(--box-shadow-hc);
-        }
-    }
+    
     .tooltip-inner {
         box-shadow: var(--box-shadow-hc);
     }
@@ -63,6 +62,14 @@
     }
     .form-switch .form-check-input:checked {
         --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23#{str-slice(inspect($white), 2)}'/%3e%3c/svg%3e");
+    }
+
+    // domain specific styles
+
+    .navbar .dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            box-shadow: var(--box-shadow-hc);
+        }
     }
 
     .carousel-control-prev,

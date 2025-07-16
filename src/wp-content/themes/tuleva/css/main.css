@@ -30,6 +30,10 @@
   --blue: #006CE6;
 }
 
+.table {
+  --bs-table-border-color: var(--gray-border-2);
+}
+
 /*!
  * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -2324,7 +2328,7 @@ progress {
   --bs-table-bg-state: initial;
   --bs-table-color: #293036;
   --bs-table-bg: var(--bs-body-bg);
-  --bs-table-border-color: var(--gray-border-2);
+  --bs-table-border-color: var(--bs-border-color);
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #293036;
   --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
@@ -18079,13 +18083,15 @@ sup {
   font-size: 1rem;
 }
 
-.high-contrast-toggle {
+.high-contrast-toggle .form-check-input {
   --bs-border-color: #8A8D91;
 }
-.high-contrast-toggle, .high-contrast-toggle + .form-check-label {
+.high-contrast-toggle .form-check-input,
+.high-contrast-toggle .form-check-label {
   cursor: pointer;
 }
-.high-contrast-toggle + .form-check-label {
+.high-contrast-toggle .form-check-label {
+  color: #293036;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -18123,12 +18129,6 @@ sup {
   -webkit-box-shadow: 0 1px 0 0 #8A8D91;
   box-shadow: 0 1px 0 0 #8A8D91;
 }
-@media (min-width: 992px) {
-  .high-contrast .navbar .dropdown-menu {
-    -webkit-box-shadow: var(--box-shadow-hc);
-    box-shadow: var(--box-shadow-hc);
-  }
-}
 .high-contrast .tooltip-inner {
   -webkit-box-shadow: var(--box-shadow-hc);
   box-shadow: var(--box-shadow-hc);
@@ -18141,6 +18141,12 @@ sup {
 }
 .high-contrast .form-switch .form-check-input:checked {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+@media (min-width: 992px) {
+  .high-contrast .navbar .dropdown-menu {
+    -webkit-box-shadow: var(--box-shadow-hc);
+    box-shadow: var(--box-shadow-hc);
+  }
 }
 .high-contrast .carousel-control-prev,
 .high-contrast .carousel-control-next {

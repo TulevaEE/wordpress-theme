@@ -11,7 +11,7 @@
                         <input type="number" class="form-control text-end" id="age" inputmode="numeric"
                                min="0" max="99" step="1" placeholder="30"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <span class="input-group-text" style="min-width: 77px">
+                        <span class="input-group-text" style="min-width: 76px">
                             <?php _e('years', TEXT_DOMAIN); ?>
                         </span>
                     </div>
@@ -27,7 +27,7 @@
                         <input type="number" id="grossWage" class="form-control text-end"
                                min="0" step="1" max="999999" placeholder="2000" inputmode="numeric"
                                oninput="validity.valid||(value=value.slice(0, -1))">
-                        <span class="input-group-text" style="min-width: 77px">
+                        <span class="input-group-text" style="min-width: 76px">
                             <?php _e('&euro;/month', TEXT_DOMAIN); ?>
                         </span>
                     </div>

@@ -94,6 +94,9 @@ $text-navy-tertiary:  #7D8FA3;
     --green: #{$green};
     --blue: #{$blue};
 }
+.table {
+    --bs-table-border-color: var(--gray-border-2);
+}
 
 $body-color: $text-primary !default;
 
@@ -159,13 +162,13 @@ $border-radius-xxl: 1.5rem;
 $border-color: $gray-border-3 !default;
 $form-check-input-focus-border: $blue !default;
 $input-focus-border-color: $blue !default;
-$table-border-color: $gray-border-2 !default;
+//$table-border-color: $gray-border-2 !default;
 
-$border-radius:               .375rem;
-$border-radius-sm:            .25rem;
-$border-radius-lg:            .5rem;
-$border-radius-xl:            1rem;
-$border-radius-xxl:           1.5rem;
+$border-radius:     .375rem;
+$border-radius-sm:  .25rem;
+$border-radius-lg:  .5rem;
+$border-radius-xl:  1rem;
+$border-radius-xxl: 1.5rem;
 
 $card-border-radius: $border-radius-lg;
 

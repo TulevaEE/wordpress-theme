@@ -422,7 +422,7 @@ $(document).ready(function ($) {
             // synced with onboarding-client
             const COOKIE_NAME        = 'high-contrast';
             const COOKIE_DOMAIN      = location.hostname === 'localhost' ? 'localhost' : '.tuleva.ee';
-            const $contrastToggles   = $('.high-contrast-toggle');
+            const $contrastToggles   = $('.high-contrast-toggle > .form-check-input');
             const contrastSyncBroadcastChannel    = new BroadcastChannel(COOKIE_NAME);
             const prefersMoreContrastMediaQuery = window.matchMedia('(prefers-contrast: more)'); // matches is computed when accessed
 
