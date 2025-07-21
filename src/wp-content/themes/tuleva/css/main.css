@@ -17980,7 +17980,7 @@ sup {
 }
 
 .counter-block {
-  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 .counter-block:last-child {
   margin: 0;
@@ -18018,27 +18018,27 @@ sup {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 4.5rem;
+  width: 4rem;
   background: #002f63;
   color: #fff;
-  font-size: 3.5rem;
-  line-height: 6rem;
+  font-size: 3rem;
+  line-height: 5rem;
   font-weight: bold;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   font-variant-numeric: lining-nums;
   text-align: center;
 }
 .counter-block .counter-number > div:nth-child(1) {
-  margin-right: 4px;
-  border-radius: 16px 8px 8px 16px;
+  margin-right: 0.125rem;
+  border-radius: 0.75rem 0.25rem 0.25rem 0.75rem;
 }
 .counter-block .counter-number > div:nth-child(2) {
-  border-radius: 8px 16px 16px 8px;
+  border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
 }
 .counter-block .counter-label {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
   color: #002f63;
@@ -18046,7 +18046,7 @@ sup {
 
 @media (max-width: 575.98px) {
   .counter-block {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
   .counter-block:last-child {
     margin: 0;
@@ -18057,18 +18057,18 @@ sup {
     line-height: 4rem;
   }
   .counter-block .counter-number > div:nth-child(1) {
-    margin-right: 2px;
-    border-radius: 8px 4px 4px 8px;
+    margin-right: 0.125rem;
+    border-radius: 0.5rem 0.25rem 0.25rem 0.5rem;
   }
   .counter-block .counter-number > div:nth-child(2) {
-    border-radius: 4px 8px 8px 4px;
+    border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
   }
   .counter-block .counter-label {
     font-size: 1.25rem;
   }
 }
 .counter-small .counter-block {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 .counter-small .counter-block:last-child {
   margin: 0;
@@ -18079,11 +18079,11 @@ sup {
   line-height: 4rem;
 }
 .counter-small .counter-block .counter-number > div:nth-child(1) {
-  margin-right: 2px;
-  border-radius: 8px 4px 4px 8px;
+  margin-right: 0.125rem;
+  border-radius: 0.5rem 0.25rem 0.25rem 0.5rem;
 }
 .counter-small .counter-block .counter-number > div:nth-child(2) {
-  border-radius: 4px 8px 8px 4px;
+  border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
 }
 .counter-small .counter-block .counter-label {
   font-size: 1rem;
