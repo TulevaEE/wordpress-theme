@@ -1,8 +1,8 @@
 <section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
     <div class="container my-auto">
         <div class="row align-items-center">
-            <div class="col text-center text-lg-start text-navy py-md-5">
-                <h1 class="text-center mb-5"><?php the_sub_field('heading'); ?></h1>
+            <div class="col text-center text-navy">
+                <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
                 <div class="d-flex justify-content-center mb-5 py-md-4">
                     <div class="d-flex flex-row">
@@ -30,20 +30,18 @@
                     </div>
                 </div>
 
-                <div class="text-center">
-                    <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
-                        <a href="<?php echo get_sub_field('button_url'); ?>"
-                            class="btn btn-primary btn-lg">
-                            <?php the_sub_field('button_text'); ?>
-                        </a>
-                    <?php } ?>
+                <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
+                    <a href="<?php echo get_sub_field('button_url'); ?>"
+                        class="btn btn-primary btn-lg">
+                        <?php the_sub_field('button_text'); ?>
+                    </a>
+                <?php } ?>
 
-                    <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>
-                        <div class="mt-4 text-center">
-                            <?php the_sub_field('small_text'); ?>
-                        </div>
-                    <?php } ?>
-                </div>
+                <?php if (get_sub_field('small_text') && get_sub_field('small_text')) { ?>
+                    <div class="mt-4 text-center">
+                        <?php the_sub_field('small_text'); ?>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
