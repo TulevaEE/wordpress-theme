@@ -5,7 +5,7 @@ $security_text = get_sub_field('security_text');
 $security_link_text = get_sub_field('security_link_text');
 $security_link_url = get_sub_field('security_link_url');
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="bg-gray-2 py-4 py-lg-5">
+<section id="<?php the_sub_field('component_id'); ?>" class="section-credentials bg-gray-2 py-4 py-lg-5">
     <!-- Credentials -->
     <?php if ($security_text || ($members_count && $members_count_description)) { ?>
         <div class="container">
