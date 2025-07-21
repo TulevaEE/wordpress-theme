@@ -18033,6 +18033,7 @@ sup {
 .counter-block .counter-label {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.25;
   text-transform: uppercase;
   text-align: center;
   color: #002f63;
