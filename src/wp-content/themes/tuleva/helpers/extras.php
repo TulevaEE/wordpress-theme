@@ -388,13 +388,13 @@ function get_esg_factors_document_url() {
 }
 
 function get_remuneration_document_url() {
-    $renumeration_document_path = '/wp-content/uploads/2024/08/Remuneration-Policy-of-Tuleva-Fondid-AS.pdf';
+    $remuneration_document_path = '/wp-content/uploads/2024/08/Remuneration-Policy-of-Tuleva-Fondid-AS.pdf';
 
     if (ICL_LANGUAGE_CODE == 'et') {
-        $renumeration_document_path = '/wp-content/uploads/2024/07/Tuleva-Fondid-AS-tasustamise-pohimotted-.pdf';
+        $remuneration_document_path = '/wp-content/uploads/2025/07/Tuleva-Fondid-AS-tasustamise-pohimotted-2025.pdf';
     }
 
-    return get_site_url() . $renumeration_document_path;
+    return get_site_url() . $remuneration_document_path;
 
 }
 
