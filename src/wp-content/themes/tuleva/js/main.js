@@ -482,7 +482,7 @@ $(document).ready(function ($) {
             applyContrastState();
         },
         initCountdownTimerFull = function () {
-            var july31midnight = 1753984799000;
+            var july31midnight = 1753995599000;
             var days = 0, hours = 0, minutes = 0, seconds = 0;
             var daysFirstNumber = document.getElementById('days-first-number');
             var daysLastNumber = document.getElementById('days-last-number');
