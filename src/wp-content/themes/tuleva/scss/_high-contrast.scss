@@ -25,13 +25,12 @@
 // High contrast styles
 
 .high-contrast {
-    --bs-border-color: #{$gray-border-hc};
+    --bs-border-color: var(--gray-border-hc) !important;
+    --input-border-color: var(--input-border-color-hc) !important;
 
     @each $n in (1, 2, 3) {
-        --gray-border-#{$n}: #{$gray-border-hc};
-    }
-    @each $n in (1, 2, 3) {
-        --blue-border-#{$n}: #{$blue};
+        --gray-border-#{$n}: var(--gray-border-hc) !important;
+        --blue-border-#{$n}: var(--gray-border-hc) !important;
     }
 
     --bs-box-shadow: var(--box-shadow-hc);
@@ -45,8 +44,15 @@
         text-decoration-color: currentColor !important;
     }
 
-    .header {
-        box-shadow: 0 1px 0 0 #{$gray-border-hc};
+    .card {
+        &.card-primary {
+            border-color: var(--blue-border-3);
+            & .header-section,
+            & .middle-section,
+            & .footer-section {
+                border-color: var(--blue-border-3);
+            }
+        }
     }
     
     .tooltip-inner {
@@ -54,7 +60,7 @@
     }
 
     .btn-light {
-        --bs-btn-border-color: #{$gray-border-3};
+        --bs-border-color: var(--input-border-color-hc) !important;
     }
 
     .form-switch .form-check-input {
@@ -65,6 +71,10 @@
     }
 
     // domain specific styles
+
+    .header {
+        box-shadow: 0 1px 0 0 var(--gray-border-hc);
+    }
 
     .navbar .dropdown-menu {
         @include media-breakpoint-up(lg) {

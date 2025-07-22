@@ -1,5 +1,8 @@
 @charset "UTF-8";
 :root {
+  --red: #DB2200;
+  --green: #008300;
+  --blue: #006CE6;
   --gray-bg-1: #FAFBFC;
   --gray-bg-2: #F5F7F9;
   --gray-border-1: #E0E6EC;
@@ -10,6 +13,12 @@
   --blue-border-1: #D3E8F5;
   --blue-border-2: #C9E0EE;
   --blue-border-3: #BAD2E4;
+  --gray-border-hc: #BAC2CA;
+  --blue-border-hc: #A8C2D7;
+  --input-border-color: var(--gray-border-3);
+  --input-border-color-hc: #7D8FA3;
+  --bs-border-color: var(--gray-border-3);
+  --bs-card-border-color: var(--gray-border-2);
   --bs-box-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
   --box-shadow-dropdown:
       0 0 0 1px rgba(0,0,0,0.04),
@@ -21,13 +30,7 @@
       0 1px 3px 0 rgba(0,0,0,0.04),
       0 3px 9px 0 rgba(0,0,0,0.04),
       0 6px 18px 0 rgba(0,0,0,0.04);
-  --box-shadow-hc: 0 0 0 1px #8A8D91;
-}
-
-:root {
-  --red: #DB2200;
-  --green: #008300;
-  --blue: #006CE6;
+  --box-shadow-hc: 0 0 0 1px var(--gray-border-hc);
 }
 
 .table {
@@ -2328,7 +2331,7 @@ progress {
   --bs-table-bg-state: initial;
   --bs-table-color: #293036;
   --bs-table-bg: var(--bs-body-bg);
-  --bs-table-border-color: var(--bs-border-color);
+  --bs-table-border-color: var(--gray-border-2);
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #293036;
   --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
@@ -2592,7 +2595,7 @@ progress {
   appearance: none;
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--input-border-color);
   border-radius: var(--bs-border-radius);
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -2812,7 +2815,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--input-border-color);
   border-radius: var(--bs-border-radius);
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -3291,7 +3294,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: var(--bs-tertiary-bg);
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--input-border-color);
   border-radius: var(--bs-border-radius);
 }
 
@@ -5188,7 +5191,7 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-color: var(--gray-border-2);
   --bs-card-border-radius: 0.5rem;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(0.5rem - (var(--bs-border-width)));
