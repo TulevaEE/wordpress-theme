@@ -73,7 +73,7 @@
     // domain specific styles
 
     .header {
-        box-shadow: 0 1px 0 0 var(--gray-border-hc);
+        box-shadow: var(--box-shadow-hc);
     }
 
     .navbar .dropdown-menu {

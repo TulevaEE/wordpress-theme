@@ -18156,8 +18156,8 @@ sup {
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 .high-contrast .header {
-  -webkit-box-shadow: 0 1px 0 0 var(--gray-border-hc);
-  box-shadow: 0 1px 0 0 var(--gray-border-hc);
+  -webkit-box-shadow: var(--box-shadow-hc);
+  box-shadow: var(--box-shadow-hc);
 }
 @media (min-width: 992px) {
   .high-contrast .navbar .dropdown-menu {
