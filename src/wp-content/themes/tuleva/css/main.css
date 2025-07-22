@@ -18000,7 +18000,7 @@ sup {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.counter-block .counter-number > div {
+.counter-block .counter-number > span {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18028,14 +18028,15 @@ sup {
   font-variant-numeric: lining-nums;
   text-align: center;
 }
-.counter-block .counter-number > div:nth-child(1) {
+.counter-block .counter-number > span:nth-child(1) {
   margin-right: 0.1875rem;
   border-radius: 0.75rem 0.375rem 0.375rem 0.75rem;
 }
-.counter-block .counter-number > div:nth-child(2) {
+.counter-block .counter-number > span:nth-child(2) {
   border-radius: 0.375rem 0.75rem 0.75rem 0.375rem;
 }
 .counter-block .counter-label {
+  display: block;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
@@ -18051,16 +18052,16 @@ sup {
   .counter-block:last-child {
     margin: 0;
   }
-  .counter-block .counter-number > div {
+  .counter-block .counter-number > span {
     width: 3.1875rem;
     font-size: 2.5rem;
     line-height: 4rem;
   }
-  .counter-block .counter-number > div:nth-child(1) {
+  .counter-block .counter-number > span:nth-child(1) {
     margin-right: 0.125rem;
     border-radius: 0.5rem 0.25rem 0.25rem 0.5rem;
   }
-  .counter-block .counter-number > div:nth-child(2) {
+  .counter-block .counter-number > span:nth-child(2) {
     border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
   }
   .counter-block .counter-label {
@@ -18073,16 +18074,16 @@ sup {
 .counter-small .counter-block:last-child {
   margin: 0;
 }
-.counter-small .counter-block .counter-number > div {
+.counter-small .counter-block .counter-number > span {
   width: 3.1875rem;
   font-size: 2.5rem;
   line-height: 4rem;
 }
-.counter-small .counter-block .counter-number > div:nth-child(1) {
+.counter-small .counter-block .counter-number > span:nth-child(1) {
   margin-right: 0.125rem;
   border-radius: 0.5rem 0.25rem 0.25rem 0.5rem;
 }
-.counter-small .counter-block .counter-number > div:nth-child(2) {
+.counter-small .counter-block .counter-number > span:nth-child(2) {
   border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
 }
 .counter-small .counter-block .counter-label {

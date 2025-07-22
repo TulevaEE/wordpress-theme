@@ -1,34 +1,32 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing" role="timer" aria-live="polite" aria-atomic="true">
     <div class="container my-auto">
         <div class="row align-items-center">
             <div class="col text-center text-navy">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
-                <div class="d-flex justify-content-center mb-5 py-md-4">
-                    <div class="d-flex flex-row">
-                        <div class="counter-block">
-                            <div class="counter-number">
-                                <div id="days-first-number">&nbsp;</div>
-                                <div id="days-last-number">&nbsp;</div>
-                            </div>
-                            <div class="counter-label mt-2 mt-md-3"><?php _e('Days', TEXT_DOMAIN) ?></div>
-                        </div>
-                        <div class="counter-block">
-                            <div class="counter-number">
-                                <div id="hours-first-number">&nbsp;</div>
-                                <div id="hours-last-number">&nbsp;</div>
-                            </div>
-                            <div class="counter-label mt-2 mt-md-3"><?php _e('Hours', TEXT_DOMAIN) ?></div>
-                        </div>
-                        <div class="counter-block">
-                            <div class="counter-number">
-                                <div id="minutes-first-number">&nbsp;</div>
-                                <div id="minutes-last-number">&nbsp;</div>
-                            </div>
-                            <div class="counter-label mt-2 mt-md-3"><?php _e('Minutes', TEXT_DOMAIN) ?></div>
-                        </div>
-                    </div>
-                </div>
+                <p class="d-flex justify-content-center mb-5 py-md-4" aria-hidden="true">
+                    <span class="counter-block">
+                        <span class="counter-number">
+                            <span id="days-first-number">&nbsp;</span>
+                            <span id="days-last-number">&nbsp;</span>
+                        </span>
+                        <span class="counter-label mt-2 mt-md-3"><?php _e('days', TEXT_DOMAIN) ?></span>
+                    </span>
+                    <span class="counter-block">
+                        <span class="counter-number">
+                            <span id="hours-first-number">&nbsp;</span>
+                            <span id="hours-last-number">&nbsp;</span>
+                        </span>
+                        <span class="counter-label mt-2 mt-md-3"><?php _e('hours', TEXT_DOMAIN) ?></span>
+                    </span>
+                    <span class="counter-block">
+                        <span class="counter-number">
+                            <span id="minutes-first-number">&nbsp;</span>
+                            <span id="minutes-last-number">&nbsp;</span>
+                        </span>
+                        <span class="counter-label mt-2 mt-md-3"><?php _e('minutes', TEXT_DOMAIN) ?></span>
+                    </span>
+                </p>
 
                 <?php if (get_sub_field('button_url') && get_sub_field('button_text')) { ?>
                     <a href="<?php echo get_sub_field('button_url'); ?>"
