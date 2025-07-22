@@ -20,8 +20,8 @@ $bg_class = get_component_background_color_class();
                         <img src="<?php echo get_template_directory_uri() ?>/img/mobile-id-logo.png" style="max-height:32px;" class="img-fluid" alt="<?php esc_attr_e( 'Mobile-ID', '' ); ?>">
                         <img src="<?php echo get_template_directory_uri() ?>/img/smart-id-logo.png" style="max-height: 32px;" class="img-fluid" alt="<?php esc_attr_e( 'Smart-ID', '' ); ?>">
                     </p>
-                    <p class="d-flex flex-column m-0 text-center">
-                        <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg mb-4"><?php the_sub_field('button_text'); ?></a>
+                    <p class="d-flex flex-column align-items-center m-0 text-center">
+                        <a href="<?php echo get_sub_field('button_url'); ?>" class="btn btn-primary btn-lg mb-4 px-6"><?php the_sub_field('button_text'); ?></a>
                         <?php if (get_sub_field('small_text')): ?>
                             <span class="small text-navy">
                                 <?php the_sub_field('small_text'); ?>
