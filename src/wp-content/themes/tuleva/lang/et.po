@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-07-09T17:28:18+00:00\n"
-"PO-Revision-Date: 2025-07-09 20:29+0300\n"
+"POT-Creation-Date: 2025-07-22T11:13:35+00:00\n"
+"PO-Revision-Date: 2025-07-22 14:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -29,6 +29,8 @@ msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
 #: helpers/extras.php:455 helpers/extras.php:466
+#: templates/components/counter-hero.php:13
+#: templates/components/second-pillar-payment-rate-hero.php:19
 msgid "days"
 msgstr "päeva"
 
@@ -112,10 +114,6 @@ msgstr "Viimased artiklid"
 msgid "All articles"
 msgstr "Kõik artiklid"
 
-#: templates/blog/submenu.php:31
-msgid "RSS feed"
-msgstr "RSS voog"
-
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:23
@@ -144,19 +142,14 @@ msgid ""
 "funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/counter-hero.php:14
-#: templates/components/second-pillar-payment-rate-hero.php:19
-msgid "Days"
-msgstr "päeva"
-
-#: templates/components/counter-hero.php:21
+#: templates/components/counter-hero.php:20
 #: templates/components/second-pillar-payment-rate-hero.php:26
-msgid "Hours"
+msgid "hours"
 msgstr "tundi"
 
-#: templates/components/counter-hero.php:28
+#: templates/components/counter-hero.php:27
 #: templates/components/second-pillar-payment-rate-hero.php:33
-msgid "Minutes"
+msgid "minutes"
 msgstr "minutit"
 
 #: templates/components/founder-carousel.php:2
@@ -629,15 +622,15 @@ msgstr "Hetkel me uusi inimesi aktiivselt ei otsi."
 msgid "Apply for this job"
 msgstr "Kandideerin tööle"
 
-#: templates/components/login-cta.php:20
+#: templates/components/login-cta.php:19
 msgid "ID-card"
 msgstr "ID-kaart"
 
-#: templates/components/login-cta.php:23
+#: templates/components/login-cta.php:20
 msgid "Mobile-ID"
 msgstr "Mobiil-ID"
 
-#: templates/components/login-cta.php:26
+#: templates/components/login-cta.php:21
 msgid "Smart-ID"
 msgstr "Smart-ID"
 
@@ -1862,6 +1855,18 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Days"
+#~ msgstr "päeva"
+
+#~ msgid "Hours"
+#~ msgstr "tundi"
+
+#~ msgid "Minutes"
+#~ msgstr "minutit"
+
+#~ msgid "RSS feed"
+#~ msgstr "RSS voog"
 
 #~ msgid "Newer articles"
 #~ msgstr "Uuemad artiklid"

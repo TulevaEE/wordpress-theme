@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-09T17:28:18+00:00\n"
+"POT-Creation-Date: 2025-07-22T11:13:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -31,6 +31,8 @@ msgstr ""
 
 #: helpers/extras.php:455
 #: helpers/extras.php:466
+#: templates/components/counter-hero.php:13
+#: templates/components/second-pillar-payment-rate-hero.php:19
 msgid "days"
 msgstr ""
 
@@ -114,10 +116,6 @@ msgstr ""
 msgid "All articles"
 msgstr ""
 
-#: templates/blog/submenu.php:31
-msgid "RSS feed"
-msgstr ""
-
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:23
@@ -136,19 +134,14 @@ msgstr ""
 msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
 msgstr ""
 
-#: templates/components/counter-hero.php:14
-#: templates/components/second-pillar-payment-rate-hero.php:19
-msgid "Days"
-msgstr ""
-
-#: templates/components/counter-hero.php:21
+#: templates/components/counter-hero.php:20
 #: templates/components/second-pillar-payment-rate-hero.php:26
-msgid "Hours"
+msgid "hours"
 msgstr ""
 
-#: templates/components/counter-hero.php:28
+#: templates/components/counter-hero.php:27
 #: templates/components/second-pillar-payment-rate-hero.php:33
-msgid "Minutes"
+msgid "minutes"
 msgstr ""
 
 #: templates/components/founder-carousel.php:2
@@ -526,15 +519,15 @@ msgstr ""
 msgid "Apply for this job"
 msgstr ""
 
-#: templates/components/login-cta.php:20
+#: templates/components/login-cta.php:19
 msgid "ID-card"
 msgstr ""
 
-#: templates/components/login-cta.php:23
+#: templates/components/login-cta.php:20
 msgid "Mobile-ID"
 msgstr ""
 
-#: templates/components/login-cta.php:26
+#: templates/components/login-cta.php:21
 msgid "Smart-ID"
 msgstr ""
 

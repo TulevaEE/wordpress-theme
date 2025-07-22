@@ -16,21 +16,21 @@
                                     <div id="days-first-number">&nbsp;</div>
                                     <div id="days-last-number">&nbsp;</div>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('Days', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2"><?php _e('days', TEXT_DOMAIN) ?></div>
                             </div>
                             <div class="counter-block">
                                 <div class="counter-number">
                                     <div id="hours-first-number">&nbsp;</div>
                                     <div id="hours-last-number">&nbsp;</div>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('Hours', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2"><?php _e('hours', TEXT_DOMAIN) ?></div>
                             </div>
                             <div class="counter-block">
                                 <div class="counter-number">
                                     <div id="minutes-first-number">&nbsp;</div>
                                     <div id="minutes-last-number">&nbsp;</div>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('Minutes', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2"><?php _e('minutes', TEXT_DOMAIN) ?></div>
                             </div>
                         </div>
                     </div>
