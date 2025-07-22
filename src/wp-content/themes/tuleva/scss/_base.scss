@@ -165,6 +165,12 @@ hr {
 
 // Buttons
 
+.btn-light {
+    color: $blue;
+    border-color: var(--bs-border-color);
+    background: $white;
+}
+
 .btn-plus,
 .btn-plus:active,
 .btn-plus:focus,

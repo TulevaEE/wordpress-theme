@@ -14647,6 +14647,12 @@ hr {
   color: #008300;
 }
 
+.btn-light {
+  color: #006CE6;
+  border-color: var(--bs-border-color);
+  background: #fff;
+}
+
 .btn-plus,
 .btn-plus:active,
 .btn-plus:focus,
