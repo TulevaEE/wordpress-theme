@@ -30,7 +30,7 @@
       0 1px 3px 0 rgba(0,0,0,0.04),
       0 3px 9px 0 rgba(0,0,0,0.04),
       0 6px 18px 0 rgba(0,0,0,0.04);
-  --box-shadow-hc: 0 0 0 1px var(--gray-border-hc);
+  --box-shadow-hc: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
 .table {
@@ -18126,11 +18126,11 @@ sup {
   --blue-border-2: var(--gray-border-hc) !important;
   --gray-border-3: var(--gray-border-hc) !important;
   --blue-border-3: var(--gray-border-hc) !important;
-  --bs-box-shadow: var(--box-shadow-hc);
-  --bs-box-shadow-sm: var(--box-shadow-hc);
-  --bs-box-shadow-lg: var(--box-shadow-hc);
-  --box-shadow-calculator: var(--box-shadow-hc);
-  --box-shadow-dropdown: var(--box-shadow-hc);
+  --bs-box-shadow: var(--box-shadow-hc) !important;
+  --bs-box-shadow-sm: var(--box-shadow-hc) !important;
+  --bs-box-shadow-lg: var(--box-shadow-hc) !important;
+  --box-shadow-calculator: var(--box-shadow-hc) !important;
+  --box-shadow-dropdown: var(--box-shadow-hc) !important;
 }
 .high-contrast a {
   -webkit-text-decoration-color: currentColor !important;
