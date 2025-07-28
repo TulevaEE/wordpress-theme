@@ -371,7 +371,7 @@ function get_esg_document_url() {
     $esg_document_path = '/wp-content/uploads/2024/07/Principles-for-considering-sustainability-risks_30.06.2024.pdf';
 
     if (ICL_LANGUAGE_CODE == 'et') {
-        $esg_document_path = '/wp-content/uploads/2024/06/Tuleva-jatkusuutlikkusriskidega-arvestamise-poliitika_30.06.2023.pdf';
+        $esg_document_path = '/wp-content/uploads/2025/07/Lisa-30-Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-30.06.2025.pdf';
     }
 
     return get_site_url() . $esg_document_path;
@@ -381,7 +381,7 @@ function get_esg_factors_document_url() {
     $esg_factors_document_path = '/wp-content/uploads/2024/08/Non-consideration-of-adverse-impacts-of-investment-decisions-on-sustainability-factors_30.06.2024.pdf';
 
     if (ICL_LANGUAGE_CODE == 'et') {
-        $esg_factors_document_path = '/wp-content/uploads/2024/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_30.06.2024.pdf';
+        $esg_factors_document_path = '/wp-content/uploads/2025/07/Lisa-31-Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine-30.06.2025.pdf';
     }
 
     return get_site_url() . $esg_factors_document_path;
