@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-22T11:13:35+00:00\n"
+"POT-Creation-Date: 2025-07-28T09:31:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -272,7 +272,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:33
 #: templates/components/fund-stocks-details.php:33
 #: templates/components/fund-third-details.php:33
-msgid "Total expense ratio"
+msgid "Ongoing charges"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:37

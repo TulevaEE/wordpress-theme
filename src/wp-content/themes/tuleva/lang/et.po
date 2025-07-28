@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-07-22T11:13:35+00:00\n"
-"PO-Revision-Date: 2025-07-22 14:14+0300\n"
+"POT-Creation-Date: 2025-07-28T09:31:20+00:00\n"
+"PO-Revision-Date: 2025-07-28 12:31+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -303,8 +303,8 @@ msgstr "Valitsemistasu"
 #: templates/components/fund-bonds-details.php:33
 #: templates/components/fund-stocks-details.php:33
 #: templates/components/fund-third-details.php:33
-msgid "Total expense ratio"
-msgstr "Kogukulu määr"
+msgid "Ongoing charges"
+msgstr "Jooksvad tasud"
 
 #: templates/components/fund-bonds-details.php:37
 #: templates/components/fund-stocks-details.php:37
@@ -1855,6 +1855,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Total expense ratio"
+#~ msgstr "Kogukulu määr"
 
 #~ msgid "Days"
 #~ msgstr "päeva"

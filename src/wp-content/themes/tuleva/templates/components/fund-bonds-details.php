@@ -30,7 +30,7 @@
                             <span>0,20%</span>
                         </p>
                         <p class="fund-info__item">
-                            <span class="small text-bold"><?php _e('Total expense ratio', TEXT_DOMAIN) ?></span>
+                            <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
                             <span>0,31%</span>
                         </p>
                         <p class="fund-info__item">
