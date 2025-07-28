@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-28T09:31:20+00:00\n"
+"POT-Creation-Date: 2025-07-28T14:18:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -1176,7 +1176,7 @@ msgid "/en/transfer-pension-tuleva/"
 msgstr ""
 
 #: templates/header/main.php:21
-msgid "Choose Tuleva 2nd pillar"
+msgid "Bring II pillar to Tuleva"
 msgstr ""
 
 #: templates/single-content.php:49
