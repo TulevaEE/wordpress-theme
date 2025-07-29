@@ -14570,6 +14570,12 @@ figure {
 .list-style-arrow li:last-of-type {
   margin-bottom: 0;
 }
+.list-style-checkmark li a,
+.list-style-cross li a,
+.list-style-plussign li a,
+.list-style-arrow li a {
+  display: inline-block;
+}
 
 .list-style-checkmark li {
   background-image: url("../img/icon-checkmark.svg");
