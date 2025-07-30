@@ -1,7 +1,7 @@
-<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing" role="timer" aria-live="polite" aria-atomic="true">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
     <div class="container my-auto">
         <div class="row align-items-center">
-            <div class="col text-center text-navy">
+            <div class="col text-center text-navy" role="timer" aria-live="polite" aria-atomic="true">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
                 <p class="d-flex justify-content-center mb-5 py-md-4" aria-hidden="true">
