@@ -15769,7 +15769,7 @@ sup {
 }
 @media (min-width: 768px) {
   .recent-articles {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 }
 .recent-articles__heading {
@@ -17641,11 +17641,11 @@ sup {
 }
 
 .page-title {
-  margin: 0 0 5rem;
+  margin: 0 0 6rem;
   text-align: center;
 }
 .page-title:not(:first-child) {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .content h1, .content .h1,
@@ -17705,7 +17705,7 @@ sup {
 }
 @media (min-width: 768px) {
   .single-post .post-header {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 }
 .single-post .post-title {
@@ -17713,7 +17713,7 @@ sup {
 }
 @media (min-width: 768px) {
   .single-post .post-title {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 }
 .single-post .post-meta {
