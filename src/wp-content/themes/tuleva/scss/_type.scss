@@ -240,11 +240,13 @@ sup {
   @extend .small;
   a {
     padding: 0 0.0625rem;
+    font-weight: 450;
     text-decoration: none;
 
     &::before,
     &::after {
       opacity: 0.5;
+      font-weight: 400;
     }
     &::before {
       content: "[";

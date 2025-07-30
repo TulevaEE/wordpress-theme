@@ -15154,10 +15154,12 @@ sup {
 
 .footnote a {
   padding: 0 0.0625rem;
+  font-weight: 450;
   text-decoration: none;
 }
 .footnote a::before, .footnote a::after {
   opacity: 0.5;
+  font-weight: 400;
 }
 .footnote a::before {
   content: "[";
