@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="text-rows-box<?php
                     if (!get_sub_field('has_padding')) {
-                        echo ' no-padding';
+                        echo ' p-0';
                     } ?>">
                     <?php if (have_rows('text_rows')) {
                         while (have_rows('text_rows')) { the_row(); ?>

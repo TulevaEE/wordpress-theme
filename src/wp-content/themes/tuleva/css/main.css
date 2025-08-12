@@ -14615,9 +14615,6 @@ input[type=range]:focus + .rangeslider .rangeslider__handle {
   cursor: default;
 }
 
-/**
- * Extend width classes
- */
 .w-0 {
   width: 0% !important;
 }
@@ -14703,14 +14700,17 @@ input[type=range]:focus + .rangeslider .rangeslider__handle {
 }
 
 html {
+  min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
 
-body {
-  min-width: 320px;
-  font-size: 1rem;
+hr {
+  margin: 0;
+  padding: 0;
+  border-color: var(--gray-border-1);
+  opacity: 1;
 }
 
 a {
@@ -14728,14 +14728,6 @@ a:focus {
 
 a abbr[title] {
   cursor: inherit;
-}
-
-div:focus {
-  outline: none;
-}
-
-button {
-  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 input::-webkit-contacts-auto-fill-button {
@@ -14756,6 +14748,14 @@ input[type=number] {
   -webkit-appearance: textfield;
   appearance: textfield;
   -moz-appearance: textfield;
+}
+
+.custom-select {
+  width: 100%;
+}
+
+.input-group-text {
+  background-color: var(--gray-bg-2);
 }
 
 table {
@@ -14818,17 +14818,6 @@ figure {
   font-weight: bold;
 }
 
-hr {
-  margin: 0;
-  padding: 0;
-  border-color: var(--gray-border-1);
-  opacity: 1;
-}
-
-.custom-select {
-  width: 100%;
-}
-
 .alert {
   border: solid 2px var(--gray-border-3);
   border-radius: 8px;
@@ -14836,18 +14825,6 @@ hr {
 .alert-success {
   background-color: rgba(11, 250, 67, 0.08);
   border-color: #008300;
-}
-
-.no-margin {
-  margin: 0 !important;
-}
-
-.no-padding {
-  padding: 0 !important;
-}
-
-.input-group-text {
-  background-color: var(--gray-bg-2);
 }
 
 .border-dark-1 {

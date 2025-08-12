@@ -1,6 +1,4 @@
-/**
- * Extend width classes
- */
+// Extend width classes
 
 @for $i from 0 through 20 {
   $pct: $i * 5%;
@@ -9,22 +7,30 @@
   }
 }
 
-// Base styles
+// Base
+
 html {
+    min-width: 320px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
 }
 
-body {
-    min-width: 320px;
-    font-size: $font-size-base;
+hr {
+    margin: 0;
+    padding: 0;
+    border-color: $gray-border-1;
+    opacity: 1;
 }
 
 // Links
 
 a {
-  text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent) !important;
+  text-decoration-color: color-mix(
+    in srgb,
+    currentColor $link-underline-opacity,
+    transparent
+  ) !important;
   text-underline-offset: $link-underline-offset !important;
   text-decoration-thickness: $link-underline-thickness !important;
 }
@@ -38,15 +44,7 @@ a abbr[title] {
   cursor: inherit;
 }
 
-// Other
-
-div:focus {
-    outline: none;
-}
-
-button {
-    font-family: $font-family-sans-serif;
-}
+// Forms
 
 input::-webkit-contacts-auto-fill-button {
     visibility: hidden;
@@ -66,6 +64,16 @@ input[type=number] {
     appearance: textfield;
     -moz-appearance: textfield;
 }
+
+.custom-select {
+    width: 100%;
+}
+
+.input-group-text {
+    background-color: $gray-bg-2;
+}
+
+// Other
 
 table {
     border-collapse: collapse;
@@ -118,17 +126,6 @@ figure {
     font-weight: bold;
 }
 
-hr {
-    margin: 0;
-    padding: 0;
-    border-color: $gray-border-1;
-    opacity: 1;
-}
-
-.custom-select {
-    width: 100%;
-}
-
 .alert {
     border: solid 2px $gray-mid;
     border-radius: 8px;
@@ -136,17 +133,6 @@ hr {
         background-color: rgba(11, 250, 67, 0.08);
         border-color: $green;
     }
-}
-
-.no-margin {
-    margin: 0 !important;
-}
-.no-padding {
-    padding: 0 !important;
-}
-
-.input-group-text {
-    background-color: $gray-bg-2;
 }
 
 // Borders

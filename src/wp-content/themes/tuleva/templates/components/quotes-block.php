@@ -3,7 +3,7 @@
         <div class="row">
             <div class="quotes-box<?php
                 if (!get_sub_field('has_padding')) {
-                    echo ' no-padding';
+                    echo ' p-0';
                 } ?>">
                 <?php for( $i = 1; $i < 4; $i++ ) { ?>
                     <div class="col-md-4 quotes-box__item">
