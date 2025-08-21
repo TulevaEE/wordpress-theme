@@ -368,7 +368,7 @@ function print_funds_js()
 }
 
 function get_esg_document_url() {
-    $esg_document_path = '/wp-content/uploads/2025/07/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted_30.06.2025.pdf';
+    $esg_document_path = '/wp-content/uploads/2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf';
 
     return get_site_url() . $esg_document_path;
 }
@@ -380,14 +380,9 @@ function get_esg_factors_document_url() {
 }
 
 function get_remuneration_document_url() {
-    $remuneration_document_path = '/wp-content/uploads/2025/07/Remuneration-Policy-of-Tuleva-Fondid-AS-2025.pdf';
-
-    if (ICL_LANGUAGE_CODE == 'et') {
-        $remuneration_document_path = '/wp-content/uploads/2025/07/Tuleva-Fondid-AS-tasustamise-pohimotted-2025.pdf';
-    }
+    $remuneration_document_path = '/wp-content/uploads/2025/08/Tuleva-Fondid-AS-tasustamise-pohimotted-2025_august.pdf';
 
     return get_site_url() . $remuneration_document_path;
-
 }
 
 function hyphenate_string($string) {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-07-28T14:18:44+00:00\n"
-"PO-Revision-Date: 2025-07-28 17:19+0300\n"
+"POT-Creation-Date: 2025-08-21T15:23:11+00:00\n"
+"PO-Revision-Date: 2025-08-21 18:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: .\n"
 
 #. Theme Name of the theme
@@ -28,21 +28,21 @@ msgstr "%s kutsumisel esines viga"
 msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
-#: helpers/extras.php:455 helpers/extras.php:466
+#: helpers/extras.php:442 helpers/extras.php:453
 #: templates/components/counter-hero.php:13
 #: templates/components/second-pillar-payment-rate-hero.php:19
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:567
+#: helpers/extras.php:554
 msgid "Pagination"
 msgstr "Leheküljed"
 
-#: helpers/extras.php:571
+#: helpers/extras.php:558
 msgid "Newer"
 msgstr "Uuemad"
 
-#: helpers/extras.php:614
+#: helpers/extras.php:601
 msgid "Older"
 msgstr "Vanemad"
 
@@ -365,8 +365,32 @@ msgid "Terms and conditions"
 msgstr "tingimused"
 
 #: templates/components/fund-bonds-details.php:58
+#: templates/components/fund-bonds-details.php:63
+#: templates/components/fund-bonds-details.php:66
+#: templates/components/fund-bonds-details.php:69
+#: templates/components/fund-bonds-details.php:72
+#: templates/components/fund-bonds-details.php:75
+#: templates/components/fund-bonds-details.php:78
+#: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-stocks-details.php:62
+#: templates/components/fund-stocks-details.php:65
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-stocks-details.php:74
+#: templates/components/fund-stocks-details.php:77
+#: templates/components/fund-stocks-details.php:84
+#: templates/components/fund-stocks-details.php:89
 #: templates/components/fund-third-details.php:57
+#: templates/components/fund-third-details.php:60
+#: templates/components/fund-third-details.php:63
+#: templates/components/fund-third-details.php:66
+#: templates/components/fund-third-details.php:69
+#: templates/components/fund-third-details.php:72
+#: templates/components/fund-third-details.php:75
+#: templates/components/fund-third-details.php:82
+#: templates/components/fund-third-details.php:87
 msgid " (in Estonian)"
 msgstr " "
 
@@ -382,19 +406,19 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:63
 #: templates/components/fund-stocks-details.php:62
 #: templates/components/fund-third-details.php:60
-msgid "Model portfolio (in Estonian)"
+msgid "Model portfolio"
 msgstr "Mudelportfell"
 
 #: templates/components/fund-bonds-details.php:66
 #: templates/components/fund-stocks-details.php:65
 #: templates/components/fund-third-details.php:63
-msgid "Key Investor Information (in Estonian)"
+msgid "Key Investor Information"
 msgstr "Põhiteave"
 
 #: templates/components/fund-bonds-details.php:69
 #: templates/components/fund-stocks-details.php:68
 #: templates/components/fund-third-details.php:66
-msgid "Procedure for determining net worth of fund (in Estonian)"
+msgid "Procedure for determining net worth of fund"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
 #: templates/components/fund-bonds-details.php:72
@@ -428,7 +452,7 @@ msgstr "Aruanded"
 #: templates/components/fund-bonds-details.php:85
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:82
-msgid "Investment reports (in Estonian)"
+msgid "Investment reports"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:87
@@ -440,7 +464,7 @@ msgstr "Eelnevad aruanded"
 #: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-stocks-details.php:89
 #: templates/components/fund-third-details.php:87
-msgid "Financial reports of fund and fund manager (in Estonian)"
+msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-details.php:94
@@ -1855,6 +1879,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Model portfolio (in Estonian)"
+#~ msgstr "Mudelportfell"
 
 #~ msgid "Choose Tuleva 2nd pillar"
 #~ msgstr "Too II sammas Tulevasse"
