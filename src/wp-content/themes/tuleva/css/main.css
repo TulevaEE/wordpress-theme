@@ -14713,7 +14713,8 @@ hr {
   opacity: 1;
 }
 
-a {
+a,
+.btn-link {
   -webkit-text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   text-decoration-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   text-underline-offset: 0.125em !important;
@@ -14721,7 +14722,9 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+.btn-link:hover,
+.btn-link:focus {
   -webkit-text-decoration-color: currentColor !important;
   text-decoration-color: currentColor !important;
 }
@@ -18123,7 +18126,8 @@ sup {
   --box-shadow-calculator: var(--box-shadow-hc) !important;
   --box-shadow-dropdown: var(--box-shadow-hc) !important;
 }
-.high-contrast a {
+.high-contrast a,
+.high-contrast .btn-link {
   -webkit-text-decoration-color: currentColor !important;
   text-decoration-color: currentColor !important;
 }
