@@ -1,5 +1,5 @@
 <?php
-$isOctoberNovemberDecember = (date('m') >= 10);
+$isSeptemberToDecember = (date('m') >= 9);
 function get_translated_link()
 {
     if (ICL_LANGUAGE_CODE == 'en') {
@@ -13,7 +13,7 @@ function get_translated_link()
 <div class="card calculator rounded-4">
     <div class="card-body p-2 third-pillar-calculator">
         <form>
-            <?php if ($isOctoberNovemberDecember) { ?>
+            <?php if ($isSeptemberToDecember) { ?>
                 <div class="card bg-gray-2 p-3 rounded-3">
                     <div class="mb-3 row align-items-center">
                         <label for="yearlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
