@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-21T15:23:11+00:00\n"
+"POT-Creation-Date: 2025-09-08T08:43:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Theme Name of the theme
 #: style.css
@@ -22,6 +22,7 @@ msgstr ""
 #: helpers/acf/init.php:18
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
+#, php-format
 msgid "Error locating %s for inclusion"
 msgstr ""
 
@@ -334,23 +335,23 @@ msgid "Terms and conditions"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-bonds-details.php:63
-#: templates/components/fund-bonds-details.php:66
-#: templates/components/fund-bonds-details.php:69
-#: templates/components/fund-bonds-details.php:72
-#: templates/components/fund-bonds-details.php:75
-#: templates/components/fund-bonds-details.php:78
-#: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-bonds-details.php:90
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-bonds-details.php:67
+#: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-bonds-details.php:76
+#: templates/components/fund-bonds-details.php:83
+#: templates/components/fund-bonds-details.php:88
 #: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-stocks-details.php:62
-#: templates/components/fund-stocks-details.php:65
-#: templates/components/fund-stocks-details.php:68
-#: templates/components/fund-stocks-details.php:71
-#: templates/components/fund-stocks-details.php:74
-#: templates/components/fund-stocks-details.php:77
-#: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-stocks-details.php:60
+#: templates/components/fund-stocks-details.php:63
+#: templates/components/fund-stocks-details.php:66
+#: templates/components/fund-stocks-details.php:69
+#: templates/components/fund-stocks-details.php:72
+#: templates/components/fund-stocks-details.php:75
+#: templates/components/fund-stocks-details.php:82
+#: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:57
 #: templates/components/fund-third-details.php:60
 #: templates/components/fund-third-details.php:63
@@ -363,86 +364,82 @@ msgstr ""
 msgid " (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:60
-#: templates/components/fund-stocks-details.php:59
-msgid "<a href=\"https://tuleva.ee/en/analysis/we-made-the-terms-of-our-pension-funds-more-precise/\">Change of terms from 01.09.2025</a>"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:63
-#: templates/components/fund-stocks-details.php:62
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-stocks-details.php:60
 #: templates/components/fund-third-details.php:60
 msgid "Model portfolio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:66
-#: templates/components/fund-stocks-details.php:65
+#: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-stocks-details.php:63
 #: templates/components/fund-third-details.php:63
 msgid "Key Investor Information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:69
-#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-bonds-details.php:67
+#: templates/components/fund-stocks-details.php:66
 #: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:72
-#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-stocks-details.php:69
 #: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:75
-#: templates/components/fund-stocks-details.php:74
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-stocks-details.php:72
 #: templates/components/fund-third-details.php:72
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:78
-#: templates/components/fund-stocks-details.php:77
+#: templates/components/fund-bonds-details.php:76
+#: templates/components/fund-stocks-details.php:75
 #: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:82
-#: templates/components/fund-stocks-details.php:81
+#: templates/components/fund-bonds-details.php:80
+#: templates/components/fund-stocks-details.php:79
 #: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-stocks-details.php:84
+#: templates/components/fund-bonds-details.php:83
+#: templates/components/fund-stocks-details.php:82
 #: templates/components/fund-third-details.php:82
 msgid "Investment reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:87
-#: templates/components/fund-stocks-details.php:86
+#: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-bonds-details.php:88
+#: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:94
-#: templates/components/fund-stocks-details.php:93
+#: templates/components/fund-bonds-details.php:92
+#: templates/components/fund-stocks-details.php:91
 #: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:96
-#: templates/components/fund-stocks-details.php:95
+#: templates/components/fund-bonds-details.php:94
+#: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-stocks-details.php:94
 #: templates/components/fund-third-details.php:94
+#, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr ""
 
@@ -1013,7 +1010,7 @@ msgid "Net salary from 2026"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%."
+msgid "In 2026, income tax will be 24% and the tax-free allowance 700 euros."
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:52
@@ -1299,6 +1296,7 @@ msgid "FAQ page URL:"
 msgstr ""
 
 #: widgets/help-widget.php:75
+#, php-format
 msgid "See also our %sFAQ%s page."
 msgstr ""
 

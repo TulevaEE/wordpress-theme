@@ -186,11 +186,10 @@ $(document).ready(function ($) {
 
             // 2026 at your selected contribution rate
             var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
-            var incomeTaxRate = 0.22;
+            var incomeTaxRate = 0.24;
             var incomeTax =
                 Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * incomeTaxRate, 0);
-            var nationalSecurityTax = 0.02 * grossSalary;
-            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax - nationalSecurityTax;
+            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
 
             // 2026 at 0% contribution rate
             var incomeTax0Percent = Math.max((grossSalary - unemploymentInsurance - taxFreeWage) * incomeTaxRate, 0);

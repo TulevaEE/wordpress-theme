@@ -41,7 +41,7 @@
                         class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2026', TEXT_DOMAIN); ?></span><span
                         class="inline-help d-inline-block"
                         role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="<?php _e('In 2026, income tax will be 22% and the tax-free allowance is 700 euros. In addition, there will be a national security tax of 2%.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('In 2026, income tax will be 24% and the tax-free allowance 700 euros.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
                 <div id="netWage" class="lh-1 fw-medium text-nowrap">1555 €</div>
