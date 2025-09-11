@@ -15860,13 +15860,14 @@ sup {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   row-gap: 4.5rem;
-  margin: 0;
+  margin: 0 0 6rem;
   padding: 0;
   list-style: none;
 }
 @media (max-width: 575.98px) {
   .post-list {
     row-gap: 3rem;
+    margin-bottom: 3rem;
   }
 }
 .post-list__item {
