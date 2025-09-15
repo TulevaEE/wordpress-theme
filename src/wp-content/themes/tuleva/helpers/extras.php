@@ -373,6 +373,18 @@ function get_esg_document_url() {
     return get_site_url() . $esg_document_path;
 }
 
+function get_nav_procedure_document_url() {
+    $nav_procedure_document_path = '/wp-content/uploads/2025/03/Fondide-vara-puhasvaartuse-maaramise-kord_17.04.2025.pdf';
+
+    return get_site_url() . $nav_procedure_document_path;
+}
+
+function get_nav_procedure_future_document_url() {
+    $nav_procedure_future_document_path = '/wp-content/uploads/2025/09/Fondide-vara-puhasvaartuse-maaramise-sisekord-16.10.2025.pdf';
+
+    return get_site_url() . $nav_procedure_future_document_path;
+}
+
 function get_esg_factors_document_url() {
     $esg_factors_document_path = '/wp-content/uploads/2025/07/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_30.06.2025.pdf';
 
@@ -415,6 +427,31 @@ function generate_report_link($url, $link_text = null) {
     } else {
         $path = $url;
     }
+
+    $output = sprintf(
+        '<a href="%s%s" target="_blank">%s</a>',
+        get_site_url(),
+        $path,
+        $link_text
+    );
+
+    return $output;
+}
+
+function generate_filename_dated_link($url, $link_text_prefix = '') {
+    if (filter_var($url, FILTER_VALIDATE_URL)) {
+        $path = parse_url($url, PHP_URL_PATH);
+    } else {
+        $path = $url;
+    }
+
+    $filename = basename($path);
+    $date = '';
+    if (preg_match('/(\d{2}[\.\-_]\d{2}[\.\-_]\d{4})/', $filename, $matches)) {
+        $date = str_replace(['_', '-'], '.', $matches[1]);
+    }
+
+    $link_text = trim($link_text_prefix . (empty($date) ? '' : ' ' . $date));
 
     $output = sprintf(
         '<a href="%s%s" target="_blank">%s</a>',
