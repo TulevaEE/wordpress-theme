@@ -65,7 +65,7 @@
                             <li>
                                 <a href="<?php echo get_nav_procedure_document_url(); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
-                                <?php echo generate_filename_dated_link(get_nav_procedure_future_document_url(), 'Fondi vara puhasväärtuse määramise kord alates'); ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <?php echo generate_filename_dated_link(get_nav_procedure_future_document_url(), __('Procedure for determining net worth of fund from', TEXT_DOMAIN)); ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
