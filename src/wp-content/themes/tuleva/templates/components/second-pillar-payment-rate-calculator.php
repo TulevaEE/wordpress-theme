@@ -41,10 +41,10 @@
                         class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2026', TEXT_DOMAIN); ?></span><span
                         class="inline-help d-inline-block"
                         role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="<?php _e('In 2026, income tax will be 24% and the tax-free allowance 700 euros.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('In 2026, income tax will be 22% and the tax-free allowance 700 euros.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
-                <div id="netWage" class="lh-1 fw-medium text-nowrap">1572 €</div>
+                <div id="netWage" class="lh-1 fw-medium text-nowrap">1595 €</div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="me-3">
@@ -59,7 +59,7 @@
                         <?php _e('Yearly gain from income tax', TEXT_DOMAIN); ?>
                     </span>
                 </div>
-                <span id="yearlyTaxWin" class="fs-2 lh-1 fw-bold text-nowrap text-green">345 €</span>
+                <span id="yearlyTaxWin" class="fs-2 lh-1 fw-bold text-nowrap text-green">316 €</span>
             </div>
         </div>
         <!-- CTA -->

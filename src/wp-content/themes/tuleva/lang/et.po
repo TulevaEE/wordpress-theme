@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-09-15T14:21:16+00:00\n"
-"PO-Revision-Date: 2025-09-15 17:21+0300\n"
+"POT-Creation-Date: 2025-09-18T11:08:19+00:00\n"
+"PO-Revision-Date: 2025-09-18 14:09+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -21,6 +21,7 @@ msgstr "Tuleva"
 
 #: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
 #: widgets/init.php:15
+#, php-format
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
 
@@ -482,6 +483,7 @@ msgstr "CO2 intensiivsus"
 #: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-stocks-details.php:96
 #: templates/components/fund-third-details.php:96
+#, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
 
@@ -1507,8 +1509,8 @@ msgid "Net salary from 2026"
 msgstr "Netopalk alates 2026"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "In 2026, income tax will be 24% and the tax-free allowance 700 euros."
-msgstr "2026. aastal on tulumaks 24% ja maksuvaba tulu 700 € kuus."
+msgid "In 2026, income tax will be 22% and the tax-free allowance 700 euros."
+msgstr "2026. aastal on tulumaks 22% ja maksuvaba tulu 700 € kuus."
 
 #: templates/components/second-pillar-payment-rate-calculator.php:52
 msgid "Your monthly contribution"
@@ -1829,6 +1831,7 @@ msgid "FAQ page URL:"
 msgstr "KKK lehe URL:"
 
 #: widgets/help-widget.php:75
+#, php-format
 msgid "See also our %sFAQ%s page."
 msgstr "Vaata ka korduma kippuvaid küsimusi meie %sKKK%s lehel."
 
