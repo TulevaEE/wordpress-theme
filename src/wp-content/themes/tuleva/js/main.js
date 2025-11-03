@@ -178,15 +178,20 @@ $(document).ready(function ($) {
 
             // 2, 4 or 6
             var pillarContribution = parseInt($calculator.find('input[name="pillarContribution"]:checked').val());
+            var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
 
+            var incomeTaxRate = 0.22;
             var unemploymentInsurance = 0.016 * grossSalary;
+
+            // 2025
+            var yourSecondPillarContributionAt2Percent = 2 / 100 * grossSalary;
+            var taxFreeWage2025 = getTaxFreeWage(grossSalary * 12) / 12;
+            var incomeTax2025 =
+                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContributionAt2Percent - taxFreeWage2025) * incomeTaxRate, 0);
+            var netSalary2025 = grossSalary - unemploymentInsurance - yourSecondPillarContributionAt2Percent - incomeTax2025;
 
             // 2026
             var taxFreeWage = 700;
-
-            // 2026 at your selected contribution rate
-            var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
-            var incomeTaxRate = 0.22;
             var incomeTax =
                 Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * incomeTaxRate, 0);
             var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
@@ -196,6 +201,12 @@ $(document).ready(function ($) {
 
             var monthlyTaxWin = Math.max((incomeTax0Percent - incomeTax), 0);
             var yearlyTaxWin = monthlyTaxWin * 12;
+
+            if (netSalary > netSalary2025) {
+                $calculator.find('#netWage').addClass('text-success');
+            } else {
+                $calculator.find('#netWage').removeClass('text-success');
+            }
 
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
             $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
@@ -417,12 +428,12 @@ $(document).ready(function ($) {
 
             updateClock();
         },
-        initHighContrast = function() {
+        initHighContrast = function () {
             // synced with onboarding-client
-            const COOKIE_NAME        = 'high-contrast';
-            const COOKIE_DOMAIN      = location.hostname === 'localhost' ? 'localhost' : '.tuleva.ee';
-            const $contrastToggles   = $('.high-contrast-toggle > .form-check-input');
-            const contrastSyncBroadcastChannel    = new BroadcastChannel(COOKIE_NAME);
+            const COOKIE_NAME = 'high-contrast';
+            const COOKIE_DOMAIN = location.hostname === 'localhost' ? 'localhost' : '.tuleva.ee';
+            const $contrastToggles = $('.high-contrast-toggle > .form-check-input');
+            const contrastSyncBroadcastChannel = new BroadcastChannel(COOKIE_NAME);
             const prefersMoreContrastMediaQuery = window.matchMedia('(prefers-contrast: more)'); // matches is computed when accessed
 
             const getInitialCookieState = () => {
@@ -444,7 +455,7 @@ $(document).ready(function ($) {
 
 
             const setSwitchState = (switchOn) => {
-                const oneDayInSeconds = 60*60*24;
+                const oneDayInSeconds = 60 * 60 * 24;
                 const cookieLifetimeInSeconds = oneDayInSeconds * 400;
                 // if enabled, set max age to 0 to delete, if not enabled then set it to 400 days
                 document.cookie = `${COOKIE_NAME}=${switchOn};max-age=${cookieLifetimeInSeconds};domain=${COOKIE_DOMAIN};path=/`;
@@ -518,24 +529,56 @@ $(document).ready(function ($) {
         };
 
     var setupFunctions = [
-        function () { initHelpBeaconToggle(); },
-        function () { initPostSidebarHandler(); },
-        function () { initGenericModals(); },
-        function () { initModalEscClose(); },
-        function () { initThirdPillarCalculator(); },
-        function () { initSecondPillarPaymentRateCalculator(); },
-        function () { initPayoutCalculator(); },
-        function () { initAllFormRangeSliders(); },
-        function () { initAccordion(); },
-        function () { initCountdownTimer(); },
-        function () { initCountdownTimerFull(); },
-        function () { initModal('#founders', 'foundersModal'); },
-        function () { initModal('#founders-2', 'foundersModal-2'); },
+        function () {
+            initHelpBeaconToggle();
+        },
+        function () {
+            initPostSidebarHandler();
+        },
+        function () {
+            initGenericModals();
+        },
+        function () {
+            initModalEscClose();
+        },
+        function () {
+            initThirdPillarCalculator();
+        },
+        function () {
+            initSecondPillarPaymentRateCalculator();
+        },
+        function () {
+            initPayoutCalculator();
+        },
+        function () {
+            initAllFormRangeSliders();
+        },
+        function () {
+            initAccordion();
+        },
+        function () {
+            initCountdownTimer();
+        },
+        function () {
+            initCountdownTimerFull();
+        },
+        function () {
+            initModal('#founders', 'foundersModal');
+        },
+        function () {
+            initModal('#founders-2', 'foundersModal-2');
+        },
         // function () {  initModal('#question-joining-fee', 'questionJoiningFeeModal'); },
         // function () { // initModal('#question-profit', 'questionProfitModal'); },
-        function () { initModal('#question-vote', 'questionVoteModal'); },
-        function () { initModal('#question-rights', 'questionRightsModal'); },
-        function () { initHighContrast(); },
+        function () {
+            initModal('#question-vote', 'questionVoteModal');
+        },
+        function () {
+            initModal('#question-rights', 'questionRightsModal');
+        },
+        function () {
+            initHighContrast();
+        },
     ]
 
     setupFunctions.forEach(function (func) {
@@ -567,7 +610,7 @@ $(document).ready(function ($) {
     });
 
     function initHeaderMenuKeyboardNav() {
-        $('.navbar-nav').on('keydown', '.nav-link, .dropdown-item', function(e) {
+        $('.navbar-nav').on('keydown', '.nav-link, .dropdown-item', function (e) {
             var key = e.key || e.keyCode;
             var $target = $(e.target);
             var $navLinks = $('.navbar-nav > .nav-item > .nav-link');
@@ -589,6 +632,7 @@ $(document).ready(function ($) {
             }
         });
     }
+
     initHeaderMenuKeyboardNav();
 
     // Select all links with hashes
@@ -603,33 +647,33 @@ $(document).ready(function ($) {
         .on('click', function (ev) {
             // Only handle on-page links
             if (
-              location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
-              location.hostname === this.hostname
+                location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
+                location.hostname === this.hostname
             ) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-              if (target.length) {
-                // Prevent default scroll behavior
-                ev.preventDefault();
+                if (target.length) {
+                    // Prevent default scroll behavior
+                    ev.preventDefault();
 
-                // Use scrollIntoView API for smooth scrolling
-                target.get(0).scrollIntoView({ behavior: 'smooth' });
+                    // Use scrollIntoView API for smooth scrolling
+                    target.get(0).scrollIntoView({behavior: 'smooth'});
 
-                // Update the URL hash without jumping
-                history.pushState(null, null, this.hash);
+                    // Update the URL hash without jumping
+                    history.pushState(null, null, this.hash);
 
-                // Handle focus after scrolling completes
-                setTimeout(function () {
-                  target.focus();
-                  if (!target.is(":focus")) {
-                    target.attr('tabindex', '-1');
-                    target.focus();
-                  }
-                }, 500);
-              }
+                    // Handle focus after scrolling completes
+                    setTimeout(function () {
+                        target.focus();
+                        if (!target.is(":focus")) {
+                            target.attr('tabindex', '-1');
+                            target.focus();
+                        }
+                    }, 500);
+                }
             }
-          });
+        });
 
     $('.popper').popover({
         container: 'body',
