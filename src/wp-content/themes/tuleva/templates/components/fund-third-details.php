@@ -91,7 +91,7 @@
                         <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
-                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 77.48) ?></span>
+                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 80.13) ?></span>
                         </p>
                     </div>
                 </div>
