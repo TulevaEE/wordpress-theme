@@ -492,7 +492,13 @@ $(document).ready(function ($) {
             applyContrastState();
         },
         initCountdownTimerFull = function () {
-            var july31midnight = 1753995599000;
+            // Get the countdown end date from the data attribute (dynamically set in PHP)
+            var counterElement = document.querySelector('.counter-small');
+            var countdownEndTime = counterElement ? parseInt(counterElement.getAttribute('data-countdown-end')) : null;
+
+            // Fallback to July 31 if no dynamic date is found (for backwards compatibility)
+            var targetTime = countdownEndTime || 1753995599000;
+
             var days = 0, hours = 0, minutes = 0, seconds = 0;
             var daysFirstNumber = document.getElementById('days-first-number');
             var daysLastNumber = document.getElementById('days-last-number');
@@ -501,10 +507,15 @@ $(document).ready(function ($) {
             var minutesFirstNumber = document.getElementById('minutes-first-number');
             var minutesLastNumber = document.getElementById('minutes-last-number');
 
+            // Screen reader elements
+            var daysValue = document.getElementById('days-value');
+            var hoursValue = document.getElementById('hours-value');
+            var minutesValue = document.getElementById('minutes-value');
+
             if (!daysFirstNumber) {
                 return
             }
-            var countdownTimer = countdown(july31midnight, function (ts) {
+            var countdownTimer = countdown(targetTime, function (ts) {
                 if (ts.end > ts.start) {
                     daysFirstNumber.innerHTML = '0';
                     daysLastNumber.innerHTML = '0';
@@ -512,6 +523,10 @@ $(document).ready(function ($) {
                     hoursLastNumber.innerHTML = '0';
                     minutesFirstNumber.innerHTML = '0';
                     minutesLastNumber.innerHTML = '0';
+                    // Update screen reader text
+                    if (daysValue) daysValue.textContent = '0 days';
+                    if (hoursValue) hoursValue.textContent = '0 hours';
+                    if (minutesValue) minutesValue.textContent = '0 minutes';
                     window.clearInterval(countdownTimer);
                 } else {
                     days = ('0' + ts.days).slice(-2);
@@ -524,6 +539,10 @@ $(document).ready(function ($) {
                     hoursLastNumber.innerHTML = hours.substring(1, 2);
                     minutesFirstNumber.innerHTML = minutes.substring(0, 1);
                     minutesLastNumber.innerHTML = minutes.substring(1, 2);
+                    // Update screen reader text
+                    if (daysValue) daysValue.textContent = ts.days + ' days';
+                    if (hoursValue) hoursValue.textContent = ts.hours + ' hours';
+                    if (minutesValue) minutesValue.textContent = ts.minutes + ' minutes';
                 }
             }, countdown.DAYS | countdown.HOURS | countdown.MINUTES);
         };

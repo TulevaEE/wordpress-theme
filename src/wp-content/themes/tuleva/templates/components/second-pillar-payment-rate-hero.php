@@ -5,32 +5,49 @@
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
                 <?php
+                // Get current year and calculate the last 2 weeks of November
+                $current_year = date('Y');
                 $current_timestamp = time() * 1000; // Current time in milliseconds
-                $november_30_end_of_day = 1733003999000; // Timestamp for 30 Nov 2024, 23:59:59
 
-                if ($current_timestamp < $november_30_end_of_day) { ?>
-                    <div class="counter-small d-flex justify-content-center justify-content-lg-start mb-5">
+                // November 17, 00:00:00 (start of last 2 weeks)
+                $november_17_start = strtotime("$current_year-11-17 00:00:00") * 1000;
+
+                // November 30, 23:59:59 (end of November)
+                $november_30_end = strtotime("$current_year-11-30 23:59:59") * 1000;
+
+                // Show counter if we're within the last 2 weeks of November
+                if ($current_timestamp >= $november_17_start && $current_timestamp <= $november_30_end) { ?>
+                    <div class="counter-small d-flex justify-content-center justify-content-lg-start mb-5"
+                         data-countdown-end="<?php echo $november_30_end; ?>"
+                         role="timer"
+                         aria-label="<?php _e('Time remaining until November 30', TEXT_DOMAIN) ?>"
+                         aria-live="polite"
+                         aria-atomic="true">
+                        <span class="visually-hidden"><?php _e('Countdown timer showing time remaining', TEXT_DOMAIN) ?></span>
                         <div class="d-flex flex-row">
                             <div class="counter-block">
-                                <div class="counter-number">
-                                    <div id="days-first-number">&nbsp;</div>
-                                    <div id="days-last-number">&nbsp;</div>
+                                <div class="counter-number" role="group" aria-labelledby="days-label">
+                                    <span id="days-first-number" aria-hidden="true">&nbsp;</span>
+                                    <span id="days-last-number" aria-hidden="true">&nbsp;</span>
+                                    <span class="visually-hidden" id="days-value"></span>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('days', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2" id="days-label"><?php _e('days', TEXT_DOMAIN) ?></div>
                             </div>
                             <div class="counter-block">
-                                <div class="counter-number">
-                                    <div id="hours-first-number">&nbsp;</div>
-                                    <div id="hours-last-number">&nbsp;</div>
+                                <div class="counter-number" role="group" aria-labelledby="hours-label">
+                                    <span id="hours-first-number" aria-hidden="true">&nbsp;</span>
+                                    <span id="hours-last-number" aria-hidden="true">&nbsp;</span>
+                                    <span class="visually-hidden" id="hours-value"></span>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('hours', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2" id="hours-label"><?php _e('hours', TEXT_DOMAIN) ?></div>
                             </div>
                             <div class="counter-block">
-                                <div class="counter-number">
-                                    <div id="minutes-first-number">&nbsp;</div>
-                                    <div id="minutes-last-number">&nbsp;</div>
+                                <div class="counter-number" role="group" aria-labelledby="minutes-label">
+                                    <span id="minutes-first-number" aria-hidden="true">&nbsp;</span>
+                                    <span id="minutes-last-number" aria-hidden="true">&nbsp;</span>
+                                    <span class="visually-hidden" id="minutes-value"></span>
                                 </div>
-                                <div class="counter-label mt-2"><?php _e('minutes', TEXT_DOMAIN) ?></div>
+                                <div class="counter-label mt-2" id="minutes-label"><?php _e('minutes', TEXT_DOMAIN) ?></div>
                             </div>
                         </div>
                     </div>
