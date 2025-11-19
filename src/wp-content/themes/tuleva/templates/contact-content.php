@@ -83,13 +83,17 @@
                             </h2>
                         </div>
                     </div>
-                    <?php if (have_rows('contact_categories')) { ?>
+                    <?php
+                    if (have_rows('contact_categories')) { ?>
                         <?php while (have_rows('contact_categories')) { the_row(); ?>
                             <div class="row section-spacing-top">
                                 <div class="col-md-12">
-                                    <?php $category_title = get_sub_field('category_title');
-                                          $category_id = sanitize_title($category_title); ?>
-                                    <h3 class="m-0 text-center" id="<?php echo esc_attr($category_id); ?>">
+                                    <?php
+                                    $block_title = get_sub_field('block_title');
+                                    $category_title = get_sub_field('category_title');
+                                    $combined_title = $block_title . ' ' . $category_title;
+                                    ?>
+                                    <h3 class="m-0 text-center" id="<?php echo sanitize_title($combined_title); ?>">
                                         <?php echo $category_title; ?>
                                     </h3>
                                     <div class="row contacts-block">
