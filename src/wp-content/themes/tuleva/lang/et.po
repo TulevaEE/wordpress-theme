@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-10-20T07:56:16+00:00\n"
-"PO-Revision-Date: 2025-10-20 10:56+0300\n"
+"POT-Creation-Date: 2025-11-19T08:47:11+00:00\n"
+"PO-Revision-Date: 2025-11-19 10:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -30,8 +30,8 @@ msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
 #: helpers/extras.php:479 helpers/extras.php:490
-#: templates/components/counter-hero.php:13
-#: templates/components/second-pillar-payment-rate-hero.php:19
+#: templates/components/counter-hero.php:65
+#: templates/components/second-pillar-payment-rate-hero.php:34
 msgid "days"
 msgstr "päeva"
 
@@ -85,7 +85,7 @@ msgstr "Juhend — Samm 1"
 
 #. Template Name of the theme
 msgid "Jobs"
-msgstr ""
+msgstr "Tööpakkumised"
 
 #. Template Name of the theme
 msgid "Mutual company page"
@@ -97,7 +97,7 @@ msgstr "Otsi blogist"
 
 #: searchform.php:5
 msgid "Search"
-msgstr ""
+msgstr "Otsi"
 
 #: templates/404.php:5
 msgid "This page doesn’t exist"
@@ -142,14 +142,30 @@ msgid ""
 "The deadline for this fund exchange period is <b>November 30.</b> Switching "
 "funds is <b>free.</b>"
 msgstr ""
+"Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
+"<b>tasuta.</b>"
 
-#: templates/components/counter-hero.php:20
+#: templates/components/counter-hero.php:54
+#, php-format
+msgid "Time remaining until %s"
+msgstr "Aega jäänud kuni %s"
+
+#: templates/components/counter-hero.php:54
+msgid "Countdown timer"
+msgstr "Aega jäänud"
+
+#: templates/components/counter-hero.php:57
 #: templates/components/second-pillar-payment-rate-hero.php:26
+msgid "Countdown timer showing time remaining"
+msgstr "Aega jäänud"
+
+#: templates/components/counter-hero.php:73
+#: templates/components/second-pillar-payment-rate-hero.php:42
 msgid "hours"
 msgstr "tundi"
 
-#: templates/components/counter-hero.php:27
-#: templates/components/second-pillar-payment-rate-hero.php:33
+#: templates/components/counter-hero.php:81
+#: templates/components/second-pillar-payment-rate-hero.php:50
 msgid "minutes"
 msgstr "minutit"
 
@@ -1521,6 +1537,10 @@ msgstr "Tõstan sissemakset"
 msgid ""
 "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
+
+#: templates/components/second-pillar-payment-rate-hero.php:23
+msgid "Time remaining until November 30"
+msgstr "Aega jäänud kuni 30. novembrini"
 
 #: templates/components/signup-block.php:24
 msgid "To become a member please log in to your pension account."
