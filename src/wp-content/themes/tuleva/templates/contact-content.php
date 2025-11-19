@@ -87,8 +87,10 @@
                         <?php while (have_rows('contact_categories')) { the_row(); ?>
                             <div class="row section-spacing-top">
                                 <div class="col-md-12">
-                                    <h3 class="m-0 text-center">
-                                        <?php the_sub_field('category_title'); ?>
+                                    <?php $category_title = get_sub_field('category_title');
+                                          $category_id = sanitize_title($category_title); ?>
+                                    <h3 class="m-0 text-center" id="<?php echo esc_attr($category_id); ?>">
+                                        <?php echo $category_title; ?>
                                     </h3>
                                     <div class="row contacts-block">
                                         <?php if (have_rows('contacts')) { ?>
