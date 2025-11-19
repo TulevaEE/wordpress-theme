@@ -84,12 +84,12 @@
                         </div>
                     </div>
                     <?php
+                    $block_title = get_sub_field('block_title');
                     if (have_rows('contact_categories')) { ?>
                         <?php while (have_rows('contact_categories')) { the_row(); ?>
                             <div class="row section-spacing-top">
                                 <div class="col-md-12">
                                     <?php
-                                    $block_title = get_sub_field('block_title');
                                     $category_title = get_sub_field('category_title');
                                     $combined_title = $block_title . ' ' . $category_title;
                                     ?>
