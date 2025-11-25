@@ -19,11 +19,11 @@ $lead_text = get_sub_field('lead_text');
                     $isNovember = (date('m') == 11);
                     $dayOfMonth = (int)date('j');
 
-                    if ($isMarch && $dayOfMonth > 21) {
+                    if ($isMarch && $dayOfMonth > 16) {
                         _e('The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
-                    } elseif ($isJuly && $dayOfMonth > 21) {
+                    } elseif ($isJuly && $dayOfMonth > 16) {
                         _e('The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
-                    } elseif ($isNovember && $dayOfMonth > 21) {
+                    } elseif ($isNovember && $dayOfMonth > 15) {
                         _e('The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>', TEXT_DOMAIN);
                     } else {
                         the_sub_field('small_text');

@@ -1,8 +1,24 @@
+<?php
+require_once get_template_directory() . '/helpers/deadline-calculations.php';
+
+$currentYear = (int)date('Y');
+$yearEndDeadline = get_year_end_deadline($currentYear);
+$showCountdown = is_within_days_before_deadline($yearEndDeadline, 14);
+?>
 <section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-mutual d-flex flex-column section-spacing">
     <div class="container my-auto">
         <div class="row align-items-center gy-5 gy-sm-6 gx-xl-5">
             <div class="col-lg-6 text-center text-lg-start text-navy">
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
+
+                <?php
+                if ($showCountdown) {
+                    $deadlineEndOfDay = $yearEndDeadline->getTimestamp() + (24 * 60 * 60) - 1;
+                    $deadlineMilliseconds = $deadlineEndOfDay * 1000;
+                    set_query_var('countdown_end_ms', $deadlineMilliseconds);
+                    get_template_part('templates/components/countdown-timer');
+                }
+                ?>
                 <?php if (get_sub_field('quote')) { ?>
                     <p class="lead mb-3"><?php echo do_shortcode(get_sub_field('quote')); ?></p>
                     <?php if (get_sub_field('source')) { ?>

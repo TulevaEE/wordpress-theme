@@ -1,47 +1,29 @@
 <?php
-// Dynamic date calculation for determining which countdown to show
-// Counter visibility is controlled via wp-admin page template selection
+require_once get_template_directory() . '/helpers/deadline-calculations.php';
+
 $current_year = date('Y');
-$current_timestamp = time() * 1000; // Current time in milliseconds
-$countdown_end = 0;
+$current_timestamp = time() * 1000;
+
+$deadlines = [
+    new DateTime("$current_year-03-31 23:59:59"),
+    new DateTime("$current_year-07-31 23:59:59"),
+    new DateTime("$current_year-11-30 23:59:59"),
+    get_year_end_deadline($current_year)
+];
+
+$countdown_end = $current_timestamp - 1000;
 $deadline_name = '';
 
-// Period 1: March 31 (2 weeks before: March 17-31)
-$march_17_start = strtotime("$current_year-03-17 00:00:00") * 1000;
-$march_31_end = strtotime("$current_year-03-31 23:59:59") * 1000;
+foreach ($deadlines as $deadline) {
+    $countdown_start = calculate_working_days_before_date($deadline, 14);
+    $start_timestamp = $countdown_start->getTimestamp() * 1000;
+    $end_timestamp = ($deadline->getTimestamp() + (24 * 60 * 60) - 1) * 1000;
 
-// Period 2: July 31 (2 weeks before: July 17-31)
-$july_17_start = strtotime("$current_year-07-17 00:00:00") * 1000;
-$july_31_end = strtotime("$current_year-07-31 23:59:59") * 1000;
-
-// Period 3: November 30 (2 weeks before: Nov 16-30)
-$nov_16_start = strtotime("$current_year-11-16 00:00:00") * 1000;
-$nov_30_end = strtotime("$current_year-11-30 23:59:59") * 1000;
-
-// Period 4: December 29 (2 weeks before: Dec 15-29, adjustable for holidays)
-// You can adjust the end date here based on year-end holidays
-$dec_15_start = strtotime("$current_year-12-15 00:00:00") * 1000;
-$dec_29_end = strtotime("$current_year-12-29 23:59:59") * 1000; // Adjust if needed (27-29)
-
-// Determine which countdown end date to use based on current date
-if ($current_timestamp >= $march_17_start && $current_timestamp <= $march_31_end) {
-    $countdown_end = $march_31_end;
-    $deadline_name = 'March 31';
-} elseif ($current_timestamp >= $july_17_start && $current_timestamp <= $july_31_end) {
-    $countdown_end = $july_31_end;
-    $deadline_name = 'July 31';
-} elseif ($current_timestamp >= $nov_16_start && $current_timestamp <= $nov_30_end) {
-    $countdown_end = $nov_30_end;
-    $deadline_name = 'November 30';
-} elseif ($current_timestamp >= $dec_15_start && $current_timestamp <= $dec_29_end) {
-    $countdown_end = $dec_29_end;
-    $deadline_name = 'December 29'; // Update this based on actual year-end deadline
-} else {
-    // Default fallback - show 00:00:00 when outside countdown periods
-    // This happens right after a deadline passes (e.g., Aug 1, Dec 1)
-    // Set countdown_end to current time so timer shows zeros
-    $countdown_end = $current_timestamp - 1000; // Set to past time to show 00:00:00
-    $deadline_name = ''; // Empty for aria-label handling below
+    if ($current_timestamp >= $start_timestamp && $current_timestamp <= $end_timestamp) {
+        $countdown_end = $end_timestamp;
+        $deadline_name = $deadline->format('F j');
+        break;
+    }
 }
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
