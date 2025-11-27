@@ -22,9 +22,9 @@ class ThemeEnqueue
             // CSS assets
             [
                 'handle' => 'font-style',
-                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i&amp;subset=latin-ext',
+                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i|Material+Symbols+Rounded&amp;subset=latin-ext',
                 'deps' => 'normalize',
-                'ver' => '1.0.0',
+                'ver' => '1.0.1',
                 'media' => 'all',
                 'enqueue' => true
             ],
