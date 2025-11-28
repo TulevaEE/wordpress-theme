@@ -64,6 +64,9 @@
                 <?php get_template_part('templates/blog/recent-articles'); ?>
             </div>
             <div class="col-lg-4 widget-area ps-lg-5">
+                <?php if ( is_active_sidebar( 'single_post_sidebar_widget_area' ) ) : ?>
+                    <?php dynamic_sidebar( 'single_post_sidebar_widget_area' ); ?>
+                <?php else : ?>
                 <div class="widget">
                     <div class="cta-widget cta-widget--secondary d-none d-md-block">
                         <h2 class="cta-widget__title h4">
@@ -99,6 +102,7 @@
                         </p>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

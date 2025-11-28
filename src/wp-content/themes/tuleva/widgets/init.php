@@ -65,5 +65,12 @@ function tu_widgets_init() {
         'after_widget'  => '</div>',
     ] );
 
+    register_sidebar( [
+        'name'          => 'Single post sidebar widget area',
+        'id'            => 'single_post_sidebar_widget_area',
+        'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+    ] );
+
 }
 add_action( 'widgets_init', 'tu_widgets_init' );
