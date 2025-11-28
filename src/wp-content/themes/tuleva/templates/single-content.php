@@ -85,7 +85,7 @@
                             <?php _e('How much would you lose to high fees?', TEXT_DOMAIN); ?>
                         </h2>
                         <p class="cta-widget__title--link h4">
-                            <?php _e('<a href="https://tuleva.ee/en/">See calculation</a>', TEXT_DOMAIN); ?>
+                            <?php _e('<a href="https://tuleva.ee/en/pension-calculator/">See calculation</a>', TEXT_DOMAIN); ?>
                         </p>
                     </div>
                 </div>

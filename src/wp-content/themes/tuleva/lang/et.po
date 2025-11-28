@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-11-19T08:47:11+00:00\n"
-"PO-Revision-Date: 2025-11-25 10:20+0200\n"
+"POT-Creation-Date: 2025-11-28T08:46:25+00:00\n"
+"PO-Revision-Date: 2025-11-28 10:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -30,8 +30,8 @@ msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
 #: helpers/extras.php:479 helpers/extras.php:490
-#: templates/components/counter-hero.php:65
-#: templates/components/second-pillar-payment-rate-hero.php:34
+#: templates/components/countdown-timer.php:22
+#: templates/components/counter-hero.php:47
 msgid "days"
 msgstr "päeva"
 
@@ -145,29 +145,30 @@ msgstr ""
 "Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on "
 "<b>tasuta.</b>"
 
-#: templates/components/counter-hero.php:54
-#, php-format
-msgid "Time remaining until %s"
-msgstr "Aega jäänud kuni %s"
-
-#: templates/components/counter-hero.php:54
+#: templates/components/countdown-timer.php:11
+#: templates/components/counter-hero.php:36
 msgid "Countdown timer"
 msgstr "Aega jäänud"
 
-#: templates/components/counter-hero.php:57
-#: templates/components/second-pillar-payment-rate-hero.php:26
+#: templates/components/countdown-timer.php:14
+#: templates/components/counter-hero.php:39
 msgid "Countdown timer showing time remaining"
 msgstr "Aega jäänud"
 
-#: templates/components/counter-hero.php:73
-#: templates/components/second-pillar-payment-rate-hero.php:42
+#: templates/components/countdown-timer.php:30
+#: templates/components/counter-hero.php:55
 msgid "hours"
 msgstr "tundi"
 
-#: templates/components/counter-hero.php:81
-#: templates/components/second-pillar-payment-rate-hero.php:50
+#: templates/components/countdown-timer.php:38
+#: templates/components/counter-hero.php:63
 msgid "minutes"
 msgstr "minutit"
+
+#: templates/components/counter-hero.php:36
+#, php-format
+msgid "Time remaining until %s"
+msgstr "Aega jäänud kuni %s"
 
 #: templates/components/founder-carousel.php:2
 #: templates/components/modal-founders.php:11
@@ -1538,10 +1539,6 @@ msgid ""
 "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
 
-#: templates/components/second-pillar-payment-rate-hero.php:23
-msgid "Time remaining until November 30"
-msgstr "Aega jäänud kuni 30. novembrini"
-
 #: templates/components/signup-block.php:24
 msgid "To become a member please log in to your pension account."
 msgstr "Liikmeks astumiseks sisene oma pensionikontole."
@@ -1764,8 +1761,9 @@ msgid "How much would you lose to high fees?"
 msgstr "Kui palju sina kõrgete tasude tõttu kaotad?"
 
 #: templates/single-content.php:88
-msgid "<a href=\"https://tuleva.ee/en/\">See calculation</a>"
-msgstr "<a href=\"https://tuleva.ee/\">Vaata arvutust</a>"
+msgid ""
+"<a href=\"https://tuleva.ee/en/pension-calculator/\">See calculation</a>"
+msgstr "<a href=\"https://tuleva.ee/pensionikalkulaator/\">Vaata arvutust</a>"
 
 #: templates/single-content.php:95
 msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
@@ -1889,6 +1887,9 @@ msgstr "Tekstirida 3:"
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
+
+#~ msgid "Time remaining until November 30"
+#~ msgstr "Aega jäänud kuni 30. novembrini"
 
 #~ msgid "Procedure for determining net worth of fund from"
 #~ msgstr "Fondi vara puhasväärtuse määramise kord alates"
