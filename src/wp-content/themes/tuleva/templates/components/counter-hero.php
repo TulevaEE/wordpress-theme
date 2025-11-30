@@ -1,30 +1,9 @@
 <?php
 require_once get_template_directory() . '/helpers/deadline-calculations.php';
 
-$current_year = date('Y');
-$current_timestamp = time() * 1000;
-
-$deadlines = [
-    new DateTime("$current_year-03-31 23:59:59"),
-    new DateTime("$current_year-07-31 23:59:59"),
-    new DateTime("$current_year-11-30 23:59:59"),
-    get_year_end_deadline($current_year)
-];
-
-$countdown_end = $current_timestamp - 1000;
-$deadline_name = '';
-
-foreach ($deadlines as $deadline) {
-    $countdown_start = calculate_working_days_before_date($deadline, 14);
-    $start_timestamp = $countdown_start->getTimestamp() * 1000;
-    $end_timestamp = ($deadline->getTimestamp() + (24 * 60 * 60) - 1) * 1000;
-
-    if ($current_timestamp >= $start_timestamp && $current_timestamp <= $end_timestamp) {
-        $countdown_end = $end_timestamp;
-        $deadline_name = $deadline->format('F j');
-        break;
-    }
-}
+$countdown = get_quarterly_countdown_if_active();
+$countdown_end = $countdown ? $countdown['end_ms'] : time() * 1000 - 1000;
+$deadline_name = $countdown ? $countdown['deadline_name'] : '';
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
     <div class="container my-auto">

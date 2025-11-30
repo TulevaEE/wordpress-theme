@@ -5,19 +5,11 @@
                 <h1 class="mb-5"><?php the_sub_field('heading'); ?></h1>
 
                 <?php
-                // Get current year and calculate the last 2 weeks of November
-                $current_year = date('Y');
-                $current_timestamp = time() * 1000; // Current time in milliseconds
+                require_once get_template_directory() . '/helpers/deadline-calculations.php';
 
-                // November 17, 00:00:00 (start of last 2 weeks)
-                $november_17_start = strtotime("$current_year-11-17 00:00:00") * 1000;
-
-                // November 30, 23:59:59 (end of November)
-                $november_30_end = strtotime("$current_year-11-30 23:59:59") * 1000;
-
-                // Show counter if we're within the last 2 weeks of November
-                if ($current_timestamp >= $november_17_start && $current_timestamp <= $november_30_end) {
-                    set_query_var('countdown_end_ms', $november_30_end);
+                $countdown_end = get_november_countdown_end_if_active();
+                if ($countdown_end) {
+                    set_query_var('countdown_end_ms', $countdown_end);
                     get_template_part('templates/components/countdown-timer');
                 } ?>
 
