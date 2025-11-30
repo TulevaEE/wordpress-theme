@@ -1,0 +1,17 @@
+{
+    "name": "tuleva/theme",
+    "description": "Tuleva WordPress theme",
+    "type": "wordpress-theme",
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

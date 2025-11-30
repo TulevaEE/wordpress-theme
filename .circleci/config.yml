@@ -1,5 +1,27 @@
 version: 2.1
 jobs:
+    test:
+        docker:
+            - image: cimg/php:8.4
+        steps:
+            - checkout
+            - restore_cache:
+                  keys:
+                      - composer-v1-{{ checksum "src/wp-content/themes/tuleva/composer.lock" }}
+                      - composer-v1-
+            - run:
+                  name: Install dependencies
+                  working_directory: src/wp-content/themes/tuleva
+                  command: composer install --no-interaction --prefer-dist
+            - save_cache:
+                  key: composer-v1-{{ checksum "src/wp-content/themes/tuleva/composer.lock" }}
+                  paths:
+                      - src/wp-content/themes/tuleva/vendor
+            - run:
+                  name: Run tests
+                  working_directory: src/wp-content/themes/tuleva
+                  command: composer test
+
     deploy:
         docker:
             - image: instrumentisto/rsync-ssh
@@ -12,13 +34,24 @@ jobs:
                   name: Sync files to production
                   command: |
                       set -e  # Ensures the CircleCI step fails if any command exits with a non-zero status
-                      rsync -avz --checksum --delete -e "ssh -o StrictHostKeyChecking=no" ./src/wp-content/themes/tuleva/ virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
+                      rsync -avz --checksum --delete \
+                        --exclude='tests/' \
+                        --exclude='vendor/' \
+                        --exclude='composer.json' \
+                        --exclude='composer.lock' \
+                        --exclude='phpunit.xml' \
+                        -e "ssh -o StrictHostKeyChecking=no" \
+                        ./src/wp-content/themes/tuleva/ \
+                        virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
 
 workflows:
     version: 2
     build_and_deploy:
         jobs:
+            - test
             - deploy:
-                filters:
-                    branches:
-                        only: master
+                  requires:
+                      - test
+                  filters:
+                      branches:
+                          only: master

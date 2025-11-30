@@ -17,6 +17,8 @@ src/wp-content/*
 !src/wp-content/themes/
 src/wp-content/themes/*
 !src/wp-content/themes/tuleva
+src/wp-content/themes/tuleva/vendor/
+src/wp-content/themes/tuleva/.phpunit.cache/
 wordpress/
 
 mysql-init/**
