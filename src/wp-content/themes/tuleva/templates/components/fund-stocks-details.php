@@ -27,11 +27,11 @@
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
-                            <span>0,24%</span>
+                            <span>0,215%</span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
-                            <span>0,31%</span>
+                            <span>0,29%</span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
@@ -54,13 +54,13 @@
                         <h2 class="mt-5 mb-4 h4"><?php _e('Documents', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow mb-5 text-secondary">
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/06/TUK75-ja-TUK00-Prospekt-kehtib-alates-04.03.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/05/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused-01.09.2025.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/12/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.12.2025.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/05/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused-01.09.2025.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/20250301_Mudelportfell_Tuleva.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/03/Pohiteave-TUK75-19.02.2025-kehtib-alates-03.03.2025.pdf" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/12/Pohiteave-TUK75-kehtib-alates-01.12.2025.pdf" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_nav_procedure_future_document_url(); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
