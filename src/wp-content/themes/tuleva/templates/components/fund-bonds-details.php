@@ -27,11 +27,11 @@
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
-                            <span>0,20%</span>
+                            <span>0,173%</span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
-                            <span>0,31%</span>
+                            <span>0,29%</span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
