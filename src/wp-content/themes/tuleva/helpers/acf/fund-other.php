@@ -116,6 +116,13 @@ acf_add_local_field_group(array (
                 'value' => 'page_mutual.php',
             ),
         ),
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_fund-savings.php',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'normal',
