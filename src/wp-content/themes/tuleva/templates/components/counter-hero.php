@@ -1,7 +1,7 @@
 <?php
 require_once get_template_directory() . '/helpers/deadline-calculations.php';
 
-$countdown = get_quarterly_countdown_if_active();
+$countdown = get_second_pillar_countdown_if_active();
 $countdown_end = $countdown ? $countdown['end_ms'] : time() * 1000 - 1000;
 $deadline_name = $countdown ? $countdown['deadline_name'] : '';
 ?>

@@ -1,7 +1,7 @@
 <?php
 require_once get_template_directory() . '/helpers/deadline-calculations.php';
 
-$countdown_end = get_year_end_countdown_end_if_active();
+$countdown_end = get_third_pillar_countdown_if_active();
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-mutual d-flex flex-column section-spacing">
     <div class="container my-auto">

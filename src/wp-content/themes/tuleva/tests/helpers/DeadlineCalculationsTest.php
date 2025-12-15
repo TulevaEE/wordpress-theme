@@ -62,21 +62,65 @@ final class DeadlineCalculationsTest extends TestCase
     }
 
     #[Test]
-    #[DataProvider('yearEndDeadlineProvider')]
-    public function yearEndDeadlineCalculatesCorrectly(int $year, string $expectedDate): void
+    #[DataProvider('thirdPillarDeadlineProvider')]
+    public function thirdPillarDeadlineCalculatesCorrectly(int $year, string $expectedDate): void
     {
-        $deadline = get_year_end_deadline($year);
+        $deadline = get_third_pillar_deadline($year);
 
         $this->assertSame($expectedDate, $deadline->format('Y-m-d'));
+        $this->assertSame('15:59:59', $deadline->format('H:i:s'));
     }
 
-    public static function yearEndDeadlineProvider(): array
+    public static function thirdPillarDeadlineProvider(): array
     {
+        // 3rd pillar deadline = (last working day of year) - 2 working days at 15:59
         return [
+            '2029: Dec 31 is Monday' => [2029, '2029-12-27'],
             '2024: Dec 31 is Tuesday' => [2024, '2024-12-27'],
-            '2023: Dec 31 is Sunday' => [2023, '2023-12-28'],
             '2025: Dec 31 is Wednesday' => [2025, '2025-12-29'],
+            '2026: Dec 31 is Thursday' => [2026, '2026-12-29'],
+            '2027: Dec 31 is Friday' => [2027, '2027-12-29'],
+            '2022: Dec 31 is Saturday' => [2022, '2022-12-28'],
+            '2023: Dec 31 is Sunday' => [2023, '2023-12-27'],
         ];
+    }
+
+    #[Test]
+    public function secondPillarHasThreeDeadlines(): void
+    {
+        $deadlines = get_second_pillar_deadlines(2025);
+
+        $this->assertCount(3, $deadlines);
+    }
+
+    #[Test]
+    public function secondPillarDeadlinesAreCorrectDates(): void
+    {
+        $deadlines = get_second_pillar_deadlines(2025);
+
+        $this->assertSame('2025-03-31', $deadlines[0]->format('Y-m-d'));
+        $this->assertSame('2025-07-31', $deadlines[1]->format('Y-m-d'));
+        $this->assertSame('2025-11-30', $deadlines[2]->format('Y-m-d'));
+    }
+
+    #[Test]
+    public function secondPillarDeadlinesAreAt2359(): void
+    {
+        $deadlines = get_second_pillar_deadlines(2025);
+
+        foreach ($deadlines as $deadline) {
+            $this->assertSame('23:59:59', $deadline->format('H:i:s'));
+        }
+    }
+
+    #[Test]
+    public function secondPillarDeadlinesAreInTallinnTimezone(): void
+    {
+        $deadlines = get_second_pillar_deadlines(2025);
+
+        foreach ($deadlines as $deadline) {
+            $this->assertSame('Europe/Tallinn', $deadline->getTimezone()->getName());
+        }
     }
 
     #[Test]
