@@ -44,7 +44,7 @@
                         title="<?php _e('Assuming income tax rate of 22% and tax-free allowance of 700 euros per month.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
-                <div id="netWage" class="lh-1 fw-medium text-nowrap text-success">1595 €</div>
+                <div id="netWage" class="lh-1 fw-medium text-nowrap">1595 €</div>
             </div>
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <div class="me-3">
