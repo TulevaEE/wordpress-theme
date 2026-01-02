@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"POT-Creation-Date: 2025-12-01T11:17:55+00:00\n"
-"PO-Revision-Date: 2025-12-01 13:18+0200\n"
+"POT-Creation-Date: 2026-01-02T15:00:11+00:00\n"
+"PO-Revision-Date: 2026-01-02 17:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Tuleva"
 msgstr "Tuleva"
 
-#: functions.php:25 helpers/acf/init.php:18 helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:19 helpers/post-types/init.php:9
 #: widgets/init.php:15
 #, php-format
 msgid "Error locating %s for inclusion"
@@ -66,6 +66,10 @@ msgstr "Esileht"
 #. Template Name of the theme
 msgid "Fund bonds page"
 msgstr "Võlakirja fondi leht"
+
+#. Template Name of the theme
+msgid "Fund savings page"
+msgstr "Täiendava kogumisfondi leht"
 
 #. Template Name of the theme
 msgid "Fund stocks page"
@@ -284,18 +288,21 @@ msgid "0.29% per year"
 msgstr "0,29% aastas"
 
 #: templates/components/fund-bonds-details.php:7
+#: templates/components/fund-savings-details.php:28
 #: templates/components/fund-stocks-details.php:7
 #: templates/components/fund-third-details.php:7
 msgid "Fund details"
 msgstr "Fondi info"
 
 #: templates/components/fund-bonds-details.php:13
+#: templates/components/fund-savings-details.php:36
 #: templates/components/fund-stocks-details.php:13
 #: templates/components/fund-third-details.php:13
 msgid "Currency"
 msgstr "Valuuta"
 
 #: templates/components/fund-bonds-details.php:17
+#: templates/components/fund-savings-details.php:41
 #: templates/components/fund-stocks-details.php:17
 #: templates/components/fund-third-details.php:17
 msgid "Date of inception"
@@ -307,42 +314,49 @@ msgid "27 March 2017"
 msgstr "27. märts 2017"
 
 #: templates/components/fund-bonds-details.php:21
+#: templates/components/fund-savings-details.php:46
 #: templates/components/fund-stocks-details.php:21
 #: templates/components/fund-third-details.php:21
 msgid "Fund volume"
 msgstr "Fondi maht"
 
 #: templates/components/fund-bonds-details.php:29
+#: templates/components/fund-savings-details.php:55
 #: templates/components/fund-stocks-details.php:29
 #: templates/components/fund-third-details.php:29
 msgid "Management fee"
 msgstr "Valitsemistasu"
 
 #: templates/components/fund-bonds-details.php:33
+#: templates/components/fund-savings-details.php:61
 #: templates/components/fund-stocks-details.php:33
 #: templates/components/fund-third-details.php:33
 msgid "Ongoing charges"
 msgstr "Jooksvad tasud"
 
 #: templates/components/fund-bonds-details.php:37
+#: templates/components/fund-savings-details.php:67
 #: templates/components/fund-stocks-details.php:37
 #: templates/components/fund-third-details.php:37
 msgid "Redemption fee and issue fee"
 msgstr "Väljalasketasu ja tagasivõtmistasu"
 
 #: templates/components/fund-bonds-details.php:41
+#: templates/components/fund-savings-details.php:73
 #: templates/components/fund-stocks-details.php:41
 #: templates/components/fund-third-details.php:41
 msgid "Fund manager's participation rate in fund"
 msgstr "Fondivalitseja osalus fondis"
 
 #: templates/components/fund-bonds-details.php:42
+#: templates/components/fund-savings-details.php:74
 #: templates/components/fund-stocks-details.php:42
 #: templates/components/fund-third-details.php:42
 msgid "units"
 msgstr "osakut"
 
 #: templates/components/fund-bonds-details.php:45
+#: templates/components/fund-savings-details.php:79
 #: templates/components/fund-stocks-details.php:45
 #: templates/components/fund-third-details.php:45
 msgid "Risk profile"
@@ -353,30 +367,35 @@ msgid "Conservative"
 msgstr "Konservatiivne"
 
 #: templates/components/fund-bonds-details.php:49
+#: templates/components/fund-savings-details.php:85
 #: templates/components/fund-stocks-details.php:49
 #: templates/components/fund-third-details.php:49
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
 #: templates/components/fund-bonds-details.php:55
+#: templates/components/fund-savings-details.php:91
 #: templates/components/fund-stocks-details.php:54
 #: templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr "Dokumendid"
 
 #: templates/components/fund-bonds-details.php:58
+#: templates/components/fund-savings-details.php:97
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr "Prospekt"
 
 #: templates/components/fund-bonds-details.php:58
+#: templates/components/fund-savings-details.php:99
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " and "
 msgstr " ja "
 
 #: templates/components/fund-bonds-details.php:58
+#: templates/components/fund-savings-details.php:102
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
@@ -391,6 +410,15 @@ msgstr "tingimused"
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-bonds-details.php:83
 #: templates/components/fund-bonds-details.php:88
+#: templates/components/fund-savings-details.php:104
+#: templates/components/fund-savings-details.php:111
+#: templates/components/fund-savings-details.php:118
+#: templates/components/fund-savings-details.php:124
+#: templates/components/fund-savings-details.php:129
+#: templates/components/fund-savings-details.php:134
+#: templates/components/fund-savings-details.php:139
+#: templates/components/fund-savings-details.php:148
+#: templates/components/fund-savings-details.php:158
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-stocks-details.php:60
 #: templates/components/fund-stocks-details.php:63
@@ -413,30 +441,35 @@ msgid " (in Estonian)"
 msgstr " "
 
 #: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-savings-details.php:110
 #: templates/components/fund-stocks-details.php:60
 #: templates/components/fund-third-details.php:60
 msgid "Model portfolio"
 msgstr "Mudelportfell"
 
 #: templates/components/fund-bonds-details.php:64
+#: templates/components/fund-savings-details.php:117
 #: templates/components/fund-stocks-details.php:63
 #: templates/components/fund-third-details.php:63
 msgid "Key Investor Information"
 msgstr "Põhiteave"
 
 #: templates/components/fund-bonds-details.php:67
+#: templates/components/fund-savings-details.php:123
 #: templates/components/fund-stocks-details.php:66
 #: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
 #: templates/components/fund-bonds-details.php:70
+#: templates/components/fund-savings-details.php:128
 #: templates/components/fund-stocks-details.php:69
 #: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
 #: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-savings-details.php:133
 #: templates/components/fund-stocks-details.php:72
 #: templates/components/fund-third-details.php:72
 msgid ""
@@ -447,48 +480,56 @@ msgstr ""
 "mittearvestamine"
 
 #: templates/components/fund-bonds-details.php:76
+#: templates/components/fund-savings-details.php:138
 #: templates/components/fund-stocks-details.php:75
 #: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
 #: templates/components/fund-bonds-details.php:80
+#: templates/components/fund-savings-details.php:143
 #: templates/components/fund-stocks-details.php:79
 #: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr "Aruanded"
 
 #: templates/components/fund-bonds-details.php:83
+#: templates/components/fund-savings-details.php:147
 #: templates/components/fund-stocks-details.php:82
 #: templates/components/fund-third-details.php:82
 msgid "Investment reports"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-savings-details.php:152
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:88
+#: templates/components/fund-savings-details.php:157
 #: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
 #: templates/components/fund-bonds-details.php:92
+#: templates/components/fund-savings-details.php:163
 #: templates/components/fund-stocks-details.php:91
 #: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
 #: templates/components/fund-bonds-details.php:94
+#: templates/components/fund-savings-details.php:165
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
 #: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-savings-details.php:166
 #: templates/components/fund-stocks-details.php:94
 #: templates/components/fund-third-details.php:94
 #, php-format
@@ -559,6 +600,10 @@ msgstr ""
 "investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London "
 "Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu "
 "Ülikoolis."
+
+#: templates/components/fund-savings-header.php:12
+msgid "Tuleva Savings Fund"
+msgstr "Tuleva täiendav kogumisfond"
 
 #: templates/components/fund-stocks-details.php:46
 #: templates/components/fund-third-details.php:46
@@ -732,8 +777,8 @@ msgstr ""
 "garantiiks."
 
 #: templates/components/modal-calculator.php:21
-#: templates/components/modal-payout-calculator.php:21
-#: templates/components/modal-second-pillar-payment-rate.php:21
+#: templates/components/modal-payout-calculator.php:20
+#: templates/components/modal-second-pillar-payment-rate.php:20
 msgid "Assumptions"
 msgstr "Mudeli eeldused"
 
@@ -987,46 +1032,28 @@ msgstr ""
 "keegi teine ei saa sulle tagada fondide tootlust."
 
 #: templates/components/modal-payout-calculator.php:17
-#: templates/components/modal-second-pillar-payment-rate.php:17
-msgid "In 2024, income tax rate is 20%."
-msgstr "2024. aastal on tulumaksumäär 20%."
-
-#: templates/components/modal-payout-calculator.php:18
-#: templates/components/modal-second-pillar-payment-rate.php:18
 msgid ""
-"In 2024, annual income up to 14 400 euros gives 7848 euros as annual basic "
-"exemption, if annual income increases from 14 400 euros to 25 200 euros, "
-"basic exemption decreases according to the following formula: 7848 – 7848 ÷ "
-"10 800 × (income amount – 14 400), if annual income is above 25 200 euros, "
-"basic exemption is 0."
+"In 2026, income tax rate is 22% and everyone has a flat tax-free income of "
+"700 euros per month (8400 euros per year)."
 msgstr ""
-"2024. aastal aastatuluga kuni 14 400 eurot on maksuvaba tulu aastas 7848 "
-"eurot; aastatulu kasvades 14 400 eurolt 25 200 euroni väheneb maksuvaba tulu "
-"vastavalt valemile 7848 – 7848 ÷ 10 800 × (tulu summa – 14 400); aastatuluga "
-"üle 25 200 euro on maksuvaba tulu 0."
+"Alates 2026. aastast on kõigil ühtlane maksuvaba tulu 700 € kuus (8400 € "
+"aastas), olenemata kogutulust."
 
-#: templates/components/modal-payout-calculator.php:24
-#: templates/components/modal-second-pillar-payment-rate.php:24
-msgid "2025 income tax rate"
-msgstr "2025. a tulumaksumäär"
+#: templates/components/modal-payout-calculator.php:23
+msgid "2026 income tax rate"
+msgstr "2026. a tulumaksumäär"
 
-#: templates/components/modal-payout-calculator.php:28
-#: templates/components/modal-second-pillar-payment-rate.php:28
-msgid "2025 basic exemption per month"
-msgstr "2025. a maksuvaba tulu kuus"
+#: templates/components/modal-payout-calculator.php:27
+msgid "2026 basic exemption per month"
+msgstr "2026. a maksuvaba tulu kuus"
 
-#: templates/components/modal-payout-calculator.php:29
-#: templates/components/modal-second-pillar-payment-rate.php:29
-msgid "up to 700 €"
-msgstr "kuni 700 €"
-
-#: templates/components/modal-payout-calculator.php:32
-#: templates/components/modal-second-pillar-payment-rate.php:32
+#: templates/components/modal-payout-calculator.php:31
+#: templates/components/modal-second-pillar-payment-rate.php:31
 msgid "Retirement age"
 msgstr "Pensioniiga"
 
-#: templates/components/modal-payout-calculator.php:33
-#: templates/components/modal-second-pillar-payment-rate.php:33
+#: templates/components/modal-payout-calculator.php:32
+#: templates/components/modal-second-pillar-payment-rate.php:32
 msgid "65 y/o"
 msgstr "65 a"
 
@@ -1370,6 +1397,20 @@ msgstr ""
 "bold\">mitme tuhande ärksa inimese tarkuses on jõud</span>, mida me alles "
 "õpime meie ühise kasu ja Eesti arengu nimel rakendama."
 
+#: templates/components/modal-second-pillar-payment-rate.php:17
+msgid ""
+"The calculator assumes an income tax rate of 22% and a flat tax-free income "
+"of 700 euros per month."
+msgstr "Eeldame, et tulumaks on 22% ja maksuvaba tulu 700 eurot kuus."
+
+#: templates/components/modal-second-pillar-payment-rate.php:23
+msgid "Income tax rate"
+msgstr "Tulumaksumäär"
+
+#: templates/components/modal-second-pillar-payment-rate.php:27
+msgid "Basic exemption per month"
+msgstr "Maksuvaba tulu kuus"
+
 #: templates/components/modal-security.php:12
 msgid "Is our money in Tuleva as protected as in bank’s pension fund?"
 msgstr ""
@@ -1513,12 +1554,14 @@ msgid "Monthly gross salary"
 msgstr "Brutopalk"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:41
-msgid "Net salary from 2026"
-msgstr "Netopalk alates 2026"
+msgid "Net salary from 2027"
+msgstr "Netopalk alates 2027"
 
 #: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "In 2026, income tax will be 22% and the tax-free allowance 700 euros."
-msgstr "2026. aastal on tulumaks 22% ja maksuvaba tulu 700 € kuus."
+msgid ""
+"Assuming income tax rate of 22% and tax-free allowance of 700 euros per "
+"month."
+msgstr "Eeldame, et tulumaks on 22% ja maksuvaba tulu 700 eurot kuus."
 
 #: templates/components/second-pillar-payment-rate-calculator.php:52
 msgid "Your monthly contribution"
@@ -1888,6 +1931,33 @@ msgstr "Tekstirida 3:"
 msgid "Text row 4:"
 msgstr "Tekstirida 4:"
 
+#~ msgid "In 2024, income tax rate is 20%."
+#~ msgstr "2024. aastal on tulumaksumäär 20%."
+
+#~ msgid ""
+#~ "In 2024, annual income up to 14 400 euros gives 7848 euros as annual "
+#~ "basic exemption, if annual income increases from 14 400 euros to 25 200 "
+#~ "euros, basic exemption decreases according to the following formula: 7848 "
+#~ "– 7848 ÷ 10 800 × (income amount – 14 400), if annual income is above 25 "
+#~ "200 euros, basic exemption is 0."
+#~ msgstr ""
+#~ "2024. aastal aastatuluga kuni 14 400 eurot on maksuvaba tulu aastas 7848 "
+#~ "eurot; aastatulu kasvades 14 400 eurolt 25 200 euroni väheneb maksuvaba "
+#~ "tulu vastavalt valemile 7848 – 7848 ÷ 10 800 × (tulu summa – 14 400); "
+#~ "aastatuluga üle 25 200 euro on maksuvaba tulu 0."
+
+#~ msgid "2025 income tax rate"
+#~ msgstr "2025. a tulumaksumäär"
+
+#~ msgid "2025 basic exemption per month"
+#~ msgstr "2025. a maksuvaba tulu kuus"
+
+#~ msgid "up to 700 €"
+#~ msgstr "kuni 700 €"
+
+#~ msgid "In 2026, income tax rate is 22%."
+#~ msgstr "2026. aastal on tulumaksumäär 22%."
+
 #~ msgid "Time remaining until November 30"
 #~ msgstr "Aega jäänud kuni 30. novembrini"
 
@@ -1938,9 +2008,6 @@ msgstr "Tekstirida 4:"
 
 #~ msgid "Apply now"
 #~ msgstr "Kandideeri kohale"
-
-#~ msgid "Fund details page"
-#~ msgstr "Fondi info"
 
 #~ msgid "Fund page"
 #~ msgstr "Fondide leht"

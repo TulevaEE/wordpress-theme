@@ -38,10 +38,10 @@
             <div class="d-flex align-items-center justify-content-between">
                 <div class="me-3">
                     <span
-                        class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2026', TEXT_DOMAIN); ?></span><span
+                        class="d-inline-block fs-6 lh-sm"><?php _e('Net salary from 2027', TEXT_DOMAIN); ?></span><span
                         class="inline-help d-inline-block"
                         role="button" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="<?php _e('In 2026, income tax will be 22% and the tax-free allowance 700 euros.', TEXT_DOMAIN); ?>"
+                        title="<?php _e('Assuming income tax rate of 22% and tax-free allowance of 700 euros per month.', TEXT_DOMAIN); ?>"
                     ></span>
                 </div>
                 <div id="netWage" class="lh-1 fw-medium text-nowrap text-success">1595 €</div>

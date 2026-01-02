@@ -121,14 +121,8 @@ $(document).ready(function ($) {
             return number;
         },
 
-        getTaxFreeWage = function (yearlyWage) {
-            if (yearlyWage < 14400) {
-                return 7848;
-            }
-            if (yearlyWage < 25200) {
-                return 7848 - 7848 / 10800 * (yearlyWage - 14400);
-            }
-            return 0;
+        getTaxFreeWage = function () {
+            return 8400;
         },
 
         calculateThirdPillarSavings = function () {
@@ -146,7 +140,7 @@ $(document).ready(function ($) {
 
             var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
-            var taxFreeWage = getTaxFreeWage(wage);
+            var taxFreeWage = getTaxFreeWage();
             var deductions = wageTotal * 0.036;
 
             var taxableWage = Math.max(
@@ -182,15 +176,6 @@ $(document).ready(function ($) {
 
             var incomeTaxRate = 0.22;
             var unemploymentInsurance = 0.016 * grossSalary;
-
-            // 2025
-            var yourSecondPillarContributionAt2Percent = 2 / 100 * grossSalary;
-            var taxFreeWage2025 = getTaxFreeWage(grossSalary * 12) / 12;
-            var incomeTax2025 =
-                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContributionAt2Percent - taxFreeWage2025) * incomeTaxRate, 0);
-            var netSalary2025 = grossSalary - unemploymentInsurance - yourSecondPillarContributionAt2Percent - incomeTax2025;
-
-            // 2026
             var taxFreeWage = 700;
             var incomeTax =
                 Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * incomeTaxRate, 0);
@@ -201,12 +186,6 @@ $(document).ready(function ($) {
 
             var monthlyTaxWin = Math.max((incomeTax0Percent - incomeTax), 0);
             var yearlyTaxWin = monthlyTaxWin * 12;
-
-            if (netSalary > netSalary2025) {
-                $calculator.find('#netWage').addClass('text-success');
-            } else {
-                $calculator.find('#netWage').removeClass('text-success');
-            }
 
             $calculator.find('#netWage').text(`${format(netSalary)} €`);
             $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
