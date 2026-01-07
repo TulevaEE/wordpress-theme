@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-02T15:00:11+00:00\n"
+"POT-Creation-Date: 2026-01-07T14:44:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -680,7 +680,7 @@ msgid "21yrs"
 msgstr ""
 
 #: templates/components/modal-founders.php:24
-msgid "Tõnu Pekk is an investor with 20 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva."
+msgid "Tõnu Pekk is an investor with 30 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva."
 msgstr ""
 
 #: templates/components/modal-founders.php:34

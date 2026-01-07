@@ -21,7 +21,7 @@
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Tõnu Pekk</h4>
-                                    <p><?php _e("Tõnu Pekk is an investor with 20 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva.", TEXT_DOMAIN) ?></p>
+                                    <p><?php _e("Tõnu Pekk is an investor with 30 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva.", TEXT_DOMAIN) ?></p>
                                 </div>
                             </div>
 
