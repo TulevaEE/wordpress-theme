@@ -22,10 +22,10 @@ $cta_button_url = get_field('cta_button_url');
                 <div class="proposal">
                     <div class="proposal__body">
                         <?php if ($fund_description): ?>
-                            <p class="mb-3"><?php echo wp_kses_post($fund_description); ?></p>
+                            <?php echo wp_kses_post($fund_description); ?>
                         <?php endif; ?>
                         <?php if ($fund_description_secondary): ?>
-                            <p class="m-0"><?php echo wp_kses_post($fund_description_secondary); ?></p>
+                            <?php echo wp_kses_post($fund_description_secondary); ?>
                         <?php endif; ?>
                     </div>
                     <?php if ($cta_button_text && $cta_button_url): ?>
