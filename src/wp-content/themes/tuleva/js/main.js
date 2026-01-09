@@ -125,20 +125,55 @@ $(document).ready(function ($) {
             return 8400;
         },
 
+        // Currency input handler - allows decimals with comma or period
+        handleCurrencyInput = function (input, options) {
+            options = options || {};
+            var max = options.max;
+            var euroRegex = /^\d+([.,]\d{0,2})?$/;
+            var $input = $(input);
+            var raw = $input.val();
+
+            if (raw === '') {
+                return;
+            }
+
+            if (!euroRegex.test(raw)) {
+                // Remove last character that made it invalid
+                $input.val(raw.slice(0, -1));
+                return;
+            }
+
+            var normalized = raw.replace(',', '.');
+            if (normalized !== raw) {
+                $input.val(normalized);
+            }
+
+            if (max !== undefined) {
+                var num = parseFloat(normalized);
+                if (!isNaN(num) && num > max) {
+                    $input.val(max.toFixed(2));
+                }
+            }
+        },
+
+        parseCurrencyValue = function (val, defaultValue) {
+            if (val === '' || val === undefined || val === null) {
+                return defaultValue;
+            }
+            var normalized = String(val).replace(',', '.');
+            var num = parseFloat(normalized);
+            return isNaN(num) ? defaultValue : num;
+        },
+
         calculateThirdPillarSavings = function () {
             var $calculator = $('.third-pillar-calculator');
-            var yearlyWage = parseInt($calculator.find('#yearlyWage').val());
-            var parsedYearlyWage = isNaN(yearlyWage) ? 24000 : yearlyWage;
-            var monthlyWage = parseInt($calculator.find('#monthlyWage').val());
-            monthlyWage = isNaN(monthlyWage) ? 2000 : monthlyWage;
-            var wageAddition = parseInt($calculator.find('#wageAddition').val());
-            wageAddition = isNaN(wageAddition) ? 0 : wageAddition;
-            var wageDeduction = parseInt($calculator.find('#wageDeduction').val());
-            wageDeduction = isNaN(wageDeduction) ? 0 : wageDeduction;
-            var taxReliefs = parseInt($calculator.find('#taxReliefs').val());
-            taxReliefs = isNaN(taxReliefs) ? 0 : taxReliefs;
+            var yearlyWage = parseCurrencyValue($calculator.find('#yearlyWage').val(), null);
+            var monthlyWage = parseCurrencyValue($calculator.find('#monthlyWage').val(), 2000);
+            var wageAddition = parseCurrencyValue($calculator.find('#wageAddition').val(), 0);
+            var wageDeduction = parseCurrencyValue($calculator.find('#wageDeduction').val(), 0);
+            var taxReliefs = parseCurrencyValue($calculator.find('#taxReliefs').val(), 0);
 
-            var wage = !isNaN(yearlyWage) ? parsedYearlyWage : monthlyWage * 12;
+            var wage = yearlyWage != null ? yearlyWage : monthlyWage * 12;
             var wageTotal = Math.max(wage - wageDeduction + wageAddition, 0);
             var taxFreeWage = getTaxFreeWage();
             var deductions = wageTotal * 0.036;
@@ -151,13 +186,19 @@ $(document).ready(function ($) {
             var savingsSum = yearlyAmount * incomeTaxRate;
 
             $calculator.find('#yearlyAmount').text(format(yearlyAmount));
-            $calculator.find('#monthlyAmount').text(format(monthlyAmount));
+            $calculator.find('#monthlyAmount').text(format(monthlyAmount))
+                .parent().attr('title', monthlyAmount.toFixed(2) + ' €');
             $calculator.find('#savingsSum').text(format(savingsSum));
         },
         initThirdPillarCalculator = function () {
             var $input = $('.third-pillar-calculator input');
-            $input.on('change', calculateThirdPillarSavings);
-            $input.on('keyup', calculateThirdPillarSavings);
+
+            $input.on('input', function () {
+                var max = $(this).attr('max') ? parseFloat($(this).attr('max')) : undefined;
+                handleCurrencyInput(this, { max: max });
+                calculateThirdPillarSavings();
+            });
+
             $input.closest('form').on('submit', function (ev) {
                 ev.preventDefault();
                 return false;

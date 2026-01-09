@@ -22,8 +22,8 @@ function get_translated_link()
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="yearlyWage" min="0" step="1"
-                                       placeholder="24000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <input type="text" class="form-control text-end" id="yearlyWage"
+                                       placeholder="24000" inputmode="decimal" autocomplete="off">
                                 <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             </div>
                         </div>
@@ -38,9 +38,8 @@ function get_translated_link()
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="wageDeduction"
-                                       inputmode="numeric" min="0" step="1" placeholder="0"
-                                       oninput="validity.valid||(value='');">
+                                <input type="text" class="form-control text-end" id="wageDeduction"
+                                       inputmode="decimal" placeholder="0" autocomplete="off">
                                 <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             </div>
                         </div>
@@ -55,9 +54,8 @@ function get_translated_link()
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="taxReliefs" min="0" max="1200"
-                                       step="1" placeholder="0" inputmode="numeric"
-                                       oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value !== '') this.value = Math.min(this.value, this.max);">
+                                <input type="text" class="form-control text-end" id="taxReliefs" max="1200"
+                                       placeholder="0" inputmode="decimal" autocomplete="off">
                                 <span class="input-group-text"><?php _e('&euro;/year', TEXT_DOMAIN); ?></span>
                             </div>
                         </div>
@@ -109,8 +107,8 @@ function get_translated_link()
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="monthlyWage" min="0" step="1"
-                                       placeholder="2000" inputmode="numeric" oninput="validity.valid||(value='');">
+                                <input type="text" class="form-control text-end" id="monthlyWage"
+                                       placeholder="2000" inputmode="decimal" autocomplete="off">
                                 <span class="input-group-text" style="min-width: 110px">
                                     <?php _e('&euro;/month', TEXT_DOMAIN); ?>
                                 </span>
@@ -127,8 +125,8 @@ function get_translated_link()
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
-                                <input type="number" class="form-control text-end" id="wageAddition" inputmode="numeric"
-                                       min="0" step="1" placeholder="0" oninput="validity.valid||(value='');">
+                                <input type="text" class="form-control text-end" id="wageAddition"
+                                       inputmode="decimal" placeholder="0" autocomplete="off">
                                 <span class="input-group-text" style="min-width: 110px">
                                     <?php _e('&euro;/year', TEXT_DOMAIN); ?>
                                 </span>

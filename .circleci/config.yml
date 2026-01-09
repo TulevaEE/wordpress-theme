@@ -2,25 +2,41 @@ version: 2.1
 jobs:
     test:
         docker:
-            - image: cimg/php:8.4
+            - image: cimg/php:8.4-node
         steps:
             - checkout
             - restore_cache:
                   keys:
                       - composer-v1-{{ checksum "src/wp-content/themes/tuleva/composer.lock" }}
                       - composer-v1-
+            - restore_cache:
+                  keys:
+                      - npm-v1-{{ checksum "src/wp-content/themes/tuleva/package-lock.json" }}
+                      - npm-v1-
             - run:
-                  name: Install dependencies
+                  name: Install PHP dependencies
                   working_directory: src/wp-content/themes/tuleva
                   command: composer install --no-interaction --prefer-dist
+            - run:
+                  name: Install npm dependencies
+                  working_directory: src/wp-content/themes/tuleva
+                  command: npm ci
             - save_cache:
                   key: composer-v1-{{ checksum "src/wp-content/themes/tuleva/composer.lock" }}
                   paths:
                       - src/wp-content/themes/tuleva/vendor
+            - save_cache:
+                  key: npm-v1-{{ checksum "src/wp-content/themes/tuleva/package-lock.json" }}
+                  paths:
+                      - src/wp-content/themes/tuleva/node_modules
             - run:
-                  name: Run tests
+                  name: Run PHP tests
                   working_directory: src/wp-content/themes/tuleva
                   command: composer test
+            - run:
+                  name: Run JavaScript tests
+                  working_directory: src/wp-content/themes/tuleva
+                  command: npm test
 
     deploy:
         docker:
@@ -37,9 +53,13 @@ jobs:
                       rsync -avz --checksum --delete \
                         --exclude='tests/' \
                         --exclude='vendor/' \
+                        --exclude='node_modules/' \
                         --exclude='composer.json' \
                         --exclude='composer.lock' \
+                        --exclude='package.json' \
+                        --exclude='package-lock.json' \
                         --exclude='phpunit.xml' \
+                        --exclude='*.spec.js' \
                         -e "ssh -o StrictHostKeyChecking=no" \
                         ./src/wp-content/themes/tuleva/ \
                         virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
