@@ -239,6 +239,17 @@ acf_add_local_field_group(array (
             'mime_types' => 'pdf',
         ),
         array (
+            'key' => 'field_fund_savings_investor_rights',
+            'label' => 'Summary of Investor Rights',
+            'name' => 'investor_rights_file',
+            'type' => 'file',
+            'instructions' => 'Select the investor rights summary PDF from media library',
+            'required' => 0,
+            'return_format' => 'url',
+            'library' => 'all',
+            'mime_types' => 'pdf',
+        ),
+        array (
             'key' => 'field_fund_savings_investment_report',
             'label' => 'Investment Report',
             'name' => 'investment_report_file',

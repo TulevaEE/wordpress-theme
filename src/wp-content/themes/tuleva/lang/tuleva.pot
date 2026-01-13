@@ -1,28 +1,19 @@
 # Copyright (C) 2026 
-# This file is distributed under the same license as the Tuleva theme.
+# This file is distributed under the same license as the Tuleva package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-01-13 13:01:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-07T14:48:12+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
-#. Theme Name of the theme
-#: style.css
-msgid "Tuleva"
-msgstr ""
-
-#: functions.php:25
-#: helpers/acf/init.php:19
-#: helpers/post-types/init.php:9
+#: functions.php:25 helpers/acf/init.php:19 helpers/post-types/init.php:9
 #: widgets/init.php:15
-#, php-format
 msgid "Error locating %s for inclusion"
 msgstr ""
 
@@ -30,8 +21,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: helpers/extras.php:479
-#: helpers/extras.php:490
+#: helpers/extras.php:479 helpers/extras.php:490
 #: templates/components/countdown-timer.php:22
 #: templates/components/counter-hero.php:26
 msgid "days"
@@ -53,56 +43,8 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#. Template Name of the theme
-msgid "Blog front page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Contact page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Front page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Fund bonds page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Fund savings page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Fund stocks page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Fund third page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "General page"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Instructions — Step 1"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Jobs"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Mutual company page"
-msgstr ""
-
 #: searchform.php:2
 msgid "Search blog"
-msgstr ""
-
-#: searchform.php:5
-msgid "Search"
 msgstr ""
 
 #: templates/404.php:5
@@ -124,19 +66,25 @@ msgstr ""
 #: templates/components/calculator-cta.php:25
 #: templates/components/cta-change.php:13
 #: templates/components/front-hero.php:23
-msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
+msgid ""
+"The deadline for this fund exchange period is <b>March 31.</b> Switching "
+"funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:27
 #: templates/components/cta-change.php:15
 #: templates/components/front-hero.php:25
-msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
+msgid ""
+"The deadline for this fund exchange period is <b>July 31.</b> Switching "
+"funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/calculator-cta.php:29
 #: templates/components/cta-change.php:17
 #: templates/components/front-hero.php:27
-msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
+msgid ""
+"The deadline for this fund exchange period is <b>November 30.</b> Switching "
+"funds is <b>free.</b>"
 msgstr ""
 
 #: templates/components/countdown-timer.php:11
@@ -160,7 +108,6 @@ msgid "minutes"
 msgstr ""
 
 #: templates/components/counter-hero.php:15
-#, php-format
 msgid "Time remaining until %s"
 msgstr ""
 
@@ -178,12 +125,12 @@ msgid "years"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:23
-#: templates/components/third-pillar-calculator.php:104
+#: templates/components/third-pillar-calculator.php:102
 msgid "Gross salary"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:31
-#: templates/components/third-pillar-calculator.php:115
+#: templates/components/third-pillar-calculator.php:113
 msgid "&euro;/month"
 msgstr ""
 
@@ -200,7 +147,9 @@ msgid "Expected annual return"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:64
-msgid "Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return."
+msgid ""
+"Actual amounts depend greatly on the rate of return, and neither we nor "
+"anyone else can guarantee you a specific return."
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:72
@@ -221,15 +170,23 @@ msgid "Could accumulate by age 65"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:93
-msgid "We assume you started saving for your retirement at the age of 21 and a salary growth of 3% per year. The ‘Estonian average II pillar fund’ represents all II pillar funds collectively. We display its fee as a weighted average based on volume."
+msgid ""
+"We assume you started saving for your retirement at the age of 21 and a "
+"salary growth of 3% per year. The ‘Estonian average II pillar fund’ "
+"represents all II pillar funds collectively. We display its fee as a "
+"weighted average based on volume."
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:103
-msgid "You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</strong> in fees"
+msgid ""
+"You pay <strong class=\"text-danger text-nowrap\"><span class=\"tuleva-"
+"saving\">- €</span> more</strong> in fees"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:106
-msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</span> in fees"
+msgid ""
+"You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
+"more</span> in fees"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:109
@@ -238,7 +195,9 @@ msgid "You pay in fees"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:112
-msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> less</span> in fees"
+msgid ""
+"You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> "
+"less</span> in fees"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:115
@@ -255,21 +214,21 @@ msgid "0.29% per year"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:7
-#: templates/components/fund-savings-details.php:28
+#: templates/components/fund-savings-details.php:30
 #: templates/components/fund-stocks-details.php:7
 #: templates/components/fund-third-details.php:7
 msgid "Fund details"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:13
-#: templates/components/fund-savings-details.php:36
+#: templates/components/fund-savings-details.php:38
 #: templates/components/fund-stocks-details.php:13
 #: templates/components/fund-third-details.php:13
 msgid "Currency"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:17
-#: templates/components/fund-savings-details.php:41
+#: templates/components/fund-savings-details.php:43
 #: templates/components/fund-stocks-details.php:17
 #: templates/components/fund-third-details.php:17
 msgid "Date of inception"
@@ -281,49 +240,49 @@ msgid "27 March 2017"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:21
-#: templates/components/fund-savings-details.php:46
+#: templates/components/fund-savings-details.php:48
 #: templates/components/fund-stocks-details.php:21
 #: templates/components/fund-third-details.php:21
 msgid "Fund volume"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:29
-#: templates/components/fund-savings-details.php:55
+#: templates/components/fund-savings-details.php:57
 #: templates/components/fund-stocks-details.php:29
 #: templates/components/fund-third-details.php:29
 msgid "Management fee"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:33
-#: templates/components/fund-savings-details.php:61
+#: templates/components/fund-savings-details.php:63
 #: templates/components/fund-stocks-details.php:33
 #: templates/components/fund-third-details.php:33
 msgid "Ongoing charges"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:37
-#: templates/components/fund-savings-details.php:67
+#: templates/components/fund-savings-details.php:69
 #: templates/components/fund-stocks-details.php:37
 #: templates/components/fund-third-details.php:37
 msgid "Redemption fee and issue fee"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:41
-#: templates/components/fund-savings-details.php:73
+#: templates/components/fund-savings-details.php:75
 #: templates/components/fund-stocks-details.php:41
 #: templates/components/fund-third-details.php:41
 msgid "Fund manager's participation rate in fund"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:42
-#: templates/components/fund-savings-details.php:74
+#: templates/components/fund-savings-details.php:76
 #: templates/components/fund-stocks-details.php:42
 #: templates/components/fund-third-details.php:42
 msgid "units"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:45
-#: templates/components/fund-savings-details.php:79
+#: templates/components/fund-savings-details.php:81
 #: templates/components/fund-stocks-details.php:45
 #: templates/components/fund-third-details.php:45
 msgid "Risk profile"
@@ -334,35 +293,35 @@ msgid "Conservative"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:49
-#: templates/components/fund-savings-details.php:85
+#: templates/components/fund-savings-details.php:87
 #: templates/components/fund-stocks-details.php:49
 #: templates/components/fund-third-details.php:49
 msgid "Comparison index"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:55
-#: templates/components/fund-savings-details.php:91
+#: templates/components/fund-savings-details.php:93
 #: templates/components/fund-stocks-details.php:54
 #: templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:97
+#: templates/components/fund-savings-details.php:99
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:99
+#: templates/components/fund-savings-details.php:101
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid " and "
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:102
+#: templates/components/fund-savings-details.php:104
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
@@ -377,15 +336,16 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-bonds-details.php:83
 #: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:104
-#: templates/components/fund-savings-details.php:111
-#: templates/components/fund-savings-details.php:118
-#: templates/components/fund-savings-details.php:124
-#: templates/components/fund-savings-details.php:129
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:139
-#: templates/components/fund-savings-details.php:148
-#: templates/components/fund-savings-details.php:158
+#: templates/components/fund-savings-details.php:106
+#: templates/components/fund-savings-details.php:113
+#: templates/components/fund-savings-details.php:120
+#: templates/components/fund-savings-details.php:126
+#: templates/components/fund-savings-details.php:131
+#: templates/components/fund-savings-details.php:136
+#: templates/components/fund-savings-details.php:141
+#: templates/components/fund-savings-details.php:147
+#: templates/components/fund-savings-details.php:157
+#: templates/components/fund-savings-details.php:167
 #: templates/components/fund-stocks-details.php:57
 #: templates/components/fund-stocks-details.php:60
 #: templates/components/fund-stocks-details.php:63
@@ -408,94 +368,95 @@ msgid " (in Estonian)"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-savings-details.php:110
+#: templates/components/fund-savings-details.php:112
 #: templates/components/fund-stocks-details.php:60
 #: templates/components/fund-third-details.php:60
 msgid "Model portfolio"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-savings-details.php:117
+#: templates/components/fund-savings-details.php:119
 #: templates/components/fund-stocks-details.php:63
 #: templates/components/fund-third-details.php:63
 msgid "Key Investor Information"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-savings-details.php:123
+#: templates/components/fund-savings-details.php:125
 #: templates/components/fund-stocks-details.php:66
 #: templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-savings-details.php:128
+#: templates/components/fund-savings-details.php:130
 #: templates/components/fund-stocks-details.php:69
 #: templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-savings-details.php:133
+#: templates/components/fund-savings-details.php:135
 #: templates/components/fund-stocks-details.php:72
 #: templates/components/fund-third-details.php:72
-msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
+msgid ""
+"Non-consideration of adverse impacts of investment decisions on "
+"sustainability factors"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-savings-details.php:138
+#: templates/components/fund-savings-details.php:140
 #: templates/components/fund-stocks-details.php:75
 #: templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-savings-details.php:143
+#: templates/components/fund-savings-details.php:152
 #: templates/components/fund-stocks-details.php:79
 #: templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-savings-details.php:147
+#: templates/components/fund-savings-details.php:156
 #: templates/components/fund-stocks-details.php:82
 #: templates/components/fund-third-details.php:82
 msgid "Investment reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-savings-details.php:152
+#: templates/components/fund-savings-details.php:161
 #: templates/components/fund-stocks-details.php:84
 #: templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:157
+#: templates/components/fund-savings-details.php:166
 #: templates/components/fund-stocks-details.php:87
 #: templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:92
-#: templates/components/fund-savings-details.php:163
+#: templates/components/fund-savings-details.php:172
 #: templates/components/fund-stocks-details.php:91
 #: templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:94
-#: templates/components/fund-savings-details.php:165
+#: templates/components/fund-savings-details.php:174
 #: templates/components/fund-stocks-details.php:93
 #: templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:95
-#: templates/components/fund-savings-details.php:166
+#: templates/components/fund-savings-details.php:175
 #: templates/components/fund-stocks-details.php:94
 #: templates/components/fund-third-details.php:94
-#, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr ""
 
@@ -504,15 +465,22 @@ msgid "Tuleva World Bonds Pension Fund"
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:17
-msgid "<strong>A conservative index fund that invests entirely in low-risk bonds.</strong> Lower risk also means lower returns compared to the stock fund. It is impossible to combine low risk with high returns."
+msgid ""
+"<strong>A conservative index fund that invests entirely in low-risk bonds.</"
+"strong> Lower risk also means lower returns compared to the stock fund. "
+"It is impossible to combine low risk with high returns."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:18
-msgid "Suitable for you if you plan to withdraw your entire II pillar within the next 5 years and are willing to give up returns for security."
+msgid ""
+"Suitable for you if you plan to withdraw your entire II pillar within the "
+"next 5 years and are willing to give up returns for security."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:21
-msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-bonds\">Select this fund</a>"
+msgid ""
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" "
+"data-label=\"fund-details-choose-bonds\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-manager.php:8
@@ -520,11 +488,26 @@ msgid "fund manager"
 msgstr ""
 
 #: templates/components/fund-manager.php:13
-msgid "I follow the principle of Jack Bogle, the founder of Vanguard index funds: keep the investment in a low-cost fund and “don’t peek” – keep the end goal in sight and don’t spend time or money worrying about small fluctuations. I waited for a long time for someone to set up this kind of fund in Estonia. We finally had to take matters into our own hands."
+msgid ""
+"I follow the principle of Jack Bogle, the founder of Vanguard index funds: "
+"keep the investment in a low-cost fund and “don’t peek” – keep the end goal "
+"in sight and don’t spend time or money worrying about small fluctuations. I "
+"waited for a long time for someone to set up this kind of fund in Estonia. "
+"We finally had to take matters into our own hands."
 msgstr ""
 
 #: templates/components/fund-manager.php:15
-msgid "Tõnu has been working in the investment field for over 30 years. Before founding Tuleva, he headed an investment company he part-owned, Karu Capital. Before that, Tõnu ran Eastern European financial sector development projects at the European Bank for Reconstruction and Development and worked as head of investment banking at Hansabank. He holds a master’s degree from London Business School-and a bachelor’s degree from the University of Tartu."
+msgid ""
+"Tõnu has been working in the investment field for over 30 years. Before "
+"founding Tuleva, he headed an investment company he part-owned, Karu "
+"Capital. Before that, Tõnu ran Eastern European financial sector development "
+"projects at the European Bank for Reconstruction and Development and worked "
+"as head of investment banking at Hansabank. He holds a master’s degree from "
+"London Business School-and a bachelor’s degree from the University of Tartu."
+msgstr ""
+
+#: templates/components/fund-savings-details.php:146
+msgid "Summary of Investor Rights"
 msgstr ""
 
 #: templates/components/fund-savings-header.php:12
@@ -537,11 +520,17 @@ msgid "Aggressive"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:17
-msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply. However, projected long-term returns are nevertheless significantly higher than for the bond fund."
+msgid ""
+"<strong>A low-cost index fund that invests entirely in stocks.</strong> "
+"The annual returns of this fund can vary sharply. However, projected long-"
+"term returns are nevertheless significantly higher than for the bond fund."
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:18
-msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire II pillar within the next 5 years."
+msgid ""
+"Suitable for you if you want to achieve <strong>the best long-term returns</"
+"strong> and do not plan to withdraw your entire II pillar within the next "
+"5 years."
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:23
@@ -549,7 +538,9 @@ msgid "of Tuleva II pillar investors’ choice"
 msgstr ""
 
 #: templates/components/fund-stocks-header.php:25
-msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
+msgid ""
+"<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" "
+"data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
 #: templates/components/fund-third-details.php:18
@@ -561,11 +552,17 @@ msgid "Tuleva III Pillar Pension Fund"
 msgstr ""
 
 #: templates/components/fund-third-header.php:17
-msgid "<strong>A low-cost index fund that invests entirely in stocks.</strong> The annual returns of this fund can vary sharply, yet without consciously taking risks, achieving high returns is impossible."
+msgid ""
+"<strong>A low-cost index fund that invests entirely in stocks.</strong> "
+"The annual returns of this fund can vary sharply, yet without consciously "
+"taking risks, achieving high returns is impossible."
 msgstr ""
 
 #: templates/components/fund-third-header.php:18
-msgid "Suitable for you if you want to achieve <strong>the best long-term returns</strong> and do not plan to withdraw your entire III pillar within the next 5 years."
+msgid ""
+"Suitable for you if you want to achieve <strong>the best long-term returns</"
+"strong> and do not plan to withdraw your entire III pillar within the next "
+"5 years."
 msgstr ""
 
 #: templates/components/fund-third-header.php:21
@@ -634,8 +631,7 @@ msgstr ""
 #: templates/components/modal-question-rights.php:3
 #: templates/components/modal-question-vote.php:3
 #: templates/components/modal-second-pillar-payment-rate.php:3
-#: templates/components/modal-security.php:3
-#: templates/components/modal.php:5
+#: templates/components/modal-security.php:3 templates/components/modal.php:5
 msgid "Close"
 msgstr ""
 
@@ -646,15 +642,24 @@ msgid "How does the calculator work?"
 msgstr ""
 
 #: templates/components/modal-calculator.php:16
-msgid "The world's leading analysts have determined that fees are the surest predictor of returns: the lower the fees, the better prospects for growth. (And higher fees correlate with poorer results.)"
+msgid ""
+"The world's leading analysts have determined that fees are the surest "
+"predictor of returns: the lower the fees, the better prospects for growth. "
+"(And higher fees correlate with poorer results.)"
 msgstr ""
 
 #: templates/components/modal-calculator.php:17
-msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 5% annual return."
+msgid ""
+"Expected returns depend greatly on the evolving rate of return, and neither "
+"we nor anyone else are able to guarantee a 5% annual return."
 msgstr ""
 
 #: templates/components/modal-calculator.php:18
-msgid "In a low-cost index fund your assets grow hand-in-hand with the average returns of world markets. Low-cost index funds have outperformed Estonian pension funds every year to date, but past performance is no guarantee of future performance."
+msgid ""
+"In a low-cost index fund your assets grow hand-in-hand with the average "
+"returns of world markets. Low-cost index funds have outperformed Estonian "
+"pension funds every year to date, but past performance is no guarantee of "
+"future performance."
 msgstr ""
 
 #: templates/components/modal-calculator.php:21
@@ -680,100 +685,173 @@ msgid "21yrs"
 msgstr ""
 
 #: templates/components/modal-founders.php:24
-msgid "Tõnu Pekk is an investor with 30 years of experience, a good deal of it from the international financial sector. Having led development projects and managed investments, he is currently fund manager at Tuleva."
+msgid ""
+"Tõnu Pekk is an investor with 30 years of experience, a good deal of it from "
+"the international financial sector. Having led development projects and "
+"managed investments, he is currently fund manager at Tuleva."
 msgstr ""
 
 #: templates/components/modal-founders.php:34
-msgid "Priit Lepasepp's everyday work is aimed at increasing renewable energy generation, and he also serves as one of Tuleva’s legal advisers."
+msgid ""
+"Priit Lepasepp's everyday work is aimed at increasing renewable energy "
+"generation, and he also serves as one of Tuleva’s legal advisers."
 msgstr ""
 
 #: templates/components/modal-founders.php:44
-msgid "Indrek Neivelt is the founder of Pocopay. He has been in a leading role at Hansabank and other large financial institutions in previous decades, and is now putting his knowledge to work for developing better, simpler payment solutions."
+msgid ""
+"Indrek Neivelt is the founder of Pocopay. He has been in a leading role at "
+"Hansabank and other large financial institutions in previous decades, and is "
+"now putting his knowledge to work for developing better, simpler payment "
+"solutions."
 msgstr ""
 
 #: templates/components/modal-founders.php:54
-msgid "Daniel Vaarik has dedicated his career to ensuring that people get clearer and better information they need for making important decisions. He is currently a partner at Akkadian communication agency."
+msgid ""
+"Daniel Vaarik has dedicated his career to ensuring that people get clearer "
+"and better information they need for making important decisions. He is "
+"currently a partner at Akkadian communication agency."
 msgstr ""
 
 #: templates/components/modal-founders.php:64
-msgid "Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in the financial sector, Kristo is helping to lead a revolution in the way money is moved, making currency exchange easier, clearer and more transparent all around the world."
+msgid ""
+"Kristo Käärmann is a co-founder of Wise. Having witnessed inefficiency in "
+"the financial sector, Kristo is helping to lead a revolution in the way "
+"money is moved, making currency exchange easier, clearer and more "
+"transparent all around the world."
 msgstr ""
 
 #: templates/components/modal-founders.php:74
-msgid "Mall Hellam is the director of Open Estonia Fund. Mall’s activities are aimed toward making Estonia more open and tolerant, fostering serious discussion on key questions and building a robust civil society."
+msgid ""
+"Mall Hellam is the director of Open Estonia Fund. Mall’s activities are "
+"aimed toward making Estonia more open and tolerant, fostering serious "
+"discussion on key questions and building a robust civil society."
 msgstr ""
 
 #: templates/components/modal-founders.php:84
-msgid "Kirsti Pent is a partner with FORT law offices. Kirsti specializes in financial regulations, helping clients develop clear, specific solutions for financial transactions. She is also one of Tuleva’s legal advisers."
+msgid ""
+"Kirsti Pent is a partner with FORT law offices. Kirsti specializes in "
+"financial regulations, helping clients develop clear, specific solutions for "
+"financial transactions. She is also one of Tuleva’s legal advisers."
 msgstr ""
 
 #: templates/components/modal-founders.php:94
-msgid "Indrek Kasela is an entrepreneur and investor. Indrek has longstanding experience in large corporations and has also been busy developing the cultural sphere."
+msgid ""
+"Indrek Kasela is an entrepreneur and investor. Indrek has longstanding "
+"experience in large corporations and has also been busy developing the "
+"cultural sphere."
 msgstr ""
 
 #: templates/components/modal-founders.php:104
-msgid "Annika Uudelepp is a civil society and governance expert with the Praxis think tank, and has long been spotlighting and helping to address issues of concern in Estonian society."
+msgid ""
+"Annika Uudelepp is a civil society and governance expert with the Praxis "
+"think tank, and has long been spotlighting and helping to address issues of "
+"concern in Estonian society."
 msgstr ""
 
 #: templates/components/modal-founders.php:114
-msgid "Henrik Karmo is an investor with a broad set of experiences in building various investment companies and developing investment strategies."
+msgid ""
+"Henrik Karmo is an investor with a broad set of experiences in building "
+"various investment companies and developing investment strategies."
 msgstr ""
 
 #: templates/components/modal-founders.php:124
-msgid "Taavi Lepmets is an investor. Since the 1990s, Taavi has been investing into early-phase technologies, and is still on the lookout for new avenues today. "
+msgid ""
+"Taavi Lepmets is an investor. Since the 1990s, Taavi has been investing into "
+"early-phase technologies, and is still on the lookout for new avenues today. "
 msgstr ""
 
 #: templates/components/modal-founders.php:134
-msgid "Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear and transparent solutions and is helping to make money transfers and currency exchange easier and more convenient for everyone."
+msgid ""
+"Taavet Hinrikus is a co-founder of Wise. Taavet believes in simple, clear "
+"and transparent solutions and is helping to make money transfers and "
+"currency exchange easier and more convenient for everyone."
 msgstr ""
 
 #: templates/components/modal-founders.php:144
-msgid "Loit Linnupõld is the founder of Crowdestate. Boasting longstanding experiences in the financial sector, he is helping to bring investors and real estate developers together to develop Estonian investor culture and develop access to capital."
+msgid ""
+"Loit Linnupõld is the founder of Crowdestate. Boasting longstanding "
+"experiences in the financial sector, he is helping to bring investors and "
+"real estate developers together to develop Estonian investor culture and "
+"develop access to capital."
 msgstr ""
 
 #: templates/components/modal-founders.php:154
-msgid "Veljo Otsason is a co-founder of Fortumo and Mobi and an angel investor in more than 15 companies. Veljo’s passion is new technologies: his companies help create better wireless services and payment and authentication systems. "
+msgid ""
+"Veljo Otsason is a co-founder of Fortumo and Mobi and an angel investor in "
+"more than 15 companies. Veljo’s passion is new technologies: his companies "
+"help create better wireless services and payment and authentication systems. "
 msgstr ""
 
 #: templates/components/modal-founders.php:164
-msgid "Rain Rannu is a technology entrepreneur and investor, and a founder of Fortumo and Mobi. Rain’s passion is enterprise and developing new ideas, and likes projects that would not exist without him."
+msgid ""
+"Rain Rannu is a technology entrepreneur and investor, and a founder of "
+"Fortumo and Mobi. Rain’s passion is enterprise and developing new ideas, and "
+"likes projects that would not exist without him."
 msgstr ""
 
 #: templates/components/modal-founders.php:174
-msgid "Sandor Liive’s passion lies in the energy sector. Sandor served as CEO of the state energy company Eesti Energia for many years and now is engaged in developing new solutions in the energy sector."
+msgid ""
+"Sandor Liive’s passion lies in the energy sector. Sandor served as CEO of "
+"the state energy company Eesti Energia for many years and now is engaged in "
+"developing new solutions in the energy sector."
 msgstr ""
 
 #: templates/components/modal-founders.php:184
-msgid "Heikko Mäe is an auditor with a passion for getting things done in a meticulous manner. Heikko shared his knowledge and experience in creating Tuleva funds"
+msgid ""
+"Heikko Mäe is an auditor with a passion for getting things done in a "
+"meticulous manner. Heikko shared his knowledge and experience in creating "
+"Tuleva funds"
 msgstr ""
 
 #: templates/components/modal-founders.php:194
-msgid "Gerd Laub is a legal adviser at Funderbeam. With a background in law, he specializes in providing consultation to financial companies and helps to solve complicated problems in the financial technology sector."
+msgid ""
+"Gerd Laub is a legal adviser at Funderbeam. With a background in law, he "
+"specializes in providing consultation to financial companies and helps to "
+"solve complicated problems in the financial technology sector."
 msgstr ""
 
 #: templates/components/modal-founders.php:204
-msgid "Triinu Tombak provides financial and business advisory services. She currently serves on the supervisory boards of the power utility AS Harju Elekter and the think tank Praxis."
+msgid ""
+"Triinu Tombak provides financial and business advisory services. She "
+"currently serves on the supervisory boards of the power utility AS Harju "
+"Elekter and the think tank Praxis."
 msgstr ""
 
 #: templates/components/modal-founders.php:214
-msgid "Kadi Lambot is a doctor who has served as CEO of a number of large enterprises. Kadi believes that the medical system needs comprehensive, user-friendly solutions and works to that end as member of the supervisory board of the Cancer Society, Healthy Estonia Foundation, and Tartu University Foundation."
+msgid ""
+"Kadi Lambot is a doctor who has served as CEO of a number of large "
+"enterprises. Kadi believes that the medical system needs comprehensive, user-"
+"friendly solutions and works to that end as member of the supervisory board "
+"of the Cancer Society, Healthy Estonia Foundation, and Tartu University "
+"Foundation."
 msgstr ""
 
 #: templates/components/modal-founders.php:224
-msgid "Allan Kaldoja is an entrepreneur. His passion is developing CSOs. As supervisory board chairman, he was instrumental in getting SA Vaba Lava (Open Stage Foundation) off the ground."
+msgid ""
+"Allan Kaldoja is an entrepreneur. His passion is developing CSOs. As "
+"supervisory board chairman, he was instrumental in getting SA Vaba Lava "
+"(Open Stage Foundation) off the ground."
 msgstr ""
 
 #: templates/components/modal-founders.php:234
-msgid "Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which translates as a primer on how to get rich. Jaak devotes his time to making Estonians financially savvier, so they could make better financial decisions and enjoy a better life."
+msgid ""
+"Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which "
+"translates as a primer on how to get rich. Jaak devotes his time to making "
+"Estonians financially savvier, so they could make better financial decisions "
+"and enjoy a better life."
 msgstr ""
 
 #: templates/components/modal-payout-calculator.php:16
 #: templates/components/modal-second-pillar-payment-rate.php:16
-msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 7% annual return."
+msgid ""
+"Expected returns depend greatly on the evolving rate of return, and neither "
+"we nor anyone else are able to guarantee a 7% annual return."
 msgstr ""
 
 #: templates/components/modal-payout-calculator.php:17
-msgid "In 2026, income tax rate is 22% and everyone has a flat tax-free income of 700 euros per month (8400 euros per year)."
+msgid ""
+"In 2026, income tax rate is 22% and everyone has a flat tax-free income of "
+"700 euros per month (8400 euros per year)."
 msgstr ""
 
 #: templates/components/modal-payout-calculator.php:23
@@ -799,35 +877,58 @@ msgid "How do we use membership fees?"
 msgstr ""
 
 #: templates/components/modal-question-fee.php:14
-msgid "Membership fees are used to develop the Association and to represent the interests of members. The fees of our first members were used to raise the fund's initial capital, introduce Tuleva to the general public, and make preparations to start the fund, including application for an activity license from the Financial Inspectorate. From this point forward, membership fees will be used for the following activities:"
+msgid ""
+"Membership fees are used to develop the Association and to represent the "
+"interests of members. The fees of our first members were used to raise the "
+"fund's initial capital, introduce Tuleva to the general public, and make "
+"preparations to start the fund, including application for an activity "
+"license from the Financial Inspectorate. From this point forward, membership "
+"fees will be used for the following activities:"
 msgstr ""
 
 #: templates/components/modal-question-fee.php:15
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Membership community management and communication</li>\n"
-"                            <li>Development of Tuleva’s web page, blog, and other informational channels</li>\n"
-"                            <li>The creation of proposals and influence analysis to improve the Estonian pension system, in cooperation with the Ministry of Finance and other state organizations</li>\n"
+"                            <li>Membership community management and "
+"communication</li>\n"
+"                            <li>Development of Tuleva’s web page, blog, and "
+"other informational channels</li>\n"
+"                            <li>The creation of proposals and influence "
+"analysis to improve the Estonian pension system, in cooperation with the "
+"Ministry of Finance and other state organizations</li>\n"
 "                            <li>Development of Tuleva’s IT systems</li>\n"
-"                            <li>Preparation and analysis of voluntary savings products and Third Pillar options</li>\n"
+"                            <li>Preparation and analysis of voluntary "
+"savings products and Third Pillar options</li>\n"
 "                        </ul>"
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:12
-msgid "Your joining fee helps to bring well thought ideas with big impact to decision-makers."
+msgid ""
+"Your joining fee helps to bring well thought ideas with big impact to "
+"decision-makers."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:14
-msgid "Every euro saved gives a Swede almost a third higher pension than the same amount saved by Estonians. Estonia needs a smarter and measurable pension strategy."
+msgid ""
+"Every euro saved gives a Swede almost a third higher pension than the same "
+"amount saved by Estonians. Estonia needs a smarter and measurable pension "
+"strategy."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:16
-msgid "As the first and only association representing pension savers, Tuleva is a credible partner for Ministry of Finance and state legislative bodies. We participate in pension strategy discussions, where next to the officials only banks and insurance companies used to be represented."
+msgid ""
+"As the first and only association representing pension savers, Tuleva is a "
+"credible partner for Ministry of Finance and state legislative bodies. We "
+"participate in pension strategy discussions, where next to the officials "
+"only banks and insurance companies used to be represented."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:18
-msgid "<span class=\"text-highlight text-bold\">We help to make better laws</span>. The laws that protect the people. The laws that maximize our profits from our, not banks’ savings."
+msgid ""
+"<span class=\"text-highlight text-bold\">We help to make better laws</span>. "
+"The laws that protect the people. The laws that maximize our profits from "
+"our, not banks’ savings."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:20
@@ -835,15 +936,24 @@ msgid "We have our first achievements. For example"
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:23
-msgid "On Tuleva’s initiative, <span class=\"text-highlight text-bold\">people in Estonia saved only during last year 1.5 million euros</span>, because the fund managers are no longer allowed to charge high fees for changing the pension fund."
+msgid ""
+"On Tuleva’s initiative, <span class=\"text-highlight text-bold\">people in "
+"Estonia saved only during last year 1.5 million euros</span>, because the "
+"fund managers are no longer allowed to charge high fees for changing the "
+"pension fund."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:24
-msgid "<span class=\"text-highlight text-bold\">We sent a petition to parliament, signed by 2300 people</span>, that proposes to reform how people can use their II pillar savings."
+msgid ""
+"<span class=\"text-highlight text-bold\">We sent a petition to parliament, "
+"signed by 2300 people</span>, that proposes to reform how people can use "
+"their II pillar savings."
 msgstr ""
 
 #: templates/components/modal-question-joining-fee.php:27
-msgid "We do not organise demonstrations or spread random complaints. We are direct, we analyse issues and offer constructive solutions."
+msgid ""
+"We do not organise demonstrations or spread random complaints. We are "
+"direct, we analyse issues and offer constructive solutions."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:12
@@ -851,19 +961,36 @@ msgid "Tuleva is a social company with a goal to earn profit for its members."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:14
-msgid "Tuleva’s main principle is that people themselves save money for their future, using contemporary technologies and bypassing unnecessary middlemen and costs as much as possible."
+msgid ""
+"Tuleva’s main principle is that people themselves save money for their "
+"future, using contemporary technologies and bypassing unnecessary middlemen "
+"and costs as much as possible."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:16
-msgid "Every year, each member who has transferred their II pillar to Tuleva pension funds, earns a <span class=\"text-highlight text-bold\">member bonus</span>. Member bonus is very small at first, but it will grow together with member’s pension assets. Bonus is transferred to your personal capital account at Tuleva. This is your ownership stake in Tuleva capital and this stake can earn you additional profit."
+msgid ""
+"Every year, each member who has transferred their II pillar to Tuleva "
+"pension funds, earns a <span class=\"text-highlight text-bold\">member "
+"bonus</span>. Member bonus is very small at first, but it will grow together "
+"with member’s pension assets. Bonus is transferred to your personal capital "
+"account at Tuleva. This is your ownership stake in Tuleva capital and this "
+"stake can earn you additional profit."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:18
-msgid "When Tuleva grows, our funds under management grow and we add new products to our offering, then the association will earn profit. <span class=\"text-highlight text-bold\">The profit is then divided among members</span>, as set in our Articles of Association."
+msgid ""
+"When Tuleva grows, our funds under management grow and we add new products "
+"to our offering, then the association will earn profit. <span class=\"text-"
+"highlight text-bold\">The profit is then divided among members</span>, as "
+"set in our Articles of Association."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:20
-msgid "As always with profit from entrepreneurship - this depends how well our venture is doing. The founders are convinced, that the <span class=\"text-highlight text-bold\">100-euro joining fee pays for itself many times over</span>. But we do not give promises."
+msgid ""
+"As always with profit from entrepreneurship - this depends how well our "
+"venture is doing. The founders are convinced, that the <span class=\"text-"
+"highlight text-bold\">100-euro joining fee pays for itself many times over</"
+"span>. But we do not give promises."
 msgstr ""
 
 #: templates/components/modal-question-profit.php:22
@@ -875,15 +1002,21 @@ msgid "At the end of each year"
 msgstr ""
 
 #: templates/components/modal-question-profit.php:27
-msgid "We calculate how many pension fund units each member had on average during the year in euros"
+msgid ""
+"We calculate how many pension fund units each member had on average during "
+"the year in euros"
 msgstr ""
 
 #: templates/components/modal-question-profit.php:28
-msgid "Multiply this by 0,05% and transfer the resulting amount to member’s capital account"
+msgid ""
+"Multiply this by 0,05% and transfer the resulting amount to member’s capital "
+"account"
 msgstr ""
 
 #: templates/components/modal-question-profit.php:29
-msgid "Every 5 years, members annual meeting decides whether to pay our accumulated profit as a dividend or keep it invested."
+msgid ""
+"Every 5 years, members annual meeting decides whether to pay our accumulated "
+"profit as a dividend or keep it invested."
 msgstr ""
 
 #: templates/components/modal-question-rights.php:12
@@ -898,13 +1031,21 @@ msgstr ""
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Have access to important documentation pertaining to all activities of the association</li>\n"
-"                            <li>Participate in the general assembly and other Tuleva events</li>\n"
-"                            <li>Elect Tuleva management and apply for management positions</li>\n"
-"                            <li>Participate in Tuleva’s profit sharing based on predetermined rules</li>\n"
-"                            <li>Use Tuleva’s services and participate in members’ information sharing (for example via e-mail or in our closed Facebook group)</li>\n"
-"                            <li>Leave the association (after 5 years of membership have passed)</li>\n"
-"                            <li>Leave their assets as an inheritance to their designated heir</li>\n"
+"                            <li>Have access to important documentation "
+"pertaining to all activities of the association</li>\n"
+"                            <li>Participate in the general assembly and "
+"other Tuleva events</li>\n"
+"                            <li>Elect Tuleva management and apply for "
+"management positions</li>\n"
+"                            <li>Participate in Tuleva’s profit sharing based "
+"on predetermined rules</li>\n"
+"                            <li>Use Tuleva’s services and participate in "
+"members’ information sharing (for example via e-mail or in our closed "
+"Facebook group)</li>\n"
+"                            <li>Leave the association (after 5 years of "
+"membership have passed)</li>\n"
+"                            <li>Leave their assets as an inheritance to "
+"their designated heir</li>\n"
 "                        </ul>"
 msgstr ""
 
@@ -916,15 +1057,21 @@ msgstr ""
 msgid ""
 "\n"
 "                        <ul>\n"
-"                            <li>Comply with laws and follow the decisions made by Tuleva’s managerial board</li>\n"
+"                            <li>Comply with laws and follow the decisions "
+"made by Tuleva’s managerial board</li>\n"
 "                            <li>Pay a one-time membership fee</li>\n"
 "                            <li>Keep Tuleva’s business secrets</li>\n"
-"                            <li>Pay additional fees if decided so by the general assembly*</li>\n"
+"                            <li>Pay additional fees if decided so by the "
+"general assembly*</li>\n"
 "                        </ul>"
 msgstr ""
 
 #: templates/components/modal-question-rights.php:33
-msgid "* This obligation has been included in our articles of association in the unlikely event that Tuleva has an unexpected need for additional capital. If a member refuses to pay additional fees which have been decided upon by the general assembly, they will lose their membership status."
+msgid ""
+"* This obligation has been included in our articles of association in the "
+"unlikely event that Tuleva has an unexpected need for additional capital. If "
+"a member refuses to pay additional fees which have been decided upon by the "
+"general assembly, they will lose their membership status."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:12
@@ -932,19 +1079,33 @@ msgid "Tuleva is for people who care."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:14
-msgid "Every member has a vote on annual general meeting and has a right to elect and be elected to Tuleva’s board of directors and other supervisory bodies. This is the official part and it is very important."
+msgid ""
+"Every member has a vote on annual general meeting and has a right to elect "
+"and be elected to Tuleva’s board of directors and other supervisory bodies. "
+"This is the official part and it is very important."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:16
-msgid "Every day we share our ideas and experience among <span class=\"text-highlight text-bold\">Tuleva members in our Facebook group</span>, e-mail, phone and working groups. Among our community, there are people who care about the society and have very different skills. Many are ready to take responsibility for ensuring us a better future."
+msgid ""
+"Every day we share our ideas and experience among <span class=\"text-"
+"highlight text-bold\">Tuleva members in our Facebook group</span>, e-mail, "
+"phone and working groups. Among our community, there are people who care "
+"about the society and have very different skills. Many are ready to take "
+"responsibility for ensuring us a better future."
 msgstr ""
 
 #: templates/components/modal-question-vote.php:18
-msgid "Tuleva team listens very carefully to our members and uses their ideas for making Tuleva better. We are only starting and believe that <span class=\"text-highlight text-bold\">the power of thousands of smart people</span> can be used for increasing our common good."
+msgid ""
+"Tuleva team listens very carefully to our members and uses their ideas for "
+"making Tuleva better. We are only starting and believe that <span "
+"class=\"text-highlight text-bold\">the power of thousands of smart people</"
+"span> can be used for increasing our common good."
 msgstr ""
 
 #: templates/components/modal-second-pillar-payment-rate.php:17
-msgid "The calculator assumes an income tax rate of 22% and a flat tax-free income of 700 euros per month."
+msgid ""
+"The calculator assumes an income tax rate of 22% and a flat tax-free income "
+"of 700 euros per month."
 msgstr ""
 
 #: templates/components/modal-second-pillar-payment-rate.php:23
@@ -968,7 +1129,9 @@ msgid "Financial Inspection"
 msgstr ""
 
 #: templates/components/modal-security.php:31
-msgid "issued a licence to Tuleva fund manager and controls that our everyday operations comply with regulations."
+msgid ""
+"issued a licence to Tuleva fund manager and controls that our everyday "
+"operations comply with regulations."
 msgstr ""
 
 #: templates/components/modal-security.php:43
@@ -976,7 +1139,9 @@ msgid "Swedbank"
 msgstr ""
 
 #: templates/components/modal-security.php:46
-msgid "is Tuleva pension funds’ depositary bank. Depositary bank approves every transaction with fund’s assets. Exactly like with bank’s own funds."
+msgid ""
+"is Tuleva pension funds’ depositary bank. Depositary bank approves every "
+"transaction with fund’s assets. Exactly like with bank’s own funds."
 msgstr ""
 
 #: templates/components/modal-security.php:58
@@ -984,7 +1149,9 @@ msgid "State guarantee fund"
 msgstr ""
 
 #: templates/components/modal-security.php:61
-msgid "protects all pension fund investors against the worst in case fund manager causes harm to investors."
+msgid ""
+"protects all pension fund investors against the worst in case fund manager "
+"causes harm to investors."
 msgstr ""
 
 #: templates/components/mutual-proposal.php:14
@@ -1008,16 +1175,22 @@ msgid "You will receive monthly"
 msgstr ""
 
 #: templates/components/payout-calculator.php:39
-msgid "If your pension assets increase due to positive returns, the monthly amount you receive will also increase."
+msgid ""
+"If your pension assets increase due to positive returns, the monthly amount "
+"you receive will also increase."
 msgstr ""
 
 #: templates/components/payout-calculator.php:39
 #: templates/components/payout-calculator.php:43
-msgid "The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period."
+msgid ""
+"The range shows how much you will receive at the beginning of the payout "
+"period and how it will change by the end of the period."
 msgstr ""
 
 #: templates/components/payout-calculator.php:43
-msgid "If your pension assets decrease due to negative returns, the monthly amount you receive will also decrease."
+msgid ""
+"If your pension assets decrease due to negative returns, the monthly amount "
+"you receive will also decrease."
 msgstr ""
 
 #: templates/components/payout-calculator.php:56
@@ -1025,7 +1198,11 @@ msgid "You will receive in total"
 msgstr ""
 
 #: templates/components/payout-calculator.php:61
-msgid "The calculator assumes you’ll start withdrawals <strong>at age 65</strong> and receive them <strong>over 19 years</strong> (the average remaining lifespan for a 65-year-old today). While the stock market’s historical return is 7%, future returns are not guaranteed."
+msgid ""
+"The calculator assumes you’ll start withdrawals <strong>at age 65</strong> "
+"and receive them <strong>over 19 years</strong> (the average remaining "
+"lifespan for a 65-year-old today). While the stock market’s historical "
+"return is 7%, future returns are not guaranteed."
 msgstr ""
 
 #: templates/components/payout-hero.php:49
@@ -1069,7 +1246,9 @@ msgid "Net salary from 2027"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "Assuming income tax rate of 22% and tax-free allowance of 700 euros per month."
+msgid ""
+"Assuming income tax rate of 22% and tax-free allowance of 700 euros per "
+"month."
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:52
@@ -1077,8 +1256,8 @@ msgid "Your monthly contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:59
-#: templates/components/third-pillar-calculator.php:71
-#: templates/components/third-pillar-calculator.php:144
+#: templates/components/third-pillar-calculator.php:69
+#: templates/components/third-pillar-calculator.php:142
 msgid "Yearly gain from income tax"
 msgstr ""
 
@@ -1087,7 +1266,8 @@ msgid "Increase contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:73
-msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
+msgid ""
+"Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
 #: templates/components/signup-block.php:24
@@ -1107,9 +1287,9 @@ msgid "view"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:27
-#: templates/components/third-pillar-calculator.php:44
-#: templates/components/third-pillar-calculator.php:61
-#: templates/components/third-pillar-calculator.php:133
+#: templates/components/third-pillar-calculator.php:43
+#: templates/components/third-pillar-calculator.php:59
+#: templates/components/third-pillar-calculator.php:131
 msgid "&euro;/year"
 msgstr ""
 
@@ -1118,58 +1298,75 @@ msgid "of which dividends"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:36
-msgid "Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad."
+msgid ""
+"Gross income, from which income tax has not been withheld as a private "
+"person. For example, dividends received from an Estonian company; dividends "
+"that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:50
+#: templates/components/third-pillar-calculator.php:49
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:53
-msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
+#: templates/components/third-pillar-calculator.php:52
+msgid ""
+"Gifts and donations, education costs, including kindergarten fees. Limited "
+"to 1200 euros in total, but no more than 50 percent of taxable income in "
+"Estonia."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:74
-#: templates/components/third-pillar-calculator.php:147
-msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
+#: templates/components/third-pillar-calculator.php:72
+#: templates/components/third-pillar-calculator.php:145
+msgid ""
+"The declaration of income for this year will start on February 15 next year. "
+"Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:82
+#: templates/components/third-pillar-calculator.php:80
 msgid "Contribute up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:85
-#: templates/components/third-pillar-calculator.php:158
-msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
+#: templates/components/third-pillar-calculator.php:83
+#: templates/components/third-pillar-calculator.php:156
+msgid ""
+"Contributions to the III pillar are subject to an income tax discount of up "
+"to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:94
-#: templates/components/third-pillar-calculator.php:167
+#: templates/components/third-pillar-calculator.php:92
+#: templates/components/third-pillar-calculator.php:165
 msgid "Make a III pillar payment"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:98
+#: templates/components/third-pillar-calculator.php:96
 msgid "Making a payment is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:107
-msgid "Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc."
+#: templates/components/third-pillar-calculator.php:105
+msgid ""
+"Your monthly gross salary (before tax). Including parental benefits, "
+"unemployment insurance benefits, sickness benefits, pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:122
+#: templates/components/third-pillar-calculator.php:120
 msgid "Other gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:125
-msgid "Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 22%."
+#: templates/components/third-pillar-calculator.php:123
+msgid ""
+"Yearly gross income taxed at 22% including rental, Airbnb, interest, income "
+"from the sale of securities or other assets; dividends taxed at 7%; and II/"
+"III pillar pension payments at 10% or 22%."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:155
+#: templates/components/third-pillar-calculator.php:153
 msgid "Contribute monthly up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:171
-msgid "Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes."
+#: templates/components/third-pillar-calculator.php:169
+msgid ""
+"Setting up a recurring III pillar payment is <strong>free</strong> and takes "
+"only 2&nbsp;minutes."
 msgstr ""
 
 #: templates/footer/beacon-toggle-help.php:3
@@ -1213,7 +1410,8 @@ msgid "Message sent!"
 msgstr ""
 
 #: templates/footer/beacon-translations.php:12
-msgid "Thanks for reaching out! Someone from our team will get back to you soon."
+msgid ""
+"Thanks for reaching out! Someone from our team will get back to you soon."
 msgstr ""
 
 #: templates/footer/beacon-translations.php:13
@@ -1237,13 +1435,11 @@ msgstr ""
 msgid "Join mailing list"
 msgstr ""
 
-#: templates/header/main.php:9
-#: templates/header/main.php:20
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr ""
 
-#: templates/header/main.php:9
-#: templates/header/main.php:20
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "Log in"
 msgstr ""
 
@@ -1276,7 +1472,8 @@ msgid "How much would you lose to high fees?"
 msgstr ""
 
 #: templates/single-content.php:91
-msgid "<a href=\"https://tuleva.ee/en/pension-calculator/\">See calculation</a>"
+msgid ""
+"<a href=\"https://tuleva.ee/en/pension-calculator/\">See calculation</a>"
 msgstr ""
 
 #: templates/single-content.php:98
@@ -1284,7 +1481,9 @@ msgid "<a href=\"/en/transfer-pension-tuleva/\">Transfer pension to Tuleva</a>"
 msgstr ""
 
 #: templates/single-content.php:101
-msgid "Our guide makes transferring your pension easy via your internet bank. 5 minutes, no costs involved."
+msgid ""
+"Our guide makes transferring your pension easy via your internet bank. 5 "
+"minutes, no costs involved."
 msgstr ""
 
 #: widgets/cta-button-widget.php:12
@@ -1295,13 +1494,11 @@ msgstr ""
 msgid "Shows a CTA Button."
 msgstr ""
 
-#: widgets/cta-button-widget.php:33
-#: widgets/cta-primary-widget.php:41
+#: widgets/cta-button-widget.php:33 widgets/cta-primary-widget.php:41
 msgid "Button text:"
 msgstr ""
 
-#: widgets/cta-button-widget.php:37
-#: widgets/cta-primary-widget.php:45
+#: widgets/cta-button-widget.php:37 widgets/cta-primary-widget.php:45
 msgid "Button URL:"
 msgstr ""
 
@@ -1313,16 +1510,13 @@ msgstr ""
 msgid "Shows primary CTA widget."
 msgstr ""
 
-#: widgets/cta-primary-widget.php:37
-#: widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:36
-#: widgets/subscribe-widget.php:39
+#: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35
+#: widgets/help-widget.php:36 widgets/subscribe-widget.php:39
 #: widgets/text-rows-widget.php:43
 msgid "Title:"
 msgstr ""
 
-#: widgets/cta-primary-widget.php:49
-#: widgets/cta-secondary-widget.php:43
+#: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
 msgid "Text:"
 msgstr ""
 
@@ -1355,7 +1549,6 @@ msgid "FAQ page URL:"
 msgstr ""
 
 #: widgets/help-widget.php:75
-#, php-format
 msgid "See also our %sFAQ%s page."
 msgstr ""
 
@@ -1401,4 +1594,52 @@ msgstr ""
 
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Tuleva"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blog front page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Fund bonds page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Fund savings page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Fund stocks page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Fund third page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "General page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Instructions — Step 1"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Jobs"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Mutual company page"
 msgstr ""

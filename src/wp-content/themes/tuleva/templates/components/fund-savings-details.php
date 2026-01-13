@@ -19,6 +19,7 @@ $key_investor_info_url = get_field('key_investor_info_file');
 $investment_report_url = get_field('investment_report_file');
 $previous_reports_url = get_field('previous_reports_url');
 $nav_procedure_url = get_field('nav_procedure_file');
+$investor_rights_url = get_field('investor_rights_file');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -139,6 +140,13 @@ $nav_procedure_url = get_field('nav_procedure_file');
                                    target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
+                            <?php if ($investor_rights_url): ?>
+                                <li>
+                                    <a href="<?php echo esc_url($investor_rights_url); ?>"
+                                       target="_blank"><?php _e('Summary of Investor Rights', TEXT_DOMAIN) ?></a>
+                                    <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                </li>
+                            <?php endif; ?>
                         </ul>
 
                         <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
