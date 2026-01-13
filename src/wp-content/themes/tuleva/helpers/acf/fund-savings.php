@@ -246,6 +246,17 @@ acf_add_local_field_group(array (
             'instructions' => 'Link to previous reports archive (external URL)',
             'required' => 0,
         ),
+        array (
+            'key' => 'field_fund_savings_nav_procedure',
+            'label' => 'NAV Procedure Document',
+            'name' => 'nav_procedure_file',
+            'type' => 'file',
+            'instructions' => 'Override the default NAV procedure document. Leave empty to use the global default.',
+            'required' => 0,
+            'return_format' => 'url',
+            'library' => 'all',
+            'mime_types' => 'pdf',
+        ),
     ),
     'location' => array (
         array (

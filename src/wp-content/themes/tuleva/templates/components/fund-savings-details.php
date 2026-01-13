@@ -18,6 +18,7 @@ $model_portfolio_url = get_field('model_portfolio_file');
 $key_investor_info_url = get_field('key_investor_info_file');
 $investment_report_url = get_field('investment_report_file');
 $previous_reports_url = get_field('previous_reports_url');
+$nav_procedure_url = get_field('nav_procedure_file');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -119,7 +120,7 @@ $previous_reports_url = get_field('previous_reports_url');
                                 </li>
                             <?php endif; ?>
                             <li>
-                                <a href="<?php echo get_nav_procedure_future_document_url(); ?>"
+                                <a href="<?php echo esc_url($nav_procedure_url ?: get_nav_procedure_future_document_url()); ?>"
                                    target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
