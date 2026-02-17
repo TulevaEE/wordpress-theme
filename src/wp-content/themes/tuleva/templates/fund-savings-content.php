@@ -27,7 +27,7 @@
             ]
         );
         if ($_SERVER['SERVER_NAME'] !== 'localhost') {
-            $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
+        $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
         } else {
             $json = '[
               {
@@ -45,16 +45,18 @@
             ]';
         }
         $funds = json_decode($json, true);
-        $fund_index = array_search($isin, array_column($funds, 'isin'));
-        if ($fund_index !== false) {
-            ?>
-            <script type="text/javascript">
-                $(function () {
-                    $('#savings-fund-volume').html('<?php echo number_format($funds[$fund_index]['volume'], 0, '.', ' ') ?>');
-                    $('#savings-fund-nav').html('<?php echo $funds[$fund_index]['nav'] ?>');
-                });
-            </script>
-            <?php
+        if (!empty($funds)) {
+            $fund_index = array_search($isin, array_column($funds, 'isin'));
+            if ($fund_index !== false) {
+                ?>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#savings-fund-volume').html('<?php echo number_format($funds[$fund_index]['volume'], 0, '.', ' ') ?>');
+                        $('#savings-fund-nav').html('<?php echo $funds[$fund_index]['nav'] ?>');
+                    });
+                </script>
+                <?php
+            }
         }
     }
     ?>

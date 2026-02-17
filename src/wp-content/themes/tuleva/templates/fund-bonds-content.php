@@ -43,7 +43,9 @@
         ]';
     }
     $funds = json_decode($json, true);
-    $bond = array_search('EE3600109443', array_column($funds, 'isin'));
+    if (!empty($funds)) {
+        $bond = array_search('EE3600109443', array_column($funds, 'isin'));
+        if ($bond !== false) {
     ?>
 
     <script type="text/javascript">
@@ -52,4 +54,7 @@
             $('#bond-fund-nav').html('<?php echo $funds[$bond]['nav'] ?>');
         });
     </script>
+    <?php
+        }
+    } ?>
 </main>

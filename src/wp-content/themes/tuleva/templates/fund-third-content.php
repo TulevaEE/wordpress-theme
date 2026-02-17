@@ -43,7 +43,9 @@
         ]';
     }
     $funds = json_decode($json, true);
-    $third = array_search('EE3600001707', array_column($funds, 'isin'));
+    if (!empty($funds)) {
+        $third = array_search('EE3600001707', array_column($funds, 'isin'));
+        if ($third !== false) {
     ?>
 
     <script type="text/javascript">
@@ -52,4 +54,7 @@
             $('#third-fund-nav').html('<?php echo $funds[$third]['nav'] ?>');
         });
     </script>
+    <?php
+        }
+    } ?>
 </main>

@@ -45,8 +45,9 @@
     }
 
     $funds = json_decode($json, true);
-    $stock = array_search('EE3600109435', array_column($funds, 'isin'));
-
+    if (!empty($funds)) {
+        $stock = array_search('EE3600109435', array_column($funds, 'isin'));
+        if ($stock !== false) {
     ?>
 
     <script type="text/javascript">
@@ -55,4 +56,7 @@
             $('#stock-fund-nav').html('<?php echo $funds[$stock]['nav'] ?>');
         });
     </script>
+    <?php
+        }
+    } ?>
 </main>
