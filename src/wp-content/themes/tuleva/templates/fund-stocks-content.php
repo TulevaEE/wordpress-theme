@@ -35,9 +35,9 @@
             },
             "isin": "EE3600109435",
             "name": "Tuleva World Stocks Pension Fund",
-            "managementFeeRate": 0.0024,
+            "managementFeeRate": 0.00205,
             "pillar": 2,
-            "ongoingChargesFigure": 0.0031,
+            "ongoingChargesFigure": 0.0028,
             "nav": 1.28834,
             "volume": 732956944.21689
           }

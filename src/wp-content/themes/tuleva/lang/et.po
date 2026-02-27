@@ -230,7 +230,7 @@ msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
 #: templates/components/front-hero/calculator.php:134
 msgid "0.29% per year"
-msgstr "0,29% aastas"
+msgstr "0,28% aastas"
 
 #: templates/components/fund-bonds-details.php:7
 #: templates/components/fund-savings-details.php:30

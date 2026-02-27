@@ -36,9 +36,9 @@
                 },
                 "isin": "' . $isin . '",
                 "name": "Tuleva Savings Fund",
-                "managementFeeRate": 0.0019,
+                "managementFeeRate": 0.00152,
                 "pillar": null,
-                "ongoingChargesFigure": 0.0029,
+                "ongoingChargesFigure": 0.0028,
                 "nav": 1.0000,
                 "volume": 0
               }

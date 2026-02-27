@@ -34,9 +34,9 @@
             },
             "isin": "EE3600001707",
             "name": "Tuleva III Pillar Pension Fund",
-            "managementFeeRate": 0.0021,
+            "managementFeeRate": 0.00179,
             "pillar": 3,
-            "ongoingChargesFigure": 0.0031,
+            "ongoingChargesFigure": 0.0028,
             "nav": 1.1636,
             "volume": 356619411.5331
           }
