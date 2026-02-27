@@ -84,14 +84,17 @@ CircleCI build status: https://app.circleci.com
 
 ### Step 4 — Update savings fund ACF fields (TKF100)
 
-Run after Step 1 (needs `upload_results.json`):
+ACF REST API is **not enabled** on this site, so this step must be done
+manually in the WordPress admin:
 
-```bash
-python3 scripts/update_acf.py /path/to/folder/with/new/pdfs
-```
+1. Go to `https://tuleva.ee/wp-admin/post.php?post=35292&action=edit`
+2. Scroll to the ACF document fields
+3. For **Prospectus file**: delete the current file, then Add → search `TKF100-Prospekt-kehtib-alates-DD.MM.YYYY` → select
+4. For **Key investor info file**: delete the current file, then Add → search `Pohiteave-TKF100-kehtib-alates-DD.MM.YYYY` → select
+5. Click **Update**
 
-This updates `prospectus_file` and `key_investor_info_file` ACF fields on the
-savings fund page (`tuleva-taiendav-kogumisfond-dokumendid`). No git push needed.
+The files will already be in the media library from Step 1 — search by filename.
+No git push needed; the change is live immediately after saving.
 
 ---
 
