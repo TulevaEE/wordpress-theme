@@ -1,5 +1,7 @@
 # Claude Code instructions — TulevaEE/wordpress-theme
 
+> For fee updates see **[FEE-UPDATES.md](./FEE-UPDATES.md)**
+
 ## Project overview
 
 This repo contains the WordPress theme for tuleva.ee. It deploys automatically:
