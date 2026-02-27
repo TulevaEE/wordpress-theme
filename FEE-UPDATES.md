@@ -139,3 +139,37 @@ After CI goes green and WP Admin edits are saved:
 - [ ] TKF100 fund page — ACF management fee and ongoing charges updated
 
 Use a private/incognito window or hard-refresh (Cmd+Shift+R) to bypass browser cache.
+
+---
+
+## How to do this with Claude Code next time
+
+Open Claude Code in the `wordpress-theme` directory and paste a prompt like this:
+
+```
+Please update the fees on tuleva.ee. New values effective DD.MM.YYYY:
+
+| Fund    | Valitsemistasu | Kogukulu |
+|---------|---------------|---------|
+| TUK75   | 0,XXX%        | 0,XX%   |
+| TUK00   | 0,XXX%        | 0,XX%   |
+| TUV100  | 0,XXX%        | 0,XX%   |
+| TKF100  | 0,XXX%        | 0,XX%   |
+
+Follow the plan in FEE-UPDATES.md. Do Part A (git changes) automatically.
+For Part B (WP Admin) give me step-by-step instructions.
+```
+
+Claude will:
+1. Read `FEE-UPDATES.md` and the current fee table for old values
+2. Edit all 10 theme files
+3. Update `msgid` **and** `msgstr` in `et.po` (dot format for msgid, comma format for msgstr)
+4. Regenerate `et.mo` with polib
+5. Commit and push — CircleCI deploys automatically
+6. Tell you what to do manually in WP Admin (Part B)
+
+### Things to double-check before saying yes to the push
+
+- `et.po`: both `msgid "0.XX% per year"` and `msgstr "0,XX% aastas"` use the **new** percentage
+- `calculator.js`: `tulevaFee` matches the new ongoing charges decimal
+- All four `*-content.php` fallback files have both `managementFeeRate` and `ongoingChargesFigure` updated
