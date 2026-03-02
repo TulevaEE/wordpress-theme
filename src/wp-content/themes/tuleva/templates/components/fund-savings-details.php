@@ -121,7 +121,7 @@ $investor_rights_url = get_field('investor_rights_file');
                                 </li>
                             <?php endif; ?>
                             <li>
-                                <a href="<?php echo esc_url($nav_procedure_url ?: get_nav_procedure_future_document_url()); ?>"
+                                <a href="<?php echo esc_url($nav_procedure_url ?: get_nav_procedure_document_url()); ?>"
                                    target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>

@@ -374,15 +374,9 @@ function get_esg_document_url() {
 }
 
 function get_nav_procedure_document_url() {
-    $nav_procedure_document_path = '/wp-content/uploads/2025/09/Fondide-vara-puhasvaartuse-maaramise-sisekord-16.10.2025.pdf';
+    $nav_procedure_document_path = '/wp-content/uploads/2026/01/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord.kehtib-alates-02.03.3026.pdf';
 
     return get_site_url() . $nav_procedure_document_path;
-}
-
-function get_nav_procedure_future_document_url() {
-    $nav_procedure_future_document_path = '/wp-content/uploads/2026/01/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord.kehtib-alates-02.03.3026.pdf';
-
-    return get_site_url() . $nav_procedure_future_document_path;
 }
 
 function get_esg_factors_document_url() {
