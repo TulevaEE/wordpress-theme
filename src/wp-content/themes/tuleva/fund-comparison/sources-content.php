@@ -158,7 +158,7 @@
 
 <script>
 (function() {
-var DATA_BASE = '<?php echo get_template_directory_uri(); ?>/data/fund-comparison/';
+var DATA_BASE = '<?php echo get_template_directory_uri(); ?>/fund-comparison/data/';
 
 var ETF_SOURCES = [
   {name: 'iShares MSCI World ESG Screened (SAWD)', isin: 'IE0009FT4LX4', source: 'iShares CSV', url: 'https://www.ishares.com/uk/individual/en/products/305419/', stocks: 1224, type: 'full'},

@@ -218,7 +218,7 @@
 
 <script>
 (function() {
-const DATA_BASE = '<?php echo get_template_directory_uri(); ?>/data/fund-comparison/';
+const DATA_BASE = '<?php echo get_template_directory_uri(); ?>/fund-comparison/data/';
 let DATA = null, NAV = null, RET_CORR = null, OVERLAP = null;
 const selected = [];
 const MAX_SELECT = 2;
