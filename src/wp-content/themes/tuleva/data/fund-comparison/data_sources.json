@@ -1,0 +1,61 @@
+{
+  "Tuleva": {
+    "pdf": "Tuleva-Maailma-Aktsiate-Pensionifondi-investeeringute-aruanne-jaanuar-2026.pdf",
+    "type": "A (ETF)",
+    "date": "30.01.2026",
+    "etf_count": 6
+  },
+  "Luminor 16-50": {
+    "pdf": "investeeringute_aruanne_lum16-50_0126.pdf",
+    "type": "A (ETF+bonds)",
+    "date": "31.01.2026",
+    "etf_count": 11
+  },
+  "SEB Indeks": {
+    "pdf": "est_SIK75_raport_20260131.pdf",
+    "type": "A (ETF)",
+    "date": "31.01.2026",
+    "etf_count": 7,
+    "opaque_pct": 28.32
+  },
+  "Swedbank K1960": {
+    "pdf": "K1960_investment_portfolio.pdf",
+    "type": "B (direct stocks)",
+    "date": "31.01.2026",
+    "stock_count": 295
+  },
+  "Swedbank K1970": {
+    "pdf": "K1970_investment_portfolio.pdf",
+    "type": "B (direct stocks)",
+    "date": "31.01.2026",
+    "stock_count": 444
+  },
+  "Swedbank K1980": {
+    "pdf": "K1980_investment_portfolio.pdf",
+    "type": "B (direct stocks)",
+    "date": "31.01.2026",
+    "stock_count": 444
+  },
+  "Swedbank K1990": {
+    "pdf": "K1990_investment_portfolio.pdf",
+    "type": "B (direct stocks)",
+    "date": "31.01.2026",
+    "stock_count": 301
+  },
+  "LHV Ettevõtlik": {
+    "pdf": "est_LLK50_raport_20260131.pdf",
+    "type": "C (mixed)",
+    "date": "31.01.2026",
+    "pre_parsed": true
+  },
+  "LHV Julge": {
+    "pdf": "est_LXK75_raport_20260131.pdf",
+    "type": "C (mixed)",
+    "date": "31.01.2026"
+  },
+  "SEB 55+": {
+    "pdf": "est_SEK50_raport_20260131.pdf",
+    "type": "C (mixed)",
+    "date": "31.01.2026"
+  }
+}
