@@ -1,22 +1,20 @@
 <main id="main" class="page-container section-spacing">
 <style>
   .fc-sources {
-    --blue: #006CE6;
-    --g50: #FAFBFC; --g100: #F5F7F9; --g200: #E0E6EC;
-    --g400: #9ca3af; --g600: #4b5563; --g800: #293036; --g900: #111827;
+    --blue: #0081EE; --navy: #013063;
+    --g50: #f9fafb; --g100: #f3f4f6; --g200: #e5e7eb;
+    --g400: #9ca3af; --g600: #4b5563; --g800: #1f2937; --g900: #111827;
     max-width: 960px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    font-family: Roboto, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--g800);
     line-height: 1.6;
   }
   .fc-sources h1 {
-    font-family: "Merriweather", Georgia, serif;
     font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;
   }
   .fc-sources h2 {
-    font-family: "Merriweather", Georgia, serif;
     font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem;
   }
   .fc-sources .subtitle { font-size: 1rem; color: var(--g600); margin-bottom: 2rem; }
@@ -133,7 +131,7 @@
       <th>ISIN</th>
       <th>Andmeallikas</th>
       <th>Aktsiate arv</th>
-      <th>Katvuse t&uuml;&uuml;p</th>
+      <th>Staatus</th>
     </tr>
   </thead>
   <tbody id="etfTable"></tbody>
