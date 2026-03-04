@@ -2,20 +2,20 @@
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <style>
   .fund-comparison {
-    --blue: #006CE6; --amber: #f59e0b; --green: #16a34a; --red: #dc2626;
+    --blue: #0081EE; --navy: #013063; --amber: #f59e0b; --green: #16a34a; --red: #dc2626;
     --purple: #7c3aed; --pink: #e11d48; --teal: #0d9488; --orange: #ea580c;
-    --g50: #FAFBFC; --g100: #F5F7F9; --g200: #E0E6EC; --g400: #9ca3af;
-    --g600: #4b5563; --g800: #293036; --g900: #111827;
+    --g50: #f9fafb; --g100: #f3f4f6; --g200: #e5e7eb; --g400: #9ca3af;
+    --g600: #4b5563; --g800: #1f2937; --g900: #111827;
+    --bg-pale: #EEF7FD;
     max-width: 960px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    font-family: Roboto, "Segoe UI", "Helvetica Neue", sans-serif;
-    color: var(--g800);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--navy);
     line-height: 1.6;
   }
   .fund-comparison h1 {
-    font-family: "Merriweather", Georgia, serif;
-    font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;
+    font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; color: var(--navy);
   }
   .fund-comparison .subtitle { font-size: 1.1rem; color: var(--g600); margin-bottom: 2rem; max-width: 640px; }
   .fund-comparison .picker-label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
@@ -25,7 +25,7 @@
   .fund-comparison .fund-card { padding: 0.7rem 1rem; border: 2px solid var(--g200); border-radius: 10px;
                cursor: pointer; transition: all 0.15s; background: #fff; position: relative; }
   .fund-comparison .fund-card:hover { border-color: var(--g400); }
-  .fund-comparison .fund-card.selected { border-color: var(--blue); background: #eff6ff; box-shadow: 0 0 0 1px var(--blue); }
+  .fund-comparison .fund-card.selected { border-color: var(--navy); background: var(--bg-pale); box-shadow: 0 0 0 1px var(--navy); }
   .fund-comparison .fund-card .fn { font-weight: 600; font-size: 0.88rem; line-height: 1.3; }
   .fund-comparison .fund-card .fm { font-size: 0.72rem; color: var(--g400); margin-top: 2px; }
   .fund-comparison .fc-badge { display: inline-block; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px;
@@ -33,18 +33,17 @@
   .fund-comparison .fc-badge-low { background: #dcfce7; color: #166534; }
   .fund-comparison .fc-badge-high { background: #fee2e2; color: #991b1b; }
   .fund-comparison .fund-card .ck { display: none; position: absolute; top: 6px; right: 8px; width: 20px; height: 20px;
-                   background: var(--blue); border-radius: 50%; color: #fff; font-size: 12px;
+                   background: var(--navy); border-radius: 50%; color: #fff; font-size: 12px;
                    line-height: 20px; text-align: center; }
   .fund-comparison .fund-card.selected .ck { display: block; }
   .fund-comparison .hint { font-size: 0.8rem; color: var(--g400); margin-bottom: 2rem; }
   .fund-comparison .fc-section { margin-bottom: 2.5rem; display: none; }
   .fund-comparison .fc-section.visible { display: block; }
-  .fund-comparison .section-title { font-family: "Merriweather", Georgia, serif;
-                   font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; display: flex;
-                   align-items: center; gap: 0.4rem; }
+  .fund-comparison .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; display: flex;
+                   align-items: center; gap: 0.4rem; color: var(--navy); }
   .fund-comparison .section-sub { font-size: 0.92rem; color: var(--g600); margin-bottom: 1rem; }
   .fund-comparison .narrative { font-size: 1.02rem; line-height: 1.7; max-width: 700px; margin-bottom: 1.5rem; }
-  .fund-comparison .narrative strong { color: var(--g900); }
+  .fund-comparison .narrative strong { color: var(--navy); }
   .fund-comparison .chart-container { width: 100%; margin-bottom: 0.5rem; }
   .fund-comparison .asset-bar { display: flex; height: 32px; border-radius: 6px; overflow: hidden; margin-bottom: 0.4rem; }
   .fund-comparison .asset-bar .seg { display: flex; align-items: center; justify-content: center;
@@ -57,10 +56,11 @@
   .fund-comparison .corr-table { border-collapse: collapse; font-size: 0.85rem; margin-bottom: 1rem; }
   .fund-comparison .corr-table td, .fund-comparison .corr-table th { padding: 8px 12px; text-align: center; border: 1px solid var(--g200); }
   .fund-comparison .corr-table th { background: var(--g50); font-weight: 600; font-size: 0.8rem; color: var(--g600); }
-  .fund-comparison .insight-box { background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
-                 border-left: 4px solid var(--blue); border-radius: 0 10px 10px 0;
+  .fund-comparison .insight-box { background: var(--bg-pale);
+                 border-left: 4px solid var(--navy); border-radius: 0 10px 10px 0;
                  padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-  .fund-comparison .insight-box p { font-size: 1.02rem; line-height: 1.6; }
+  .fund-comparison .insight-box p { font-size: 1.02rem; line-height: 1.6; color: var(--navy); }
+  .fund-comparison .num-accent { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
   .fund-comparison .info-icon { display: inline-flex; align-items: center; justify-content: center;
                width: 18px; height: 18px; border-radius: 50%; background: var(--g200);
                color: var(--g600); font-size: 0.7rem; font-weight: 700; cursor: help;
@@ -72,19 +72,11 @@
                          z-index: 100; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
   .fund-comparison .info-icon:hover .info-tip { display: block; }
   .fund-comparison .holdings-grid { display: grid; gap: 1.5rem; margin-bottom: 0.5rem; }
-  .fund-comparison .fc-footer { font-size: 0.8rem; color: var(--g600); border-top: 1px solid var(--g200);
-            padding-top: 1.5rem; margin-top: 2rem; line-height: 1.7; }
-  .fund-comparison .meth-toggle { cursor: pointer; color: var(--blue); font-weight: 600;
-                 display: inline-flex; align-items: center; gap: 4px; }
-  .fund-comparison .meth-toggle:hover { text-decoration: underline; }
-  .fund-comparison .meth-body { display: none; margin-top: 0.75rem; padding: 1rem 1.25rem; background: var(--g50);
-               border-radius: 8px; font-size: 0.8rem; line-height: 1.7; color: var(--g800); }
-  .fund-comparison .meth-body.show { display: block; }
   .fund-comparison .holdings-col-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;
                         padding-bottom: 0.3rem; border-bottom: 2px solid var(--g200); }
   .fund-comparison .corr-gauge { margin: 1.5rem 0; max-width: 480px; }
   .fund-comparison .corr-gauge-label { font-size: 0.85rem; font-weight: 600; color: var(--g600); margin-bottom: 0.4rem; }
-  .fund-comparison .corr-gauge-bar { height: 12px; border-radius: 6px; background: linear-gradient(to right, #dc2626, #f59e0b, #16a34a);
+  .fund-comparison .corr-gauge-bar { height: 12px; border-radius: 6px; background: linear-gradient(to right, #dc2626, #f59e0b, #0081EE);
                     position: relative; margin-bottom: 0.3rem; }
   .fund-comparison .corr-gauge-marker { position: absolute; top: -4px; width: 4px; height: 20px; background: var(--g900);
                        border-radius: 2px; transform: translateX(-50%); }
@@ -95,8 +87,21 @@
                     background: #fff; color: var(--g600); font-size: 0.82rem; font-weight: 600;
                     cursor: pointer; transition: all 0.15s; font-family: inherit; }
   .fund-comparison .nav-period-btn:hover { border-color: var(--g400); color: var(--g800); }
-  .fund-comparison .nav-period-btn.active { border-color: var(--blue); background: var(--blue);
-                    color: #fff; }
+  .fund-comparison .nav-period-btn.active { border-color: var(--navy); background: var(--navy); color: #fff; }
+  .fund-comparison .return-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 1rem; }
+  .fund-comparison .return-table th, .fund-comparison .return-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--g200); }
+  .fund-comparison .return-table th { font-size: 0.75rem; font-weight: 600; color: var(--g400); text-transform: uppercase; letter-spacing: 0.03em; }
+  .fund-comparison .return-table td { font-variant-numeric: tabular-nums; }
+  .fund-comparison .return-table .fund-name { font-weight: 600; }
+  .fund-comparison .return-table .fee-diff { font-size: 0.78rem; color: var(--red); font-weight: 600; }
+  .fund-comparison .fc-footer { font-size: 0.8rem; color: var(--g600); border-top: 1px solid var(--g200);
+            padding-top: 1.5rem; margin-top: 2rem; line-height: 1.7; }
+  .fund-comparison .meth-toggle { cursor: pointer; color: var(--blue); font-weight: 600;
+                 display: inline-flex; align-items: center; gap: 4px; }
+  .fund-comparison .meth-toggle:hover { text-decoration: underline; }
+  .fund-comparison .meth-body { display: none; margin-top: 0.75rem; padding: 1rem 1.25rem; background: var(--g50);
+               border-radius: 8px; font-size: 0.8rem; line-height: 1.7; color: var(--g800); }
+  .fund-comparison .meth-body.show { display: block; }
   @media (max-width: 640px) {
     .fund-comparison h1 { font-size: 1.5rem; }
     .fund-comparison .fund-grid { grid-template-columns: 1fr 1fr; }
@@ -129,11 +134,12 @@
     <button class="nav-period-btn" data-years="1">1a</button>
   </div>
   <div class="chart-container" id="chartNav"></div>
+  <div id="navReturnTable"></div>
 </div>
 
 <div class="fc-section" id="sectionOverlap">
   <div class="section-title">Kui palju fondid kattuvad?</div>
-  <div class="section-sub">Kas fondid investeerivad samadesse kohtadesse ja kas nad liiguvad sarnaselt?</div>
+  <div class="section-sub">Kas fondid investeerivad samadesse kohtadesse? Kui sarnane on portfelli koosseis?</div>
   <div style="margin-bottom:1.5rem;">
     <div id="vennArea"></div>
   </div>
@@ -154,7 +160,7 @@
 
 <div class="fc-section" id="sectionSunburst">
   <div class="section-title">Portfelli struktuur</div>
-  <div class="section-sub">Indeksfondid: ETF &rarr; aktsiad. Aktiivfondid: varaklass &rarr; investeeringud. Suurus = osakaal portfellis.</div>
+  <div class="section-sub">Sisemine ring: varaklassid. V&auml;limine ring: &uuml;ksikud investeeringud. Suurus = osakaal portfellis.</div>
   <div id="sunburstArea" style="display:flex;flex-wrap:wrap;gap:1rem;"></div>
 </div>
 
@@ -207,32 +213,30 @@
     r (korrelatsioon) n&auml;itab, kui sarnaselt on kaalud jaotunud: r &gt; 0.9 t&auml;hendab v&auml;ga sarnast, r &lt; 0.3 v&auml;ga erinevat portfelli.</p>
 
     <p style="margin-top:0.5rem;"><strong>Portfelli struktuur (sunburst):</strong>
-    Indeksfondide puhul: sisemine ring n&auml;itab ETF-e, v&auml;limine ring top-aktsiaid.
-    Iga aktsia on n&auml;idatud &uuml;he segmendina koos oma t&auml;isportfelli kaaluga (nt Nvidia 5,26%) &mdash;
-    aktsia on paigutatud selle ETF-i alla, mis seda k&otilde;ige rohkem hoiab.
-    Aktiivfondide puhul: sisemine ring n&auml;itab varaklasse (aktsiad, erakapital, kinnisvara, v&otilde;lakirjad),
-    v&auml;limine ring &uuml;ksikuid investeeringuid.</p>
+    Sisemine ring n&auml;itab varaklasse (aktsiad, v&otilde;lakirjad, erakapital, kinnisvara jne),
+    v&auml;limine ring &uuml;ksikuid investeeringuid.
+    Iga aktsia on n&auml;idatud &uuml;he segmendina koos oma t&auml;isportfelli kaaluga (nt Nvidia 5,26%).</p>
   </div>
 </div>
 </div>
 
 <script>
 (function() {
-const DATA_BASE = '<?php echo get_template_directory_uri(); ?>/fund-comparison/data/';
-let DATA = null, NAV = null, RET_CORR = null, OVERLAP = null;
-const selected = [];
-const MAX_SELECT = 2;
+var DATA_BASE = '<?php echo get_template_directory_uri(); ?>/fund-comparison/data/';
+var DATA = null, NAV = null, RET_CORR = null, OVERLAP = null;
+var selected = [];
+var MAX_SELECT = 2;
 
-const COLORS = {
-  'Tuleva': '#006CE6',
-  'Luminor 16-50': '#e11d48',
-  'SEB Indeks': '#ea580c',
-  'Swedbank K1960': '#65a30d', 'Swedbank K1970': '#059669',
-  'Swedbank K1980': '#16a34a', 'Swedbank K1990': '#0d9488',
+var COLORS = {
+  'Tuleva': '#013063',
+  'Luminor 16-50': '#D63B84',
+  'SEB Indeks': '#51c26c',
+  'Swedbank K1960': '#e8a317', 'Swedbank K1970': '#e8a317',
+  'Swedbank K1980': '#F7A600', 'Swedbank K1990': '#d4900e',
   'LHV Ettev\u00f5tlik': '#7c3aed', 'LHV Julge': '#9333ea',
-  'SEB 55+': '#dc2626',
+  'SEB 55+': '#ea580c',
 };
-const LABELS = {
+var LABELS = {
   'Tuleva': 'Tuleva Maailma Aktsiad',
   'Luminor 16-50': 'Luminor 16\u201350',
   'SEB Indeks': 'SEB Indeks',
@@ -241,12 +245,12 @@ const LABELS = {
   'LHV Ettev\u00f5tlik': 'LHV Ettev\u00f5tlik', 'LHV Julge': 'LHV Julge',
   'SEB 55+': 'SEB 55+',
 };
-const SHORT = {
+var SHORT = {
   'Tuleva': 'Tuleva',
-  'Luminor 16-50': 'Lum 16\u201350',
-  'SEB Indeks': 'SEB Idx',
-  'Swedbank K1960': 'SWB 60\u201369', 'Swedbank K1970': 'SWB 70\u201379',
-  'Swedbank K1980': 'SWB 80\u201389', 'Swedbank K1990': 'SWB 90\u201399',
+  'Luminor 16-50': 'Luminor 16\u201350',
+  'SEB Indeks': 'SEB Indeks',
+  'Swedbank K1960': 'Swedbank 60\u201369', 'Swedbank K1970': 'Swedbank 70\u201379',
+  'Swedbank K1980': 'Swedbank 80\u201389', 'Swedbank K1990': 'Swedbank 90\u201399',
   'LHV Ettev\u00f5tlik': 'LHV Ettev.', 'LHV Julge': 'LHV Julge',
   'SEB 55+': 'SEB 55+',
 };
@@ -256,15 +260,40 @@ var FEES = {
   'Swedbank K1980': 0.72, 'Swedbank K1990': 0.31,
   'LHV Ettev\u00f5tlik': 1.57, 'LHV Julge': 1.21, 'SEB 55+': 0.99,
 };
-const AC_COLORS = { stocks:'#006CE6', etfs:'#60a5fa', bonds:'#6b7280',
+var AC_COLORS = { stocks:'#0081EE', etfs:'#60a5fa', bonds:'#6b7280',
                     pe:'#7c3aed', re:'#059669', deposits:'#d1d5db', derivatives:'#f59e0b' };
-const AC_LABELS = { stocks:'Aktsiad', etfs:'ETF-id', bonds:'V\u00f5lakirjad',
+var AC_LABELS = { stocks:'Aktsiad', etfs:'Fondid (l\u00e4bipaistmatud)', bonds:'V\u00f5lakirjad',
                     pe:'Erakapital', re:'Kinnisvara', deposits:'Hoiused', derivatives:'Tuletisinstr.' };
-const PL = {
-  font: { family: 'Roboto, "Segoe UI", sans-serif', size: 12 },
+var PL = {
+  font: { family: '-apple-system, BlinkMacSystemFont, sans-serif', size: 12, color: '#013063' },
   paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
   margin: { t: 30, r: 20, b: 50, l: 50 },
 };
+
+var COUNTRY_ET = {
+  'United States':'USA', 'Japan':'Jaapan', 'United Kingdom':'Suurbritannia',
+  'France':'Prantsusmaa', 'Germany':'Saksamaa', 'Switzerland':'\u0160veits',
+  'Canada':'Kanada', 'Taiwan':'Taiwan', 'China':'Hiina', 'Korea (South)':'L\u00f5una-Korea',
+  'Netherlands':'Holland', 'India':'India', 'Sweden':'Rootsi', 'Australia':'Austraalia',
+  'Spain':'Hispaania', 'Italy':'Itaalia', 'Denmark':'Taani', 'Norway':'Norra',
+  'Finland':'Soome', 'Estonia':'Eesti', 'Lithuania':'Leedu', 'Latvia':'L\u00e4ti',
+  'Ireland':'Iirimaa', 'Singapore':'Singapur', 'Hong Kong':'Hongkong',
+  'Brazil':'Brasiilia', 'South Africa':'LAV', 'Mexico':'Mehhiko',
+  'Bermuda':'Bermuda', 'Cayman Islands':'Cayman', 'Jersey':'Jersey',
+  'Luxembourg':'Luxembourg', 'Belgium':'Belgia', 'Austria':'Austria',
+  'Eesti (PE/RE/v\u00f5lak.)':'Eesti (PE/RE/v\u00f5lak.)',
+};
+var SECTOR_ET = {
+  'Information Technology':'IT', 'Financials':'Finants', 'Industrials':'T\u00f6\u00f6stus',
+  'Consumer Discretionary':'Tarbijakaup', 'Health Care':'Tervishoid',
+  'Communication':'Kommunikatsioon', 'Consumer Staples':'P\u00f5hitarve',
+  'Materials':'Materjalid', 'Energy':'Energia', 'Utilities':'Kommunaalteenused',
+  'Real Estate':'Kinnisvara', 'Other':'Muu', 'Direct Investment':'Otse',
+  'Erakapital':'Erakapital', 'Kinnisvara':'Kinnisvara', 'V\u00f5lakirjad':'V\u00f5lakirjad',
+  'ETF-id':'ETF-id',
+};
+function trCountry(c) { return COUNTRY_ET[c] || c; }
+function trSector(s) { return SECTOR_ET[s] || s; }
 
 var navPeriodYears = 5;
 
@@ -282,10 +311,10 @@ document.getElementById('navPeriodBtns').addEventListener('click', function(e) {
 });
 
 Promise.all([
-  fetch(DATA_BASE + 'fund_data.json').then(r => r.json()),
-  fetch(DATA_BASE + 'nav_data.json').then(r => r.json()),
-  fetch(DATA_BASE + 'return_correlations.json').then(r => r.json()),
-  fetch(DATA_BASE + 'overlap_stats.json').then(r => r.json()),
+  fetch(DATA_BASE + 'fund_data.json').then(function(r) { return r.json(); }),
+  fetch(DATA_BASE + 'nav_data.json').then(function(r) { return r.json(); }),
+  fetch(DATA_BASE + 'return_correlations.json').then(function(r) { return r.json(); }),
+  fetch(DATA_BASE + 'overlap_stats.json').then(function(r) { return r.json(); }),
 ]).then(function(results) {
   DATA = results[0]; NAV = results[1]; RET_CORR = results[2]; OVERLAP = results[3];
   buildGrid();
@@ -339,16 +368,25 @@ function renderNarrative(funds) {
     var eqPct = ((ac.stocks||0)+(ac.etfs||0)).toFixed(0);
     var hasPE = (ac.pe||0) > 1;
     if (hasPE) {
-      el.innerHTML = '<strong>'+LABELS[f]+'</strong> on aktiivne fond. Aktsiad moodustavad '+eqPct+'% portfellist, '+
+      var etfPct = (ac.etfs||0);
+      var etfNote = etfPct > 1 ? ' + '+etfPct.toFixed(1)+'% selgitamata fondidesse' : '';
+      el.innerHTML = '<strong>'+LABELS[f]+'</strong> on aktiivne fond'+etfNote+'. '+
+        'Aktsiad moodustavad <span class="num-accent">'+eqPct+'%</span> portfellist, '+
         '\u00fclej\u00e4\u00e4nu on erakapital ('+(ac.pe||0).toFixed(0)+'%), kinnisvara ('+(ac.re||0).toFixed(0)+'%) ja '+
         'v\u00f5lakirjad ('+(ac.bonds||0).toFixed(0)+'%). Suurimad aktsiad: '+top3+'.';
     } else {
-      el.innerHTML = '<strong>'+LABELS[f]+'</strong> investeerib '+fd.n_stocks+' aktsiasse. '+
-        'Suurimad: '+top3+'.';
+      var fee = FEES[f] || 0;
+      var etfPctIdx = (ac.etfs||0);
+      var etfNoteIdx = etfPctIdx > 1 ? ' + '+etfPctIdx.toFixed(1)+'% selgitamata fondidesse' : '';
+      el.innerHTML = 'Kas teadsid? <strong>'+LABELS[f]+'</strong> investeerib sinu raha \u00fcle maailma'+etfNoteIdx+'. '+
+        'Suurimad positsioonid: '+top3+'. Selle eest maksad <span class="num-accent">'+fee.toFixed(2)+'%</span> aastas.';
     }
   } else {
     var names = funds.map(function(f) { return '<strong>'+LABELS[f]+'</strong>'; }).join(' vs ');
-    el.innerHTML = names+' \u2014 erinevad nimed, erinevad tasud. Vaata allpool, kui sarnased nad tegelikult on.';
+    var feeA = FEES[funds[0]] || 0, feeB = FEES[funds[1]] || 0;
+    var diff = Math.abs(feeA - feeB);
+    var eurosPer10k = (diff / 100 * 10000).toFixed(0);
+    el.innerHTML = names+' \u2014 kuhu sinu raha tegelikult l\u00e4heb? Tasude vahe on <span class="num-accent">'+eurosPer10k+'\u20ac</span> aastas iga 10\u2009000\u20ac kohta. Vaata allpool, kas selle eest saad midagi teistsugust.';
   }
 }
 
@@ -356,6 +394,7 @@ function renderAssets(funds) {
   var el = document.getElementById('assetBars');
   el.innerHTML = '';
   var order = ['stocks','etfs','pe','re','bonds','deposits','derivatives'];
+  var AC_SHORT = { stocks:'Akt.', etfs:'Fondid', bonds:'V\u00f5lak.', pe:'PE', re:'Kinn.', deposits:'Hoi.', derivatives:'Tul.' };
   funds.forEach(function(f) {
     var ac = DATA.funds[f].asset_classes || {stocks:100};
     el.innerHTML += '<div class="asset-bar-label">'+LABELS[f]+'</div>';
@@ -363,8 +402,10 @@ function renderAssets(funds) {
     order.forEach(function(k) {
       var pct = ac[k]||0;
       if (pct < 0.3) return;
-      var label = pct > 5 ? AC_LABELS[k]+' '+pct.toFixed(0)+'%' : pct > 2 ? pct.toFixed(0)+'%' : '';
-      bar += '<div class="seg" style="width:'+pct+'%;background:'+AC_COLORS[k]+'">'+label+'</div>';
+      var label = '';
+      if (pct >= 8) label = AC_LABELS[k]+' '+pct.toFixed(0)+'%';
+      else if (pct >= 3) label = AC_SHORT[k]+' '+pct.toFixed(0)+'%';
+      bar += '<div class="seg" style="width:'+pct+'%;background:'+AC_COLORS[k]+'" title="'+AC_LABELS[k]+' '+pct.toFixed(1)+'%">'+label+'</div>';
     });
     bar += '</div>';
     el.innerHTML += bar;
@@ -384,11 +425,37 @@ function renderNav(funds) {
   cutoffDate.setFullYear(cutoffDate.getFullYear() - navPeriodYears);
   var cutoffStr = cutoffDate.toISOString().slice(0, 10);
 
+  // Find common start date
+  var commonStart = cutoffStr;
+  funds.forEach(function(f) {
+    var nd = NAV[f]; if (!nd) return;
+    for (var i = 0; i < nd.dates.length; i++) {
+      if (nd.dates[i] >= cutoffStr) {
+        if (nd.dates[i] > commonStart) commonStart = nd.dates[i];
+        break;
+      }
+    }
+  });
+
+  // Check if actual period differs from selected
+  var lastDate = funds.reduce(function(latest, f) {
+    var nd = NAV[f]; if (!nd) return latest;
+    var d = nd.dates[nd.dates.length - 1];
+    return d > latest ? d : latest;
+  }, '');
+  var actualYears = lastDate ? ((new Date(lastDate) - new Date(commonStart)) / (365.25 * 86400000)) : navPeriodYears;
+  var navSub = document.getElementById('navSub');
+  if (Math.abs(actualYears - navPeriodYears) > 0.3) {
+    navSub.textContent = 'Normaliseeritud 100-le. Tegelik periood: '+actualYears.toFixed(1)+' aastat (andmed alates '+commonStart+')';
+  } else {
+    navSub.textContent = 'Normaliseeritud 100-le valitud perioodi alguses';
+  }
+
   var traces = funds.map(function(f) {
     var nd = NAV[f]; if (!nd) return null;
     var startIdx = 0;
     for (var i = 0; i < nd.dates.length; i++) {
-      if (nd.dates[i] >= cutoffStr) { startIdx = i; break; }
+      if (nd.dates[i] >= commonStart) { startIdx = i; break; }
     }
     var dates = nd.dates.slice(startIdx);
     var rawValues = nd.values.slice(startIdx);
@@ -398,10 +465,55 @@ function renderNav(funds) {
              line: { color: COLORS[f], width: 2 },
              hovertemplate: LABELS[f] + '<br>%{x}: %{y:.1f}<extra></extra>' };
   }).filter(Boolean);
-  Plotly.newPlot('chartNav', traces, {
-    ...PL, yaxis: { title: 'NAV (normaliseeritud = 100)' },
+  Plotly.newPlot('chartNav', traces, Object.assign({}, PL, {
+    yaxis: { title: 'NAV (normaliseeritud = 100)' },
     xaxis: { title: '' }, legend: { orientation: 'h', y: 1.1 }, height: 380,
-  }, { responsive: true, displayModeBar: false });
+  }), { responsive: true, displayModeBar: false });
+
+  // Return comparison table
+  var retTable = document.getElementById('navReturnTable');
+  var rows = funds.map(function(f) {
+    var nd = NAV[f]; if (!nd) return null;
+    var si = 0;
+    for (var i = 0; i < nd.dates.length; i++) {
+      if (nd.dates[i] >= commonStart) { si = i; break; }
+    }
+    var startVal = nd.values[si], endVal = nd.values[nd.values.length - 1];
+    var startDate = nd.dates[si], endDate = nd.dates[nd.dates.length - 1];
+    var years = (new Date(endDate) - new Date(startDate)) / (365.25 * 86400000);
+    if (years <= 0 || !startVal) return null;
+    var annReturn = (Math.pow(endVal / startVal, 1 / years) - 1) * 100;
+    var fee = FEES[f] || 0;
+    return { f: f, annReturn: annReturn, fee: fee, years: years };
+  }).filter(Boolean);
+
+  if (rows.length > 0) {
+    var periodLabel = navPeriodYears + 'a';
+    var html = '<table class="return-table"><thead><tr>'+
+      '<th>Fond</th><th>Tootlus ('+periodLabel+')</th><th>Jooksev tasu</th>'+
+      '</tr></thead><tbody>';
+    rows.forEach(function(r) {
+      html += '<tr>'+
+        '<td class="fund-name" style="color:'+COLORS[r.f]+'">'+LABELS[r.f]+'</td>'+
+        '<td style="font-weight:700">'+(r.annReturn >= 0 ? '+' : '')+r.annReturn.toFixed(2)+'%</td>'+
+        '<td>'+r.fee.toFixed(2)+'%</td>'+
+        '</tr>';
+    });
+    if (rows.length === 2) {
+      var feeDiff = Math.abs(rows[0].fee - rows[1].fee);
+      var expensive = rows[0].fee > rows[1].fee ? rows[0] : rows[1];
+      var feeEurosPer10k = (feeDiff / 100 * 10000).toFixed(0);
+      html += '<tr><td colspan="3" class="fee-diff" style="border-top:2px solid var(--g200);padding-top:10px;">'+
+        LABELS[expensive.f]+' tasu on <span class="num-accent">'+feeDiff.toFixed(2)+'</span> protsendipunkti k\u00f5rgem \u2014 '+
+        'see on <span class="num-accent">'+feeEurosPer10k+'\u20ac</span> aastas iga 10\u2009000\u20ac kohta.'+
+        '</td></tr>';
+    }
+    html += '</tbody></table>';
+    html += '<div style="font-size:0.75rem;color:var(--g400);margin-top:0.5rem;">Tootlus on juba tasude j\u00e4rel. Eelmiste perioodide tootlus ei garanteeri tulevast.</div>';
+    retTable.innerHTML = html;
+  } else {
+    retTable.innerHTML = '';
+  }
 }
 
 function renderOverlap(funds) {
@@ -419,38 +531,45 @@ function renderOverlap(funds) {
     var sharedPctA = (ov.shared_weight_a / (ov.shared_weight_a + ov.only_weight_a) * 100).toFixed(0);
     var sharedPctB = (ov.shared_weight_b / (ov.shared_weight_b + ov.only_weight_b) * 100).toFixed(0);
 
+    var bottomText = '';
+    if (parseInt(sharedPctA) > 80 && parseInt(sharedPctB) > 80) {
+      bottomText = 'Fondid investeerivad suures osas samadesse kohtadesse.';
+    } else if (parseInt(sharedPctA) > parseInt(sharedPctB)) {
+      bottomText = 'Suur osa '+SHORT[f2]+' investeeringutest on ka '+SHORT[f1]+' portfellis.';
+    } else {
+      bottomText = 'Suur osa '+SHORT[f1]+' investeeringutest on ka '+SHORT[f2]+' portfellis.';
+    }
+
     var vennHtml =
-      '<svg viewBox="0 0 520 320" style="width:100%;max-width:520px;display:block;margin:0 auto;">'+
-        '<text x="170" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="'+COLORS[f1]+'">'+SHORT[f1]+'</text>'+
-        '<text x="170" y="48" text-anchor="middle" font-size="12" fill="'+COLORS[f1]+'">('+totalA+' investeeringut)</text>'+
-        '<text x="350" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="'+COLORS[f2]+'">'+SHORT[f2]+'</text>'+
-        '<text x="350" y="48" text-anchor="middle" font-size="12" fill="'+COLORS[f2]+'">('+totalB+' investeeringut)</text>'+
-        '<circle cx="200" cy="170" r="120" fill="'+COLORS[f1]+'15" stroke="'+COLORS[f1]+'" stroke-width="2.5"/>'+
-        '<circle cx="320" cy="170" r="120" fill="'+COLORS[f2]+'15" stroke="'+COLORS[f2]+'" stroke-width="2.5"/>'+
-        '<text x="140" y="160" text-anchor="middle" font-size="24" font-weight="800" fill="'+COLORS[f1]+'">'+ov.only_a+'</text>'+
-        '<text x="140" y="182" text-anchor="middle" font-size="13" fill="'+COLORS[f1]+'">ainult</text>'+
-        '<text x="140" y="198" text-anchor="middle" font-size="13" fill="'+COLORS[f1]+'">'+SHORT[f1]+'</text>'+
-        '<text x="260" y="155" text-anchor="middle" font-size="30" font-weight="800" fill="#1f2937">'+ov.shared+'</text>'+
-        '<text x="260" y="178" text-anchor="middle" font-size="13" fill="#4b5563">sama</text>'+
-        '<text x="260" y="195" text-anchor="middle" font-size="13" fill="#4b5563">investeering</text>'+
-        '<text x="380" y="160" text-anchor="middle" font-size="24" font-weight="800" fill="'+COLORS[f2]+'">'+ov.only_b+'</text>'+
-        '<text x="380" y="182" text-anchor="middle" font-size="13" fill="'+COLORS[f2]+'">ainult</text>'+
-        '<text x="380" y="198" text-anchor="middle" font-size="13" fill="'+COLORS[f2]+'">'+SHORT[f2]+'</text>'+
-        '<text x="260" y="310" text-anchor="middle" font-size="13" fill="#4b5563">'+
-          'Kattuvus rahaliselt: '+sharedPctA+'% '+SHORT[f1]+' rahast, '+sharedPctB+'% '+SHORT[f2]+' rahast'+
-        '</text>'+
+      '<svg viewBox="0 0 580 330" style="width:100%;max-width:580px;display:block;margin:0 auto;">'+
+        '<text x="180" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="'+COLORS[f1]+'">'+SHORT[f1]+'</text>'+
+        '<text x="180" y="46" text-anchor="middle" font-size="12" fill="'+COLORS[f1]+'">('+totalA+' investeeringut)</text>'+
+        '<text x="400" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="'+COLORS[f2]+'">'+SHORT[f2]+'</text>'+
+        '<text x="400" y="46" text-anchor="middle" font-size="12" fill="'+COLORS[f2]+'">('+totalB+' investeeringut)</text>'+
+        '<circle cx="220" cy="175" r="120" fill="'+COLORS[f1]+'15" stroke="'+COLORS[f1]+'" stroke-width="2.5"/>'+
+        '<circle cx="360" cy="175" r="120" fill="'+COLORS[f2]+'15" stroke="'+COLORS[f2]+'" stroke-width="2.5"/>'+
+        '<text x="150" y="165" text-anchor="middle" font-size="24" font-weight="800" fill="'+COLORS[f1]+'" font-family="Georgia, serif">'+ov.only_a+'</text>'+
+        '<text x="150" y="187" text-anchor="middle" font-size="13" fill="'+COLORS[f1]+'">ainult</text>'+
+        '<text x="150" y="203" text-anchor="middle" font-size="13" fill="'+COLORS[f1]+'">'+SHORT[f1]+'</text>'+
+        '<text x="290" y="160" text-anchor="middle" font-size="30" font-weight="800" fill="#013063" font-family="Georgia, serif">'+ov.shared+'</text>'+
+        '<text x="290" y="183" text-anchor="middle" font-size="13" fill="#013063">sama</text>'+
+        '<text x="290" y="200" text-anchor="middle" font-size="13" fill="#013063">investeering</text>'+
+        '<text x="430" y="165" text-anchor="middle" font-size="24" font-weight="800" fill="'+COLORS[f2]+'" font-family="Georgia, serif">'+ov.only_b+'</text>'+
+        '<text x="430" y="187" text-anchor="middle" font-size="13" fill="'+COLORS[f2]+'">ainult</text>'+
+        '<text x="430" y="203" text-anchor="middle" font-size="13" fill="'+COLORS[f2]+'">'+SHORT[f2]+'</text>'+
+        '<text x="290" y="312" text-anchor="middle" font-size="13" fill="#013063">'+bottomText+'</text>'+
+        '<text x="290" y="328" text-anchor="middle" font-size="10" fill="#9ca3af">('+sharedPctA+'% '+SHORT[f1]+' rahast, '+sharedPctB+'% '+SHORT[f2]+' rahast)</text>'+
       '</svg>';
     document.getElementById('vennArea').innerHTML = vennHtml;
   }
 
-  // Correlation gauge
   var r = DATA.correlation_matrix[key] || 0;
   var rPct = (Math.abs(r) * 100).toFixed(0);
   var rDesc = '';
-  if (r > 0.9) rDesc = 'Fondid liiguvad peaaegu identselt \u2014 sisuliselt sama portfell.';
-  else if (r > 0.7) rDesc = 'Fondid liiguvad sarnaselt \u2014 suur kattuvus.';
-  else if (r > 0.4) rDesc = 'Fondid liiguvad osaliselt koos, aga on selgeid erinevusi.';
-  else rDesc = 'Fondid liiguvad erinevalt \u2014 p\u00e4riselt erinev portfell.';
+  if (r > 0.9) rDesc = 'Portfellid on peaaegu identsed \u2014 samad investeeringud, sarnased osakaalud.';
+  else if (r > 0.7) rDesc = 'Portfellid on sarnased \u2014 suur osa investeeringutest kattub.';
+  else if (r > 0.4) rDesc = 'Portfellides on nii kattuvusi kui erinevusi.';
+  else rDesc = 'Portfellid on v\u00e4ga erinevad \u2014 erinev investeerimisstrateegia.';
   document.getElementById('corrGaugeArea').innerHTML =
     '<div class="corr-gauge">'+
       '<div class="corr-gauge-label">Portfellide sarnasus</div>'+
@@ -458,9 +577,9 @@ function renderOverlap(funds) {
       '<div style="display:flex;justify-content:space-between;font-size:0.7rem;color:var(--g400);margin-bottom:0.4rem;">'+
         '<span>0 \u2014 erinev</span><span>1 \u2014 identne</span>'+
       '</div>'+
-      '<div class="corr-gauge-val" style="color:'+(r > 0.7 ? 'var(--green)' : r > 0.4 ? 'var(--amber)' : 'var(--red)')+'">r = '+r.toFixed(3)+'</div>'+
+      '<div class="corr-gauge-val" style="color:'+(r > 0.7 ? 'var(--blue)' : r > 0.4 ? 'var(--amber)' : 'var(--red)')+'">r = '+r.toFixed(3)+'</div>'+
       '<div class="corr-gauge-desc">'+rDesc+'</div>'+
-      '<div style="font-size:0.75rem;color:var(--g400);margin-top:0.3rem;">Pearsoni korrelatsioon kahe fondi n\u00e4dalatootluste vahel (viimased 5 aastat). N\u00e4itab, kui sarnaselt fondide v\u00e4\u00e4rtus ajas liigub.</div>'+
+      '<div style="font-size:0.75rem;color:var(--g400);margin-top:0.3rem;">Pearsoni korrelatsioon portfellide koosseisu vahel. N\u00e4itab, kui sarnased on fondide investeeringud ja nende osakaalud.</div>'+
     '</div>';
 }
 
@@ -533,77 +652,80 @@ function renderScatter(funds) {
   var f1 = funds[0], f2 = funds[1];
   var w1 = DATA.funds[f1].weights || {};
   var w2 = DATA.funds[f2].weights || {};
-  var allKeys = new Set([...Object.keys(w1), ...Object.keys(w2)]);
+  var allKeys = Object.keys(w1).concat(Object.keys(w2));
+  var seen = {};
+  var unique = allKeys.filter(function(k) { if (seen[k]) return false; seen[k] = true; return true; });
   var xs = [], ys = [], names = [];
-  allKeys.forEach(function(k) {
+  unique.forEach(function(k) {
     var a = w1[k]||0, b = w2[k]||0;
     if (a > 0.02 || b > 0.02) { xs.push(a); ys.push(b); names.push(k.replace(/^(PE|RE|BOND|ETF)\|/, '')); }
   });
   document.getElementById('scatterSub').textContent =
     LABELS[f1]+' vs '+LABELS[f2]+'. Iga t\u00e4pp = \u00fcks investeering. Diagonaalil = identne kaal.';
-  var mx = Math.max(...xs, ...ys) * 1.05;
+  var mx = Math.max.apply(null, xs.concat(ys)) * 1.05;
   var r = DATA.correlation_matrix[f1+'|'+f2] || 0;
   Plotly.newPlot('chartScatter', [
     { x: xs, y: ys, mode:'markers', showlegend:false,
-      marker:{size:8,color:'#6366f1',opacity:0.45}, text:names,
+      marker:{size:8,color:'#0081EE',opacity:0.45}, text:names,
       hovertemplate:'%{text}<br>'+LABELS[f1]+': %{x:.2f}%<br>'+LABELS[f2]+': %{y:.2f}%<extra></extra>' },
     { x:[0,mx], y:[0,mx], mode:'lines', line:{dash:'dash',color:'#ccc'}, showlegend:false },
-  ], { ...PL,
+  ], Object.assign({}, PL, {
     xaxis:{title:LABELS[f1]+' (%)'},
     yaxis:{title:LABELS[f2]+' (%)'},
     height:450,
     annotations:[{ x:0.95, y:0.05, xref:'paper', yref:'paper',
       text:'r = '+r.toFixed(3), showarrow:false,
       font:{size:16,color:'#333'}, bgcolor:'rgba(255,255,255,0.8)' }],
-  }, {responsive:true, displayModeBar:false});
+  }), {responsive:true, displayModeBar:false});
 }
 
 function renderSunburst(funds) {
   var area = document.getElementById('sunburstArea');
   area.innerHTML = '';
   var sbWidth = funds.length === 2 ? 'calc(50% - 0.5rem)' : '100%';
-  var pal = ['#006CE6','#16a34a','#dc2626','#f59e0b','#7c3aed','#e11d48','#0d9488','#ea580c','#6b7280'];
 
   funds.forEach(function(f) {
     var fd = DATA.funds[f];
     var nodes = [];
     var rootId = f + '_root';
     var ac = fd.asset_classes || { stocks: 100 };
+    var pal = ['#0081EE','#16a34a','#dc2626','#F7A600','#7c3aed','#D63B84','#0d9488','#ea580c','#6b7280'];
 
     if (fd.etf_breakdown) {
-      // Assign each top stock to its primary ETF (largest ETF among those holding it)
+      var acBaseColors = { stocks:'#0081EE', etfs:'#60a5fa', bonds:'#6b7280', deposits:'#d1d5db' };
+      var stocksPct = (ac.stocks || 0) + (ac.etfs || 0);
+      var bondsPct = ac.bonds || 0;
+      var depositsPct = ac.deposits || 0;
+      var etfsPct = ac.etfs || 0;
+
+      var stocksId = f + '_ac_stocks';
+      if (stocksPct > 0.5) nodes.push({id: stocksId, label: 'Aktsiad '+(ac.stocks||0).toFixed(0)+'%', parentId: rootId, value: 0, color: acBaseColors.stocks});
+      if (etfsPct > 0.5) {
+        var etfsNodeId = f + '_ac_etfs';
+        nodes.push({id: etfsNodeId, label: 'ETF-id '+etfsPct.toFixed(0)+'%', parentId: rootId, value: etfsPct, color: acBaseColors.etfs});
+      }
+      if (bondsPct > 0.5) nodes.push({id: f+'_ac_bonds', label: 'V\u00f5lakirjad '+bondsPct.toFixed(0)+'%', parentId: rootId, value: bondsPct, color: acBaseColors.bonds});
+      if (depositsPct > 0.5) nodes.push({id: f+'_ac_deposits', label: 'Hoiused '+depositsPct.toFixed(0)+'%', parentId: rootId, value: depositsPct, color: acBaseColors.deposits});
+
       var topStocks = (fd.top_holdings || []).slice(0, 40);
-      var etfAssignedWeight = {};
-      fd.etf_breakdown.forEach(function(_, ei) { etfAssignedWeight[ei] = 0; });
-
+      var assignedStockWeight = 0;
       topStocks.forEach(function(h, si) {
-        var bestEi = 0, bestWeight = -1;
-        fd.etf_breakdown.forEach(function(etf, ei) {
-          if (etf.top_stocks.some(function(s) { return s.name === h.name; })) {
-            if (etf.fund_weight > bestWeight) { bestWeight = etf.fund_weight; bestEi = ei; }
-          }
-        });
-        var etfId = f + '_etf' + bestEi;
-        var col = pal[bestEi % pal.length];
         var sn = h.name.split(/\s/).slice(0, 2).join(' ');
-        nodes.push({id: f+'_s'+si, label: sn, parentId: etfId, value: h.weight, color: col+'88'});
-        etfAssignedWeight[bestEi] = (etfAssignedWeight[bestEi] || 0) + h.weight;
+        var hue = 215 + (si % 8) * 3;
+        var light = 50 + (si % 6) * 4;
+        var col = 'hsl('+hue+', 70%, '+light+'%)';
+        nodes.push({id: f+'_s'+si, label: sn, parentId: stocksId, value: h.weight, color: col});
+        assignedStockWeight += h.weight;
       });
-
-      fd.etf_breakdown.forEach(function(etf, ei) {
-        var etfId = f + '_etf' + ei;
-        var col = pal[ei % pal.length];
-        var rest = etf.fund_weight - (etfAssignedWeight[ei] || 0);
-        if (rest > 0.5) {
-          nodes.push({id: etfId+'_rest', label: 'Muud', parentId: etfId, value: rest, color: col+'44'});
-        }
-        nodes.push({id: etfId, label: etf.name+' ('+etf.fund_weight.toFixed(0)+'%)', parentId: rootId, value: 0, color: col});
-      });
+      var restStocks = (ac.stocks || 0) - assignedStockWeight;
+      if (restStocks > 0.5) {
+        nodes.push({id: f+'_srest', label: 'Muud aktsiad', parentId: stocksId, value: restStocks, color: '#93c5fd'});
+      }
 
     } else if (fd.pe_holdings && fd.pe_holdings.length > 0) {
       var stockId = f + '_stocks';
       fd.top_holdings.slice(0, 8).forEach(function(h, i) {
-        nodes.push({id: f+'_s'+i, label: h.name.split(/\s/).slice(0,2).join(' '), parentId: stockId, value: h.weight, color: '#3b82f6'});
+        nodes.push({id: f+'_s'+i, label: h.name.split(/\s/).slice(0,2).join(' '), parentId: stockId, value: h.weight, color: '#0081EE'});
       });
       var sr = fd.top_holdings.slice(8).reduce(function(s,h) { return s+h.weight; }, 0);
       if (sr > 0) nodes.push({id: f+'_srest', label: 'Muud aktsiad', parentId: stockId, value: sr, color: '#93c5fd'});
@@ -643,7 +765,7 @@ function renderSunburst(funds) {
 
       if ((ac.deposits||0) > 0.5) nodes.push({id: f+'_dep', label: 'Hoiused', parentId: rootId, value: ac.deposits, color: '#d1d5db'});
 
-      nodes.push({id: stockId, label: 'Aktsiad', parentId: rootId, value: 0, color: '#006CE6'});
+      nodes.push({id: stockId, label: 'Aktsiad', parentId: rootId, value: 0, color: '#0081EE'});
       nodes.push({id: peId, label: 'Erakapital', parentId: rootId, value: 0, color: '#7c3aed'});
 
     } else {
@@ -659,14 +781,17 @@ function renderSunburst(funds) {
         bySector['Muu'].push({ name: 'Muud ('+(fd.n_stocks - holdings.length)+')', weight: restWeight, _isRest: true });
       }
 
-      var cl = Object.entries(bySector).map(function(e) { return {s:e[0],hs:e[1],total:e[1].reduce(function(sum,h){return sum+h.weight;},0)}; }).sort(function(a,b){return b.total-a.total;});
+      var sectorKeys = Object.keys(bySector);
+      var cl = sectorKeys.map(function(s) {
+        return {s:s, hs:bySector[s], total:bySector[s].reduce(function(sum,h){return sum+h.weight;},0)};
+      }).sort(function(a,b){return b.total-a.total;});
       cl.forEach(function(item, ci) {
-        var col = pal[ci%pal.length], sId = f+'_sec'+ci;
+        var sectorCol = pal[ci%pal.length], sId = f+'_sec'+ci;
         item.hs.forEach(function(h, hi) {
           var sn = h._isRest ? h.name : h.name.split(/\s/).slice(0,2).join(' ');
-          nodes.push({id: sId+'_h'+hi, label: sn, parentId: sId, value: h.weight, color: h._isRest ? '#d1d5db' : col+'88'});
+          nodes.push({id: sId+'_h'+hi, label: sn, parentId: sId, value: h.weight, color: h._isRest ? '#d1d5db' : sectorCol+'88'});
         });
-        nodes.push({id: sId, label: item.s, parentId: rootId, value: 0, color: col});
+        nodes.push({id: sId, label: item.s, parentId: rootId, value: 0, color: sectorCol});
       });
     }
 
@@ -680,9 +805,9 @@ function renderSunburst(funds) {
     var rootSum = 0;
     nodes.forEach(function(n) { if (n.parentId === rootId) rootSum += n.value; });
 
-    var ids = [rootId], labels = [SHORT[f]||f], parents = [''], vals = [rootSum], cols = ['#e5e7eb'], cdata = [rootSum];
+    var ids = [rootId], lbls = [SHORT[f]||f], parents = [''], vals = [rootSum], cols = ['#e5e7eb'], cdata = [rootSum];
     nodes.forEach(function(n) {
-      ids.push(n.id); labels.push(n.label); parents.push(n.parentId);
+      ids.push(n.id); lbls.push(n.label); parents.push(n.parentId);
       vals.push(n.value); cols.push(n.color);
       cdata.push(n._hoverWeight != null ? n._hoverWeight : n.value);
     });
@@ -694,16 +819,16 @@ function renderSunburst(funds) {
     area.appendChild(div);
 
     Plotly.newPlot(divId, [{
-      type: 'sunburst', ids: ids, labels: labels, parents: parents, values: vals, customdata: cdata,
+      type: 'sunburst', ids: ids, labels: lbls, parents: parents, values: vals, customdata: cdata,
       branchvalues: 'total',
       hovertemplate: '<b>%{label}</b><br>%{customdata:.2f}%<extra></extra>',
       textinfo: 'label',
       insidetextorientation: 'radial',
       marker: { colors: cols, line: { width: 1, color: '#fff' } },
-    }], {
-      ...PL, height: 420, margin: { t: 40, r: 5, b: 5, l: 5 },
+    }], Object.assign({}, PL, {
+      height: 420, margin: { t: 40, r: 5, b: 5, l: 5 },
       title: { text: LABELS[f] || f, font: { size: 14, color: COLORS[f] } },
-    }, { responsive: true, displayModeBar: false });
+    }), { responsive: true, displayModeBar: false });
   });
 }
 
@@ -711,38 +836,47 @@ function renderSectors(funds) {
   var sectorOrder = DATA.acwi_sector_order.slice(0,11).slice();
   funds.forEach(function(f) {
     Object.keys(DATA.funds[f].sectors).forEach(function(s) {
-      if (!sectorOrder.includes(s)) sectorOrder.push(s);
+      if (sectorOrder.indexOf(s) < 0) sectorOrder.push(s);
     });
   });
+  var sectorLabels = sectorOrder.map(trSector);
   var traces = funds.map(function(f) {
     return {
-      y: sectorOrder, x: sectorOrder.map(function(s) { return DATA.funds[f].sectors[s]||0; }),
+      y: sectorLabels, x: sectorOrder.map(function(s) { return DATA.funds[f].sectors[s]||0; }),
       type:'bar', orientation:'h', name: LABELS[f], marker:{color:COLORS[f]},
     };
   });
-  Plotly.newPlot('chartSectors', traces, {
-    ...PL, barmode:'group', xaxis:{title:'Osakaal (%)'},
+  Plotly.newPlot('chartSectors', traces, Object.assign({}, PL, {
+    barmode:'group', xaxis:{title:'Osakaal (%)'},
     yaxis:{autorange:'reversed'}, legend:{orientation:'h',y:1.08},
-    height: Math.max(400, sectorOrder.length*28), margin:{...PL.margin,l:180},
-  }, {responsive:true, displayModeBar:false});
+    height: Math.max(400, sectorOrder.length*28), margin:Object.assign({},PL.margin,{l:140}),
+  }), {responsive:true, displayModeBar:false});
 }
 
 function renderCountries(funds) {
-  var cs = new Map();
+  var cs = {};
   funds.forEach(function(f) {
-    Object.entries(DATA.funds[f].countries).forEach(function(e) { cs.set(e[0],(cs.get(e[0])||0)+e[1]); });
+    var countries = DATA.funds[f].countries;
+    Object.keys(countries).forEach(function(c) {
+      cs[c] = (cs[c]||0) + countries[c];
+    });
   });
-  var order = Array.from(cs.entries()).sort(function(a,b){return b[1]-a[1];}).map(function(e){return e[0];}).slice(0,12);
+  var entries = Object.keys(cs).map(function(k) { return [k, cs[k]]; });
+  entries.sort(function(a,b) { return b[1]-a[1]; });
+  var order = entries.slice(0,12).map(function(e) { return e[0]; });
+  var countryLabels = order.map(trCountry);
   var traces = funds.map(function(f) {
     return {
-      x:order, y:order.map(function(c){return DATA.funds[f].countries[c]||0;}),
-      type:'bar', name:LABELS[f], marker:{color:COLORS[f]},
+      y: countryLabels, x: order.map(function(c) { return DATA.funds[f].countries[c]||0; }),
+      type:'bar', orientation:'h', name:LABELS[f], marker:{color:COLORS[f]},
     };
   });
-  Plotly.newPlot('chartCountries', traces, {
-    ...PL, barmode:'group', xaxis:{tickangle:-45},
-    yaxis:{title:'Osakaal (%)'}, legend:{orientation:'h',y:1.1}, height:400,
-  }, {responsive:true, displayModeBar:false});
+  Plotly.newPlot('chartCountries', traces, Object.assign({}, PL, {
+    barmode:'group',
+    yaxis:{autorange:'reversed'}, xaxis:{title:'Osakaal (%)'},
+    legend:{orientation:'h',y:1.1}, height: Math.max(350, order.length*30),
+    margin:Object.assign({},PL.margin,{l:140}),
+  }), {responsive:true, displayModeBar:false});
 }
 
 function renderInsight(funds) {
@@ -750,12 +884,14 @@ function renderInsight(funds) {
   if (funds.length === 1) {
     var fd = DATA.funds[funds[0]], ac = fd.asset_classes || {};
     if ((ac.pe||0) > 1) {
-      el.innerHTML = '<strong>'+LABELS[funds[0]]+'</strong> erineb indeksfondidest: '+(ac.pe||0).toFixed(0)+
-        '% erakapitali ja '+(ac.re||0).toFixed(0)+'% kinnisvara on l\u00e4bipaistmatud investeeringud. '+
-        'Aktsiapositsioonid on aktiivselt valitud ja erinevad indeksfondidest.';
+      el.innerHTML = '<strong>'+LABELS[funds[0]]+'</strong> erineb indeksfondidest: <span class="num-accent">'+(ac.pe||0).toFixed(0)+'%</span> '+
+        'erakapitali ja <span class="num-accent">'+(ac.re||0).toFixed(0)+'%</span> kinnisvara on l\u00e4bipaistmatud investeeringud. '+
+        'Fondijuht valib aktsiad ise \u2014 sinu raha l\u00e4heb teistesse kohtadesse kui indeksfondides.';
     } else {
+      var insightFee = FEES[funds[0]] || 0;
       el.innerHTML = '<strong>'+LABELS[funds[0]]+'</strong> investeerib samadesse ettev\u00f5tetesse '+
-        'kui iga teine Eesti indeks-pensionifond. <strong>Ainus t\u00f5eline erinevus on tasu.</strong>';
+        'kui teised Eesti indeks-pensionifondid. Portfellid on sisuliselt samad \u2014 '+
+        'seega tasub v\u00f5rrelda tasusid. Sina maksad <span class="num-accent">'+insightFee.toFixed(2)+'%</span> aastas.';
     }
   } else {
     var pairs = [];
@@ -765,17 +901,28 @@ function renderInsight(funds) {
     var allHigh = pairs.every(function(p) { return p.r > 0.9; });
     var anyLow = pairs.some(function(p) { return p.r < 0.3; });
     if (allHigh) {
-      el.innerHTML = 'K\u00f5igi valitud fondide korrelatsioon on \u00fcle 0.9 \u2014 '+
-        'nad investeerivad sisuliselt samadesse ettev\u00f5tetesse. '+
-        '<strong>Ainus t\u00f5eline erinevus on tasu, mida sa maksad.</strong>';
+      var insFeeA = FEES[funds[0]] || 0, insFeeB = FEES[funds[1]] || 0;
+      var insExpensive = insFeeA > insFeeB ? funds[0] : funds[1];
+      var insCheap = insFeeA > insFeeB ? funds[1] : funds[0];
+      var insDiff = Math.abs(insFeeA - insFeeB);
+      var insEurosPer10k = (insDiff / 100 * 10000).toFixed(0);
+      el.innerHTML = 'Sisuliselt sama portfell, erinev hind. M\u00f5lemad fondid investeerivad samadesse ettev\u00f5tetesse. '+
+        '<strong>'+LABELS[insCheap]+'</strong>: <span class="num-accent">'+FEES[insCheap].toFixed(2)+'%</span>, '+
+        '<strong>'+LABELS[insExpensive]+'</strong>: <span class="num-accent">'+FEES[insExpensive].toFixed(2)+'%</span>. '+
+        'See t\u00e4hendab <span class="num-accent">'+insEurosPer10k+'\u20ac</span> vahet aastas iga 10\u2009000\u20ac kohta. '+
+        'Tark valik on lihtne.';
     } else if (anyLow) {
-      var low = pairs.find(function(p) { return p.r < 0.3; });
+      var low = pairs.filter(function(p) { return p.r < 0.3; })[0];
       el.innerHTML = '<strong>'+LABELS[low.a]+'</strong> ja <strong>'+LABELS[low.b]+'</strong> '+
-        'portfellid on v\u00e4ga erinevad (r = '+low.r.toFixed(3)+'). '+
-        'Aktiivne fond investeerib hoopis teistmoodi \u2014 aga kas see t\u00e4hendab paremat tootlust?';
+        'investeerivad hoopis erinevatesse kohtadesse. '+
+        'Aktiivne fond valib teised ettev\u00f5tted \u2014 aga kas k\u00f5rgem tasu toob ka k\u00f5rgemat tootlust? Vaata \u00fclalt NAV graafikut.';
     } else {
-      el.innerHTML = 'M\u00f5ned erinevused on, aga \u00fcldpilt on sarnane: '+
-        'samad suured ettev\u00f5tted domineerivad igal pool.';
+      var medFeeA = FEES[funds[0]] || 0, medFeeB = FEES[funds[1]] || 0;
+      var medDiff = Math.abs(medFeeA - medFeeB);
+      var medEurosPer10k = (medDiff / 100 * 10000).toFixed(0);
+      el.innerHTML = 'Samad suured ettev\u00f5tted domineerivad m\u00f5lemas fondis \u2014 portfellid on suures osas sarnased. '+
+        'Erinevus on tasudes: <span class="num-accent">'+medDiff.toFixed(2)+'</span> protsendipunkti ehk '+
+        '<span class="num-accent">'+medEurosPer10k+'\u20ac</span> aastas iga 10\u2009000\u20ac kohta.';
     }
   }
 }
