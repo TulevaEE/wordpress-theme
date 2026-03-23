@@ -61,7 +61,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/20250301_Mudelportfell_Tuleva.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Pohiteave-TUK00-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Pohiteave-TUK00-kehtib-alates-19.03.2026.pdf" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_nav_procedure_document_url(); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
