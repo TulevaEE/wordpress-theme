@@ -4,8 +4,9 @@ require_once get_template_directory() . '/helpers/deadline-calculations.php';
 $countdown = get_second_pillar_countdown_if_active();
 $countdown_end = $countdown ? $countdown['end_ms'] : time() * 1000 - 1000;
 $deadline_name = $countdown ? $countdown['deadline_name'] : '';
+$season_class = $countdown && $countdown['month'] === 3 ? 'bg-hero-spring' : 'bg-hero-summer';
 ?>
-<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter bg-hero-summer d-flex flex-column section-spacing">
+<section id="<?php the_sub_field('component_id'); ?>" class="hero bg-hero-counter <?php echo $season_class; ?> d-flex flex-column section-spacing">
     <div class="container my-auto">
         <div class="row align-items-center">
             <div class="col text-center text-navy"

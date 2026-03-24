@@ -72,6 +72,7 @@ function get_second_pillar_countdown_if_active() {
             return [
                 'end_ms' => $end_ms,
                 'deadline_name' => $deadline->format('F j'),
+                'month' => (int) $deadline->format('n'),
             ];
         }
     }

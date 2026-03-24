@@ -513,11 +513,9 @@ $(document).ready(function ($) {
         },
         initCountdownTimerFull = function () {
             // Get the countdown end date from the data attribute (dynamically set in PHP)
-            var counterElement = document.querySelector('.counter-small');
-            var countdownEndTime = counterElement ? parseInt(counterElement.getAttribute('data-countdown-end')) : null;
-
-            // Fallback to July 31 if no dynamic date is found (for backwards compatibility)
-            var targetTime = countdownEndTime || 1753995599000;
+            var counterElement = document.querySelector('[data-countdown-end]');
+            if (!counterElement) return;
+            var targetTime = parseInt(counterElement.getAttribute('data-countdown-end'));
 
             var days = 0, hours = 0, minutes = 0, seconds = 0;
             var daysFirstNumber = document.getElementById('days-first-number');
