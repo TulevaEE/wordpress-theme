@@ -1,0 +1,319 @@
+{
+  "generated": "2026-03-05",
+  "coverage": {
+    "Tuleva": {
+      "pct": 100
+    },
+    "Luminor 16-50": {
+      "pct": 100
+    },
+    "SEB Indeks": {
+      "pct": 72
+    },
+    "Swedbank K1960": {
+      "pct": 100
+    },
+    "Swedbank K1970": {
+      "pct": 100
+    },
+    "Swedbank K1980": {
+      "pct": 100
+    },
+    "Swedbank K1990": {
+      "pct": 100
+    },
+    "LHV Ettevõtlik": {
+      "pct": 100
+    },
+    "LHV Julge": {
+      "pct": 100
+    },
+    "SEB 55+": {
+      "pct": 60
+    },
+    "LHV Rahulik": {
+      "pct": 100
+    },
+    "LHV Indeks": {
+      "pct": 100
+    },
+    "LHV Tasakaalukas": {
+      "pct": 100
+    },
+    "Luminor Indeks": {
+      "pct": 100
+    },
+    "Luminor 50-56": {
+      "pct": 100
+    },
+    "Luminor 56+": {
+      "pct": 100
+    },
+    "Luminor 61-65": {
+      "pct": 100
+    },
+    "SEB 18+": {
+      "pct": 68
+    },
+    "SEB 60+": {
+      "pct": 79
+    },
+    "SEB 65+": {
+      "pct": 96
+    },
+    "Swedbank Indeks": {
+      "pct": 100
+    },
+    "Swedbank 2000-09": {
+      "pct": 100
+    },
+    "Swedbank Konservatiivne": {
+      "pct": 100
+    },
+    "Tuleva Võlakirjad": {
+      "pct": 100
+    }
+  },
+  "etf_sources": [
+    {
+      "ticker": "4BRZ",
+      "stocks": 46,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "BNKE",
+      "stocks": 10,
+      "source": "EODHD API",
+      "type": "full"
+    },
+    {
+      "ticker": "CNYA",
+      "stocks": 385,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "EMXU",
+      "stocks": 46,
+      "source": "EODHD API",
+      "type": "full"
+    },
+    {
+      "ticker": "GLOBALFOND_A",
+      "stocks": 30,
+      "source": "Fondlista.se (top 30)",
+      "type": "full"
+    },
+    {
+      "ticker": "IKSA",
+      "stocks": 33,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "NDIA",
+      "stocks": 165,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SAEM",
+      "stocks": 2684,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SAEU",
+      "stocks": 374,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SAJP",
+      "stocks": 161,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SASU",
+      "stocks": 493,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SAWD",
+      "stocks": 1206,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SPPY",
+      "stocks": 187,
+      "source": "SPDR CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "SSAC",
+      "stocks": 1737,
+      "source": "iShares CSV",
+      "type": "full"
+    },
+    {
+      "ticker": "XTJP",
+      "stocks": 178,
+      "source": "Xtrackers (aastaaruanne)",
+      "type": "full"
+    }
+  ],
+  "proxy_mappings": [
+    {
+      "isin": "IE00BFG1TM61",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "IE00BFNM3P36",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "IE00BKM4GZ66",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "IE00B3VWM098",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "IE000H1H16W5",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "DE000A0H08F7",
+      "mapped_to": "SAEU"
+    },
+    {
+      "isin": "IE00BJZ2DC62",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "IE000COQKPO9",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "IE0009HF1MK9",
+      "mapped_to": "SSAC"
+    },
+    {
+      "isin": "IE0003XJA0J9",
+      "mapped_to": "SSAC"
+    },
+    {
+      "isin": "IE000QIF5N15",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "IE00BTJRMP35",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "IE000MWUQBJ0",
+      "mapped_to": "SAEU"
+    },
+    {
+      "isin": "IE00B5SSQT16",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "IE000XZSV718",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "LU2089238385",
+      "mapped_to": "SAJP"
+    },
+    {
+      "isin": "IE00BFNM3J75",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "IE000NFR7C63",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "LU1525418643",
+      "mapped_to": "SAEU"
+    },
+    {
+      "isin": "IE00BFXR5T61",
+      "mapped_to": "SAJP"
+    },
+    {
+      "isin": "IE00BFXR5Q31",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "SE0021147394",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "LU1118354460",
+      "mapped_to": "SAEU"
+    },
+    {
+      "isin": "LU1711526407",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "SE0007074091",
+      "mapped_to": "XTJP"
+    },
+    {
+      "isin": "IE00BG36TC12",
+      "mapped_to": "XTJP"
+    },
+    {
+      "isin": "SE0012428290",
+      "mapped_to": "SAEM"
+    },
+    {
+      "isin": "IE000O5FBC47",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "IE000CL68Z69",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "IE00BP2C1V62",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "SE0014429353",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "SE0007074059",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "SE0007074083",
+      "mapped_to": "SASU"
+    },
+    {
+      "isin": "LU2942508834",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "LU2418734716",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "LU2853083306",
+      "mapped_to": "SAWD"
+    },
+    {
+      "isin": "IE00B3DJ5M15",
+      "mapped_to": "SAEM"
+    }
+  ]
+}
