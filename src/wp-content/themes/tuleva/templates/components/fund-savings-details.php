@@ -168,6 +168,14 @@ $investor_rights_url = get_field('investor_rights_file');
                             </li>
                         </ul>
 
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Fund unit price change', TEXT_DOMAIN) ?></h2>
+                        <ul class="list-style-arrow text-secondary">
+                            <li>
+                                <a href="<?php echo get_template_directory_uri(); ?>/nav-csv-download.php"
+                                   download><?php _e('Download NAV history', TEXT_DOMAIN) ?></a>
+                            </li>
+                        </ul>
+
                         <?php if ($fund_co2_intensity): ?>
                             <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                             <p class="fund-info__item">
