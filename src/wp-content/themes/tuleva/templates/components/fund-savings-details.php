@@ -171,8 +171,7 @@ $investor_rights_url = get_field('investor_rights_file');
                         <h2 class="mt-5 mb-4 h4"><?php _e('Fund unit price change', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow text-secondary">
                             <li>
-                                <a href="<?php echo get_template_directory_uri(); ?>/nav-csv-download.php"
-                                   download><?php _e('Download NAV history', TEXT_DOMAIN) ?></a>
+                                <a href="https://onboarding-service.tuleva.ee/v1/funds/<?php echo esc_attr($fund_isin); ?>/nav?format=csv"><?php _e('Download NAV history', TEXT_DOMAIN) ?></a>
                             </li>
                         </ul>
 
