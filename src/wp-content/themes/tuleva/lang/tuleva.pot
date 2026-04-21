@@ -439,6 +439,14 @@ msgstr ""
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
+#: templates/components/fund-savings-details.php:171
+msgid "Fund unit price change"
+msgstr ""
+
+#: templates/components/fund-savings-details.php:174
+msgid "Download NAV history"
+msgstr ""
+
 #: templates/components/fund-bonds-details.php:92
 #: templates/components/fund-savings-details.php:172
 #: templates/components/fund-stocks-details.php:91

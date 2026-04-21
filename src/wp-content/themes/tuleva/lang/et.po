@@ -460,6 +460,14 @@ msgstr "Eelnevad aruanded"
 msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
+#: templates/components/fund-savings-details.php:171
+msgid "Fund unit price change"
+msgstr "Fondi osakuhinna muutus"
+
+#: templates/components/fund-savings-details.php:174
+msgid "Download NAV history"
+msgstr "Lae alla NAV-i ajalugu"
+
 #: templates/components/fund-bonds-details.php:92
 #: templates/components/fund-savings-details.php:172
 #: templates/components/fund-stocks-details.php:91
