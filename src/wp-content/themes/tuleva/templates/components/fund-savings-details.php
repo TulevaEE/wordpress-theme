@@ -14,6 +14,8 @@ $fund_co2_intensity = get_field('fund_co2_intensity');
 // Documents (file fields return URL directly)
 $prospectus_url = get_field('prospectus_file');
 $terms_url = get_field('terms_file');
+$prospectus_upcoming = get_field('prospectus_upcoming_file');
+$terms_upcoming = get_field('terms_upcoming_file');
 $model_portfolio_url = get_field('model_portfolio_file');
 $key_investor_info_url = get_field('key_investor_info_file');
 $investment_report_url = get_field('investment_report_file');
@@ -104,6 +106,18 @@ $investor_rights_url = get_field('investor_rights_file');
                                            target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                    <?php if ($prospectus_upcoming || $terms_upcoming): ?>
+                                        <br>
+                                        <?php if ($prospectus_upcoming): ?>
+                                            <a href="<?php echo esc_url($prospectus_upcoming['url']); ?>"
+                                               target="_blank"><?php echo esc_html($prospectus_upcoming['title']); ?></a>
+                                        <?php endif; ?>
+                                        <?php if ($prospectus_upcoming && $terms_upcoming): _e(' and ', TEXT_DOMAIN); endif; ?>
+                                        <?php if ($terms_upcoming): ?>
+                                            <a href="<?php echo esc_url($terms_upcoming['url']); ?>"
+                                               target="_blank"><?php echo esc_html($terms_upcoming['title']); ?></a>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($model_portfolio_url): ?>

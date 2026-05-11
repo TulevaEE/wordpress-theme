@@ -268,6 +268,28 @@ acf_add_local_field_group(array (
             'instructions' => 'Link to previous reports archive (external URL)',
             'required' => 0,
         ),
+        array (
+            'key' => 'field_fund_savings_prospectus_upcoming',
+            'label' => 'Prospectus (Upcoming)',
+            'name' => 'prospectus_upcoming_file',
+            'type' => 'file',
+            'instructions' => 'Upcoming prospectus PDF — shown alongside the current one. The file title from the media library is used as the link label (e.g. "TKF100 Prospekt - kehtib alates 12.06.2026").',
+            'required' => 0,
+            'return_format' => 'array',
+            'library' => 'all',
+            'mime_types' => 'pdf',
+        ),
+        array (
+            'key' => 'field_fund_savings_terms_upcoming',
+            'label' => 'Terms and Conditions (Upcoming)',
+            'name' => 'terms_upcoming_file',
+            'type' => 'file',
+            'instructions' => 'Upcoming terms and conditions PDF — shown alongside the current one. The file title from the media library is used as the link label.',
+            'required' => 0,
+            'return_format' => 'array',
+            'library' => 'all',
+            'mime_types' => 'pdf',
+        ),
     ),
     'location' => array (
         array (
