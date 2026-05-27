@@ -413,6 +413,28 @@ $(document).ready(function ($) {
 
                     targetElement.click();
                 }
+
+                const qaToggle = document.querySelector(`#${hash} > a.qa__question[data-bs-toggle="collapse"]`);
+
+                if (qaToggle) {
+                    const collapsedWrapper = qaToggle.closest('.qa__question-wrapper--collapsed');
+                    if (collapsedWrapper) {
+                        const block = collapsedWrapper.closest('.qa-block');
+                        if (block) {
+                            block.querySelectorAll('.qa__question-wrapper--collapsable')
+                                .forEach(el => el.classList.remove('qa__question-wrapper--collapsed'));
+                            const expandLink = block.querySelector('.qa-block__expand');
+                            if (expandLink) {
+                                expandLink.classList.add('more');
+                                expandLink.textContent = expandLink.dataset.closeText;
+                            }
+                        }
+                    }
+                    qaToggle.click();
+                    setTimeout(() => {
+                        qaToggle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 200);
+                }
             }
         },
         initCountdownTimer = function () {
