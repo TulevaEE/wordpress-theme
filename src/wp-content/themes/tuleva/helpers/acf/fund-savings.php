@@ -306,6 +306,7 @@ acf_add_local_field_group(array (
     'label_placement' => 'top',
     'instruction_placement' => 'label',
     'active' => 1,
+    'show_in_rest' => 1,
 ));
 
 endif;
