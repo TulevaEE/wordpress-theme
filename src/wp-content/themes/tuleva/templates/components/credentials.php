@@ -1,5 +1,5 @@
 <?php
-$members_count = get_field('members_count', 'option');
+$investor_count = get_investor_count();
 $members_count_description = get_sub_field('members_count_description');
 $security_text = get_sub_field('security_text');
 $security_link_text = get_sub_field('security_link_text');
@@ -7,7 +7,7 @@ $security_link_url = get_sub_field('security_link_url');
 ?>
 <section id="<?php the_sub_field('component_id'); ?>" class="section-credentials bg-gray-2 py-4 py-lg-5">
     <!-- Credentials -->
-    <?php if ($security_text || ($members_count && $members_count_description)) { ?>
+    <?php if ($security_text || ($investor_count && $members_count_description)) { ?>
         <div class="container">
             <div class="row gx-xl-5">
                 <?php if ($security_text) { ?>
@@ -27,10 +27,10 @@ $security_link_url = get_sub_field('security_link_url');
                         </div>
                     </div>
                 <?php } ?>
-                <?php if ($members_count && $members_count_description) { ?>
+                <?php if ($investor_count && $members_count_description) { ?>
                     <div class="col-md-6 d-none d-md-flex align-items-center text-navy">
                         <span class="membercount text-nowrap me-3 me-sm-4 display-5 lh-1">
-                            <?php echo number_format($members_count, 0, '', ' '); ?>
+                            <?php echo number_format($investor_count, 0, '', ' '); ?>
                         </span>
                         <span style="max-width: 11em"><?php echo $members_count_description; ?></span>
                     </div>

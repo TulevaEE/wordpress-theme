@@ -328,6 +328,55 @@ function get_member_count()
     return $memberCount;
 }
 
+/*
+ * Number of active investors in Tuleva index funds.
+ * Source of truth: onboarding-service /v1/statistics/investor-count
+ * (analytics.mv_kpi_new.total_active_investors) — the same figure tracked in
+ * Metabase. The underlying data updates roughly monthly, so the value is cached
+ * for a day: the front page does not call the API on every load, and the number
+ * still picks up a change within a day. Fetched with the same file_get_contents
+ * + stream context style as the fund pages (see print_funds_js below). Falls
+ * back to the last known good value and then to the manual ACF `members_count`
+ * option, and always returns an int, so the number never disappears, drops to
+ * zero, or triggers a number_format() error.
+ */
+function get_investor_count()
+{
+    $cached = get_transient('tuleva_investor_count');
+    if ($cached !== false) {
+        return $cached;
+    }
+
+    $context = stream_context_create(
+        [
+            'http' => [
+                'method' => 'GET',
+                'timeout' => 2,
+            ]
+        ]
+    );
+    $json = @file_get_contents('https://onboarding-service.tuleva.ee/v1/statistics/investor-count', false, $context);
+    $data = $json ? json_decode($json, true) : null;
+    $count = isset($data['count']) ? (int) $data['count'] : 0;
+
+    if ($count > 0) {
+        set_transient('tuleva_investor_count', $count, DAY_IN_SECONDS);
+        update_option('tuleva_investor_count_last_good', $count);
+        return $count;
+    }
+
+    // API unavailable or unusable: fall back to the last known good value, then
+    // the manual ACF field. Cache the fallback briefly so an outage does not
+    // refetch on every page load.
+    $fallback = (int) get_option('tuleva_investor_count_last_good', 0);
+    if ($fallback <= 0) {
+        $fallback = (int) get_field('members_count', 'option');
+    }
+    set_transient('tuleva_investor_count', $fallback, 5 * MINUTE_IN_SECONDS);
+
+    return $fallback;
+}
+
 function print_funds_js()
 {
     $context = stream_context_create(
