@@ -1,61 +1,155 @@
 {
   "Tuleva": {
-    "pdf": "Tuleva-Maailma-Aktsiate-Pensionifondi-investeeringute-aruanne-jaanuar-2026.pdf",
+    "pdf": "est_TUK75_raport_20260227.pdf",
     "type": "A (ETF)",
-    "date": "30.01.2026",
-    "etf_count": 6
+    "date": "27.02.2026",
+    "etf_count": 6,
+    "url": "https://www.pensionikeskus.ee/files/raport/TUK75/est_TUK75_raport_20260227.pdf"
   },
   "Luminor 16-50": {
-    "pdf": "investeeringute_aruanne_lum16-50_0126.pdf",
+    "pdf": "2026-02/est_NPK75_raport_20260228.pdf",
     "type": "A (ETF+bonds)",
-    "date": "31.01.2026",
-    "etf_count": 11
+    "date": "28.02.2026",
+    "etf_count": 11,
+    "url": "https://www.pensionikeskus.ee/files/raport/NPK75/est_NPK75_raport_20260228.pdf"
   },
   "SEB Indeks": {
-    "pdf": "est_SIK75_raport_20260131.pdf",
+    "pdf": "2026-02/est_SIK75_raport_20260228.pdf",
     "type": "A (ETF)",
-    "date": "31.01.2026",
+    "date": "28.02.2026",
     "etf_count": 7,
-    "opaque_pct": 28.32
+    "opaque_pct": 0,
+    "url": "https://www.pensionikeskus.ee/files/raport/SIK75/est_SIK75_raport_20260228.pdf"
   },
   "Swedbank K1960": {
-    "pdf": "K1960_investment_portfolio.pdf",
+    "pdf": "2026-02/K1960_investment_portfolio.pdf",
     "type": "B (direct stocks)",
-    "date": "31.01.2026",
-    "stock_count": 295
+    "date": "28.02.2026",
+    "stock_count": 294,
+    "url": "https://swedbank.ee/static/investor/funds/K1960_investment_portfolio.pdf"
   },
   "Swedbank K1970": {
-    "pdf": "K1970_investment_portfolio.pdf",
+    "pdf": "2026-02/K1970_investment_portfolio.pdf",
     "type": "B (direct stocks)",
-    "date": "31.01.2026",
-    "stock_count": 444
+    "date": "28.02.2026",
+    "stock_count": 437,
+    "url": "https://swedbank.ee/static/investor/funds/K1970_investment_portfolio.pdf"
   },
   "Swedbank K1980": {
-    "pdf": "K1980_investment_portfolio.pdf",
+    "pdf": "2026-02/K1980_investment_portfolio.pdf",
     "type": "B (direct stocks)",
-    "date": "31.01.2026",
-    "stock_count": 444
+    "date": "28.02.2026",
+    "stock_count": 437,
+    "url": "https://swedbank.ee/static/investor/funds/K1980_investment_portfolio.pdf"
   },
   "Swedbank K1990": {
-    "pdf": "K1990_investment_portfolio.pdf",
+    "pdf": "2026-02/K1990_investment_portfolio.pdf",
     "type": "B (direct stocks)",
-    "date": "31.01.2026",
-    "stock_count": 301
+    "date": "28.02.2026",
+    "stock_count": 300,
+    "url": "https://swedbank.ee/static/investor/funds/K1990_investment_portfolio.pdf"
   },
   "LHV Ettevõtlik": {
-    "pdf": "est_LLK50_raport_20260131.pdf",
+    "pdf": "2026-02/est_LLK50_raport_20260228.pdf",
     "type": "C (mixed)",
-    "date": "31.01.2026",
-    "pre_parsed": true
+    "date": "28.02.2026",
+    "pre_parsed": true,
+    "url": "https://www.pensionikeskus.ee/files/raport/LLK50/est_LLK50_raport_20260228.pdf"
   },
   "LHV Julge": {
-    "pdf": "est_LXK75_raport_20260131.pdf",
+    "pdf": "est_LXK75_raport_20260228.pdf",
     "type": "C (mixed)",
-    "date": "31.01.2026"
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/LXK75/est_LXK75_raport_20260228.pdf"
   },
   "SEB 55+": {
-    "pdf": "est_SEK50_raport_20260131.pdf",
+    "pdf": "est_SEK50_raport_20260228.pdf",
     "type": "C (mixed)",
-    "date": "31.01.2026"
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/SEK50/est_SEK50_raport_20260228.pdf"
+  },
+  "LHV Rahulik": {
+    "pdf": "est_LXK00_raport_20260228.pdf",
+    "type": "C (bond-heavy)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/LXK00/est_LXK00_raport_20260228.pdf"
+  },
+  "LHV Indeks": {
+    "pdf": "est_LIK75_raport_20260228.pdf",
+    "type": "A (ETF)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/LIK75/est_LIK75_raport_20260228.pdf"
+  },
+  "LHV Tasakaalukas": {
+    "pdf": "est_LMK25_raport_20260228.pdf",
+    "type": "C (mixed)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/LMK25/est_LMK25_raport_20260228.pdf"
+  },
+  "Luminor Indeks": {
+    "pdf": "2026-02/est_NIK100_raport_20260228.pdf",
+    "type": "A (ETF)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/NIK100/est_NIK100_raport_20260228.pdf"
+  },
+  "Luminor 50-56": {
+    "pdf": "2026-02/est_NPK50_raport_20260228.pdf",
+    "type": "A (ETF+bonds)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/NPK50/est_NPK50_raport_20260228.pdf"
+  },
+  "Luminor 56+": {
+    "pdf": "2026-02/est_NPK25_raport_20260228.pdf",
+    "type": "A (ETF+bonds)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/NPK25/est_NPK25_raport_20260228.pdf"
+  },
+  "Luminor 61-65": {
+    "pdf": "2026-02/est_NPK00_raport_20260228.pdf",
+    "type": "A (ETF+bonds)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/NPK00/est_NPK00_raport_20260228.pdf"
+  },
+  "SEB 18+": {
+    "pdf": "2026-02/est_SEK100_raport_20260228.pdf",
+    "type": "C (mixed)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/SEK100/est_SEK100_raport_20260228.pdf"
+  },
+  "SEB 60+": {
+    "pdf": "2026-02/est_SEK25_raport_20260228.pdf",
+    "type": "C (mixed)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/SEK25/est_SEK25_raport_20260228.pdf"
+  },
+  "SEB 65+": {
+    "pdf": "2026-02/est_SEK00_raport_20260228.pdf",
+    "type": "C (bond-heavy)",
+    "date": "28.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/SEK00/est_SEK00_raport_20260228.pdf"
+  },
+  "Swedbank Indeks": {
+    "pdf": "Ki_investment_portfolio.pdf",
+    "type": "B (direct stocks)",
+    "date": "28.02.2026",
+    "url": "https://swedbank.ee/static/investor/funds/Ki_investment_portfolio.pdf"
+  },
+  "Swedbank 2000-09": {
+    "pdf": "K2000_investment_portfolio.pdf",
+    "type": "B (mixed)",
+    "date": "28.02.2026",
+    "url": "https://swedbank.ee/static/investor/funds/K2000_investment_portfolio.pdf"
+  },
+  "Swedbank Konservatiivne": {
+    "pdf": "KKONS_investment_portfolio.pdf",
+    "type": "B (bond-heavy)",
+    "date": "28.02.2026",
+    "url": "https://www.swedbank.ee/static/investor/funds/KKONS_investment_portfolio.pdf"
+  },
+  "Tuleva Võlakirjad": {
+    "pdf": "est_TUK00_raport_20260227.pdf",
+    "type": "A (bonds)",
+    "date": "27.02.2026",
+    "url": "https://www.pensionikeskus.ee/files/raport/TUK00/est_TUK00_raport_20260227.pdf"
   }
 }
