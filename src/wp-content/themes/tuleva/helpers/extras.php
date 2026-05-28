@@ -396,24 +396,27 @@ function hyphenate_string($string) {
 }
 
 function generate_report_link($url, $link_text = null) {
-    preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches);
-    $year = intval($matches[1]);
-    $month = intval($matches[2]);
+    if (preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches)) {
+        $year = intval($matches[1]);
+        $month = intval($matches[2]);
 
-    $month--;
-    if ($month === 0) {
-        $month = 12;
-        $year--;
-    }
+        $month--;
+        if ($month === 0) {
+            $month = 12;
+            $year--;
+        }
 
-    $year_str = strval($year);
-    $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
+        $year_str = strval($year);
+        $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
+        $date_text = sprintf('%s.%s', $month_str, $year_str);
 
-    $default_text = sprintf('%s.%s', $month_str, $year_str);
-    if ($link_text !== null) {
-        $link_text = sprintf('%s (%s)', $link_text, $default_text);
-    } else {
-        $link_text = $default_text;
+        if ($link_text !== null) {
+            $link_text = sprintf('%s (%s)', $link_text, $date_text);
+        } else {
+            $link_text = $date_text;
+        }
+    } elseif ($link_text === null) {
+        $link_text = __('Report', TEXT_DOMAIN);
     }
 
     if (filter_var($url, FILTER_VALIDATE_URL)) {
@@ -423,10 +426,9 @@ function generate_report_link($url, $link_text = null) {
     }
 
     $output = sprintf(
-        '<a href="%s%s" target="_blank">%s</a>',
-        get_site_url(),
-        $path,
-        $link_text
+        '<a href="%s" target="_blank">%s</a>',
+        esc_url(get_site_url() . $path),
+        esc_html($link_text)
     );
 
     return $output;
