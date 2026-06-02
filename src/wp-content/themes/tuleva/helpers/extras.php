@@ -396,7 +396,17 @@ function hyphenate_string($string) {
 }
 
 function generate_report_link($url, $link_text = null) {
-    if (preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches)) {
+    $is_absolute = (bool) filter_var($url, FILTER_VALIDATE_URL);
+    $path = $is_absolute ? parse_url($url, PHP_URL_PATH) : $url;
+    $filename = basename($path);
+
+    if (preg_match('/(\d{4})-(\d{2})/', $filename, $matches)) {
+        // Report period is encoded directly in the filename (YYYY-MM), e.g.
+        // "... investeeringute aruanne 2026-05.pdf" — use it as the label.
+        $date_text = sprintf('%s.%s', $matches[2], $matches[1]);
+    } elseif (preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches)) {
+        // Legacy uploads carry no period in the filename: the report covers the month before the
+        // upload-folder month (a report is uploaded the month after the period it covers).
         $year = intval($matches[1]);
         $month = intval($matches[2]);
 
@@ -406,28 +416,27 @@ function generate_report_link($url, $link_text = null) {
             $year--;
         }
 
-        $year_str = strval($year);
         $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
-        $date_text = sprintf('%s.%s', $month_str, $year_str);
+        $date_text = sprintf('%s.%s', $month_str, strval($year));
+    } else {
+        $date_text = null;
+    }
 
-        if ($link_text !== null) {
-            $link_text = sprintf('%s (%s)', $link_text, $date_text);
-        } else {
-            $link_text = $date_text;
-        }
+    if ($date_text !== null) {
+        $link_text = $link_text !== null
+            ? sprintf('%s (%s)', $link_text, $date_text)
+            : $date_text;
     } elseif ($link_text === null) {
         $link_text = __('Report', TEXT_DOMAIN);
     }
 
-    if (filter_var($url, FILTER_VALIDATE_URL)) {
-        $path = parse_url($url, PHP_URL_PATH);
-    } else {
-        $path = $url;
-    }
+    // Preserve the original host for absolute URLs: the ACF-supplied media URL may be served from a
+    // CDN or dedicated media host. Only site-relative paths are resolved against the current site.
+    $href = $is_absolute ? $url : get_site_url() . $url;
 
     $output = sprintf(
         '<a href="%s" target="_blank">%s</a>',
-        esc_url(get_site_url() . $path),
+        esc_url($href),
         esc_html($link_text)
     );
 
