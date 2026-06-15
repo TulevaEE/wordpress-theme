@@ -386,7 +386,7 @@ function get_esg_factors_document_url() {
 }
 
 function get_remuneration_document_url() {
-    $remuneration_document_path = '/wp-content/uploads/2025/08/Tuleva-Fondid-AS-tasustamise-pohimotted-2025_august.pdf';
+    $remuneration_document_path = '/wp-content/uploads/2026/06/Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf';
 
     return get_site_url() . $remuneration_document_path;
 }
