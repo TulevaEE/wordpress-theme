@@ -380,7 +380,7 @@ function get_nav_procedure_document_url() {
 }
 
 function get_esg_factors_document_url() {
-    $esg_factors_document_path = '/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026.pdf';
+    $esg_factors_document_path = '/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026-1.pdf';
 
     return get_site_url() . $esg_factors_document_path;
 }
