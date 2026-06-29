@@ -380,13 +380,13 @@ function get_nav_procedure_document_url() {
 }
 
 function get_esg_factors_document_url() {
-    $esg_factors_document_path = '/wp-content/uploads/2025/07/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_30.06.2025.pdf';
+    $esg_factors_document_path = '/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026-1.pdf';
 
     return get_site_url() . $esg_factors_document_path;
 }
 
 function get_remuneration_document_url() {
-    $remuneration_document_path = '/wp-content/uploads/2025/08/Tuleva-Fondid-AS-tasustamise-pohimotted-2025_august.pdf';
+    $remuneration_document_path = '/wp-content/uploads/2026/06/Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf';
 
     return get_site_url() . $remuneration_document_path;
 }

@@ -14,7 +14,7 @@
                            data-bs-target="#collapsed-text-<?php echo $i; ?>"
                            aria-expanded="true"
                            aria-controls="collapsed-text-<?php echo $i; ?>">
-                            <p class="m-0 fs-4 lh-sm"><?php the_sub_field('title'); ?></p>
+                            <p class="m-0"><?php the_sub_field('title'); ?></p>
                             <?php if (get_sub_field('lead_text')) { ?>
                                 <p class="m-0 mt-2 fs-6 fw-normal"><?php the_sub_field('lead_text'); ?></p>
                             <?php } ?>

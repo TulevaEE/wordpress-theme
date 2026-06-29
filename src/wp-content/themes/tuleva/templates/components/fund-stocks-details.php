@@ -57,7 +57,7 @@
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Tuleva-Maailma-Aktsiate-Pensionifondi-tingimused-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Mudelportfelli-avalikustamiseks-27.03.2026-seisuga.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/06/Mudelportfell-avalikustamiseks-17.06.2026-seisuga.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Pohiteave-TUK75-kehtib-alates-19.03.2026-.pdf" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
@@ -80,7 +80,7 @@
                         <ul class="list-style-arrow mb-5 text-secondary">
                             <li>
                                 <?php
-                                    $report_url = get_field('investment_report_file') ?: 'https://tuleva.ee/wp-content/uploads/2026/05/Tuleva-Maailma-Aktsiate-Pensionifondi-investeeringute-aruanne-aprill-2026.pdf';
+                                    $report_url = get_field('investment_report_file') ?: 'https://tuleva.ee/wp-content/uploads/2026/06/Tuleva-Maailma-Aktsiate-Pensionifondi-investeeringute-aruanne-2026-05.pdf';
                                     echo generate_report_link($report_url, __('Investment reports', TEXT_DOMAIN));
                                 ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
