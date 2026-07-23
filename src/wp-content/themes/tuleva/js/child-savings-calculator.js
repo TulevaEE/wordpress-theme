@@ -7,7 +7,7 @@
 
 var TAX_RATE = 0.22;
 var CHILD_TAX_FREE_INCOME = 8400; // euros per year
-var SALE_YEARS = 4; // sales spread over ages 18-21
+var SALE_YEARS = 4; // sales spread over four years
 
 /**
  * Future value of a monthly annuity. Works for negative rates;
@@ -74,8 +74,6 @@ function computeChildSavings(input) {
     }
     var sum = document.getElementById('calcSum');
     var rate = document.getElementById('calcRate');
-    var ageError = document.getElementById('ageError');
-    var sumError = document.getElementById('sumError');
     var resTax = document.getElementById('resTax');
     var resTotal = document.getElementById('resTotal');
 
@@ -85,15 +83,33 @@ function computeChildSavings(input) {
         return Math.round(value).toLocaleString(locale) + ' €';
     }
 
-    function update() {
+    function readAge() {
         // An empty field falls back to the placeholder default, like the pension calculator
-        var ageValue = age.value === '' ? Number(age.placeholder) : Number(age.value);
-        var monthly = sum.value === '' ? Number(sum.placeholder) : Number(sum.value);
-        var ageOk = Number.isInteger(ageValue) && ageValue >= 0 && ageValue <= 18;
-        var sumOk = Number.isFinite(monthly) && monthly >= 1 && monthly <= 100000;
-        ageError.hidden = ageOk;
-        sumError.hidden = sumOk;
-        if (!ageOk || !sumOk) {
+        var raw = age.value === '' ? Number(age.placeholder) : Number(age.value);
+        if (!Number.isFinite(raw)) {
+            return null;
+        }
+        if (raw > 18) {
+            age.value = 18;
+        }
+        return Math.min(18, Math.max(0, Math.floor(raw)));
+    }
+
+    function readMonthly() {
+        var raw = sum.value === '' ? Number(sum.placeholder) : Number(sum.value);
+        if (!Number.isFinite(raw)) {
+            return null;
+        }
+        if (raw > 9999) {
+            sum.value = 9999;
+        }
+        return Math.min(9999, Math.max(0, raw));
+    }
+
+    function update() {
+        var ageValue = readAge();
+        var monthly = readMonthly();
+        if (ageValue === null || monthly === null) {
             return;
         }
 

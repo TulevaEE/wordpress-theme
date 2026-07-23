@@ -21,18 +21,16 @@
                                         <input type="number" class="form-control text-end" id="calcAge" min="0" max="18" step="1" placeholder="0" inputmode="numeric">
                                     </div>
                                 </div>
-                                <p class="calc-error" id="ageError" aria-live="polite" hidden><?php _e('Enter an age below 19', TEXT_DOMAIN); ?></p>
 
                                 <div class="mb-3 align-items-center row">
                                     <label for="calcSum" class="col-sm-6 col-form-label pe-0"><?php _e('Contribution', TEXT_DOMAIN); ?></label>
                                     <div class="col-sm-6">
                                         <div class="input-group">
-                                            <input type="number" class="form-control text-end" id="calcSum" min="1" max="100000" step="1" placeholder="80" inputmode="numeric">
+                                            <input type="number" class="form-control text-end" id="calcSum" min="0" max="9999" step="1" placeholder="80" inputmode="numeric">
                                             <span class="input-group-text"><?php _e('&euro;/month', TEXT_DOMAIN); ?></span>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="calc-error" id="sumError" aria-live="polite" hidden><?php _e('Enter an amount between 1 and 100 000 €', TEXT_DOMAIN); ?></p>
 
                                 <div class="mb-0 row">
                                     <label for="calcRate" class="col-sm-6 col-form-label py-2 pe-0"><?php _e('Expected yearly return', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" role="button" tabindex="0" aria-label="<?php echo esc_attr__('More information', TEXT_DOMAIN); ?>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo esc_attr__('The final amount depends on the returns that actually materialize, and neither we nor anyone else can guarantee a return.', TEXT_DOMAIN); ?>"></span></label>
