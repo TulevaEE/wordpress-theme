@@ -2324,9 +2324,9 @@ msgid ""
 " amount is set by law and will change over the years."
 msgstr ""
 "Arvestus eeldab, et laps müüb osakud järk-järgult vanuses 18⁠–⁠21, mitte "
-"kõik korraga, ja kasutab igal aastal oma tulumaksuvaba tulu. Praegu on see "
-"8400 € aastas, kui lapsel muud tulu pole. See summa on seadusega määratud "
-"ja muutub aastate jooksul."
+"kõik korraga, ja kasutab igal aastal oma maksuvaba tulu. Praegu on see 8400"
+" € aastas, kui lapsel muud tulu pole. See summa on seadusega määratud ja "
+"muutub aastate jooksul."
 
 #: templates/child-savings-content.php:229
 #: templates/child-savings-content.php:234
@@ -2358,8 +2358,8 @@ msgstr ""
 "Kalkulaatori tulemus on illustratiivne: tulumaksu arvestatakse ainult "
 "teenitud tulult, mitte sissemaksetelt. Maksuvõidu arvestus eeldab, et laps "
 "müüb osakud järk-järgult vanuses 18⁠–⁠21, mitte kõik korraga, ja kasutab "
-"igal aastal oma tulumaksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab"
-" tänaseid määrasid: tulumaks 22% ja tulumaksuvaba tulu 8400 € aastas. "
+"igal aastal oma maksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab "
+"tänaseid määrasid: tulumaks 22% ja maksuvaba tulu 8400 € aastas. "
 "Maksureeglid aastate jooksul muutuvad. Üheski Tuleva fondis pole tootlus "
 "garanteeritud."
 
@@ -2383,7 +2383,7 @@ msgid ""
 "income, which today is 8,400 € per year."
 msgstr ""
 "Lapse nimel Kogumisfondis kogudes tuleb maksuvõit teisest otsast: osakuid "
-"müües saab laps kasutada oma tulumaksuvaba tulu, mis täna on 8400 € aastas."
+"müües saab laps kasutada oma maksuvaba tulu, mis täna on 8400 € aastas."
 
 #: templates/child-savings-content.php:161
 #, php-format
