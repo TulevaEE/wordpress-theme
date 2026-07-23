@@ -18016,14 +18016,6 @@ sup {
   color: #a3b3c2;
   opacity: 1;
 }
-.child-savings-page .calc-error {
-  margin: -0.5rem 0 0.7rem;
-  color: #c94a44;
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 1.4;
-  text-align: right;
-}
 .child-savings-page .calc-line {
   display: -webkit-box;
   display: -webkit-flex;

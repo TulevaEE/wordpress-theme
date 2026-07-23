@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-23T11:03:46+00:00\n"
+"POT-Creation-Date: 2026-07-23T11:43:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -149,325 +149,317 @@ msgstr ""
 msgid "Child's age"
 msgstr ""
 
-#: templates/child-savings-content.php:24
-msgid "Enter an age below 19"
-msgstr ""
-
-#: templates/child-savings-content.php:27
+#: templates/child-savings-content.php:26
 msgid "Contribution"
 msgstr ""
 
-#: templates/child-savings-content.php:31
+#: templates/child-savings-content.php:30
 #: templates/components/front-hero/calculator.php:31
 #: templates/components/third-pillar-calculator.php:113
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/child-savings-content.php:35
-msgid "Enter an amount between 1 and 100 000 €"
-msgstr ""
-
-#: templates/child-savings-content.php:38
+#: templates/child-savings-content.php:36
 msgid "Expected yearly return"
 msgstr ""
 
-#: templates/child-savings-content.php:38
-#: templates/child-savings-content.php:47
+#: templates/child-savings-content.php:36
+#: templates/child-savings-content.php:45
 msgid "More information"
 msgstr ""
 
-#: templates/child-savings-content.php:38
+#: templates/child-savings-content.php:36
 msgid "The final amount depends on the returns that actually materialize, and neither we nor anyone else can guarantee a return."
 msgstr ""
 
-#: templates/child-savings-content.php:42
+#: templates/child-savings-content.php:40
 msgid "historic return of stocks 7%"
 msgstr ""
 
-#: templates/child-savings-content.php:47
+#: templates/child-savings-content.php:45
 msgid "Tax win"
 msgstr ""
 
-#: templates/child-savings-content.php:47
-msgid "The calculation assumes the child sells their fund units gradually between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
+#: templates/child-savings-content.php:45
+msgid "The calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
 msgstr ""
 
-#: templates/child-savings-content.php:47
+#: templates/child-savings-content.php:45
 msgid "0 €"
 msgstr ""
 
-#: templates/child-savings-content.php:48
+#: templates/child-savings-content.php:46
 msgid "At 18, your child has"
 msgstr ""
 
-#: templates/child-savings-content.php:48
+#: templates/child-savings-content.php:46
 msgid "17,280 €"
 msgstr ""
 
-#: templates/child-savings-content.php:51
-#: templates/child-savings-content.php:79
-#: templates/child-savings-content.php:136
+#: templates/child-savings-content.php:49
+#: templates/child-savings-content.php:77
+#: templates/child-savings-content.php:134
 msgid "Open an account for my child"
 msgstr ""
 
-#: templates/child-savings-content.php:53
+#: templates/child-savings-content.php:51
 msgid "Opening an account is free and takes only a few minutes."
 msgstr ""
 
-#: templates/child-savings-content.php:65
+#: templates/child-savings-content.php:63
 msgid "Open an account for your child quickly and easily"
 msgstr ""
 
-#: templates/child-savings-content.php:67
+#: templates/child-savings-content.php:65
 msgid "Log in and choose \"For a child\""
 msgstr ""
 
-#: templates/child-savings-content.php:69
+#: templates/child-savings-content.php:67
 msgid "Verify yourself with Smart-ID, mobile-ID, or an ID card."
 msgstr ""
 
-#: templates/child-savings-content.php:71
+#: templates/child-savings-content.php:69
 msgid "Complete a short verification"
 msgstr ""
 
-#: templates/child-savings-content.php:73
+#: templates/child-savings-content.php:71
 msgid "Answer a few questions. There are no documents to upload."
 msgstr ""
 
-#: templates/child-savings-content.php:75
+#: templates/child-savings-content.php:73
 msgid "Make the first contribution"
 msgstr ""
 
-#: templates/child-savings-content.php:77
+#: templates/child-savings-content.php:75
 msgid "Start with as little as 1 euro. You can also set up a recurring payment, for example in the amount of the child benefit."
 msgstr ""
 
-#: templates/child-savings-content.php:81
+#: templates/child-savings-content.php:79
 msgid "If you have several children, you can open a separate account for each one."
 msgstr ""
 
-#: templates/child-savings-content.php:96
+#: templates/child-savings-content.php:94
 msgid "Coming this autumn"
 msgstr ""
 
-#: templates/child-savings-content.php:97
+#: templates/child-savings-content.php:95
 msgid "Gifts straight to your child's account"
 msgstr ""
 
-#: templates/child-savings-content.php:98
+#: templates/child-savings-content.php:96
 msgid "Grandparents, godparents, and friends will be able to make contributions straight to your child's savings fund account, with no steps in between."
 msgstr ""
 
-#: templates/child-savings-content.php:110
+#: templates/child-savings-content.php:108
 msgid "Good to know before you start"
 msgstr ""
 
-#: templates/child-savings-content.php:112
+#: templates/child-savings-content.php:110
 msgid "Before investing for your child, save for yourself."
 msgstr ""
 
-#: templates/child-savings-content.php:114
+#: templates/child-savings-content.php:112
 #, php-format
 msgid "The greatest gift to a child is a parent who has taken care of their own future: second and third pillar tax benefits used and a rainy-day fund in place. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:115
+#: templates/child-savings-content.php:113
 msgid "Why take care of your own third pillar first? →"
 msgstr ""
 
-#: templates/child-savings-content.php:117
+#: templates/child-savings-content.php:115
 msgid "Money given to your child stays with your child."
 msgstr ""
 
-#: templates/child-savings-content.php:118
+#: templates/child-savings-content.php:116
 msgid "The assets belong to the child and withdrawals can only be made to the child's own bank account. This gives the assets reasonable protection."
 msgstr ""
 
-#: templates/child-savings-content.php:119
+#: templates/child-savings-content.php:117
 msgid "Stock markets fluctuate."
 msgstr ""
 
-#: templates/child-savings-content.php:120
+#: templates/child-savings-content.php:118
 msgid "Stock prices can rise as well as fall over time. The fund is meant for long-term investing – and saving for a child usually is just that. Still, returns cannot be guaranteed."
 msgstr ""
 
-#: templates/child-savings-content.php:121
+#: templates/child-savings-content.php:119
 msgid "The fund's assets are protected."
 msgstr ""
 
-#: templates/child-savings-content.php:122
+#: templates/child-savings-content.php:120
 msgid "The fund's assets are held strictly separate from Tuleva's assets at an independent depositary, and Tuleva Fondid AS operates under the supervision of the Estonian Financial Supervision Authority."
 msgstr ""
 
-#: templates/child-savings-content.php:134
+#: templates/child-savings-content.php:132
 msgid "Start today"
 msgstr ""
 
-#: templates/child-savings-content.php:135
+#: templates/child-savings-content.php:133
 msgid "Open an account in just a couple of minutes. The earlier you start, the longer your child's assets have to grow."
 msgstr ""
 
-#: templates/child-savings-content.php:138
+#: templates/child-savings-content.php:136
 msgid "Over <strong>85,000</strong> people save with Tuleva"
 msgstr ""
 
-#: templates/child-savings-content.php:139
+#: templates/child-savings-content.php:137
 msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr ""
 
-#: templates/child-savings-content.php:142
-msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
+#: templates/child-savings-content.php:140
+msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
 msgstr ""
 
-#: templates/child-savings-content.php:150
+#: templates/child-savings-content.php:148
 #: templates/components/qa-block.php:5
 msgid "Frequently asked questions"
 msgstr ""
 
-#: templates/child-savings-content.php:155
+#: templates/child-savings-content.php:153
 msgid "Why open a Savings Fund for your child rather than a third pillar?"
 msgstr ""
 
-#: templates/child-savings-content.php:157
+#: templates/child-savings-content.php:155
 msgid "The third pillar's appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn't, so paying into a child's third pillar creates no tax benefit."
 msgstr ""
 
-#: templates/child-savings-content.php:158
+#: templates/child-savings-content.php:156
 msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Savings Fund, your child can use the money when they need it, for example for education or a first home."
 msgstr ""
 
-#: templates/child-savings-content.php:159
+#: templates/child-savings-content.php:157
 msgid "Saving in the child's name in the Savings Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
 msgstr ""
 
-#: templates/child-savings-content.php:161
+#: templates/child-savings-content.php:159
 #, php-format
 msgid "Once your child starts earning income themselves, they should consider their own third pillar too, because then they get a tax benefit as well. If your child already has a third pillar account opened before 2021, keep it as it is: these are separate accounts and don't mix. And your own third pillar is worth filling before you start saving for your child. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:162
+#: templates/child-savings-content.php:160
 msgid "Read more →"
 msgstr ""
 
-#: templates/child-savings-content.php:167
+#: templates/child-savings-content.php:165
 msgid "What happens if my child withdraws all the money at 18?"
 msgstr ""
 
-#: templates/child-savings-content.php:169
+#: templates/child-savings-content.php:167
 msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
 msgstr ""
 
-#: templates/child-savings-content.php:170
+#: templates/child-savings-content.php:168
 msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
 msgstr ""
 
-#: templates/child-savings-content.php:171
+#: templates/child-savings-content.php:169
 msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
 msgstr ""
 
-#: templates/child-savings-content.php:175
+#: templates/child-savings-content.php:173
 msgid "How does this differ from LHV's Kasvukonto and Swedbank's child products?"
 msgstr ""
 
-#: templates/child-savings-content.php:177
+#: templates/child-savings-content.php:175
 msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Savings Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
 msgstr ""
 
-#: templates/child-savings-content.php:178
+#: templates/child-savings-content.php:176
 msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
 msgstr ""
 
-#: templates/child-savings-content.php:179
+#: templates/child-savings-content.php:177
 msgid "Read more: 3 reasons to avoid child-labeled savings products"
 msgstr ""
 
-#: templates/child-savings-content.php:183
+#: templates/child-savings-content.php:181
 msgid "How do contributions work?"
 msgstr ""
 
-#: templates/child-savings-content.php:185
+#: templates/child-savings-content.php:183
 msgid "Contributions to your child's Savings Fund account can only be made from the child's own bank account. Transfer money to your child's bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
 msgstr ""
 
-#: templates/child-savings-content.php:186
+#: templates/child-savings-content.php:184
 msgid "If your child doesn't have a bank account yet, you can open one in their name at any Estonian bank."
 msgstr ""
 
-#: templates/child-savings-content.php:187
+#: templates/child-savings-content.php:185
 msgid "A grandparent or another close person can also give your child a gift. The simplest way is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent."
 msgstr ""
 
-#: templates/child-savings-content.php:188
+#: templates/child-savings-content.php:186
 msgid "From this autumn, gifts can also be made straight to your child's savings fund account."
 msgstr ""
 
-#: templates/child-savings-content.php:192
+#: templates/child-savings-content.php:190
 msgid "How do withdrawals work?"
 msgstr ""
 
-#: templates/child-savings-content.php:194
+#: templates/child-savings-content.php:192
 msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
 msgstr ""
 
-#: templates/child-savings-content.php:195
+#: templates/child-savings-content.php:193
 msgid "Units bought with the money you contributed yourself can be sold by you as your child's representative without extra conditions. If units were bought with the child's other money (for example a gift or an inheritance received straight to the child's account), the sale requires the court's consent by law. You can ask the court for a general consent covering the whole childhood. The state fee is 10 €."
 msgstr ""
 
-#: templates/child-savings-content.php:197
+#: templates/child-savings-content.php:195
 #, php-format
 msgid "The state is preparing a legislative change that would make investing in a child's name even simpler. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:198
+#: templates/child-savings-content.php:196
 msgid "We wrote about it on the blog →"
 msgstr ""
 
-#: templates/child-savings-content.php:203
+#: templates/child-savings-content.php:201
 msgid "Does the tax return mean extra work?"
 msgstr ""
 
-#: templates/child-savings-content.php:205
+#: templates/child-savings-content.php:203
 msgid "Yes, a little. If your child's units are sold and taxable income arises, a tax return has to be filed in their name. Saving in the parent's name, there would be no such extra work."
 msgstr ""
 
-#: templates/child-savings-content.php:209
+#: templates/child-savings-content.php:207
 msgid "Can both parents manage the account?"
 msgstr ""
 
-#: templates/child-savings-content.php:211
+#: templates/child-savings-content.php:209
 msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later."
 msgstr ""
 
-#: templates/child-savings-content.php:224
+#: templates/child-savings-content.php:222
 msgid "Learn more"
 msgstr ""
 
-#: templates/child-savings-content.php:227
+#: templates/child-savings-content.php:225
 msgid "How a child was assigned a lawyer for investing in an index fund"
 msgstr ""
 
-#: templates/child-savings-content.php:228
+#: templates/child-savings-content.php:226
 msgid "Why it used to take the court's consent."
 msgstr ""
 
-#: templates/child-savings-content.php:229
-#: templates/child-savings-content.php:234
+#: templates/child-savings-content.php:227
+#: templates/child-savings-content.php:232
 msgid "Read on →"
 msgstr ""
 
-#: templates/child-savings-content.php:232
+#: templates/child-savings-content.php:230
 msgid "Do you need an investment account when saving for a child?"
 msgstr ""
 
-#: templates/child-savings-content.php:233
+#: templates/child-savings-content.php:231
 msgid "Two approaches to choose between."
 msgstr ""
 
-#: templates/child-savings-content.php:238
+#: templates/child-savings-content.php:236
 msgid "More about the Tuleva Savings Fund →"
 msgstr ""
 
-#: templates/child-savings-content.php:239
+#: templates/child-savings-content.php:237
 msgid "Fund documents →"
 msgstr ""
 
