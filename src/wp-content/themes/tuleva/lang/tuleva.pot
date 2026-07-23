@@ -181,7 +181,7 @@ msgid "Tax win"
 msgstr ""
 
 #: templates/child-savings-content.php:45
-msgid "The calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
+msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
 msgstr ""
 
 #: templates/child-savings-content.php:45
@@ -308,7 +308,7 @@ msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr ""
 
 #: templates/child-savings-content.php:140
-msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
+msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
 msgstr ""
 
 #: templates/child-savings-content.php:148

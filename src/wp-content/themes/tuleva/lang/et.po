@@ -1765,12 +1765,12 @@ msgid "Why it used to take the court's consent."
 msgstr "Miks oli seni vaja kohtu luba."
 
 #: templates/child-savings-content.php:45
-msgid "The calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
-msgstr "Arvestus eeldab, et laps müüb osakud järk-järgult nelja aasta jooksul, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu. Praegu on see 8400 € aastas, kui lapsel muud tulu pole. See summa on seadusega määratud ja muutub aastate jooksul."
+msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
+msgstr "Arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul vanuses 18​–​21, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu. Praegu on see 8400 € aastas, kui lapsel muud tulu pole. See summa on seadusega määratud ja muutub aastate jooksul."
 
 #: templates/child-savings-content.php:140
-msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over four years, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
-msgstr "Kalkulaatori tulemus on illustratiivne: tulumaksu arvestatakse ainult teenitud tulult, mitte sissemaksetelt. Maksuvõidu arvestus eeldab, et laps müüb osakud järk-järgult nelja aasta jooksul, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab tänaseid määrasid: tulumaks 22% ja maksuvaba tulu 8400 € aastas. Maksureeglid aastate jooksul muutuvad. Üheski Tuleva fondis pole tootlus garanteeritud."
+msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
+msgstr "Kalkulaatori tulemus on illustratiivne: tulumaksu arvestatakse ainult teenitud tulult, mitte sissemaksetelt. Maksuvõidu arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul vanuses 18​–​21, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab tänaseid määrasid: tulumaks 22% ja maksuvaba tulu 8400 € aastas. Maksureeglid aastate jooksul muutuvad. Üheski Tuleva fondis pole tootlus garanteeritud."
 
 #: searchform.php:5
 #~ msgid "Search"
