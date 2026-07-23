@@ -128,6 +128,19 @@ class ThemeEnqueue
                 'enqueue' => true
             ]
         );
+        if (is_page_template('page_child-savings.php')) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'child-savings-calculator',
+                    'src' => $js_path . 'child-savings-calculator.js',
+                    'deps' => 'bootstrap',
+                    'ver' => $CHILD_SAVINGS_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
 
         /* Get file that contains SimplyEnqueue class */
         require_once(get_template_directory() . '/lib/enqueue.php');
