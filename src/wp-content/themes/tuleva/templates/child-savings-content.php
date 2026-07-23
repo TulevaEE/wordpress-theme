@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="mt-2 p-3 py-4 card rounded-3 text-navy" aria-live="polite">
-                                <div class="calc-line win"><span><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" role="button" tabindex="0" aria-label="<?php echo esc_attr__('More information', TEXT_DOMAIN); ?>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo esc_attr__('The calculation assumes the child sells their fund units gradually between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years.', TEXT_DOMAIN); ?>"></span></span><b id="resTax"><?php _e('0 €', TEXT_DOMAIN); ?></b></div>
+                                <div class="calc-line win"><span><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" role="button" tabindex="0" aria-label="<?php echo esc_attr__('More information', TEXT_DOMAIN); ?>" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo esc_attr__('The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years.', TEXT_DOMAIN); ?>"></span></span><b id="resTax"><?php _e('0 €', TEXT_DOMAIN); ?></b></div>
                                 <div class="calc-total"><span><?php _e('At 18, your child has', TEXT_DOMAIN); ?></span><b id="resTotal"><?php _e('17,280 €', TEXT_DOMAIN); ?></b></div>
                             </div>
                             <div class="d-grid">
@@ -139,7 +139,7 @@
                             <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
-                    <p class="foot-note text-center mx-auto"><?php _e('The calculator\'s result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today\'s rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return.', TEXT_DOMAIN); ?></p>
+                    <p class="foot-note text-center mx-auto"><?php _e('The calculator\'s result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today\'s rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return.', TEXT_DOMAIN); ?></p>
                 </div>
             </div>
         </div>
