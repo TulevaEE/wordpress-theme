@@ -1,53 +1,132 @@
-version: '3.8'
+name: tuleva-wp
+
+# Anchored so wordpress and wp-init cannot drift apart — WP-CLI connecting to a
+# different database than Apache is a confusing failure to debug.
+x-wp-env: &wp-env
+  WORDPRESS_DB_HOST: db:3306
+  WORDPRESS_DB_NAME: ${DB_NAME:-tuleva_wp}
+  WORDPRESS_DB_USER: wordpress
+  WORDPRESS_DB_PASSWORD: wordpress
+  WORDPRESS_TABLE_PREFIX: ${TABLE_PREFIX:-wp_}
+  WORDPRESS_DEBUG: "1"
+  # wp-init.sh reads these. Without them it would silently fall back to its own
+  # defaults and rewrite URLs to localhost:8880 even when .env says otherwise.
+  SITE_URL: ${SITE_URL:-http://localhost:8880}
+  ADMIN_USER: ${ADMIN_USER:-admin}
+  ADMIN_PASS: ${ADMIN_PASS:-admin}
+  ADMIN_EMAIL: ${ADMIN_EMAIL:-dev@example.test}
+  # The official image's wp-config.php ends with eval(getenv_docker(...)), so
+  # this is evaluated on every request — editing it and running `up -d` takes
+  # effect immediately. This replaces README step 7 (hand-adding WP_HOME and
+  # WP_SITEURL to wp-config.php).
+  #
+  # Compose interpolates ${...} in this block, so never use PHP variables here;
+  # a literal $ would need escaping as $$.
+  WORDPRESS_CONFIG_EXTRA: |
+    define( 'WP_HOME',    '${SITE_URL:-http://localhost:8880}' );
+    define( 'WP_SITEURL', '${SITE_URL:-http://localhost:8880}' );
+    define( 'WP_ENVIRONMENT_TYPE', 'local' );
+    define( 'TULEVA_DISABLED_PLUGINS', 'really-simple-ssl,wordfence' );
+    define( 'TULEVA_UPLOADS_FALLBACK', '${UPLOADS_FALLBACK_URL:-https://tuleva.ee/wp-content/uploads}' );
+    // Never render errors into the page — a production DB on brand-new PHP emits
+    // a lot of deprecation noise, and inline errors break the layout and alarm
+    // non-technical users. With display off and WP_DEBUG_LOG left unset, PHP's
+    // log_errors (see docker/php-dev.ini) sends everything to the container's
+    // stderr, so `./setup.sh --logs` (docker logs) is the single source of truth.
+    define( 'WP_DEBUG_DISPLAY', false );
+    define( 'SCRIPT_DEBUG', true );
+    define( 'DISABLE_WP_CRON', true );
+    define( 'AUTOMATIC_UPDATER_DISABLED', true );
+    define( 'WP_CACHE', false );
+    define( 'FORCE_SSL_ADMIN', false );
 
 services:
   db:
-    image: mysql:8.0
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./mysql-init:/docker-entrypoint-initdb.d
-      - ./my.cnf:/etc/mysql/conf.d/my.cnf
-    restart: always
+    # Matches production (MariaDB 11.4, an LTS). Using MariaDB rather than MySQL
+    # means the dump's collations (MariaDB 11.4 defaults to utf8mb4_uca1400_*)
+    # import natively, with no dialect conversion. The MYSQL_* env vars below are
+    # the MariaDB image's supported compatibility aliases.
+    image: mariadb:11.4
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: d56838_tuleva20
+      MYSQL_DATABASE: ${DB_NAME:-tuleva_wp}
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+    volumes:
+      - db_data:/var/lib/mysql
+      # Anything in here is imported once, when the data volume is empty.
+      # setup.sh puts the production dump here before first start.
+      - ./mysql-init:/docker-entrypoint-initdb.d:ro
+      - ./docker/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    healthcheck:
+      # -h 127.0.0.1 forces TCP on purpose. While the initdb import is running,
+      # the server (mariadbd) listens on the unix socket only, so this stays red
+      # until the dump is fully imported — exactly the gate we want before WP-CLI
+      # touches it. Do not "fix" this to localhost. (mysqladmin is MariaDB's
+      # compatibility symlink for mariadb-admin.)
+      test: ["CMD-SHELL", "mariadb-admin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 180
+      start_period: 30s
 
-  phpmyadmin:
+  wordpress:
+    # Pinned deliberately. The whole setup depends on this image's wp-config
+    # template and entrypoint, and PHP 8.5 matches production. Never :latest.
+    image: ${WP_IMAGE:-wordpress:7.0.2-php8.5-apache}
     depends_on:
-      - db
-    image: phpmyadmin/phpmyadmin:5.1
-    restart: always
+      db:
+        condition: service_healthy
     ports:
-      - 8881:80
+      - "${SITE_PORT:-8880}:80"
+    environment: *wp-env
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./src/wp-content/themes/tuleva:/var/www/html/wp-content/themes/tuleva
+      - ./docker/php-dev.ini:/usr/local/etc/php/conf.d/zz-dev.ini:ro
+      - ./docker/mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+    healthcheck:
+      # No curl in this image. A static core file passes as soon as Apache
+      # serves files, independent of database state.
+      test: ["CMD-SHELL", "php -r 'exit(@file_get_contents(\"http://127.0.0.1/wp-includes/js/wp-embed.min.js\") === false ? 1 : 0);'"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 20s
+
+  # One-shot bootstrap, and the WP-CLI entrypoint behind `./setup.sh --wp`.
+  wp-init:
+    # PHP 8.4 (current, not EOL). WP-CLI 2.12's bundled php-cli-tools isn't PHP
+    # 8.5-clean yet and spams deprecation notices on 8.5. This container only
+    # runs maintenance commands — it never renders the site, which runs 8.5 to
+    # match production — so its PHP version is not user-facing.
+    image: wordpress:cli-2.12-php8.4
+    depends_on:
+      db:
+        condition: service_healthy
+    environment: *wp-env
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./src/wp-content/themes/tuleva:/var/www/html/wp-content/themes/tuleva
+      - ./docker/mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+      - ./docker/wp-init.sh:/wp-init.sh:ro
+    entrypoint: ["/bin/sh", "/wp-init.sh"]
+    restart: "no"
+
+  # Not started by default any more. `docker compose --profile tools up -d phpmyadmin`
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8881:80"
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: rootpassword
-      UPLOAD_LIMIT: 300M
-      MEMORY_LIMIT: 512M
-      MAX_EXECUTION_TIME: 300
-    volumes:
-        - ./php.ini:/usr/local/etc/php/php.ini
-  wordpress:
-    depends_on:
-     - db
-    image: wordpress:latest
-    ports:
-      - "8880:80"
-    restart: always
-    tty: true
-    stdin_open: true
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_NAME: d56838_tuleva20
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DEBUG: true
-    volumes:
-      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ./wordpress:/var/www/html/
-      - ./src/wp-content/themes/tuleva:/var/www/html/wp-content/themes/tuleva
+      UPLOAD_LIMIT: 512M
+      MEMORY_LIMIT: 1G
+      MAX_EXECUTION_TIME: 600
 
 volumes:
   db_data: {}

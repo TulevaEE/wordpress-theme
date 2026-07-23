@@ -2,7 +2,7 @@ version: 2.1
 jobs:
     test:
         docker:
-            - image: cimg/php:8.4-node
+            - image: cimg/php:8.5-node
         steps:
             - checkout
             - restore_cache:
@@ -50,6 +50,15 @@ jobs:
                   name: Sync files to production
                   command: |
                       set -e  # Ensures the CircleCI step fails if any command exits with a non-zero status
+                      # DEPLOY_TARGET is a CircleCI project environment variable
+                      # (Project Settings -> Environment Variables). It is the
+                      # COMPLETE rsync destination — NOT just a host — i.e. the
+                      # user, host, AND absolute path, with a trailing slash:
+                      #   user@host:/absolute/path/to/htdocs/wp-content/themes/tuleva/
+                      # A bare host would rsync the theme into the wrong place.
+                      # Kept out of the repo so this public repo carries no
+                      # production hostname, username, or path.
+                      : "${DEPLOY_TARGET:?Set DEPLOY_TARGET in CircleCI to user@host:/absolute/path/.../themes/tuleva/}"
                       rsync -avz --checksum --delete \
                         --exclude='tests/' \
                         --exclude='vendor/' \
@@ -62,7 +71,7 @@ jobs:
                         --exclude='*.spec.js' \
                         -e "ssh -o StrictHostKeyChecking=no" \
                         ./src/wp-content/themes/tuleva/ \
-                        virt56861@ftp.tuleva.ee:/data03/virt56861/domeenid/www.tuleva.ee/htdocs/wp-content/themes/tuleva/
+                        "$DEPLOY_TARGET"
 
 workflows:
     version: 2
