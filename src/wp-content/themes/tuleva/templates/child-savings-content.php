@@ -1,4 +1,4 @@
-<main id="main" class="page-container child-savings-page">
+<main id="main" class="page-container landing-page child-savings-page">
     <script>
         var LANGCODE = '<?php echo apply_filters( "wpml_current_language", NULL );  ?>'; // eslint-disable-line
     </script>
@@ -91,7 +91,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
                 </div>
                         <div>
-                            <span class="chip-soon"><?php _e('Coming this autumn', TEXT_DOMAIN); ?></span>
+                            <span class="chip chip--blue chip-soon"><?php _e('Coming this autumn', TEXT_DOMAIN); ?></span>
                             <h3><?php _e('Gifts straight to your child\'s account', TEXT_DOMAIN); ?></h3>
                             <p><?php _e('Grandparents, godparents, and friends will be able to make contributions straight to your child\'s savings fund account, with no steps in between.', TEXT_DOMAIN); ?></p>
                         </div>

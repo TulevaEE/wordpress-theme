@@ -1,0 +1,274 @@
+// Shared styles for marketing landing pages (child savings, savings fund)
+
+.landing-page {
+    text-wrap: pretty;
+
+    h1,
+    h2,
+    h3 {
+        text-wrap: balance;
+    }
+
+    h1,
+    h2 {
+        letter-spacing: -.015em;
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+        line-height: 1.14;
+    }
+
+    .section-spacing {
+        padding-top: 8.5rem;
+        padding-bottom: 8.5rem;
+    }
+
+    .section-spacing-bottom {
+        padding-bottom: 8.5rem;
+    }
+
+    @include media-breakpoint-down (md) {
+        .section-spacing {
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+
+        .section-spacing-bottom {
+            padding-bottom: 4.5rem;
+        }
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 1.1rem;
+        color: $navy-blue;
+        font-size: .82rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: .09em;
+        text-transform: uppercase;
+    }
+
+    .chip {
+        display: inline-block;
+        padding: .38rem .65rem;
+        border-radius: 2rem;
+        font-size: .7rem;
+        font-weight: $font-weight-semibold;
+        letter-spacing: .06em;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    .chip--blue {
+        background: #eaf4ff;
+        color: $blue;
+    }
+
+    .chip--green {
+        background: #e3f4e6;
+        color: #0a7a2f;
+    }
+
+    .diff-list {
+        list-style: none;
+        margin: 2rem 0 0;
+        padding: 0;
+        text-align: left;
+
+        li {
+            position: relative;
+            margin-bottom: 1.1rem;
+            padding-left: 2rem;
+            color: $text-primary;
+            font-size: 1.05rem;
+            line-height: 1.6;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: .35em;
+                width: 1.05rem;
+                height: 1.05rem;
+                background: no-repeat center/contain url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23006CE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
+            }
+        }
+    }
+
+    .emphasis-box .lead {
+        max-width: 38rem;
+    }
+
+    .ts-trust {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: .55rem 1.6rem;
+        margin: 1.4rem 0 0;
+        padding: 1.1rem 0 0;
+        font-size: .95rem;
+        line-height: 1.3;
+
+        li {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: .45rem;
+            color: $navy-blue;
+            text-align: left;
+        }
+
+        svg {
+            flex: 0 0 auto;
+            width: 16px;
+            height: 16px;
+            margin-top: .15em;
+            color: $navy-blue;
+        }
+
+        strong {
+            color: $navy-blue;
+            font-weight: $font-weight-semibold;
+        }
+
+        @include media-breakpoint-down (sm) {
+            gap: .55rem 1.1rem;
+        }
+    }
+
+    .steps-note {
+        margin-top: 1rem;
+        color: $text-secondary;
+        font-size: .95rem;
+    }
+
+    .foot-note {
+        color: $text-secondary;
+        font-size: .85rem;
+        line-height: 1.55;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    .faq-list {
+        margin-top: 3rem;
+    }
+
+    .resources {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-top: 2rem;
+
+        @include media-breakpoint-down (md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .resources--3 {
+        grid-template-columns: repeat(3, 1fr);
+
+        @include media-breakpoint-down (md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .resource {
+        background: $white;
+        border: 1px solid #e6edf4;
+        border-radius: .9rem;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            border-color: $blue;
+        }
+    }
+
+    .resource--post {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .45rem;
+        padding: 1.5rem 1.6rem;
+
+        &:hover,
+        &:focus {
+            .post-title,
+            .post-more {
+                text-decoration-color: currentColor;
+            }
+        }
+
+        .post-title {
+            color: $navy-blue;
+            font-size: 1.15rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.4;
+            text-decoration: underline;
+            text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent);
+            text-underline-offset: $link-underline-offset;
+            text-decoration-thickness: $link-underline-thickness;
+        }
+
+        .post-teaser {
+            color: $text-secondary;
+            font-size: .95rem;
+            line-height: 1.5;
+        }
+
+        .post-more {
+            margin-top: .2rem;
+            color: $blue;
+            font-size: .95rem;
+            font-weight: $font-weight-medium;
+            line-height: 1.4;
+            text-decoration: underline;
+            text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent);
+            text-underline-offset: $link-underline-offset;
+            text-decoration-thickness: $link-underline-thickness;
+        }
+    }
+
+    .resource--row {
+        display: flex;
+        align-items: center;
+        gap: .9rem;
+        padding: 1.1rem 1.2rem;
+        color: $navy-blue;
+        font-size: 1rem;
+        font-weight: $font-weight-medium;
+        line-height: 1.4;
+
+        span {
+            text-wrap: balance;
+            text-decoration: underline;
+            text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent);
+            text-underline-offset: $link-underline-offset;
+            text-decoration-thickness: $link-underline-thickness;
+        }
+
+        svg {
+            flex: 0 0 auto;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: $blue;
+        }
+
+        &:hover,
+        &:focus {
+            span {
+                text-decoration-color: currentColor;
+            }
+        }
+    }
+}

@@ -1,23 +1,21 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuleva 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tuleva\n"
+"POT-Creation-Date: 2026-01-13 13:01:37+00:00\n"
+"PO-Revision-Date: 2026-01-13 15:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-13 13:01:37+00:00\n"
-"PO-Revision-Date: 2026-01-13 15:04+0200\n"
-"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: .\n"
 
-#: functions.php:25
-#: helpers/acf/init.php:19
-#: helpers/post-types/init.php:9
-#: widgets/init.php:15
+#: functions.php:25 helpers/acf/init.php:19 helpers/post-types/init.php:9 widgets/init.php:15
 #, php-format
 msgid "Error locating %s for inclusion"
 msgstr "%s kutsumisel esines viga"
@@ -26,22 +24,19 @@ msgstr "%s kutsumisel esines viga"
 msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
-#: helpers/extras.php:473
-#: helpers/extras.php:484
-#: templates/components/countdown-timer.php:22
-#: templates/components/counter-hero.php:27
+#: helpers/extras.php:476 helpers/extras.php:487 templates/components/countdown-timer.php:22 templates/components/counter-hero.php:27
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:585
+#: helpers/extras.php:588
 msgid "Pagination"
 msgstr "Leheküljed"
 
-#: helpers/extras.php:589
+#: helpers/extras.php:592
 msgid "Newer"
 msgstr "Uuemad"
 
-#: helpers/extras.php:632
+#: helpers/extras.php:635
 msgid "Older"
 msgstr "Vanemad"
 
@@ -69,41 +64,31 @@ msgstr "Viimased artiklid"
 msgid "All articles"
 msgstr "Kõik artiklid"
 
-#: templates/components/calculator-cta.php:25
-#: templates/components/cta-change.php:13
-#: templates/components/front-hero.php:23
+#: templates/components/calculator-cta.php:25 templates/components/cta-change.php:13 templates/components/front-hero.php:23
 msgid "The deadline for this fund exchange period is <b>March 31.</b> Switching funds is <b>free.</b>"
 msgstr "Selle vahetusperioodi tähtaeg on <b>31. märts.</b> Fondivahetus on <b>tasuta.</b>"
 
-#: templates/components/calculator-cta.php:27
-#: templates/components/cta-change.php:15
-#: templates/components/front-hero.php:25
+#: templates/components/calculator-cta.php:27 templates/components/cta-change.php:15 templates/components/front-hero.php:25
 msgid "The deadline for this fund exchange period is <b>July 31.</b> Switching funds is <b>free.</b>"
 msgstr "Selle vahetusperioodi tähtaeg on <b>31. juuli.</b> Fondivahetus on <b>tasuta.</b>"
 
-#: templates/components/calculator-cta.php:29
-#: templates/components/cta-change.php:17
-#: templates/components/front-hero.php:27
+#: templates/components/calculator-cta.php:29 templates/components/cta-change.php:17 templates/components/front-hero.php:27
 msgid "The deadline for this fund exchange period is <b>November 30.</b> Switching funds is <b>free.</b>"
 msgstr "Selle vahetusperioodi tähtaeg on <b>30. november.</b> Fondivahetus on <b>tasuta.</b>"
 
-#: templates/components/countdown-timer.php:11
-#: templates/components/counter-hero.php:16
+#: templates/components/countdown-timer.php:11 templates/components/counter-hero.php:16
 msgid "Countdown timer"
 msgstr "Aega jäänud"
 
-#: templates/components/countdown-timer.php:14
-#: templates/components/counter-hero.php:19
+#: templates/components/countdown-timer.php:14 templates/components/counter-hero.php:19
 msgid "Countdown timer showing time remaining"
 msgstr "Aega jäänud"
 
-#: templates/components/countdown-timer.php:30
-#: templates/components/counter-hero.php:35
+#: templates/components/countdown-timer.php:30 templates/components/counter-hero.php:35
 msgid "hours"
 msgstr "tundi"
 
-#: templates/components/countdown-timer.php:38
-#: templates/components/counter-hero.php:43
+#: templates/components/countdown-timer.php:38 templates/components/counter-hero.php:43
 msgid "minutes"
 msgstr "minutit"
 
@@ -112,8 +97,7 @@ msgstr "minutit"
 msgid "Time remaining until %s"
 msgstr "Aega jäänud kuni %s"
 
-#: templates/components/founder-carousel.php:2
-#: templates/components/modal-founders.php:11
+#: templates/components/founder-carousel.php:2 templates/components/modal-founders.php:11
 msgid "Founding members"
 msgstr "Asutajaliikmed"
 
@@ -125,26 +109,19 @@ msgstr "Sinu vanus"
 msgid "years"
 msgstr "aastat"
 
-#: templates/components/front-hero/calculator.php:23
-#: templates/components/third-pillar-calculator.php:102
+#: templates/components/front-hero/calculator.php:23 templates/components/third-pillar-calculator.php:102
 msgid "Gross salary"
 msgstr "Brutopalk"
 
-#: templates/child-savings-content.php:30
-#: templates/components/front-hero/calculator.php:31
-#: templates/components/third-pillar-calculator.php:113
+#: templates/child-savings-content.php:30 templates/components/front-hero/calculator.php:31 templates/components/third-pillar-calculator.php:113
 msgid "&euro;/month"
 msgstr "&euro;&nbsp;kuus"
 
-#: templates/components/front-hero/calculator.php:39
-#: templates/components/front-hero/calculator.php:43
-#: templates/components/second-pillar-payment-rate-calculator.php:16
-#: templates/components/second-pillar-payment-rate-calculator.php:20
+#: templates/components/front-hero/calculator.php:39 templates/components/front-hero/calculator.php:43 templates/components/second-pillar-payment-rate-calculator.php:16 templates/components/second-pillar-payment-rate-calculator.php:20
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
-#: templates/components/front-hero/calculator.php:61
-#: templates/components/payout-calculator.php:21
+#: templates/components/front-hero/calculator.php:61 templates/components/payout-calculator.php:21
 msgid "Expected annual return"
 msgstr "Eeldatav tootlus aastas"
 
@@ -152,8 +129,7 @@ msgstr "Eeldatav tootlus aastas"
 msgid "Actual amounts depend greatly on the rate of return, and neither we nor anyone else can guarantee you a specific return."
 msgstr "Kogunev summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi teine ei saa kindlat tootlust tagada."
 
-#: templates/components/front-hero/calculator.php:72
-#: templates/components/payout-calculator.php:28
+#: templates/components/front-hero/calculator.php:72 templates/components/payout-calculator.php:28
 msgid "7% historic return on stocks"
 msgstr "aktsiate ajalooline tootlus 7%"
 
@@ -181,8 +157,7 @@ msgstr "Maksad kokku tasudeks <strong class=\"text-danger text-nowrap\"><span cl
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> more</span> in fees"
 msgstr "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> rohkem</span>"
 
-#: templates/components/front-hero/calculator.php:109
-#: templates/components/front-hero/calculator.php:132
+#: templates/components/front-hero/calculator.php:109 templates/components/front-hero/calculator.php:132
 msgid "You pay in fees"
 msgstr "Maksad tasudeks"
 
@@ -194,8 +169,7 @@ msgstr "Maksad kokku tasudeks <span class=\"text-nowrap\"><span class=\"tuleva-s
 msgid "per year"
 msgstr "aastas"
 
-#: templates/components/front-hero/calculator.php:123
-#: templates/components/fund-stocks-header.php:5
+#: templates/components/front-hero/calculator.php:123 templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
 msgstr "Tuleva Maailma Aktsiate Pensionifond"
 
@@ -203,78 +177,47 @@ msgstr "Tuleva Maailma Aktsiate Pensionifond"
 msgid "0.28% per year"
 msgstr "0,28% aastas"
 
-#: templates/components/fund-bonds-details.php:7
-#: templates/components/fund-savings-details.php:32
-#: templates/components/fund-stocks-details.php:7
-#: templates/components/fund-third-details.php:7
+#: templates/components/fund-bonds-details.php:7 templates/components/fund-savings-details.php:32 templates/components/fund-stocks-details.php:7 templates/components/fund-third-details.php:7
 msgid "Fund details"
 msgstr "Fondi info"
 
-#: templates/components/fund-bonds-details.php:13
-#: templates/components/fund-savings-details.php:40
-#: templates/components/fund-stocks-details.php:13
-#: templates/components/fund-third-details.php:13
+#: templates/components/fund-bonds-details.php:13 templates/components/fund-savings-details.php:40 templates/components/fund-stocks-details.php:13 templates/components/fund-third-details.php:13
 msgid "Currency"
 msgstr "Valuuta"
 
-#: templates/components/fund-bonds-details.php:17
-#: templates/components/fund-savings-details.php:45
-#: templates/components/fund-stocks-details.php:17
-#: templates/components/fund-third-details.php:17
+#: templates/components/fund-bonds-details.php:17 templates/components/fund-savings-details.php:45 templates/components/fund-stocks-details.php:17 templates/components/fund-third-details.php:17
 msgid "Date of inception"
 msgstr "Moodustamise kuupäev"
 
-#: templates/components/fund-bonds-details.php:18
-#: templates/components/fund-stocks-details.php:18
+#: templates/components/fund-bonds-details.php:18 templates/components/fund-stocks-details.php:18
 msgid "27 March 2017"
 msgstr "27. märts 2017"
 
-#: templates/components/fund-bonds-details.php:21
-#: templates/components/fund-savings-details.php:50
-#: templates/components/fund-stocks-details.php:21
-#: templates/components/fund-third-details.php:21
+#: templates/components/fund-bonds-details.php:21 templates/components/fund-savings-details.php:50 templates/components/fund-stocks-details.php:21 templates/components/fund-third-details.php:21
 msgid "Fund volume"
 msgstr "Fondi maht"
 
-#: templates/components/fund-bonds-details.php:29
-#: templates/components/fund-savings-details.php:59
-#: templates/components/fund-stocks-details.php:29
-#: templates/components/fund-third-details.php:29
+#: templates/components/fund-bonds-details.php:29 templates/components/fund-savings-details.php:59 templates/components/fund-stocks-details.php:29 templates/components/fund-third-details.php:29
 msgid "Management fee"
 msgstr "Valitsemistasu"
 
-#: templates/components/fund-bonds-details.php:33
-#: templates/components/fund-savings-details.php:65
-#: templates/components/fund-stocks-details.php:33
-#: templates/components/fund-third-details.php:33
+#: templates/components/fund-bonds-details.php:33 templates/components/fund-savings-details.php:65 templates/components/fund-stocks-details.php:33 templates/components/fund-third-details.php:33
 msgid "Ongoing charges"
 msgstr "Jooksvad tasud"
 
-#: templates/components/fund-bonds-details.php:37
-#: templates/components/fund-savings-details.php:71
-#: templates/components/fund-stocks-details.php:37
-#: templates/components/fund-third-details.php:37
+#: templates/components/fund-bonds-details.php:37 templates/components/fund-savings-details.php:71 templates/components/fund-stocks-details.php:37 templates/components/fund-third-details.php:37
 msgid "Redemption fee and issue fee"
 msgstr "Väljalasketasu ja tagasivõtmistasu"
 
-#: templates/components/fund-bonds-details.php:41
-#: templates/components/fund-savings-details.php:77
-#: templates/components/fund-stocks-details.php:41
-#: templates/components/fund-third-details.php:41
+#: templates/components/fund-bonds-details.php:41 templates/components/fund-savings-details.php:77 templates/components/fund-stocks-details.php:41 templates/components/fund-third-details.php:41
 msgid "Fund manager's participation rate in fund"
 msgstr "Fondivalitseja osalus fondis"
 
-#: templates/components/fund-bonds-details.php:42
-#: templates/components/fund-savings-details.php:78
-#: templates/components/fund-stocks-details.php:42
-#: templates/components/fund-third-details.php:42
+#: templates/components/fund-bonds-details.php:42 templates/components/fund-savings-details.php:78 templates/components/fund-stocks-details.php:42 templates/components/fund-third-details.php:42
 msgid "units"
 msgstr "osakut"
 
-#: templates/components/fund-bonds-details.php:45
-#: templates/components/fund-savings-details.php:83
-#: templates/components/fund-stocks-details.php:45
-#: templates/components/fund-third-details.php:45
+#: templates/components/fund-bonds-details.php:45 templates/components/fund-savings-details.php:83 templates/components/fund-stocks-details.php:45 templates/components/fund-third-details.php:45
 msgid "Risk profile"
 msgstr "Riskiprofiil"
 
@@ -282,149 +225,67 @@ msgstr "Riskiprofiil"
 msgid "Conservative"
 msgstr "Konservatiivne"
 
-#: templates/components/fund-bonds-details.php:49
-#: templates/components/fund-savings-details.php:89
-#: templates/components/fund-stocks-details.php:49
-#: templates/components/fund-third-details.php:49
+#: templates/components/fund-bonds-details.php:49 templates/components/fund-savings-details.php:89 templates/components/fund-stocks-details.php:49 templates/components/fund-third-details.php:49
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
-#: templates/components/fund-bonds-details.php:55
-#: templates/components/fund-savings-details.php:95
-#: templates/components/fund-stocks-details.php:54
-#: templates/components/fund-third-details.php:54
+#: templates/components/fund-bonds-details.php:55 templates/components/fund-savings-details.php:95 templates/components/fund-stocks-details.php:54 templates/components/fund-third-details.php:54
 msgid "Documents"
 msgstr "Dokumendid"
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:101
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:58 templates/components/fund-savings-details.php:101 templates/components/fund-stocks-details.php:57 templates/components/fund-third-details.php:57
 msgid "Prospectus"
 msgstr "Prospekt"
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:103
-#: templates/components/fund-savings-details.php:115
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:58 templates/components/fund-savings-details.php:103 templates/components/fund-savings-details.php:115 templates/components/fund-stocks-details.php:57 templates/components/fund-third-details.php:57
 msgid " and "
 msgstr " ja "
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:106
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:58 templates/components/fund-savings-details.php:106 templates/components/fund-stocks-details.php:57 templates/components/fund-third-details.php:57
 msgid "Terms and conditions"
 msgstr "tingimused"
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:108
-#: templates/components/fund-savings-details.php:127
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:140
-#: templates/components/fund-savings-details.php:145
-#: templates/components/fund-savings-details.php:150
-#: templates/components/fund-savings-details.php:155
-#: templates/components/fund-savings-details.php:161
-#: templates/components/fund-savings-details.php:171
-#: templates/components/fund-savings-details.php:181
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-stocks-details.php:60
-#: templates/components/fund-stocks-details.php:63
-#: templates/components/fund-stocks-details.php:66
-#: templates/components/fund-stocks-details.php:69
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-stocks-details.php:75
-#: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:57
-#: templates/components/fund-third-details.php:60
-#: templates/components/fund-third-details.php:63
-#: templates/components/fund-third-details.php:66
-#: templates/components/fund-third-details.php:69
-#: templates/components/fund-third-details.php:72
-#: templates/components/fund-third-details.php:75
-#: templates/components/fund-third-details.php:82
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-bonds-details.php:58 templates/components/fund-bonds-details.php:61 templates/components/fund-bonds-details.php:64 templates/components/fund-bonds-details.php:67 templates/components/fund-bonds-details.php:70 templates/components/fund-bonds-details.php:73 templates/components/fund-bonds-details.php:76 templates/components/fund-bonds-details.php:83 templates/components/fund-bonds-details.php:88 templates/components/fund-savings-details.php:108 templates/components/fund-savings-details.php:127 templates/components/fund-savings-details.php:134 templates/components/fund-savings-details.php:140 templates/components/fund-savings-details.php:145 templates/components/fund-savings-details.php:150 templates/components/fund-savings-details.php:155 templates/components/fund-savings-details.php:161 templates/components/fund-savings-details.php:171 templates/components/fund-savings-details.php:181 templates/components/fund-stocks-details.php:57 templates/components/fund-stocks-details.php:60 templates/components/fund-stocks-details.php:63 templates/components/fund-stocks-details.php:66 templates/components/fund-stocks-details.php:69 templates/components/fund-stocks-details.php:72 templates/components/fund-stocks-details.php:75 templates/components/fund-stocks-details.php:82 templates/components/fund-stocks-details.php:87 templates/components/fund-third-details.php:57 templates/components/fund-third-details.php:60 templates/components/fund-third-details.php:63 templates/components/fund-third-details.php:66 templates/components/fund-third-details.php:69 templates/components/fund-third-details.php:72 templates/components/fund-third-details.php:75 templates/components/fund-third-details.php:82 templates/components/fund-third-details.php:87
 msgid " (in Estonian)"
 msgstr " "
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-savings-details.php:126
-#: templates/components/fund-stocks-details.php:60
-#: templates/components/fund-third-details.php:60
+#: templates/components/fund-bonds-details.php:61 templates/components/fund-savings-details.php:126 templates/components/fund-stocks-details.php:60 templates/components/fund-third-details.php:60
 msgid "Model portfolio"
 msgstr "Mudelportfell"
 
-#: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-savings-details.php:133
-#: templates/components/fund-stocks-details.php:63
-#: templates/components/fund-third-details.php:63
+#: templates/components/fund-bonds-details.php:64 templates/components/fund-savings-details.php:133 templates/components/fund-stocks-details.php:63 templates/components/fund-third-details.php:63
 msgid "Key Investor Information"
 msgstr "Põhiteave"
 
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-savings-details.php:139
-#: templates/components/fund-stocks-details.php:66
-#: templates/components/fund-third-details.php:66
+#: templates/components/fund-bonds-details.php:67 templates/components/fund-savings-details.php:139 templates/components/fund-stocks-details.php:66 templates/components/fund-third-details.php:66
 msgid "Procedure for determining net worth of fund"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
-#: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-savings-details.php:144
-#: templates/components/fund-stocks-details.php:69
-#: templates/components/fund-third-details.php:69
+#: templates/components/fund-bonds-details.php:70 templates/components/fund-savings-details.php:144 templates/components/fund-stocks-details.php:69 templates/components/fund-third-details.php:69
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-savings-details.php:149
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:72
+#: templates/components/fund-bonds-details.php:73 templates/components/fund-savings-details.php:149 templates/components/fund-stocks-details.php:72 templates/components/fund-third-details.php:72
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
 
-#: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-savings-details.php:154
-#: templates/components/fund-stocks-details.php:75
-#: templates/components/fund-third-details.php:75
+#: templates/components/fund-bonds-details.php:76 templates/components/fund-savings-details.php:154 templates/components/fund-stocks-details.php:75 templates/components/fund-third-details.php:75
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
-#: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-savings-details.php:166
-#: templates/components/fund-stocks-details.php:79
-#: templates/components/fund-third-details.php:79
+#: templates/components/fund-bonds-details.php:80 templates/components/fund-savings-details.php:166 templates/components/fund-stocks-details.php:79 templates/components/fund-third-details.php:79
 msgid "Reports"
 msgstr "Aruanded"
 
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-savings-details.php:170
-#: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-bonds-details.php:83 templates/components/fund-savings-details.php:170 templates/components/fund-stocks-details.php:82 templates/components/fund-third-details.php:82
 msgid "Investment reports"
 msgstr "Investeeringute aruanded"
 
-#: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-savings-details.php:175
-#: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:84
+#: templates/components/fund-bonds-details.php:85 templates/components/fund-savings-details.php:175 templates/components/fund-stocks-details.php:84 templates/components/fund-third-details.php:84
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
-#: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:180
-#: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-bonds-details.php:88 templates/components/fund-savings-details.php:180 templates/components/fund-stocks-details.php:87 templates/components/fund-third-details.php:87
 msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
@@ -436,24 +297,15 @@ msgstr "Fondi osakuhinna muutus"
 msgid "Download NAV history"
 msgstr "Lae alla NAV-i ajalugu"
 
-#: templates/components/fund-bonds-details.php:92
-#: templates/components/fund-savings-details.php:193
-#: templates/components/fund-stocks-details.php:91
-#: templates/components/fund-third-details.php:91
+#: templates/components/fund-bonds-details.php:92 templates/components/fund-savings-details.php:193 templates/components/fund-stocks-details.php:91 templates/components/fund-third-details.php:91
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
-#: templates/components/fund-bonds-details.php:94
-#: templates/components/fund-savings-details.php:195
-#: templates/components/fund-stocks-details.php:93
-#: templates/components/fund-third-details.php:93
+#: templates/components/fund-bonds-details.php:94 templates/components/fund-savings-details.php:195 templates/components/fund-stocks-details.php:93 templates/components/fund-third-details.php:93
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
-#: templates/components/fund-bonds-details.php:95
-#: templates/components/fund-savings-details.php:196
-#: templates/components/fund-stocks-details.php:94
-#: templates/components/fund-third-details.php:94
+#: templates/components/fund-bonds-details.php:95 templates/components/fund-savings-details.php:196 templates/components/fund-stocks-details.php:94 templates/components/fund-third-details.php:94
 #, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
@@ -494,8 +346,7 @@ msgstr "Investori õiguste kokkuvõte"
 msgid "Tuleva Savings Fund"
 msgstr "Tuleva täiendav kogumisfond"
 
-#: templates/components/fund-stocks-details.php:46
-#: templates/components/fund-third-details.php:46
+#: templates/components/fund-stocks-details.php:46 templates/components/fund-third-details.php:46
 msgid "Aggressive"
 msgstr "Agressiivne"
 
@@ -583,28 +434,15 @@ msgstr "Kas oleme õigel teel?"
 msgid "Join us!"
 msgstr "Ühine meiega!"
 
-#: templates/components/middle-cta.php:5
-#: templates/components/signup-block.php:25
+#: templates/components/middle-cta.php:5 templates/components/signup-block.php:25
 msgid "Become a member"
 msgstr "Astu liikmeks"
 
-#: templates/components/modal-calculator.php:3
-#: templates/components/modal-founders.php:3
-#: templates/components/modal-payout-calculator.php:3
-#: templates/components/modal-question-fee.php:3
-#: templates/components/modal-question-joining-fee.php:3
-#: templates/components/modal-question-profit.php:3
-#: templates/components/modal-question-rights.php:3
-#: templates/components/modal-question-vote.php:3
-#: templates/components/modal-second-pillar-payment-rate.php:3
-#: templates/components/modal-security.php:3
-#: templates/components/modal.php:5
+#: templates/components/modal-calculator.php:3 templates/components/modal-founders.php:3 templates/components/modal-payout-calculator.php:3 templates/components/modal-question-fee.php:3 templates/components/modal-question-joining-fee.php:3 templates/components/modal-question-profit.php:3 templates/components/modal-question-rights.php:3 templates/components/modal-question-vote.php:3 templates/components/modal-second-pillar-payment-rate.php:3 templates/components/modal-security.php:3 templates/components/modal.php:5
 msgid "Close"
 msgstr "Sulgen"
 
-#: templates/components/modal-calculator.php:11
-#: templates/components/modal-payout-calculator.php:11
-#: templates/components/modal-second-pillar-payment-rate.php:11
+#: templates/components/modal-calculator.php:11 templates/components/modal-payout-calculator.php:11 templates/components/modal-second-pillar-payment-rate.php:11
 msgid "How does the calculator work?"
 msgstr "Kuidas pensionikalkulaator töötab?"
 
@@ -620,9 +458,7 @@ msgstr "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie e
 msgid "In a low-cost index fund your assets grow hand-in-hand with the average returns of world markets. Low-cost index funds have outperformed Estonian pension funds every year to date, but past performance is no guarantee of future performance."
 msgstr "Madala kuluga indeksifondis käib sinu vara kasv käsikäes maailmaturgude keskmisega. Seni on see olnud märkimisväärselt parem Eesti pankade pensionifondide pikaajalisest tootlusest, aga minevik pole tuleviku garantiiks."
 
-#: templates/components/modal-calculator.php:21
-#: templates/components/modal-payout-calculator.php:20
-#: templates/components/modal-second-pillar-payment-rate.php:20
+#: templates/components/modal-calculator.php:21 templates/components/modal-payout-calculator.php:20 templates/components/modal-second-pillar-payment-rate.php:20
 msgid "Assumptions"
 msgstr "Mudeli eeldused"
 
@@ -730,8 +566,7 @@ msgstr "Allan Kaldoja tegeleb ettevõtlusega. Allani kireks on kodanikuühendust
 msgid "Jaak Roosaare is an investor and the author of Rikkaks Saamise Õpik, which translates as a primer on how to get rich. Jaak devotes his time to making Estonians financially savvier, so they could make better financial decisions and enjoy a better life."
 msgstr "Jaak Roosaare on investor ja Rikkaks Saamise Õpiku autor. Jaak pühendab oma aega sellele, et arendada eestlaste finantsteadlikkust, et inimesed teeksid paremaid finantsotsuseid ja läbi selle saaksid nautida paremat elu."
 
-#: templates/components/modal-payout-calculator.php:16
-#: templates/components/modal-second-pillar-payment-rate.php:16
+#: templates/components/modal-payout-calculator.php:16 templates/components/modal-second-pillar-payment-rate.php:16
 msgid "Expected returns depend greatly on the evolving rate of return, and neither we nor anyone else are able to guarantee a 7% annual return."
 msgstr "Oodatav summa sõltub tegelikult kujunevast tootluse määrast ja meie ega keegi teine ei saa sulle tagada fondide tootlust."
 
@@ -747,13 +582,11 @@ msgstr "2026. a tulumaksumäär"
 msgid "2026 basic exemption per month"
 msgstr "2026. a maksuvaba tulu kuus"
 
-#: templates/components/modal-payout-calculator.php:31
-#: templates/components/modal-second-pillar-payment-rate.php:31
+#: templates/components/modal-payout-calculator.php:31 templates/components/modal-second-pillar-payment-rate.php:31
 msgid "Retirement age"
 msgstr "Pensioniiga"
 
-#: templates/components/modal-payout-calculator.php:32
-#: templates/components/modal-second-pillar-payment-rate.php:32
+#: templates/components/modal-payout-calculator.php:32 templates/components/modal-second-pillar-payment-rate.php:32
 msgid "65 y/o"
 msgstr "65 a"
 
@@ -999,8 +832,7 @@ msgstr "Mulle laekub igakuiselt"
 msgid "If your pension assets increase due to positive returns, the monthly amount you receive will also increase."
 msgstr "Kui sinu pensionivara kasvab tänu postiivsele tootlusele, kasvab ka sulle igakuiselt laekuv summa."
 
-#: templates/components/payout-calculator.php:39
-#: templates/components/payout-calculator.php:43
+#: templates/components/payout-calculator.php:39 templates/components/payout-calculator.php:43
 msgid "The range shows how much you will receive at the beginning of the payout period and how it will change by the end of the period."
 msgstr "Vahemik näitab, kui palju laekub sulle väljamaksete perioodi alguses ja kuidas see muutub perioodi lõpuks."
 
@@ -1036,8 +868,7 @@ msgstr "Vanus"
 msgid "y/o"
 msgstr "a"
 
-#: templates/child-savings-content.php:148
-#: templates/components/qa-block.php:5
+#: templates/child-savings-content.php:148 templates/components/qa-block.php:5 templates/savings-fund-landing-content.php:219
 msgid "Frequently asked questions"
 msgstr "Korduma kippuvad küsimused"
 
@@ -1065,9 +896,7 @@ msgstr "Eeldame, et tulumaks on 22% ja maksuvaba tulu 700 eurot kuus."
 msgid "Your monthly contribution"
 msgstr "Sinu igakuine panus"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:59
-#: templates/components/third-pillar-calculator.php:69
-#: templates/components/third-pillar-calculator.php:142
+#: templates/components/second-pillar-payment-rate-calculator.php:59 templates/components/third-pillar-calculator.php:69 templates/components/third-pillar-calculator.php:142
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
@@ -1095,10 +924,7 @@ msgstr "Brutotulu kokku"
 msgid "view"
 msgstr "vaata"
 
-#: templates/components/third-pillar-calculator.php:27
-#: templates/components/third-pillar-calculator.php:43
-#: templates/components/third-pillar-calculator.php:59
-#: templates/components/third-pillar-calculator.php:131
+#: templates/components/third-pillar-calculator.php:27 templates/components/third-pillar-calculator.php:43 templates/components/third-pillar-calculator.php:59 templates/components/third-pillar-calculator.php:131
 msgid "&euro;/year"
 msgstr "&euro;&nbsp;aastas"
 
@@ -1118,8 +944,7 @@ msgstr "Muud maksu&shy;vabastused"
 msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
 msgstr "Kingitused ja annetused; koolituskulud, sh lasteaiatasud. Kuni 1200 eurot, kuid mitte rohkem kui 50% ulatuses Eestis maksustatavast tulust."
 
-#: templates/components/third-pillar-calculator.php:72
-#: templates/components/third-pillar-calculator.php:145
+#: templates/components/third-pillar-calculator.php:72 templates/components/third-pillar-calculator.php:145
 msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
 msgstr "Selle aasta tulude deklareerimine algab järgmise aasta 15. veebruaril. Pea meeles, et sa ei saa rohkem tulumaksu tagasi kui sa sel aastal maksid."
 
@@ -1127,13 +952,11 @@ msgstr "Selle aasta tulude deklareerimine algab järgmise aasta 15. veebruaril. 
 msgid "Contribute up to"
 msgstr "Pane III sambasse kuni"
 
-#: templates/components/third-pillar-calculator.php:83
-#: templates/components/third-pillar-calculator.php:156
+#: templates/components/third-pillar-calculator.php:83 templates/components/third-pillar-calculator.php:156
 msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr "III samba sissemaksetele kehtib tulumaksusoodustus kuni 15% ulatuses Eestis maksustatavast brutotulust, kuid mitte rohkem kui 6000 € aastas."
 
-#: templates/components/third-pillar-calculator.php:92
-#: templates/components/third-pillar-calculator.php:165
+#: templates/components/third-pillar-calculator.php:92 templates/components/third-pillar-calculator.php:165
 msgid "Make a III pillar payment"
 msgstr "Tee III samba sissemakse"
 
@@ -1217,8 +1040,7 @@ msgstr "Liitu Tuleva uudiskirjaga"
 msgid "Stay in touch with news about Tuleva, advice and other useful materials"
 msgstr "Ole kursis Tuleva uudiste, nõuannete jm kasulike materjalidega."
 
-#: templates/footer/not-logged-in-mailing-list-form.php:7
-#: templates/footer/subscribe-form.php:6
+#: templates/footer/not-logged-in-mailing-list-form.php:7 templates/footer/subscribe-form.php:6
 msgid "Your e-mail address"
 msgstr "Sinu e-maili aadress"
 
@@ -1226,13 +1048,11 @@ msgstr "Sinu e-maili aadress"
 msgid "Join mailing list"
 msgstr "Liitu uudiskirjaga"
 
-#: templates/header/main.php:9
-#: templates/header/main.php:20
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "https://pension.tuleva.ee/?language=en"
 msgstr "https://pension.tuleva.ee"
 
-#: templates/header/main.php:9
-#: templates/header/main.php:20
+#: templates/header/main.php:9 templates/header/main.php:20
 msgid "Log in"
 msgstr "Sisenen"
 
@@ -1284,13 +1104,11 @@ msgstr "CTA nupu moodul"
 msgid "Shows a CTA Button."
 msgstr "Näitab CTA nuppu."
 
-#: widgets/cta-button-widget.php:33
-#: widgets/cta-primary-widget.php:41
+#: widgets/cta-button-widget.php:33 widgets/cta-primary-widget.php:41
 msgid "Button text:"
 msgstr "Nupu tekst:"
 
-#: widgets/cta-button-widget.php:37
-#: widgets/cta-primary-widget.php:45
+#: widgets/cta-button-widget.php:37 widgets/cta-primary-widget.php:45
 msgid "Button URL:"
 msgstr "Nupu URL:"
 
@@ -1302,16 +1120,11 @@ msgstr "Peamine CTA moodul"
 msgid "Shows primary CTA widget."
 msgstr "Näitab peamist CTA moodulit."
 
-#: widgets/cta-primary-widget.php:37
-#: widgets/cta-secondary-widget.php:35
-#: widgets/help-widget.php:36
-#: widgets/subscribe-widget.php:39
-#: widgets/text-rows-widget.php:43
+#: widgets/cta-primary-widget.php:37 widgets/cta-secondary-widget.php:35 widgets/help-widget.php:36 widgets/subscribe-widget.php:39 widgets/text-rows-widget.php:43
 msgid "Title:"
 msgstr "Pealkiri:"
 
-#: widgets/cta-primary-widget.php:49
-#: widgets/cta-secondary-widget.php:43
+#: widgets/cta-primary-widget.php:49 widgets/cta-secondary-widget.php:43
 msgid "Text:"
 msgstr "Tekst:"
 
@@ -1465,9 +1278,7 @@ msgstr "Pane lapse raha varakult kasvama"
 msgid "The assets belong to your child and grow in Tuleva's low-fee index fund. Start with as little as one euro."
 msgstr "Vara on lapse oma ja kasvab Tuleva madala tasuga indeksfondis. Alusta kasvõi ühest eurost."
 
-#: templates/child-savings-content.php:49
-#: templates/child-savings-content.php:77
-#: templates/child-savings-content.php:134
+#: templates/child-savings-content.php:49 templates/child-savings-content.php:77 templates/child-savings-content.php:134
 msgid "Open an account for my child"
 msgstr "Avan lapsele konto"
 
@@ -1539,7 +1350,7 @@ msgstr "Kingitused otse lapse kontole"
 msgid "Grandparents, godparents, and friends will be able to make contributions straight to your child's savings fund account, with no steps in between."
 msgstr "Vanavanemad, ristivanemad ja sõbrad saavad teha sissemakseid otse lapse kogumisfondi kontole, ilma vahesammudeta."
 
-#: templates/child-savings-content.php:108
+#: templates/child-savings-content.php:108 templates/savings-fund-landing-content.php:182
 msgid "Good to know before you start"
 msgstr "Hea teada enne alustamist"
 
@@ -1564,7 +1375,7 @@ msgstr "Lapsele antud raha jääb lapsele."
 msgid "The assets belong to the child and withdrawals can only be made to the child's own bank account. This gives the assets reasonable protection."
 msgstr "Vara on lapse oma ja väljamakseid saab teha ainult lapse enda pangakontole. See annab varale mõistliku kaitse."
 
-#: templates/child-savings-content.php:117
+#: templates/child-savings-content.php:117 templates/savings-fund-landing-content.php:184
 msgid "Stock markets fluctuate."
 msgstr "Aktsiaturud kõiguvad."
 
@@ -1592,7 +1403,7 @@ msgstr "Ava konto vaid paari minutiga. Mida varem alustad, seda kauem jõuab lap
 msgid "Over <strong>85,000</strong> people save with Tuleva"
 msgstr "Üle <strong>85 000</strong> inimese kogub Tulevas"
 
-#: templates/child-savings-content.php:137
+#: templates/child-savings-content.php:137 templates/savings-fund-landing-content.php:208
 msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr "Tasu <strong>0,28%</strong> aastas, lisatasudeta"
 
@@ -1685,7 +1496,7 @@ msgstr "Kas mõlemad vanemad saavad kontot hallata?"
 msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later."
 msgstr "Konto saab avada kumbki vanem, kellel on lapse varahooldusõigus, ja ta tegutseb lapse esindajana iseseisvalt. Teisele vanemale saadame konto avamise kohta teate. Võimaluse, et mõlemad vanemad näevad kontot ja teevad tehinguid, lisame edaspidi."
 
-#: templates/child-savings-content.php:222
+#: templates/child-savings-content.php:222 templates/savings-fund-landing-content.php:362
 msgid "Learn more"
 msgstr "Uuri rohkem"
 
@@ -1705,8 +1516,7 @@ msgstr "Lapse vanus"
 msgid "Tax win"
 msgstr "Maksuvõit"
 
-#: templates/child-savings-content.php:227
-#: templates/child-savings-content.php:232
+#: templates/child-savings-content.php:227 templates/child-savings-content.php:232
 msgid "Read on →"
 msgstr "Loe edasi →"
 
@@ -1718,7 +1528,7 @@ msgstr "Kas lapsele kogudes on vaja investeerimiskontot?"
 msgid "Two approaches to choose between."
 msgstr "Kaks lähenemist, mille vahel valida."
 
-#: templates/child-savings-content.php:51
+#: templates/child-savings-content.php:51 templates/savings-fund-landing-content.php:379
 msgid "Opening an account is free and takes only a few minutes."
 msgstr "Konto avamine on tasuta ja võtab vaid mõne minuti."
 
@@ -1751,8 +1561,7 @@ msgstr "Ka vanavanem või muu lähedane saab lapsele kinkida. Kõige lihtsam on,
 msgid "Contribution"
 msgstr "Sissemakse"
 
-#: templates/child-savings-content.php:36
-#: templates/child-savings-content.php:45
+#: templates/child-savings-content.php:36 templates/child-savings-content.php:45
 msgid "More information"
 msgstr "Lisainfo"
 
@@ -1772,6 +1581,542 @@ msgstr "Arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul va
 msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
 msgstr "Kalkulaatori tulemus on illustratiivne: tulumaksu arvestatakse ainult teenitud tulult, mitte sissemaksetelt. Maksuvõidu arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul vanuses 18​–​21, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab tänaseid määrasid: tulumaks 22% ja maksuvaba tulu 8400 € aastas. Maksureeglid aastate jooksul muutuvad. Üheski Tuleva fondis pole tootlus garanteeritud."
 
-#: searchform.php:5
+#. Template Name of the theme
+msgid "Savings fund landing page"
+msgstr "Kogumisfondi maandumisleht"
+
+#: templates/savings-fund-landing-content.php:7
+msgid "The whole world market.<br>One fund."
+msgstr "Kogu maailmaturg.<br>Üks fond."
+
+#: templates/savings-fund-landing-content.php:8
+msgid "Now you can invest with Tuleva beyond the second and third pillar. Grow your own, your company's, or your child's portfolio."
+msgstr "Nüüd saad Tulevas investeerida ka lisaks II ja III sambale. Kasvata oma isiklikku, OÜ või lapse portfelli."
+
+#: templates/savings-fund-landing-content.php:10 templates/savings-fund-landing-content.php:206 templates/savings-fund-landing-content.php:378
+msgid "Start investing"
+msgstr "Alustan investeerimist"
+
+#: templates/savings-fund-landing-content.php:21
+msgid "Why Tuleva?"
+msgstr "Miks Tuleva?"
+
+#: templates/savings-fund-landing-content.php:22
+msgid "One fund, a proven strategy"
+msgstr "Üks fond, end tõestanud strateegia"
+
+#: templates/savings-fund-landing-content.php:28
+msgid "Broad diversification"
+msgstr "Lai hajutatus"
+
+#: templates/savings-fund-landing-content.php:29
+msgid "A globally diversified index fund where we invest in the shares of nearly 2,500 companies."
+msgstr "Globaalselt hajutatud indeksfond, kus investeerime ligi 2500 ettevõtte aktsiasse."
+
+#: templates/savings-fund-landing-content.php:30
+msgid "Where the fund invests →"
+msgstr "Kuhu fond investeerib →"
+
+#: templates/savings-fund-landing-content.php:36
+msgid "Low fee"
+msgstr "Madal tasu"
+
+#: templates/savings-fund-landing-content.php:37
+msgid "The fund's fee is 0.28% per year, with no purchase, sale, or other extra charges."
+msgstr "Fondi tasu 0,28% aastas, ilma ostu-, müügi- ja muude lisatasudeta."
+
+#: templates/savings-fund-landing-content.php:38
+msgid "How Tuleva differs →"
+msgstr "Mille poolest Tuleva erineb →"
+
+#: templates/savings-fund-landing-content.php:44
+msgid "Easy to start"
+msgstr "Lihtne alustada"
+
+#: templates/savings-fund-landing-content.php:45
+msgid "Opening an account takes a couple of minutes. Start investing with as little as 1 euro."
+msgstr "Konto avamine võtab paar minutit. Alusta investeerimist kasvõi 1 euroga."
+
+#: templates/savings-fund-landing-content.php:46
+msgid "How to start →"
+msgstr "Kuidas alustada →"
+
+#: templates/savings-fund-landing-content.php:58
+msgid "Is the Savings Fund right for you?"
+msgstr "Kas Täiendav Kogumisfond on sulle?"
+
+#: templates/savings-fund-landing-content.php:59
+msgid "The pension pillars give you a tax win, and that's usually the place to start. The Savings Fund gives you the flexibility to save without limits."
+msgstr "Sambad annavad maksuvõidu, sealt tasub üldjuhul alustada. Kogumisfond annab paindlikkuse koguda piiranguteta."
+
+#: templates/savings-fund-landing-content.php:62
+msgid "1 · Tax win"
+msgstr "1 · Maksuvõit"
+
+#: templates/savings-fund-landing-content.php:63
+msgid "Second pillar"
+msgstr "II sammas"
+
+#: templates/savings-fund-landing-content.php:64
+msgid "Contributions are free of income tax, and the state adds another 4% of your gross salary, which comes from your social tax."
+msgstr "Sissemaksed on tulumaksuvabad ja riik lisab veel 4% brutopalgast, mis tuleb sinu sotsiaalmaksust."
+
+#: templates/savings-fund-landing-content.php:68
+msgid "2 · Tax win"
+msgstr "2 · Maksuvõit"
+
+#: templates/savings-fund-landing-content.php:69
+msgid "Third pillar"
+msgstr "III sammas"
+
+#: templates/savings-fund-landing-content.php:74
+msgid "3 · You are here"
+msgstr "3 · Sina oled siin"
+
+#: templates/savings-fund-landing-content.php:75
+msgid "Savings Fund"
+msgstr "Täiendav Kogumisfond"
+
+#: templates/savings-fund-landing-content.php:76
+msgid "If you already save in the pillars, you can continue saving here. You can withdraw money flexibly."
+msgstr "Kui sammastesse juba kogud, saad kogumist siin jätkata. Raha saad välja võtta paindlikult."
+
+#: templates/savings-fund-landing-content.php:88
+msgid "Invest in your own name, through your company, or for your child"
+msgstr "Investeeri enda nimel, osaühingu kaudu või lapsele"
+
+#: templates/savings-fund-landing-content.php:94
+msgid "For yourself"
+msgstr "Endale"
+
+#: templates/savings-fund-landing-content.php:95
+msgid "Put your savings to work. Investing through an investment account, you defer income tax until you take the money into use."
+msgstr "Pane oma säästud tööle. Investeerimiskonto kaudu kogudes lükkad tulumaksu edasi, kuni raha kasutusele võtad."
+
+#: templates/savings-fund-landing-content.php:96
+msgid "Why use an investment account →"
+msgstr "Miks kasutada investeerimiskontot →"
+
+#: templates/savings-fund-landing-content.php:102
+msgid "For your company"
+msgstr "Osaühingule"
+
+#: templates/savings-fund-landing-content.php:103
+msgid "Put your company's spare cash to work. No LEI code is needed. Suitable for private limited companies with up to two shareholders and board members."
+msgstr "Pane ettevõtte vaba raha tööle. LEI koodi pole vaja. Sobib OÜ-dele, millel on kuni kaks osanikku ja juhatuse liiget."
+
+#: templates/savings-fund-landing-content.php:104
+msgid "Should you invest through your company →"
+msgstr "Kas investeerida OÜ kaudu →"
+
+#: templates/savings-fund-landing-content.php:110
+msgid "For your child"
+msgstr "Lapsele"
+
+#: templates/savings-fund-landing-content.php:111
+msgid "Invest in your child's name: the assets legally belong to them. The earlier you start, the longer they have to grow."
+msgstr "Investeeri lapse nimel – vara on juriidiliselt tema oma. Mida varem alustad, seda kauem jõuab see kasvada."
+
+#: templates/savings-fund-landing-content.php:112 templates/savings-fund-landing-content.php:238
+msgid "https://tuleva.ee/en/child-savings/"
+msgstr "https://tuleva.ee/lapsele-kogumine/"
+
+#: templates/savings-fund-landing-content.php:112
+msgid "More about saving for your child →"
+msgstr "Lapsele kogumisest lähemalt →"
+
+#: templates/savings-fund-landing-content.php:125
+msgid "How is Tuleva different?"
+msgstr "Mille poolest Tuleva erineb?"
+
+#: templates/savings-fund-landing-content.php:126
+msgid "Compare the Tuleva Savings Fund with other common choices."
+msgstr "Võrdle Tuleva Täiendavat Kogumisfondi teiste levinud valikutega."
+
+#: templates/savings-fund-landing-content.php:131
+msgid "Comparison of the Savings Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear"
+msgstr "Täiendava Kogumisfondi võrdlus LHV Kasvukonto, Swedbank Roburi ja Lightyeariga"
+
+#: templates/savings-fund-landing-content.php:143
+msgid "Fee per year"
+msgstr "Tasu aastas"
+
+#: templates/savings-fund-landing-content.php:144
+msgid "0.28%"
+msgstr "0,28%"
+
+#: templates/savings-fund-landing-content.php:145
+msgid "0.34%"
+msgstr "0,34%"
+
+#: templates/savings-fund-landing-content.php:146
+msgid "depends on the fund"
+msgstr "sõltub fondist"
+
+#: templates/savings-fund-landing-content.php:147
+msgid "depends on the investment"
+msgstr "sõltub investeeringust"
+
+#: templates/savings-fund-landing-content.php:150
+msgid "Purchase and sale fees"
+msgstr "Ostu- ja müügitasu"
+
+#: templates/savings-fund-landing-content.php:151 templates/savings-fund-landing-content.php:153 templates/savings-fund-landing-content.php:154
+msgid "none"
+msgstr "puudub"
+
+#: templates/savings-fund-landing-content.php:152
+msgid "purchase 0.5%, sale 0.14% (min 5 €)"
+msgstr "ost 0,5%, müük 0,14% (min 5 €)"
+
+#: templates/savings-fund-landing-content.php:157
+msgid "Choice of funds"
+msgstr "Fondide valik"
+
+#: templates/savings-fund-landing-content.php:158
+msgid "one fund"
+msgstr "üks fond"
+
+#: templates/savings-fund-landing-content.php:159
+msgid "dozens of funds"
+msgstr "kümneid fonde"
+
+#: templates/savings-fund-landing-content.php:160
+msgid "22 Robur funds"
+msgstr "22 Roburi fondi"
+
+#: templates/savings-fund-landing-content.php:161
+msgid "thousands of stocks and funds"
+msgstr "tuhandeid aktsiaid ja fonde"
+
+#: templates/savings-fund-landing-content.php:168
+msgid "Read more about how we differ:"
+msgstr "Loe täpsemalt, mille poolest erineme:"
+
+#: templates/savings-fund-landing-content.php:185
+msgid "Stock prices can rise as well as fall over time. The fund is meant for long-term investing."
+msgstr "Aktsiate hinnad võivad ajas nii kasvada kui ka kahaneda. Fond sobib pikaajaliseks investeerimiseks."
+
+#: templates/savings-fund-landing-content.php:186
+msgid "Your assets are protected."
+msgstr "Sinu vara on kaitstud."
+
+#: templates/savings-fund-landing-content.php:188
+#, php-format
+msgid "The fund's assets and Tuleva's own assets %s at an independent depositary."
+msgstr "Fondi vara ja Tuleva enda vara %s sõltumatus depositooriumis."
+
+#: templates/savings-fund-landing-content.php:189
+msgid "are held strictly separate"
+msgstr "hoitakse rangelt lahus"
+
+#: templates/savings-fund-landing-content.php:191
+msgid "Under supervision."
+msgstr "Järelevalve all."
+
+#: templates/savings-fund-landing-content.php:192
+msgid "Tuleva Fondid AS operates under the license and supervision of the Estonian Financial Supervision Authority."
+msgstr "Tuleva Fondid AS tegutseb Finantsinspektsiooni tegevusloaga ja järelevalve all."
+
+#: templates/savings-fund-landing-content.php:204
+msgid "Start with as little as one euro"
+msgstr "Alusta kasvõi ühe euroga"
+
+#: templates/savings-fund-landing-content.php:205
+msgid "Open an account in just a couple of minutes. Choose whether you invest in your own name, through your company, or for your child."
+msgstr "Ava konto vaid paari minutiga. Vali, kas investeerid enda nimel, osaühingu kaudu või lapsele."
+
+#: templates/savings-fund-landing-content.php:209
+msgid "<strong>Flexible</strong> withdrawals"
+msgstr "<strong>Paindlikud</strong> väljamaksed"
+
+#: templates/savings-fund-landing-content.php:224
+msgid "How do I start investing?"
+msgstr "Kuidas alustada investeerimist?"
+
+#: templates/savings-fund-landing-content.php:226
+msgid "You can buy Tuleva Savings Fund units on Tuleva's website. It works like this:"
+msgstr "Tuleva Täiendava Kogumisfondi osakuid saab osta Tuleva veebis. See käib nii:"
+
+#: templates/savings-fund-landing-content.php:228
+msgid "Open a Savings Fund account."
+msgstr "Ava Täiendava Kogumisfondi konto."
+
+#: templates/savings-fund-landing-content.php:229
+msgid "Choose a suitable contribution amount and whether you want to make a one-time payment or a recurring payment. Start with as little as 1 euro."
+msgstr "Vali sissemakseks sobiv summa ja kas soovid teha ühekordse makse või püsimakse. Alusta kasvõi 1 euroga."
+
+#: templates/savings-fund-landing-content.php:230
+msgid "You are then directed to your bank with a payment link."
+msgstr "Seejärel suunatakse sind makselingiga panka."
+
+#: templates/savings-fund-landing-content.php:231
+msgid "Pay for the units from your current account. We recommend using an account registered as an investment account."
+msgstr "Tasu osakute eest oma arvelduskontolt. Soovitame kasutada kontot, mis on registreeritud investeerimiskontona."
+
+#: templates/savings-fund-landing-content.php:232
+msgid "You now own Tuleva Savings Fund units. You can see and sell your units by logging in to your Tuleva account."
+msgstr "Omandad Tuleva Täiendava Kogumisfondi osakud. Soetatud osakuid näed ning saad müüa Tulevas oma kontole sisselogides."
+
+#: templates/savings-fund-landing-content.php:234
+msgid "Fund units cannot be bought or sold through other service providers, because that would create additional costs."
+msgstr "Fondi osakuid teiste teenusepakkujate kaudu osta ega müüa ei saa, sest sellega kaasneksid täiendavad kulud."
+
+#: templates/savings-fund-landing-content.php:236
+#, php-format
+msgid "See also: %1$s and %2$s."
+msgstr "Vaata ka: %1$s ja %2$s."
+
+#: templates/savings-fund-landing-content.php:237
+msgid "how to open an account for a company"
+msgstr "kuidas avada konto osaühingule"
+
+#: templates/savings-fund-landing-content.php:238
+msgid "how to start saving for a child"
+msgstr "kuidas alustada lapsele kogumist"
+
+#: templates/savings-fund-landing-content.php:243
+msgid "Why use an investment account for contributions?"
+msgstr "Miks tasub sissemaksete tegemiseks kasutada investeerimiskontot?"
+
+#: templates/savings-fund-landing-content.php:245
+msgid "When investing as a private person, we recommend using an investment account to buy Savings Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account."
+msgstr "Soovitame eraisikuna investeerides kasutada Täiendava Kogumisfondi osakute ostmiseks investeerimiskontot. See on mõistlik, sest võimaldab lükata tulumaksukohustust edasi, kuniks investeeringud maha müüd ja raha investeerimiskontolt välja võtad."
+
+#: templates/savings-fund-landing-content.php:246
+msgid "So if you don't have one yet, open an investment account at a bank and transfer the money meant for the Savings Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Savings Fund account. If at some point you want to sell Savings Fund units, the money should be paid back to the investment account."
+msgstr "Seega, kui sul veel pole, siis ava mõnes pangas investeerimiskonto ja kanna kogumisfondi panemiseks mõeldud summa sinna peale. Sul võib olla ka mitu investeerimiskontot. Seejärel tee investeerimiskontolt ülekanne Tuleva Täiendava Kogumisfondi kontole. Kui soovid ühel hetkel kogumisfondi osakuid müüa, siis tuleks raha kanda tagasi investeerimiskontole."
+
+#: templates/savings-fund-landing-content.php:247
+msgid "Read more: why and how to use an investment account with the Savings Fund?"
+msgstr "Loe lähemalt: miks ja kuidas kasutada kogumisfondi puhul investeerimiskontot?"
+
+#: templates/savings-fund-landing-content.php:251
+msgid "How do I move my assets from elsewhere?"
+msgstr "Kuidas oma vara mujalt üle tuua?"
+
+#: templates/savings-fund-landing-content.php:253
+msgid "Unlike pension funds, ordinary fund units and shares cannot be automatically \"transferred\" from another service provider to Tuleva. The most cost-efficient and fastest way is the following:"
+msgstr "Erinevalt pensionifondidest ei saa tavalisi fondiosakuid ega aktsiaid automaatselt teise teenusepakkuja juurest Tulevasse „üle tuua\". Kõige kuluefektiivsem ja kiirem viis on toimida järgmiselt:"
+
+#: templates/savings-fund-landing-content.php:255
+msgid "Sell your existing assets: sell the positions at your service provider that you want to bring to Tuleva."
+msgstr "Müü olemasolevad varad: müü teenusepakkuja juures positsioonid, mida soovid Tulevasse tuua."
+
+#: templates/savings-fund-landing-content.php:256
+msgid "Wait for the money to arrive: depending on the instrument, whether a fund or a stock, it usually takes 2–3 business days for the money to arrive."
+msgstr "Oota raha laekumist: sõltuvalt instrumendist (fondist või aktsiast) võtab raha laekumine aega tavaliselt 2–3 tööpäeva."
+
+#: templates/savings-fund-landing-content.php:257
+msgid "Make a contribution to the Tuleva Savings Fund: once the money is in your account, log in to Tuleva and make a payment to the Savings Fund."
+msgstr "Tee sissemakse Tuleva Täiendavasse Kogumisfondi: kui raha on kontol, logi sisse Tulevasse ja tee makse Täiendavasse Kogumisfondi."
+
+#: templates/savings-fund-landing-content.php:259
+msgid "If you invest as a private person and use an investment account, selling your assets creates no immediate income tax liability: you can reinvest the whole amount, including the gains, tax-free. If you invest from an ordinary account, you have to pay income tax on the gains from selling your existing assets with your next tax return."
+msgstr "Kui investeerid eraisikuna ja kasutad investeerimiskontot, ei teki varade müügil kohest tulumaksukohustust – saad kogu summa (sh kasumi) maksuvabalt uuesti investeerida. Kui investeerid tavakonto alt, tuleb olemasoleva vara müümisel kasumilt järgmise tuludeklaratsiooniga tasuda tulumaks."
+
+#: templates/savings-fund-landing-content.php:260
+msgid "As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Savings Fund."
+msgstr "Oleme näitlikustamiseks koostanud juhendi Swedbankis oleva vara Tulevasse toomiseks ehk olemasoleva vara müümiseks ning fondi sissemakse tegemiseks. Suures plaanis on protsess sarnane ka teiste teenusepakkujate juures vara müümisel ja Tuleva Täiendava Kogumisfondi sissemakse tegemisel."
+
+#: templates/savings-fund-landing-content.php:261
+msgid "When moving assets held by a company, the sale and purchase are recorded in the company's accounts. Taxes only arise once you sell the units and take the profit out of the company."
+msgstr "Osaühingu alt vara üle tuues kajastatakse müük ja ost osaühingu raamatupidamises. Maksud tekivad alles siis, kui osakud realiseerid ja kasumi osaühingust välja võtad."
+
+#: templates/savings-fund-landing-content.php:265
+msgid "How do you get your money out?"
+msgstr "Kuidas raha kätte saab?"
+
+#: templates/savings-fund-landing-content.php:267
+msgid "Unlike pension funds, the Tuleva Savings Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time."
+msgstr "Erinevalt pensionifondidest on Tuleva Täiendav Kogumisfond eurofond. See tähendab, et sul on õigus oma osakuid igal ajal tagasi müüa ja raha välja võtta."
+
+#: templates/savings-fund-landing-content.php:268
+msgid "A sale order for Savings Fund units must be submitted through Tuleva's website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster."
+msgstr "Täiendava Kogumisfondi osakute müügikorraldus tuleb esitada Tuleva veebilehe kaudu. Raha laekub sinu pangakontole kolme tööpäeva jooksul pärast osakute tagasivõtmishinna avaldamist (T+3). Võimalusel teeme makse kiiremini."
+
+#: templates/savings-fund-landing-content.php:269
+msgid "In more detail, the process works like this:"
+msgstr "Täpsemalt toimib protsess järgmiselt:"
+
+#: templates/savings-fund-landing-content.php:271
+msgid "Order timing:"
+msgstr "Korralduse aeg:"
+
+#: templates/savings-fund-landing-content.php:271
+msgid "if you submit a sale order on a business day before 16:00, it is considered received the same day. If you submit an order after 16:00, on a weekend, or on a public holiday, it is considered received on the next business day."
+msgstr "kui esitad müügikorralduse tööpäeval enne kella 16, loetakse see vastuvõetuks samal päeval. Kui esitad korralduse pärast kella 16, nädalavahetusel või riigipühal, loetakse see vastuvõetuks järgmisel tööpäeval."
+
+#: templates/savings-fund-landing-content.php:272
+msgid "Payout speed:"
+msgstr "Väljamakse kiirus:"
+
+#: templates/savings-fund-landing-content.php:272
+msgid "we make the payout within three business days after the redemption price is published. For example, if you submitted a sale order on the 1st at 14:00, we publish the redemption price on the 2nd at 16:00."
+msgstr "väljamakse teeme kolme tööpäeva jooksul pärast tagasivõtmishinna avaldamist. Näiteks kui esitasid müügikorralduse 1. kuupäeval kell 14, avaldame tagasivõtmishinna 2. kuupäeval kell 16."
+
+#: templates/savings-fund-landing-content.php:273
+msgid "We make the payout only to the account you have made a contribution from. This way we can be sure the account is yours."
+msgstr "Väljamakse teeme üksnes kontole, kust oled teinud sissemakse. Nii saame olla kindlad, et tegemist on sinu kontoga."
+
+#: templates/savings-fund-landing-content.php:278
+msgid "Does the fund pay dividends?"
+msgstr "Kas fond maksab dividende?"
+
+#: templates/savings-fund-landing-content.php:280
+msgid "No, the fund does not make cash payouts as dividends. Instead, we automatically reinvest the earned income inside the fund."
+msgstr "Ei, fond ei tee rahalisi väljamakseid dividendidena. Selle asemel reinvesteerime teenitud tulu automaatselt fondi sees."
+
+#: templates/savings-fund-landing-content.php:281
+msgid "This has two main benefits. First, reinvesting dividends helps grow the fund's assets and the value of your units over time. So although no regular payouts land on your account, you still earn additional income, which is reflected in a higher unit price. Second, income tax would have to be paid on dividends, which in turn would reduce your income."
+msgstr "Sellel on kaks peamist eelist. Esiteks aitab dividendide reinvesteerimine kasvatada fondi vara ning sinu osaku väärtust ajas. Ehk kuigi regulaarselt väljamakseid sulle ei laeku, teenid sa siiski lisatulu, mis kajastub kõrgemas osaku hinnas. Teiseks, dividendilt tuleks maksta tulumaksu, mis omakorda vähendaks sinu tulu."
+
+#: templates/savings-fund-landing-content.php:282
+msgid "If you want to get money out, you can sell fund units and make a withdrawal at any time. See the question \"How do you get your money out?\" above."
+msgstr "Kui soovid raha kätte saada, saad sa igal ajal ise fondiosakuid müüa ja väljamakse teha. Vt ülal küsimust „Kuidas raha kätte saab?”."
+
+#: templates/savings-fund-landing-content.php:286
+msgid "How does reporting for the tax return work?"
+msgstr "Kuidas toimub andmete esitamine tuludeklaratsiooniks?"
+
+#: templates/savings-fund-landing-content.php:288
+msgid "If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Savings Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference."
+msgstr "Kui investeerid eraisikuna ja kasutad investeerimiskontot, siis algab tulumaksu deklareerimine pangast, kus oled investeerimiskonto avanud. Maksuametile deklareerid investeerimiskontole sissekantud raha ja sealt väljamakstud raha vahe. Sissemaksed Tuleva Täiendava Kogumisfondi osakutesse tuleb investeerimiskonto deklaratsioonis märkida neutraalseks, kui sa ei ole jooksval aastal osakuid müünud, misjuhul neid vahe arvutamisel arvesse ei võeta."
+
+#: templates/savings-fund-landing-content.php:289
+msgid "If you invest from an ordinary current account rather than an investment account, sell fund units, and have earned income, you must declare the earned income yourself to the Estonian Tax and Customs Board when filling in your tax return. Tuleva does not withhold income tax."
+msgstr "Kui investeerid tavaliselt arvelduskontolt (mitte investeerimiskontolt) ja müüd fondi osakud ning oled teeninud tulu, siis pead teenitud tulu ise tuludeklaratsiooni täites Maksu- ja Tolliametile deklareerima. Tuleva tulumaksu kinni ei pea."
+
+#: templates/savings-fund-landing-content.php:293
+msgid "What return can you expect from the fund?"
+msgstr "Millist tootlust on fondis oodata?"
+
+#: templates/savings-fund-landing-content.php:295
+msgid "Tuleva's goal is to earn returns over the long term. We know that the value of assets invested in the fund can swing sharply from year to year, but without taking conscious risk it is not possible to earn a high return."
+msgstr "Tuleva eesmärk on teenida tootlust pikas perspektiivis. Me teame, et fondi investeeritud vara väärtus võib järsult aastast-aastasse kõikuda, ent teadlikku riski võtmata ei ole võimalik kõrget tootlust teenida."
+
+#: templates/savings-fund-landing-content.php:296
+msgid "Our fund tracks the world's stock markets, whose historical return over the last 100 years has been roughly 7% per year. Still, this is only a long-term average: history has shown both very big growth years and periods when markets have been in a deep slump."
+msgstr "Meie fond jäljendab maailma aktsiaturge, mille ajalooline tootlus on viimase 100 aasta jooksul olnud ligikaudu 7% aastas. Siiski on see vaid pikaajaline keskmine: ajalugu on näidanud nii väga suuri tõusuaastaid kui ka perioode, mil turud on olnud sügavas languses."
+
+#: templates/savings-fund-landing-content.php:297
+msgid "The average return so far is no guarantee. The coming years on the stock markets may not be like the previous ones. It is possible that the fund will instead make a loss in the coming years."
+msgstr "Senine keskmine tootlus pole garantii. Aktsiaturgude järgmised aastad ei pruugi olla samasugused nagu eelmised. On võimalik, et fond teenib järgmistel aastatel hoopis kahjumit."
+
+#: templates/savings-fund-landing-content.php:301
+msgid "How are investment risks managed?"
+msgstr "Kuidas on hallatud investeerimisega seotud riskid?"
+
+#: templates/savings-fund-landing-content.php:303
+msgid "First, as with any investment, the value of your investments, in other words the return, is not guaranteed. When stock markets fall, the value of a fund unit falls too. This is a natural part of investing. The main rule is still: don't invest money in stocks or stock funds that you plan to take into use in the near future."
+msgstr "Esiteks, nagu mistahes investeeringute puhul, ei ole investeeringute väärtus (ehk tootlus) garanteeritud. Kui aktsiaturud langevad, langeb ka fondiosaku väärtus. See on loomulik osa investeerimisest. Peamine reegel on ikka see, et ära investeeri aktsiatesse või aktsiafondidesse raha, mida plaanid lähiajal kasutusele võtta."
+
+#: templates/savings-fund-landing-content.php:304
+msgid "Second, there is business risk: what if something happens to Tuleva? Under the Investment Funds Act, we hold the fund's assets, meaning the fund's securities and cash, in other words your investments, strictly separate from the assets of the fund manager, Tuleva. The fund's assets are held by the depositary, AS SEB Pank. This means that even if something were to happen to Tuleva, your assets are protected, because they are strictly separated from Tuleva's own."
+msgstr "Teiseks on olemas äririsk: mis siis, kui Tulevaga midagi juhtub? Investeerimisfondide seaduse järgi hoiame fondi vara, so fondi väärtpabereid ja raha (ehk sinu investeeringuid) fondivalitseja ehk Tuleva varast rangelt lahus. Fondi vara hoiab depositoorium (AS SEB Pank). See tähendab, et isegi kui Tulevaga peaks midagi juhtuma, on sinu vara kaitstud, sest see on rangelt Tuleva omast lahutatud."
+
+#: templates/savings-fund-landing-content.php:305
+msgid "Third, we have been asked how it is ensured that we don't use your invested money in bad faith. The terms of Tuleva's funds set out precisely where the fund manager may put investors' money. The money may only be invested in the funds in the model portfolio. These funds must meet certain conditions, for example together tracking the MSCI ACWI index and being sufficiently liquid. This is why not even a fund manager with the worst intentions could move money \"aside\" at Tuleva."
+msgstr "Kolmandaks on meilt juba küsitud, kuidas on tagatud, et sinu investeeritud raha ei kasutaks me pahatahtlikult? Tuleva fondide tingimused määravad täpselt ette, kuhu fondijuht investorite raha võib panna. Raha võib investeerida üksnes mudelportfellis olevatesse fondidesse. Need fondid peavad vastama teatud tingimustele (nt kokku andma MSCI ACWI indeksi ja olema piisavalt likviidsed). Seetõttu ei saa Tulevas fondijuht ka halvimate kavatsustega raha kuidagi „kõrvale” liigutada."
+
+#: templates/savings-fund-landing-content.php:307
+#, php-format
+msgid "We have also recorded %1$s about risks and diversification. You can read more in section 4.1 of the %2$s."
+msgstr "Oleme riskidest ja hajutamisest salvestanud ka %1$s. Veel saad lugeda pikemalt %2$s punktist 4.1."
+
+#: templates/savings-fund-landing-content.php:308
+msgid "a separate podcast episode"
+msgstr "eraldi taskuhäälingu osa"
+
+#: templates/savings-fund-landing-content.php:309
+msgid "prospectus"
+msgstr "prospekti"
+
+#: templates/savings-fund-landing-content.php:314
+msgid "For companies"
+msgstr "Osaühingule"
+
+#: templates/savings-fund-landing-content.php:317
+msgid "Can a company invest in the Savings Fund?"
+msgstr "Kas osaühing saab kogumisfondi investeerida?"
+
+#: templates/savings-fund-landing-content.php:319
+msgid "Yes. From June 15, 2026, an Estonian-registered private limited company with up to two shareholders, whose shareholders are at the same time board members and beneficial owners, can also invest in the fund. The same fund and the same fee as for a private person."
+msgstr "Jah. Alates 15. juunist 2026 saab fondi investeerida ka Eestis registreeritud osaühing, millel on kuni kaks osanikku ja kelle osanikud on samal ajal juhatuse liikmed ja tegelikud kasusaajad. Sama fond ja sama tasu mis eraisikul."
+
+#: templates/savings-fund-landing-content.php:323
+msgid "How do I open a Savings Fund account for a company?"
+msgstr "Kuidas avada osaühingule kogumisfondi konto?"
+
+#: templates/savings-fund-landing-content.php:325
+msgid "It works like this:"
+msgstr "See käib nii:"
+
+#: templates/savings-fund-landing-content.php:327
+msgid "Log in to Tuleva's website. Fill in the questionnaire both about yourself and about the company. If the company has two shareholders, both must complete this step."
+msgstr "Logi sisse Tuleva veebi. Täida küsimustik nii enda kui osaühingu kohta. Kui osaühingul on kaks osanikku, peavad mõlemad selle sammu läbi tegema."
+
+#: templates/savings-fund-landing-content.php:328
+msgid "You now have two profiles in Tuleva: one in your name and another in the company's name."
+msgstr "Nüüd on Sul Tulevas kaks profiili: üks enda ja teine osaühingu nimega."
+
+#: templates/savings-fund-landing-content.php:329
+msgid "Make the first contribution from the company's bank account. You can set up contributions and a recurring payment the same way as a private person."
+msgstr "Tee esimene sissemakse osaühingu kontolt. Sissemakseid ja püsimakset saad seadistada samamoodi nagu eraisikuna."
+
+#: templates/savings-fund-landing-content.php:334
+msgid "Do both shareholders have to take part in creating the account?"
+msgstr "Kas mõlemad osanikud peavad konto loomisel osalema?"
+
+#: templates/savings-fund-landing-content.php:336
+msgid "Yes. If the company has two shareholders, you both have to go through verification, which means filling in a short questionnaire."
+msgstr "Jah. Kui osaühingul on kaks osanikku, peate mõlemad tegema läbi tuvastuse – see tähendab lühikese küsimustiku täitmist."
+
+#: templates/savings-fund-landing-content.php:340
+msgid "What happens if the company's structure changes?"
+msgstr "Mis juhtub, kui osaühingu struktuur muutub?"
+
+#: templates/savings-fund-landing-content.php:342
+msgid "If the company's structure no longer meets the conditions, for example a third shareholder joins, the company cannot acquire new fund units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
+msgstr "Kui osaühingu struktuur enam tingimustele ei vasta (näiteks lisandub kolmas osanik), ei saa osaühing uusi osakuid juurde omandada. Teatud juhtudel on meil õigus fondiosakud ühepoolselt lunastada. Olemasolevate osakute väärtus säilib."
+
+#: templates/savings-fund-landing-content.php:346
+msgid "Do Tuleva members also earn a member bonus when investing through a company?"
+msgstr "Kas osaühingu kaudu investeerides teenivad Tuleva liikmed ka liikmeboonust?"
+
+#: templates/savings-fund-landing-content.php:348
+msgid "No, when investing in the Savings Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+msgstr "Ei, osaühingu kaudu Täiendavasse Kogumisfondi investeerides ei saa osaühing teenida liikmeboonust, sest Tuleva ühistu põhikiri seda ei võimalda."
+
+#: templates/savings-fund-landing-content.php:349
+msgid "If you are a member of the Tuleva cooperative and invest in the Savings Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgstr "Kui oled Tuleva ühistu liige ja investeerid kogumisfondi eraisikuna, teenid igal aastal liikmeboonust 0,05% oma vara väärtusest."
+
+#: templates/savings-fund-landing-content.php:370
+msgid "Fund terms, prospectus, and key information"
+msgstr "Fondi tingimused, prospekt ja põhiteave"
+
+#: templates/savings-fund-landing-content.php:374
+msgid "Blog posts about the Savings Fund"
+msgstr "Blogipostitused kogumisfondist"
+
+#: templates/savings-fund-landing-content.php:6
+msgctxt "landing page hero eyebrow"
+msgid "Tuleva Savings Fund"
+msgstr "Tuleva Täiendav Kogumisfond"
+
+#: templates/savings-fund-landing-content.php:135
+msgctxt "comparison table header"
+msgid "Tuleva<br>Savings Fund"
+msgstr "Tuleva<br>Kogumisfond"
+
+#: templates/savings-fund-landing-content.php:366
+msgid "Podcast: the Savings Fund opens"
+msgstr "Taskuhääling: Täiendav Kogumisfond avaneb"
+
+#: templates/savings-fund-landing-content.php:70
+msgid "Up to 15% of your yearly gross income, but no more than 6,000 €, is free of income tax."
+msgstr "Kuni 15% aastasest brutotulust, kuid mitte rohkem kui 6000 €, on tulumaksuvaba."
+
 #~ msgid "Search"
 #~ msgstr "Otsi"

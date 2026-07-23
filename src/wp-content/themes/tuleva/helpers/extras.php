@@ -307,6 +307,9 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 function get_app_url($path)
 {
+    if (ICL_LANGUAGE_CODE === 'et') {
+        return 'https://pension.tuleva.ee' . $path;
+    }
     return 'https://pension.tuleva.ee' . $path . '?language=' . ICL_LANGUAGE_CODE;
 }
 
