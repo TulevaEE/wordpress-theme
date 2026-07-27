@@ -118,7 +118,10 @@ function computeChildSavings(input) {
             monthly: monthly,
             annualRatePercent: Number(rate.value)
         });
-        resTax.textContent = eur(Math.round(result.win / 10) * 10);
+        // A dash instead of "0 €" — at 0% return the tax win is zero only
+        // because there is no gain yet, not because the benefit is missing
+        var roundedWin = Math.round(result.win / 10) * 10;
+        resTax.textContent = roundedWin > 0 ? eur(roundedWin) : '–';
         resTotal.textContent = eur(result.total);
     }
 
