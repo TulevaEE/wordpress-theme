@@ -221,9 +221,9 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <h2 class="mb-0 text-center"><?php _e('Learn more', TEXT_DOMAIN); ?></h2>
                     <div class="resources">
-                        <a class="resource resource--post" href="https://tuleva.ee/lood/kuidas-lapsele-maarati-indeksfondi-investeerimiseks-advokaat/">
-                            <span class="post-title"><?php _e('How a child was assigned a lawyer for investing in an index fund', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('Why it used to take the court\'s consent.', TEXT_DOMAIN); ?></span>
+                        <a class="resource resource--post" href="https://tuleva.ee/lapsele-kogumine/kas-koguda-lapse-voi-vanema-nimel/">
+                            <span class="post-title"><?php _e('Should you save in the child\'s name or your own?', TEXT_DOMAIN); ?></span>
+                            <span class="post-teaser"><?php _e('The pros and cons of each option.', TEXT_DOMAIN); ?></span>
                             <span class="post-more"><?php _e('Read on →', TEXT_DOMAIN); ?></span>
                         </a>
                         <a class="resource resource--post" href="https://tuleva.ee/taiendav-kogumisfond/kas-lapsele-kogudes-on-vaja-investeerimiskontot-kaks-lahenemist-mille-vahel-valida/">
