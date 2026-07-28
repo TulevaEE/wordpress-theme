@@ -1566,12 +1566,12 @@ msgid "More information"
 msgstr "Lisainfo"
 
 #: templates/child-savings-content.php:225
-msgid "How a child was assigned a lawyer for investing in an index fund"
-msgstr "Kuidas lapsele määrati indeksfondi investeerimiseks advokaat"
+msgid "Should you save in the child's name or your own?"
+msgstr "Kas koguda lapse või vanema nimel?"
 
 #: templates/child-savings-content.php:226
-msgid "Why it used to take the court's consent."
-msgstr "Miks oli seni vaja kohtu luba."
+msgid "The pros and cons of each option."
+msgstr "Mis on kummagi variandi plussid ja miinused."
 
 #: templates/child-savings-content.php:45
 msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."

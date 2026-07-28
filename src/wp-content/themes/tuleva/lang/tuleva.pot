@@ -445,11 +445,11 @@ msgid "Learn more"
 msgstr ""
 
 #: templates/child-savings-content.php:225
-msgid "How a child was assigned a lawyer for investing in an index fund"
+msgid "Should you save in the child's name or your own?"
 msgstr ""
 
 #: templates/child-savings-content.php:226
-msgid "Why it used to take the court's consent."
+msgid "The pros and cons of each option."
 msgstr ""
 
 #: templates/child-savings-content.php:227
