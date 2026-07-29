@@ -35,7 +35,6 @@
                             </div>
                             <h3><?php _e('Low fee', TEXT_DOMAIN); ?></h3>
                             <p><?php _e('The fund\'s fee is 0.28% per year, with no purchase, sale, or other extra charges.', TEXT_DOMAIN); ?></p>
-                            <a class="card-link" href="#vordlus"><?php _e('How Tuleva differs →', TEXT_DOMAIN); ?></a>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -112,64 +111,6 @@
                             <a class="card-link" href="<?php _e('https://tuleva.ee/en/child-savings/', TEXT_DOMAIN); ?>"><?php _e('More about saving for your child →', TEXT_DOMAIN); ?></a>
                         </article>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-spacing bg-gray-2" id="vordlus">
-        <div class="container">
-            <div class="row">
-                <div class="mx-auto col-lg-11 col-xl-10">
-                    <div class="text-center">
-                        <h2><?php _e('How is Tuleva different?', TEXT_DOMAIN); ?></h2>
-                        <p class="lead mx-auto" style="max-width: 42rem;"><?php _e('Compare the Tuleva Savings Fund with other common choices.', TEXT_DOMAIN); ?></p>
-                    </div>
-                    <div class="chart-card">
-                        <div class="table-scroll">
-                            <table class="compare-table">
-                                <caption class="visually-hidden"><?php _e('Comparison of the Savings Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear', TEXT_DOMAIN); ?></caption>
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col" class="tuleva"><?php echo _x('Tuleva<br>Savings Fund', 'comparison table header', TEXT_DOMAIN); ?></th>
-                                        <th scope="col">LHV<br>Kasvukonto</th>
-                                        <th scope="col">Swedbank<br>Robur</th>
-                                        <th scope="col">Lightyear</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><?php _e('Fee per year', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('0.28%', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('0.34%', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('depends on the fund', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('depends on the investment', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><?php _e('Purchase and sale fees', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('none', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('purchase 0.5%, sale 0.14% (min 5 €)', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('none', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('none', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><?php _e('Choice of funds', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('one fund', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('dozens of funds', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('22 Robur funds', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('thousands of stocks and funds', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <p class="foot-note text-center mt-3 mb-0">
-                        <?php _e('Read more about how we differ:', TEXT_DOMAIN); ?>
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-lhv-kaudu-investeerimisest/">LHV</a> ·
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-roburi-fondidest/">Swedbank Robur</a> ·
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-taiendav-kogumisfond-lightyearis-investeerimisest/">Lightyear</a>
-                    </p>
                 </div>
             </div>
         </div>
