@@ -150,7 +150,7 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <div class="faq-list">
                         <div class="qa__question-wrapper" id="kkk-1">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('Why open a Additional Investment Fund for your child rather than a third pillar?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('Why open an Additional Investment Fund for your child rather than a third pillar?', TEXT_DOMAIN); ?></a>
                             <div id="answer-1" class="collapse">
                                 <p><?php _e('The third pillar\'s appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn\'t, so paying into a child\'s third pillar creates no tax benefit.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home.', TEXT_DOMAIN); ?></p>

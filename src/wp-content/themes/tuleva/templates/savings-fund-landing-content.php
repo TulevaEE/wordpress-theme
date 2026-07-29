@@ -167,7 +167,7 @@
                             <div id="answer-1" class="collapse">
                                 <p><?php _e('You can buy Tuleva Additional Investment Fund units on Tuleva\'s website. It works like this:', TEXT_DOMAIN); ?></p>
                                 <ol>
-                                    <li><?php _e('Open a Additional Investment Fund account.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('Open an Additional Investment Fund account.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('Choose a suitable contribution amount and whether you want to make a one-time payment or a recurring payment. Start with as little as 1 euro.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('You are then directed to your bank with a payment link.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('Pay for the units from your current account. We recommend using an account registered as an investment account.', TEXT_DOMAIN); ?></li>
@@ -271,7 +271,7 @@
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kuidas-alustada-ou">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-10"><?php _e('How do I open a Additional Investment Fund account for a company?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-10"><?php _e('How do I open an Additional Investment Fund account for a company?', TEXT_DOMAIN); ?></a>
                             <div id="answer-10" class="collapse">
                                 <p><?php _e('It works like this:', TEXT_DOMAIN); ?></p>
                                 <ol>

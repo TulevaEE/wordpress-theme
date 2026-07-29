@@ -1408,7 +1408,7 @@ msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr "Tasu <strong>0,28%</strong> aastas, lisatasudeta"
 
 #: templates/child-savings-content.php:153
-msgid "Why open a Additional Investment Fund for your child rather than a third pillar?"
+msgid "Why open an Additional Investment Fund for your child rather than a third pillar?"
 msgstr "Miks avada lapsele Täiendav Kogumisfond, mitte III sammas?"
 
 #: templates/child-savings-content.php:155
@@ -1839,7 +1839,7 @@ msgid "You can buy Tuleva Additional Investment Fund units on Tuleva's website. 
 msgstr "Tuleva Täiendava Kogumisfondi osakuid saab osta Tuleva veebis. See käib nii:"
 
 #: templates/savings-fund-landing-content.php:228
-msgid "Open a Additional Investment Fund account."
+msgid "Open an Additional Investment Fund account."
 msgstr "Ava Täiendava Kogumisfondi konto."
 
 #: templates/savings-fund-landing-content.php:229
@@ -2045,7 +2045,7 @@ msgid "Yes. From June 15, 2026, an Estonian-registered private limited company w
 msgstr "Jah. Alates 15. juunist 2026 saab fondi investeerida ka Eestis registreeritud osaühing, millel on kuni kaks osanikku ja kelle osanikud on samal ajal juhatuse liikmed ja tegelikud kasusaajad. Sama fond ja sama tasu mis eraisikul."
 
 #: templates/savings-fund-landing-content.php:323
-msgid "How do I open a Additional Investment Fund account for a company?"
+msgid "How do I open an Additional Investment Fund account for a company?"
 msgstr "Kuidas avada osaühingule kogumisfondi konto?"
 
 #: templates/savings-fund-landing-content.php:325
