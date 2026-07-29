@@ -2122,18 +2122,18 @@ msgstr "Kuni 15% aastasest brutotulust, kuid mitte rohkem kui 6000 €, on tulu
 #~ msgstr "Otsi"
 
 #: templates/savings-fund-landing-content.php
-msgid "How is the Savings Fund different from LHV's Growth Account, Swedbank Robur funds, or Lightyear?"
+msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
 msgstr "Mille poolest erineb Täiendav Kogumisfond LHV Kasvukontost, Swedbanki Robur fondidest või Lightyearist?"
 
 #: templates/savings-fund-landing-content.php
-msgid "For investing in an index fund, the Tuleva Savings Fund is cheaper than LHV's Growth Account and Securities Account. In LHV you pay fees when buying and selling investments; in Tuleva there are none."
+msgid "For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV's Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none."
 msgstr "Tuleva Täiendav Kogumisfond on indeksfondi investeerimisel soodsam kui LHV Kasvukonto ja Väärtpaberikonto. LHV-s tuleb investeeringu ostmisel ja müümisel maksta tasusid, mida Tulevas pole."
 
 #: templates/savings-fund-landing-content.php
-msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Savings Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
+msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
 msgstr "Lightyear pakub suurt valikut aktsiaid ja fonde, millest mõni on soodsam ja mõni kallim kui Tuleva Täiendav Kogumisfond. Paljud neist on head alternatiivid. Tuleva eeliseks võrreldes Lightyeariga on valiku lihtsus."
 
 #: templates/savings-fund-landing-content.php
-msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Savings Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Savings Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
+msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
 msgstr "Swedbank pakub 22 erinevat Roburi fondi, mille tasud on vahemikus 0,26% (Access Edge Japan) kuni 1,66% (Emerging Europe). Tuleva Täiendavale Kogumisfondile on kõige sarnasem fond Robur Access Edge Global, mille tasu on 0,29%. Erinevalt Tuleva Täiendavast Kogumisfondist investeerib see fond aga üksnes arenenud riikide aktsiaturgudele. Üksnes arenguriikide aktsiaturgudele investeerib Robur Access Edge Emerging Markets, mille tasud on 0,45% aastas."
 
