@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10">
-                    <span class="eyebrow"><?php echo _x('Tuleva Savings Fund', 'landing page hero eyebrow', TEXT_DOMAIN); ?></span>
+                    <span class="eyebrow"><?php echo _x('Tuleva Additional Investment Fund', 'landing page hero eyebrow', TEXT_DOMAIN); ?></span>
                     <h1><?php _e('The whole world market.<br>One fund.', TEXT_DOMAIN); ?></h1>
                     <p class="lead"><?php _e('Now you can invest with Tuleva beyond the second and third pillar. Grow your own, your company\'s, or your child\'s portfolio.', TEXT_DOMAIN); ?></p>
                     <div class="cta">
@@ -35,7 +35,7 @@
                             </div>
                             <h3><?php _e('Low fee', TEXT_DOMAIN); ?></h3>
                             <p><?php _e('The fund\'s fee is 0.28% per year, with no purchase, sale, or other extra charges.', TEXT_DOMAIN); ?></p>
-                            <a class="card-link" href="#vordlus"><?php _e('How Tuleva differs →', TEXT_DOMAIN); ?></a>
+                            <a class="card-link" href="#kkk-vordlus"><?php _e('How Tuleva differs →', TEXT_DOMAIN); ?></a>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -55,8 +55,8 @@
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
-                    <h2><?php _e('Is the Savings Fund right for you?', TEXT_DOMAIN); ?></h2>
-                    <p class="lead mx-auto" style="max-width: 44rem;"><?php _e('The pension pillars give you a tax win, and that\'s usually the place to start. The Savings Fund gives you the flexibility to save without limits.', TEXT_DOMAIN); ?></p>
+                    <h2><?php _e('Is the Additional Investment Fund right for you?', TEXT_DOMAIN); ?></h2>
+                    <p class="lead mx-auto" style="max-width: 44rem;"><?php _e('The pension pillars give you a tax win, and that\'s usually the place to start. The Additional Investment Fund gives you the flexibility to save without limits.', TEXT_DOMAIN); ?></p>
                     <div class="path">
                         <div class="path-step">
                             <span class="chip chip--green"><?php _e('1 · Tax win', TEXT_DOMAIN); ?></span>
@@ -72,7 +72,7 @@
                         <div class="path-arrow" aria-hidden="true">→</div>
                         <div class="path-step now">
                             <span class="chip chip--blue"><?php _e('3 · You are here', TEXT_DOMAIN); ?></span>
-                            <h3><?php _e('Savings Fund', TEXT_DOMAIN); ?></h3>
+                            <h3><?php _e('Additional Investment Fund', TEXT_DOMAIN); ?></h3>
                             <p><?php _e('If you already save in the pillars, you can continue saving here. You can withdraw money flexibly.', TEXT_DOMAIN); ?></p>
                         </div>
                     </div>
@@ -112,64 +112,6 @@
                             <a class="card-link" href="<?php _e('https://tuleva.ee/en/child-savings/', TEXT_DOMAIN); ?>"><?php _e('More about saving for your child →', TEXT_DOMAIN); ?></a>
                         </article>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-spacing bg-gray-2" id="vordlus">
-        <div class="container">
-            <div class="row">
-                <div class="mx-auto col-lg-11 col-xl-10">
-                    <div class="text-center">
-                        <h2><?php _e('How is Tuleva different?', TEXT_DOMAIN); ?></h2>
-                        <p class="lead mx-auto" style="max-width: 42rem;"><?php _e('Compare the Tuleva Savings Fund with other common choices.', TEXT_DOMAIN); ?></p>
-                    </div>
-                    <div class="chart-card">
-                        <div class="table-scroll">
-                            <table class="compare-table">
-                                <caption class="visually-hidden"><?php _e('Comparison of the Savings Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear', TEXT_DOMAIN); ?></caption>
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col" class="tuleva"><?php echo _x('Tuleva<br>Savings Fund', 'comparison table header', TEXT_DOMAIN); ?></th>
-                                        <th scope="col">LHV<br>Kasvukonto</th>
-                                        <th scope="col">Swedbank<br>Robur</th>
-                                        <th scope="col">Lightyear</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><?php _e('Fee per year', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('0.28%', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('0.34%', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('depends on the fund', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('depends on the investment', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><?php _e('Purchase and sale fees', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('none', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('purchase 0.5%, sale 0.14% (min 5 €)', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('none', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('none', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><?php _e('Choice of funds', TEXT_DOMAIN); ?></th>
-                                        <td class="tuleva"><?php _e('one fund', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('dozens of funds', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('22 Robur funds', TEXT_DOMAIN); ?></td>
-                                        <td><?php _e('thousands of stocks and funds', TEXT_DOMAIN); ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <p class="foot-note text-center mt-3 mb-0">
-                        <?php _e('Read more about how we differ:', TEXT_DOMAIN); ?>
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-lhv-kaudu-investeerimisest/">LHV</a> ·
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-roburi-fondidest/">Swedbank Robur</a> ·
-                        <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-taiendav-kogumisfond-lightyearis-investeerimisest/">Lightyear</a>
-                    </p>
                 </div>
             </div>
         </div>
@@ -223,13 +165,13 @@
                         <div class="qa__question-wrapper" id="kuidas-alustada">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('How do I start investing?', TEXT_DOMAIN); ?></a>
                             <div id="answer-1" class="collapse">
-                                <p><?php _e('You can buy Tuleva Savings Fund units on Tuleva\'s website. It works like this:', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You can buy Tuleva Additional Investment Fund units on Tuleva\'s website. It works like this:', TEXT_DOMAIN); ?></p>
                                 <ol>
-                                    <li><?php _e('Open a Savings Fund account.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('Open an Additional Investment Fund account.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('Choose a suitable contribution amount and whether you want to make a one-time payment or a recurring payment. Start with as little as 1 euro.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('You are then directed to your bank with a payment link.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('Pay for the units from your current account. We recommend using an account registered as an investment account.', TEXT_DOMAIN); ?></li>
-                                    <li><?php _e('You now own Tuleva Savings Fund units. You can see and sell your units by logging in to your Tuleva account.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('You now own Tuleva Additional Investment Fund units. You can see and sell your units by logging in to your Tuleva account.', TEXT_DOMAIN); ?></li>
                                 </ol>
                                 <p><?php _e('Fund units cannot be bought or sold through other service providers, because that would create additional costs.', TEXT_DOMAIN); ?></p>
                                 <p><?php printf(
@@ -242,9 +184,9 @@
                         <div class="qa__question-wrapper" id="kkk-2">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-2"><?php _e('Why use an investment account for contributions?', TEXT_DOMAIN); ?></a>
                             <div id="answer-2" class="collapse">
-                                <p><?php _e('When investing as a private person, we recommend using an investment account to buy Savings Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('So if you don\'t have one yet, open an investment account at a bank and transfer the money meant for the Savings Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Savings Fund account. If at some point you want to sell Savings Fund units, the money should be paid back to the investment account.', TEXT_DOMAIN); ?></p>
-                                <p><a href="https://tuleva.ee/soovitused/miks-kasutada-kogumisfondi-puhul-investeerimiskontot/"><?php _e('Read more: why and how to use an investment account with the Savings Fund?', TEXT_DOMAIN); ?></a></p>
+                                <p><?php _e('When investing as a private person, we recommend using an investment account to buy Additional Investment Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('So if you don\'t have one yet, open an investment account at a bank and transfer the money meant for the Additional Investment Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Additional Investment Fund account. If at some point you want to sell Additional Investment Fund units, the money should be paid back to the investment account.', TEXT_DOMAIN); ?></p>
+                                <p><a href="https://tuleva.ee/soovitused/miks-kasutada-kogumisfondi-puhul-investeerimiskontot/"><?php _e('Read more: why and how to use an investment account with the Additional Investment Fund?', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-3">
@@ -254,18 +196,18 @@
                                 <ol>
                                     <li><?php _e('Sell your existing assets: sell the positions at your service provider that you want to bring to Tuleva.', TEXT_DOMAIN); ?></li>
                                     <li><?php _e('Wait for the money to arrive: depending on the instrument, whether a fund or a stock, it usually takes 2–3 business days for the money to arrive.', TEXT_DOMAIN); ?></li>
-                                    <li><?php _e('Make a contribution to the Tuleva Savings Fund: once the money is in your account, log in to Tuleva and make a payment to the Savings Fund.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('Make a contribution to the Tuleva Additional Investment Fund: once the money is in your account, log in to Tuleva and make a payment to the Additional Investment Fund.', TEXT_DOMAIN); ?></li>
                                 </ol>
                                 <p><?php _e('If you invest as a private person and use an investment account, selling your assets creates no immediate income tax liability: you can reinvest the whole amount, including the gains, tax-free. If you invest from an ordinary account, you have to pay income tax on the gains from selling your existing assets with your next tax return.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Savings Fund.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Additional Investment Fund.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('When moving assets held by a company, the sale and purchase are recorded in the company\'s accounts. Taxes only arise once you sell the units and take the profit out of the company.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-4">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do you get your money out?', TEXT_DOMAIN); ?></a>
                             <div id="answer-4" class="collapse">
-                                <p><?php _e('Unlike pension funds, the Tuleva Savings Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('A sale order for Savings Fund units must be submitted through Tuleva\'s website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Unlike pension funds, the Tuleva Additional Investment Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('A sale order for Additional Investment Fund units must be submitted through Tuleva\'s website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('In more detail, the process works like this:', TEXT_DOMAIN); ?></p>
                                 <ul>
                                     <li><b><?php _e('Order timing:', TEXT_DOMAIN); ?></b> <?php _e('if you submit a sale order on a business day before 16:00, it is considered received the same day. If you submit an order after 16:00, on a weekend, or on a public holiday, it is considered received on the next business day.', TEXT_DOMAIN); ?></li>
@@ -285,7 +227,7 @@
                         <div class="qa__question-wrapper" id="kkk-6">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-6"><?php _e('How does reporting for the tax return work?', TEXT_DOMAIN); ?></a>
                             <div id="answer-6" class="collapse">
-                                <p><?php _e('If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Savings Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Additional Investment Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('If you invest from an ordinary current account rather than an investment account, sell fund units, and have earned income, you must declare the earned income yourself to the Estonian Tax and Customs Board when filling in your tax return. Tuleva does not withhold income tax.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
@@ -311,16 +253,25 @@
                             </div>
                         </div>
 
+                        <div class="qa__question-wrapper" id="kkk-vordlus">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-vordlus"><?php _e('How is the Additional Investment Fund different from LHV\'s Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-vordlus" class="collapse">
+                                <p><?php _e('For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV\'s Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-lhv-kaudu-investeerimisest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
+                                <p><?php _e('Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva\'s advantage over Lightyear is the simplicity of choice.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-taiendav-kogumisfond-lightyearis-investeerimisest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
+                                <p><?php _e('Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-roburi-fondidest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
+                            </div>
+                        </div>
+
                         <h3 class="faq-subhead"><?php _e('For companies', TEXT_DOMAIN); ?></h3>
 
                         <div class="qa__question-wrapper" id="kkk-9">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('Can a company invest in the Savings Fund?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('Can a company invest in the Additional Investment Fund?', TEXT_DOMAIN); ?></a>
                             <div id="answer-9" class="collapse">
                                 <p><?php _e('Yes. From June 15, 2026, an Estonian-registered private limited company with up to two shareholders, whose shareholders are at the same time board members and beneficial owners, can also invest in the fund. The same fund and the same fee as for a private person.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kuidas-alustada-ou">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-10"><?php _e('How do I open a Savings Fund account for a company?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-10"><?php _e('How do I open an Additional Investment Fund account for a company?', TEXT_DOMAIN); ?></a>
                             <div id="answer-10" class="collapse">
                                 <p><?php _e('It works like this:', TEXT_DOMAIN); ?></p>
                                 <ol>
@@ -345,8 +296,8 @@
                         <div class="qa__question-wrapper" id="kkk-13">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-13"><?php _e('Do Tuleva members also earn a member bonus when investing through a company?', TEXT_DOMAIN); ?></a>
                             <div id="answer-13" class="collapse">
-                                <p><?php _e('No, when investing in the Savings Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('If you are a member of the Tuleva cooperative and invest in the Savings Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('No, when investing in the Additional Investment Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If you are a member of the Tuleva cooperative and invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
@@ -363,7 +314,7 @@
                     <div class="resources resources--3">
                         <a class="resource resource--row" href="https://tuleva.ee/taskuhaaling/uus-tuleva-taiendav-kogumisfond-avaneb/">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
-                            <span><?php _e('Podcast: the Savings Fund opens', TEXT_DOMAIN); ?></span>
+                            <span><?php _e('Podcast: the Additional Investment Fund opens', TEXT_DOMAIN); ?></span>
                         </a>
                         <a class="resource resource--row" href="https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><polyline points="14 2 14 6 18 6"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
@@ -371,7 +322,7 @@
                         </a>
                         <a class="resource resource--row" href="https://tuleva.ee/category/taiendav-kogumisfond/">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><line x1="13.5" y1="6.5" x2="17.5" y2="10.5"/></svg>
-                            <span><?php _e('Blog posts about the Savings Fund', TEXT_DOMAIN); ?></span>
+                            <span><?php _e('Blog posts about the Additional Investment Fund', TEXT_DOMAIN); ?></span>
                         </a>
                     </div>
                     <div class="mt-5 text-center">

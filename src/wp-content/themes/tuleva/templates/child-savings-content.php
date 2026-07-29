@@ -7,7 +7,7 @@
         <div class="container my-auto">
             <div class="row align-items-center gy-5 gx-xl-5">
                 <div class="col-lg-6 text-center text-lg-start text-navy">
-                    <span class="eyebrow"><?php _e('Tuleva Savings Fund for your child', TEXT_DOMAIN); ?></span>
+                    <span class="eyebrow"><?php _e('Tuleva Additional Investment Fund for your child', TEXT_DOMAIN); ?></span>
                     <h1 class="mb-4"><?php _e('Put your child\'s money to work early', TEXT_DOMAIN); ?></h1>
                     <p class="m-0 lead"><?php _e('The assets belong to your child and grow in Tuleva\'s low-fee index fund. Start with as little as one euro.', TEXT_DOMAIN); ?></p>
                 </div>
@@ -150,11 +150,11 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <div class="faq-list">
                         <div class="qa__question-wrapper" id="kkk-1">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('Why open a Savings Fund for your child rather than a third pillar?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('Why open an Additional Investment Fund for your child rather than a third pillar?', TEXT_DOMAIN); ?></a>
                             <div id="answer-1" class="collapse">
                                 <p><?php _e('The third pillar\'s appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn\'t, so paying into a child\'s third pillar creates no tax benefit.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Savings Fund, your child can use the money when they need it, for example for education or a first home.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('Saving in the child\'s name in the Savings Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Saving in the child\'s name in the Additional Investment Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year.', TEXT_DOMAIN); ?></p>
                                 <p><?php printf(
                                     __('Once your child starts earning income themselves, they should consider their own third pillar too, because then they get a tax benefit as well. If your child already has a third pillar account opened before 2021, keep it as it is: these are separate accounts and don\'t mix. And your own third pillar is worth filling before you start saving for your child. %s', TEXT_DOMAIN),
                                     '<a href="https://tuleva.ee/analuusid/miks-voiks-lapsele-kogumist-alustada-hoopis-oma-iii-sambast/">' . __('Read more →', TEXT_DOMAIN) . '</a>'
@@ -172,7 +172,7 @@
                         <div class="qa__question-wrapper" id="kkk-3">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('How does this differ from LHV\'s Kasvukonto and Swedbank\'s child products?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
-                                <p><?php _e('LHV\'s Kasvukonto is a platform where you choose yourself which fund your child\'s money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva\'s Savings Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('LHV\'s Kasvukonto is a platform where you choose yourself which fund your child\'s money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva\'s Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('Swedbank\'s child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva\'s fund is meant for investing only. If you need insurance, that is a separate purchase.', TEXT_DOMAIN); ?></p>
                                 <p><a href="https://tuleva.ee/vastused/miks-koolifondidest-eemale-hoida/"><?php _e('Read more: 3 reasons to avoid child-labeled savings products', TEXT_DOMAIN); ?></a></p>
                             </div>
@@ -180,7 +180,7 @@
                         <div class="qa__question-wrapper" id="sissemaksed">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do contributions work?', TEXT_DOMAIN); ?></a>
                             <div id="answer-4" class="collapse">
-                                <p><?php _e('Contributions to your child\'s Savings Fund account can only be made from the child\'s own bank account. Transfer money to your child\'s bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Contributions to your child\'s Additional Investment Fund account can only be made from the child\'s own bank account. Transfer money to your child\'s bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('If your child doesn\'t have a bank account yet, you can open one in their name at any Estonian bank.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('A grandparent or another close person can also give your child a gift. The simplest way is for them to gift the money to you: you transfer it to your child\'s account and from there to the fund. If a gift lands straight on the child\'s account, investing it requires the court\'s consent by law. That is why we recommend gifting through the parent.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('From this autumn, gifts can also be made straight to your child\'s savings fund account.', TEXT_DOMAIN); ?></p>
@@ -233,7 +233,7 @@
                         </a>
                     </div>
                     <p class="resource-links">
-                        <a href="https://tuleva.ee/taiendav-kogumisfond/"><?php _e('More about the Tuleva Savings Fund →', TEXT_DOMAIN); ?></a>
+                        <a href="https://tuleva.ee/taiendav-kogumisfond/"><?php _e('More about the Tuleva Additional Investment Fund →', TEXT_DOMAIN); ?></a>
                         <a href="https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"><?php _e('Fund documents →', TEXT_DOMAIN); ?></a>
                     </p>
                 </div>

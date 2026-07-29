@@ -9,7 +9,7 @@ $cta_button_url = get_field('cta_button_url');
     <div class="container">
         <div class="row section-spacing">
             <div class="col-lg-10 mx-auto pb-6 text-center">
-                <h1 class="m-0"><?php echo esc_html($fund_title ?: __('Tuleva Savings Fund', TEXT_DOMAIN)); ?></h1>
+                <h1 class="m-0"><?php echo esc_html($fund_title ?: __('Tuleva Additional Investment Fund', TEXT_DOMAIN)); ?></h1>
             </div>
         </div>
     </div>

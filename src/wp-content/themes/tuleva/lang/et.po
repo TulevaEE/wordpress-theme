@@ -343,7 +343,7 @@ msgid "Summary of Investor Rights"
 msgstr "Investori õiguste kokkuvõte"
 
 #: templates/components/fund-savings-header.php:12
-msgid "Tuleva Savings Fund"
+msgid "Tuleva Additional Investment Fund"
 msgstr "Tuleva täiendav kogumisfond"
 
 #: templates/components/fund-stocks-details.php:46 templates/components/fund-third-details.php:46
@@ -1267,7 +1267,7 @@ msgid "Child savings page"
 msgstr "Lapsele kogumise leht"
 
 #: templates/child-savings-content.php:10
-msgid "Tuleva Savings Fund for your child"
+msgid "Tuleva Additional Investment Fund for your child"
 msgstr "Täiendav Kogumisfond lapsele"
 
 #: templates/child-savings-content.php:11
@@ -1408,7 +1408,7 @@ msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr "Tasu <strong>0,28%</strong> aastas, lisatasudeta"
 
 #: templates/child-savings-content.php:153
-msgid "Why open a Savings Fund for your child rather than a third pillar?"
+msgid "Why open an Additional Investment Fund for your child rather than a third pillar?"
 msgstr "Miks avada lapsele Täiendav Kogumisfond, mitte III sammas?"
 
 #: templates/child-savings-content.php:155
@@ -1448,7 +1448,7 @@ msgid "How do contributions work?"
 msgstr "Kuidas sissemaksed käivad?"
 
 #: templates/child-savings-content.php:183
-msgid "Contributions to your child's Savings Fund account can only be made from the child's own bank account. Transfer money to your child's bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
+msgid "Contributions to your child's Additional Investment Fund account can only be made from the child's own bank account. Transfer money to your child's bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
 msgstr "Sissemakseid lapse Täiendava Kogumisfondi kontole saab teha ainult lapse enda pangakontolt. Kanna raha lapse pangakontole ja tee sealt ülekanne fondi. Nii tekib lapsel osakute soetusmaksumus ja tulevikus maksustatakse müügil ainult kasum, mitte kogu summa."
 
 #: templates/child-savings-content.php:184
@@ -1501,7 +1501,7 @@ msgid "Learn more"
 msgstr "Uuri rohkem"
 
 #: templates/child-savings-content.php:236
-msgid "More about the Tuleva Savings Fund →"
+msgid "More about the Tuleva Additional Investment Fund →"
 msgstr "Tuleva Täiendavast Kogumisfondist lähemalt →"
 
 #: templates/child-savings-content.php:237
@@ -1533,11 +1533,11 @@ msgid "Opening an account is free and takes only a few minutes."
 msgstr "Konto avamine on tasuta ja võtab vaid mõne minuti."
 
 #: templates/child-savings-content.php:156
-msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Savings Fund, your child can use the money when they need it, for example for education or a first home."
+msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home."
 msgstr "Teiseks on III sammas mõeldud pensioniks: soodsa maksumääraga saab raha kätte alles pensioniea lähedal. Lapse jaoks tähendaks see raha lukustamist aastakümneteks. Täiendavast Kogumisfondist saab laps raha kasutada siis, kui tal seda vaja on – näiteks hariduseks või esimese kodu jaoks."
 
 #: templates/child-savings-content.php:157
-msgid "Saving in the child's name in the Savings Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
+msgid "Saving in the child's name in the Additional Investment Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
 msgstr "Lapse nimel Kogumisfondis kogudes tuleb maksuvõit teisest otsast: osakuid müües saab laps kasutada oma maksuvaba tulu, mis täna on 8400 € aastas."
 
 #: templates/child-savings-content.php:159
@@ -1546,7 +1546,7 @@ msgid "Once your child starts earning income themselves, they should consider th
 msgstr "Kui laps hakkab ise tulu teenima, tasub tal kaaluda ka oma III sammast – siis tekib maksuvõit temalgi. Kui lapsel on juba varasemast, enne 2021. aastat avatud III samba konto, säilita see nii, nagu on – need on eraldi kontod ega segune. Ja sinu enda III sammas tasub täita enne, kui lapsele koguma hakkad. %s"
 
 #: templates/child-savings-content.php:175
-msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Savings Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
+msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
 msgstr "LHV Kasvukonto on platvorm, kus sa valid ise, millisesse fondi lapse raha investeeritakse. Valikuid on palju, nii häid kui kehvemaid, ja õige fondi pead ise välja valima. Tuleva Täiendavas Kogumisfondis on ainult üks fond – laiapõhjaline indeksfond tasuga 0,28% aastas – ja selle eest seisame meie."
 
 #: templates/child-savings-content.php:176
@@ -1642,11 +1642,11 @@ msgid "How to start →"
 msgstr "Kuidas alustada →"
 
 #: templates/savings-fund-landing-content.php:58
-msgid "Is the Savings Fund right for you?"
+msgid "Is the Additional Investment Fund right for you?"
 msgstr "Kas Täiendav Kogumisfond on sulle?"
 
 #: templates/savings-fund-landing-content.php:59
-msgid "The pension pillars give you a tax win, and that's usually the place to start. The Savings Fund gives you the flexibility to save without limits."
+msgid "The pension pillars give you a tax win, and that's usually the place to start. The Additional Investment Fund gives you the flexibility to save without limits."
 msgstr "Sambad annavad maksuvõidu, sealt tasub üldjuhul alustada. Kogumisfond annab paindlikkuse koguda piiranguteta."
 
 #: templates/savings-fund-landing-content.php:62
@@ -1674,7 +1674,7 @@ msgid "3 · You are here"
 msgstr "3 · Sina oled siin"
 
 #: templates/savings-fund-landing-content.php:75
-msgid "Savings Fund"
+msgid "Additional Investment Fund"
 msgstr "Täiendav Kogumisfond"
 
 #: templates/savings-fund-landing-content.php:76
@@ -1730,11 +1730,11 @@ msgid "How is Tuleva different?"
 msgstr "Mille poolest Tuleva erineb?"
 
 #: templates/savings-fund-landing-content.php:126
-msgid "Compare the Tuleva Savings Fund with other common choices."
+msgid "Compare the Tuleva Additional Investment Fund with other common choices."
 msgstr "Võrdle Tuleva Täiendavat Kogumisfondi teiste levinud valikutega."
 
 #: templates/savings-fund-landing-content.php:131
-msgid "Comparison of the Savings Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear"
+msgid "Comparison of the Additional Investment Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear"
 msgstr "Täiendava Kogumisfondi võrdlus LHV Kasvukonto, Swedbank Roburi ja Lightyeariga"
 
 #: templates/savings-fund-landing-content.php:143
@@ -1835,11 +1835,11 @@ msgid "How do I start investing?"
 msgstr "Kuidas alustada investeerimist?"
 
 #: templates/savings-fund-landing-content.php:226
-msgid "You can buy Tuleva Savings Fund units on Tuleva's website. It works like this:"
+msgid "You can buy Tuleva Additional Investment Fund units on Tuleva's website. It works like this:"
 msgstr "Tuleva Täiendava Kogumisfondi osakuid saab osta Tuleva veebis. See käib nii:"
 
 #: templates/savings-fund-landing-content.php:228
-msgid "Open a Savings Fund account."
+msgid "Open an Additional Investment Fund account."
 msgstr "Ava Täiendava Kogumisfondi konto."
 
 #: templates/savings-fund-landing-content.php:229
@@ -1855,7 +1855,7 @@ msgid "Pay for the units from your current account. We recommend using an accoun
 msgstr "Tasu osakute eest oma arvelduskontolt. Soovitame kasutada kontot, mis on registreeritud investeerimiskontona."
 
 #: templates/savings-fund-landing-content.php:232
-msgid "You now own Tuleva Savings Fund units. You can see and sell your units by logging in to your Tuleva account."
+msgid "You now own Tuleva Additional Investment Fund units. You can see and sell your units by logging in to your Tuleva account."
 msgstr "Omandad Tuleva Täiendava Kogumisfondi osakud. Soetatud osakuid näed ning saad müüa Tulevas oma kontole sisselogides."
 
 #: templates/savings-fund-landing-content.php:234
@@ -1880,15 +1880,15 @@ msgid "Why use an investment account for contributions?"
 msgstr "Miks tasub sissemaksete tegemiseks kasutada investeerimiskontot?"
 
 #: templates/savings-fund-landing-content.php:245
-msgid "When investing as a private person, we recommend using an investment account to buy Savings Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account."
+msgid "When investing as a private person, we recommend using an investment account to buy Additional Investment Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account."
 msgstr "Soovitame eraisikuna investeerides kasutada Täiendava Kogumisfondi osakute ostmiseks investeerimiskontot. See on mõistlik, sest võimaldab lükata tulumaksukohustust edasi, kuniks investeeringud maha müüd ja raha investeerimiskontolt välja võtad."
 
 #: templates/savings-fund-landing-content.php:246
-msgid "So if you don't have one yet, open an investment account at a bank and transfer the money meant for the Savings Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Savings Fund account. If at some point you want to sell Savings Fund units, the money should be paid back to the investment account."
+msgid "So if you don't have one yet, open an investment account at a bank and transfer the money meant for the Additional Investment Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Additional Investment Fund account. If at some point you want to sell Additional Investment Fund units, the money should be paid back to the investment account."
 msgstr "Seega, kui sul veel pole, siis ava mõnes pangas investeerimiskonto ja kanna kogumisfondi panemiseks mõeldud summa sinna peale. Sul võib olla ka mitu investeerimiskontot. Seejärel tee investeerimiskontolt ülekanne Tuleva Täiendava Kogumisfondi kontole. Kui soovid ühel hetkel kogumisfondi osakuid müüa, siis tuleks raha kanda tagasi investeerimiskontole."
 
 #: templates/savings-fund-landing-content.php:247
-msgid "Read more: why and how to use an investment account with the Savings Fund?"
+msgid "Read more: why and how to use an investment account with the Additional Investment Fund?"
 msgstr "Loe lähemalt: miks ja kuidas kasutada kogumisfondi puhul investeerimiskontot?"
 
 #: templates/savings-fund-landing-content.php:251
@@ -1908,7 +1908,7 @@ msgid "Wait for the money to arrive: depending on the instrument, whether a fund
 msgstr "Oota raha laekumist: sõltuvalt instrumendist (fondist või aktsiast) võtab raha laekumine aega tavaliselt 2–3 tööpäeva."
 
 #: templates/savings-fund-landing-content.php:257
-msgid "Make a contribution to the Tuleva Savings Fund: once the money is in your account, log in to Tuleva and make a payment to the Savings Fund."
+msgid "Make a contribution to the Tuleva Additional Investment Fund: once the money is in your account, log in to Tuleva and make a payment to the Additional Investment Fund."
 msgstr "Tee sissemakse Tuleva Täiendavasse Kogumisfondi: kui raha on kontol, logi sisse Tulevasse ja tee makse Täiendavasse Kogumisfondi."
 
 #: templates/savings-fund-landing-content.php:259
@@ -1916,7 +1916,7 @@ msgid "If you invest as a private person and use an investment account, selling 
 msgstr "Kui investeerid eraisikuna ja kasutad investeerimiskontot, ei teki varade müügil kohest tulumaksukohustust – saad kogu summa (sh kasumi) maksuvabalt uuesti investeerida. Kui investeerid tavakonto alt, tuleb olemasoleva vara müümisel kasumilt järgmise tuludeklaratsiooniga tasuda tulumaks."
 
 #: templates/savings-fund-landing-content.php:260
-msgid "As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Savings Fund."
+msgid "As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Additional Investment Fund."
 msgstr "Oleme näitlikustamiseks koostanud juhendi Swedbankis oleva vara Tulevasse toomiseks ehk olemasoleva vara müümiseks ning fondi sissemakse tegemiseks. Suures plaanis on protsess sarnane ka teiste teenusepakkujate juures vara müümisel ja Tuleva Täiendava Kogumisfondi sissemakse tegemisel."
 
 #: templates/savings-fund-landing-content.php:261
@@ -1928,11 +1928,11 @@ msgid "How do you get your money out?"
 msgstr "Kuidas raha kätte saab?"
 
 #: templates/savings-fund-landing-content.php:267
-msgid "Unlike pension funds, the Tuleva Savings Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time."
+msgid "Unlike pension funds, the Tuleva Additional Investment Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time."
 msgstr "Erinevalt pensionifondidest on Tuleva Täiendav Kogumisfond eurofond. See tähendab, et sul on õigus oma osakuid igal ajal tagasi müüa ja raha välja võtta."
 
 #: templates/savings-fund-landing-content.php:268
-msgid "A sale order for Savings Fund units must be submitted through Tuleva's website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster."
+msgid "A sale order for Additional Investment Fund units must be submitted through Tuleva's website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster."
 msgstr "Täiendava Kogumisfondi osakute müügikorraldus tuleb esitada Tuleva veebilehe kaudu. Raha laekub sinu pangakontole kolme tööpäeva jooksul pärast osakute tagasivõtmishinna avaldamist (T+3). Võimalusel teeme makse kiiremini."
 
 #: templates/savings-fund-landing-content.php:269
@@ -1980,7 +1980,7 @@ msgid "How does reporting for the tax return work?"
 msgstr "Kuidas toimub andmete esitamine tuludeklaratsiooniks?"
 
 #: templates/savings-fund-landing-content.php:288
-msgid "If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Savings Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference."
+msgid "If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Additional Investment Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference."
 msgstr "Kui investeerid eraisikuna ja kasutad investeerimiskontot, siis algab tulumaksu deklareerimine pangast, kus oled investeerimiskonto avanud. Maksuametile deklareerid investeerimiskontole sissekantud raha ja sealt väljamakstud raha vahe. Sissemaksed Tuleva Täiendava Kogumisfondi osakutesse tuleb investeerimiskonto deklaratsioonis märkida neutraalseks, kui sa ei ole jooksval aastal osakuid müünud, misjuhul neid vahe arvutamisel arvesse ei võeta."
 
 #: templates/savings-fund-landing-content.php:289
@@ -2037,7 +2037,7 @@ msgid "For companies"
 msgstr "Osaühingule"
 
 #: templates/savings-fund-landing-content.php:317
-msgid "Can a company invest in the Savings Fund?"
+msgid "Can a company invest in the Additional Investment Fund?"
 msgstr "Kas osaühing saab kogumisfondi investeerida?"
 
 #: templates/savings-fund-landing-content.php:319
@@ -2045,7 +2045,7 @@ msgid "Yes. From June 15, 2026, an Estonian-registered private limited company w
 msgstr "Jah. Alates 15. juunist 2026 saab fondi investeerida ka Eestis registreeritud osaühing, millel on kuni kaks osanikku ja kelle osanikud on samal ajal juhatuse liikmed ja tegelikud kasusaajad. Sama fond ja sama tasu mis eraisikul."
 
 #: templates/savings-fund-landing-content.php:323
-msgid "How do I open a Savings Fund account for a company?"
+msgid "How do I open an Additional Investment Fund account for a company?"
 msgstr "Kuidas avada osaühingule kogumisfondi konto?"
 
 #: templates/savings-fund-landing-content.php:325
@@ -2085,11 +2085,11 @@ msgid "Do Tuleva members also earn a member bonus when investing through a compa
 msgstr "Kas osaühingu kaudu investeerides teenivad Tuleva liikmed ka liikmeboonust?"
 
 #: templates/savings-fund-landing-content.php:348
-msgid "No, when investing in the Savings Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+msgid "No, when investing in the Additional Investment Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
 msgstr "Ei, osaühingu kaudu Täiendavasse Kogumisfondi investeerides ei saa osaühing teenida liikmeboonust, sest Tuleva ühistu põhikiri seda ei võimalda."
 
 #: templates/savings-fund-landing-content.php:349
-msgid "If you are a member of the Tuleva cooperative and invest in the Savings Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgid "If you are a member of the Tuleva cooperative and invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
 msgstr "Kui oled Tuleva ühistu liige ja investeerid kogumisfondi eraisikuna, teenid igal aastal liikmeboonust 0,05% oma vara väärtusest."
 
 #: templates/savings-fund-landing-content.php:370
@@ -2097,21 +2097,21 @@ msgid "Fund terms, prospectus, and key information"
 msgstr "Fondi tingimused, prospekt ja põhiteave"
 
 #: templates/savings-fund-landing-content.php:374
-msgid "Blog posts about the Savings Fund"
+msgid "Blog posts about the Additional Investment Fund"
 msgstr "Blogipostitused kogumisfondist"
 
 #: templates/savings-fund-landing-content.php:6
 msgctxt "landing page hero eyebrow"
-msgid "Tuleva Savings Fund"
+msgid "Tuleva Additional Investment Fund"
 msgstr "Tuleva Täiendav Kogumisfond"
 
 #: templates/savings-fund-landing-content.php:135
 msgctxt "comparison table header"
-msgid "Tuleva<br>Savings Fund"
+msgid "Tuleva<br>Additional Investment Fund"
 msgstr "Tuleva<br>Kogumisfond"
 
 #: templates/savings-fund-landing-content.php:366
-msgid "Podcast: the Savings Fund opens"
+msgid "Podcast: the Additional Investment Fund opens"
 msgstr "Taskuhääling: Täiendav Kogumisfond avaneb"
 
 #: templates/savings-fund-landing-content.php:70
@@ -2120,3 +2120,20 @@ msgstr "Kuni 15% aastasest brutotulust, kuid mitte rohkem kui 6000 €, on tulu
 
 #~ msgid "Search"
 #~ msgstr "Otsi"
+
+#: templates/savings-fund-landing-content.php
+msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
+msgstr "Mille poolest erineb Täiendav Kogumisfond LHV Kasvukontost, Swedbanki Robur fondidest või Lightyearist?"
+
+#: templates/savings-fund-landing-content.php
+msgid "For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV's Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none."
+msgstr "Tuleva Täiendav Kogumisfond on indeksfondi investeerimisel soodsam kui LHV Kasvukonto ja Väärtpaberikonto. LHV-s tuleb investeeringu ostmisel ja müümisel maksta tasusid, mida Tulevas pole."
+
+#: templates/savings-fund-landing-content.php
+msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
+msgstr "Lightyear pakub suurt valikut aktsiaid ja fonde, millest mõni on soodsam ja mõni kallim kui Tuleva Täiendav Kogumisfond. Paljud neist on head alternatiivid. Tuleva eeliseks võrreldes Lightyeariga on valiku lihtsus."
+
+#: templates/savings-fund-landing-content.php
+msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
+msgstr "Swedbank pakub 22 erinevat Roburi fondi, mille tasud on vahemikus 0,26% (Access Edge Japan) kuni 1,66% (Emerging Europe). Tuleva Täiendavale Kogumisfondile on kõige sarnasem fond Robur Access Edge Global, mille tasu on 0,29%. Erinevalt Tuleva Täiendavast Kogumisfondist investeerib see fond aga üksnes arenenud riikide aktsiaturgudele. Üksnes arenguriikide aktsiaturgudele investeerib Robur Access Edge Emerging Markets, mille tasud on 0,45% aastas."
+
