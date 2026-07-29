@@ -35,6 +35,7 @@
                             </div>
                             <h3><?php _e('Low fee', TEXT_DOMAIN); ?></h3>
                             <p><?php _e('The fund\'s fee is 0.28% per year, with no purchase, sale, or other extra charges.', TEXT_DOMAIN); ?></p>
+                            <a class="card-link" href="#kkk-vordlus"><?php _e('How Tuleva differs →', TEXT_DOMAIN); ?></a>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -249,6 +250,15 @@
                                     '<a href="https://tuleva.ee/taskuhaaling/riskid-ja-hajutamine/">' . __('a separate podcast episode', TEXT_DOMAIN) . '</a>',
                                     '<a href="https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/">' . __('prospectus', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
+                            </div>
+                        </div>
+
+                        <div class="qa__question-wrapper" id="kkk-vordlus">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-vordlus"><?php _e('How is the Savings Fund different from LHV\'s Growth Account, Swedbank Robur funds, or Lightyear?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-vordlus" class="collapse">
+                                <p><?php _e('For investing in an index fund, the Tuleva Savings Fund is cheaper than LHV\'s Growth Account and Securities Account. In LHV you pay fees when buying and selling investments; in Tuleva there are none.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-lhv-kaudu-investeerimisest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
+                                <p><?php _e('Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Savings Fund. Many of them are good alternatives. Tuleva\'s advantage over Lightyear is the simplicity of choice.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-taiendav-kogumisfond-lightyearis-investeerimisest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
+                                <p><?php _e('Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Savings Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Savings Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets.', TEXT_DOMAIN); ?> <a href="https://tuleva.ee/analuusid/mille-poolest-erineb-tuleva-kogumisfond-roburi-fondidest/"><?php _e('Read more →', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
 
