@@ -13,7 +13,7 @@ acf_add_local_field_group(array (
             'type' => 'text',
             'instructions' => 'The main title displayed in the hero section',
             'required' => 1,
-            'default_value' => 'Tuleva Savings Fund',
+            'default_value' => 'Tuleva Additional Investment Fund',
         ),
         array (
             'key' => 'field_fund_savings_description',

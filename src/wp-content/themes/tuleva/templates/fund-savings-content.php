@@ -35,7 +35,7 @@
                   "name": "Tuleva"
                 },
                 "isin": "' . $isin . '",
-                "name": "Tuleva Savings Fund",
+                "name": "Tuleva Additional Investment Fund",
                 "managementFeeRate": 0.00152,
                 "pillar": null,
                 "ongoingChargesFigure": 0.0028,
