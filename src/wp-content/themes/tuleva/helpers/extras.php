@@ -314,21 +314,49 @@ function get_app_url($path)
 }
 
 /*
- * Get Tuleva member count
+ * Get the number of people saving in Tuleva index funds.
+ *
+ * Source: onboarding-service, backed by the same analytics.mv_kpi_new figure as the
+ * Metabase "kogujate arv". That view only moves once a month, so the value is cached
+ * for a day: the count changes about monthly, and we are never more than a day behind
+ * when it does.
+ *
+ * Returns 0 on any failure, so callers can fall back to the members_count ACF field.
  */
-function get_member_count()
+function get_investor_count()
 {
-    stream_context_set_default(
-        array(
-            'http' => array(
-                'method' => 'HEAD'
-            )
-        )
-    );
-    $headers = get_headers('https://onboarding-service.tuleva.ee/v1/members', 1);
-    $memberCount = empty($headers['X-Total-Count']) ? 0 : $headers['X-Total-Count'];
+    $cached = get_transient('tuleva_investor_count');
+    if ($cached !== false) {
+        return (int) $cached;
+    }
 
-    return $memberCount;
+    $context = stream_context_create(
+        [
+            'http' => [
+                'method' => 'GET',
+                'timeout' => 1,
+            ]
+        ]
+    );
+    $json = @file_get_contents(
+        'https://onboarding-service.tuleva.ee/v1/statistics/investor-count',
+        false,
+        $context
+    );
+    $data = json_decode($json, true);
+    $count = isset($data['count']) ? (int) $data['count'] : 0;
+
+    if ($count < 50000) {
+        // Unreachable, malformed or implausible. Cache the failure briefly so an
+        // outage costs one slow request per five minutes, not one per visitor.
+        set_transient('tuleva_investor_count', 0, 5 * MINUTE_IN_SECONDS);
+
+        return 0;
+    }
+
+    set_transient('tuleva_investor_count', $count, DAY_IN_SECONDS);
+
+    return $count;
 }
 
 function print_funds_js()

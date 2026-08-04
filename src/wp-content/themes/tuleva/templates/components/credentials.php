@@ -1,5 +1,5 @@
 <?php
-$members_count = get_field('members_count', 'option');
+$members_count = get_investor_count() ?: get_field('members_count', 'option');
 $members_count_description = get_sub_field('members_count_description');
 $security_text = get_sub_field('security_text');
 $security_link_text = get_sub_field('security_link_text');
