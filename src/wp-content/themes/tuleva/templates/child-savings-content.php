@@ -206,7 +206,7 @@
                         <div class="qa__question-wrapper" id="kkk-7">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('Can both parents manage the account?', TEXT_DOMAIN); ?></a>
                             <div id="answer-7" class="collapse">
-                                <p><?php _e('The account can be opened by either parent who has custody over the child\'s assets, and they act independently as the child\'s representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('The account can be opened by either parent who has custody over the child\'s assets, and they act independently as the child\'s representative. We give the other parent access to the child\'s account as soon as they have been identified in their own Tuleva account. Both parents can see the account and make transactions.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
