@@ -321,13 +321,26 @@ function get_app_url($path)
  * for a day: the count changes about monthly, and we are never more than a day behind
  * when it does.
  *
- * Returns 0 on any failure, so callers can fall back to the members_count ACF field.
+ * The last count the API returned successfully is also kept in an option. A failed
+ * refresh then keeps showing yesterday's real number instead of dropping back to the
+ * hand-entered members_count ACF field, which can be months out of date.
+ *
+ * Returns 0 only when there is nothing better to show, so callers can fall back to
+ * the ACF field.
  */
 function get_investor_count()
 {
+    // Same guard as the fund templates: never call the production API from local dev.
+    if (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === 'localhost') {
+        return 0;
+    }
+
     $cached = get_transient('tuleva_investor_count');
     if ($cached !== false) {
-        return (int) $cached;
+        $cached = (int) $cached;
+
+        // A cached 0 is the failure sentinel, not a real count.
+        return $cached > 0 ? $cached : get_last_good_investor_count();
     }
 
     $context = stream_context_create(
@@ -344,19 +357,30 @@ function get_investor_count()
         $context
     );
     $data = json_decode($json, true);
-    $count = isset($data['count']) ? (int) $data['count'] : 0;
+    // is_numeric, so that a malformed "70000abc" is rejected rather than cast to 70000.
+    $count = isset($data['count']) && is_numeric($data['count']) ? (int) $data['count'] : 0;
 
-    if ($count < 50000) {
+    // Mirrors the sanity bounds the endpoint already applies in SQL.
+    if ($count < 50000 || $count > 500000) {
         // Unreachable, malformed or implausible. Cache the failure briefly so an
         // outage costs one slow request per five minutes, not one per visitor.
         set_transient('tuleva_investor_count', 0, 5 * MINUTE_IN_SECONDS);
 
-        return 0;
+        return get_last_good_investor_count();
     }
 
     set_transient('tuleva_investor_count', $count, DAY_IN_SECONDS);
+    update_option('tuleva_investor_count_last_good', $count, false);
 
     return $count;
+}
+
+/*
+ * The last count the API returned successfully, or 0 if it has never answered.
+ */
+function get_last_good_investor_count()
+{
+    return (int) get_option('tuleva_investor_count_last_good', 0);
 }
 
 function print_funds_js()
