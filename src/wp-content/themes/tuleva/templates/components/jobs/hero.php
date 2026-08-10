@@ -1,8 +1,8 @@
 <?php if( have_rows('hero') ) while ( have_rows('hero') ) : the_row(); ?>
 <?php
 $image = get_sub_field('image');
-$image_url = wp_get_attachment_image_url($image['ID'], 'large');
-$image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
+$image_url = $image ? wp_get_attachment_image_url($image['ID'], 'large') : null;
+$image_srcset = $image ? wp_get_attachment_image_srcset($image['ID'], 'large') : null;
 ?>
 <section class="hero bg-hero-team d-flex flex-column section-spacing">
     <div class="container my-auto">
@@ -13,7 +13,9 @@ $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
                 <?php the_sub_field('text'); ?>
             </div>
             <div class="hero-aside col-lg-6">
-                <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?>" alt="">
+                <?php if ($image_url) { ?>
+                    <img class="img-fluid" src="<?php echo $image_url; ?>" srcset="<?php echo $image_srcset; ?>" alt="">
+                <?php } ?>
             </div>
         </div>
     </div>
