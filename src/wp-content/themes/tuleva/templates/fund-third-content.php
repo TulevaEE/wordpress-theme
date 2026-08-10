@@ -16,33 +16,23 @@
     endwhile; ?>
 
     <?php
-    $context = stream_context_create(
-        [
-            'http' => [
-                'method' => 'GET',
-                'timeout' => 1,
-            ]
-        ]
-    );
     if ($_SERVER['SERVER_NAME'] !== 'localhost') {
-        $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
+        $funds = get_funds_from_api('Tuleva');
     } else {
-        $json = '[
-          {
-            "fundManager": {
-              "name": "Tuleva"
-            },
-            "isin": "EE3600001707",
-            "name": "Tuleva III Pillar Pension Fund",
-            "managementFeeRate": 0.00179,
-            "pillar": 3,
-            "ongoingChargesFigure": 0.0028,
-            "nav": 1.1636,
-            "volume": 356619411.5331
-          }
-        ]';
+        $funds = [
+            [
+                'fundManager' => ['name' => 'Tuleva'],
+                'isin' => 'EE3600001707',
+                'name' => 'Tuleva III Pillar Pension Fund',
+                'managementFeeRate' => 0.00179,
+                'pillar' => 3,
+                'ongoingChargesFigure' => 0.0028,
+                'nav' => 1.1636,
+                'volume' => 356619411.5331,
+            ],
+        ];
     }
-    $funds = json_decode($json, true);
+
     if (!empty($funds)) {
         $third = array_search('EE3600001707', array_column($funds, 'isin'));
         if ($third !== false) {
