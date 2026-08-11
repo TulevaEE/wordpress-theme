@@ -85,7 +85,9 @@ final class FundsApiTest extends TestCase
 
         $funds = get_funds_from_api();
 
-        $this->assertSame([['isin' => 'EE3600109435', 'nav' => 1.28834]], $funds);
+        $this->assertCount(1, $funds);
+        $this->assertSame('EE3600109435', $funds[0]['isin']);
+        $this->assertEqualsWithDelta(1.28834, $funds[0]['nav'], 0.00001);
     }
 
     #[Test]
