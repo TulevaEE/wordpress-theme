@@ -1,8 +1,8 @@
 
 <?php
 $image = get_sub_field('image');
-$image_url = wp_get_attachment_image_url($image['ID'], 'large');
-$image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
+$image_url = $image ? wp_get_attachment_image_url($image['ID'], 'large') : null;
+$image_srcset = $image ? wp_get_attachment_image_srcset($image['ID'], 'large') : null;
 $button_color_class = get_component_button_color_class();
 $members_count = get_field('members_count', 'option');
 $members_count_description = get_sub_field('members_count_description');
