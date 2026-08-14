@@ -176,6 +176,10 @@ acf_add_local_field_group(array (
     'label_placement' => 'top',
     'instruction_placement' => 'label',
     'active' => 1,
+    // Lets fund_co2_intensity be set over the REST API, the same way the pension funds'
+    // field is. TKF100 has no CO2 figure yet; the template hides the whole block while the
+    // field is empty, so this stays inert until someone supplies a value.
+    'show_in_rest' => 1,
 ));
 
 // Documents fields
