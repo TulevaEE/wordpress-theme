@@ -133,6 +133,15 @@ final class ReportLinkTest extends TestCase
     }
 
     #[Test]
+    public function urlWithNoPathAtAllDoesNotWarn(): void
+    {
+        $link = generate_report_link('https://tuleva.ee', 'Investment reports');
+
+        $this->assertStringContainsString('href="https://tuleva.ee"', $link);
+        $this->assertStringContainsString('>Investment reports<', $link);
+    }
+
+    #[Test]
     public function labelAndUrlAreEscaped(): void
     {
         $link = generate_report_link(

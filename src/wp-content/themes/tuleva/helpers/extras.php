@@ -391,7 +391,9 @@ function hyphenate_string($string) {
 
 function generate_report_link($url, $link_text = null) {
     $is_absolute = (bool) filter_var($url, FILTER_VALIDATE_URL);
-    $path = $is_absolute ? parse_url($url, PHP_URL_PATH) : $url;
+    // parse_url() returns null for a URL with no path at all ("https://tuleva.ee"), which
+    // basename() rejects as of PHP 8.1.
+    $path = ($is_absolute ? parse_url($url, PHP_URL_PATH) : $url) ?? '';
     $filename = basename($path);
 
     if (preg_match('/(\d{4})-(\d{2})/', $filename, $matches)) {
