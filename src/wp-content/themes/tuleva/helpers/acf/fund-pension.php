@@ -46,6 +46,10 @@ acf_add_local_field_group(array (
     'label_placement' => 'top',
     'instruction_placement' => 'label',
     'active' => 1,
+    // Required for onboarding-service to set this field over the REST API
+    // (POST /wp-json/wp/v2/pages/{id} with {"acf": {"investment_report_file": <attachment id>}}).
+    // Without it ACF strips the "acf" key from the request and the write silently no-ops.
+    'show_in_rest' => 1,
 ));
 
 endif;

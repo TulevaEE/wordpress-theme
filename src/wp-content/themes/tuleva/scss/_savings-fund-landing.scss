@@ -1,0 +1,326 @@
+// Savings fund landing page (page_savings-fund-landing.php)
+
+.savings-fund-landing-page {
+    overflow-x: clip;
+
+    h1 {
+        font-size: clamp(2.3rem, 5vw, 3.4rem);
+        line-height: 1.18;
+    }
+
+    .lead {
+        font-size: 1.18rem;
+        line-height: 1.65;
+        color: $text-primary;
+        text-wrap: balance;
+    }
+
+    .diff-list {
+        max-width: 40rem;
+        margin-inline: auto;
+    }
+
+    .emphasis-box {
+        max-width: 44rem;
+        margin-inline: auto;
+    }
+
+    .faq-list {
+        max-width: 44rem;
+        margin-inline: auto;
+    }
+
+    .eyebrow {
+        margin-bottom: 1.6rem;
+        padding: .55rem 1rem;
+        background: #eaf4ff;
+        border-radius: 2rem;
+        color: $blue;
+        font-size: .8rem;
+        font-weight: $font-weight-semibold;
+        letter-spacing: .1em;
+        line-height: 1;
+    }
+
+    .hero {
+        padding: 5rem 0 4rem;
+        background: linear-gradient(180deg, #e8f4ff, $white 92%);
+
+        .eyebrow {
+            background: $white;
+            border: 1px solid #d3e6fa;
+        }
+
+        .lead {
+            max-width: 40rem;
+            margin: 1.4rem auto 0;
+        }
+    }
+
+    .cta {
+        margin-top: 2.2rem;
+    }
+
+    .card-link {
+        display: inline-block;
+        margin-top: .6rem;
+        color: $blue;
+        font-size: .95rem;
+        font-weight: $font-weight-medium;
+        line-height: 1.4;
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent);
+        text-underline-offset: $link-underline-offset;
+        text-decoration-thickness: $link-underline-thickness;
+
+        &:hover,
+        &:focus {
+            text-decoration-color: currentColor;
+        }
+    }
+
+    .who {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        text-align: left;
+
+        @include media-breakpoint-down (md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .who-card {
+        position: relative;
+        background: $white;
+        border: 1px solid #e6edf4;
+        border-radius: 1rem;
+        padding: 1.6rem;
+
+        .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-bottom: .9rem;
+            color: $blue;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h3 {
+            margin: 0 0 .4rem;
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.15rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            margin: 0;
+            color: $text-primary;
+            font-size: .96rem;
+        }
+    }
+
+    .who--stack {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 46rem;
+        margin: 2.5rem auto 0;
+
+        .who-card {
+            display: grid;
+            grid-template-columns: 2.5rem 1fr;
+            column-gap: 1.2rem;
+            row-gap: .5rem;
+            align-items: center;
+            padding: 1.4rem 1.6rem;
+
+            .icon {
+                grid-column: 1;
+                grid-row: 1 / span 3;
+                align-self: start;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 0;
+                background: #e9ecef;
+                border-radius: 50%;
+                color: $text-primary;
+
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                }
+            }
+
+            h3 {
+                grid-column: 2;
+                grid-row: 1;
+                margin: 0;
+                color: $text-primary;
+                font-size: 1.25rem;
+                font-weight: $font-weight-bold;
+            }
+
+            p {
+                grid-column: 2;
+                grid-row: 2;
+                color: $text-primary;
+                font-size: 1rem;
+            }
+
+            .card-link {
+                grid-column: 2;
+                grid-row: 3;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .path {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        margin-top: 2.8rem;
+    }
+
+    .path-step {
+        flex: 1 1 240px;
+        max-width: 300px;
+        background: $white;
+        border: 1px solid #e6edf4;
+        border-radius: 1rem;
+        padding: 1.6rem;
+        text-align: left;
+
+        &.now {
+            border: 2px solid $blue;
+            box-shadow: 0 16px 40px rgba(0, 47, 99, .10);
+            transform: translateY(-6px);
+        }
+
+        h3 {
+            margin: .7rem 0 .4rem;
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.15rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            margin: 0;
+            color: $text-primary;
+            font-size: .96rem;
+        }
+    }
+
+    .path-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 .7rem;
+        color: #9fb6cc;
+        font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-down (md) {
+        .path-arrow {
+            width: 100%;
+            padding: .5rem 0;
+            transform: rotate(90deg);
+        }
+
+        .path-step {
+            max-width: none;
+        }
+    }
+
+    .chart-card {
+        margin-top: 2.5rem;
+        padding: .5rem .5rem .9rem;
+        background: $white;
+        border: 1px solid #e7edf3;
+        border-radius: .9rem;
+        box-shadow: 0 10px 30px rgba(0, 47, 99, .08);
+    }
+
+    .table-scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .compare-table {
+        width: 100%;
+        min-width: 640px;
+        margin-bottom: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: .95rem;
+
+        thead th.tuleva {
+            border-radius: .6rem .6rem 0 0;
+        }
+
+        tbody tr:last-child .tuleva {
+            border-radius: 0 0 .6rem .6rem;
+        }
+
+        th {
+            padding: .9rem .8rem .7rem;
+            border-bottom: 2px solid #e6edf4;
+            color: $text-secondary;
+            font-size: .8rem;
+            font-weight: $font-weight-semibold;
+            letter-spacing: .03em;
+            line-height: 1.3;
+            text-align: left;
+            text-transform: uppercase;
+            vertical-align: top;
+        }
+
+        td {
+            padding: .8rem;
+            border-bottom: 1px solid #e6edf4;
+            color: $text-primary;
+            vertical-align: top;
+        }
+
+        tbody th {
+            border-bottom: 1px solid #e6edf4;
+            color: $navy-blue;
+            font-size: .95rem;
+            font-weight: $font-weight-medium;
+            letter-spacing: 0;
+            line-height: 1.5;
+            text-transform: none;
+        }
+
+        tbody tr:last-child td,
+        tbody tr:last-child th {
+            border-bottom: none;
+        }
+
+        .tuleva {
+            background: $blue-bg-2;
+            color: $navy-blue;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .faq-subhead {
+        margin: 3.5rem 0 .5rem;
+        color: $navy-blue;
+        font-family: $font-family-serif;
+        font-size: 1.5rem;
+        letter-spacing: -.015em;
+    }
+}

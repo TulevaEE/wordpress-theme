@@ -10,6 +10,7 @@ node_modules
 src/wp-content/uploads/cache/
 .DS_store
 .idea/
+*.iml
 
 !src
 src/*
@@ -23,3 +24,7 @@ src/wp-content/themes/tuleva/.phpunit.cache/
 wordpress/
 
 mysql-init/**
+
+# Downloaded database dump and wp-content bundle — never committed.
+.assets/
+wordpress/wp-config.php.bak.*

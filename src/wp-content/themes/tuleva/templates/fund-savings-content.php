@@ -18,33 +18,23 @@
     endwhile;
 
     if ($isin) {
-        $context = stream_context_create(
-            [
-                'http' => [
-                    'method' => 'GET',
-                    'timeout' => 1,
-                ]
-            ]
-        );
         if ($_SERVER['SERVER_NAME'] !== 'localhost') {
-        $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds?fundManager.name=Tuleva', false, $context);
+            $funds = get_funds_from_api('Tuleva');
         } else {
-            $json = '[
-              {
-                "fundManager": {
-                  "name": "Tuleva"
-                },
-                "isin": "' . $isin . '",
-                "name": "Tuleva Savings Fund",
-                "managementFeeRate": 0.00152,
-                "pillar": null,
-                "ongoingChargesFigure": 0.0028,
-                "nav": 1.0000,
-                "volume": 0
-              }
-            ]';
+            $funds = [
+                [
+                    'fundManager' => ['name' => 'Tuleva'],
+                    'isin' => $isin,
+                    'name' => 'Tuleva Additional Investment Fund',
+                    'managementFeeRate' => 0.00152,
+                    'pillar' => null,
+                    'ongoingChargesFigure' => 0.0028,
+                    'nav' => 1.0000,
+                    'volume' => 0,
+                ],
+            ];
         }
-        $funds = json_decode($json, true);
+
         if (!empty($funds)) {
             $fund_index = array_search($isin, array_column($funds, 'isin'));
             if ($fund_index !== false) {

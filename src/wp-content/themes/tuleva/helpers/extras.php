@@ -307,6 +307,9 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 function get_app_url($path)
 {
+    if (ICL_LANGUAGE_CODE === 'et') {
+        return 'https://pension.tuleva.ee' . $path;
+    }
     return 'https://pension.tuleva.ee' . $path . '?language=' . ICL_LANGUAGE_CODE;
 }
 
@@ -330,16 +333,7 @@ function get_member_count()
 
 function print_funds_js()
 {
-    $context = stream_context_create(
-        [
-            'http' => [
-                'method' => 'GET',
-                'timeout' => 1,
-            ]
-        ]
-    );
-    $json = file_get_contents('https://onboarding-service.tuleva.ee/v1/funds', false, $context);
-    $data = json_decode($json, true);
+    $data = get_funds_from_api();
 
     if (empty($data)) {
         return;
@@ -427,7 +421,7 @@ function generate_report_link($url, $link_text = null) {
             ? sprintf('%s (%s)', $link_text, $date_text)
             : $date_text;
     } elseif ($link_text === null) {
-        $link_text = __('Report', TEXT_DOMAIN);
+        $link_text = __('Investment reports', TEXT_DOMAIN);
     }
 
     // Preserve the original host for absolute URLs: the ACF-supplied media URL may be served from a

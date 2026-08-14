@@ -81,9 +81,9 @@
                         <ul class="list-style-arrow text-secondary">
                             <li>
                                 <?php
-                                    $report_url = get_field('investment_report_file') ?: 'https://tuleva.ee/wp-content/uploads/2026/06/Tuleva-Maailma-Volakirjade-Pensionifondi-investeeringute-aruanne-2026-05.pdf';
+                                    $report_url = get_field('investment_report_file') ?: 'https://tuleva.ee/wp-content/uploads/2026/08/Tuleva-Maailma-Volakirjade-Pensionifondi-investeeringute-aruanne-2026-07.pdf';
                                     echo generate_report_link($report_url, __('Investment reports', TEXT_DOMAIN));
-                                ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 <br>
                                 <a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/fid/76/" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                             </li>
@@ -95,7 +95,7 @@
                         <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
-                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 134.35) ?></span>
+                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), '133.80') ?></span>
                         </p>
                     </div>
                 </div>

@@ -1,0 +1,205 @@
+// Child savings landing page (page_child-savings.php)
+
+.bg-hero-child {
+    background-image: linear-gradient(180deg, rgba(197, 224, 233, .88), rgba(197, 224, 233, .88)), url('../img/mees-naine-lapsega-2400.jpg');
+    background-position: 0 0, left center;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    @include media-breakpoint-only (xs) {
+        background-image: linear-gradient(180deg, rgba(197, 224, 233, .88), rgba(197, 224, 233, .88)), url('../img/mees-naine-lapsega-800.jpg');
+    }
+}
+
+.child-savings-page {
+    h1 {
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        line-height: 1.18;
+    }
+
+    .hero {
+        padding: 6.5rem 0;
+
+        .lead {
+            font-size: 1.18rem;
+        }
+
+        @include media-breakpoint-down (md) {
+            padding: 3rem 0;
+        }
+    }
+
+    .historic-return-rate {
+        width: 100%;
+        padding: 2px 0 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .calculator {
+        border: 1px solid #d3dbe3;
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfield;
+        }
+
+        ::placeholder {
+            color: #a3b3c2;
+            opacity: 1;
+        }
+    }
+
+    .calc-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        + .calc-line {
+            margin-top: .55rem;
+        }
+
+        span {
+            color: $navy-blue;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        b {
+            color: $navy-blue;
+            font-size: 1.1rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.4;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        &.win b {
+            color: $green-light;
+        }
+    }
+
+    .calc-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-top: .55rem;
+
+        span {
+            color: $navy-blue;
+            font-size: 1.15rem;
+            font-weight: $font-weight-medium;
+            line-height: 1.4;
+        }
+
+        b {
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.7rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+    }
+
+    .gift-banner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        column-gap: 1.1rem;
+        align-items: start;
+        padding: 1.4rem 1.6rem;
+        background: $white;
+        border: 1.5px dashed #a9c8e8;
+        border-radius: 1rem;
+
+        h3 {
+            margin: 0 0 .4rem;
+            padding-right: 7.5rem;
+            color: $text-primary;
+            font-size: 1.25rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            margin: 0;
+            color: $text-primary;
+            font-size: 1rem;
+        }
+
+        @include media-breakpoint-down (sm) {
+            grid-template-columns: 1fr;
+            row-gap: .8rem;
+            padding: 1.4rem 1.4rem;
+
+            h3 {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .gift-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: #eaf4ff;
+        border-radius: 50%;
+        color: $blue;
+
+        svg {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+    }
+
+    .chip-soon {
+        position: absolute;
+        top: 1.4rem;
+        right: 1.6rem;
+
+        @include media-breakpoint-down (sm) {
+            position: static;
+            display: inline-block;
+            margin-bottom: .6rem;
+        }
+    }
+
+    .diff-list li {
+        padding-left: 3rem;
+
+        &::before {
+            left: .475rem;
+        }
+    }
+
+    .foot-note {
+        max-width: 44rem;
+        margin-top: 2rem;
+    }
+
+    .resource-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .7rem;
+        margin: 1.8rem 0 0;
+
+        a {
+            font-size: .95rem;
+            font-weight: $font-weight-medium;
+            line-height: 1.4;
+        }
+    }
+}
