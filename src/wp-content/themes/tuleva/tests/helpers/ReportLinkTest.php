@@ -149,7 +149,23 @@ final class ReportLinkTest extends TestCase
             'Reports <script>alert(1)</script>'
         );
 
+        // Assert what escaping has to achieve, not how a given implementation spells it. esc_url()
+        // is stubbed here with htmlspecialchars(), which writes & as &amp;, while real WordPress
+        // writes &#038;. Pinning either spelling tests the stub, not the behaviour.
         $this->assertStringNotContainsString('<script>', $link);
-        $this->assertStringContainsString('&amp;b=2', $link);
+        $this->assertDoesNotMatchRegularExpression('/href="[^"]*&(?!amp;|#0?3[48];)/', $link);
+    }
+
+    #[Test]
+    public function noPayloadQuoteEscapesItsAttribute(): void
+    {
+        // The one assertion that fails if esc_url()/esc_html() stop being called at all, whichever
+        // encoding they use: a double quote reaching the output raw would close href="..." or
+        // target="..." early. The markup has exactly two quoted attributes, so four delimiters is
+        // the whole budget -- a fifth quote is a payload that escaped its attribute.
+        $link = generate_report_link('https://tuleva.ee/files/a".pdf', 'Reports " onmouseover=x');
+
+        $this->assertSame(4, substr_count($link, '"'), 'only the attribute delimiters may survive');
+        $this->assertStringNotContainsString('onmouseover=x"', $link);
     }
 }
