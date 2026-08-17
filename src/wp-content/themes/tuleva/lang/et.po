@@ -249,6 +249,10 @@ msgstr "tingimused"
 msgid " (in Estonian)"
 msgstr " "
 
+#: templates/components/fund-stocks-details.php templates/components/fund-bonds-details.php templates/components/fund-third-details.php templates/components/fund-savings-details.php
+msgid " (in Estonian, effective from %s)"
+msgstr " (jõustub %s)"
+
 #: templates/components/fund-bonds-details.php:61 templates/components/fund-savings-details.php:126 templates/components/fund-stocks-details.php:60 templates/components/fund-third-details.php:60
 msgid "Model portfolio"
 msgstr "Mudelportfell"
