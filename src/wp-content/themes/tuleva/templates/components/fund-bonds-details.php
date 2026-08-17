@@ -56,6 +56,8 @@
                         <ul class="list-style-arrow text-secondary">
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <br>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), '01.01.2027'); ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>

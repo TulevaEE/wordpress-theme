@@ -55,6 +55,8 @@
                         <ul class="list-style-arrow text-secondary">
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/TUV100-Prospekt-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/03/Tuleva-III-Samba-Pensionifondi-tingimused-kehtib-alates-02.03.2026.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <br>
+                                <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/TUV100-Prospekt-kehtib-alates-18.09.2026.pdf" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php _e(' and ', TEXT_DOMAIN) ?><a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/TUV100-tingimused-kehtivad-alates-18.09.2026.pdf" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), '18.09.2026'); ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf" target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
