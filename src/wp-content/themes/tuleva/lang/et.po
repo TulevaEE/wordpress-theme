@@ -1493,8 +1493,8 @@ msgid "Can both parents manage the account?"
 msgstr "Kas mõlemad vanemad saavad kontot hallata?"
 
 #: templates/child-savings-content.php:209
-msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later."
-msgstr "Konto saab avada kumbki vanem, kellel on lapse varahooldusõigus, ja ta tegutseb lapse esindajana iseseisvalt. Teisele vanemale saadame konto avamise kohta teate. Võimaluse, et mõlemad vanemad näevad kontot ja teevad tehinguid, lisame edaspidi."
+msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We give the other parent access to the child's account as soon as they have been identified in their own Tuleva account. Both parents can see the account and make transactions."
+msgstr "Konto saab avada kumbki vanem, kellel on lapse varahooldusõigus, ja ta tegutseb lapse esindajana iseseisvalt. Teisele vanemale avame ligipääsu lapse kontole kohe, kui ta on end Tuleva kontol tuvastanud. Mõlemad vanemad näevad kontot ja saavad teha tehinguid."
 
 #: templates/child-savings-content.php:222 templates/savings-fund-landing-content.php:362
 msgid "Learn more"
