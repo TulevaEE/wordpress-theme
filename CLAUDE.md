@@ -26,6 +26,12 @@ are updated a few times per year. The process differs by fund:
 | TUV100 (III Samba Pensionifond)  | Hardcoded URL in PHP template | git push → CircleCI |
 | TKF100 (Täiendav Kogumisfond)    | ACF field in WordPress DB     | WP REST API call    |
 
+Monthly **investment reports** are separate from the legal documents above and work the same way for all
+four funds: the `investment_report_file` ACF field on the fund page, set from wp-admin or over the REST API
+(`POST /wp-json/wp/v2/pages/{id}` with `{"acf": {"investment_report_file": <attachment id>}}`). The three
+pension fund templates fall back to a hardcoded URL while the field is unset. The field groups that carry it
+declare `'show_in_rest' => 1` — without that ACF drops the `acf` key from the request and the write no-ops.
+
 ### Required credentials (environment variables — never hardcode)
 
 ```
@@ -90,7 +96,7 @@ CircleCI build status: https://app.circleci.com
 
 ### Step 4 — Update savings fund ACF fields (TKF100)
 
-ACF REST API is **not enabled** on this site, so this step must be done manually in the WordPress admin:
+Do this in the WordPress admin:
 
 1. Go to `https://tuleva.ee/wp-admin/post.php?post=35292&action=edit`
 2. Scroll to the ACF document fields
