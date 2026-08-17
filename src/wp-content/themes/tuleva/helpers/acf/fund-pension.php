@@ -52,4 +52,52 @@ acf_add_local_field_group(array (
     'show_in_rest' => 1,
 ));
 
+acf_add_local_field_group(array (
+    'key' => 'group_fund_pension_sustainability',
+    'title' => 'Sustainability',
+    'fields' => array (
+        array (
+            'key' => 'field_fund_pension_co2_intensity',
+            'label' => 'CO2 Intensity',
+            'name' => 'fund_co2_intensity',
+            // Text, not number: the figure is rendered verbatim and trailing zeros are
+            // significant ("133.80" must not collapse to "133.8"). Matches TKF100's field.
+            'type' => 'text',
+            'instructions' => 'CO2 intensity value (number only, e.g. "83.68"). When set, this replaces the hardcoded figure in the template.',
+            'required' => 0,
+        ),
+    ),
+    'location' => array (
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_fund-stocks.php',
+            ),
+        ),
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_fund-bonds.php',
+            ),
+        ),
+        array (
+            array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'page_fund-third.php',
+            ),
+        ),
+    ),
+    'menu_order' => 11,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'active' => 1,
+    // Same REST requirement as the investment report group above.
+    'show_in_rest' => 1,
+));
+
 endif;
