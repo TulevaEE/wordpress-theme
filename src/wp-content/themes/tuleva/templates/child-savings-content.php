@@ -137,7 +137,6 @@
                             <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
-                    <p class="foot-note text-center mx-auto"><?php _e('The calculator\'s result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today\'s rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return.', TEXT_DOMAIN); ?></p>
                 </div>
             </div>
         </div>
@@ -178,12 +177,10 @@
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="sissemaksed">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do contributions work?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do I make contributions?', TEXT_DOMAIN); ?></a>
                             <div id="answer-4" class="collapse">
-                                <p><?php _e('Contributions to your child\'s Additional Investment Fund account can only be made from the child\'s own bank account. Transfer money to your child\'s bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('If your child doesn\'t have a bank account yet, you can open one in their name at any Estonian bank.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('A grandparent or another close person can also give your child a gift. The simplest way is for them to gift the money to you: you transfer it to your child\'s account and from there to the fund. If a gift lands straight on the child\'s account, investing it requires the court\'s consent by law. That is why we recommend gifting through the parent.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('From this autumn, gifts can also be made straight to your child\'s savings fund account.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You can make contributions to your child\'s savings fund account both from your own bank account and from the child\'s. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If a grandparent or another close person wants to make a contribution to your child\'s account, the simplest way for now is for them to gift the money to you: you transfer it to your child\'s account and from there to the fund. If a gift lands straight on the child\'s account, investing it requires the court\'s consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child\'s savings fund account.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-5">
@@ -198,15 +195,18 @@
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-6">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-6"><?php _e('Does the tax return mean extra work?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-6"><?php _e('Do I have to file a tax return in my child\'s name?', TEXT_DOMAIN); ?></a>
                             <div id="answer-6" class="collapse">
-                                <p><?php _e('Yes, a little. If your child\'s units are sold and taxable income arises, a tax return has to be filed in their name. Saving in the parent\'s name, there would be no such extra work.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('It depends on whether you make contributions from a regular bank account or through an investment account.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('<b>Making contributions from a regular bank account</b>, you don\'t need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child\'s name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('<b>Making contributions from an investment account</b>, a tax return has to be filed in the child\'s name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven\'t sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you.', TEXT_DOMAIN); ?></p>
+                                <p><a href="https://tuleva.ee/taiendav-kogumisfond/kas-lapsele-kogudes-on-vaja-investeerimiskontot-kaks-lahenemist-mille-vahel-valida/"><?php _e('Read on the blog which approach suits your family →', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-7">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('Can both parents manage the account?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-7" class="collapse">
-                                <p><?php _e('The account can be opened by either parent who has custody over the child\'s assets, and they act independently as the child\'s representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later.', TEXT_DOMAIN); ?></p>
+                        <div class="qa__question-wrapper" id="kkk-8">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-8"><?php _e('My child already has a third pillar with Tuleva. What should I do now?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-8" class="collapse">
+                                <p><?php _e('A child\'s third pillar doesn\'t give an income tax refund, because a child generally doesn\'t earn enough income. That\'s why it\'s worth directing new contributions to your child\'s Additional Investment Fund; what\'s already saved keeps growing in the third pillar.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
