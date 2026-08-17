@@ -95,6 +95,11 @@
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
                             <span><?php
+                                // The ACF field is the source of truth. The literal below is only
+                                // the pre-ACF value, and renders only while the field is empty.
+                                // Update the field on the page, not this line: editing the literal
+                                // on a fund whose field is already set changes nothing visible,
+                                // which is a quiet way to believe a figure was published.
                                 $co2_intensity = get_field('fund_co2_intensity') ?: '83.73';
                                 echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), esc_html($co2_intensity));
                             ?></span>
