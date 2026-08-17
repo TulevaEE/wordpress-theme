@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-23T13:00:22+00:00\n"
+"POT-Creation-Date: 2026-08-17T12:50:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Tuleva"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 #: helpers/acf/init.php:19
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
@@ -38,22 +38,22 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: helpers/extras.php:476
-#: helpers/extras.php:487
+#: helpers/extras.php:467
+#: helpers/extras.php:478
 #: templates/components/countdown-timer.php:22
 #: templates/components/counter-hero.php:27
 msgid "days"
 msgstr ""
 
-#: helpers/extras.php:588
+#: helpers/extras.php:579
 msgid "Pagination"
 msgstr ""
 
-#: helpers/extras.php:592
+#: helpers/extras.php:583
 msgid "Newer"
 msgstr ""
 
-#: helpers/extras.php:635
+#: helpers/extras.php:626
 msgid "Older"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgid "All articles"
 msgstr ""
 
 #: templates/child-savings-content.php:10
-msgid "Tuleva Savings Fund for your child"
+msgid "Tuleva Additional Investment Fund for your child"
 msgstr ""
 
 #: templates/child-savings-content.php:11
@@ -188,10 +188,6 @@ msgstr ""
 msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
 msgstr ""
 
-#: templates/child-savings-content.php:45
-msgid "0 €"
-msgstr ""
-
 #: templates/child-savings-content.php:46
 msgid "At 18, your child has"
 msgstr ""
@@ -207,7 +203,7 @@ msgid "Open an account for my child"
 msgstr ""
 
 #: templates/child-savings-content.php:51
-#: templates/savings-fund-landing-content.php:379
+#: templates/savings-fund-landing-content.php:330
 msgid "Opening an account is free and takes only a few minutes."
 msgstr ""
 
@@ -256,7 +252,7 @@ msgid "Grandparents, godparents, and friends will be able to make contributions 
 msgstr ""
 
 #: templates/child-savings-content.php:108
-#: templates/savings-fund-landing-content.php:182
+#: templates/savings-fund-landing-content.php:124
 msgid "Good to know before you start"
 msgstr ""
 
@@ -282,7 +278,7 @@ msgid "The assets belong to the child and withdrawals can only be made to the ch
 msgstr ""
 
 #: templates/child-savings-content.php:117
-#: templates/savings-fund-landing-content.php:184
+#: templates/savings-fund-landing-content.php:126
 msgid "Stock markets fluctuate."
 msgstr ""
 
@@ -311,136 +307,139 @@ msgid "Over <strong>85,000</strong> people save with Tuleva"
 msgstr ""
 
 #: templates/child-savings-content.php:137
-#: templates/savings-fund-landing-content.php:208
+#: templates/savings-fund-landing-content.php:150
 msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr ""
 
-#: templates/child-savings-content.php:140
-msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
-msgstr ""
-
-#: templates/child-savings-content.php:148
+#: templates/child-savings-content.php:147
 #: templates/components/qa-block.php:5
-#: templates/savings-fund-landing-content.php:219
+#: templates/savings-fund-landing-content.php:161
 msgid "Frequently asked questions"
 msgstr ""
 
-#: templates/child-savings-content.php:153
-msgid "Why open a Savings Fund for your child rather than a third pillar?"
+#: templates/child-savings-content.php:152
+msgid "Why open an Additional Investment Fund for your child rather than a third pillar?"
 msgstr ""
 
-#: templates/child-savings-content.php:155
+#: templates/child-savings-content.php:154
 msgid "The third pillar's appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn't, so paying into a child's third pillar creates no tax benefit."
 msgstr ""
 
+#: templates/child-savings-content.php:155
+msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home."
+msgstr ""
+
 #: templates/child-savings-content.php:156
-msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Savings Fund, your child can use the money when they need it, for example for education or a first home."
+msgid "Saving in the child's name in the Additional Investment Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
 msgstr ""
 
-#: templates/child-savings-content.php:157
-msgid "Saving in the child's name in the Savings Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
-msgstr ""
-
-#: templates/child-savings-content.php:159
+#: templates/child-savings-content.php:158
 #, php-format
 msgid "Once your child starts earning income themselves, they should consider their own third pillar too, because then they get a tax benefit as well. If your child already has a third pillar account opened before 2021, keep it as it is: these are separate accounts and don't mix. And your own third pillar is worth filling before you start saving for your child. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:160
+#: templates/child-savings-content.php:159
+#: templates/savings-fund-landing-content.php:259
+#: templates/savings-fund-landing-content.php:260
+#: templates/savings-fund-landing-content.php:261
 msgid "Read more →"
 msgstr ""
 
-#: templates/child-savings-content.php:165
+#: templates/child-savings-content.php:164
 msgid "What happens if my child withdraws all the money at 18?"
 msgstr ""
 
-#: templates/child-savings-content.php:167
+#: templates/child-savings-content.php:166
 msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
 msgstr ""
 
-#: templates/child-savings-content.php:168
+#: templates/child-savings-content.php:167
 msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
 msgstr ""
 
-#: templates/child-savings-content.php:169
+#: templates/child-savings-content.php:168
 msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
 msgstr ""
 
-#: templates/child-savings-content.php:173
+#: templates/child-savings-content.php:172
 msgid "How does this differ from LHV's Kasvukonto and Swedbank's child products?"
 msgstr ""
 
-#: templates/child-savings-content.php:175
-msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Savings Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
+#: templates/child-savings-content.php:174
+msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
 msgstr ""
 
-#: templates/child-savings-content.php:176
+#: templates/child-savings-content.php:175
 msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
 msgstr ""
 
-#: templates/child-savings-content.php:177
+#: templates/child-savings-content.php:176
 msgid "Read more: 3 reasons to avoid child-labeled savings products"
 msgstr ""
 
-#: templates/child-savings-content.php:181
-msgid "How do contributions work?"
+#: templates/child-savings-content.php:180
+msgid "How do I make contributions?"
+msgstr ""
+
+#: templates/child-savings-content.php:182
+msgid "You can make contributions to your child's savings fund account both from your own bank account and from the child's. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
 msgstr ""
 
 #: templates/child-savings-content.php:183
-msgid "Contributions to your child's Savings Fund account can only be made from the child's own bank account. Transfer money to your child's bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
+msgid "If a grandparent or another close person wants to make a contribution to your child's account, the simplest way for now is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child's savings fund account."
 msgstr ""
 
-#: templates/child-savings-content.php:184
-msgid "If your child doesn't have a bank account yet, you can open one in their name at any Estonian bank."
-msgstr ""
-
-#: templates/child-savings-content.php:185
-msgid "A grandparent or another close person can also give your child a gift. The simplest way is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent."
-msgstr ""
-
-#: templates/child-savings-content.php:186
-msgid "From this autumn, gifts can also be made straight to your child's savings fund account."
-msgstr ""
-
-#: templates/child-savings-content.php:190
+#: templates/child-savings-content.php:187
 msgid "How do withdrawals work?"
 msgstr ""
 
-#: templates/child-savings-content.php:192
+#: templates/child-savings-content.php:189
 msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
 msgstr ""
 
-#: templates/child-savings-content.php:193
+#: templates/child-savings-content.php:190
 msgid "Units bought with the money you contributed yourself can be sold by you as your child's representative without extra conditions. If units were bought with the child's other money (for example a gift or an inheritance received straight to the child's account), the sale requires the court's consent by law. You can ask the court for a general consent covering the whole childhood. The state fee is 10 €."
 msgstr ""
 
-#: templates/child-savings-content.php:195
+#: templates/child-savings-content.php:192
 #, php-format
 msgid "The state is preparing a legislative change that would make investing in a child's name even simpler. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:196
+#: templates/child-savings-content.php:193
 msgid "We wrote about it on the blog →"
 msgstr ""
 
+#: templates/child-savings-content.php:198
+msgid "Do I have to file a tax return in my child's name?"
+msgstr ""
+
+#: templates/child-savings-content.php:200
+msgid "It depends on whether you make contributions from a regular bank account or through an investment account."
+msgstr ""
+
 #: templates/child-savings-content.php:201
-msgid "Does the tax return mean extra work?"
+msgid "<b>Making contributions from a regular bank account</b>, you don't need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child's name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all."
+msgstr ""
+
+#: templates/child-savings-content.php:202
+msgid "<b>Making contributions from an investment account</b>, a tax return has to be filed in the child's name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven't sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you."
 msgstr ""
 
 #: templates/child-savings-content.php:203
-msgid "Yes, a little. If your child's units are sold and taxable income arises, a tax return has to be filed in their name. Saving in the parent's name, there would be no such extra work."
+msgid "Read on the blog which approach suits your family →"
 msgstr ""
 
 #: templates/child-savings-content.php:207
-msgid "Can both parents manage the account?"
+msgid "My child already has a third pillar with Tuleva. What should I do now?"
 msgstr ""
 
 #: templates/child-savings-content.php:209
-msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later."
+msgid "A child's third pillar doesn't give an income tax refund, because a child generally doesn't earn enough income. That's why it's worth directing new contributions to your child's Additional Investment Fund; what's already saved keeps growing in the third pillar."
 msgstr ""
 
 #: templates/child-savings-content.php:222
-#: templates/savings-fund-landing-content.php:362
+#: templates/savings-fund-landing-content.php:313
 msgid "Learn more"
 msgstr ""
 
@@ -466,7 +465,7 @@ msgid "Two approaches to choose between."
 msgstr ""
 
 #: templates/child-savings-content.php:236
-msgid "More about the Tuleva Savings Fund →"
+msgid "More about the Tuleva Additional Investment Fund →"
 msgstr ""
 
 #: templates/child-savings-content.php:237
@@ -889,7 +888,7 @@ msgid "Download NAV history"
 msgstr ""
 
 #: templates/components/fund-savings-header.php:12
-msgid "Tuleva Savings Fund"
+msgid "Tuleva Additional Investment Fund"
 msgstr ""
 
 #: templates/components/fund-stocks-details.php:46
@@ -1618,7 +1617,7 @@ msgstr ""
 
 #: templates/savings-fund-landing-content.php:6
 msgctxt "landing page hero eyebrow"
-msgid "Tuleva Savings Fund"
+msgid "Tuleva Additional Investment Fund"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:7
@@ -1630,8 +1629,8 @@ msgid "Now you can invest with Tuleva beyond the second and third pillar. Grow y
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:10
-#: templates/savings-fund-landing-content.php:206
-#: templates/savings-fund-landing-content.php:378
+#: templates/savings-fund-landing-content.php:148
+#: templates/savings-fund-landing-content.php:329
 msgid "Start investing"
 msgstr ""
 
@@ -1680,11 +1679,11 @@ msgid "How to start →"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:58
-msgid "Is the Savings Fund right for you?"
+msgid "Is the Additional Investment Fund right for you?"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:59
-msgid "The pension pillars give you a tax win, and that's usually the place to start. The Savings Fund gives you the flexibility to save without limits."
+msgid "The pension pillars give you a tax win, and that's usually the place to start. The Additional Investment Fund gives you the flexibility to save without limits."
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:62
@@ -1716,7 +1715,7 @@ msgid "3 · You are here"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:75
-msgid "Savings Fund"
+msgid "Additional Investment Fund"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:76
@@ -1760,7 +1759,7 @@ msgid "Invest in your child's name: the assets legally belong to them. The earli
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:112
-#: templates/savings-fund-landing-content.php:238
+#: templates/savings-fund-landing-content.php:180
 msgid "https://tuleva.ee/en/child-savings/"
 msgstr ""
 
@@ -1768,390 +1767,331 @@ msgstr ""
 msgid "More about saving for your child →"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:125
-msgid "How is Tuleva different?"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:126
-msgid "Compare the Tuleva Savings Fund with other common choices."
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:131
-msgid "Comparison of the Savings Fund with LHV Kasvukonto, Swedbank Robur, and Lightyear"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:135
-msgctxt "comparison table header"
-msgid "Tuleva<br>Savings Fund"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:143
-msgid "Fee per year"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:144
-msgid "0.28%"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:145
-msgid "0.34%"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:146
-msgid "depends on the fund"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:147
-msgid "depends on the investment"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:150
-msgid "Purchase and sale fees"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:151
-#: templates/savings-fund-landing-content.php:153
-#: templates/savings-fund-landing-content.php:154
-msgid "none"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:152
-msgid "purchase 0.5%, sale 0.14% (min 5 €)"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:157
-msgid "Choice of funds"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:158
-msgid "one fund"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:159
-msgid "dozens of funds"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:160
-msgid "22 Robur funds"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:161
-msgid "thousands of stocks and funds"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:168
-msgid "Read more about how we differ:"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:185
+#: templates/savings-fund-landing-content.php:127
 msgid "Stock prices can rise as well as fall over time. The fund is meant for long-term investing."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:186
+#: templates/savings-fund-landing-content.php:128
 msgid "Your assets are protected."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:188
+#: templates/savings-fund-landing-content.php:130
 #, php-format
 msgid "The fund's assets and Tuleva's own assets %s at an independent depositary."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:189
+#: templates/savings-fund-landing-content.php:131
 msgid "are held strictly separate"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:191
+#: templates/savings-fund-landing-content.php:133
 msgid "Under supervision."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:192
+#: templates/savings-fund-landing-content.php:134
 msgid "Tuleva Fondid AS operates under the license and supervision of the Estonian Financial Supervision Authority."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:204
+#: templates/savings-fund-landing-content.php:146
 msgid "Start with as little as one euro"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:205
+#: templates/savings-fund-landing-content.php:147
 msgid "Open an account in just a couple of minutes. Choose whether you invest in your own name, through your company, or for your child."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:209
+#: templates/savings-fund-landing-content.php:151
 msgid "<strong>Flexible</strong> withdrawals"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:224
+#: templates/savings-fund-landing-content.php:166
 msgid "How do I start investing?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:226
-msgid "You can buy Tuleva Savings Fund units on Tuleva's website. It works like this:"
+#: templates/savings-fund-landing-content.php:168
+msgid "You can buy Tuleva Additional Investment Fund units on Tuleva's website. It works like this:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:228
-msgid "Open a Savings Fund account."
+#: templates/savings-fund-landing-content.php:170
+msgid "Open an Additional Investment Fund account."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:229
+#: templates/savings-fund-landing-content.php:171
 msgid "Choose a suitable contribution amount and whether you want to make a one-time payment or a recurring payment. Start with as little as 1 euro."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:230
+#: templates/savings-fund-landing-content.php:172
 msgid "You are then directed to your bank with a payment link."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:231
+#: templates/savings-fund-landing-content.php:173
 msgid "Pay for the units from your current account. We recommend using an account registered as an investment account."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:232
-msgid "You now own Tuleva Savings Fund units. You can see and sell your units by logging in to your Tuleva account."
+#: templates/savings-fund-landing-content.php:174
+msgid "You now own Tuleva Additional Investment Fund units. You can see and sell your units by logging in to your Tuleva account."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:234
+#: templates/savings-fund-landing-content.php:176
 msgid "Fund units cannot be bought or sold through other service providers, because that would create additional costs."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:236
+#: templates/savings-fund-landing-content.php:178
 #, php-format
 msgid "See also: %1$s and %2$s."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:237
+#: templates/savings-fund-landing-content.php:179
 msgid "how to open an account for a company"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:238
+#: templates/savings-fund-landing-content.php:180
 msgid "how to start saving for a child"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:243
+#: templates/savings-fund-landing-content.php:185
 msgid "Why use an investment account for contributions?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:245
-msgid "When investing as a private person, we recommend using an investment account to buy Savings Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account."
+#: templates/savings-fund-landing-content.php:187
+msgid "When investing as a private person, we recommend using an investment account to buy Additional Investment Fund units. This makes sense because it lets you defer your income tax liability until you sell your investments and take the money out of the investment account."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:246
-msgid "So if you don't have one yet, open an investment account at a bank and transfer the money meant for the Savings Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Savings Fund account. If at some point you want to sell Savings Fund units, the money should be paid back to the investment account."
+#: templates/savings-fund-landing-content.php:188
+msgid "So if you don't have one yet, open an investment account at a bank and transfer the money meant for the Additional Investment Fund there. You can also have several investment accounts. Then make a transfer from the investment account to the Tuleva Additional Investment Fund account. If at some point you want to sell Additional Investment Fund units, the money should be paid back to the investment account."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:247
-msgid "Read more: why and how to use an investment account with the Savings Fund?"
+#: templates/savings-fund-landing-content.php:189
+msgid "Read more: why and how to use an investment account with the Additional Investment Fund?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:251
+#: templates/savings-fund-landing-content.php:193
 msgid "How do I move my assets from elsewhere?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:253
+#: templates/savings-fund-landing-content.php:195
 msgid "Unlike pension funds, ordinary fund units and shares cannot be automatically \"transferred\" from another service provider to Tuleva. The most cost-efficient and fastest way is the following:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:255
+#: templates/savings-fund-landing-content.php:197
 msgid "Sell your existing assets: sell the positions at your service provider that you want to bring to Tuleva."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:256
+#: templates/savings-fund-landing-content.php:198
 msgid "Wait for the money to arrive: depending on the instrument, whether a fund or a stock, it usually takes 2–3 business days for the money to arrive."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:257
-msgid "Make a contribution to the Tuleva Savings Fund: once the money is in your account, log in to Tuleva and make a payment to the Savings Fund."
+#: templates/savings-fund-landing-content.php:199
+msgid "Make a contribution to the Tuleva Additional Investment Fund: once the money is in your account, log in to Tuleva and make a payment to the Additional Investment Fund."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:259
+#: templates/savings-fund-landing-content.php:201
 msgid "If you invest as a private person and use an investment account, selling your assets creates no immediate income tax liability: you can reinvest the whole amount, including the gains, tax-free. If you invest from an ordinary account, you have to pay income tax on the gains from selling your existing assets with your next tax return."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:260
-msgid "As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Savings Fund."
+#: templates/savings-fund-landing-content.php:202
+msgid "As an illustration, we have put together a guide for bringing assets held at Swedbank to Tuleva, that is, selling your existing assets and making a contribution to the fund. Broadly, the process is similar when selling assets at other service providers and making a contribution to the Tuleva Additional Investment Fund."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:261
+#: templates/savings-fund-landing-content.php:203
 msgid "When moving assets held by a company, the sale and purchase are recorded in the company's accounts. Taxes only arise once you sell the units and take the profit out of the company."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:265
+#: templates/savings-fund-landing-content.php:207
 msgid "How do you get your money out?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:267
-msgid "Unlike pension funds, the Tuleva Savings Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time."
+#: templates/savings-fund-landing-content.php:209
+msgid "Unlike pension funds, the Tuleva Additional Investment Fund is a UCITS fund. This means you have the right to sell your units back and withdraw your money at any time."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:268
-msgid "A sale order for Savings Fund units must be submitted through Tuleva's website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster."
+#: templates/savings-fund-landing-content.php:210
+msgid "A sale order for Additional Investment Fund units must be submitted through Tuleva's website. The money arrives in your bank account within three business days after the redemption price is published (T+3). Where possible, we make the payment faster."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:269
+#: templates/savings-fund-landing-content.php:211
 msgid "In more detail, the process works like this:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:271
+#: templates/savings-fund-landing-content.php:213
 msgid "Order timing:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:271
+#: templates/savings-fund-landing-content.php:213
 msgid "if you submit a sale order on a business day before 16:00, it is considered received the same day. If you submit an order after 16:00, on a weekend, or on a public holiday, it is considered received on the next business day."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:272
+#: templates/savings-fund-landing-content.php:214
 msgid "Payout speed:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:272
+#: templates/savings-fund-landing-content.php:214
 msgid "we make the payout within three business days after the redemption price is published. For example, if you submitted a sale order on the 1st at 14:00, we publish the redemption price on the 2nd at 16:00."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:273
+#: templates/savings-fund-landing-content.php:215
 msgid "We make the payout only to the account you have made a contribution from. This way we can be sure the account is yours."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:278
+#: templates/savings-fund-landing-content.php:220
 msgid "Does the fund pay dividends?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:280
+#: templates/savings-fund-landing-content.php:222
 msgid "No, the fund does not make cash payouts as dividends. Instead, we automatically reinvest the earned income inside the fund."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:281
+#: templates/savings-fund-landing-content.php:223
 msgid "This has two main benefits. First, reinvesting dividends helps grow the fund's assets and the value of your units over time. So although no regular payouts land on your account, you still earn additional income, which is reflected in a higher unit price. Second, income tax would have to be paid on dividends, which in turn would reduce your income."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:282
+#: templates/savings-fund-landing-content.php:224
 msgid "If you want to get money out, you can sell fund units and make a withdrawal at any time. See the question \"How do you get your money out?\" above."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:286
+#: templates/savings-fund-landing-content.php:228
 msgid "How does reporting for the tax return work?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:288
-msgid "If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Savings Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference."
+#: templates/savings-fund-landing-content.php:230
+msgid "If you invest as a private person and use an investment account, income tax declaration starts from the bank where you opened the investment account. You declare to the tax authority the difference between the money paid into the investment account and the money paid out of it. Contributions to Tuleva Additional Investment Fund units must be marked as neutral in the investment account declaration if you have not sold units during the current year, in which case they are not taken into account when calculating the difference."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:289
+#: templates/savings-fund-landing-content.php:231
 msgid "If you invest from an ordinary current account rather than an investment account, sell fund units, and have earned income, you must declare the earned income yourself to the Estonian Tax and Customs Board when filling in your tax return. Tuleva does not withhold income tax."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:293
+#: templates/savings-fund-landing-content.php:235
 msgid "What return can you expect from the fund?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:295
+#: templates/savings-fund-landing-content.php:237
 msgid "Tuleva's goal is to earn returns over the long term. We know that the value of assets invested in the fund can swing sharply from year to year, but without taking conscious risk it is not possible to earn a high return."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:296
+#: templates/savings-fund-landing-content.php:238
 msgid "Our fund tracks the world's stock markets, whose historical return over the last 100 years has been roughly 7% per year. Still, this is only a long-term average: history has shown both very big growth years and periods when markets have been in a deep slump."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:297
+#: templates/savings-fund-landing-content.php:239
 msgid "The average return so far is no guarantee. The coming years on the stock markets may not be like the previous ones. It is possible that the fund will instead make a loss in the coming years."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:301
+#: templates/savings-fund-landing-content.php:243
 msgid "How are investment risks managed?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:303
+#: templates/savings-fund-landing-content.php:245
 msgid "First, as with any investment, the value of your investments, in other words the return, is not guaranteed. When stock markets fall, the value of a fund unit falls too. This is a natural part of investing. The main rule is still: don't invest money in stocks or stock funds that you plan to take into use in the near future."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:304
+#: templates/savings-fund-landing-content.php:246
 msgid "Second, there is business risk: what if something happens to Tuleva? Under the Investment Funds Act, we hold the fund's assets, meaning the fund's securities and cash, in other words your investments, strictly separate from the assets of the fund manager, Tuleva. The fund's assets are held by the depositary, AS SEB Pank. This means that even if something were to happen to Tuleva, your assets are protected, because they are strictly separated from Tuleva's own."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:305
+#: templates/savings-fund-landing-content.php:247
 msgid "Third, we have been asked how it is ensured that we don't use your invested money in bad faith. The terms of Tuleva's funds set out precisely where the fund manager may put investors' money. The money may only be invested in the funds in the model portfolio. These funds must meet certain conditions, for example together tracking the MSCI ACWI index and being sufficiently liquid. This is why not even a fund manager with the worst intentions could move money \"aside\" at Tuleva."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:307
+#: templates/savings-fund-landing-content.php:249
 #, php-format
 msgid "We have also recorded %1$s about risks and diversification. You can read more in section 4.1 of the %2$s."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:308
+#: templates/savings-fund-landing-content.php:250
 msgid "a separate podcast episode"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:309
+#: templates/savings-fund-landing-content.php:251
 msgid "prospectus"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:314
+#: templates/savings-fund-landing-content.php:257
+msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:259
+msgid "For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV's Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:260
+msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:261
+msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:265
 msgid "For companies"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:317
-msgid "Can a company invest in the Savings Fund?"
+#: templates/savings-fund-landing-content.php:268
+msgid "Can a company invest in the Additional Investment Fund?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:319
+#: templates/savings-fund-landing-content.php:270
 msgid "Yes. From June 15, 2026, an Estonian-registered private limited company with up to two shareholders, whose shareholders are at the same time board members and beneficial owners, can also invest in the fund. The same fund and the same fee as for a private person."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:323
-msgid "How do I open a Savings Fund account for a company?"
+#: templates/savings-fund-landing-content.php:274
+msgid "How do I open an Additional Investment Fund account for a company?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:325
+#: templates/savings-fund-landing-content.php:276
 msgid "It works like this:"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:327
+#: templates/savings-fund-landing-content.php:278
 msgid "Log in to Tuleva's website. Fill in the questionnaire both about yourself and about the company. If the company has two shareholders, both must complete this step."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:328
+#: templates/savings-fund-landing-content.php:279
 msgid "You now have two profiles in Tuleva: one in your name and another in the company's name."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:329
+#: templates/savings-fund-landing-content.php:280
 msgid "Make the first contribution from the company's bank account. You can set up contributions and a recurring payment the same way as a private person."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:334
+#: templates/savings-fund-landing-content.php:285
 msgid "Do both shareholders have to take part in creating the account?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:336
+#: templates/savings-fund-landing-content.php:287
 msgid "Yes. If the company has two shareholders, you both have to go through verification, which means filling in a short questionnaire."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:340
+#: templates/savings-fund-landing-content.php:291
 msgid "What happens if the company's structure changes?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:342
+#: templates/savings-fund-landing-content.php:293
 msgid "If the company's structure no longer meets the conditions, for example a third shareholder joins, the company cannot acquire new fund units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:346
+#: templates/savings-fund-landing-content.php:297
 msgid "Do Tuleva members also earn a member bonus when investing through a company?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:348
-msgid "No, when investing in the Savings Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+#: templates/savings-fund-landing-content.php:299
+msgid "No, when investing in the Additional Investment Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:349
-msgid "If you are a member of the Tuleva cooperative and invest in the Savings Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+#: templates/savings-fund-landing-content.php:300
+msgid "If you are a member of the Tuleva cooperative and invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:366
-msgid "Podcast: the Savings Fund opens"
+#: templates/savings-fund-landing-content.php:317
+msgid "Podcast: the Additional Investment Fund opens"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:370
+#: templates/savings-fund-landing-content.php:321
 msgid "Fund terms, prospectus, and key information"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:374
-msgid "Blog posts about the Savings Fund"
+#: templates/savings-fund-landing-content.php:325
+msgid "Blog posts about the Additional Investment Fund"
 msgstr ""
 
 #: templates/single-content.php:49

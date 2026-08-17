@@ -1444,20 +1444,12 @@ msgid "Read more: 3 reasons to avoid child-labeled savings products"
 msgstr "Loe lähemalt: 3 põhjust, miks vältida lapse-sildiga kogumistooteid"
 
 #: templates/child-savings-content.php:181
-msgid "How do contributions work?"
-msgstr "Kuidas sissemaksed käivad?"
+msgid "How do I make contributions?"
+msgstr "Kuidas teha sissemakseid?"
 
 #: templates/child-savings-content.php:183
-msgid "Contributions to your child's Additional Investment Fund account can only be made from the child's own bank account. Transfer money to your child's bank account and make the transfer to the fund from there. This way your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
-msgstr "Sissemakseid lapse Täiendava Kogumisfondi kontole saab teha ainult lapse enda pangakontolt. Kanna raha lapse pangakontole ja tee sealt ülekanne fondi. Nii tekib lapsel osakute soetusmaksumus ja tulevikus maksustatakse müügil ainult kasum, mitte kogu summa."
-
-#: templates/child-savings-content.php:184
-msgid "If your child doesn't have a bank account yet, you can open one in their name at any Estonian bank."
-msgstr "Kui lapsel veel pangakontot pole, saad selle tema nimele avada igas Eesti pangas."
-
-#: templates/child-savings-content.php:186
-msgid "From this autumn, gifts can also be made straight to your child's savings fund account."
-msgstr "Sügisest saab kinkida ka otse lapse kogumisfondi kontole."
+msgid "You can make contributions to your child's savings fund account both from your own bank account and from the child's. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
+msgstr "Sissemakseid lapse kogumisfondi kontole saad teha nii enda kui lapse kontolt. Oleme kinnitanud Maksu- ja Tolliametiga üle, et mõlemal juhul tekib lapsel osakute soetusmaksumus ja tulevikus maksustatakse müügil ainult kasum, mitte kogu summa."
 
 #: templates/child-savings-content.php:190
 msgid "How do withdrawals work?"
@@ -1481,20 +1473,32 @@ msgid "We wrote about it on the blog →"
 msgstr "Kirjutasime sellest blogis →"
 
 #: templates/child-savings-content.php:201
-msgid "Does the tax return mean extra work?"
-msgstr "Kas tuludeklaratsiooniga kaasneb lisatöö?"
+msgid "Do I have to file a tax return in my child's name?"
+msgstr "Kas pean tegema lapse nimel tuludeklaratsiooni?"
 
 #: templates/child-savings-content.php:203
-msgid "Yes, a little. If your child's units are sold and taxable income arises, a tax return has to be filed in their name. Saving in the parent's name, there would be no such extra work."
-msgstr "Jah, natuke. Kui lapse osakuid müüakse ja tekib maksustatav tulu, tuleb tema nimel esitada tuludeklaratsioon. Vanema nimel kogudes seda lisatööd ei oleks."
+msgid "It depends on whether you make contributions from a regular bank account or through an investment account."
+msgstr "See sõltub sellest, kas teed sissemakseid tavakontolt või investeerimiskonto kaudu."
 
-#: templates/child-savings-content.php:207
-msgid "Can both parents manage the account?"
-msgstr "Kas mõlemad vanemad saavad kontot hallata?"
+#: templates/child-savings-content.php:204
+msgid "<b>Making contributions from a regular bank account</b>, you don't need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child's name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all."
+msgstr "<b>Tehes sissemakseid tavakontolt</b> ei pea avama lapsele eraldi investeerimiskontot ega täitma igal kevadel lapse deklaratsiooni. Tuludeklaratsioon tuleb lapse nimel esitada alles siis, kui osakud müüakse kasumiga. Maksustatakse ainult kasum ja laps saab kasutada oma maksuvaba tulu, mis on täna 8400 € aastas. Müües osakuid hajutatult mitme aasta peale, ei pruugi tulumaksu üldse tekkida."
 
-#: templates/child-savings-content.php:209
-msgid "The account can be opened by either parent who has custody over the child's assets, and they act independently as the child's representative. We notify the other parent when the account is opened. The option for both parents to see the account and make transactions is coming later."
-msgstr "Konto saab avada kumbki vanem, kellel on lapse varahooldusõigus, ja ta tegutseb lapse esindajana iseseisvalt. Teisele vanemale saadame konto avamise kohta teate. Võimaluse, et mõlemad vanemad näevad kontot ja teevad tehinguid, lisame edaspidi."
+#: templates/child-savings-content.php:205
+msgid "<b>Making contributions from an investment account</b>, a tax return has to be filed in the child's name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven't sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you."
+msgstr "<b>Tehes sissemakseid investeerimiskontolt</b> tuleb lapse nimel esitada deklaratsioon igal kevadel. Deklareerid investeerimiskontole sissemakstud ja sealt väljamakstud raha vahe. Sissemaksed kogumisfondi märgid neutraalseks, kui sa pole samal aastal osakuid müünud. Kuna fond alustas 2026. aastal, tuleb esimene deklaratsioon esitada 2027. aasta kevadel – selleks ajaks teeme juhised, mis muudavad selle sulle võimalikult lihtsaks."
+
+#: templates/child-savings-content.php:206
+msgid "Read on the blog which approach suits your family →"
+msgstr "Kumb lähenemine sinu perele sobib, loe blogist →"
+
+#: templates/child-savings-content.php:212
+msgid "My child already has a third pillar with Tuleva. What should I do now?"
+msgstr "Lapsel on juba Tulevas III&nbsp;sammas. Mida nüüd teha?"
+
+#: templates/child-savings-content.php:214
+msgid "A child's third pillar doesn't give an income tax refund, because a child generally doesn't earn enough income. That's why it's worth directing new contributions to your child's Additional Investment Fund; what's already saved keeps growing in the third pillar."
+msgstr "Lapse III&nbsp;sammas ei anna tulumaksutagastust, sest laps ei teeni üldiselt piisavalt tulu. Seepärast tasub uued sissemaksed suunata lapse Täiendavasse Kogumisfondi, seni kogutu kasvab III&nbsp;sambas edasi."
 
 #: templates/child-savings-content.php:222 templates/savings-fund-landing-content.php:362
 msgid "Learn more"
@@ -1554,8 +1558,8 @@ msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tulevik
 msgstr "Swedbanki lapsetooted (Koolifond ja selle järglane Lapse Tuleviku fond) põimivad investeerimise ja kindlustuse. Selliste toodete kogutasu jääb hinnanguliselt 1,5% kanti aastas ja täpne summa sõltub lepingust. Tuleva fond on mõeldud ainult investeerimiseks – kui kindlustust vajad, on see eraldi ost."
 
 #: templates/child-savings-content.php:185
-msgid "A grandparent or another close person can also give your child a gift. The simplest way is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent."
-msgstr "Ka vanavanem või muu lähedane saab lapsele kinkida. Kõige lihtsam on, kui ta kingib raha sulle ja sina kannad selle lapse kontole ning sealt fondi. Kui kingitus laekub otse lapse kontole, vajab selle investeerimine seaduse järgi kohtu nõusolekut – seepärast soovitamegi kinkida vanema kaudu."
+msgid "If a grandparent or another close person wants to make a contribution to your child's account, the simplest way for now is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child's savings fund account."
+msgstr "Kui vanavanem või muu lähedane soovib lapse kontole sissemakse teha, on hetkel kõige lihtsam, kui ta kingib raha sulle ja sina kannad selle lapse kontole ning sealt fondi. Kui kingitus laekub otse lapse kontole, vajab selle investeerimine seaduse järgi kohtu nõusolekut – seepärast soovitamegi kinkida vanema kaudu. Töötame veel lahenduse kallal, et lähedased saaksid otse kogumisfondi kontole kingitusi teha."
 
 #: templates/child-savings-content.php:26
 msgid "Contribution"
@@ -1576,10 +1580,6 @@ msgstr "Mis on kummagi variandi plussid ja miinused."
 #: templates/child-savings-content.php:45
 msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
 msgstr "Arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul vanuses 18​–​21, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu. Praegu on see 8400 € aastas, kui lapsel muud tulu pole. See summa on seadusega määratud ja muutub aastate jooksul."
-
-#: templates/child-savings-content.php:140
-msgid "The calculator's result is illustrative: income tax is charged only on earned gains, not on contributions. The tax win calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year, provided they have no other income. The calculation uses today's rates: income tax of 22% and tax-free income of 8,400 € per year. Tax rules will change over the years. No Tuleva fund has a guaranteed return."
-msgstr "Kalkulaatori tulemus on illustratiivne: tulumaksu arvestatakse ainult teenitud tulult, mitte sissemaksetelt. Maksuvõidu arvestus eeldab, et laps müüb osakud järk-järgult 4 aasta jooksul vanuses 18​–​21, mitte kõik korraga, ja kasutab igal aastal oma maksuvaba tulu, kui tal muud tulu pole. Arvutus kasutab tänaseid määrasid: tulumaks 22% ja maksuvaba tulu 8400 € aastas. Maksureeglid aastate jooksul muutuvad. Üheski Tuleva fondis pole tootlus garanteeritud."
 
 #. Template Name of the theme
 msgid "Savings fund landing page"
