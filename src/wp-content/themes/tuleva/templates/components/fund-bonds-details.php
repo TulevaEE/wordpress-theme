@@ -67,6 +67,10 @@
                             </li>
                             <li>
                                 <a href="<?php echo get_nav_procedure_document_url(); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <?php if (get_nav_procedure_upcoming_document_url()): ?>
+                                    <br>
+                                    <a href="<?php echo get_nav_procedure_upcoming_document_url(); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), get_nav_procedure_upcoming_effective_date()); ?>
+                                <?php endif; ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_esg_document_url(); ?>" target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>

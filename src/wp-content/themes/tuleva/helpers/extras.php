@@ -428,6 +428,17 @@ function get_nav_procedure_document_url() {
     return get_site_url() . $nav_procedure_document_path;
 }
 
+// Upcoming pension fund NAV procedure. After the effective date, blank out $path to hide the upcoming row.
+function get_nav_procedure_upcoming_document_url() {
+    $path = '/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
+
+    return $path ? (get_site_url() . $path) : '';
+}
+
+function get_nav_procedure_upcoming_effective_date() {
+    return '18.09.2026';
+}
+
 function get_esg_factors_document_url() {
     $esg_factors_document_path = '/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026-1.pdf';
 
