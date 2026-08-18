@@ -343,28 +343,31 @@ function get_investor_count()
         return $cached > 0 ? $cached : get_last_good_investor_count();
     }
 
-    $context = stream_context_create(
-        [
-            'http' => [
-                'method' => 'GET',
-                'timeout' => 1,
-            ]
-        ]
-    );
-    $json = @file_get_contents(
+    // Timeout bounds the whole request, DNS lookup included.
+    $response = wp_remote_get(
         'https://onboarding-service.tuleva.ee/v1/statistics/investor-count',
-        false,
-        $context
+        ['timeout' => 1]
     );
-    $data = json_decode($json, true);
-    // is_numeric, so that a malformed "70000abc" is rejected rather than cast to 70000.
-    $count = isset($data['count']) && is_numeric($data['count']) ? (int) $data['count'] : 0;
+
+    $count = 0;
+    if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
+        $data = json_decode(wp_remote_retrieve_body($response), true);
+        // is_numeric, so that a malformed "70000abc" is rejected rather than cast to 70000.
+        if (isset($data['count']) && is_numeric($data['count'])) {
+            $count = (int) $data['count'];
+        }
+    }
 
     // Mirrors the sanity bounds the endpoint already applies in SQL.
     if ($count < 50000 || $count > 500000) {
         // Unreachable, malformed or implausible. Cache the failure briefly so an
         // outage costs one slow request per five minutes, not one per visitor.
         set_transient('tuleva_investor_count', 0, 5 * MINUTE_IN_SECONDS);
+
+        $reason = is_wp_error($response)
+            ? $response->get_error_message()
+            : 'HTTP ' . wp_remote_retrieve_response_code($response) . ', count ' . $count;
+        error_log('Tuleva investor count unavailable (' . $reason . '), using the last good value.');
 
         return get_last_good_investor_count();
     }
