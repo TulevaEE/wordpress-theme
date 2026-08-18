@@ -29,7 +29,16 @@ $model_portfolio_url = get_field('model_portfolio_file');
 $key_investor_info_url = get_field('key_investor_info_file');
 $investment_report_url = get_field('investment_report_file');
 $previous_reports_url = get_field('previous_reports_url');
-$nav_procedure_url = get_field('nav_procedure_file');
+// TKF100 has its own NAV procedure document (separate from pension funds).
+// Code URL is source of truth; the ACF field acts as an optional override.
+// After the upcoming effective date, blank out $code_nav_procedure_upcoming_url to hide the upcoming row.
+$code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Fondi-vara-puhasvaartuse-maaramise-sisekord.pdf';
+$code_nav_procedure_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
+$nav_procedure_upcoming_effective_date = '18.09.2026';
+
+$nav_procedure_url = get_field('nav_procedure_file') ?: $code_nav_procedure_url;
+$nav_procedure_upcoming_acf = get_field('nav_procedure_upcoming_file');
+$nav_procedure_upcoming_url = ($nav_procedure_upcoming_acf && !empty($nav_procedure_upcoming_acf['url'])) ? $nav_procedure_upcoming_acf['url'] : $code_nav_procedure_upcoming_url;
 $investor_rights_url = get_field('investor_rights_file');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
@@ -145,9 +154,15 @@ $investor_rights_url = get_field('investor_rights_file');
                                 </li>
                             <?php endif; ?>
                             <li>
-                                <a href="<?php echo esc_url($nav_procedure_url ?: get_nav_procedure_document_url()); ?>"
+                                <a href="<?php echo esc_url($nav_procedure_url); ?>"
                                    target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <?php if ($nav_procedure_upcoming_url): ?>
+                                    <br>
+                                    <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
+                                       target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
+                                    <?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), $nav_procedure_upcoming_effective_date); ?>
+                                <?php endif; ?>
                             </li>
                             <li>
                                 <a href="<?php echo get_esg_document_url(); ?>"
