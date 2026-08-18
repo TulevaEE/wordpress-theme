@@ -4,11 +4,6 @@ $image = get_sub_field('image');
 $image_url = wp_get_attachment_image_url($image['ID'], 'large');
 $image_srcset = wp_get_attachment_image_srcset($image['ID'],'large');
 $button_color_class = get_component_button_color_class();
-$members_count = get_field('members_count', 'option');
-$members_count_description = get_sub_field('members_count_description');
-$security_text = get_sub_field('security_text');
-$security_link_text = get_sub_field('security_link_text');
-$security_link_url = get_sub_field('security_link_url');
 $shortcode = get_sub_field('shortcode');
 $lead_text = get_sub_field('lead_text');
 ?>
