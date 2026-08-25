@@ -33,7 +33,7 @@ $previous_reports_url = get_field('previous_reports_url');
 // Code URL is source of truth; the ACF field acts as an optional override.
 // After the upcoming effective date, blank out $code_nav_procedure_upcoming_url to hide the upcoming row.
 $code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Fondi-vara-puhasvaartuse-maaramise-sisekord.pdf';
-$code_nav_procedure_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026-1.pdf';
+$code_nav_procedure_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
 $nav_procedure_upcoming_effective_date = '18.09.2026';
 
 $nav_procedure_url = get_field('nav_procedure_file') ?: $code_nav_procedure_url;
