@@ -15,7 +15,7 @@ $fund_co2_intensity = get_field('fund_co2_intensity');
 // After the upcoming effective date, blank out the $code_..._upcoming_url values to hide the upcoming section.
 $code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Prospekt-kehtib-alates-15.06.2026.pdf';
 $code_terms_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Tingimused-kehtib-alates-15.06.2026.pdf';
-$code_prospectus_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-kehtib-alates-18.09.2026.pdf';
+$code_prospectus_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
 $code_terms_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
 $upcoming_effective_date = '18.09.2026';
 
