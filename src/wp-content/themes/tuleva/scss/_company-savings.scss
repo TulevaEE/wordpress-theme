@@ -1,0 +1,82 @@
+// Company savings landing page (page_company-savings.php)
+//
+// The page carries .savings-fund-landing-page as well, so it inherits the
+// Additional Investment Fund landing look. Only the differences live here,
+// and this file is imported after that one so these rules win.
+
+.company-savings-page {
+
+    // A photographed hero rather than the flat gradient, washed with the same
+    // pale blue so the navy text still reads over it.
+    .hero {
+        background-image:
+            linear-gradient(180deg, rgba(232, 244, 255, .72), rgba(232, 244, 255, .86)),
+            url('../img/field-toned.jpg');
+        background-size: cover;
+        background-position: 50% 34%;
+        background-color: #e8f4ff;
+    }
+
+    // The headline shares the hero row with the calculator card, so it runs
+    // one step smaller than on the full-width fund landing page.
+    h1 {
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        line-height: 1.18;
+    }
+
+    // A plain letter-spaced label, not the pill the fund landing page uses
+    .hero .eyebrow {
+        margin-bottom: 1.1rem;
+        padding: 0;
+        background: none;
+        border: 0;
+        border-radius: 0;
+        color: $blue;
+        font-size: .82rem;
+        font-weight: $font-weight-bold;
+        letter-spacing: .09em;
+    }
+
+    // Label left, amount right, matching the child savings .calc-total row.
+    // On a phone the label wraps to two lines, so centre rather than baseline.
+    .calc-result {
+        gap: 1rem;
+
+        span {
+            color: $navy-blue;
+            font-size: 1.15rem;
+            font-weight: $font-weight-medium;
+            line-height: 1.4;
+        }
+
+        .calc-sum {
+            font-size: 1.7rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.2;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+    }
+
+    .calc-fine {
+        color: $text-secondary;
+        font-size: .85rem;
+        line-height: 1.45;
+    }
+
+    .calc-note {
+        max-width: 30rem;
+        margin: 1rem auto 0;
+        color: $text-secondary;
+        font-size: .85rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    // Side by side, the link is pinned to the bottom so "Read more" and
+    // "Listen" sit on one line even when the teasers wrap differently
+    .resource--post .post-more {
+        margin-top: auto;
+        padding-top: .2rem;
+    }
+}
