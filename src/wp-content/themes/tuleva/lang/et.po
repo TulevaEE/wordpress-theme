@@ -2152,7 +2152,7 @@ msgstr "osaühingule"
 
 #: templates/company-savings-content.php:8
 msgid "Now your company can save in Tuleva too"
-msgstr "Nüüd saab ka sinu osaühing koguda Tulevas"
+msgstr "Nüüd saab ka sinu osaühing Tulevas koguda"
 
 #: templates/company-savings-content.php:9
 msgid "Put your company's idle cash to work."
@@ -2167,16 +2167,12 @@ msgid "I add every month"
 msgstr "Lisan iga kuu"
 
 #: templates/company-savings-content.php:48
-msgid "Your company has in 20 years"
-msgstr "Osaühingul 20&nbsp;aasta&nbsp;pärast"
+msgid "In 20 years"
+msgstr "20&nbsp;aasta&nbsp;pärast"
 
-#: templates/company-savings-content.php:51 templates/company-savings-content.php:125
-msgid "Open a company account"
-msgstr "Avan osaühingu konto"
-
-#: templates/company-savings-content.php:56
-msgid "Share prices can rise and fall over time. Returns are not guaranteed."
-msgstr "Aktsiate hinnad võivad ajas kasvada ja kahaneda. Tootlus ei ole garanteeritud."
+#: templates/company-savings-content.php:51 templates/company-savings-content.php:124
+msgid "Open an account"
+msgstr "Avan konto"
 
 #: templates/company-savings-content.php:67
 msgid "Why invest through Tuleva?"

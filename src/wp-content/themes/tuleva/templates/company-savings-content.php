@@ -28,7 +28,7 @@
                                     <div class="col-sm-6">
                                         <div class="input-group">
                                             <input class="form-control text-end" type="number" id="calcMonthly" min="0" max="100000" step="10" value="200" inputmode="numeric">
-                                            <span class="input-group-text"><?php _e('&euro;/month', TEXT_DOMAIN); ?></span>
+                                            <span class="input-group-text">&euro;</span>
                                         </div>
                                     </div>
                                 </div>
@@ -45,15 +45,14 @@
 
                             <div class="px-3 pt-4 pb-3">
                                 <div class="d-flex justify-content-between align-items-center align-items-sm-baseline calc-result">
-                                    <span><?php _e('Your company has in 20 years', TEXT_DOMAIN); ?></span>
+                                    <span><?php _e('In 20 years', TEXT_DOMAIN); ?></span>
                                     <span class="calc-sum" id="resTotal" role="status" aria-live="polite">53&nbsp;000&nbsp;&euro;</span>
                                 </div>
-                                <a href="<?php echo get_app_url('/savings-fund/onboarding'); ?>" class="btn btn-primary btn-lg w-100 mt-3"><?php _e('Open a company account', TEXT_DOMAIN); ?></a>
+                                <a href="<?php echo get_app_url('/savings-fund/onboarding/company'); ?>" class="btn btn-primary btn-lg w-100 mt-3"><?php _e('Open an account', TEXT_DOMAIN); ?></a>
                                 <p class="calc-fine mt-3 mb-0 text-center"><?php _e('Opening an account is free and takes only a few minutes.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
-                    <p class="calc-note"><?php _e('Share prices can rise and fall over time. Returns are not guaranteed.', TEXT_DOMAIN); ?></p>
                 </div>
 
             </div>
@@ -122,7 +121,7 @@
                     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
                         <h2><?php _e('Start today', TEXT_DOMAIN); ?></h2>
                         <p class="lead mx-auto"><?php _e('Open an account in just a couple of minutes and put your company\'s idle cash to work.', TEXT_DOMAIN); ?></p>
-                        <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open a company account', TEXT_DOMAIN); ?></a></p>
+                        <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding/company'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open an account', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>200</strong> companies already save in Tuleva', TEXT_DOMAIN); ?></span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>

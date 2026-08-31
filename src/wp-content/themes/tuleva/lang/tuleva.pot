@@ -2267,16 +2267,12 @@ msgid "I add every month"
 msgstr ""
 
 #: templates/company-savings-content.php:48
-msgid "Your company has in 20 years"
+msgid "In 20 years"
 msgstr ""
 
 #: templates/company-savings-content.php:51
-#: templates/company-savings-content.php:125
-msgid "Open a company account"
-msgstr ""
-
-#: templates/company-savings-content.php:56
-msgid "Share prices can rise and fall over time. Returns are not guaranteed."
+#: templates/company-savings-content.php:124
+msgid "Open an account"
 msgstr ""
 
 #: templates/company-savings-content.php:67
