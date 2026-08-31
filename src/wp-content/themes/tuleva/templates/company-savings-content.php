@@ -17,7 +17,7 @@
                                     <label class="col-sm-6 col-form-label pe-0" for="calcAmount"><?php _e('Company\'s idle cash', TEXT_DOMAIN); ?></label>
                                     <div class="col-sm-6">
                                         <div class="input-group">
-                                            <input class="form-control text-end" type="number" id="calcAmount" min="0" max="1000000" step="100" value="20000" inputmode="numeric">
+                                            <input class="form-control text-end" type="number" id="calcAmount" min="0" max="1000000" step="100" value="5000" inputmode="numeric">
                                             <span class="input-group-text">&euro;</span>
                                         </div>
                                     </div>
@@ -45,8 +45,8 @@
 
                             <div class="px-3 pt-4 pb-3">
                                 <div class="d-flex justify-content-between align-items-center align-items-sm-baseline calc-result">
-                                    <span><?php _e('Your company has in 10 years', TEXT_DOMAIN); ?></span>
-                                    <span class="calc-sum" id="resTotal" role="status" aria-live="polite">44&nbsp;000&nbsp;&euro;</span>
+                                    <span><?php _e('Your company has in 20 years', TEXT_DOMAIN); ?></span>
+                                    <span class="calc-sum" id="resTotal" role="status" aria-live="polite">53&nbsp;000&nbsp;&euro;</span>
                                 </div>
                                 <a href="<?php echo get_app_url('/savings-fund/onboarding'); ?>" class="btn btn-primary btn-lg w-100 mt-3"><?php _e('Open a company account', TEXT_DOMAIN); ?></a>
                                 <p class="calc-fine mt-3 mb-0 text-center"><?php _e('Opening an account is free and takes only a few minutes.', TEXT_DOMAIN); ?></p>

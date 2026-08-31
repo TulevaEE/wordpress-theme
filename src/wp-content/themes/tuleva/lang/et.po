@@ -2167,8 +2167,8 @@ msgid "I add every month"
 msgstr "Lisan iga kuu"
 
 #: templates/company-savings-content.php:48
-msgid "Your company has in 10 years"
-msgstr "Osaühingul 10&nbsp;aasta&nbsp;pärast"
+msgid "Your company has in 20 years"
+msgstr "Osaühingul 20&nbsp;aasta&nbsp;pärast"
 
 #: templates/company-savings-content.php:51 templates/company-savings-content.php:125
 msgid "Open a company account"
