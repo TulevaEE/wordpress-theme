@@ -4,7 +4,7 @@
  * after PROJECTION_YEARS years in the Additional Investment Fund.
  */
 
-var PROJECTION_YEARS = 10;
+var PROJECTION_YEARS = 20;
 var PROJECTION_MONTHS = PROJECTION_YEARS * 12;
 
 /**
