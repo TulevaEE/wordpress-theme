@@ -2241,3 +2241,188 @@ msgstr ""
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
 msgstr ""
+
+#. Template Name of the theme
+msgid "Company savings page"
+msgstr ""
+
+#: templates/company-savings-content.php:7
+msgid "for your company"
+msgstr ""
+
+#: templates/company-savings-content.php:8
+msgid "Now your company can save in Tuleva too"
+msgstr ""
+
+#: templates/company-savings-content.php:9
+msgid "Put your company's idle cash to work."
+msgstr ""
+
+#: templates/company-savings-content.php:17
+msgid "Company's idle cash"
+msgstr ""
+
+#: templates/company-savings-content.php:27
+msgid "I add every month"
+msgstr ""
+
+#: templates/company-savings-content.php:48
+msgid "Your company has in 10 years"
+msgstr ""
+
+#: templates/company-savings-content.php:51
+#: templates/company-savings-content.php:125
+msgid "Open a company account"
+msgstr ""
+
+#: templates/company-savings-content.php:56
+msgid "Share prices can rise and fall over time. Returns are not guaranteed."
+msgstr ""
+
+#: templates/company-savings-content.php:67
+msgid "Why invest through Tuleva?"
+msgstr ""
+
+#: templates/company-savings-content.php:73
+msgid "A low fee"
+msgstr ""
+
+#: templates/company-savings-content.php:74
+msgid "A fund fee of 0.28% a year, with no purchase, sale or other extra fees."
+msgstr ""
+
+#: templates/company-savings-content.php:80
+msgid "No LEI code needed"
+msgstr ""
+
+#: templates/company-savings-content.php:81
+msgid "You buy units directly from the fund manager and save 50-100 euros a year."
+msgstr ""
+
+#: templates/company-savings-content.php:87
+msgid "Tuleva belongs to its savers"
+msgstr ""
+
+#: templates/company-savings-content.php:88
+msgid "The more of us who save together, the lower we can push the fees."
+msgstr ""
+
+#: templates/company-savings-content.php:100
+msgid "How to start"
+msgstr ""
+
+#: templates/company-savings-content.php:102
+msgid "Log in and choose \"For a company\""
+msgstr ""
+
+#: templates/company-savings-content.php:106
+msgid "Fill in the questionnaire"
+msgstr ""
+
+#: templates/company-savings-content.php:108
+msgid "If the company has two shareholders, both of them have to verify themselves."
+msgstr ""
+
+#: templates/company-savings-content.php:112
+msgid "Start with as little as 1 euro."
+msgstr ""
+
+#: templates/company-savings-content.php:124
+msgid "Open an account in just a couple of minutes and put your company's idle cash to work."
+msgstr ""
+
+#: templates/company-savings-content.php:127
+msgid "More than <strong>200</strong> companies already save in Tuleva"
+msgstr ""
+
+#: templates/company-savings-content.php:143
+msgid "Can my company invest?"
+msgstr ""
+
+#: templates/company-savings-content.php:145
+msgid "Under the fund rules, units can be acquired by a private limited company registered in Estonia that has up to two shareholders who are Estonian citizens or residents, and whose shareholders are at the same time also members of the company's management board and its beneficial owners."
+msgstr ""
+
+#: templates/company-savings-content.php:146
+msgid "When you join, you will see straight away whether your company is eligible."
+msgstr ""
+
+#: templates/company-savings-content.php:151
+msgid "Should I invest through my company or as a private person?"
+msgstr ""
+
+#: templates/company-savings-content.php:153
+msgid "Look at where your income arrives. If the income arrives in the company, invest through the company. If it arrives in your personal account, investing as a private person through an investment account is simpler. In terms of taxes there is usually no great difference, so do not create a company just for investing."
+msgstr ""
+
+#: templates/company-savings-content.php:158
+msgid "How do I account for this in bookkeeping?"
+msgstr ""
+
+#: templates/company-savings-content.php:160
+msgid "The fund does not pay out dividends, so there is usually nothing to declare on an ongoing basis. The units are recorded as a financial investment, and your accountant decides the exact treatment."
+msgstr ""
+
+#: templates/company-savings-content.php:161
+msgid "We make reporting easy: you get the information needed for the annual report (the acquisition cost of the units and their value on the balance sheet date) from Tuleva in ready-made form."
+msgstr ""
+
+#: templates/company-savings-content.php:166
+msgid "How quickly can I sell the units?"
+msgstr ""
+
+#: templates/company-savings-content.php:168
+msgid "You can sell units at any time and the money arrives in the company's account within three business days."
+msgstr ""
+
+#: templates/company-savings-content.php:175
+msgid "If the company no longer meets the conditions (for example a third shareholder joins), the company cannot acquire further units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
+msgstr ""
+
+#: templates/company-savings-content.php:180
+msgid "Do Tuleva members earn the member bonus when investing through a company?"
+msgstr ""
+
+#: templates/company-savings-content.php:182
+msgid "No. When investing in the Additional Investment Fund through a company, the company cannot earn the member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+msgstr ""
+
+#: templates/company-savings-content.php:183
+msgid "If you are a member of the Tuleva cooperative and you invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgstr ""
+
+#: templates/company-savings-content.php:198
+msgid "https://tuleva.ee/taiendav-kogumisfond/kas-investeerida-oma-ou-kaudu-kellele-see-sobib-ja-kellele-mitte/"
+msgstr ""
+
+#: templates/company-savings-content.php:199
+msgid "Should you invest through your own company?"
+msgstr ""
+
+#: templates/company-savings-content.php:200
+msgid "Who it suits and who it does not."
+msgstr ""
+
+#: templates/company-savings-content.php:203
+msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgstr ""
+
+#: templates/company-savings-content.php:204
+msgid "Podcast about companies"
+msgstr ""
+
+#: templates/company-savings-content.php:205
+msgid "How saving through a company works."
+msgstr ""
+
+#: templates/company-savings-content.php:206
+msgid "Listen →"
+msgstr ""
+
+#: templates/company-savings-content.php:210
+msgid "https://tuleva.ee/taiendav-kogumisfond/"
+msgstr ""
+
+#: templates/company-savings-content.php:211
+msgid "https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"
+msgstr ""

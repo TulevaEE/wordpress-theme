@@ -35,6 +35,8 @@ const updateEnqueueVersion = async function (name) {
     const jsEnqueueRegex = /\$JS_ENQUEUE_VERSION.+\n/;
     const cssEnqueueRegex = /\$CSS_ENQUEUE_VERSION.+\n/;
     const calculatorEnqueueRegex = /\$CALCULATOR_JS_ENQUEUE_VERSION.+\n/;
+    const childSavingsEnqueueRegex = /\$CHILD_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
+    const companySavingsEnqueueRegex = /\$COMPANY_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
 
     const getDateString = () => new Date().toISOString().split("T")[0];
 
@@ -64,6 +66,18 @@ const updateEnqueueVersion = async function (name) {
             calculatorEnqueueRegex,
             `$CALCULATOR_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/calculator.js"
+            )}";\n`
+        )
+        .replace(
+            childSavingsEnqueueRegex,
+            `$CHILD_SAVINGS_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/child-savings-calculator.js"
+            )}";\n`
+        )
+        .replace(
+            companySavingsEnqueueRegex,
+            `$COMPANY_SAVINGS_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/company-savings-calculator.js"
             )}";\n`
         );
 

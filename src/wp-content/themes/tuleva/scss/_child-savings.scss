@@ -189,17 +189,4 @@
         margin-top: 2rem;
     }
 
-    .resource-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .7rem;
-        margin: 1.8rem 0 0;
-
-        a {
-            font-size: .95rem;
-            font-weight: $font-weight-medium;
-            line-height: 1.4;
-        }
-    }
 }

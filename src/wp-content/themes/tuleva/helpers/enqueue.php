@@ -141,6 +141,19 @@ class ThemeEnqueue
                 ]
             );
         }
+        if (is_page_template('page_company-savings.php')) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'company-savings-calculator',
+                    'src' => $js_path . 'company-savings-calculator.js',
+                    'deps' => 'bootstrap',
+                    'ver' => $COMPANY_SAVINGS_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
 
         /* Get file that contains SimplyEnqueue class */
         require_once(get_template_directory() . '/lib/enqueue.php');
