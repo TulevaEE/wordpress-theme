@@ -2422,3 +2422,83 @@ msgstr ""
 #: templates/company-savings-content.php:211
 msgid "https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"
 msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Where is my child's money invested?"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "In stock markets across the whole world. For every euro we buy shares in close to 2,500 of the world's largest listed companies. The fund follows the MSCI ACWI index, which covers both developed and emerging markets. A sustainability filter leaves out a couple of hundred companies that comply least with ESG rules."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "We don't pick individual stocks and we don't try to time the market. We invest on the same principle in Tuleva's second and third pillar equity funds."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "The fund pays no dividends. It reinvests what it earns, so the money has longer to grow and there is no tax to pay in the meantime."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "What return can I expect?"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Nobody knows in advance. We don't try to outsmart the market. Our aim is to earn the average return of the world's stock markets at the lowest possible cost."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Over the past hundred years, world stock markets have returned roughly 7% per year. That is a long-term average, not a promise. There have been very strong years, and there have been periods when markets fell for years on end. The fund can also make a loss in some years."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "When you save for a child, time is on your side. The longer you invest, the more single bad years even out in the average. A child's horizon is usually decades long."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "We don't show the fund's own return on this page yet. The fund's history is too short for that, and a few months' numbers would confuse more than they explain. %s"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "You can find the unit price history on the fund's documents page →"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Returns are not guaranteed. The value of an investment can both rise and fall."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "How much does saving cost and what amount can I start with?"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "The fund's ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "How can the other parent view and manage the child's account?"
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Both parents' right of representation lasts until the child's 18th birthday."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child's account."
+msgstr ""
+
+#: templates/child-savings-content.php
+msgid "Read more: where the Additional Investment Fund invests →"
+msgstr ""

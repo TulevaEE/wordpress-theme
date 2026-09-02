@@ -160,15 +160,36 @@
                                 ); ?></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-2">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-2"><?php _e('What happens if my child withdraws all the money at 18?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-2" class="collapse">
-                                <p><?php _e('At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won\'t come as a surprise at 18.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('Experience elsewhere shows the same: data on the UK\'s similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026).', TEXT_DOMAIN); ?></p>
+                        <div class="qa__question-wrapper" id="kkk-9">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('Where is my child\'s money invested?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-9" class="collapse">
+                                <p><?php _e('In stock markets across the whole world. For every euro we buy shares in close to 2,500 of the world\'s largest listed companies. The fund follows the MSCI ACWI index, which covers both developed and emerging markets. A sustainability filter leaves out a couple of hundred companies that comply least with ESG rules.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('We don\'t pick individual stocks and we don\'t try to time the market. We invest on the same principle in Tuleva\'s second and third pillar equity funds.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('The fund pays no dividends. It reinvests what it earns, so the money has longer to grow and there is no tax to pay in the meantime.', TEXT_DOMAIN); ?></p>
+                                <p><a href="https://tuleva.ee/analuusid/kuhu-tuleva-taiendav-kogumisfond-investeerib/"><?php _e('Read more: where the Additional Investment Fund invests →', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-3">
+                        <div class="qa__question-wrapper" id="kkk-10">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-10"><?php _e('What return can I expect?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-10" class="collapse">
+                                <p><?php _e('Nobody knows in advance. We don\'t try to outsmart the market. Our aim is to earn the average return of the world\'s stock markets at the lowest possible cost.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Over the past hundred years, world stock markets have returned roughly 7% per year. That is a long-term average, not a promise. There have been very strong years, and there have been periods when markets fell for years on end. The fund can also make a loss in some years.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('When you save for a child, time is on your side. The longer you invest, the more single bad years even out in the average. A child\'s horizon is usually decades long.', TEXT_DOMAIN); ?></p>
+                                <p><?php printf(
+                                    __('We don\'t show the fund\'s own return on this page yet. The fund\'s history is too short for that, and a few months\' numbers would confuse more than they explain. %s', TEXT_DOMAIN),
+                                    '<a href="https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/">' . __('You can find the unit price history on the fund\'s documents page →', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                                <p><?php _e('Returns are not guaranteed. The value of an investment can both rise and fall.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+                        <div class="qa__question-wrapper" id="kkk-11">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-11"><?php _e('How much does saving cost and what amount can I start with?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-11" class="collapse">
+                                <p><?php _e('The fund\'s ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+<div class="qa__question-wrapper" id="kkk-3">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('How does this differ from LHV\'s Kasvukonto and Swedbank\'s child products?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
                                 <p><?php _e('LHV\'s Kasvukonto is a platform where you choose yourself which fund your child\'s money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva\'s Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it.', TEXT_DOMAIN); ?></p>
@@ -176,14 +197,23 @@
                                 <p><a href="https://tuleva.ee/vastused/miks-koolifondidest-eemale-hoida/"><?php _e('Read more: 3 reasons to avoid child-labeled savings products', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="sissemaksed">
+<div class="qa__question-wrapper" id="sissemaksed">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do I make contributions?', TEXT_DOMAIN); ?></a>
                             <div id="answer-4" class="collapse">
                                 <p><?php _e('You can make contributions to your child\'s savings fund account both from your own bank account and from the child\'s. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('If a grandparent or another close person wants to make a contribution to your child\'s account, the simplest way for now is for them to gift the money to you: you transfer it to your child\'s account and from there to the fund. If a gift lands straight on the child\'s account, investing it requires the court\'s consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child\'s savings fund account.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-5">
+                        <div class="qa__question-wrapper" id="kkk-12">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-12"><?php _e('How can the other parent view and manage the child\'s account?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-12" class="collapse">
+                                <p><?php _e('Both parents can manage the child\'s account if the population register gives them the right to manage the child\'s property. We check this from the population register.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If one parent has already opened the account, the other doesn\'t need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child\'s name from the menu. The second parent then goes through a short questionnaire too. After that the child\'s account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Both parents\' right of representation lasts until the child\'s 18th birthday.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If the register doesn\'t give the other parent the right to manage the child\'s property, they can\'t manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child\'s account.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+<div class="qa__question-wrapper" id="kkk-5">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-5"><?php _e('How do withdrawals work?', TEXT_DOMAIN); ?></a>
                             <div id="answer-5" class="collapse">
                                 <p><?php _e('Units can be sold at any time and the money is paid only to your child\'s own bank account. This keeps your child\'s assets protected: money cannot move to anyone else\'s account.', TEXT_DOMAIN); ?></p>
@@ -194,7 +224,7 @@
                                 ); ?></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-6">
+<div class="qa__question-wrapper" id="kkk-6">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-6"><?php _e('Do I have to file a tax return in my child\'s name?', TEXT_DOMAIN); ?></a>
                             <div id="answer-6" class="collapse">
                                 <p><?php _e('It depends on whether you make contributions from a regular bank account or through an investment account.', TEXT_DOMAIN); ?></p>
@@ -203,7 +233,15 @@
                                 <p><a href="https://tuleva.ee/taiendav-kogumisfond/kas-lapsele-kogudes-on-vaja-investeerimiskontot-kaks-lahenemist-mille-vahel-valida/"><?php _e('Read on the blog which approach suits your family →', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
-                        <div class="qa__question-wrapper" id="kkk-8">
+<div class="qa__question-wrapper" id="kkk-2">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-2"><?php _e('What happens if my child withdraws all the money at 18?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-2" class="collapse">
+                                <p><?php _e('At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won\'t come as a surprise at 18.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Experience elsewhere shows the same: data on the UK\'s similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026).', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+<div class="qa__question-wrapper" id="kkk-8">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-8"><?php _e('My child already has a third pillar with Tuleva. What should I do now?', TEXT_DOMAIN); ?></a>
                             <div id="answer-8" class="collapse">
                                 <p><?php _e('A child\'s third pillar doesn\'t give an income tax refund, because a child generally doesn\'t earn enough income. That\'s why it\'s worth directing new contributions to your child\'s Additional Investment Fund; what\'s already saved keeps growing in the third pillar.', TEXT_DOMAIN); ?></p>
