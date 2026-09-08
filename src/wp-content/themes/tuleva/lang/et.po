@@ -2401,3 +2401,402 @@ msgstr "Kui teisel vanemal registri järgi varahooldusõigust ei ole (näiteks o
 #: templates/child-savings-content.php
 msgid "Read more: where the Additional Investment Fund invests →"
 msgstr "Loe lähemalt: kuhu Täiendav Kogumisfond investeerib →"
+
+#: templates/hackathon-content.php:9
+msgid "Tuleva hackathon"
+msgstr "Tuleva häkaton"
+
+#: templates/hackathon-content.php:34
+msgid "At the Tuleva hackathon, your idea could grow into our next line of business."
+msgstr "Tuleva häkatonil võib sinu ideest kasvada meie järgmine ärisuund."
+
+#: templates/hackathon-content.php:65
+msgid "At the Tuleva hackathon, your idea could grow into our next line of business"
+msgstr "Tuleva häkatonil võib sinu ideest kasvada meie järgmine ärisuund"
+
+#: templates/hackathon-content.php:67
+msgid "Ten years ago we had had enough of paying banks high fees for poor returns, so we brought low-fee index funds to the market."
+msgstr "10 aastat tagasi sai meil kõrini pankadele kehva tootluse eest kõrge tasu maksmisest ning tõime turule madala tasuga indeksfondid."
+
+#: templates/hackathon-content.php:68
+msgid "Now we are taking on the next field where there are problems to solve, together."
+msgstr "Nüüd võtame koos ette järgmise<br class=\"d-md-none\"> valdkonna, kus probleeme lahendada."
+
+#: templates/hackathon-content.php:71
+#: templates/hackathon-content.php:326
+msgid "Register"
+msgstr "Registreerun"
+
+#: templates/hackathon-content.php:74
+#: templates/hackathon-content.php:328
+msgid "Registration closes on"
+msgstr "Registreerumise tähtaeg on"
+
+#: templates/hackathon-content.php:74
+#: templates/hackathon-content.php:328
+msgid "30 September at 23.59"
+msgstr "30. september kell 23.59"
+
+#: templates/hackathon-content.php:81
+msgid "Practical information"
+msgstr "Praktiline info"
+
+#: templates/hackathon-content.php:89
+msgid "9–11 October 2026"
+msgstr "9.–11. oktoober 2026"
+
+#: templates/hackathon-content.php:90
+#: templates/hackathon-content.php:92
+msgid "Add to calendar"
+msgstr "Lisa kalendrisse"
+
+#: templates/hackathon-content.php:94
+msgid "Google Calendar"
+msgstr "Google'i kalender"
+
+#: templates/hackathon-content.php:96
+msgid "Apple Calendar (.ics)"
+msgstr "Apple'i kalender (.ics)"
+
+#: templates/hackathon-content.php:105
+msgid "Roheline saal,<br>Telliskivi Creative City"
+msgstr "Roheline saal,<br>Telliskivi Loomelinnak"
+
+#: templates/hackathon-content.php:115
+msgid "Why are we holding a hackathon?"
+msgstr "Miks me korraldame häkatoni?"
+
+#: templates/hackathon-content.php:118
+#, php-format
+msgid "%s what worries they still have unresolved and where Tuleva could step in to help. The hackathon challenges below grew out of those answers. Come and let us build the first solutions to them in three days."
+msgstr "%s, millised mured on neil veel lahendamata ja kus saaks Tuleva appi tulla. Neist vastustest koorusid välja häkatoni väljakutsed, mille leiad allpool. Tule ja ehitame kolme päevaga neile esimesed lahendused."
+
+#: templates/hackathon-content.php:119
+msgid "https://tuleva.ee/liikmetele/4600-tuleva-liiget-utlesid-mis-vajab-eestis-muutmist/"
+msgstr "https://tuleva.ee/liikmetele/4600-tuleva-liiget-utlesid-mis-vajab-eestis-muutmist/"
+
+#: templates/hackathon-content.php:119
+msgid "This spring we asked Tuleva members"
+msgstr "Küsisime sel kevadel Tuleva liikmetelt"
+
+#: templates/hackathon-content.php:123
+msgid "The best idea gets a budget and support from Tuleva to help it grow into our next product or service."
+msgstr "Parim idee saab Tulevalt eelarve ja toe, et aidata sel kasvada meie järgmiseks tooteks või teenuseks."
+
+#: templates/hackathon-content.php:134
+msgid "“Tuleva has no major owners dictating where to take the company. It has members, who know best what they need. Come and let us build it together.”"
+msgstr "„Tuleval pole suuromanikke, kes dikteeriksid, kuhu ettevõtet arendada. On liikmed, kes teavad ise kõige paremini, mida neil vaja on. Tule ja ehitame seda koos.“"
+
+#: templates/hackathon-content.php:141
+msgid "Member of the Management Board of the Tuleva cooperative"
+msgstr "Tuleva ühistu juhatuse liige"
+
+#: templates/hackathon-content.php:151
+msgid "The hackathon challenges"
+msgstr "Häkatoni väljakutsed"
+
+#: templates/hackathon-content.php:153
+msgid "The shape of the solution is up to you: a product, a service, a tool, a cooperative model or an entirely new logic. Several teams may tackle the same challenge."
+msgstr "Lahenduse kuju on vaba: toode, teenus, tööriist, ühistuline mudel või täiesti uus loogika. Ühte väljakutset võib lahendada mitu tiimi."
+
+#: templates/hackathon-content.php:158
+msgid "Sensible borrowing"
+msgstr "Mõistlik laenamine"
+
+#: templates/hackathon-content.php:159
+msgid "Bank margins are high and switching contracts is a hassle. How do we give members a fair and affordable loan, both for an unexpected need and for buying a home?"
+msgstr "Pankade marginaalid on kõrged ja lepingu vahetamine tülikas. Kuidas anda liikmele õiglast ja taskukohast laenu nii ootamatuks vajaduseks kui ka koduostuks?"
+
+#: templates/hackathon-content.php:160
+#: templates/hackathon-content.php:166
+#: templates/hackathon-content.php:172
+#: templates/hackathon-content.php:178
+msgid "Expected outcome:"
+msgstr "Oodatav tulemus:"
+
+#: templates/hackathon-content.php:160
+msgid "a solution that gives members a cheaper and more transparent loan (a cooperative credit line, refinancing or an entirely new approach)."
+msgstr "lahendus, mis annab liikmele soodsama ja läbipaistvama laenu (ühistuline krediidiliin, refinantseerimine või hoopis uus lähenemine)."
+
+#: templates/hackathon-content.php:164
+msgid "Insurance that actually protects"
+msgstr "Kindlustus, mis päriselt kaitseb"
+
+#: templates/hackathon-content.php:165
+msgid "Fine-print terms and complicated claims handling undermine trust. How do we offer insurance that protects when it is really needed, and does so honestly, simply and smoothly?"
+msgstr "Peenikeses kirjas tingimused ja keeruline kahjukäsitlus õõnestavad usaldust. Kuidas pakkuda kindlustust, mis kaitseb siis, kui seda päriselt vaja on, ja teeb seda ausalt, lihtsalt ja sujuvalt?"
+
+#: templates/hackathon-content.php:166
+msgid "insurance that gives better cover at a better price (an independent broker, a cooperative model, a new product or a partnership)."
+msgstr "kindlustus, mis annab parema kaitse parema hinnaga (sõltumatu maakler, ühistuline mudel, uus toode või partnerlus)."
+
+#: templates/hackathon-content.php:170
+msgid "Collective buying power"
+msgstr "Kollektiivne ostujõud"
+
+#: templates/hackathon-content.php:171
+msgid "Telecom and energy bills take a large share of income every month. How do we use the membership's combined buying power to push fixed costs down and keep prices fair, without members having to keep switching providers themselves?"
+msgstr "Side- ja energiakulud võtavad iga kuu sissetulekust suure osa. Kuidas kasutada liikmeskonna ühist ostujõudu, et suruda püsikulud alla ja hoida hinda ausana, ilma et liige peaks ise pidevalt pakkujaid vahetama?"
+
+#: templates/hackathon-content.php:172
+msgid "a mechanism that gives members a lastingly good price (group purchasing, a cooperative virtual operator, an electricity-buying autopilot or a partnership)."
+msgstr "mehhanism, mis toob liikmele püsivalt soodsa hinna (grupiost, ühistuline virtuaaloperaator, elektriostu autopiloot või partnerlus)."
+
+#: templates/hackathon-content.php:176
+msgid "Smart wealth management and estate planning"
+msgstr "Tark varahaldus ja pärandi planeerimine"
+
+#: templates/hackathon-content.php:177
+msgid "How do we help members manage their assets wisely across their whole life, and prepare their estate so that it passes on smoothly and the family is spared problems?"
+msgstr "Kuidas aidata liikmetel oma vara kogu elukaare vältel targalt hallata ja valmistada pärand nii ette, et vara läheks sujuvalt edasi ja perel ei tekiks probleeme?"
+
+#: templates/hackathon-content.php:178
+msgid "a tool or service that brings a member's assets into one view, shows their future standard of living and helps arrange the estate step by step."
+msgstr "tööriist või teenus, mis toob liikme vara ühte vaatesse, näitab tuleviku elustandardit ja aitab pärandi sammhaaval korraldada."
+
+#: templates/hackathon-content.php:182
+msgid "We have prepared a background brief for every challenge: the market, the margins, the regulation and our hypothesis. You will find the full briefs in the registration form once you have logged in. Use the briefs as a springboard for developing your idea. Feel free to overturn our hypotheses, too."
+msgstr "Oleme teinud igale väljakutsele taustabriifi: turg, marginaalid, regulatsioon ja meie hüpotees. Täismahus briifid leiad pärast sisselogimist registreerumisvormist. Kasuta briife hüppelauana oma idee arendamiseks. Võid julgelt meie hüpoteesid ka ümber lükata."
+
+#: templates/hackathon-content.php:193
+msgid "Your skills are exactly what we need"
+msgstr "Vaja on just sinu oskusi"
+
+#: templates/hackathon-content.php:195
+msgid "We have a community of bright people. At the hackathon, teams of <span class=\"text-nowrap\">4–5</span> members with different skills and knowledge work together. We are especially keen to see you if you are:"
+msgstr "Meil on ärksate inimeste kogukond. Häkatonil töötavad koos tiimid, kus on <span class=\"text-nowrap\">4–5 erinevate</span> oskuste ja teadmistega liiget. Ootame sind eriti, kui oled:"
+
+#: templates/hackathon-content.php:198
+msgid "<b>A developer or designer</b> who builds a prototype from the idea."
+msgstr "<b>Arendaja või disainer,</b> kes ehitab ideest prototüübi."
+
+#: templates/hackathon-content.php:199
+msgid "<b>A data or AI person</b> who loves digging into data and knows how to put artificial intelligence to work."
+msgstr "<b>Andme- või AI-inimene,</b> kes tuhnib innuga andmetes ja oskab tehisintellekti enda kasuks tööle panna."
+
+#: templates/hackathon-content.php:200
+msgid "<b>A lawyer or regulation expert</b> who knows what is allowed and how."
+msgstr "<b>Jurist või regulatsioonitundja,</b> kes teab, mis on lubatud ja kuidas."
+
+#: templates/hackathon-content.php:201
+msgid "<b>A product manager, marketer, finance or insurance person</b> who sees the whole picture and the business."
+msgstr "<b>Tootejuht, turundaja, rahandus- või kindlustusinimene,</b> kes näeb tervikut ja äri."
+
+#: templates/hackathon-content.php:202
+msgid "<b>Or simply a bright person</b> with a good idea and the will to make it happen."
+msgstr "<b>Või lihtsalt ärgas inimene,</b> kellel on hea mõte ja tahe."
+
+#: templates/hackathon-content.php:213
+msgid "Schedule"
+msgstr "Ajakava"
+
+#: templates/hackathon-content.php:215
+msgid "We will share a more detailed schedule as the hackathon approaches."
+msgstr "Häkatoni lähenedes jagame juba täpsemat ajakava."
+
+#: templates/hackathon-content.php:221
+msgid "Friday 9 October"
+msgstr "Reede, 9. oktoober"
+
+#: templates/hackathon-content.php:221
+msgid "17.30–21.00"
+msgstr "kell 17.30–21.00"
+
+#: templates/hackathon-content.php:222
+msgid "We form the teams"
+msgstr "Paneme tiimid kokku"
+
+#: templates/hackathon-content.php:223
+msgid "Opening, introduction of the challenges and team formation."
+msgstr "Avamine, väljakutsete tutvustus ja tiimide moodustamine."
+
+#: templates/hackathon-content.php:224
+msgid "If you come alone, you will find a team on the spot."
+msgstr "Kes tuleb üksi, leiab tiimi kohapeal."
+
+#: templates/hackathon-content.php:230
+msgid "Saturday 10 October"
+msgstr "Laupäev, 10. oktoober"
+
+#: templates/hackathon-content.php:230
+msgid "9.00–18.00"
+msgstr "kell 9.00–18.00"
+
+#: templates/hackathon-content.php:231
+msgid "We build"
+msgstr "Ehitame"
+
+#: templates/hackathon-content.php:232
+msgid "Workshops, teamwork and mentors. By the evening, the idea has become a clear concept and a first prototype."
+msgstr "Töötoad, tiimitöö ja mentorid. Õhtuks on ideest saanud selge kontseptsioon ja esimene prototüüp."
+
+#: templates/hackathon-content.php:238
+msgid "Sunday 11 October"
+msgstr "Pühapäev, 11. oktoober"
+
+#: templates/hackathon-content.php:238
+msgid "9.30–16.00"
+msgstr "kell 9.30–16.00"
+
+#: templates/hackathon-content.php:239
+msgid "We present"
+msgstr "Esitleme"
+
+#: templates/hackathon-content.php:240
+msgid "Final polish, pitches to the jury and recognition."
+msgstr "Viimane lihv, esitlused žüriile ja tunnustamine."
+
+#: templates/hackathon-content.php:253
+msgid "Mentors and jury"
+msgstr "Mentorid ja žürii"
+
+#: templates/hackathon-content.php:255
+msgid "Throughout the weekend, the teams are joined by experienced people who have built products themselves and know what it takes to turn an idea into a business."
+msgstr "Tiimide kõrval on kogu nädalavahetuse jooksul kogenud tegijad, kes on ise tooteid ehitanud ja teavad, mida on vaja, et ideest saaks äri."
+
+#: templates/hackathon-content.php:257
+msgid "Mentors"
+msgstr "Mentorid"
+
+#: templates/hackathon-content.php:259
+msgid "No team is left on its own. Mentors visit the teams and help sharpen the idea."
+msgstr "Ükski tiim ei jää üksi. Mentorid käivad tiimide juures<br class=\"d-none d-md-inline\"> ja aitavad ideed teravaks lihvida."
+
+#: templates/hackathon-content.php:262
+msgid "Want to be a mentor yourself? Write to"
+msgstr "Tahad ise mentoriks tulla? Kirjuta"
+
+#: templates/hackathon-content.php:267
+#: templates/hackathon-content.php:272
+#: templates/hackathon-content.php:277
+#: templates/hackathon-content.php:282
+#: templates/hackathon-content.php:293
+#: templates/hackathon-content.php:303
+#: templates/hackathon-content.php:308
+msgid "To be announced"
+msgstr "Selgub peagi"
+
+#: templates/hackathon-content.php:268
+msgid "business model mentor"
+msgstr "ärimudeli mentor"
+
+#: templates/hackathon-content.php:273
+msgid "designer"
+msgstr "disainer"
+
+#: templates/hackathon-content.php:278
+msgid "AI architect"
+msgstr "AI-arhitekt"
+
+#: templates/hackathon-content.php:283
+msgid "financial regulation lawyer"
+msgstr "finantsregulatsiooni jurist"
+
+#: templates/hackathon-content.php:286
+msgid "Jury"
+msgstr "Žürii"
+
+#: templates/hackathon-content.php:288
+msgid "The jury assesses the impact of the ideas, the size of the change (is the solution many times better, not 10% better), technical feasibility, viability and fit with Tuleva's values."
+msgstr "Žürii hindab ideede mõju, muutuse suurust (kas lahendus on kordades, mitte 10%&nbsp;parem), tehnilist teostatavust, elujõulisust ja sobivust Tuleva väärtustega."
+
+#: templates/hackathon-content.php:294
+msgid "Member of the Tuleva Management Board"
+msgstr "Tuleva juhatuse liige"
+
+#: templates/hackathon-content.php:299
+msgid "Chair of the Supervisory Board of the Tuleva cooperative"
+msgstr "Tuleva ühistu nõukogu esinaine"
+
+#: templates/hackathon-content.php:304
+#: templates/hackathon-content.php:309
+msgid "external expert"
+msgstr "väline ekspert"
+
+#: templates/hackathon-content.php:322
+msgid "Ready to join in?"
+msgstr "Oled valmis kaasa lööma?"
+
+#: templates/hackathon-content.php:324
+msgid "Register, mark your skills and let us know whether you are coming alone or with your team, and whether you already have an idea."
+msgstr "Registreeru, märgi oma oskused ja anna teada, kas tuled üksi või oma tiimiga ja kas sul on juba idee."
+
+#: templates/hackathon-content.php:343
+msgid "Do I have to be a Tuleva member?"
+msgstr "Kas pean olema Tuleva liige?"
+
+#: templates/hackathon-content.php:345
+msgid "Yes. The hackathon is for Tuleva members: this is our shared company and we are building it together. If you are not a member yet, you can join and then register."
+msgstr "Jah. Häkaton on Tuleva liikmetele: see on meie ühine ettevõte ja me ehitame seda koos. Kui sa veel liige pole, saad liikmeks astuda ja siis registreeruda."
+
+#: templates/hackathon-content.php:346
+msgid "https://tuleva.ee/tulundusyhistu/"
+msgstr "https://tuleva.ee/tulundusyhistu/"
+
+#: templates/hackathon-content.php:346
+msgid "Read more about the cooperative →"
+msgstr "Loe ühistu kohta lähemalt →"
+
+#: templates/hackathon-content.php:351
+msgid "Do I need to know how to code?"
+msgstr "Kas pean oskama programmeerida?"
+
+#: templates/hackathon-content.php:353
+msgid "No. All kinds of skills are needed: design, data work, legal, business, marketing and product management. A good team is a mixed team."
+msgstr "Ei. Vaja on igasuguseid oskusi: disaini, andmetööd, juriidikat, äri, turundust ja tootejuhtimist. Hea tiim on kirju tiim."
+
+#: templates/hackathon-content.php:354
+msgid "It helps if you can use AI assistants (for example Claude or OpenAI Codex). Prototypes at the hackathon are built largely with their help."
+msgstr "Kasuks tuleb, kui oskad kasutada AI-abilisi (näiteks Claude'i või OpenAI Codexit). Prototüübid valmivad häkatonil suuresti nende toel."
+
+#: templates/hackathon-content.php:359
+msgid "Do I need to have an idea?"
+msgstr "Kas mul peab olema idee?"
+
+#: templates/hackathon-content.php:361
+msgid "No. You can simply pick a challenge that speaks to you. Ideas are born on the spot with the help of your teammates. Even better if you arrive with at least the seed of an idea for how one of the challenges could be solved."
+msgstr "Ei pea. Võid valida lihtsalt väljakutse, mis sind kõnetab. Ideed sünnivad kohapeal tiimikaaslaste toel. Veel parem, kui tuled kasvõi idee algega, kuidas mõnda väljakutset võiks lahendada."
+
+#: templates/hackathon-content.php:366
+msgid "Can I come alone?"
+msgstr "Kas saan tulla üksi?"
+
+#: templates/hackathon-content.php:368
+msgid "Yes. You will find a team either when registering, by marking your skills and interests, or on the spot on Friday evening."
+msgstr "Jah. Leiad tiimi kas juba registreerudes, kui märgid oma oskused ja huvid, või kohapeal reede õhtul."
+
+#: templates/hackathon-content.php:373
+msgid "What happens to my idea after the hackathon?"
+msgstr "Mis saab minu ideest pärast häkatoni?"
+
+#: templates/hackathon-content.php:375
+msgid "The winning idea gets a budget and support from Tuleva for further development, and if you wish you can keep building it yourself, by agreement also for a fee. We will agree the exact terms with the winner."
+msgstr "Võitnud idee saab Tulevalt eelarve ja toe edasiarendamiseks ning sa võid soovi korral ise edasi ehitada, kokkuleppel ka tasu eest. Täpsed tingimused lepime võitjaga kokku."
+
+#: templates/hackathon-content.php:376
+msgid "A hackathon produces many possible solutions, and that is the point: together we find the best one."
+msgstr "Häkatonil sünnib palju lahenduskäike ja see ongi eesmärk: nii leiame üheskoos parima."
+
+#: templates/hackathon-content.php:381
+msgid "How much does it cost to take part?"
+msgstr "Kui palju osalemine maksab?"
+
+#: templates/hackathon-content.php:383
+msgid "Taking part is free and we take care of the catering. It helps if you have a paid plan for an AI assistant (for example Claude or OpenAI Codex). The limits of the free versions are quickly reached when building a prototype."
+msgstr "Osalemine on tasuta ja toitlustuse eest hoolitseme meie. Kasuks tuleb, kui sul on mõne AI-abilise tasuline pakett (näiteks Claude või OpenAI Codex). Tasuta versioonide mahupiirid tulevad prototüüpi ehitades kiiresti ette."
+
+#: templates/hackathon-content.php:388
+msgid "What should I bring?"
+msgstr "Mida kaasa võtta?"
+
+#: templates/hackathon-content.php:390
+msgid "A laptop, your skills and an open mind. We take care of the rest."
+msgstr "Sülearvuti, oma oskused ja avatud meel. Ülejäänu eest hoolitseme meie."
+
+#: templates/hackathon-content.php:395
+msgid "Did not find the answer to your question? Write to"
+msgstr "Ei leidnud oma küsimusele vastust? Kirjuta"
+
+#: page_hackathon.php
+msgid "Hackathon page"
+msgstr "Häkatoni leht"

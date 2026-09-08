@@ -1,0 +1,447 @@
+// Hackathon landing page (page_hackathon.php)
+//
+// Ported from the static prototype at tuleva.ee/vaata/hakaton/. The page
+// carries .landing-page for the shared marketing-page rules (section spacing,
+// h2 scale, .diff-list, .emphasis-box lead width, .faq-list); only the
+// hackathon-specific pieces live here.
+
+.hackathon-page {
+    overflow-x: clip;
+
+    section[id] {
+        scroll-margin-top: 1.5rem;
+    }
+
+    .lead {
+        max-width: 44rem;
+        color: $text-primary;
+        font-size: 1.18rem;
+        line-height: 1.65;
+    }
+
+    .lead--narrow {
+        max-width: 40rem;
+    }
+
+    // Hero: the hands-together photo under the same pale blue wash the child
+    // savings hero uses, navy text on top
+    .hero {
+        padding: 7.5rem 0;
+        background:
+            linear-gradient(rgba(197, 224, 233, .85), rgba(197, 224, 233, .85)),
+            url('../img/hakaton-hero-kaed.jpg') center 35% / cover no-repeat;
+        color: $navy-blue;
+
+        h1 {
+            color: $navy-blue;
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .lead {
+            max-width: 38rem;
+            color: $navy-blue;
+        }
+
+        .cta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem 1.1rem;
+            margin-top: 2.4rem;
+        }
+
+        @include media-breakpoint-down (md) {
+            padding: 3.5rem 0;
+        }
+    }
+
+    .deadline-note {
+        color: $navy-blue;
+        font-size: .95rem;
+    }
+
+    // Tinted sections sit a little closer to the section above them
+    .section-spacing.bg-gray-1 {
+        padding-top: 6rem;
+    }
+
+    // Practical info band: the front page trust strip, with both items on
+    // one left edge and smaller icons on a phone
+    .section-credentials {
+        p {
+            font-size: 1.05rem;
+        }
+
+        .row {
+            column-gap: 5rem;
+        }
+
+        @include media-breakpoint-down (md) {
+            .row {
+                flex-direction: column;
+                align-items: flex-start;
+                width: fit-content;
+                margin-inline: auto;
+                column-gap: 0;
+            }
+
+            .col-auto {
+                justify-content: flex-start;
+            }
+
+            p {
+                font-size: .95rem;
+            }
+
+            svg {
+                width: 26px;
+                height: 26px;
+                margin-right: .6rem !important;
+            }
+        }
+    }
+
+    // "Add to calendar": a plain link to the .ics on a phone, a Bootstrap
+    // dropdown with three calendar options on wider screens. The dropdown
+    // toggle is a button, so it gets the theme's link look here.
+    .cal-link {
+        display: inline-block;
+        margin-top: .15rem;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: $blue;
+        font-size: .95rem;
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, currentColor $link-underline-opacity, transparent);
+        text-underline-offset: $link-underline-offset;
+        text-decoration-thickness: $link-underline-thickness;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            text-decoration-color: currentColor;
+        }
+    }
+
+    .cal-menu {
+        .dropdown-menu {
+            min-width: 13rem;
+            padding: .4rem;
+            border: 1px solid #e6edf4;
+            border-radius: .6rem;
+            box-shadow: 0 8px 24px rgba(0, 47, 99, .12);
+        }
+
+        .dropdown-item {
+            padding: .5rem .8rem;
+            border-radius: .4rem;
+            color: $navy-blue;
+            font-size: .95rem;
+
+            &:hover,
+            &:focus {
+                background: #eaf4ff;
+                color: $blue;
+            }
+        }
+    }
+
+    // Challenge cards: numbered, stacked, the expected outcome under a rule
+    .challenges {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 44rem;
+        margin: 2.5rem auto 0;
+        text-align: left;
+    }
+
+    .challenge {
+        display: grid;
+        grid-template-columns: 2.25rem 1fr;
+        column-gap: 1.1rem;
+        row-gap: .6rem;
+        padding: 1.5rem 1.7rem;
+        background: $white;
+        border: 1px solid #e6edf4;
+        border-radius: 1rem;
+
+        .num {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            background: #eaf4ff;
+            color: $blue;
+            font-size: 1rem;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+        }
+
+        h3 {
+            grid-column: 2;
+            grid-row: 1;
+            align-self: center;
+            margin: 0;
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.25rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            grid-column: 2;
+            margin: 0;
+            color: $text-primary;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .outcome {
+            margin-top: .4rem;
+            padding-top: .95rem;
+            border-top: 1px solid #e6edf4;
+            font-size: .95rem;
+
+            b {
+                color: $navy-blue;
+            }
+        }
+    }
+
+    .challenges-note {
+        max-width: 44rem;
+        margin: 2.2rem auto 0;
+        color: $text-primary;
+        font-size: .95rem;
+    }
+
+    .diff-list {
+        max-width: 40rem;
+        margin-inline: auto;
+
+        b {
+            color: $navy-blue;
+        }
+    }
+
+    .section-note {
+        max-width: 44rem;
+        color: $text-secondary;
+        font-size: .95rem;
+    }
+
+    // Schedule: a three-step timeline with the line running node to node
+    .tl {
+        position: relative;
+        max-width: 600px;
+        margin: 2.5rem auto 0;
+        text-align: left;
+
+        .icn {
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+
+    .tl-item {
+        position: relative;
+        margin-bottom: 1.5rem;
+        padding-left: 4.2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // Each connector belongs to the step above it, so the line never
+        // runs past the last node
+        &:not(:last-child)::before {
+            content: "";
+            position: absolute;
+            left: 1.4rem;
+            top: 1.7rem;
+            bottom: -2.1rem;
+            width: 2px;
+            transform: translateX(-50%);
+            background: #bcd6f5;
+        }
+    }
+
+    .tl-node {
+        position: absolute;
+        left: 1.4rem;
+        top: .5rem;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: translateX(-50%);
+        border: 1px solid #9fc7f2;
+        border-radius: 50%;
+        background: #eaf3ff;
+        box-shadow: 0 0 0 5px $gray-bg-1;
+        color: $blue;
+
+        .icn {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+
+    .tl-card {
+        padding: 1.35rem 1.6rem;
+        background: $white;
+        border: 1px solid #e6edf4;
+        border-radius: 1rem;
+
+        h3 {
+            margin: 0 0 .55rem;
+            color: $text-primary;
+            font-family: $font-family-sans-serif;
+            font-size: 1.2rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            margin: 0;
+            color: $text-primary;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+    }
+
+    .tl-day {
+        margin-bottom: .7rem;
+        color: $blue;
+        font-size: .8rem;
+        font-weight: $font-weight-semibold;
+        letter-spacing: .08em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 560px) {
+        .tl-item {
+            padding-left: 3.7rem;
+        }
+
+        .tl-card {
+            padding: 1.2rem 1.3rem;
+        }
+    }
+
+    // Mentors and jury: two sub-blocks, each with a photo grid
+    .sub-h {
+        margin: 4rem 0 .7rem;
+        color: $navy-blue;
+        font-family: $font-family-sans-serif;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+    }
+
+    .sub-p {
+        max-width: 40rem;
+        margin-bottom: 0;
+        color: $text-primary;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .people {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.6rem 1.2rem;
+        align-items: start;
+        max-width: 40rem;
+        margin: 1.6rem auto 0;
+
+        @include media-breakpoint-down (md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .person {
+        text-align: center;
+
+        img {
+            display: block;
+            width: 96px;
+            height: 96px;
+            margin: 0 auto .7rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .ph {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            height: 96px;
+            margin: 0 auto .7rem;
+            border-radius: 50%;
+            background: #eaf4ff;
+            color: $blue;
+
+            svg {
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+
+        b {
+            display: block;
+            color: $navy-blue;
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
+        span {
+            display: block;
+            color: $text-secondary;
+            font-size: .85rem;
+            line-height: 1.4;
+        }
+    }
+
+    .emphasis-box {
+        max-width: 44rem;
+        margin-inline: auto;
+
+        @include media-breakpoint-down (md) {
+            padding: 2.2rem 1.5rem !important;
+
+            h2 {
+                font-size: 1.55rem;
+            }
+
+            .lead {
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    .faq-list {
+        max-width: 44rem;
+        margin-inline: auto;
+    }
+
+    .faq-note {
+        color: $text-secondary;
+        font-size: .95rem;
+    }
+}

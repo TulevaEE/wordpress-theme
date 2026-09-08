@@ -18796,6 +18796,438 @@ sup {
   padding-top: 0.2rem;
 }
 
+.hackathon-page {
+  overflow-x: clip;
+}
+.hackathon-page section[id] {
+  scroll-margin-top: 1.5rem;
+}
+.hackathon-page .lead {
+  max-width: 44rem;
+  color: #293036;
+  font-size: 1.18rem;
+  line-height: 1.65;
+}
+.hackathon-page .lead--narrow {
+  max-width: 40rem;
+}
+.hackathon-page .hero {
+  padding: 7.5rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(197, 224, 233, 0.85)), to(rgba(197, 224, 233, 0.85))), url("../img/hakaton-hero-kaed.jpg") center 35%/cover no-repeat;
+  background: linear-gradient(rgba(197, 224, 233, 0.85), rgba(197, 224, 233, 0.85)), url("../img/hakaton-hero-kaed.jpg") center 35%/cover no-repeat;
+  color: #002f63;
+}
+.hackathon-page .hero h1, .hackathon-page .hero .h1 {
+  color: #002f63;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+}
+.hackathon-page .hero .lead {
+  max-width: 38rem;
+  color: #002f63;
+}
+.hackathon-page .hero .cta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem 1.1rem;
+  margin-top: 2.4rem;
+}
+@media (max-width: 767.98px) {
+  .hackathon-page .hero {
+    padding: 3.5rem 0;
+  }
+}
+.hackathon-page .deadline-note {
+  color: #002f63;
+  font-size: 0.95rem;
+}
+.hackathon-page .section-spacing.bg-gray-1 {
+  padding-top: 6rem;
+}
+.hackathon-page .section-credentials p {
+  font-size: 1.05rem;
+}
+.hackathon-page .section-credentials .row {
+  -webkit-column-gap: 5rem;
+  -moz-column-gap: 5rem;
+  column-gap: 5rem;
+}
+@media (max-width: 767.98px) {
+  .hackathon-page .section-credentials .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: auto;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  .hackathon-page .section-credentials .col-auto {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .hackathon-page .section-credentials p {
+    font-size: 0.95rem;
+  }
+  .hackathon-page .section-credentials svg {
+    width: 26px;
+    height: 26px;
+    margin-right: 0.6rem !important;
+  }
+}
+.hackathon-page .cal-link {
+  display: inline-block;
+  margin-top: 0.15rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #006CE6;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: color-mix(in srgb, currentColor 25%, transparent);
+  text-decoration-color: color-mix(in srgb, currentColor 25%, transparent);
+  text-underline-offset: 0.125em;
+  text-decoration-thickness: 0.0625em;
+  cursor: pointer;
+}
+.hackathon-page .cal-link:hover, .hackathon-page .cal-link:focus {
+  -webkit-text-decoration-color: currentColor;
+  text-decoration-color: currentColor;
+}
+.hackathon-page .cal-menu .dropdown-menu {
+  min-width: 13rem;
+  padding: 0.4rem;
+  border: 1px solid #e6edf4;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 0 8px 24px rgba(0, 47, 99, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 47, 99, 0.12);
+}
+.hackathon-page .cal-menu .dropdown-item {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  color: #002f63;
+  font-size: 0.95rem;
+}
+.hackathon-page .cal-menu .dropdown-item:hover, .hackathon-page .cal-menu .dropdown-item:focus {
+  background: #eaf4ff;
+  color: #006CE6;
+}
+.hackathon-page .challenges {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 44rem;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+.hackathon-page .challenge {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  -webkit-column-gap: 1.1rem;
+  -moz-column-gap: 1.1rem;
+  column-gap: 1.1rem;
+  row-gap: 0.6rem;
+  padding: 1.5rem 1.7rem;
+  background: #fff;
+  border: 1px solid #e6edf4;
+  border-radius: 1rem;
+}
+.hackathon-page .challenge .num {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #eaf4ff;
+  color: #006CE6;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.hackathon-page .challenge h3, .hackathon-page .challenge .h3 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin: 0;
+  color: #002f63;
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.hackathon-page .challenge p {
+  grid-column: 2;
+  margin: 0;
+  color: #293036;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.hackathon-page .challenge .outcome {
+  margin-top: 0.4rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid #e6edf4;
+  font-size: 0.95rem;
+}
+.hackathon-page .challenge .outcome b {
+  color: #002f63;
+}
+.hackathon-page .challenges-note {
+  max-width: 44rem;
+  margin: 2.2rem auto 0;
+  color: #293036;
+  font-size: 0.95rem;
+}
+.hackathon-page .diff-list {
+  max-width: 40rem;
+  margin-inline: auto;
+}
+.hackathon-page .diff-list b {
+  color: #002f63;
+}
+.hackathon-page .section-note {
+  max-width: 44rem;
+  color: #6B7074;
+  font-size: 0.95rem;
+}
+.hackathon-page .tl {
+  position: relative;
+  max-width: 600px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+.hackathon-page .tl .icn {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hackathon-page .tl-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 4.2rem;
+}
+.hackathon-page .tl-item:last-child {
+  margin-bottom: 0;
+}
+.hackathon-page .tl-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 1.4rem;
+  top: 1.7rem;
+  bottom: -2.1rem;
+  width: 2px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #bcd6f5;
+}
+.hackathon-page .tl-node {
+  position: absolute;
+  left: 1.4rem;
+  top: 0.5rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1px solid #9fc7f2;
+  border-radius: 50%;
+  background: #eaf3ff;
+  -webkit-box-shadow: 0 0 0 5px var(--gray-bg-1);
+  box-shadow: 0 0 0 5px var(--gray-bg-1);
+  color: #006CE6;
+}
+.hackathon-page .tl-node .icn {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.hackathon-page .tl-card {
+  padding: 1.35rem 1.6rem;
+  background: #fff;
+  border: 1px solid #e6edf4;
+  border-radius: 1rem;
+}
+.hackathon-page .tl-card h3, .hackathon-page .tl-card .h3 {
+  margin: 0 0 0.55rem;
+  color: #293036;
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.hackathon-page .tl-card p {
+  margin: 0;
+  color: #293036;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.hackathon-page .tl-day {
+  margin-bottom: 0.7rem;
+  color: #006CE6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+@media (max-width: 560px) {
+  .hackathon-page .tl-item {
+    padding-left: 3.7rem;
+  }
+  .hackathon-page .tl-card {
+    padding: 1.2rem 1.3rem;
+  }
+}
+.hackathon-page .sub-h {
+  margin: 4rem 0 0.7rem;
+  color: #002f63;
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.hackathon-page .sub-p {
+  max-width: 40rem;
+  margin-bottom: 0;
+  color: #293036;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.hackathon-page .people {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem 1.2rem;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
+  max-width: 40rem;
+  margin: 1.6rem auto 0;
+}
+@media (max-width: 767.98px) {
+  .hackathon-page .people {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hackathon-page .person {
+  text-align: center;
+}
+.hackathon-page .person img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.7rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.hackathon-page .person .ph {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.7rem;
+  border-radius: 50%;
+  background: #eaf4ff;
+  color: #006CE6;
+}
+.hackathon-page .person .ph svg {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.hackathon-page .person b {
+  display: block;
+  color: #002f63;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.hackathon-page .person span {
+  display: block;
+  color: #6B7074;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.hackathon-page .emphasis-box {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+@media (max-width: 767.98px) {
+  .hackathon-page .emphasis-box {
+    padding: 2.2rem 1.5rem !important;
+  }
+  .hackathon-page .emphasis-box h2, .hackathon-page .emphasis-box .h2 {
+    font-size: 1.55rem;
+  }
+  .hackathon-page .emphasis-box .lead {
+    font-size: 1.05rem;
+  }
+}
+.hackathon-page .faq-list {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+.hackathon-page .faq-note {
+  color: #6B7074;
+  font-size: 0.95rem;
+}
+
 .custom-tooltip {
   position: absolute;
   z-index: 2;

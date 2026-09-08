@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tuleva//Hakaton 2026//ET
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hakaton-2026@tuleva.ee
+DTSTAMP:20260812T120000Z
+DTSTART:20261009T143000Z
+DTEND:20261011T130000Z
+SUMMARY:Tuleva häkaton
+LOCATION:Roheline saal\, Telliskivi Loomelinnak\, Telliskivi 60a/5\, Tallinn
+DESCRIPTION:Tuleva häkatonil võib sinu ideest kasvada meie järgmine ärisuund. Info: https://tuleva.ee/hakaton/
+URL:https://tuleva.ee/hakaton/
+END:VEVENT
+END:VCALENDAR
