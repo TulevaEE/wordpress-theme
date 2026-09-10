@@ -228,11 +228,21 @@ function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?stri
  */
 function tuleva_document_effective_date(string $url, string $fallback = ''): string
 {
-    if (preg_match('/alates[-_. ](\d{2}\.\d{2}\.\d{4})/i', $url, $matches)) {
-        return $matches[1];
+    if (!preg_match('/alates[-_. ](\d{2})\.(\d{2})\.(\d{4})/i', $url, $matches)) {
+        return $fallback;
     }
 
-    return $fallback;
+    [, $day, $month, $year] = array_map('intval', $matches);
+
+    // A filename is a hand-typed string driving a statement about when a document takes
+    // effect, so refuse anything that cannot be one. The pension funds' NAV procedure is
+    // published as "...kehtib-alates-02.03.3026.pdf" — a typo for 2026 — which is
+    // harmless while the date is unused and is not once it is rendered.
+    if (!checkdate($month, $day, $year) || abs($year - (int) date('Y')) > 10) {
+        return $fallback;
+    }
+
+    return $matches[1] . '.' . $matches[2] . '.' . $matches[3];
 }
 
 /**
