@@ -30,9 +30,9 @@ function get_page_template_slug($post = null)
     return FakeFundPage::$template;
 }
 
-require_once __DIR__ . '/../../helpers/acf/fund-documents.php';
+require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 
-final class FundDocumentsTest extends TestCase
+final class FundDisclosuresTest extends TestCase
 {
     private const PENSION_TEMPLATES = [
         'page_fund-stocks.php',
@@ -50,9 +50,9 @@ final class FundDocumentsTest extends TestCase
     #[Test]
     public function every_scoped_document_is_defined_in_the_catalogue(): void
     {
-        $catalogue = tuleva_fund_document_catalogue();
+        $catalogue = tuleva_fund_disclosure_catalogue();
 
-        foreach (tuleva_fund_document_scope() as $template => $documents) {
+        foreach (tuleva_fund_disclosure_scope() as $template => $documents) {
             foreach (array_keys($documents) as $name) {
                 $this->assertArrayHasKey(
                     $name,
@@ -66,11 +66,11 @@ final class FundDocumentsTest extends TestCase
     #[Test]
     public function every_scoped_document_is_required_or_optional(): void
     {
-        foreach (tuleva_fund_document_scope() as $template => $documents) {
+        foreach (tuleva_fund_disclosure_scope() as $template => $documents) {
             foreach ($documents as $name => $requirement) {
                 $this->assertContains(
                     $requirement,
-                    [TULEVA_DOCUMENT_REQUIRED, TULEVA_DOCUMENT_OPTIONAL],
+                    [TULEVA_DISCLOSURE_REQUIRED, TULEVA_DISCLOSURE_OPTIONAL],
                     "$template scopes '$name' as '$requirement'"
                 );
             }
@@ -82,8 +82,8 @@ final class FundDocumentsTest extends TestCase
     {
         $keys = [];
 
-        foreach (array_keys(tuleva_fund_document_scope()) as $template) {
-            foreach (tuleva_fund_document_field_group($template)['fields'] as $field) {
+        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
+            foreach (tuleva_fund_disclosure_field_group($template)['fields'] as $field) {
                 $keys[] = $field['key'];
             }
         }
@@ -105,7 +105,7 @@ final class FundDocumentsTest extends TestCase
     {
         $keys = [];
 
-        foreach (tuleva_fund_document_field_group(self::SAVINGS_TEMPLATE)['fields'] as $field) {
+        foreach (tuleva_fund_disclosure_field_group(self::SAVINGS_TEMPLATE)['fields'] as $field) {
             $keys[$field['name']] = $field['key'];
         }
 
@@ -128,17 +128,17 @@ final class FundDocumentsTest extends TestCase
     #[Test]
     public function every_generated_group_is_writable_over_rest(): void
     {
-        foreach (array_keys(tuleva_fund_document_scope()) as $template) {
-            $this->assertSame(1, tuleva_fund_document_field_group($template)['show_in_rest'], $template);
+        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
+            $this->assertSame(1, tuleva_fund_disclosure_field_group($template)['show_in_rest'], $template);
         }
     }
 
     #[Test]
     public function the_investment_report_field_is_named_the_same_on_every_fund(): void
     {
-        foreach (array_keys(tuleva_fund_document_scope()) as $template) {
+        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
             $this->assertNotNull(
-                tuleva_fund_document_requirement('investment_report_file', $template),
+                tuleva_fund_disclosure_requirement('investment_report_file', $template),
                 "$template must carry investment_report_file — onboarding-service sets it by name on every fund"
             );
         }
@@ -148,18 +148,61 @@ final class FundDocumentsTest extends TestCase
     public function pension_funds_do_not_carry_ucits_documents(): void
     {
         foreach (self::PENSION_TEMPLATES as $template) {
-            $this->assertNull(tuleva_fund_document_requirement('investor_rights_file', $template));
-            $this->assertNull(tuleva_fund_document_requirement('nav_procedure_file', $template));
+            $this->assertNull(tuleva_fund_disclosure_requirement('investor_rights_file', $template));
+            $this->assertNull(tuleva_fund_disclosure_requirement('nav_procedure_file', $template));
         }
 
         $this->assertSame(
-            TULEVA_DOCUMENT_REQUIRED,
-            tuleva_fund_document_requirement('investor_rights_file', self::SAVINGS_TEMPLATE)
+            TULEVA_DISCLOSURE_REQUIRED,
+            tuleva_fund_disclosure_requirement('investor_rights_file', self::SAVINGS_TEMPLATE)
         );
         $this->assertSame(
-            TULEVA_DOCUMENT_REQUIRED,
-            tuleva_fund_document_requirement('nav_procedure_file', self::SAVINGS_TEMPLATE)
+            TULEVA_DISCLOSURE_REQUIRED,
+            tuleva_fund_disclosure_requirement('nav_procedure_file', self::SAVINGS_TEMPLATE)
         );
+    }
+
+    #[Test]
+    public function tkf100_has_no_co2_intensity_and_the_pension_funds_do(): void
+    {
+        foreach (self::PENSION_TEMPLATES as $template) {
+            $this->assertSame(
+                TULEVA_DISCLOSURE_REQUIRED,
+                tuleva_fund_disclosure_requirement('fund_co2_intensity', $template)
+            );
+        }
+
+        $this->assertNull(
+            tuleva_fund_disclosure_requirement('fund_co2_intensity', self::SAVINGS_TEMPLATE),
+            'No CO2 intensity is calculated for TKF100; the figure must not be scoped to its page'
+        );
+    }
+
+    /**
+     * The savings template still carries the markup, so publishing a TKF100 figure one day
+     * is an edit to the scope table and nothing else. Until then it renders nothing.
+     */
+    #[Test]
+    public function the_savings_page_renders_no_co2_figure_while_it_is_out_of_scope(): void
+    {
+        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+        FakeFundPage::$fields['fund_co2_intensity'] = '83.68';
+
+        $this->assertSame('', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
+    }
+
+    #[Test]
+    public function a_text_disclosure_is_not_given_file_field_settings(): void
+    {
+        $fields = [];
+
+        foreach (tuleva_fund_disclosure_field_group('page_fund-stocks.php')['fields'] as $field) {
+            $fields[$field['name']] = $field;
+        }
+
+        $this->assertSame('text', $fields['fund_co2_intensity']['type']);
+        $this->assertArrayNotHasKey('mime_types', $fields['fund_co2_intensity']);
+        $this->assertSame('pdf', $fields['prospectus_file']['mime_types']);
     }
 
     #[Test]
@@ -169,7 +212,7 @@ final class FundDocumentsTest extends TestCase
 
         $this->assertSame(
             '',
-            tuleva_fund_document_url('investor_rights_file', 'https://tuleva.ee/tkf100-investor-rights.pdf')
+            tuleva_fund_disclosure_value('investor_rights_file', 'https://tuleva.ee/tkf100-investor-rights.pdf')
         );
     }
 
@@ -180,14 +223,14 @@ final class FundDocumentsTest extends TestCase
 
         $this->assertSame(
             'https://tuleva.ee/old-prospectus.pdf',
-            tuleva_fund_document_url('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
+            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
         );
 
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/new-prospectus.pdf';
 
         $this->assertSame(
             'https://tuleva.ee/new-prospectus.pdf',
-            tuleva_fund_document_url('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
+            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
         );
     }
 
@@ -199,7 +242,7 @@ final class FundDocumentsTest extends TestCase
 
         $this->assertSame(
             'https://tuleva.ee/upcoming-terms.pdf',
-            tuleva_fund_document_url('terms_upcoming_file')
+            tuleva_fund_disclosure_value('terms_upcoming_file')
         );
     }
 
@@ -209,7 +252,7 @@ final class FundDocumentsTest extends TestCase
         FakeFundPage::$template = 'page_front.php';
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/prospectus.pdf';
 
-        $this->assertSame('', tuleva_fund_document_url('prospectus_file', 'https://tuleva.ee/fallback.pdf'));
+        $this->assertSame('', tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/fallback.pdf'));
     }
 
     #[Test]
@@ -223,9 +266,12 @@ final class FundDocumentsTest extends TestCase
             'investment_report_file' => 'https://tuleva.ee/report.pdf',
         ];
 
-        // key_investor_info_file is required and unset; the two upcoming documents and
-        // previous_reports_url are optional and unset.
-        $this->assertSame(['key_investor_info_file'], tuleva_fund_documents_missing());
+        // key_investor_info_file and fund_co2_intensity are required and unset; the two
+        // upcoming documents and previous_reports_url are optional and unset.
+        $this->assertSame(
+            ['key_investor_info_file', 'fund_co2_intensity'],
+            tuleva_fund_disclosures_missing()
+        );
     }
 
     #[Test]
@@ -233,13 +279,13 @@ final class FundDocumentsTest extends TestCase
     {
         FakeFundPage::$template = self::SAVINGS_TEMPLATE;
 
-        foreach (tuleva_fund_document_scope()[self::SAVINGS_TEMPLATE] as $name => $requirement) {
-            if ($requirement === TULEVA_DOCUMENT_REQUIRED) {
+        foreach (tuleva_fund_disclosure_scope()[self::SAVINGS_TEMPLATE] as $name => $requirement) {
+            if ($requirement === TULEVA_DISCLOSURE_REQUIRED) {
                 FakeFundPage::$fields[$name] = "https://tuleva.ee/$name.pdf";
             }
         }
 
-        $this->assertSame([], tuleva_fund_documents_missing());
+        $this->assertSame([], tuleva_fund_disclosures_missing());
     }
 
     /**

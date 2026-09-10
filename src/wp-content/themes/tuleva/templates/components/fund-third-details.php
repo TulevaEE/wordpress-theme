@@ -3,15 +3,16 @@
 // the pre-ACF values and render only while a field is empty. Update the field, not the
 // literal — editing a literal whose field is already set changes nothing visible, which
 // is a quiet way to believe a document was published.
-$prospectus_url = tuleva_fund_document_url('prospectus_file', get_site_url() . '/wp-content/uploads/2026/03/TUV100-Prospekt-kehtib-alates-02.03.2026.pdf');
-$terms_url = tuleva_fund_document_url('terms_file', get_site_url() . '/wp-content/uploads/2026/03/Tuleva-III-Samba-Pensionifondi-tingimused-kehtib-alates-02.03.2026.pdf');
-$prospectus_upcoming_url = tuleva_fund_document_url('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-Prospekt-kehtib-alates-18.09.2026.pdf');
-$terms_upcoming_url = tuleva_fund_document_url('terms_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-tingimused-kehtivad-alates-18.09.2026.pdf');
+$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/03/TUV100-Prospekt-kehtib-alates-02.03.2026.pdf');
+$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/03/Tuleva-III-Samba-Pensionifondi-tingimused-kehtib-alates-02.03.2026.pdf');
+$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-Prospekt-kehtib-alates-18.09.2026.pdf');
+$terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-tingimused-kehtivad-alates-18.09.2026.pdf');
 $upcoming_effective_date = tuleva_document_effective_date($prospectus_upcoming_url ?: $terms_upcoming_url, '18.09.2026');
-$model_portfolio_url = tuleva_fund_document_url('model_portfolio_file', get_site_url() . '/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf');
-$key_investor_info_url = tuleva_fund_document_url('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/03/Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf');
-$investment_report_url = tuleva_fund_document_url('investment_report_file', 'https://tuleva.ee/wp-content/uploads/2026/09/Tuleva-III-Samba-Pensionifondi-investeeringute-aruanne-2026-08.pdf');
-$previous_reports_url = tuleva_fund_document_url('previous_reports_url', 'https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/');
+$model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file', get_site_url() . '/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf');
+$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/03/Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf');
+$investment_report_url = tuleva_fund_disclosure_value('investment_report_file', 'https://tuleva.ee/wp-content/uploads/2026/09/Tuleva-III-Samba-Pensionifondi-investeeringute-aruanne-2026-08.pdf');
+$previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url', 'https://www.pensionikeskus.ee/iii-sammas/vabatahtlikud-fondid/fid/81/');
+$fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '83.73');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -122,7 +123,7 @@ $previous_reports_url = tuleva_fund_document_url('previous_reports_url', 'https:
                         <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
-                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), 83.73) ?></span>
+                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), esc_html($fund_co2_intensity)) ?></span>
                         </p>
                     </div>
                 </div>
