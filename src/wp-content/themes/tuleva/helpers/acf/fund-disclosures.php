@@ -1,33 +1,38 @@
 <?php
 /**
- * Fund page documents: one field vocabulary, one declaration of which fund has what.
+ * What each fund publishes on its page: one field vocabulary, one declaration of which
+ * fund has what.
  *
- * A document's field name is identical on every fund page that carries it, so nothing
+ * Covers the documents (prospectus, terms, key investor information, model portfolio,
+ * investment report) and the figures disclosed beside them (CO2 intensity). A
+ * disclosure's field name is identical on every fund page that carries it, so nothing
  * downstream branches per fund — a publishing script or onboarding-service resolves
- * fund → page slug and document → field name, and that is the whole mapping.
+ * fund → page slug and disclosure → field name, and that is the whole mapping.
  *
- * What differs per fund is whether the field exists at all. TKF100 is a UCITS fund
- * and publishes a summary of investor rights and its own NAV procedure; the pension
- * funds publish neither. A document absent from a fund's scope has no field in
- * wp-admin, no key in that page's REST response, and renders nothing — which is a
- * different thing from a document that applies but has not been uploaded yet.
+ * What differs per fund is whether the field exists at all. TKF100 is a UCITS fund and
+ * publishes a summary of investor rights and its own NAV procedure; the pension funds
+ * publish neither, and TKF100 has no CO2 intensity figure because none is calculated
+ * for it. A disclosure absent from a fund's scope has no field in wp-admin, no key in
+ * that page's REST response, and renders nothing — which is a different thing from a
+ * disclosure that applies but has not been supplied yet.
  *
- * See docs/TODO — Fund document automation.md.
+ * See "TODO — Fund page document publishing" in the tuleva repo,
+ * work/investeerimistegevus/docs/.
  */
 
 /**
- * Empty is a gap worth reporting: the fund is expected to publish this document.
+ * Empty is a gap worth reporting: the fund is expected to publish this.
  */
-const TULEVA_DOCUMENT_REQUIRED = 'required';
+const TULEVA_DISCLOSURE_REQUIRED = 'required';
 
 /**
  * Empty is normal: an upcoming document exists only between approval and its
  * effective date.
  */
-const TULEVA_DOCUMENT_OPTIONAL = 'optional';
+const TULEVA_DISCLOSURE_OPTIONAL = 'optional';
 
 /**
- * Every document a fund page can carry, defined once.
+ * Every disclosure a fund page can carry, defined once.
  *
  * 'keys' pins the ACF field key on pages where the field already exists. ACF stores a
  * value under the field *name* and a reference to the key alongside it, so generating
@@ -35,7 +40,7 @@ const TULEVA_DOCUMENT_OPTIONAL = 'optional';
  * dangling. TKF100's fields predate this catalogue and keep the keys they were
  * registered with.
  */
-function tuleva_fund_document_catalogue(): array
+function tuleva_fund_disclosure_catalogue(): array
 {
     return [
         'prospectus_file' => [
@@ -100,6 +105,14 @@ function tuleva_fund_document_catalogue(): array
             'instructions' => 'Archive of earlier investment reports, usually on pensionikeskus.ee.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_previous_reports_url'],
         ],
+        'fund_co2_intensity' => [
+            'label' => 'CO2 Intensity',
+            // Text, not number: the figure is rendered verbatim and trailing zeros are
+            // significant — "133.80" must not collapse to "133.8".
+            'type' => 'text',
+            'instructions' => 'Weighted average carbon intensity, number only (e.g. "83.68"). Quarterly.',
+            'keys' => ['page_fund-savings.php' => 'field_fund_savings_co2_intensity'],
+        ],
     ];
 }
 
@@ -110,19 +123,20 @@ function tuleva_fund_document_catalogue(): array
  * are per page template and every fund has its own, so turning a document off for one
  * fund is one line here and needs no template change.
  */
-function tuleva_fund_document_scope(): array
+function tuleva_fund_disclosure_scope(): array
 {
     // The three pension funds publish the same set. Their NAV procedure is one shared
     // document for all of them, so it lives on the options page rather than per page.
     $pension_fund = [
-        'prospectus_file' => TULEVA_DOCUMENT_REQUIRED,
-        'terms_file' => TULEVA_DOCUMENT_REQUIRED,
-        'prospectus_upcoming_file' => TULEVA_DOCUMENT_OPTIONAL,
-        'terms_upcoming_file' => TULEVA_DOCUMENT_OPTIONAL,
-        'model_portfolio_file' => TULEVA_DOCUMENT_REQUIRED,
-        'key_investor_info_file' => TULEVA_DOCUMENT_REQUIRED,
-        'investment_report_file' => TULEVA_DOCUMENT_REQUIRED,
-        'previous_reports_url' => TULEVA_DOCUMENT_OPTIONAL,
+        'prospectus_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'terms_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'prospectus_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+        'terms_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+        'model_portfolio_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'key_investor_info_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'investment_report_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'previous_reports_url' => TULEVA_DISCLOSURE_OPTIONAL,
+        'fund_co2_intensity' => TULEVA_DISCLOSURE_REQUIRED,
     ];
 
     return [
@@ -130,17 +144,20 @@ function tuleva_fund_document_scope(): array
         'page_fund-bonds.php' => $pension_fund,
         'page_fund-third.php' => $pension_fund,
         'page_fund-savings.php' => [
-            'prospectus_file' => TULEVA_DOCUMENT_REQUIRED,
-            'terms_file' => TULEVA_DOCUMENT_REQUIRED,
-            'prospectus_upcoming_file' => TULEVA_DOCUMENT_OPTIONAL,
-            'terms_upcoming_file' => TULEVA_DOCUMENT_OPTIONAL,
-            'model_portfolio_file' => TULEVA_DOCUMENT_REQUIRED,
-            'key_investor_info_file' => TULEVA_DOCUMENT_REQUIRED,
-            'nav_procedure_file' => TULEVA_DOCUMENT_REQUIRED,
-            'nav_procedure_upcoming_file' => TULEVA_DOCUMENT_OPTIONAL,
-            'investor_rights_file' => TULEVA_DOCUMENT_REQUIRED,
-            'investment_report_file' => TULEVA_DOCUMENT_REQUIRED,
-            'previous_reports_url' => TULEVA_DOCUMENT_OPTIONAL,
+            'prospectus_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'terms_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'prospectus_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+            'terms_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+            'model_portfolio_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'key_investor_info_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'nav_procedure_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'nav_procedure_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+            'investor_rights_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'investment_report_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'previous_reports_url' => TULEVA_DISCLOSURE_OPTIONAL,
+            // fund_co2_intensity is deliberately absent: no CO2 intensity is calculated
+            // for TKF100. The savings template renders the block the moment this line
+            // exists, so starting to publish one is an edit here and nothing else.
         ],
     ];
 }
@@ -148,29 +165,29 @@ function tuleva_fund_document_scope(): array
 /**
  * 'required', 'optional', or null when the document does not apply to that fund.
  */
-function tuleva_fund_document_requirement(string $name, string $template): ?string
+function tuleva_fund_disclosure_requirement(string $name, string $template): ?string
 {
-    return tuleva_fund_document_scope()[$template][$name] ?? null;
+    return tuleva_fund_disclosure_scope()[$template][$name] ?? null;
 }
 
-function tuleva_fund_document_applies(string $name, ?string $template = null): bool
+function tuleva_fund_disclosure_applies(string $name, ?string $template = null): bool
 {
     $template = $template ?? tuleva_current_fund_template();
 
-    return $template !== '' && tuleva_fund_document_requirement($name, $template) !== null;
+    return $template !== '' && tuleva_fund_disclosure_requirement($name, $template) !== null;
 }
 
 /**
  * Documents a fund is expected to publish but has not got a value for. Optional
  * documents and documents outside the fund's scope never appear here.
  */
-function tuleva_fund_documents_missing(?string $template = null, $post_id = null): array
+function tuleva_fund_disclosures_missing(?string $template = null, $post_id = null): array
 {
     $template = $template ?? tuleva_current_fund_template();
     $missing = [];
 
-    foreach (tuleva_fund_document_scope()[$template] ?? [] as $name => $requirement) {
-        if ($requirement === TULEVA_DOCUMENT_REQUIRED && !get_field($name, $post_id)) {
+    foreach (tuleva_fund_disclosure_scope()[$template] ?? [] as $name => $requirement) {
+        if ($requirement === TULEVA_DISCLOSURE_REQUIRED && !get_field($name, $post_id)) {
             $missing[] = $name;
         }
     }
@@ -185,9 +202,9 @@ function tuleva_fund_documents_missing(?string $template = null, $post_id = null
  * empty TKF100 CO2 figure must not borrow a pension fund's, and a pension fund with
  * no summary of investor rights must not borrow TKF100's.
  */
-function tuleva_fund_document_url(string $name, string $fallback = '', ?string $template = null): string
+function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?string $template = null): string
 {
-    if (!tuleva_fund_document_applies($name, $template)) {
+    if (!tuleva_fund_disclosure_applies($name, $template)) {
         return '';
     }
 
@@ -242,15 +259,15 @@ function tuleva_fund_template_slug(string $template): string
     return strtolower(preg_replace('/[^A-Za-z0-9]+/', '_', $slug));
 }
 
-function tuleva_fund_document_field(string $name, string $template): array
+function tuleva_fund_disclosure_field(string $name, string $template): array
 {
-    $document = tuleva_fund_document_catalogue()[$name];
-    $requirement = tuleva_fund_document_requirement($name, $template);
+    $document = tuleva_fund_disclosure_catalogue()[$name];
+    $requirement = tuleva_fund_disclosure_requirement($name, $template);
     $type = $document['type'] ?? 'file';
 
     $field = [
         'key' => $document['keys'][$template]
-            ?? 'field_fund_doc_' . tuleva_fund_template_slug($template) . '_' . $name,
+            ?? 'field_fund_disclosure_' . tuleva_fund_template_slug($template) . '_' . $name,
         'label' => $document['label'],
         'name' => $name,
         'type' => $type,
@@ -266,22 +283,22 @@ function tuleva_fund_document_field(string $name, string $template): array
         $field['mime_types'] = 'pdf';
     }
 
-    if ($requirement === TULEVA_DOCUMENT_OPTIONAL && $field['instructions'] === '') {
+    if ($requirement === TULEVA_DISCLOSURE_OPTIONAL && $field['instructions'] === '') {
         $field['instructions'] = 'Optional.';
     }
 
     return $field;
 }
 
-function tuleva_fund_document_field_group(string $template): array
+function tuleva_fund_disclosure_field_group(string $template): array
 {
-    $documents = tuleva_fund_document_scope()[$template] ?? [];
+    $documents = tuleva_fund_disclosure_scope()[$template] ?? [];
 
     return [
-        'key' => 'group_fund_documents_' . tuleva_fund_template_slug($template),
-        'title' => 'Fund Documents',
+        'key' => 'group_fund_disclosures_' . tuleva_fund_template_slug($template),
+        'title' => 'Fund Documents & Disclosures',
         'fields' => array_map(
-            fn($name) => tuleva_fund_document_field($name, $template),
+            fn($name) => tuleva_fund_disclosure_field($name, $template),
             array_keys($documents)
         ),
         'location' => [
@@ -308,8 +325,8 @@ function tuleva_fund_document_field_group(string $template): array
 }
 
 if (function_exists('acf_add_local_field_group')) {
-    foreach (array_keys(tuleva_fund_document_scope()) as $tuleva_template) {
-        acf_add_local_field_group(tuleva_fund_document_field_group($tuleva_template));
+    foreach (array_keys(tuleva_fund_disclosure_scope()) as $tuleva_template) {
+        acf_add_local_field_group(tuleva_fund_disclosure_field_group($tuleva_template));
     }
 
     unset($tuleva_template);
