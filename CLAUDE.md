@@ -17,11 +17,11 @@ Theme templates live in:
 ## Fund document updates (main recurring task)
 
 Tuleva has four funds. Their documents — prospectus, terms, key investor information,
-model portfolio, monthly investment report — are updated a few times per year, and each
-one is an ACF field on that fund's page. Setting the field is the whole update: no
-commit, no deploy.
+model portfolio, monthly investment report — plus the CO2 intensity figure published
+beside them are each an ACF field on that fund's page. Setting the field is the whole
+update: no commit, no deploy.
 
-Field names are identical on every fund page that carries the document, so nothing
+Field names are identical on every fund page that carries the field, so nothing
 downstream branches per fund: fund → page slug, document → field name.
 
 | Fund | Page ID | Slug | Page template |
@@ -35,14 +35,21 @@ downstream branches per fund: fund → page slug, document → field name.
 
 ### Which documents a fund has
 
-`helpers/acf/fund-documents.php` holds one catalogue of document definitions and one
-scope table saying, per page template, whether each document is required, optional, or
-absent. Absent means the document does not exist for that fund: no field in wp-admin, no
-key in the REST response, nothing rendered. TKF100 is a UCITS fund and carries a summary
-of investor rights and its own NAV procedure; the pension funds carry neither and share
-one NAV procedure document instead.
+`helpers/acf/fund-disclosures.php` holds one catalogue of field definitions and one scope
+table saying, per page template, whether each is required, optional, or absent. Absent
+means it does not exist for that fund: no field in wp-admin, no key in the REST response,
+nothing rendered, and no fallback to another fund's value.
 
-Adding or removing a document for a fund is an edit to the scope table, not to a
+- TKF100 is a UCITS fund and carries a summary of investor rights and its own NAV
+  procedure; the pension funds carry neither and share one NAV procedure document.
+- The pension funds carry `fund_co2_intensity`; TKF100 does not, because no CO2 intensity
+  is calculated for it. The markup is there, so publishing one becomes a scope-table edit.
+
+The catalogue covers the CO2 figure alongside the documents because it has the same
+problem: published on the fund page, updated on a cadence, and not the same set for every
+fund.
+
+Adding or removing a disclosure for a fund is an edit to the scope table, not to a
 template.
 
 ### Updating a document
@@ -94,10 +101,12 @@ field is empty. The fields are not populated yet, so in practice the pages still
 code URLs and a document change still needs a template edit.
 
 Once a page's fields are set, **editing the literal changes nothing visible** — the field
-wins. Update the field. Removing the fallbacks is a step in
-[docs/TODO — Fund document automation.md](docs/TODO%20%E2%80%94%20Fund%20document%20automation.md),
-along with moving the firm-wide documents onto the options page and replacing
-`scripts/update_acf.py` with one manifest-driven publisher.
+wins. Update the field.
+
+Removing the fallbacks, moving the firm-wide documents onto the options page and
+replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
+`TODO — Fund page document publishing.md`, in the private tuleva repo under
+`work/investeerimistegevus/docs/`.
 
 ---
 

@@ -152,14 +152,9 @@ acf_add_local_field_group(array (
             'instructions' => 'Comparison index (e.g., "100% MSCI ACWI (EUR)")',
             'required' => 0,
         ),
-        array (
-            'key' => 'field_fund_savings_co2_intensity',
-            'label' => 'CO2 Intensity',
-            'name' => 'fund_co2_intensity',
-            'type' => 'text',
-            'instructions' => 'CO2 intensity value (number only, e.g., "80.13")',
-            'required' => 0,
-        ),
+        // fund_co2_intensity moved to the catalogue in helpers/acf/fund-disclosures.php,
+        // which scopes it to the three pension funds — no CO2 intensity is calculated for
+        // TKF100. Its key is pinned there for the day one is.
     ),
     'location' => array (
         array (
@@ -179,7 +174,7 @@ acf_add_local_field_group(array (
 ));
 
 // Document fields for this page are generated from the catalogue in
-// helpers/acf/fund-documents.php, which registers them for every fund page from one
+// helpers/acf/fund-disclosures.php, which registers them for every fund page from one
 // definition. The keys TKF100's fields were registered with are pinned there.
 
 endif;
