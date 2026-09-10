@@ -10,6 +10,7 @@ $acf_includes = [
     'helpers/acf/membership.php', // Membership page
     'helpers/acf/fund-other.php', // Other fund pages
     'helpers/acf/fund-savings.php', // Savings fund page
+    'helpers/acf/fund-disclosures.php', // Documents and disclosures on every fund page
     'helpers/acf/fund-choosing.php', // Instructions — Step 1 page fields
     'helpers/acf/jobs.php' // Jobs page fields
 ];

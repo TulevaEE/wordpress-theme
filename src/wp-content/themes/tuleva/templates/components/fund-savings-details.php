@@ -9,37 +9,27 @@ $fund_redemption_fee = get_field('fund_redemption_fee') ?: '0%';
 $fund_manager_participation = get_field('fund_manager_participation');
 $fund_risk_profile = get_field('fund_risk_profile');
 $fund_comparison_index = get_field('fund_comparison_index');
-$fund_co2_intensity = get_field('fund_co2_intensity');
+// Out of scope for TKF100 today, so this is '' and the block below stays hidden.
+$fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 
-// Documents — code URLs are the source of truth; ACF fields (post 35292) act as optional overrides.
-// After the upcoming effective date, blank out the $code_..._upcoming_url values to hide the upcoming section.
-$code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Prospekt-kehtib-alates-15.06.2026.pdf';
-$code_terms_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Tingimused-kehtib-alates-15.06.2026.pdf';
-$code_prospectus_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
-$code_terms_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
-$upcoming_effective_date = '18.09.2026';
-
-$prospectus_url = get_field('prospectus_file') ?: $code_prospectus_url;
-$terms_url = get_field('terms_file') ?: $code_terms_url;
-$prospectus_upcoming_acf = get_field('prospectus_upcoming_file');
-$terms_upcoming_acf = get_field('terms_upcoming_file');
-$prospectus_upcoming_url = ($prospectus_upcoming_acf && !empty($prospectus_upcoming_acf['url'])) ? $prospectus_upcoming_acf['url'] : $code_prospectus_upcoming_url;
-$terms_upcoming_url = ($terms_upcoming_acf && !empty($terms_upcoming_acf['url'])) ? $terms_upcoming_acf['url'] : $code_terms_upcoming_url;
-$model_portfolio_url = get_field('model_portfolio_file');
-$key_investor_info_url = get_field('key_investor_info_file');
-$investment_report_url = get_field('investment_report_file');
-$previous_reports_url = get_field('previous_reports_url');
-// TKF100 has its own NAV procedure document (separate from pension funds).
-// Code URL is source of truth; the ACF field acts as an optional override.
-// After the upcoming effective date, blank out $code_nav_procedure_upcoming_url to hide the upcoming row.
-$code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Fondi-vara-puhasvaartuse-maaramise-sisekord.pdf';
-$code_nav_procedure_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
-$nav_procedure_upcoming_effective_date = '18.09.2026';
-
-$nav_procedure_url = get_field('nav_procedure_file') ?: $code_nav_procedure_url;
-$nav_procedure_upcoming_acf = get_field('nav_procedure_upcoming_file');
-$nav_procedure_upcoming_url = ($nav_procedure_upcoming_acf && !empty($nav_procedure_upcoming_acf['url'])) ? $nav_procedure_upcoming_acf['url'] : $code_nav_procedure_upcoming_url;
-$investor_rights_url = get_field('investor_rights_file');
+// Documents. The ACF fields on this page are the source of truth; the URLs below are
+// the pre-ACF values and render only while a field is empty. Update the field, not the
+// literal — editing a literal whose field is already set changes nothing visible, which
+// is a quiet way to believe a document was published.
+$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/05/TKF100-Prospekt-kehtib-alates-15.06.2026.pdf');
+$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/05/TKF100-Tingimused-kehtib-alates-15.06.2026.pdf');
+$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf');
+$terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
+$upcoming_effective_date = tuleva_document_effective_date($prospectus_upcoming_url ?: $terms_upcoming_url, '18.09.2026');
+$model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
+$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file');
+$investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
+$previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
+// TKF100 has its own NAV procedure document, separate from the one the pension funds share.
+$nav_procedure_url = tuleva_fund_disclosure_value('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Fondi-vara-puhasvaartuse-maaramise-sisekord.pdf');
+$nav_procedure_upcoming_url = tuleva_fund_disclosure_value('nav_procedure_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
+$nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url, '18.09.2026');
+$investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
