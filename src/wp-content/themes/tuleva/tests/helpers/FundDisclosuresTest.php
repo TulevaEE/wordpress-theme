@@ -322,6 +322,30 @@ final class FundDisclosuresTest extends TestCase
         $this->assertSame('', tuleva_document_effective_date(''));
     }
 
+    /**
+     * A filename is a hand-typed string, and it now drives a statement about when a
+     * document takes effect. The pension funds' NAV procedure is published as
+     * "...kehtib-alates-02.03.3026.pdf" — a real typo for 2026, live today.
+     */
+    #[Test]
+    public function an_implausible_effective_date_is_refused(): void
+    {
+        $this->assertSame(
+            '02.03.2026',
+            tuleva_document_effective_date(
+                'Pensionifondide-vara-puhasvaartuse-maaramise-sisekord.kehtib-alates-02.03.3026.pdf',
+                '02.03.2026'
+            )
+        );
+    }
+
+    #[Test]
+    public function a_date_that_is_not_a_date_is_refused(): void
+    {
+        $this->assertSame('', tuleva_document_effective_date('Prospekt-kehtib-alates-31.02.2027.pdf'));
+        $this->assertSame('', tuleva_document_effective_date('Prospekt-kehtib-alates-00.13.2027.pdf'));
+    }
+
     #[Test]
     public function template_slugs_namespace_the_generated_keys_readably(): void
     {
