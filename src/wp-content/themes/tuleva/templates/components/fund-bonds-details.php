@@ -1,3 +1,15 @@
+<?php
+$fund = [
+    'isin' => 'EE3600109443',
+    'inception_date' => __('27 March 2017', TEXT_DOMAIN),
+    'management_fee' => '0,163%',
+    'ongoing_charges' => '0,28%',
+    'redemption_fee' => '0%',
+    'manager_participation' => '306 250',
+    'risk_profile' => __('Conservative', TEXT_DOMAIN),
+    'comparison_index' => ['50% Bloomberg Barclays Global Aggregate Index (EUR)', '50% Bloomberg Barclays Euro Aggregate Bond Index (EUR)'],
+];
+?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
         <div class="row">
@@ -7,7 +19,7 @@
                         <h2 class="mt-5 mb-4 h4"><?php _e('Fund details', TEXT_DOMAIN) ?></h2>
                         <p class="fund-info__item">
                             <span class="small text-bold">ISIN</span>
-                            <span>EE3600109443</span>
+                            <span><?php echo $fund['isin']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Currency', TEXT_DOMAIN) ?></span>
@@ -15,7 +27,7 @@
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Date of inception', TEXT_DOMAIN) ?></span>
-                            <span><?php _e('27 March 2017', TEXT_DOMAIN) ?></span>
+                            <span><?php echo $fund['inception_date']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Fund volume', TEXT_DOMAIN) ?></span>
@@ -27,28 +39,29 @@
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
-                            <span>0,163%</span>
+                            <span><?php echo $fund['management_fee']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
-                            <span>0,28%</span>
+                            <span><?php echo $fund['ongoing_charges']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
-                            <span>0%</span>
+                            <span><?php echo $fund['redemption_fee']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></span>
-                            <span>306 250 <?php _e('units', TEXT_DOMAIN) ?></span>
+                            <span><?php echo $fund['manager_participation']; ?> <?php _e('units', TEXT_DOMAIN) ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></span>
-                            <span><?php _e('Conservative', TEXT_DOMAIN) ?></span>
+                            <span><?php echo $fund['risk_profile']; ?></span>
                         </p>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Comparison index', TEXT_DOMAIN) ?></span>
-                            <span>50% Bloomberg Barclays Global Aggregate Index (EUR)</span>
-                            <span>50% Bloomberg Barclays Euro Aggregate Bond Index (EUR)</span>
+                            <?php foreach ($fund['comparison_index'] as $index) { ?>
+                                <span><?php echo $index; ?></span>
+                            <?php } ?>
                         </p>
                     </div>
                     <div class="col-md-6 ps-md-6">
@@ -106,3 +119,4 @@
         </div>
     </div>
 </section>
+<?php echo fund_schema_script($fund); ?>

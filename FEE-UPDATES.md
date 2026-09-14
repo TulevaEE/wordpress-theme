@@ -20,15 +20,17 @@ Use this guide whenever Tuleva changes management fees or ongoing charges figure
 
 All files are in `src/wp-content/themes/tuleva/`.
 
-### 1. Fund detail components (displayed fee table)
+### 1. Fund detail components (displayed fee table and JSON-LD)
 
-Edit management fee and ongoing charges in:
+Each pension fund component declares its facts once in the `$fund` array at the top of the file; the visible table and the `InvestmentFund` JSON-LD (read by search engines and AI crawlers) both render from it. Edit `management_fee` and `ongoing_charges` there:
 
-| File | Management fee line | Ongoing charges line |
-|---|---|---|
-| `templates/components/fund-stocks-details.php` | `<span>X,XXX%</span>` (line ~30) | `<span>X,XX%</span>` (line ~34) |
-| `templates/components/fund-bonds-details.php` | same pattern | same pattern |
-| `templates/components/fund-third-details.php` | same pattern | same pattern |
+| File | Array keys |
+|---|---|
+| `templates/components/fund-stocks-details.php` | `'management_fee' => 'X,XXX%'`, `'ongoing_charges' => 'X,XX%'` |
+| `templates/components/fund-bonds-details.php` | same |
+| `templates/components/fund-third-details.php` | same |
+
+TKF100 (`fund-savings-details.php`) reads the same values from ACF fields (see Part B); its JSON-LD follows those fields automatically.
 
 ### 2. Calculator (homepage)
 

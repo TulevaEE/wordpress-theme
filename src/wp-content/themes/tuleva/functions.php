@@ -19,6 +19,7 @@ $theme_includes = [
     'widgets/init.php', // Init widgets
     'helpers/editor.php', // Editor customizations
     'helpers/setup.php', // Enqueue scripts & styles
+    'helpers/schema.php', // Organization and FAQ structured data
 ];
 
 foreach ($theme_includes as $file) {

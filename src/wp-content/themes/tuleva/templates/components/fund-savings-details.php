@@ -227,3 +227,12 @@ $investor_rights_url = get_field('investor_rights_file');
         </div>
     </div>
 </section>
+<?php echo fund_schema_script([
+    'isin' => $fund_isin,
+    'inception_date' => $fund_inception_date,
+    'management_fee' => $fund_management_fee,
+    'ongoing_charges' => $fund_ongoing_charges,
+    'redemption_fee' => $fund_redemption_fee,
+    'risk_profile' => $fund_risk_profile,
+    'comparison_index' => $fund_comparison_index,
+]); ?>
