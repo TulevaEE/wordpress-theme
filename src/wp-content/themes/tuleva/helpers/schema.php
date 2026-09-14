@@ -101,7 +101,8 @@ function fund_schema_fields(array $labels, array $fund): array
  * Renders the InvestmentFund JSON-LD script for a fund page from the same facts
  * the visible fund details table shows
  * @param  array $fund isin, inception_date, management_fee, ongoing_charges,
- *                     redemption_fee, risk_profile, comparison_index
+ *                     redemption_fee, risk_profile, comparison_index and an
+ *                     optional name (defaults to the page title)
  * @return string      Script element, or an empty string without an ISIN
  */
 function fund_schema_script(array $fund): string
@@ -117,7 +118,7 @@ function fund_schema_script(array $fund): string
     ], $fund);
 
     $json = fund_schema_json([
-        'name' => get_the_title(),
+        'name' => $fund['name'] ?? get_the_title(),
         'url' => get_permalink(),
         'isin' => $fund['isin'],
         'provider' => 'Tuleva Fondid AS',

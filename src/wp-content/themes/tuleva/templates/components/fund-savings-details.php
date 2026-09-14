@@ -228,6 +228,7 @@ $investor_rights_url = get_field('investor_rights_file');
     </div>
 </section>
 <?php echo fund_schema_script([
+    'name' => __('Tuleva Additional Investment Fund', TEXT_DOMAIN),
     'isin' => $fund_isin,
     'inception_date' => $fund_inception_date,
     'management_fee' => $fund_management_fee,
