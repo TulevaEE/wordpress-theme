@@ -348,7 +348,7 @@ msgstr "Investori õiguste kokkuvõte"
 
 #: templates/components/fund-savings-header.php:12
 msgid "Tuleva Additional Investment Fund"
-msgstr "Tuleva täiendav kogumisfond"
+msgstr "Tuleva Täiendav Kogumisfond"
 
 #: templates/components/fund-stocks-details.php:46 templates/components/fund-third-details.php:46
 msgid "Aggressive"
