@@ -15,6 +15,7 @@ $fund_co2_intensity = get_field('fund_co2_intensity');
 // After the upcoming effective date, blank out the $code_..._upcoming_url values to hide the upcoming section.
 $code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
 $code_terms_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
+$code_key_investor_info_url = get_site_url() . '/wp-content/uploads/2026/09/TKF100-Pohiteave-kehtib-alates-18.09.2026.pdf';
 $code_prospectus_upcoming_url = '';
 $code_terms_upcoming_url = '';
 $upcoming_effective_date = '';
@@ -26,7 +27,7 @@ $terms_upcoming_acf = get_field('terms_upcoming_file');
 $prospectus_upcoming_url = ($prospectus_upcoming_acf && !empty($prospectus_upcoming_acf['url'])) ? $prospectus_upcoming_acf['url'] : $code_prospectus_upcoming_url;
 $terms_upcoming_url = ($terms_upcoming_acf && !empty($terms_upcoming_acf['url'])) ? $terms_upcoming_acf['url'] : $code_terms_upcoming_url;
 $model_portfolio_url = get_field('model_portfolio_file');
-$key_investor_info_url = get_field('key_investor_info_file');
+$key_investor_info_url = get_field('key_investor_info_file') ?: $code_key_investor_info_url;
 $investment_report_url = get_field('investment_report_file');
 $previous_reports_url = get_field('previous_reports_url');
 // TKF100 has its own NAV procedure document (separate from pension funds).
