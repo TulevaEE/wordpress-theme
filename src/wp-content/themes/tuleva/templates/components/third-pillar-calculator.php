@@ -1,14 +1,10 @@
 <?php
 $isSeptemberToDecember = (date('m') >= 9);
-function get_translated_link()
-{
-    if (ICL_LANGUAGE_CODE == 'en') {
-        return '#modal-gross_income';
-    } elseif (ICL_LANGUAGE_CODE == 'et') {
-        return '#modal-brutotulu';
-    }
-}
-
+$grossIncomeModalLink = match (ICL_LANGUAGE_CODE) {
+    'en' => '#modal-gross_income',
+    'et' => '#modal-brutotulu',
+    default => null,
+};
 ?>
 <div class="card calculator rounded-4">
     <div class="card-body p-2 third-pillar-calculator">
@@ -18,7 +14,7 @@ function get_translated_link()
                     <div class="mb-3 row align-items-center">
                         <label for="yearlyWage" class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0">
                             <?php _e('Total gross income', TEXT_DOMAIN); ?> (<a
-                                href="<?php echo esc_url(get_translated_link()); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
+                                href="<?php echo esc_url($grossIncomeModalLink); ?>"><?php _e('view', TEXT_DOMAIN); ?></a>)
                         </label>
                         <div class="col-sm-6 col-lg-7 col-xl-6">
                             <div class="input-group input-group-lg">
