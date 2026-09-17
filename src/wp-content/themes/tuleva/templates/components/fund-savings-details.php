@@ -13,11 +13,11 @@ $fund_co2_intensity = get_field('fund_co2_intensity');
 
 // Documents — code URLs are the source of truth; ACF fields (post 35292) act as optional overrides.
 // After the upcoming effective date, blank out the $code_..._upcoming_url values to hide the upcoming section.
-$code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Prospekt-kehtib-alates-15.06.2026.pdf';
-$code_terms_url = get_site_url() . '/wp-content/uploads/2026/05/TKF100-Tingimused-kehtib-alates-15.06.2026.pdf';
-$code_prospectus_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
-$code_terms_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
-$upcoming_effective_date = '18.09.2026';
+$code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
+$code_terms_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
+$code_prospectus_upcoming_url = '';
+$code_terms_upcoming_url = '';
+$upcoming_effective_date = '';
 
 $prospectus_url = get_field('prospectus_file') ?: $code_prospectus_url;
 $terms_url = get_field('terms_file') ?: $code_terms_url;
@@ -32,9 +32,9 @@ $previous_reports_url = get_field('previous_reports_url');
 // TKF100 has its own NAV procedure document (separate from pension funds).
 // Code URL is source of truth; the ACF field acts as an optional override.
 // After the upcoming effective date, blank out $code_nav_procedure_upcoming_url to hide the upcoming row.
-$code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Fondi-vara-puhasvaartuse-maaramise-sisekord.pdf';
-$code_nav_procedure_upcoming_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
-$nav_procedure_upcoming_effective_date = '18.09.2026';
+$code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
+$code_nav_procedure_upcoming_url = '';
+$nav_procedure_upcoming_effective_date = '';
 
 $nav_procedure_url = get_field('nav_procedure_file') ?: $code_nav_procedure_url;
 $nav_procedure_upcoming_acf = get_field('nav_procedure_upcoming_file');
