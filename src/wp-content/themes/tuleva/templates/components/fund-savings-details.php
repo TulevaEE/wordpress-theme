@@ -9,38 +9,36 @@ $fund_redemption_fee = get_field('fund_redemption_fee') ?: '0%';
 $fund_manager_participation = get_field('fund_manager_participation');
 $fund_risk_profile = get_field('fund_risk_profile');
 $fund_comparison_index = get_field('fund_comparison_index');
-$fund_co2_intensity = get_field('fund_co2_intensity');
+// Out of scope for TKF100 today, so this is '' and the block below stays hidden.
+$fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 
-// Documents — code URLs are the source of truth; ACF fields (post 35292) act as optional overrides.
-// After the upcoming effective date, blank out the $code_..._upcoming_url values to hide the upcoming section.
-$code_prospectus_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf';
-$code_terms_url = get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf';
-$code_key_investor_info_url = get_site_url() . '/wp-content/uploads/2026/09/TKF100-Pohiteave-kehtib-alates-18.09.2026.pdf';
-$code_prospectus_upcoming_url = '';
-$code_terms_upcoming_url = '';
-$upcoming_effective_date = '';
-
-$prospectus_url = get_field('prospectus_file') ?: $code_prospectus_url;
-$terms_url = get_field('terms_file') ?: $code_terms_url;
-$prospectus_upcoming_acf = get_field('prospectus_upcoming_file');
-$terms_upcoming_acf = get_field('terms_upcoming_file');
-$prospectus_upcoming_url = ($prospectus_upcoming_acf && !empty($prospectus_upcoming_acf['url'])) ? $prospectus_upcoming_acf['url'] : $code_prospectus_upcoming_url;
-$terms_upcoming_url = ($terms_upcoming_acf && !empty($terms_upcoming_acf['url'])) ? $terms_upcoming_acf['url'] : $code_terms_upcoming_url;
-$model_portfolio_url = get_field('model_portfolio_file');
-$key_investor_info_url = get_field('key_investor_info_file') ?: $code_key_investor_info_url;
-$investment_report_url = get_field('investment_report_file');
-$previous_reports_url = get_field('previous_reports_url');
-// TKF100 has its own NAV procedure document (separate from pension funds).
-// Code URL is source of truth; the ACF field acts as an optional override.
-// After the upcoming effective date, blank out $code_nav_procedure_upcoming_url to hide the upcoming row.
-$code_nav_procedure_url = get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
-$code_nav_procedure_upcoming_url = '';
-$nav_procedure_upcoming_effective_date = '';
-
-$nav_procedure_url = get_field('nav_procedure_file') ?: $code_nav_procedure_url;
-$nav_procedure_upcoming_acf = get_field('nav_procedure_upcoming_file');
-$nav_procedure_upcoming_url = ($nav_procedure_upcoming_acf && !empty($nav_procedure_upcoming_acf['url'])) ? $nav_procedure_upcoming_acf['url'] : $code_nav_procedure_upcoming_url;
-$investor_rights_url = get_field('investor_rights_file');
+// Documents. The ACF fields on this page are the source of truth; the URLs below are
+// the pre-ACF values and render only while a field is empty. Update the field, not the
+// literal — editing a literal whose field is already set changes nothing visible, which
+// is a quiet way to believe a document was published.
+$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf');
+$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
+// No upcoming prospectus or terms: the 18.09.2026 versions above are in force.
+$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file');
+$terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file');
+$prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
+$terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
+// One suffix can only state one date. The prospectus and the terms are approved
+// together and normally share it; when they do not — one published through its field
+// while the other is still on the pre-ACF URL — a shared suffix would put one
+// document's date on the other, so each goes on its own line with its own.
+$upcoming_dates_differ = $prospectus_upcoming_date !== '' && $terms_upcoming_date !== ''
+    && $prospectus_upcoming_date !== $terms_upcoming_date;
+$upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
+$model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
+$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Pohiteave-kehtib-alates-18.09.2026.pdf');
+$investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
+$previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
+// TKF100 has its own NAV procedure document, separate from the one the pension funds share.
+$nav_procedure_url = tuleva_fund_disclosure_value('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
+$nav_procedure_upcoming_url = tuleva_fund_disclosure_value('nav_procedure_upcoming_file');
+$nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
+$investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -127,6 +125,13 @@ $investor_rights_url = get_field('investor_rights_file');
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                     <?php if ($prospectus_upcoming_url || $terms_upcoming_url): ?>
                                         <br>
+                                        <?php if ($upcoming_dates_differ): ?>
+                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
+                                               target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); ?>
+                                            <br>
+                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"
+                                               target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); ?>
+                                        <?php else: ?>
                                         <?php if ($prospectus_upcoming_url): ?>
                                             <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
                                                target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
@@ -136,7 +141,8 @@ $investor_rights_url = get_field('investor_rights_file');
                                             <a href="<?php echo esc_url($terms_upcoming_url); ?>"
                                                target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                         <?php endif; ?>
-                                        <?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), $upcoming_effective_date); ?>
+                                        <?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>
@@ -162,7 +168,7 @@ $investor_rights_url = get_field('investor_rights_file');
                                     <br>
                                     <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
                                        target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
-                                    <?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), $nav_procedure_upcoming_effective_date); ?>
+                                    <?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                 <?php endif; ?>
                             </li>
                             <li>
@@ -191,12 +197,16 @@ $investor_rights_url = get_field('investor_rights_file');
 
                         <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow text-secondary">
-                            <?php if ($investment_report_url): ?>
+                            <?php if ($investment_report_url || $previous_reports_url): ?>
                                 <li>
+                                    <?php if ($investment_report_url): ?>
                                     <?php echo generate_report_link($investment_report_url, __('Investment reports', TEXT_DOMAIN)); ?>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                                    <?php if ($previous_reports_url): ?>
+                                    <?php endif; ?>
+                                    <?php if ($investment_report_url && $previous_reports_url): ?>
                                         <br>
+                                    <?php endif; ?>
+                                    <?php if ($previous_reports_url): ?>
                                         <a href="<?php echo esc_url($previous_reports_url); ?>"
                                            target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>
@@ -215,7 +225,7 @@ $investor_rights_url = get_field('investor_rights_file');
                             </li>
                         </ul>
 
-                        <?php if ($fund_co2_intensity): ?>
+                        <?php if ($fund_co2_intensity !== ''): ?>
                             <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                             <p class="fund-info__item">
                                 <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>

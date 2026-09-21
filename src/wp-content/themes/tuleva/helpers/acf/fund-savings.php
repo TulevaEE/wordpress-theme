@@ -152,14 +152,9 @@ acf_add_local_field_group(array (
             'instructions' => 'Comparison index (e.g., "100% MSCI ACWI (EUR)")',
             'required' => 0,
         ),
-        array (
-            'key' => 'field_fund_savings_co2_intensity',
-            'label' => 'CO2 Intensity',
-            'name' => 'fund_co2_intensity',
-            'type' => 'text',
-            'instructions' => 'CO2 intensity value (number only, e.g., "80.13")',
-            'required' => 0,
-        ),
+        // fund_co2_intensity moved to the catalogue in helpers/acf/fund-disclosures.php,
+        // which scopes it to the three pension funds — no CO2 intensity is calculated for
+        // TKF100. Its key is pinned there for the day one is.
     ),
     'location' => array (
         array (
@@ -178,134 +173,8 @@ acf_add_local_field_group(array (
     'active' => 1,
 ));
 
-// Documents fields
-acf_add_local_field_group(array (
-    'key' => 'group_fund_savings_documents',
-    'title' => 'Fund Documents',
-    'fields' => array (
-        array (
-            'key' => 'field_fund_savings_prospectus',
-            'label' => 'Prospectus',
-            'name' => 'prospectus_file',
-            'type' => 'file',
-            'instructions' => 'Select the prospectus PDF from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_terms',
-            'label' => 'Terms and Conditions',
-            'name' => 'terms_file',
-            'type' => 'file',
-            'instructions' => 'Select the terms and conditions PDF from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_model_portfolio',
-            'label' => 'Model Portfolio',
-            'name' => 'model_portfolio_file',
-            'type' => 'file',
-            'instructions' => 'Select the model portfolio PDF from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_key_investor_info',
-            'label' => 'Key Investor Information',
-            'name' => 'key_investor_info_file',
-            'type' => 'file',
-            'instructions' => 'Select the key investor information PDF from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_nav_procedure',
-            'label' => 'NAV Procedure Document',
-            'name' => 'nav_procedure_file',
-            'type' => 'file',
-            'instructions' => 'Override the default NAV procedure document. Leave empty to use the global default.',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_investor_rights',
-            'label' => 'Summary of Investor Rights',
-            'name' => 'investor_rights_file',
-            'type' => 'file',
-            'instructions' => 'Select the investor rights summary PDF from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_investment_report',
-            'label' => 'Investment Report',
-            'name' => 'investment_report_file',
-            'type' => 'file',
-            'instructions' => 'Select the latest investment report from media library',
-            'required' => 0,
-            'return_format' => 'url',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_previous_reports_url',
-            'label' => 'Previous Reports URL',
-            'name' => 'previous_reports_url',
-            'type' => 'url',
-            'instructions' => 'Link to previous reports archive (external URL)',
-            'required' => 0,
-        ),
-        array (
-            'key' => 'field_fund_savings_prospectus_upcoming',
-            'label' => 'Prospectus (Upcoming)',
-            'name' => 'prospectus_upcoming_file',
-            'type' => 'file',
-            'instructions' => 'Upcoming prospectus PDF — shown alongside the current one. The file title from the media library is used as the link label (e.g. "TKF100 Prospekt - kehtib alates 12.06.2026").',
-            'required' => 0,
-            'return_format' => 'array',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-        array (
-            'key' => 'field_fund_savings_terms_upcoming',
-            'label' => 'Terms and Conditions (Upcoming)',
-            'name' => 'terms_upcoming_file',
-            'type' => 'file',
-            'instructions' => 'Upcoming terms and conditions PDF — shown alongside the current one. The file title from the media library is used as the link label.',
-            'required' => 0,
-            'return_format' => 'array',
-            'library' => 'all',
-            'mime_types' => 'pdf',
-        ),
-    ),
-    'location' => array (
-        array (
-            array (
-                'param' => 'page_template',
-                'operator' => '==',
-                'value' => 'page_fund-savings.php',
-            ),
-        ),
-    ),
-    'menu_order' => 2,
-    'position' => 'normal',
-    'style' => 'default',
-    'label_placement' => 'top',
-    'instruction_placement' => 'label',
-    'active' => 1,
-));
+// Document fields for this page are generated from the catalogue in
+// helpers/acf/fund-disclosures.php, which registers them for every fund page from one
+// definition. The keys TKF100's fields were registered with are pinned there.
 
 endif;

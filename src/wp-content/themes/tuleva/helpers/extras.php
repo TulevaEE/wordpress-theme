@@ -456,37 +456,54 @@ function hyphenate_string($string) {
 }
 
 function generate_report_link($url, $link_text = null) {
-    preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches);
-    $year = intval($matches[1]);
-    $month = intval($matches[2]);
+    $is_absolute = (bool) filter_var($url, FILTER_VALIDATE_URL);
+    // parse_url() returns null for a URL with no path at all ("https://tuleva.ee"), which
+    // basename() rejects as of PHP 8.1.
+    $path = ($is_absolute ? parse_url($url, PHP_URL_PATH) : $url) ?? '';
+    $filename = basename($path);
 
-    $month--;
-    if ($month === 0) {
-        $month = 12;
-        $year--;
-    }
+    // A month has to be one of twelve, and the pair has to be the whole run of digits:
+    // "aruanne-2026-08.pdf" is a period, the "1234" in a slug is not. A filename that
+    // cannot be a period falls through to the upload folder rather than rendering
+    // something like "99.2026" as if it were a month.
+    if (preg_match('/(?<!\d)(\d{4})-(0[1-9]|1[0-2])(?!\d)/', $filename, $matches)) {
+        // Report period is encoded directly in the filename (YYYY-MM), e.g.
+        // "... investeeringute aruanne 2026-05.pdf" — use it as the label.
+        $date_text = sprintf('%s.%s', $matches[2], $matches[1]);
+    } elseif (preg_match('/\/(\d{4})\/(\d{2})\//', $url, $matches)) {
+        // Legacy uploads carry no period in the filename: the report covers the month before the
+        // upload-folder month (a report is uploaded the month after the period it covers).
+        $year = intval($matches[1]);
+        $month = intval($matches[2]);
 
-    $year_str = strval($year);
-    $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
+        $month--;
+        if ($month === 0) {
+            $month = 12;
+            $year--;
+        }
 
-    $default_text = sprintf('%s.%s', $month_str, $year_str);
-    if ($link_text !== null) {
-        $link_text = sprintf('%s (%s)', $link_text, $default_text);
+        $month_str = str_pad(strval($month), 2, '0', STR_PAD_LEFT);
+        $date_text = sprintf('%s.%s', $month_str, strval($year));
     } else {
-        $link_text = $default_text;
+        $date_text = null;
     }
 
-    if (filter_var($url, FILTER_VALIDATE_URL)) {
-        $path = parse_url($url, PHP_URL_PATH);
-    } else {
-        $path = $url;
+    if ($date_text !== null) {
+        $link_text = $link_text !== null
+            ? sprintf('%s (%s)', $link_text, $date_text)
+            : $date_text;
+    } elseif ($link_text === null) {
+        $link_text = __('Investment reports', TEXT_DOMAIN);
     }
+
+    // Preserve the original host for absolute URLs: the ACF-supplied media URL may be served from a
+    // CDN or dedicated media host. Only site-relative paths are resolved against the current site.
+    $href = $is_absolute ? $url : get_site_url() . $url;
 
     $output = sprintf(
-        '<a href="%s%s" target="_blank">%s</a>',
-        get_site_url(),
-        $path,
-        $link_text
+        '<a href="%s" target="_blank">%s</a>',
+        esc_url($href),
+        esc_html($link_text)
     );
 
     return $output;

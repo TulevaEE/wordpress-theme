@@ -16,17 +16,71 @@ Theme templates live in:
 
 ## Fund document updates (main recurring task)
 
-Tuleva has four funds. Their legal documents (prospectus + key investor information)
-are updated a few times per year. The process differs by fund:
+Tuleva has four funds. Their documents — prospectus, terms, key investor information,
+model portfolio, monthly investment report — plus the CO2 intensity figure published
+beside them are each an ACF field on that fund's page. Setting the field is the whole
+update: no commit, no deploy.
 
-| Fund                             | Document location             | Deploy method       |
-|----------------------------------|-------------------------------|---------------------|
-| TUK75 (Aktsiate Pensionifond)    | Hardcoded URL in PHP template | git push → CircleCI |
-| TUK00 (Võlakirjade Pensionifond) | Hardcoded URL in PHP template | git push → CircleCI |
-| TUV100 (III Samba Pensionifond)  | Hardcoded URL in PHP template | git push → CircleCI |
-| TKF100 (Täiendav Kogumisfond)    | ACF field in WordPress DB     | WP REST API call    |
+Field names are identical on every fund page that carries the field, so nothing
+downstream branches per fund: fund → page slug, document → field name.
 
-### Required credentials (environment variables — never hardcode)
+| Fund | Page ID | Slug | Page template |
+|---|---|---|---|
+| TUK75 (Aktsiate Pensionifond) | 17533 | `tuleva-maailma-aktsiate-pensionifond` | `page_fund-stocks.php` |
+| TUK00 (Võlakirjade Pensionifond) | 17537 | `tuleva-maailma-volakirjade-pensionifond` | `page_fund-bonds.php` |
+| TUV100 (III Samba Pensionifond) | 20938 | `tuleva-iii-samba-pensionifond` | `page_fund-third.php` |
+| TKF100 (Täiendav Kogumisfond) | 35292 | `tuleva-taiendav-kogumisfond-dokumendid` | `page_fund-savings.php` |
+
+`taiendav-kogumisfond` (37325) is TKF100's **landing** page. It renders no documents.
+
+### Which documents a fund has
+
+`helpers/acf/fund-disclosures.php` holds one catalogue of field definitions and one scope
+table saying, per page template, whether each is required, optional, or absent. Absent
+means it does not exist for that fund: no field in wp-admin, no key in the REST response,
+nothing rendered, and no fallback to another fund's value.
+
+- TKF100 is a UCITS fund and carries a summary of investor rights and its own NAV
+  procedure; the pension funds carry neither and share one NAV procedure document.
+- The pension funds carry `fund_co2_intensity`; TKF100 does not, because no CO2 intensity
+  is calculated for it. The markup is there, so publishing one becomes a scope-table edit.
+
+The catalogue covers the CO2 figure alongside the documents because it has the same
+problem: published on the fund page, updated on a cadence, and not the same set for every
+fund.
+
+Adding or removing a disclosure for a fund is an edit to the scope table, not to a
+template.
+
+### Updating a document
+
+**From wp-admin:** open the fund page, set the field, Update. Live immediately.
+
+**Over the REST API:**
+
+```bash
+# 1. upload the PDF (writes upload_results.json with the attachment IDs)
+python3 scripts/upload_docs.py /path/to/folder/with/new/pdfs
+
+# 2. point the field at it
+curl -u "$WP_USERNAME:$WP_APP_PASSWORD" \
+  -H 'Content-Type: application/json' \
+  -d '{"acf": {"prospectus_file": <attachment id>}}' \
+  https://tuleva.ee/wp-json/wp/v2/pages/17533
+```
+
+Local filenames use Estonian characters and spaces; `upload_docs.py` sanitises them
+(`õäöü` → `oaou`, spaces → `-`), so `Põhiteave TUK75 - kehtib alates 27.02.2026.pdf`
+uploads as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`.
+
+**Keep the effective date in the filename.** For an upcoming document the page reads
+`…alates-DD.MM.YYYY` out of the filename to label the row.
+
+Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
+under `acf`, and the public page should show it. An `acf` key that is missing or empty in
+the response means the write did not land — ACF returns 200 either way.
+
+Required credentials, never hardcoded:
 
 ```
 WP_USERNAME       WordPress username (email address)
@@ -34,74 +88,25 @@ WP_APP_PASSWORD   WordPress Application Password
                   Generate at: https://tuleva.ee/wp-admin → Users → Application Passwords
 ```
 
-### Step 1 — Upload PDFs
+### Documents that are not per-fund
 
-Place the new PDF files in a folder. Run:
+Sustainability, non-consideration of adverse impacts, remuneration policy and the pension
+funds' NAV procedure are one document each for all four funds. They are still URL
+constants in `helpers/extras.php`, so updating one is a commit and a deploy.
 
-```bash
-python3 scripts/upload_docs.py /path/to/folder/with/new/pdfs
-```
+### Fallbacks still in place
 
-This uploads every PDF in the folder to the WordPress media library and writes
-`upload_results.json` (with attachment IDs) to the same folder.
+Every per-fund document also has a hardcoded URL in its template, which renders while the
+field is empty. The fields are not populated yet, so in practice the pages still show the
+code URLs and a document change still needs a template edit.
 
-**File naming convention** — local filenames use Estonian characters and spaces; the script sanitizes them automatically
-for URLs:
+Once a page's fields are set, **editing the literal changes nothing visible** — the field
+wins. Update the field.
 
-- `Põhiteave → Pohiteave` (õ→o, ä→a, ö→o, ü→u)
-- spaces → `-`
-- ` - ` → `-`
-
-Example: `Põhiteave TUK75 - kehtib alates 27.02.2026.pdf`
-→ uploaded as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`
-
-### Step 2 — Update PHP templates (TUK75, TUK00, TUV100)
-
-Edit the date string in the three component files. Use sed or edit manually:
-
-```bash
-OLD=19.02.2026   # replace with the old effective date
-NEW=27.02.2026   # replace with the new effective date
-
-COMPONENTS=src/wp-content/themes/tuleva/templates/components
-sed -i '' "s/${OLD}/${NEW}/g" \
-  "$COMPONENTS/fund-stocks-details.php" \
-  "$COMPONENTS/fund-bonds-details.php" \
-  "$COMPONENTS/fund-third-details.php"
-```
-
-Verify only document filenames changed:
-
-```bash
-grep -n "kehtib-alates" src/wp-content/themes/tuleva/templates/components/fund-*-details.php
-```
-
-### Step 3 — Commit and push (deploys TUK75, TUK00, TUV100)
-
-```bash
-git add src/wp-content/themes/tuleva/templates/components/fund-stocks-details.php
-git add src/wp-content/themes/tuleva/templates/components/fund-bonds-details.php
-git add src/wp-content/themes/tuleva/templates/components/fund-third-details.php
-git commit -m "Update fund document links to DD.MM.YYYY versions"
-git push origin master
-```
-
-CircleCI build status: https://app.circleci.com
-
-### Step 4 — Update savings fund ACF fields (TKF100)
-
-ACF REST API is **not enabled** on this site, so this step must be done manually in the WordPress admin:
-
-1. Go to `https://tuleva.ee/wp-admin/post.php?post=35292&action=edit`
-2. Scroll to the ACF document fields
-3. For **Prospectus file**: delete the current file, then Add → search `TKF100-Prospekt-kehtib-alates-DD.MM.YYYY` →
-   select
-4. For **Key investor info file**: delete the current file, then Add → search
-   `Pohiteave-TKF100-kehtib-alates-DD.MM.YYYY` → select
-5. Click **Update**
-
-The files will already be in the media library from Step 1 — search by filename. No git push needed; the change is live
-immediately after saving.
+Removing the fallbacks, moving the firm-wide documents onto the options page and
+replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
+`TODO — Fund page document publishing.md`, in the private tuleva repo under
+`work/investeerimistegevus/docs/`.
 
 ---
 
