@@ -187,12 +187,31 @@ function tuleva_fund_disclosures_missing(?string $template = null, $post_id = nu
     $missing = [];
 
     foreach (tuleva_fund_disclosure_scope()[$template] ?? [] as $name => $requirement) {
-        if ($requirement === TULEVA_DISCLOSURE_REQUIRED && !get_field($name, $post_id)) {
+        if ($requirement === TULEVA_DISCLOSURE_REQUIRED && tuleva_disclosure_stored_value($name, $post_id) === '') {
             $missing[] = $name;
         }
     }
 
     return $missing;
+}
+
+/**
+ * What ACF holds for a disclosure, as a string. No fallback, no scope check.
+ *
+ * Only '' means "nothing stored". A truthiness test would read the string "0" as
+ * absent, and a disclosure is a published figure, not a flag.
+ */
+function tuleva_disclosure_stored_value(string $name, $post_id = null): string
+{
+    $value = get_field($name, $post_id);
+
+    // File fields return a URL string; a field left on an older return format hands
+    // back the attachment array instead.
+    if (is_array($value)) {
+        $value = $value['url'] ?? '';
+    }
+
+    return is_string($value) ? $value : '';
 }
 
 /**
@@ -208,15 +227,9 @@ function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?stri
         return '';
     }
 
-    $value = get_field($name);
+    $value = tuleva_disclosure_stored_value($name);
 
-    // File fields return a URL string; a field left on an older return format hands
-    // back the attachment array instead.
-    if (is_array($value)) {
-        $value = $value['url'] ?? '';
-    }
-
-    return is_string($value) && $value !== '' ? $value : $fallback;
+    return $value !== '' ? $value : $fallback;
 }
 
 /**

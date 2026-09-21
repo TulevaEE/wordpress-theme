@@ -512,6 +512,61 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
+     * A shared "effective from" suffix can only speak for one date. Publishing the terms
+     * through the field while the prospectus is still on its pre-ACF URL is enough to put
+     * two dates in one list item, and the shared suffix would then state the stale
+     * document's date over the fresh one.
+     */
+    #[Test]
+    public function upcoming_documents_with_different_dates_each_state_their_own(): void
+    {
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
+        FakeFundPage::$fields['terms_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-tingimused-kehtivad-alates-15.01.2027.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertMatchesRegularExpression(
+            '/TKF100-Prospekt-kehtib-alates-01\.01\.2027\.pdf.*?effective from 01\.01\.2027/s',
+            $html
+        );
+        $this->assertMatchesRegularExpression(
+            '/TKF100-tingimused-kehtivad-alates-15\.01\.2027\.pdf.*?effective from 15\.01\.2027/s',
+            $html
+        );
+        $this->assertSame(2, substr_count($html, 'effective from'));
+    }
+
+    #[Test]
+    public function upcoming_documents_that_take_effect_together_share_one_suffix(): void
+    {
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
+        FakeFundPage::$fields['terms_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-tingimused-kehtivad-alates-01.01.2027.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertSame(1, substr_count($html, 'effective from'));
+        $this->assertStringContainsString('effective from 01.01.2027', $html);
+    }
+
+    /**
+     * A disclosure is a published figure, not a flag, so "0" is a value. It is not a
+     * plausible carbon intensity, but one check decides every disclosure.
+     */
+    #[Test]
+    public function a_stored_zero_is_a_value_and_not_an_absence(): void
+    {
+        FakeFundPage::$template = 'page_fund-stocks.php';
+        FakeFundPage::$fields['fund_co2_intensity'] = '0';
+
+        $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
+        $this->assertNotContains('fund_co2_intensity', tuleva_fund_disclosures_missing());
+    }
+
+    /**
      * TKF100 is the one page whose documents all come from fields, with no code URL left
      * to stand in, so it is the only one where a template can be rendered with a
      * disclosure genuinely absent.

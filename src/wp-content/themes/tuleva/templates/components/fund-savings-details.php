@@ -21,7 +21,15 @@ $terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-co
 // No upcoming prospectus or terms: the 18.09.2026 versions above are in force.
 $prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file');
 $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file');
-$upcoming_effective_date = tuleva_document_effective_date($prospectus_upcoming_url ?: $terms_upcoming_url);
+$prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
+$terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
+// One suffix can only state one date. The prospectus and the terms are approved
+// together and normally share it; when they do not — one published through its field
+// while the other is still on the pre-ACF URL — a shared suffix would put one
+// document's date on the other, so each goes on its own line with its own.
+$upcoming_dates_differ = $prospectus_upcoming_date !== '' && $terms_upcoming_date !== ''
+    && $prospectus_upcoming_date !== $terms_upcoming_date;
+$upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
 $model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
 $key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Pohiteave-kehtib-alates-18.09.2026.pdf');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
@@ -117,6 +125,13 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                     <?php if ($prospectus_upcoming_url || $terms_upcoming_url): ?>
                                         <br>
+                                        <?php if ($upcoming_dates_differ): ?>
+                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
+                                               target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); ?>
+                                            <br>
+                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"
+                                               target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); ?>
+                                        <?php else: ?>
                                         <?php if ($prospectus_upcoming_url): ?>
                                             <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
                                                target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
@@ -127,6 +142,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                                target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                         <?php endif; ?>
                                         <?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>
@@ -209,7 +225,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                             </li>
                         </ul>
 
-                        <?php if ($fund_co2_intensity): ?>
+                        <?php if ($fund_co2_intensity !== ''): ?>
                             <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
                             <p class="fund-info__item">
                                 <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
