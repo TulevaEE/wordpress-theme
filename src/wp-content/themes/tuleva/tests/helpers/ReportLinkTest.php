@@ -88,6 +88,18 @@ final class ReportLinkTest extends TestCase
                 'https://tuleva.ee/wp-content/uploads/2026/01/investeeringute-aruanne.pdf',
                 '12.2025',
             ],
+            'a month outside 01-12 is not a period, so the upload folder decides' => [
+                'https://tuleva.ee/wp-content/uploads/2026/08/investeeringute-aruanne-2026-99.pdf',
+                '07.2026',
+            ],
+            'a longer digit run is not a period either' => [
+                'https://tuleva.ee/wp-content/uploads/2026/08/investeeringute-aruanne-2026-081.pdf',
+                '07.2026',
+            ],
+            'a media re-upload suffix does not hide the period' => [
+                'https://tuleva.ee/wp-content/uploads/2026/09/investeeringute-aruanne-2026-08-1.pdf',
+                '08.2026',
+            ],
         ];
     }
 

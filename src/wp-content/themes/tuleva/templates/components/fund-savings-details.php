@@ -126,7 +126,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                             <a href="<?php echo esc_url($terms_upcoming_url); ?>"
                                                target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                         <?php endif; ?>
-                                        <?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), $upcoming_effective_date); ?>
+                                        <?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>
@@ -152,7 +152,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                     <br>
                                     <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
                                        target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
-                                    <?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), $nav_procedure_upcoming_effective_date); ?>
+                                    <?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                 <?php endif; ?>
                             </li>
                             <li>
@@ -181,12 +181,16 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 
                         <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow text-secondary">
-                            <?php if ($investment_report_url): ?>
+                            <?php if ($investment_report_url || $previous_reports_url): ?>
                                 <li>
+                                    <?php if ($investment_report_url): ?>
                                     <?php echo generate_report_link($investment_report_url, __('Investment reports', TEXT_DOMAIN)); ?>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                                    <?php if ($previous_reports_url): ?>
+                                    <?php endif; ?>
+                                    <?php if ($investment_report_url && $previous_reports_url): ?>
                                         <br>
+                                    <?php endif; ?>
+                                    <?php if ($previous_reports_url): ?>
                                         <a href="<?php echo esc_url($previous_reports_url); ?>"
                                            target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>

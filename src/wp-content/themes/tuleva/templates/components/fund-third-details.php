@@ -88,7 +88,7 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '83.73'
                                 <?php if ($prospectus_url): ?><a href="<?php echo esc_url($prospectus_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($prospectus_url && $terms_url): _e(' and ', TEXT_DOMAIN); endif; ?><?php if ($terms_url): ?><a href="<?php echo esc_url($terms_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php endif; ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 <?php if ($prospectus_upcoming_url || $terms_upcoming_url): ?>
                                     <br>
-                                    <?php if ($prospectus_upcoming_url): ?><a href="<?php echo esc_url($prospectus_upcoming_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($prospectus_upcoming_url && $terms_upcoming_url): _e(' and ', TEXT_DOMAIN); endif; ?><?php if ($terms_upcoming_url): ?><a href="<?php echo esc_url($terms_upcoming_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php endif; ?><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); ?>
+                                    <?php if ($prospectus_upcoming_url): ?><a href="<?php echo esc_url($prospectus_upcoming_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($prospectus_upcoming_url && $terms_upcoming_url): _e(' and ', TEXT_DOMAIN); endif; ?><?php if ($terms_upcoming_url): ?><a href="<?php echo esc_url($terms_upcoming_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                 <?php endif; ?>
                             </li>
                             <?php endif; ?>
@@ -122,11 +122,15 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '83.73'
 
                         <h2 class="mt-5 mb-4 h4"><?php _e('Reports', TEXT_DOMAIN) ?></h2>
                         <ul class="list-style-arrow text-secondary">
-                            <?php if ($investment_report_url): ?>
+                            <?php if ($investment_report_url || $previous_reports_url): ?>
                             <li>
+                                <?php if ($investment_report_url): ?>
                                 <?php echo generate_report_link($investment_report_url, __('Investment reports', TEXT_DOMAIN)); ?><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                                <?php if ($previous_reports_url): ?>
+                                <?php endif; ?>
+                                <?php if ($investment_report_url && $previous_reports_url): ?>
                                     <br>
+                                <?php endif; ?>
+                                <?php if ($previous_reports_url): ?>
                                     <a href="<?php echo esc_url($previous_reports_url); ?>" target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                                 <?php endif; ?>
                             </li>
