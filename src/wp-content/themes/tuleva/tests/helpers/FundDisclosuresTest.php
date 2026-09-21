@@ -30,7 +30,92 @@ function get_page_template_slug($post = null)
     return FakeFundPage::$template;
 }
 
+/**
+ * The rest of WordPress, for the tests that render a fund template rather than call a
+ * helper. Guarded because ReportLinkTest stands the same ones up and PHPUnit runs both
+ * in one process; the definitions match, so whichever file loads first wins harmlessly.
+ */
+if (!defined('TEXT_DOMAIN')) {
+    define('TEXT_DOMAIN', 'tuleva');
+}
+
+if (!function_exists('add_filter')) {
+    function add_filter($hook, $callback, $priority = 10, $args = 1)
+    {
+    }
+}
+
+if (!function_exists('add_action')) {
+    function add_action($hook, $callback, $priority = 10, $args = 1)
+    {
+    }
+}
+
+if (!function_exists('add_shortcode')) {
+    function add_shortcode($tag, $callback)
+    {
+    }
+}
+
+if (!function_exists('get_site_url')) {
+    function get_site_url()
+    {
+        return 'https://tuleva.ee';
+    }
+}
+
+if (!function_exists('__')) {
+    function __($text, $domain = null)
+    {
+        return $text;
+    }
+}
+
+if (!function_exists('_e')) {
+    function _e($text, $domain = null)
+    {
+        echo $text;
+    }
+}
+
+if (!function_exists('esc_url')) {
+    function esc_url($value)
+    {
+        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    }
+}
+
+if (!function_exists('esc_html')) {
+    function esc_html($value)
+    {
+        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    }
+}
+
+if (!function_exists('esc_attr')) {
+    function esc_attr($value)
+    {
+        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    }
+}
+
+if (!function_exists('wp_json_encode')) {
+    function wp_json_encode($data, $flags = 0)
+    {
+        return json_encode($data, $flags);
+    }
+}
+
+if (!function_exists('get_permalink')) {
+    function get_permalink($post = null)
+    {
+        return 'https://tuleva.ee/fondid/tuleva-taiendav-kogumisfond/';
+    }
+}
+
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
+require_once __DIR__ . '/../../helpers/extras.php';
+require_once __DIR__ . '/../../helpers/schema.php';
 
 final class FundDisclosuresTest extends TestCase
 {
@@ -351,5 +436,98 @@ final class FundDisclosuresTest extends TestCase
     {
         $this->assertSame('stocks', tuleva_fund_template_slug('page_fund-stocks.php'));
         $this->assertSame('savings', tuleva_fund_template_slug('page_fund-savings.php'));
+    }
+
+    /**
+     * The archive on pensionikeskus.ee is a different document from this month's report
+     * and is declared optional, not required. It must not vanish because the required
+     * one is missing — a gap in one month's publishing would otherwise take every
+     * earlier month's report off the page with it.
+     */
+    #[Test]
+    public function the_report_archive_survives_a_missing_monthly_report(): void
+    {
+        FakeFundPage::$fields['previous_reports_url'] = 'https://www.pensionikeskus.ee/archive/';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('Previous reports', $html);
+        $this->assertStringContainsString('https://www.pensionikeskus.ee/archive/', $html);
+        $this->assertStringNotContainsString('Investment reports', $html);
+    }
+
+    #[Test]
+    public function a_missing_archive_does_not_take_the_monthly_report_with_it(): void
+    {
+        FakeFundPage::$fields['investment_report_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/09/aruanne-2026-08.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('Investment reports (08.2026)', $html);
+        $this->assertStringNotContainsString('Previous reports', $html);
+    }
+
+    #[Test]
+    public function both_reports_stay_in_one_list_item_separated_by_a_break(): void
+    {
+        FakeFundPage::$fields['investment_report_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/09/aruanne-2026-08.pdf';
+        FakeFundPage::$fields['previous_reports_url'] = 'https://www.pensionikeskus.ee/archive/';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertMatchesRegularExpression(
+            '/Investment reports \(08\.2026\).*<br>.*Previous reports/s',
+            $html
+        );
+    }
+
+    /**
+     * The effective date is read from the filename, so a filename that does not carry one
+     * leaves nothing to state. Saying "effective from" and then no date is worse than not
+     * raising the question — the document is still linked either way.
+     */
+    #[Test]
+    public function an_upcoming_document_with_no_date_in_its_filename_claims_no_date(): void
+    {
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-uus.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('TKF100-Prospekt-uus.pdf', $html);
+        $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    #[Test]
+    public function an_upcoming_document_states_the_date_its_filename_carries(): void
+    {
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('effective from 01.01.2027', $html);
+    }
+
+    /**
+     * TKF100 is the one page whose documents all come from fields, with no code URL left
+     * to stand in, so it is the only one where a template can be rendered with a
+     * disclosure genuinely absent.
+     */
+    private function renderSavingsPage(): string
+    {
+        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+
+        ob_start();
+
+        try {
+            include __DIR__ . '/../../templates/components/fund-savings-details.php';
+        } finally {
+            $html = (string) ob_get_clean();
+        }
+
+        return $html;
     }
 }

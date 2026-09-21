@@ -462,7 +462,11 @@ function generate_report_link($url, $link_text = null) {
     $path = ($is_absolute ? parse_url($url, PHP_URL_PATH) : $url) ?? '';
     $filename = basename($path);
 
-    if (preg_match('/(\d{4})-(\d{2})/', $filename, $matches)) {
+    // A month has to be one of twelve, and the pair has to be the whole run of digits:
+    // "aruanne-2026-08.pdf" is a period, the "1234" in a slug is not. A filename that
+    // cannot be a period falls through to the upload folder rather than rendering
+    // something like "99.2026" as if it were a month.
+    if (preg_match('/(?<!\d)(\d{4})-(0[1-9]|1[0-2])(?!\d)/', $filename, $matches)) {
         // Report period is encoded directly in the filename (YYYY-MM), e.g.
         // "... investeeringute aruanne 2026-05.pdf" — use it as the label.
         $date_text = sprintf('%s.%s', $matches[2], $matches[1]);
