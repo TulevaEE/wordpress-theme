@@ -32,6 +32,11 @@ const TULEVA_DISCLOSURE_REQUIRED = 'required';
 const TULEVA_DISCLOSURE_OPTIONAL = 'optional';
 
 /**
+ * WPML's "copy" custom field preference: a translation takes the original's value.
+ */
+const TULEVA_WPML_COPY_FROM_ORIGINAL = 1;
+
+/**
  * Every disclosure a fund page can carry, defined once.
  *
  * 'keys' pins the ACF field key on pages where the field already exists. ACF stores a
@@ -79,7 +84,7 @@ function tuleva_fund_disclosure_catalogue(): array
         'nav_procedure_file' => [
             'label' => 'NAV Procedure',
             'type' => 'file',
-            'instructions' => 'This fund\'s own procedure for determining net asset value. The pension funds share one document set on the options page and have no field here.',
+            'instructions' => 'This fund\'s own procedure for determining net asset value. The pension funds share one document, a URL in helpers/extras.php, and have no field here.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_nav_procedure'],
         ],
         'nav_procedure_upcoming_file' => [
@@ -126,7 +131,7 @@ function tuleva_fund_disclosure_catalogue(): array
 function tuleva_fund_disclosure_scope(): array
 {
     // The three pension funds publish the same set. Their NAV procedure is one shared
-    // document for all of them, so it lives on the options page rather than per page.
+    // document for all of them, so it is not a per-page field.
     $pension_fund = [
         'prospectus_file' => TULEVA_DISCLOSURE_REQUIRED,
         'terms_file' => TULEVA_DISCLOSURE_REQUIRED,
@@ -203,7 +208,7 @@ function tuleva_fund_disclosures_missing(?string $template = null, $post_id = nu
  */
 function tuleva_disclosure_stored_value(string $name, $post_id = null): string
 {
-    $value = get_field($name, $post_id);
+    $value = get_field($name, tuleva_disclosure_source_post($post_id));
 
     // File fields return a URL string; a field left on an older return format hands
     // back the attachment array instead.
@@ -212,6 +217,21 @@ function tuleva_disclosure_stored_value(string $name, $post_id = null): string
     }
 
     return is_string($value) ? $value : '';
+}
+
+/**
+ * The Estonian original of a fund page, which holds the disclosures for every language.
+ *
+ * The documents are published in Estonian and an English fund page links the same ones,
+ * so a value is written once, to the Estonian page, and reaches both. A value left on an
+ * English copy by an earlier edit is never read. Without WPML the filter returns the ID
+ * it is given.
+ */
+function tuleva_disclosure_source_post($post_id = null)
+{
+    $post_id = $post_id ?: (get_the_ID() ?: get_queried_object_id());
+
+    return $post_id ? apply_filters('wpml_object_id', $post_id, 'page', true, 'et') : null;
 }
 
 /**
@@ -298,6 +318,7 @@ function tuleva_fund_disclosure_field(string $name, string $template): array
         // Never ACF-required: an empty required document must leave the page rendering
         // rather than block an unrelated edit to the page. Gaps are reported instead.
         'required' => 0,
+        'wpml_cf_preferences' => TULEVA_WPML_COPY_FROM_ORIGINAL,
     ];
 
     if ($type === 'file') {
@@ -319,7 +340,7 @@ function tuleva_fund_disclosure_field_group(string $template): array
 
     return [
         'key' => 'group_fund_disclosures_' . tuleva_fund_template_slug($template),
-        'title' => 'Fund Documents & Disclosures',
+        'title' => 'Fund Documents & Disclosures (set on the Estonian page, English shows the same)',
         'fields' => array_map(
             fn($name) => tuleva_fund_disclosure_field($name, $template),
             array_keys($documents)

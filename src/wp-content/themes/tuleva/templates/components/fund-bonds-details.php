@@ -21,10 +21,10 @@ $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file', get_si
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 // One suffix can only state one date. The prospectus and the terms are approved
-// together and normally share it; when they do not — one published through its field
-// while the other is still on the pre-ACF URL — a shared suffix would put one
-// document's date on the other, so each goes on its own line with its own.
-$upcoming_dates_differ = $prospectus_upcoming_date !== '' && $terms_upcoming_date !== ''
+// together and normally share it; when they do not, or only one filename carries a date,
+// a shared suffix would put one document's date on the other, so each goes on its own
+// line with its own.
+$upcoming_dates_differ = $prospectus_upcoming_url !== '' && $terms_upcoming_url !== ''
     && $prospectus_upcoming_date !== $terms_upcoming_date;
 $upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
 $model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file', get_site_url() . '/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf');
@@ -96,9 +96,9 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '133.80
                                 <?php if ($prospectus_upcoming_url || $terms_upcoming_url): ?>
                                     <br>
                                     <?php if ($upcoming_dates_differ): ?>
-                                        <a href="<?php echo esc_url($prospectus_upcoming_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); ?>
+                                        <a href="<?php echo esc_url($prospectus_upcoming_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php if ($prospectus_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                         <br>
-                                        <a href="<?php echo esc_url($terms_upcoming_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); ?>
+                                        <a href="<?php echo esc_url($terms_upcoming_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php if ($terms_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                     <?php else: ?>
                                     <?php if ($prospectus_upcoming_url): ?><a href="<?php echo esc_url($prospectus_upcoming_url); ?>" target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($prospectus_upcoming_url && $terms_upcoming_url): _e(' and ', TEXT_DOMAIN); endif; ?><?php if ($terms_upcoming_url): ?><a href="<?php echo esc_url($terms_upcoming_url); ?>" target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php endif; ?><?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                     <?php endif; ?>

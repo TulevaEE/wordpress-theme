@@ -24,12 +24,17 @@ update: no commit, no deploy.
 Field names are identical on every fund page that carries the field, so nothing
 downstream branches per fund: fund → page slug, document → field name.
 
-| Fund | Page ID | Slug | Page template |
-|---|---|---|---|
-| TUK75 (Aktsiate Pensionifond) | 17533 | `tuleva-maailma-aktsiate-pensionifond` | `page_fund-stocks.php` |
-| TUK00 (Võlakirjade Pensionifond) | 17537 | `tuleva-maailma-volakirjade-pensionifond` | `page_fund-bonds.php` |
-| TUV100 (III Samba Pensionifond) | 20938 | `tuleva-iii-samba-pensionifond` | `page_fund-third.php` |
-| TKF100 (Täiendav Kogumisfond) | 35292 | `tuleva-taiendav-kogumisfond-dokumendid` | `page_fund-savings.php` |
+| Fund | Page ID | English page ID | Slug | Page template |
+|---|---|---|---|---|
+| TUK75 (Aktsiate Pensionifond) | 17533 | 17534 | `tuleva-maailma-aktsiate-pensionifond` | `page_fund-stocks.php` |
+| TUK00 (Võlakirjade Pensionifond) | 17537 | 17538 | `tuleva-maailma-volakirjade-pensionifond` | `page_fund-bonds.php` |
+| TUV100 (III Samba Pensionifond) | 20938 | 21395 | `tuleva-iii-samba-pensionifond` | `page_fund-third.php` |
+| TKF100 (Täiendav Kogumisfond) | 35292 | 36156 | `tuleva-taiendav-kogumisfond-dokumendid` | `page_fund-savings.php` |
+
+**Write to the Estonian page only.** The English page is a WPML translation of it and reads
+every disclosure from the Estonian page (`tuleva_disclosure_source_post()`), so a value
+written once shows in both languages. A value set on an English page is never read; the
+fields are also WPML "copy" fields, so saving the Estonian page overwrites them.
 
 `taiendav-kogumisfond` (37325) is TKF100's **landing** page. It renders no documents.
 
@@ -90,15 +95,18 @@ WP_APP_PASSWORD   WordPress Application Password
 
 ### Documents that are not per-fund
 
-Sustainability, non-consideration of adverse impacts, remuneration policy and the pension
-funds' NAV procedure are one document each for all four funds. They are still URL
-constants in `helpers/extras.php`, so updating one is a commit and a deploy.
+Sustainability, non-consideration of adverse impacts and remuneration policy are one
+document each for all four funds, and the three pension funds share one NAV procedure
+(TKF100 has its own, as a field). They are still URL constants in `helpers/extras.php`, so
+updating one is a commit and a deploy.
 
 ### Fallbacks still in place
 
-Every per-fund document also has a hardcoded URL in its template, which renders while the
-field is empty. The fields are not populated yet, so in practice the pages still show the
-code URLs and a document change still needs a template edit.
+Most per-fund documents also have a hardcoded URL in their template, which renders while
+the field is empty. The pension pages' fields are all empty, so they still show the code
+URLs and a document change there still needs a template edit. On TKF100 the model
+portfolio, summary of investor rights, investment report, report archive and upcoming
+documents have no code URL: empty field, no row.
 
 Once a page's fields are set, **editing the literal changes nothing visible** — the field
 wins. Update the field.

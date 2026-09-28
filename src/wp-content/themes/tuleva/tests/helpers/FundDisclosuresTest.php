@@ -10,19 +10,47 @@ use PHPUnit\Framework\Attributes\Test;
  */
 final class FakeFundPage
 {
+    public const ESTONIAN_PAGE = 35292;
+    public const ENGLISH_PAGE = 36156;
+
     public static array $fields = [];
+    public static array $english_fields = [];
+    public static int $post_id = self::ESTONIAN_PAGE;
     public static string $template = '';
 
     public static function reset(): void
     {
         self::$fields = [];
+        self::$english_fields = [];
+        self::$post_id = self::ESTONIAN_PAGE;
         self::$template = '';
     }
 }
 
 function get_field($name, $post_id = false)
 {
-    return FakeFundPage::$fields[$name] ?? null;
+    $fields = ($post_id ?: FakeFundPage::$post_id) === FakeFundPage::ENGLISH_PAGE
+        ? FakeFundPage::$english_fields
+        : FakeFundPage::$fields;
+
+    return $fields[$name] ?? null;
+}
+
+function get_the_ID()
+{
+    return FakeFundPage::$post_id;
+}
+
+/**
+ * WPML's answer on production: the English page is a translation of the Estonian one.
+ */
+function apply_filters($hook, $value, ...$args)
+{
+    if ($hook === 'wpml_object_id' && $value === FakeFundPage::ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
+        return FakeFundPage::ESTONIAN_PAGE;
+    }
+
+    return $value;
 }
 
 function get_page_template_slug($post = null)
@@ -110,6 +138,13 @@ if (!function_exists('get_permalink')) {
     function get_permalink($post = null)
     {
         return 'https://tuleva.ee/fondid/tuleva-taiendav-kogumisfond/';
+    }
+}
+
+if (!function_exists('get_the_title')) {
+    function get_the_title($post = 0)
+    {
+        return 'Tuleva Maailma Aktsiate Pensionifond';
     }
 }
 
@@ -317,6 +352,74 @@ final class FundDisclosuresTest extends TestCase
             'https://tuleva.ee/new-prospectus.pdf',
             tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
         );
+    }
+
+    /**
+     * The documents are published in Estonian and the English page links the same ones.
+     * A value left on the English copy by an earlier edit must not outlive the Estonian
+     * one: that is how the English TKF100 page came to list superseded documents.
+     */
+    #[Test]
+    public function an_english_page_shows_what_its_estonian_original_publishes(): void
+    {
+        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+        FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/Prospekt-alates-18.09.2026.pdf';
+        FakeFundPage::$english_fields['prospectus_file'] = 'https://tuleva.ee/Prospekt-12.01.2026.pdf';
+        FakeFundPage::$post_id = FakeFundPage::ENGLISH_PAGE;
+
+        $this->assertSame(
+            'https://tuleva.ee/Prospekt-alates-18.09.2026.pdf',
+            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/fallback.pdf')
+        );
+    }
+
+    /**
+     * The page reads the Estonian original either way; copying the values keeps the
+     * English page's REST response and edit screen telling the same story.
+     */
+    #[Test]
+    public function every_disclosure_is_copied_from_the_estonian_page_to_its_translations(): void
+    {
+        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
+            foreach (tuleva_fund_disclosure_field_group($template)['fields'] as $field) {
+                $this->assertSame(
+                    TULEVA_WPML_COPY_FROM_ORIGINAL,
+                    $field['wpml_cf_preferences'] ?? null,
+                    "$template {$field['name']}"
+                );
+            }
+        }
+    }
+
+    #[Test]
+    public function an_english_page_falls_back_where_its_estonian_original_has_no_value(): void
+    {
+        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+        FakeFundPage::$english_fields['key_investor_info_file'] = 'https://tuleva.ee/Pohiteave-12.01.2026.pdf';
+        FakeFundPage::$post_id = FakeFundPage::ENGLISH_PAGE;
+
+        $this->assertSame(
+            'https://tuleva.ee/Pohiteave-kehtib-alates-18.09.2026.pdf',
+            tuleva_fund_disclosure_value('key_investor_info_file', 'https://tuleva.ee/Pohiteave-kehtib-alates-18.09.2026.pdf')
+        );
+    }
+
+    #[Test]
+    public function an_english_page_reports_the_gaps_of_its_estonian_original(): void
+    {
+        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+
+        foreach (tuleva_fund_disclosure_scope()[self::SAVINGS_TEMPLATE] as $name => $requirement) {
+            if ($requirement === TULEVA_DISCLOSURE_REQUIRED) {
+                FakeFundPage::$english_fields[$name] = "https://tuleva.ee/$name.pdf";
+            }
+        }
+
+        $this->assertSame(
+            tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ESTONIAN_PAGE),
+            tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE)
+        );
+        $this->assertContains('prospectus_file', tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE));
     }
 
     #[Test]
@@ -538,6 +641,42 @@ final class FundDisclosuresTest extends TestCase
         $this->assertSame(2, substr_count($html, 'effective from'));
     }
 
+    /**
+     * @return array<string, array{string}>
+     */
+    public static function fundTemplates(): array
+    {
+        return [
+            'TUK75' => ['page_fund-stocks.php'],
+            'TUK00' => ['page_fund-bonds.php'],
+            'TUV100' => ['page_fund-third.php'],
+            'TKF100' => [self::SAVINGS_TEMPLATE],
+        ];
+    }
+
+    /**
+     * A shared suffix speaks for both documents, so an undated one beside a dated one
+     * would be stated to take effect on a date nothing about it carries.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function an_undated_upcoming_document_does_not_take_the_other_document_date(string $template): void
+    {
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-uus.pdf';
+        FakeFundPage::$fields['terms_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/tingimused-kehtivad-alates-01.01.2027.pdf';
+
+        $lines = explode('<br>', $this->renderFundPage($template));
+        $prospectus_line = $this->lineContaining('Prospekt-uus.pdf', $lines);
+        $terms_line = $this->lineContaining('tingimused-kehtivad-alates-01.01.2027.pdf', $lines);
+
+        $this->assertStringContainsString('Estonian)', $prospectus_line);
+        $this->assertStringNotContainsString('effective from', $prospectus_line);
+        $this->assertStringNotContainsString('Terms and conditions', $prospectus_line);
+        $this->assertStringContainsString('effective from 01.01.2027', $terms_line);
+    }
+
     #[Test]
     public function upcoming_documents_that_take_effect_together_share_one_suffix(): void
     {
@@ -573,16 +712,32 @@ final class FundDisclosuresTest extends TestCase
      */
     private function renderSavingsPage(): string
     {
-        FakeFundPage::$template = self::SAVINGS_TEMPLATE;
+        return $this->renderFundPage(self::SAVINGS_TEMPLATE);
+    }
+
+    private function renderFundPage(string $template): string
+    {
+        FakeFundPage::$template = $template;
 
         ob_start();
 
         try {
-            include __DIR__ . '/../../templates/components/fund-savings-details.php';
+            include __DIR__ . '/../../templates/components/fund-' . tuleva_fund_template_slug($template) . '-details.php';
         } finally {
             $html = (string) ob_get_clean();
         }
 
         return $html;
+    }
+
+    /**
+     * @param list<string> $lines
+     */
+    private function lineContaining(string $needle, array $lines): string
+    {
+        $matching = array_values(array_filter($lines, fn($line) => str_contains($line, $needle)));
+        $this->assertCount(1, $matching, "Expected one line containing: needle=$needle");
+
+        return $matching[0];
     }
 }
