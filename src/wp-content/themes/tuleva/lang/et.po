@@ -1558,10 +1558,6 @@ msgstr "LHV Kasvukonto on platvorm, kus sa valid ise, millisesse fondi lapse rah
 msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
 msgstr "Swedbanki lapsetooted (Koolifond ja selle järglane Lapse Tuleviku fond) põimivad investeerimise ja kindlustuse. Selliste toodete kogutasu jääb hinnanguliselt 1,5% kanti aastas ja täpne summa sõltub lepingust. Tuleva fond on mõeldud ainult investeerimiseks – kui kindlustust vajad, on see eraldi ost."
 
-#: templates/child-savings-content.php:185
-msgid "If a grandparent or another close person wants to make a contribution to your child's account, the simplest way for now is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child's savings fund account."
-msgstr "Kui vanavanem või muu lähedane soovib lapse kontole sissemakse teha, on hetkel kõige lihtsam, kui ta kingib raha sulle ja sina kannad selle lapse kontole ning sealt fondi. Kui kingitus laekub otse lapse kontole, vajab selle investeerimine seaduse järgi kohtu nõusolekut – seepärast soovitamegi kinkida vanema kaudu. Töötame veel lahenduse kallal, et lähedased saaksid otse kogumisfondi kontole kingitusi teha."
-
 #: templates/child-savings-content.php:26
 msgid "Contribution"
 msgstr "Sissemakse"
@@ -2392,13 +2388,103 @@ msgid "Both parents' right of representation lasts until the child's 18th birthd
 msgstr "Mõlema vanema esindusõigus kehtib lapse 18. sünnipäevani."
 
 #: templates/child-savings-content.php
-msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child's account."
-msgstr "Kui teisel vanemal registri järgi varahooldusõigust ei ole (näiteks on see kohtuotsusega ainult ühel vanemal), siis ta kontot hallata ei saa. Sissemakse saab ta ikka teha: kannab raha esimesele vanemale, kes selle lapse kontole edasi kannab."
-
-#: templates/child-savings-content.php
 msgid "Read more: where the Additional Investment Fund invests →"
 msgstr "Loe lähemalt: kuhu Täiendav Kogumisfond investeerib →"
 
 #: templates/child-savings-content.php:97
 msgid "your child's personal gift link"
 msgstr "lapse isiklikku kinkimislinki"
+
+#: templates/child-savings-content.php
+msgid "Who can open a savings fund account for a child?"
+msgstr "Kes saab lapsele kogumisfondi avada?"
+
+#: templates/child-savings-content.php
+msgid "A child's account can be opened by their legal representative: a parent or a guardian. The child must be under 18 and an Estonian citizen or resident."
+msgstr "Lapse kontot saab avada tema seaduslik esindaja: vanem või eestkostja. Laps peab olema alla 18-aastane ning Eesti kodanik või resident."
+
+#: templates/child-savings-content.php
+msgid "To open the account, log in with your ID card, Mobile-ID or Smart-ID and choose \"Open an account for a child or company\". We check from the population register that you are the child's representative."
+msgstr "Konto avamiseks logi sisse ID-kaardi, Mobiil-ID või Smart-ID-ga ja vali „Ava konto lapsele või OÜ-le\". Kontrollime rahvastikuregistrist, et oled lapse esindaja."
+
+#: templates/child-savings-content.php
+msgid "One parent opens the account, but the other parent can also see the child's balance and make contributions."
+msgstr "Kontot avab üks vanem, aga ka teine vanem näeb lapse vara seisu ja saab teha sissemakseid."
+
+#: templates/child-savings-content.php
+msgid "Can I transfer my child's portfolio from elsewhere to Tuleva's Additional Investment Fund?"
+msgstr "Kas saan lapse portfelli mujalt Tuleva Täiendavasse Kogumisfondi üle tuua?"
+
+#: templates/child-savings-content.php
+msgid "Not directly. Unlike pension funds, fund units and shares can't be transferred to Tuleva from another provider."
+msgstr "Otse mitte. Erinevalt pensionifondidest ei saa fondiosakuid ega aktsiaid teise pakkuja juurest Tulevasse üle kanda."
+
+#: templates/child-savings-content.php
+msgid "To do this, sell the assets at your current provider and make a contribution to your child's savings fund account with the money. The gain on the sale may be subject to income tax, but your child can use their own tax-free income."
+msgstr "Selleks tuleb vara senise pakkuja juures müüa ja teha saadud rahaga sissemakse lapse kogumisfondi kontole. Müügikasumilt võib tekkida tulumaks, aga laps saab kasutada oma maksuvaba tulu."
+
+#: templates/child-savings-content.php
+msgid "If the existing assets are in your child's name, the law restricts selling them. Without the court's permission, a parent may sell and reinvest the part that was bought with their own money, together with its growth. For example:"
+msgstr "Kui senine vara on lapse nimel, seab seadus selle müügile piirangud. Ilma kohtu loata tohib vanem müüa ja edasi investeerida selle osa, mis on ostetud tema enda raha eest, koos selle kasvuga. Näiteks:"
+
+#: templates/child-savings-content.php
+msgid "A parent has given the child 100 euros to buy securities."
+msgstr "Vanem on lapsele andnud 100 eurot, et osta väärtpabereid."
+
+#: templates/child-savings-content.php
+msgid "The value of the securities has grown by 20 euros."
+msgstr "Väärtpaberite väärtus on kasvanud 20 euro võrra."
+
+#: templates/child-savings-content.php
+msgid "The child has also received 20 euros in dividends."
+msgstr "Lisaks on laps saanud 20 eurot dividende."
+
+#: templates/child-savings-content.php
+msgid "Without the court's permission, the parent may sell securities worth up to 120 euros and invest that money in Tuleva's fund. The child has \"earned\" the 20 euros of dividends themselves, so the parent may not buy securities with that money without the court's permission."
+msgstr "Ilma kohtu loata tohib vanem müüa väärtpabereid 120 euro ulatuses ja selle raha Tuleva fondi investeerida. Dividendidena saadud 20 eurot on laps „ise teeninud\", seega selle raha eest vanem ilma kohtu loata väärtpabereid osta ei tohi."
+
+#: templates/child-savings-content.php
+msgid "If this seems too complicated, there is a simpler way: leave the assets you have already invested where they are and start making new contributions to Tuleva's fund."
+msgstr "Kui see tundub liiga keeruline, on ka lihtsam tee: jäta varem investeeritud vara senisesse kohta ja hakka tegema uusi sissemakseid Tuleva fondi."
+
+#: templates/child-savings-content.php
+msgid "If you need help, write to us at tuleva@tuleva.ee or call 644 5100."
+msgstr "Kui vajad abi, kirjuta meile tuleva@tuleva.ee või helista 644 5100."
+
+#: templates/child-savings-content.php
+msgid "Who can make contributions to a child's savings fund account?"
+msgstr "Kes saavad lapse kogumisfondi sissemakseid teha?"
+
+#: templates/child-savings-content.php
+msgid "Parents, and other loved ones too: grandparents, godparents, friends."
+msgstr "Vanemad ja ka teised lähedased: vanavanemad, ristivanemad, sõbrad."
+
+#: templates/child-savings-content.php
+msgid "A loved one doesn't need to open anything. A parent can create a gift link for the child on the Tuleva website and send it to them. They pay through the link from their own bank, and the money goes straight to the child's savings fund account. If they like, the payer can add a few words for the parent to read."
+msgstr "Lähedane ei pea selleks midagi avama. Vanem saab Tuleva veebis teha lapsele kinkimislingi ja selle lähedasele saata. Lähedane maksab lingi kaudu oma pangast ja raha jõuab otse lapse kogumisfondi kontole. Soovi korral saab maksja lisada paar sõna, mida vanem näeb."
+
+#: templates/child-savings-content.php
+#, php-format
+msgid "You can find more detailed instructions %s."
+msgstr "Täpsemad juhised leiad %s."
+
+#: templates/child-savings-content.php
+msgid "on the contributions page"
+msgstr "sissemaksete lehelt"
+
+#: templates/child-savings-content.php
+msgid "A contribution made to the savings fund can't be taken back: the assets belong to the child."
+msgstr "Kogumisfondi tehtud sissemakset ei saa tagasi võtta: vara kuulub lapsele."
+
+#: templates/child-savings-content.php
+#, php-format
+msgid "Grandparents and other loved ones can pay straight to your child's savings fund account with a gift link. See \"Who can make contributions to a child's savings fund account?\" below and %s."
+msgstr "Vanavanemad ja teised lähedased saavad maksta otse lapse kogumisfondi kontole kinkimislingi kaudu – vaata allpool „Kes saavad lapse kogumisfondi sissemakseid teha?\" ja %s."
+
+#: templates/child-savings-content.php
+msgid "the contributions page"
+msgstr "sissemaksete lehte"
+
+#: templates/child-savings-content.php
+msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only."
+msgstr "Kui teisel vanemal registri järgi varahooldusõigust ei ole (näiteks on see kohtuotsusega ainult ühel vanemal), siis ta kontot hallata ei saa."

@@ -150,6 +150,14 @@
             <div class="row">
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <div class="faq-list">
+                        <div class="qa__question-wrapper" id="kkk-13">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-13"><?php _e('Who can open a savings fund account for a child?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-13" class="collapse">
+                                <p><?php _e('A child\'s account can be opened by their legal representative: a parent or a guardian. The child must be under 18 and an Estonian citizen or resident.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('To open the account, log in with your ID card, Mobile-ID or Smart-ID and choose "Open an account for a child or company". We check from the population register that you are the child\'s representative.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('One parent opens the account, but the other parent can also see the child\'s balance and make contributions.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
                         <div class="qa__question-wrapper" id="kkk-1">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('Why open an Additional Investment Fund for your child rather than a third pillar?', TEXT_DOMAIN); ?></a>
                             <div id="answer-1" class="collapse">
@@ -199,11 +207,42 @@
                                 <p><a href="https://tuleva.ee/vastused/miks-koolifondidest-eemale-hoida/"><?php _e('Read more: 3 reasons to avoid child-labeled savings products', TEXT_DOMAIN); ?></a></p>
                             </div>
                         </div>
+                        <div class="qa__question-wrapper" id="kkk-14">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-14"><?php _e('Can I transfer my child\'s portfolio from elsewhere to Tuleva\'s Additional Investment Fund?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-14" class="collapse">
+                                <p><?php _e('Not directly. Unlike pension funds, fund units and shares can\'t be transferred to Tuleva from another provider.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('To do this, sell the assets at your current provider and make a contribution to your child\'s savings fund account with the money. The gain on the sale may be subject to income tax, but your child can use their own tax-free income.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If the existing assets are in your child\'s name, the law restricts selling them. Without the court\'s permission, a parent may sell and reinvest the part that was bought with their own money, together with its growth. For example:', TEXT_DOMAIN); ?></p>
+                                <ul>
+                                    <li><?php _e('A parent has given the child 100 euros to buy securities.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('The value of the securities has grown by 20 euros.', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('The child has also received 20 euros in dividends.', TEXT_DOMAIN); ?></li>
+                                </ul>
+                                <p><?php _e('Without the court\'s permission, the parent may sell securities worth up to 120 euros and invest that money in Tuleva\'s fund. The child has "earned" the 20 euros of dividends themselves, so the parent may not buy securities with that money without the court\'s permission.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If this seems too complicated, there is a simpler way: leave the assets you have already invested where they are and start making new contributions to Tuleva\'s fund.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If you need help, write to us at tuleva@tuleva.ee or call 644 5100.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
 <div class="qa__question-wrapper" id="sissemaksed">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-4"><?php _e('How do I make contributions?', TEXT_DOMAIN); ?></a>
                             <div id="answer-4" class="collapse">
                                 <p><?php _e('You can make contributions to your child\'s savings fund account both from your own bank account and from the child\'s. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('If a grandparent or another close person wants to make a contribution to your child\'s account, the simplest way for now is for them to gift the money to you: you transfer it to your child\'s account and from there to the fund. If a gift lands straight on the child\'s account, investing it requires the court\'s consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child\'s savings fund account.', TEXT_DOMAIN); ?></p>
+                                <p><?php printf(
+                                    __('Grandparents and other loved ones can pay straight to your child\'s savings fund account with a gift link. See "Who can make contributions to a child\'s savings fund account?" below and %s.', TEXT_DOMAIN),
+                                    '<a href="https://tuleva.ee/kogumisfondi-sissemaksed/">' . __('the contributions page', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                            </div>
+                        </div>
+                        <div class="qa__question-wrapper" id="kkk-15">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-15"><?php _e('Who can make contributions to a child\'s savings fund account?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-15" class="collapse">
+                                <p><?php _e('Parents, and other loved ones too: grandparents, godparents, friends.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('A loved one doesn\'t need to open anything. A parent can create a gift link for the child on the Tuleva website and send it to them. They pay through the link from their own bank, and the money goes straight to the child\'s savings fund account. If they like, the payer can add a few words for the parent to read.', TEXT_DOMAIN); ?></p>
+                                <p><?php printf(
+                                    __('You can find more detailed instructions %s.', TEXT_DOMAIN),
+                                    '<a href="https://tuleva.ee/kogumisfondi-sissemaksed/">' . __('on the contributions page', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                                <p><?php _e('A contribution made to the savings fund can\'t be taken back: the assets belong to the child.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-12">
@@ -212,7 +251,7 @@
                                 <p><?php _e('Both parents can manage the child\'s account if the population register gives them the right to manage the child\'s property. We check this from the population register.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('If one parent has already opened the account, the other doesn\'t need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child\'s name from the menu. The second parent then goes through a short questionnaire too. After that the child\'s account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('Both parents\' right of representation lasts until the child\'s 18th birthday.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('If the register doesn\'t give the other parent the right to manage the child\'s property, they can\'t manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child\'s account.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('If the register doesn\'t give the other parent the right to manage the child\'s property, they can\'t manage the account. This happens, for example, when a court has given the right to one parent only.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
 <div class="qa__question-wrapper" id="kkk-5">
