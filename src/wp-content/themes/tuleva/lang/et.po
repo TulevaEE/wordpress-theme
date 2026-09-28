@@ -1343,16 +1343,13 @@ msgid "If you have several children, you can open a separate account for each on
 msgstr "Kui sul on mitu last, saad avada igale ühele oma konto."
 
 #: templates/child-savings-content.php:94
-msgid "Coming this autumn"
-msgstr "Tuleb sügisel"
-
-#: templates/child-savings-content.php:95
 msgid "Gifts straight to your child's account"
 msgstr "Kingitused otse lapse kontole"
 
 #: templates/child-savings-content.php:96
-msgid "Grandparents, godparents, and friends will be able to make contributions straight to your child's savings fund account, with no steps in between."
-msgstr "Vanavanemad, ristivanemad ja sõbrad saavad teha sissemakseid otse lapse kogumisfondi kontole, ilma vahesammudeta."
+#, php-format
+msgid "Grandparents and other loved ones can also make contributions straight to your child's savings fund account, for example for birthdays and other special occasions. If you have already opened an account for your child, you can share %s with them."
+msgstr "Ka vanavanemad ja teised lähedased saavad teha sissemakseid otse lapse kogumisfondi kontole, näiteks tähtpäevadeks. Kui oled lapsele juba konto avanud, saad jagada neile %s."
 
 #: templates/child-savings-content.php:108 templates/savings-fund-landing-content.php:182
 msgid "Good to know before you start"
@@ -2401,3 +2398,7 @@ msgstr "Kui teisel vanemal registri järgi varahooldusõigust ei ole (näiteks o
 #: templates/child-savings-content.php
 msgid "Read more: where the Additional Investment Fund invests →"
 msgstr "Loe lähemalt: kuhu Täiendav Kogumisfond investeerib →"
+
+#: templates/child-savings-content.php:97
+msgid "your child's personal gift link"
+msgstr "lapse isiklikku kinkimislinki"

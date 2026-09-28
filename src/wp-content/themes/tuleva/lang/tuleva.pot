@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-17T12:50:50+00:00\n"
+"POT-Creation-Date: 2026-09-28T09:02:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Tuleva"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:27
 #: helpers/acf/init.php:19
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
@@ -38,23 +38,76 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: helpers/extras.php:467
-#: helpers/extras.php:478
+#: helpers/extras.php:533
+#: helpers/extras.php:544
 #: templates/components/countdown-timer.php:22
 #: templates/components/counter-hero.php:27
 msgid "days"
 msgstr ""
 
-#: helpers/extras.php:579
+#: helpers/extras.php:645
 msgid "Pagination"
 msgstr ""
 
-#: helpers/extras.php:583
+#: helpers/extras.php:649
 msgid "Newer"
 msgstr ""
 
-#: helpers/extras.php:626
+#: helpers/extras.php:692
 msgid "Older"
+msgstr ""
+
+#: helpers/schema.php:111
+#: templates/components/fund-bonds-details.php:45
+#: templates/components/fund-savings-details.php:84
+#: templates/components/fund-stocks-details.php:45
+#: templates/components/fund-third-details.php:45
+msgid "Ongoing charges"
+msgstr ""
+
+#: helpers/schema.php:112
+#: templates/components/front-hero/calculator.php:115
+msgid "per year"
+msgstr ""
+
+#: helpers/schema.php:113
+#: templates/components/fund-bonds-details.php:41
+#: templates/components/fund-savings-details.php:78
+#: templates/components/fund-stocks-details.php:41
+#: templates/components/fund-third-details.php:41
+msgid "Management fee"
+msgstr ""
+
+#: helpers/schema.php:114
+#: templates/components/fund-bonds-details.php:49
+#: templates/components/fund-savings-details.php:90
+#: templates/components/fund-stocks-details.php:49
+#: templates/components/fund-third-details.php:49
+msgid "Redemption fee and issue fee"
+msgstr ""
+
+#: helpers/schema.php:115
+#: templates/components/fund-bonds-details.php:29
+#: templates/components/fund-savings-details.php:64
+#: templates/components/fund-stocks-details.php:29
+#: templates/components/fund-third-details.php:29
+msgid "Date of inception"
+msgstr ""
+
+#: helpers/schema.php:116
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-savings-details.php:102
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
+msgid "Risk profile"
+msgstr ""
+
+#: helpers/schema.php:117
+#: templates/components/fund-bonds-details.php:61
+#: templates/components/fund-savings-details.php:108
+#: templates/components/fund-stocks-details.php:61
+#: templates/components/fund-third-details.php:61
+msgid "Comparison index"
 msgstr ""
 
 #: helpers/setup.php:25
@@ -67,6 +120,10 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Child savings page"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Company savings page"
 msgstr ""
 
 #. Template Name of the theme
@@ -159,24 +216,28 @@ msgstr ""
 
 #: templates/child-savings-content.php:30
 #: templates/components/front-hero/calculator.php:31
-#: templates/components/third-pillar-calculator.php:113
+#: templates/components/third-pillar-calculator.php:109
 msgid "&euro;/month"
 msgstr ""
 
 #: templates/child-savings-content.php:36
+#: templates/company-savings-content.php:37
 msgid "Expected yearly return"
 msgstr ""
 
 #: templates/child-savings-content.php:36
 #: templates/child-savings-content.php:45
+#: templates/company-savings-content.php:37
 msgid "More information"
 msgstr ""
 
 #: templates/child-savings-content.php:36
+#: templates/company-savings-content.php:37
 msgid "The final amount depends on the returns that actually materialize, and neither we nor anyone else can guarantee a return."
 msgstr ""
 
 #: templates/child-savings-content.php:40
+#: templates/company-savings-content.php:41
 msgid "historic return of stocks 7%"
 msgstr ""
 
@@ -198,11 +259,12 @@ msgstr ""
 
 #: templates/child-savings-content.php:49
 #: templates/child-savings-content.php:77
-#: templates/child-savings-content.php:134
+#: templates/child-savings-content.php:136
 msgid "Open an account for my child"
 msgstr ""
 
 #: templates/child-savings-content.php:51
+#: templates/company-savings-content.php:52
 #: templates/savings-fund-landing-content.php:330
 msgid "Opening an account is free and takes only a few minutes."
 msgstr ""
@@ -216,6 +278,7 @@ msgid "Log in and choose \"For a child\""
 msgstr ""
 
 #: templates/child-savings-content.php:67
+#: templates/company-savings-content.php:103
 msgid "Verify yourself with Smart-ID, mobile-ID, or an ID card."
 msgstr ""
 
@@ -228,6 +291,7 @@ msgid "Answer a few questions. There are no documents to upload."
 msgstr ""
 
 #: templates/child-savings-content.php:73
+#: templates/company-savings-content.php:109
 msgid "Make the first contribution"
 msgstr ""
 
@@ -240,236 +304,512 @@ msgid "If you have several children, you can open a separate account for each on
 msgstr ""
 
 #: templates/child-savings-content.php:94
-msgid "Coming this autumn"
-msgstr ""
-
-#: templates/child-savings-content.php:95
 msgid "Gifts straight to your child's account"
 msgstr ""
 
 #: templates/child-savings-content.php:96
-msgid "Grandparents, godparents, and friends will be able to make contributions straight to your child's savings fund account, with no steps in between."
+#, php-format
+msgid "Grandparents and other loved ones can also make contributions straight to your child's savings fund account, for example for birthdays and other special occasions. If you have already opened an account for your child, you can share %s with them."
 msgstr ""
 
-#: templates/child-savings-content.php:108
+#: templates/child-savings-content.php:97
+msgid "your child's personal gift link"
+msgstr ""
+
+#: templates/child-savings-content.php:110
 #: templates/savings-fund-landing-content.php:124
 msgid "Good to know before you start"
 msgstr ""
 
-#: templates/child-savings-content.php:110
+#: templates/child-savings-content.php:112
 msgid "Before investing for your child, save for yourself."
 msgstr ""
 
-#: templates/child-savings-content.php:112
+#: templates/child-savings-content.php:114
 #, php-format
 msgid "The greatest gift to a child is a parent who has taken care of their own future: second and third pillar tax benefits used and a rainy-day fund in place. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:113
+#: templates/child-savings-content.php:115
 msgid "Why take care of your own third pillar first? →"
 msgstr ""
 
-#: templates/child-savings-content.php:115
+#: templates/child-savings-content.php:117
 msgid "Money given to your child stays with your child."
 msgstr ""
 
-#: templates/child-savings-content.php:116
+#: templates/child-savings-content.php:118
 msgid "The assets belong to the child and withdrawals can only be made to the child's own bank account. This gives the assets reasonable protection."
 msgstr ""
 
-#: templates/child-savings-content.php:117
+#: templates/child-savings-content.php:119
 #: templates/savings-fund-landing-content.php:126
 msgid "Stock markets fluctuate."
 msgstr ""
 
-#: templates/child-savings-content.php:118
+#: templates/child-savings-content.php:120
 msgid "Stock prices can rise as well as fall over time. The fund is meant for long-term investing – and saving for a child usually is just that. Still, returns cannot be guaranteed."
 msgstr ""
 
-#: templates/child-savings-content.php:119
+#: templates/child-savings-content.php:121
 msgid "The fund's assets are protected."
 msgstr ""
 
-#: templates/child-savings-content.php:120
+#: templates/child-savings-content.php:122
 msgid "The fund's assets are held strictly separate from Tuleva's assets at an independent depositary, and Tuleva Fondid AS operates under the supervision of the Estonian Financial Supervision Authority."
 msgstr ""
 
-#: templates/child-savings-content.php:132
+#: templates/child-savings-content.php:134
+#: templates/company-savings-content.php:122
 msgid "Start today"
 msgstr ""
 
-#: templates/child-savings-content.php:133
+#: templates/child-savings-content.php:135
 msgid "Open an account in just a couple of minutes. The earlier you start, the longer your child's assets have to grow."
 msgstr ""
 
-#: templates/child-savings-content.php:136
+#: templates/child-savings-content.php:138
 msgid "Over <strong>85,000</strong> people save with Tuleva"
 msgstr ""
 
-#: templates/child-savings-content.php:137
+#: templates/child-savings-content.php:139
+#: templates/company-savings-content.php:127
 #: templates/savings-fund-landing-content.php:150
 msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr ""
 
-#: templates/child-savings-content.php:147
-#: templates/components/qa-block.php:5
+#: templates/child-savings-content.php:149
+#: templates/company-savings-content.php:139
+#: templates/components/qa-block.php:6
 #: templates/savings-fund-landing-content.php:161
 msgid "Frequently asked questions"
 msgstr ""
 
-#: templates/child-savings-content.php:152
+#: templates/child-savings-content.php:154
 msgid "Why open an Additional Investment Fund for your child rather than a third pillar?"
 msgstr ""
 
-#: templates/child-savings-content.php:154
+#: templates/child-savings-content.php:156
 msgid "The third pillar's appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn't, so paying into a child's third pillar creates no tax benefit."
 msgstr ""
 
-#: templates/child-savings-content.php:155
+#: templates/child-savings-content.php:157
 msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home."
 msgstr ""
 
-#: templates/child-savings-content.php:156
+#: templates/child-savings-content.php:158
 msgid "Saving in the child's name in the Additional Investment Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
 msgstr ""
 
-#: templates/child-savings-content.php:158
+#: templates/child-savings-content.php:160
 #, php-format
 msgid "Once your child starts earning income themselves, they should consider their own third pillar too, because then they get a tax benefit as well. If your child already has a third pillar account opened before 2021, keep it as it is: these are separate accounts and don't mix. And your own third pillar is worth filling before you start saving for your child. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:159
+#: templates/child-savings-content.php:161
+#: templates/company-savings-content.php:200
 #: templates/savings-fund-landing-content.php:259
 #: templates/savings-fund-landing-content.php:260
 #: templates/savings-fund-landing-content.php:261
 msgid "Read more →"
 msgstr ""
 
-#: templates/child-savings-content.php:164
-msgid "What happens if my child withdraws all the money at 18?"
-msgstr ""
-
 #: templates/child-savings-content.php:166
-msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
-msgstr ""
-
-#: templates/child-savings-content.php:167
-msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
+msgid "Where is my child's money invested?"
 msgstr ""
 
 #: templates/child-savings-content.php:168
-msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
+msgid "In stock markets across the whole world. For every euro we buy shares in close to 2,500 of the world's largest listed companies. The fund follows the MSCI ACWI index, which covers both developed and emerging markets. A sustainability filter leaves out a couple of hundred companies that comply least with ESG rules."
 msgstr ""
 
-#: templates/child-savings-content.php:172
-msgid "How does this differ from LHV's Kasvukonto and Swedbank's child products?"
+#: templates/child-savings-content.php:169
+msgid "We don't pick individual stocks and we don't try to time the market. We invest on the same principle in Tuleva's second and third pillar equity funds."
 msgstr ""
 
-#: templates/child-savings-content.php:174
-msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
+#: templates/child-savings-content.php:170
+msgid "The fund pays no dividends. It reinvests what it earns, so the money has longer to grow and there is no tax to pay in the meantime."
+msgstr ""
+
+#: templates/child-savings-content.php:171
+msgid "Read more: where the Additional Investment Fund invests →"
 msgstr ""
 
 #: templates/child-savings-content.php:175
-msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
+msgid "What return can I expect?"
 msgstr ""
 
-#: templates/child-savings-content.php:176
-msgid "Read more: 3 reasons to avoid child-labeled savings products"
+#: templates/child-savings-content.php:177
+msgid "Nobody knows in advance. We don't try to outsmart the market. Our aim is to earn the average return of the world's stock markets at the lowest possible cost."
 msgstr ""
 
-#: templates/child-savings-content.php:180
-msgid "How do I make contributions?"
+#: templates/child-savings-content.php:178
+msgid "Over the past hundred years, world stock markets have returned roughly 7% per year. That is a long-term average, not a promise. There have been very strong years, and there have been periods when markets fell for years on end. The fund can also make a loss in some years."
+msgstr ""
+
+#: templates/child-savings-content.php:179
+msgid "When you save for a child, time is on your side. The longer you invest, the more single bad years even out in the average. A child's horizon is usually decades long."
+msgstr ""
+
+#: templates/child-savings-content.php:181
+#, php-format
+msgid "We don't show the fund's own return on this page yet. The fund's history is too short for that, and a few months' numbers would confuse more than they explain. %s"
 msgstr ""
 
 #: templates/child-savings-content.php:182
-msgid "You can make contributions to your child's savings fund account both from your own bank account and from the child's. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
+msgid "You can find the unit price history on the fund's documents page →"
 msgstr ""
 
-#: templates/child-savings-content.php:183
-msgid "If a grandparent or another close person wants to make a contribution to your child's account, the simplest way for now is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child's savings fund account."
+#: templates/child-savings-content.php:184
+msgid "Returns are not guaranteed. The value of an investment can both rise and fall."
 msgstr ""
 
-#: templates/child-savings-content.php:187
-msgid "How do withdrawals work?"
-msgstr ""
-
-#: templates/child-savings-content.php:189
-msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
+#: templates/child-savings-content.php:188
+msgid "How much does saving cost and what amount can I start with?"
 msgstr ""
 
 #: templates/child-savings-content.php:190
+msgid "The fund's ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free."
+msgstr ""
+
+#: templates/child-savings-content.php:191
+msgid "You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time."
+msgstr ""
+
+#: templates/child-savings-content.php:195
+msgid "How does this differ from LHV's Kasvukonto and Swedbank's child products?"
+msgstr ""
+
+#: templates/child-savings-content.php:197
+msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
+msgstr ""
+
+#: templates/child-savings-content.php:198
+msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
+msgstr ""
+
+#: templates/child-savings-content.php:199
+msgid "Read more: 3 reasons to avoid child-labeled savings products"
+msgstr ""
+
+#: templates/child-savings-content.php:203
+msgid "How do I make contributions?"
+msgstr ""
+
+#: templates/child-savings-content.php:205
+msgid "You can make contributions to your child's savings fund account both from your own bank account and from the child's. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
+msgstr ""
+
+#: templates/child-savings-content.php:206
+msgid "If a grandparent or another close person wants to make a contribution to your child's account, the simplest way for now is for them to gift the money to you: you transfer it to your child's account and from there to the fund. If a gift lands straight on the child's account, investing it requires the court's consent by law. That is why we recommend gifting through the parent. We are still working on a solution that would let family and friends make gifts straight to the child's savings fund account."
+msgstr ""
+
+#: templates/child-savings-content.php:210
+msgid "How can the other parent view and manage the child's account?"
+msgstr ""
+
+#: templates/child-savings-content.php:212
+msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
+msgstr ""
+
+#: templates/child-savings-content.php:213
+msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
+msgstr ""
+
+#: templates/child-savings-content.php:214
+msgid "Both parents' right of representation lasts until the child's 18th birthday."
+msgstr ""
+
+#: templates/child-savings-content.php:215
+msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child's account."
+msgstr ""
+
+#: templates/child-savings-content.php:219
+msgid "How do withdrawals work?"
+msgstr ""
+
+#: templates/child-savings-content.php:221
+msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
+msgstr ""
+
+#: templates/child-savings-content.php:222
 msgid "Units bought with the money you contributed yourself can be sold by you as your child's representative without extra conditions. If units were bought with the child's other money (for example a gift or an inheritance received straight to the child's account), the sale requires the court's consent by law. You can ask the court for a general consent covering the whole childhood. The state fee is 10 €."
 msgstr ""
 
-#: templates/child-savings-content.php:192
+#: templates/child-savings-content.php:224
 #, php-format
 msgid "The state is preparing a legislative change that would make investing in a child's name even simpler. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:193
+#: templates/child-savings-content.php:225
 msgid "We wrote about it on the blog →"
 msgstr ""
 
-#: templates/child-savings-content.php:198
+#: templates/child-savings-content.php:230
 msgid "Do I have to file a tax return in my child's name?"
 msgstr ""
 
-#: templates/child-savings-content.php:200
+#: templates/child-savings-content.php:232
 msgid "It depends on whether you make contributions from a regular bank account or through an investment account."
 msgstr ""
 
-#: templates/child-savings-content.php:201
+#: templates/child-savings-content.php:233
 msgid "<b>Making contributions from a regular bank account</b>, you don't need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child's name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all."
 msgstr ""
 
-#: templates/child-savings-content.php:202
+#: templates/child-savings-content.php:234
 msgid "<b>Making contributions from an investment account</b>, a tax return has to be filed in the child's name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven't sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you."
 msgstr ""
 
-#: templates/child-savings-content.php:203
+#: templates/child-savings-content.php:235
 msgid "Read on the blog which approach suits your family →"
 msgstr ""
 
-#: templates/child-savings-content.php:207
+#: templates/child-savings-content.php:239
+msgid "What happens if my child withdraws all the money at 18?"
+msgstr ""
+
+#: templates/child-savings-content.php:241
+msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
+msgstr ""
+
+#: templates/child-savings-content.php:242
+msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
+msgstr ""
+
+#: templates/child-savings-content.php:243
+msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
+msgstr ""
+
+#: templates/child-savings-content.php:247
 msgid "My child already has a third pillar with Tuleva. What should I do now?"
 msgstr ""
 
-#: templates/child-savings-content.php:209
+#: templates/child-savings-content.php:249
 msgid "A child's third pillar doesn't give an income tax refund, because a child generally doesn't earn enough income. That's why it's worth directing new contributions to your child's Additional Investment Fund; what's already saved keeps growing in the third pillar."
 msgstr ""
 
-#: templates/child-savings-content.php:222
+#: templates/child-savings-content.php:262
+#: templates/company-savings-content.php:195
 #: templates/savings-fund-landing-content.php:313
 msgid "Learn more"
 msgstr ""
 
-#: templates/child-savings-content.php:225
+#: templates/child-savings-content.php:265
 msgid "Should you save in the child's name or your own?"
 msgstr ""
 
-#: templates/child-savings-content.php:226
+#: templates/child-savings-content.php:266
 msgid "The pros and cons of each option."
 msgstr ""
 
-#: templates/child-savings-content.php:227
-#: templates/child-savings-content.php:232
+#: templates/child-savings-content.php:267
+#: templates/child-savings-content.php:272
 msgid "Read on →"
 msgstr ""
 
-#: templates/child-savings-content.php:230
+#: templates/child-savings-content.php:270
 msgid "Do you need an investment account when saving for a child?"
 msgstr ""
 
-#: templates/child-savings-content.php:231
+#: templates/child-savings-content.php:271
 msgid "Two approaches to choose between."
 msgstr ""
 
-#: templates/child-savings-content.php:236
+#: templates/child-savings-content.php:276
+#: templates/company-savings-content.php:209
 msgid "More about the Tuleva Additional Investment Fund →"
 msgstr ""
 
-#: templates/child-savings-content.php:237
+#: templates/child-savings-content.php:277
+#: templates/company-savings-content.php:210
 msgid "Fund documents →"
+msgstr ""
+
+#: templates/company-savings-content.php:7
+#: templates/savings-fund-landing-content.php:75
+msgid "Additional Investment Fund"
+msgstr ""
+
+#: templates/company-savings-content.php:7
+msgid "for your company"
+msgstr ""
+
+#: templates/company-savings-content.php:8
+msgid "Now your company can save in Tuleva too"
+msgstr ""
+
+#: templates/company-savings-content.php:9
+msgid "Put your company's idle cash to work."
+msgstr ""
+
+#: templates/company-savings-content.php:17
+msgid "Company's idle cash"
+msgstr ""
+
+#: templates/company-savings-content.php:27
+msgid "I add every month"
+msgstr ""
+
+#: templates/company-savings-content.php:48
+msgid "In 20 years"
+msgstr ""
+
+#: templates/company-savings-content.php:51
+#: templates/company-savings-content.php:124
+msgid "Open an account"
+msgstr ""
+
+#: templates/company-savings-content.php:66
+msgid "Why invest through Tuleva?"
+msgstr ""
+
+#: templates/company-savings-content.php:72
+msgid "A low fee"
+msgstr ""
+
+#: templates/company-savings-content.php:73
+msgid "A fund fee of 0.28% a year, with no purchase, sale or other extra fees."
+msgstr ""
+
+#: templates/company-savings-content.php:79
+msgid "No LEI code needed"
+msgstr ""
+
+#: templates/company-savings-content.php:80
+msgid "You buy units directly from the fund manager and save 50-100 euros a year."
+msgstr ""
+
+#: templates/company-savings-content.php:86
+msgid "Tuleva belongs to its savers"
+msgstr ""
+
+#: templates/company-savings-content.php:87
+msgid "The more of us who save together, the lower we can push the fees."
+msgstr ""
+
+#: templates/company-savings-content.php:99
+msgid "How to start"
+msgstr ""
+
+#: templates/company-savings-content.php:101
+msgid "Log in and choose \"For a company\""
+msgstr ""
+
+#: templates/company-savings-content.php:105
+msgid "Fill in the questionnaire"
+msgstr ""
+
+#: templates/company-savings-content.php:107
+msgid "If the company has two shareholders, both of them have to verify themselves."
+msgstr ""
+
+#: templates/company-savings-content.php:111
+msgid "Start with as little as 1 euro."
+msgstr ""
+
+#: templates/company-savings-content.php:123
+msgid "Open an account in just a couple of minutes and put your company's idle cash to work."
+msgstr ""
+
+#: templates/company-savings-content.php:126
+msgid "More than <strong>200</strong> companies already save in Tuleva"
+msgstr ""
+
+#: templates/company-savings-content.php:142
+msgid "Can my company invest?"
+msgstr ""
+
+#: templates/company-savings-content.php:144
+msgid "Under the fund rules, units can be acquired by a private limited company registered in Estonia that has up to two shareholders who are Estonian citizens or residents, and whose shareholders are at the same time also members of the company's management board and its beneficial owners."
+msgstr ""
+
+#: templates/company-savings-content.php:145
+msgid "When you join, you will see straight away whether your company is eligible."
+msgstr ""
+
+#: templates/company-savings-content.php:150
+msgid "Should I invest through my company or as a private person?"
+msgstr ""
+
+#: templates/company-savings-content.php:152
+msgid "Look at where your income arrives. If the income arrives in the company, invest through the company. If it arrives in your personal account, investing as a private person through an investment account is simpler. In terms of taxes there is usually no great difference, so do not create a company just for investing."
+msgstr ""
+
+#: templates/company-savings-content.php:157
+msgid "How do I account for this in bookkeeping?"
+msgstr ""
+
+#: templates/company-savings-content.php:159
+msgid "The fund does not pay out dividends, so there is usually nothing to declare on an ongoing basis. The units are recorded as a financial investment, and your accountant decides the exact treatment."
+msgstr ""
+
+#: templates/company-savings-content.php:160
+msgid "We make reporting easy: you get the information needed for the annual report (the acquisition cost of the units and their value on the balance sheet date) from Tuleva in ready-made form."
+msgstr ""
+
+#: templates/company-savings-content.php:165
+msgid "How quickly can I sell the units?"
+msgstr ""
+
+#: templates/company-savings-content.php:167
+msgid "You can sell units at any time and the money arrives in the company's account within three business days."
+msgstr ""
+
+#: templates/company-savings-content.php:172
+#: templates/savings-fund-landing-content.php:291
+msgid "What happens if the company's structure changes?"
+msgstr ""
+
+#: templates/company-savings-content.php:174
+msgid "If the company no longer meets the conditions (for example a third shareholder joins), the company cannot acquire further units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
+msgstr ""
+
+#: templates/company-savings-content.php:179
+msgid "Do Tuleva members earn the member bonus when investing through a company?"
+msgstr ""
+
+#: templates/company-savings-content.php:181
+msgid "No. When investing in the Additional Investment Fund through a company, the company cannot earn the member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+msgstr ""
+
+#: templates/company-savings-content.php:182
+msgid "If you are a member of the Tuleva cooperative and you invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgstr ""
+
+#: templates/company-savings-content.php:197
+msgid "https://tuleva.ee/taiendav-kogumisfond/kas-investeerida-oma-ou-kaudu-kellele-see-sobib-ja-kellele-mitte/"
+msgstr ""
+
+#: templates/company-savings-content.php:198
+msgid "Should you invest through your own company?"
+msgstr ""
+
+#: templates/company-savings-content.php:199
+msgid "Who it suits and who it does not."
+msgstr ""
+
+#: templates/company-savings-content.php:202
+msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgstr ""
+
+#: templates/company-savings-content.php:203
+msgid "Podcast about companies"
+msgstr ""
+
+#: templates/company-savings-content.php:204
+msgid "How saving through a company works."
+msgstr ""
+
+#: templates/company-savings-content.php:205
+msgid "Listen →"
+msgstr ""
+
+#: templates/company-savings-content.php:209
+msgid "https://tuleva.ee/taiendav-kogumisfond/"
+msgstr ""
+
+#: templates/company-savings-content.php:210
+msgid "https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"
 msgstr ""
 
 #: templates/components/calculator-cta.php:25
@@ -529,7 +869,7 @@ msgid "years"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:23
-#: templates/components/third-pillar-calculator.php:102
+#: templates/components/third-pillar-calculator.php:98
 msgid "Gross salary"
 msgstr ""
 
@@ -587,10 +927,6 @@ msgstr ""
 msgid "You pay <span class=\"text-nowrap\"><span class=\"tuleva-saving\">- €</span> less</span> in fees"
 msgstr ""
 
-#: templates/components/front-hero/calculator.php:115
-msgid "per year"
-msgstr ""
-
 #: templates/components/front-hero/calculator.php:123
 #: templates/components/fund-stocks-header.php:5
 msgid "Tuleva World Stocks Pension Fund"
@@ -600,253 +936,230 @@ msgstr ""
 msgid "0.28% per year"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:7
-#: templates/components/fund-savings-details.php:32
-#: templates/components/fund-stocks-details.php:7
-#: templates/components/fund-third-details.php:7
-msgid "Fund details"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:13
-#: templates/components/fund-savings-details.php:40
-#: templates/components/fund-stocks-details.php:13
-#: templates/components/fund-third-details.php:13
-msgid "Currency"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:17
-#: templates/components/fund-savings-details.php:45
-#: templates/components/fund-stocks-details.php:17
-#: templates/components/fund-third-details.php:17
-msgid "Date of inception"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:18
-#: templates/components/fund-stocks-details.php:18
+#: templates/components/fund-bonds-details.php:4
+#: templates/components/fund-stocks-details.php:4
 msgid "27 March 2017"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:21
-#: templates/components/fund-savings-details.php:50
-#: templates/components/fund-stocks-details.php:21
-#: templates/components/fund-third-details.php:21
-msgid "Fund volume"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:29
-#: templates/components/fund-savings-details.php:59
-#: templates/components/fund-stocks-details.php:29
-#: templates/components/fund-third-details.php:29
-msgid "Management fee"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:33
-#: templates/components/fund-savings-details.php:65
-#: templates/components/fund-stocks-details.php:33
-#: templates/components/fund-third-details.php:33
-msgid "Ongoing charges"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:37
-#: templates/components/fund-savings-details.php:71
-#: templates/components/fund-stocks-details.php:37
-#: templates/components/fund-third-details.php:37
-msgid "Redemption fee and issue fee"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:41
-#: templates/components/fund-savings-details.php:77
-#: templates/components/fund-stocks-details.php:41
-#: templates/components/fund-third-details.php:41
-msgid "Fund manager's participation rate in fund"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:42
-#: templates/components/fund-savings-details.php:78
-#: templates/components/fund-stocks-details.php:42
-#: templates/components/fund-third-details.php:42
-msgid "units"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:45
-#: templates/components/fund-savings-details.php:83
-#: templates/components/fund-stocks-details.php:45
-#: templates/components/fund-third-details.php:45
-msgid "Risk profile"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:46
+#: templates/components/fund-bonds-details.php:9
 msgid "Conservative"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:49
-#: templates/components/fund-savings-details.php:89
-#: templates/components/fund-stocks-details.php:49
-#: templates/components/fund-third-details.php:49
-msgid "Comparison index"
+#: templates/components/fund-bonds-details.php:19
+#: templates/components/fund-savings-details.php:51
+#: templates/components/fund-stocks-details.php:19
+#: templates/components/fund-third-details.php:19
+msgid "Fund details"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:55
-#: templates/components/fund-savings-details.php:95
+#: templates/components/fund-bonds-details.php:25
+#: templates/components/fund-savings-details.php:59
+#: templates/components/fund-stocks-details.php:25
+#: templates/components/fund-third-details.php:25
+msgid "Currency"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:33
+#: templates/components/fund-savings-details.php:69
+#: templates/components/fund-stocks-details.php:33
+#: templates/components/fund-third-details.php:33
+msgid "Fund volume"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:53
+#: templates/components/fund-savings-details.php:96
+#: templates/components/fund-stocks-details.php:53
+#: templates/components/fund-third-details.php:53
+msgid "Fund manager's participation rate in fund"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:54
+#: templates/components/fund-savings-details.php:97
 #: templates/components/fund-stocks-details.php:54
 #: templates/components/fund-third-details.php:54
+msgid "units"
+msgstr ""
+
+#: templates/components/fund-bonds-details.php:68
+#: templates/components/fund-savings-details.php:114
+#: templates/components/fund-stocks-details.php:68
+#: templates/components/fund-third-details.php:68
 msgid "Documents"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:101
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-savings-details.php:120
+#: templates/components/fund-savings-details.php:132
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-third-details.php:71
 msgid "Prospectus"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:103
-#: templates/components/fund-savings-details.php:115
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-savings-details.php:122
+#: templates/components/fund-savings-details.php:134
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-third-details.php:71
 msgid " and "
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:106
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-third-details.php:57
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-savings-details.php:125
+#: templates/components/fund-savings-details.php:137
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-third-details.php:71
 msgid "Terms and conditions"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-bonds-details.php:71
 #: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:108
+#: templates/components/fund-bonds-details.php:79
+#: templates/components/fund-bonds-details.php:82
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-bonds-details.php:92
+#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-bonds-details.php:102
+#: templates/components/fund-bonds-details.php:107
 #: templates/components/fund-savings-details.php:127
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:140
-#: templates/components/fund-savings-details.php:145
-#: templates/components/fund-savings-details.php:150
-#: templates/components/fund-savings-details.php:155
-#: templates/components/fund-savings-details.php:161
+#: templates/components/fund-savings-details.php:147
+#: templates/components/fund-savings-details.php:154
+#: templates/components/fund-savings-details.php:160
 #: templates/components/fund-savings-details.php:171
+#: templates/components/fund-savings-details.php:176
 #: templates/components/fund-savings-details.php:181
-#: templates/components/fund-stocks-details.php:57
-#: templates/components/fund-stocks-details.php:60
-#: templates/components/fund-stocks-details.php:63
-#: templates/components/fund-stocks-details.php:66
-#: templates/components/fund-stocks-details.php:69
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-stocks-details.php:75
+#: templates/components/fund-savings-details.php:187
+#: templates/components/fund-savings-details.php:197
+#: templates/components/fund-savings-details.php:207
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-stocks-details.php:76
+#: templates/components/fund-stocks-details.php:79
 #: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:57
-#: templates/components/fund-third-details.php:60
-#: templates/components/fund-third-details.php:63
-#: templates/components/fund-third-details.php:66
-#: templates/components/fund-third-details.php:69
-#: templates/components/fund-third-details.php:72
-#: templates/components/fund-third-details.php:75
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-stocks-details.php:92
+#: templates/components/fund-stocks-details.php:95
+#: templates/components/fund-stocks-details.php:102
+#: templates/components/fund-stocks-details.php:107
+#: templates/components/fund-third-details.php:71
+#: templates/components/fund-third-details.php:74
+#: templates/components/fund-third-details.php:77
+#: templates/components/fund-third-details.php:80
 #: templates/components/fund-third-details.php:87
+#: templates/components/fund-third-details.php:90
+#: templates/components/fund-third-details.php:93
+#: templates/components/fund-third-details.php:100
+#: templates/components/fund-third-details.php:105
 msgid " (in Estonian)"
 msgstr ""
 
-#: templates/components/fund-stocks-details.php templates/components/fund-bonds-details.php templates/components/fund-third-details.php templates/components/fund-savings-details.php
+#: templates/components/fund-bonds-details.php:73
+#: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-savings-details.php:139
+#: templates/components/fund-savings-details.php:165
+#: templates/components/fund-stocks-details.php:73
+#: templates/components/fund-stocks-details.php:85
+#: templates/components/fund-third-details.php:83
+#, php-format
 msgid " (in Estonian, effective from %s)"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:61
-#: templates/components/fund-savings-details.php:126
-#: templates/components/fund-stocks-details.php:60
-#: templates/components/fund-third-details.php:60
+#: templates/components/fund-bonds-details.php:76
+#: templates/components/fund-savings-details.php:146
+#: templates/components/fund-stocks-details.php:76
+#: templates/components/fund-third-details.php:74
 msgid "Model portfolio"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:64
-#: templates/components/fund-savings-details.php:133
-#: templates/components/fund-stocks-details.php:63
-#: templates/components/fund-third-details.php:63
+#: templates/components/fund-bonds-details.php:79
+#: templates/components/fund-savings-details.php:153
+#: templates/components/fund-stocks-details.php:79
+#: templates/components/fund-third-details.php:77
 msgid "Key Investor Information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-savings-details.php:139
-#: templates/components/fund-stocks-details.php:66
-#: templates/components/fund-third-details.php:66
+#: templates/components/fund-bonds-details.php:82
+#: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-savings-details.php:159
+#: templates/components/fund-savings-details.php:164
+#: templates/components/fund-stocks-details.php:82
+#: templates/components/fund-stocks-details.php:85
+#: templates/components/fund-third-details.php:80
+#: templates/components/fund-third-details.php:83
 msgid "Procedure for determining net worth of fund"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:70
-#: templates/components/fund-savings-details.php:144
-#: templates/components/fund-stocks-details.php:69
-#: templates/components/fund-third-details.php:69
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-savings-details.php:170
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:87
 msgid "Sustainability"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:73
-#: templates/components/fund-savings-details.php:149
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:72
+#: templates/components/fund-bonds-details.php:92
+#: templates/components/fund-savings-details.php:175
+#: templates/components/fund-stocks-details.php:92
+#: templates/components/fund-third-details.php:90
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-savings-details.php:154
-#: templates/components/fund-stocks-details.php:75
-#: templates/components/fund-third-details.php:75
+#: templates/components/fund-bonds-details.php:95
+#: templates/components/fund-savings-details.php:180
+#: templates/components/fund-stocks-details.php:95
+#: templates/components/fund-third-details.php:93
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:80
-#: templates/components/fund-savings-details.php:166
-#: templates/components/fund-stocks-details.php:79
-#: templates/components/fund-third-details.php:79
+#: templates/components/fund-bonds-details.php:99
+#: templates/components/fund-savings-details.php:192
+#: templates/components/fund-stocks-details.php:99
+#: templates/components/fund-third-details.php:97
 msgid "Reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:83
-#: templates/components/fund-savings-details.php:170
-#: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-bonds-details.php:102
+#: templates/components/fund-savings-details.php:196
+#: templates/components/fund-stocks-details.php:102
+#: templates/components/fund-third-details.php:100
 msgid "Investment reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:85
-#: templates/components/fund-savings-details.php:175
-#: templates/components/fund-stocks-details.php:84
-#: templates/components/fund-third-details.php:84
+#: templates/components/fund-bonds-details.php:104
+#: templates/components/fund-savings-details.php:201
+#: templates/components/fund-stocks-details.php:104
+#: templates/components/fund-third-details.php:102
 msgid "Previous reports"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:88
-#: templates/components/fund-savings-details.php:180
-#: templates/components/fund-stocks-details.php:87
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-bonds-details.php:107
+#: templates/components/fund-savings-details.php:206
+#: templates/components/fund-stocks-details.php:107
+#: templates/components/fund-third-details.php:105
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:92
-#: templates/components/fund-savings-details.php:193
-#: templates/components/fund-stocks-details.php:91
-#: templates/components/fund-third-details.php:91
+#: templates/components/fund-bonds-details.php:111
+#: templates/components/fund-savings-details.php:219
+#: templates/components/fund-stocks-details.php:111
+#: templates/components/fund-third-details.php:109
 msgid "Sustainability information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:94
-#: templates/components/fund-savings-details.php:195
-#: templates/components/fund-stocks-details.php:93
-#: templates/components/fund-third-details.php:93
+#: templates/components/fund-bonds-details.php:113
+#: templates/components/fund-savings-details.php:221
+#: templates/components/fund-stocks-details.php:113
+#: templates/components/fund-third-details.php:111
 msgid "CO2 intensity"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:95
-#: templates/components/fund-savings-details.php:196
-#: templates/components/fund-stocks-details.php:94
-#: templates/components/fund-third-details.php:94
+#: templates/components/fund-bonds-details.php:114
+#: templates/components/fund-savings-details.php:222
+#: templates/components/fund-stocks-details.php:114
+#: templates/components/fund-third-details.php:112
 #, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr ""
@@ -879,24 +1192,25 @@ msgstr ""
 msgid "Tõnu has been working in the investment field for over 30 years. Before founding Tuleva, he headed an investment company he part-owned, Karu Capital. Before that, Tõnu ran Eastern European financial sector development projects at the European Bank for Reconstruction and Development and worked as head of investment banking at Hansabank. He holds a master’s degree from London Business School-and a bachelor’s degree from the University of Tartu."
 msgstr ""
 
-#: templates/components/fund-savings-details.php:160
+#: templates/components/fund-savings-details.php:186
 msgid "Summary of Investor Rights"
 msgstr ""
 
-#: templates/components/fund-savings-details.php:185
+#: templates/components/fund-savings-details.php:211
 msgid "Fund unit price change"
 msgstr ""
 
-#: templates/components/fund-savings-details.php:188
+#: templates/components/fund-savings-details.php:214
 msgid "Download NAV history"
 msgstr ""
 
+#: templates/components/fund-savings-details.php:232
 #: templates/components/fund-savings-header.php:12
 msgid "Tuleva Additional Investment Fund"
 msgstr ""
 
-#: templates/components/fund-stocks-details.php:46
-#: templates/components/fund-third-details.php:46
+#: templates/components/fund-stocks-details.php:9
+#: templates/components/fund-third-details.php:9
 msgid "Aggressive"
 msgstr ""
 
@@ -916,7 +1230,7 @@ msgstr ""
 msgid "<a href=\"/en/online-bank-instructions/\" class=\"btn btn-primary btn-lg\" data-label=\"fund-details-choose-stocks\">Select this fund</a>"
 msgstr ""
 
-#: templates/components/fund-third-details.php:18
+#: templates/components/fund-third-details.php:4
 msgid "15th October 2019"
 msgstr ""
 
@@ -1412,11 +1726,11 @@ msgstr ""
 msgid "y/o"
 msgstr ""
 
-#: templates/components/qa-block.php:25
+#: templates/components/qa-block.php:27
 msgid "More questions"
 msgstr ""
 
-#: templates/components/qa-block.php:25
+#: templates/components/qa-block.php:27
 msgid "Less questions"
 msgstr ""
 
@@ -1437,8 +1751,8 @@ msgid "Your monthly contribution"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:59
-#: templates/components/third-pillar-calculator.php:69
-#: templates/components/third-pillar-calculator.php:142
+#: templates/components/third-pillar-calculator.php:65
+#: templates/components/third-pillar-calculator.php:138
 msgid "Yearly gain from income tax"
 msgstr ""
 
@@ -1458,77 +1772,77 @@ msgstr ""
 msgid "Who manages Tuleva funds?"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:20
+#: templates/components/third-pillar-calculator.php:16
 msgid "Total gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:21
+#: templates/components/third-pillar-calculator.php:17
 msgid "view"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:27
-#: templates/components/third-pillar-calculator.php:43
-#: templates/components/third-pillar-calculator.php:59
-#: templates/components/third-pillar-calculator.php:131
+#: templates/components/third-pillar-calculator.php:23
+#: templates/components/third-pillar-calculator.php:39
+#: templates/components/third-pillar-calculator.php:55
+#: templates/components/third-pillar-calculator.php:127
 msgid "&euro;/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:33
+#: templates/components/third-pillar-calculator.php:29
 msgid "of which dividends"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:36
+#: templates/components/third-pillar-calculator.php:32
 msgid "Gross income, from which income tax has not been withheld as a private person. For example, dividends received from an Estonian company; dividends that have been taxed abroad."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:49
+#: templates/components/third-pillar-calculator.php:45
 msgid "Other tax reliefs"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:52
+#: templates/components/third-pillar-calculator.php:48
 msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:72
-#: templates/components/third-pillar-calculator.php:145
+#: templates/components/third-pillar-calculator.php:68
+#: templates/components/third-pillar-calculator.php:141
 msgid "The declaration of income for this year will start on February 15 next year. Remember that you cannot get more income tax back than you paid this year."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:80
+#: templates/components/third-pillar-calculator.php:76
 msgid "Contribute up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:83
-#: templates/components/third-pillar-calculator.php:156
+#: templates/components/third-pillar-calculator.php:79
+#: templates/components/third-pillar-calculator.php:152
 msgid "Contributions to the III pillar are subject to an income tax discount of up to 15% of taxable income in Estonia, but not more than 6000&nbsp;€/year"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:92
-#: templates/components/third-pillar-calculator.php:165
+#: templates/components/third-pillar-calculator.php:88
+#: templates/components/third-pillar-calculator.php:161
 msgid "Make a III pillar payment"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:96
+#: templates/components/third-pillar-calculator.php:92
 msgid "Making a payment is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:105
+#: templates/components/third-pillar-calculator.php:101
 msgid "Your monthly gross salary (before tax). Including parental benefits, unemployment insurance benefits, sickness benefits, pension, etc."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:120
+#: templates/components/third-pillar-calculator.php:116
 msgid "Other gross income"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:123
+#: templates/components/third-pillar-calculator.php:119
 msgid "Yearly gross income taxed at 22% including rental, Airbnb, interest, income from the sale of securities or other assets; dividends taxed at 7%; and II/III pillar pension payments at 10% or 22%."
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:153
+#: templates/components/third-pillar-calculator.php:149
 msgid "Contribute monthly up to"
 msgstr ""
 
-#: templates/components/third-pillar-calculator.php:169
+#: templates/components/third-pillar-calculator.php:165
 msgid "Setting up a recurring III pillar payment is <strong>free</strong> and takes only 2&nbsp;minutes."
 msgstr ""
 
@@ -1716,10 +2030,6 @@ msgstr ""
 
 #: templates/savings-fund-landing-content.php:74
 msgid "3 · You are here"
-msgstr ""
-
-#: templates/savings-fund-landing-content.php:75
-msgid "Additional Investment Fund"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:76
@@ -2066,10 +2376,6 @@ msgstr ""
 msgid "Yes. If the company has two shareholders, you both have to go through verification, which means filling in a short questionnaire."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:291
-msgid "What happens if the company's structure changes?"
-msgstr ""
-
 #: templates/savings-fund-landing-content.php:293
 msgid "If the company's structure no longer meets the conditions, for example a third shareholder joins, the company cannot acquire new fund units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
 msgstr ""
@@ -2240,265 +2546,4 @@ msgstr ""
 
 #: widgets/text-rows-widget.php:59
 msgid "Text row 4:"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Company savings page"
-msgstr ""
-
-#: templates/company-savings-content.php:7
-msgid "for your company"
-msgstr ""
-
-#: templates/company-savings-content.php:8
-msgid "Now your company can save in Tuleva too"
-msgstr ""
-
-#: templates/company-savings-content.php:9
-msgid "Put your company's idle cash to work."
-msgstr ""
-
-#: templates/company-savings-content.php:17
-msgid "Company's idle cash"
-msgstr ""
-
-#: templates/company-savings-content.php:27
-msgid "I add every month"
-msgstr ""
-
-#: templates/company-savings-content.php:48
-msgid "In 20 years"
-msgstr ""
-
-#: templates/company-savings-content.php:51
-#: templates/company-savings-content.php:124
-msgid "Open an account"
-msgstr ""
-
-#: templates/company-savings-content.php:67
-msgid "Why invest through Tuleva?"
-msgstr ""
-
-#: templates/company-savings-content.php:73
-msgid "A low fee"
-msgstr ""
-
-#: templates/company-savings-content.php:74
-msgid "A fund fee of 0.28% a year, with no purchase, sale or other extra fees."
-msgstr ""
-
-#: templates/company-savings-content.php:80
-msgid "No LEI code needed"
-msgstr ""
-
-#: templates/company-savings-content.php:81
-msgid "You buy units directly from the fund manager and save 50-100 euros a year."
-msgstr ""
-
-#: templates/company-savings-content.php:87
-msgid "Tuleva belongs to its savers"
-msgstr ""
-
-#: templates/company-savings-content.php:88
-msgid "The more of us who save together, the lower we can push the fees."
-msgstr ""
-
-#: templates/company-savings-content.php:100
-msgid "How to start"
-msgstr ""
-
-#: templates/company-savings-content.php:102
-msgid "Log in and choose \"For a company\""
-msgstr ""
-
-#: templates/company-savings-content.php:106
-msgid "Fill in the questionnaire"
-msgstr ""
-
-#: templates/company-savings-content.php:108
-msgid "If the company has two shareholders, both of them have to verify themselves."
-msgstr ""
-
-#: templates/company-savings-content.php:112
-msgid "Start with as little as 1 euro."
-msgstr ""
-
-#: templates/company-savings-content.php:124
-msgid "Open an account in just a couple of minutes and put your company's idle cash to work."
-msgstr ""
-
-#: templates/company-savings-content.php:127
-msgid "More than <strong>200</strong> companies already save in Tuleva"
-msgstr ""
-
-#: templates/company-savings-content.php:143
-msgid "Can my company invest?"
-msgstr ""
-
-#: templates/company-savings-content.php:145
-msgid "Under the fund rules, units can be acquired by a private limited company registered in Estonia that has up to two shareholders who are Estonian citizens or residents, and whose shareholders are at the same time also members of the company's management board and its beneficial owners."
-msgstr ""
-
-#: templates/company-savings-content.php:146
-msgid "When you join, you will see straight away whether your company is eligible."
-msgstr ""
-
-#: templates/company-savings-content.php:151
-msgid "Should I invest through my company or as a private person?"
-msgstr ""
-
-#: templates/company-savings-content.php:153
-msgid "Look at where your income arrives. If the income arrives in the company, invest through the company. If it arrives in your personal account, investing as a private person through an investment account is simpler. In terms of taxes there is usually no great difference, so do not create a company just for investing."
-msgstr ""
-
-#: templates/company-savings-content.php:158
-msgid "How do I account for this in bookkeeping?"
-msgstr ""
-
-#: templates/company-savings-content.php:160
-msgid "The fund does not pay out dividends, so there is usually nothing to declare on an ongoing basis. The units are recorded as a financial investment, and your accountant decides the exact treatment."
-msgstr ""
-
-#: templates/company-savings-content.php:161
-msgid "We make reporting easy: you get the information needed for the annual report (the acquisition cost of the units and their value on the balance sheet date) from Tuleva in ready-made form."
-msgstr ""
-
-#: templates/company-savings-content.php:166
-msgid "How quickly can I sell the units?"
-msgstr ""
-
-#: templates/company-savings-content.php:168
-msgid "You can sell units at any time and the money arrives in the company's account within three business days."
-msgstr ""
-
-#: templates/company-savings-content.php:175
-msgid "If the company no longer meets the conditions (for example a third shareholder joins), the company cannot acquire further units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
-msgstr ""
-
-#: templates/company-savings-content.php:180
-msgid "Do Tuleva members earn the member bonus when investing through a company?"
-msgstr ""
-
-#: templates/company-savings-content.php:182
-msgid "No. When investing in the Additional Investment Fund through a company, the company cannot earn the member bonus, because the articles of association of the Tuleva cooperative do not allow it."
-msgstr ""
-
-#: templates/company-savings-content.php:183
-msgid "If you are a member of the Tuleva cooperative and you invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
-msgstr ""
-
-#: templates/company-savings-content.php:198
-msgid "https://tuleva.ee/taiendav-kogumisfond/kas-investeerida-oma-ou-kaudu-kellele-see-sobib-ja-kellele-mitte/"
-msgstr ""
-
-#: templates/company-savings-content.php:199
-msgid "Should you invest through your own company?"
-msgstr ""
-
-#: templates/company-savings-content.php:200
-msgid "Who it suits and who it does not."
-msgstr ""
-
-#: templates/company-savings-content.php:203
-msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
-msgstr ""
-
-#: templates/company-savings-content.php:204
-msgid "Podcast about companies"
-msgstr ""
-
-#: templates/company-savings-content.php:205
-msgid "How saving through a company works."
-msgstr ""
-
-#: templates/company-savings-content.php:206
-msgid "Listen →"
-msgstr ""
-
-#: templates/company-savings-content.php:210
-msgid "https://tuleva.ee/taiendav-kogumisfond/"
-msgstr ""
-
-#: templates/company-savings-content.php:211
-msgid "https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Where is my child's money invested?"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "In stock markets across the whole world. For every euro we buy shares in close to 2,500 of the world's largest listed companies. The fund follows the MSCI ACWI index, which covers both developed and emerging markets. A sustainability filter leaves out a couple of hundred companies that comply least with ESG rules."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "We don't pick individual stocks and we don't try to time the market. We invest on the same principle in Tuleva's second and third pillar equity funds."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "The fund pays no dividends. It reinvests what it earns, so the money has longer to grow and there is no tax to pay in the meantime."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "What return can I expect?"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Nobody knows in advance. We don't try to outsmart the market. Our aim is to earn the average return of the world's stock markets at the lowest possible cost."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Over the past hundred years, world stock markets have returned roughly 7% per year. That is a long-term average, not a promise. There have been very strong years, and there have been periods when markets fell for years on end. The fund can also make a loss in some years."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "When you save for a child, time is on your side. The longer you invest, the more single bad years even out in the average. A child's horizon is usually decades long."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "We don't show the fund's own return on this page yet. The fund's history is too short for that, and a few months' numbers would confuse more than they explain. %s"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "You can find the unit price history on the fund's documents page →"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Returns are not guaranteed. The value of an investment can both rise and fall."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "How much does saving cost and what amount can I start with?"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "The fund's ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "How can the other parent view and manage the child's account?"
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Both parents' right of representation lasts until the child's 18th birthday."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only. They can still make a contribution: they transfer the money to the first parent, who passes it on to the child's account."
-msgstr ""
-
-#: templates/child-savings-content.php
-msgid "Read more: where the Additional Investment Fund invests →"
 msgstr ""

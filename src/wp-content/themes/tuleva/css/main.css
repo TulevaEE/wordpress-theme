@@ -18357,7 +18357,6 @@ sup {
 }
 .child-savings-page .gift-banner h3, .child-savings-page .gift-banner .h3 {
   margin: 0 0 0.4rem;
-  padding-right: 7.5rem;
   color: #293036;
   font-size: 1.25rem;
   font-weight: 700;
@@ -18372,9 +18371,6 @@ sup {
     grid-template-columns: 1fr;
     row-gap: 0.8rem;
     padding: 1.4rem 1.4rem;
-  }
-  .child-savings-page .gift-banner h3, .child-savings-page .gift-banner .h3 {
-    padding-right: 0;
   }
 }
 .child-savings-page .gift-icon {
@@ -18399,18 +18395,6 @@ sup {
 .child-savings-page .gift-icon svg {
   width: 1.3rem;
   height: 1.3rem;
-}
-.child-savings-page .chip-soon {
-  position: absolute;
-  top: 1.4rem;
-  right: 1.6rem;
-}
-@media (max-width: 575.98px) {
-  .child-savings-page .chip-soon {
-    position: static;
-    display: inline-block;
-    margin-bottom: 0.6rem;
-  }
 }
 .child-savings-page .diff-list li {
   padding-left: 3rem;

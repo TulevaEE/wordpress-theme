@@ -125,7 +125,6 @@
 
         h3 {
             margin: 0 0 .4rem;
-            padding-right: 7.5rem;
             color: $text-primary;
             font-size: 1.25rem;
             font-weight: $font-weight-bold;
@@ -141,10 +140,6 @@
             grid-template-columns: 1fr;
             row-gap: .8rem;
             padding: 1.4rem 1.4rem;
-
-            h3 {
-                padding-right: 0;
-            }
         }
     }
 
@@ -161,18 +156,6 @@
         svg {
             width: 1.3rem;
             height: 1.3rem;
-        }
-    }
-
-    .chip-soon {
-        position: absolute;
-        top: 1.4rem;
-        right: 1.6rem;
-
-        @include media-breakpoint-down (sm) {
-            position: static;
-            display: inline-block;
-            margin-bottom: .6rem;
         }
     }
 
