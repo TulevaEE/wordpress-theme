@@ -19,7 +19,8 @@ Theme templates live in:
 Tuleva has four funds. Their documents — prospectus, terms, key investor information,
 model portfolio, monthly investment report — plus the CO2 intensity figure published
 beside them are each an ACF field on that fund's page. Setting the field is the whole
-update: no commit, no deploy.
+update: no commit, no deploy. Taking a document off the page is not, while its template
+still carries a fallback URL — see *Fallbacks still in place*.
 
 Field names are identical on every fund page that carries the field, so nothing
 downstream branches per fund: fund → page slug, document → field name.
@@ -103,13 +104,24 @@ updating one is a commit and a deploy.
 ### Fallbacks still in place
 
 Most per-fund documents also have a hardcoded URL in their template, which renders while
-the field is empty. The pension pages' fields are all empty, so they still show the code
-URLs and a document change there still needs a template edit. On TKF100 the model
-portfolio, summary of investor rights, investment report, report archive and upcoming
-documents have no code URL: empty field, no row.
+the field is empty. The pension pages' fields are all empty, so they show the code URLs.
+On TKF100 the prospectus, terms, key information document, NAV procedure and upcoming
+prospectus have a code URL; the model portfolio, summary of investor rights, investment
+report, report archive, upcoming terms and upcoming NAV procedure do not — empty field, no
+row.
 
-Once a page's fields are set, **editing the literal changes nothing visible** — the field
-wins. Update the field.
+The field wins over its literal, and an empty field falls back to it. So:
+
+- **To change a document, set the field.** Once it is set, editing the literal changes
+  nothing visible.
+- **To take a document off the page, remove its literal.** Clearing the field brings the
+  literal back, so wp-admin alone cannot do it. This is what promoting an upcoming document
+  on its effective date runs into: the current field gets the new file, and the upcoming row
+  has to go — a template edit wherever that row has a code URL.
+- **A new document goes into the field, not into a new literal.** A literal added now is
+  one more row that needs a deploy to retire.
+- The three pension pages' `investment_report_file` is written by the monthly report job.
+  Leave its literal alone.
 
 Removing the fallbacks, moving the firm-wide documents onto the options page and
 replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
