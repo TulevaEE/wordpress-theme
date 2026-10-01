@@ -15,7 +15,7 @@ $fund = [
 // literal — editing a literal whose field is already set changes nothing visible, which
 // is a quiet way to believe a document was published.
 $prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf');
-$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Maailma-Volakirjade-Pensionifond-tingimused-kehtib-alates-31.08.2026.pdf');
+$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/10/TUK00-tingimused-kehtivad-alates-31.08.2026.pdf');
 $prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf');
 $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf');
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
