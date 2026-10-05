@@ -253,6 +253,19 @@
                             </div>
                         </div>
 
+                        <?php // Inheritance guide exists only in Estonian, so the entry is hidden on the English page. ?>
+                        <?php if ( apply_filters( 'wpml_current_language', NULL ) === 'et' ) : ?>
+                        <div class="qa__question-wrapper" id="kkk-parimine">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-parimine"><?php _e('How are Additional Investment Fund units inherited?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-parimine" class="collapse">
+                                <p><?php printf(
+                                    __('Tuleva itself handles the inheritance of Additional Investment Fund units. The units are transferred to the heir\'s Additional Investment Fund account. They are not sold and they keep growing. Read more in the %s.', TEXT_DOMAIN),
+                                    '<a href="https://tuleva.ee/taiendava-kogumisfondi-osakute-parimise-juhend/">' . __('guide to inheriting Additional Investment Fund units', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+
                         <div class="qa__question-wrapper" id="kkk-vordlus">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-vordlus"><?php _e('How is the Additional Investment Fund different from LHV\'s Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?', TEXT_DOMAIN); ?></a>
                             <div id="answer-vordlus" class="collapse">

@@ -2119,6 +2119,19 @@ msgstr "Kuni 15% aastasest brutotulust, kuid mitte rohkem kui 6000 €, on tulu
 #~ msgstr "Otsi"
 
 #: templates/savings-fund-landing-content.php
+msgid "How are Additional Investment Fund units inherited?"
+msgstr "Kuidas käib Täiendava Kogumisfondi osakute pärimine?"
+
+#: templates/savings-fund-landing-content.php
+#, php-format
+msgid "Tuleva itself handles the inheritance of Additional Investment Fund units. The units are transferred to the heir's Additional Investment Fund account. They are not sold and they keep growing. Read more in the %s."
+msgstr "Täiendava Kogumisfondi osakute pärimist korraldab Tuleva ise. Osakud kantakse pärija Täiendava Kogumisfondi kontole. Neid ei müüda ja need kasvavad edasi. Loe lähemalt %s."
+
+#: templates/savings-fund-landing-content.php
+msgid "guide to inheriting Additional Investment Fund units"
+msgstr "Täiendava Kogumisfondi osakute pärimise juhendist"
+
+#: templates/savings-fund-landing-content.php
 msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
 msgstr "Mille poolest erineb Täiendav Kogumisfond LHV Kasvukontost, Swedbanki Robur fondidest või Lightyearist?"
 
