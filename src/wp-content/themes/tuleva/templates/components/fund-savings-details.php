@@ -92,7 +92,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                             <p class="fund-info__item">
                                 <span
                                     class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></span>
-                                <span><?php echo esc_html($fund_manager_participation); ?><?php _e('units', TEXT_DOMAIN) ?></span>
+                                <span><?php echo esc_html($fund_manager_participation); ?> <?php _e('units', TEXT_DOMAIN) ?></span>
                             </p>
                         <?php endif; ?>
                         <?php if ($fund_risk_profile): ?>
