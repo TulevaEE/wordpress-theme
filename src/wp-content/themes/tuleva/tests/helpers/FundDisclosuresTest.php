@@ -148,6 +148,7 @@ if (!function_exists('get_the_title')) {
     }
 }
 
+require_once __DIR__ . '/../support/FakeOptions.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 require_once __DIR__ . '/../../helpers/extras.php';
 require_once __DIR__ . '/../../helpers/schema.php';

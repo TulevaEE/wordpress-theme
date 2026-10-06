@@ -103,14 +103,6 @@ acf_add_local_field_group(array (
             'required' => 0,
         ),
         array (
-            'key' => 'field_fund_savings_management_fee',
-            'label' => 'Management Fee',
-            'name' => 'fund_management_fee',
-            'type' => 'text',
-            'instructions' => 'Management fee percentage (e.g., "0,19%")',
-            'required' => 0,
-        ),
-        array (
             'key' => 'field_fund_savings_ongoing_charges',
             'label' => 'Ongoing Charges',
             'name' => 'fund_ongoing_charges',
@@ -126,15 +118,6 @@ acf_add_local_field_group(array (
             'instructions' => 'Redemption and issue fee (e.g., "0%")',
             'required' => 0,
             'default_value' => '0%',
-        ),
-        array (
-            'key' => 'field_fund_savings_manager_participation',
-            'label' => 'Fund Manager Participation',
-            'name' => 'fund_manager_participation',
-            'type' => 'text',
-            'instructions' => 'Number of units held by fund manager',
-            'required' => 0,
-            'default_value' => '0',
         ),
         array (
             'key' => 'field_fund_savings_risk_profile',

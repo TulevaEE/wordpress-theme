@@ -1056,6 +1056,11 @@ msgstr ""
 msgid " (in Estonian, effective from %s)"
 msgstr ""
 
+#: templates/components/fund-stocks-details.php templates/components/fund-bonds-details.php templates/components/fund-third-details.php templates/components/fund-savings-details.php
+#, php-format
+msgid "(as of %s)"
+msgstr ""
+
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-savings-details.php:146
 #: templates/components/fund-stocks-details.php:76
