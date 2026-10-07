@@ -704,7 +704,7 @@ msgid "Open an account in just a couple of minutes and put your company's idle c
 msgstr ""
 
 #: templates/company-savings-content.php:126
-msgid "More than <strong>200</strong> companies already save in Tuleva"
+msgid "More than <strong>300</strong> companies already invest in Tuleva"
 msgstr ""
 
 #: templates/company-savings-content.php:142

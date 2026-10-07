@@ -2233,8 +2233,8 @@ msgid "Open an account in just a couple of minutes and put your company's idle c
 msgstr "Ava konto vaid paari minutiga ja pane ettevõtte vaba raha tööle."
 
 #: templates/company-savings-content.php:127
-msgid "More than <strong>200</strong> companies already save in Tuleva"
-msgstr "Üle <strong>200</strong> osaühingu kogub juba Tulevas"
+msgid "More than <strong>300</strong> companies already invest in Tuleva"
+msgstr "Üle <strong>300</strong> ettevõtte juba investeerib Tulevas"
 
 #: templates/company-savings-content.php:143
 msgid "Can my company invest?"

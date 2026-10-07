@@ -123,7 +123,7 @@
                         <p class="lead mx-auto"><?php _e('Open an account in just a couple of minutes and put your company\'s idle cash to work.', TEXT_DOMAIN); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding/company'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open an account', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>200</strong> companies already save in Tuleva', TEXT_DOMAIN); ?></span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>300</strong> companies already invest in Tuleva', TEXT_DOMAIN); ?></span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
