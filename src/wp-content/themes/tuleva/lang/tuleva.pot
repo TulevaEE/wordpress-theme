@@ -785,11 +785,11 @@ msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su
 msgstr ""
 
 #: templates/company-savings-content.php:203
-msgid "How do you do the bookkeeping?"
+msgid "How does the bookkeeping work?"
 msgstr ""
 
 #: templates/company-savings-content.php:204
-msgid "An accountant explains what goes into the annual report."
+msgid "An accountant explains why it is simpler than you think."
 msgstr ""
 
 #: templates/company-savings-content.php:209

@@ -2309,12 +2309,12 @@ msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su
 msgstr "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 
 #: templates/company-savings-content.php:204
-msgid "How do you do the bookkeeping?"
-msgstr "Kuidas teha raamatupidamist?"
+msgid "How does the bookkeeping work?"
+msgstr "Kuidas käib raamatupidamine?"
 
 #: templates/company-savings-content.php:205
-msgid "An accountant explains what goes into the annual report."
-msgstr "Raamatupidaja selgitab, mida majandusaasta aruandes teha."
+msgid "An accountant explains why it is simpler than you think."
+msgstr "Raamatupidaja selgitab, miks see on lihtsam, kui arvad."
 
 #: templates/company-savings-content.php:210
 msgid "https://tuleva.ee/taiendav-kogumisfond/"
