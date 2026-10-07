@@ -132,7 +132,7 @@
         </div>
     </section>
 
-    <section class="section-spacing bg-gray-1" id="kkk">
+    <section class="section-spacing-bottom qa-block" id="kkk">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-9 col-xl-8">
@@ -188,7 +188,7 @@
         </div>
     </section>
 
-    <section class="section-spacing" id="uuri-rohkem">
+    <section class="section-spacing-bottom" id="uuri-rohkem">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-9 col-xl-8">
