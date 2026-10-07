@@ -120,6 +120,13 @@ if (!function_exists('esc_html')) {
     }
 }
 
+if (!function_exists('esc_html__')) {
+    function esc_html__($text, $domain = null)
+    {
+        return htmlspecialchars((string) $text, ENT_QUOTES, 'UTF-8');
+    }
+}
+
 if (!function_exists('esc_attr')) {
     function esc_attr($value)
     {
@@ -149,6 +156,9 @@ if (!function_exists('get_the_title')) {
 }
 
 require_once __DIR__ . '/../support/FakeOptions.php';
+require_once __DIR__ . '/../support/FakeWordPress.php';
+require_once __DIR__ . '/../../helpers/funds-api.php';
+require_once __DIR__ . '/../../helpers/fund-figures.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 require_once __DIR__ . '/../../helpers/extras.php';
 require_once __DIR__ . '/../../helpers/schema.php';
@@ -166,6 +176,8 @@ final class FundDisclosuresTest extends TestCase
     protected function setUp(): void
     {
         FakeFundPage::reset();
+        FakeOptions::reset();
+        FakeWordPress::reset();
     }
 
     #[Test]
@@ -704,6 +716,69 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
         $this->assertNotContains('fund_co2_intensity', tuleva_fund_disclosures_missing());
+    }
+
+    /**
+     * @return array<string, array{string, string}>
+     */
+    public static function fundPagesWithTheirIsin(): array
+    {
+        return [
+            'TUK75' => ['page_fund-stocks.php', 'EE3600109435'],
+            'TUK00' => ['page_fund-bonds.php', 'EE3600109443'],
+            'TUV100' => ['page_fund-third.php', 'EE3600001707'],
+            'TKF100' => [self::SAVINGS_TEMPLATE, 'EE0000003283'],
+        ];
+    }
+
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundPagesWithTheirIsin')]
+    public function a_fund_page_shows_its_own_funds_management_fee_and_managers_units_from_the_fund_list(string $template, string $isin): void
+    {
+        FakeFundPage::$fields['fund_isin'] = $isin;
+        FakeWordPress::respondWith(200, json_encode(array_map(fn ($listed) => [
+            'isin' => $listed,
+            'managementFeeRate' => $listed === $isin ? 0.00205 : 0.009,
+            'fundManagerUnits' => $listed === $isin ? 5747351 : 1,
+            'fundManagerUnitsDate' => '2026-09-30',
+        ], array_column(self::fundPagesWithTheirIsin(), 1))));
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertMatchesRegularExpression('/Management fee<\/span>\s*<span>0,205%<\/span>/', $html);
+        $this->assertStringContainsString('5 747 351 units (as of 30.09.2026)', $html);
+    }
+
+    #[Test]
+    public function a_fund_page_keeps_showing_the_figures_it_last_read_while_the_fund_list_is_down(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([[
+            'isin' => 'EE3600109435',
+            'managementFeeRate' => 0.00205,
+            'fundManagerUnits' => 5747351,
+            'fundManagerUnitsDate' => '2026-09-30',
+        ]]));
+        $this->renderFundPage('page_fund-stocks.php');
+        FakeWordPress::reset();
+        FakeWordPress::respondWith(503, '');
+
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertMatchesRegularExpression('/Management fee<\/span>\s*<span>0,205%<\/span>/', $html);
+        $this->assertStringContainsString('5 747 351 units (as of 30.09.2026)', $html);
+    }
+
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_fund_page_leaves_out_the_rows_the_fund_list_has_never_given_it(string $template): void
+    {
+        FakeFundPage::$fields['fund_isin'] = 'EE0000003283';
+        FakeWordPress::respondWith(503, '');
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringNotContainsString('Management fee', $html);
+        $this->assertStringNotContainsString("Fund manager's participation rate in fund", $html);
     }
 
     /**

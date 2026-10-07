@@ -54,6 +54,18 @@ final class FundFiguresTest extends TestCase
     }
 
     #[Test]
+    public function keepsTheLastFeeWhenTheListHasNoneForTheFund(): void
+    {
+        $lastGood = ['managementFeeRate' => 0.00205, 'fundManagerUnits' => 5747351.0, 'fundManagerUnitsDate' => '2026-08-31'];
+        $withoutFee = [['isin' => self::TUK75, 'fundManagerUnits' => 5800000, 'fundManagerUnitsDate' => '2026-09-30']];
+
+        $this->assertSame(
+            ['managementFeeRate' => 0.00205, 'fundManagerUnits' => 5800000.0, 'fundManagerUnitsDate' => '2026-09-30'],
+            tuleva_fund_figures(self::TUK75, $withoutFee, $lastGood)
+        );
+    }
+
+    #[Test]
     public function ignoresUnitsWhoseDateIsNotARealDate(): void
     {
         foreach ([[2026, 9, 30], '30.09.2026', '2026-02-31'] as $unreadable) {
@@ -82,6 +94,7 @@ final class FundFiguresTest extends TestCase
         $this->assertSame('0,205%', tuleva_format_management_fee(0.00205, 'et'));
         $this->assertSame('0,178%', tuleva_format_management_fee(0.00178, 'et'));
         $this->assertSame('0,16%', tuleva_format_management_fee(0.0016, 'et'));
+        $this->assertSame('0,20%', tuleva_format_management_fee(0.002, 'et'));
         $this->assertSame('0.205%', tuleva_format_management_fee(0.00205, 'en'));
     }
 
