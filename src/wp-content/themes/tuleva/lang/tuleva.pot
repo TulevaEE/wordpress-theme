@@ -704,7 +704,7 @@ msgid "Open an account in just a couple of minutes and put your company's idle c
 msgstr ""
 
 #: templates/company-savings-content.php:126
-msgid "More than <strong>200</strong> companies already save in Tuleva"
+msgid "More than <strong>300</strong> companies already invest in Tuleva"
 msgstr ""
 
 #: templates/company-savings-content.php:142
@@ -781,19 +781,15 @@ msgid "Who it suits and who it does not."
 msgstr ""
 
 #: templates/company-savings-content.php:202
-msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 msgstr ""
 
 #: templates/company-savings-content.php:203
-msgid "Podcast about companies"
+msgid "How does the bookkeeping work?"
 msgstr ""
 
 #: templates/company-savings-content.php:204
-msgid "How saving through a company works."
-msgstr ""
-
-#: templates/company-savings-content.php:205
-msgid "Listen →"
+msgid "An accountant explains why it is simpler than you think."
 msgstr ""
 
 #: templates/company-savings-content.php:209

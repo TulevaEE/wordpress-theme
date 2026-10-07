@@ -123,7 +123,7 @@
                         <p class="lead mx-auto"><?php _e('Open an account in just a couple of minutes and put your company\'s idle cash to work.', TEXT_DOMAIN); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding/company'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open an account', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>200</strong> companies already save in Tuleva', TEXT_DOMAIN); ?></span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>300</strong> companies already invest in Tuleva', TEXT_DOMAIN); ?></span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
@@ -199,10 +199,10 @@
                             <span class="post-teaser"><?php _e('Who it suits and who it does not.', TEXT_DOMAIN); ?></span>
                             <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
                         </a>
-                        <a class="resource resource--post" href="<?php echo esc_url(__('https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/', TEXT_DOMAIN)); ?>">
-                            <span class="post-title"><?php _e('Podcast about companies', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('How saving through a company works.', TEXT_DOMAIN); ?></span>
-                            <span class="post-more"><?php _e('Listen →', TEXT_DOMAIN); ?></span>
+                        <a class="resource resource--post" href="<?php echo esc_url(__('https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/', TEXT_DOMAIN)); ?>">
+                            <span class="post-title"><?php _e('How does the bookkeeping work?', TEXT_DOMAIN); ?></span>
+                            <span class="post-teaser"><?php _e('An accountant explains why it is simpler than you think.', TEXT_DOMAIN); ?></span>
+                            <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
                         </a>
                     </div>
                     <p class="resource-links">

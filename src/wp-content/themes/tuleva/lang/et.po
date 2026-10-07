@@ -2233,8 +2233,8 @@ msgid "Open an account in just a couple of minutes and put your company's idle c
 msgstr "Ava konto vaid paari minutiga ja pane ettevõtte vaba raha tööle."
 
 #: templates/company-savings-content.php:127
-msgid "More than <strong>200</strong> companies already save in Tuleva"
-msgstr "Üle <strong>200</strong> osaühingu kogub juba Tulevas"
+msgid "More than <strong>300</strong> companies already invest in Tuleva"
+msgstr "Üle <strong>300</strong> ettevõtte juba investeerib Tulevas"
 
 #: templates/company-savings-content.php:143
 msgid "Can my company invest?"
@@ -2305,20 +2305,16 @@ msgid "Who it suits and who it does not."
 msgstr "Kellele see sobib ja kellele mitte."
 
 #: templates/company-savings-content.php:203
-msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
-msgstr "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
+msgstr "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 
 #: templates/company-savings-content.php:204
-msgid "Podcast about companies"
-msgstr "Taskuhääling osaühingutest"
+msgid "How does the bookkeeping work?"
+msgstr "Kuidas käib raamatupidamine?"
 
 #: templates/company-savings-content.php:205
-msgid "How saving through a company works."
-msgstr "Kuidas OÜ kaudu kogumine käib."
-
-#: templates/company-savings-content.php:206
-msgid "Listen →"
-msgstr "Kuula →"
+msgid "An accountant explains why it is simpler than you think."
+msgstr "Raamatupidaja selgitab, miks see on lihtsam, kui arvad."
 
 #: templates/company-savings-content.php:210
 msgid "https://tuleva.ee/taiendav-kogumisfond/"
