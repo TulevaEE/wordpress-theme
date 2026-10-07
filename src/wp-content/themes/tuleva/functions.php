@@ -11,6 +11,7 @@
 $theme_includes = [
     'helpers/extras.php', // Extra functions for theme
     'helpers/funds-api.php', // Reads the fund list from the onboarding service
+    'helpers/average-fund-fee.php', // The calculator's monthly average II pillar fund fee
     'helpers/cleanup.php', // Cleans wordpress output
     'helpers/enqueue.php', // Enqueue scripts & styles
     'helpers/nav.php', // Nav menu customizations

@@ -112,7 +112,12 @@
                         <?php _e('You pay <span class="text-nowrap"><span class="tuleva-saving">- €</span> less</span> in fees', TEXT_DOMAIN); ?>
                     </span>
                 </div>
-                <div class="text-nowrap"><span id="fund-fee">0,83%</span> <?php _e('per year', TEXT_DOMAIN); ?></div>
+                <div class="text-nowrap"><span id="fund-fee"><?php
+                    $average_fee = tuleva_calculator_average_fund_fee();
+                    echo $average_fee === null
+                        ? '-'
+                        : esc_html(tuleva_format_fee_percent($average_fee, (string) apply_filters('wpml_current_language', null)));
+                    ?></span> <?php _e('per year', TEXT_DOMAIN); ?></div>
             </div>
         </div>
         <hr class="my-3"/>

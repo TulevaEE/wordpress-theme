@@ -388,6 +388,13 @@ function get_last_good_investor_count()
 
 function print_funds_js()
 {
+    $average_fee = tuleva_calculator_average_fund_fee();
+    if ($average_fee !== null) {
+        echo '<script type="text/javascript">';
+        echo 'var calculatorAverageFee = ' . json_encode($average_fee) . ';';
+        echo '</script>';
+    }
+
     $data = get_funds_from_api();
 
     if (empty($data)) {
