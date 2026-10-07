@@ -3,10 +3,12 @@
 $fund_isin = get_field('fund_isin');
 $fund_currency = get_field('fund_currency') ?: 'EUR';
 $fund_inception_date = get_field('fund_inception_date');
-$fund_management_fee = get_field('fund_management_fee');
+$figures = tuleva_fund_page_figures((string) $fund_isin);
+$fund_management_fee = $figures['management_fee'];
 $fund_ongoing_charges = get_field('fund_ongoing_charges');
 $fund_redemption_fee = get_field('fund_redemption_fee') ?: '0%';
-$fund_manager_participation = get_field('fund_manager_participation');
+$fund_manager_participation = $figures['manager_units'];
+$fund_manager_participation_date = $figures['manager_units_date'];
 $fund_risk_profile = get_field('fund_risk_profile');
 $fund_comparison_index = get_field('fund_comparison_index');
 // Out of scope for TKF100 today, so this is '' and the block below stays hidden.
@@ -71,7 +73,7 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                             <span class="small text-bold">NAV</span>
                             <span><span id="savings-fund-nav"></span> EUR</span>
                         </p>
-                        <?php if ($fund_management_fee): ?>
+                        <?php if ($fund_management_fee !== null): ?>
                             <p class="fund-info__item">
                                 <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
                                 <span><?php echo esc_html($fund_management_fee); ?></span>
@@ -88,11 +90,11 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                 class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
                             <span><?php echo esc_html($fund_redemption_fee); ?></span>
                         </p>
-                        <?php if ($fund_manager_participation): ?>
+                        <?php if ($fund_manager_participation !== null): ?>
                             <p class="fund-info__item">
                                 <span
                                     class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></span>
-                                <span><?php echo esc_html($fund_manager_participation); ?> <?php _e('units', TEXT_DOMAIN) ?></span>
+                                <span><?php echo esc_html($fund_manager_participation); ?> <?php _e('units', TEXT_DOMAIN) ?><?php if ($fund_manager_participation_date !== null): ?> <?php printf(esc_html__('(as of %s)', TEXT_DOMAIN), esc_html($fund_manager_participation_date)); ?><?php endif; ?></span>
                             </p>
                         <?php endif; ?>
                         <?php if ($fund_risk_profile): ?>

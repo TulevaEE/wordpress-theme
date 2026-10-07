@@ -21,6 +21,7 @@ $theme_includes = [
     'helpers/editor.php', // Editor customizations
     'helpers/setup.php', // Enqueue scripts & styles
     'helpers/schema.php', // Organization and FAQ structured data
+    'helpers/fund-figures.php', // Management fee and fund manager's units on the fund pages
 ];
 
 foreach ($theme_includes as $file) {

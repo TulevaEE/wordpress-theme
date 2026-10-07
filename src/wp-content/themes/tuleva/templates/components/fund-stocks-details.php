@@ -2,13 +2,15 @@
 $fund = [
     'isin' => 'EE3600109435',
     'inception_date' => __('27 March 2017', TEXT_DOMAIN),
-    'management_fee' => '0,205%',
     'ongoing_charges' => '0,28%',
     'redemption_fee' => '0%',
-    'manager_participation' => '5 747 351',
     'risk_profile' => __('Aggressive', TEXT_DOMAIN),
     'comparison_index' => ['100% MSCI ACWI (EUR)'],
 ];
+$figures = tuleva_fund_page_figures($fund['isin']);
+$fund['management_fee'] = $figures['management_fee'];
+$fund['manager_participation'] = $figures['manager_units'];
+$fund['manager_participation_date'] = $figures['manager_units_date'];
 
 // Documents. The ACF fields on this page are the source of truth; the URLs below are
 // the pre-ACF values and render only while a field is empty. Update the field, not the
@@ -60,10 +62,12 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'
                             <span class="small text-bold">NAV</span>
                             <span><span id="stock-fund-nav"></span> EUR</span>
                         </p>
+                        <?php if ($fund['management_fee'] !== null): ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Management fee', TEXT_DOMAIN) ?></span>
-                            <span><?php echo $fund['management_fee']; ?></span>
+                            <span><?php echo esc_html($fund['management_fee']); ?></span>
                         </p>
+                        <?php endif; ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
                             <span><?php echo $fund['ongoing_charges']; ?></span>
@@ -72,10 +76,12 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'
                             <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
                             <span><?php echo $fund['redemption_fee']; ?></span>
                         </p>
+                        <?php if ($fund['manager_participation'] !== null): ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e("Fund manager's participation rate in fund", TEXT_DOMAIN) ?></span>
-                            <span><?php echo $fund['manager_participation']; ?> <?php _e('units', TEXT_DOMAIN) ?></span>
+                            <span><?php echo esc_html($fund['manager_participation']); ?> <?php _e('units', TEXT_DOMAIN) ?><?php if ($fund['manager_participation_date'] !== null): ?> <?php printf(esc_html__('(as of %s)', TEXT_DOMAIN), esc_html($fund['manager_participation_date'])); ?><?php endif; ?></span>
                         </p>
+                        <?php endif; ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Risk profile', TEXT_DOMAIN) ?></span>
                             <span><?php echo $fund['risk_profile']; ?></span>
