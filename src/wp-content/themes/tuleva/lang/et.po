@@ -2305,20 +2305,16 @@ msgid "Who it suits and who it does not."
 msgstr "Kellele see sobib ja kellele mitte."
 
 #: templates/company-savings-content.php:203
-msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
-msgstr "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
+msgstr "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 
 #: templates/company-savings-content.php:204
-msgid "Podcast about companies"
-msgstr "Taskuhääling osaühingutest"
+msgid "How do you do the bookkeeping?"
+msgstr "Kuidas teha raamatupidamist?"
 
 #: templates/company-savings-content.php:205
-msgid "How saving through a company works."
-msgstr "Kuidas OÜ kaudu kogumine käib."
-
-#: templates/company-savings-content.php:206
-msgid "Listen →"
-msgstr "Kuula →"
+msgid "An accountant explains what goes into the annual report."
+msgstr "Raamatupidaja selgitab, mida majandusaasta aruandes teha."
 
 #: templates/company-savings-content.php:210
 msgid "https://tuleva.ee/taiendav-kogumisfond/"

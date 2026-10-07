@@ -199,10 +199,10 @@
                             <span class="post-teaser"><?php _e('Who it suits and who it does not.', TEXT_DOMAIN); ?></span>
                             <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
                         </a>
-                        <a class="resource resource--post" href="<?php echo esc_url(__('https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/', TEXT_DOMAIN)); ?>">
-                            <span class="post-title"><?php _e('Podcast about companies', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('How saving through a company works.', TEXT_DOMAIN); ?></span>
-                            <span class="post-more"><?php _e('Listen →', TEXT_DOMAIN); ?></span>
+                        <a class="resource resource--post" href="<?php echo esc_url(__('https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/', TEXT_DOMAIN)); ?>">
+                            <span class="post-title"><?php _e('How do you do the bookkeeping?', TEXT_DOMAIN); ?></span>
+                            <span class="post-teaser"><?php _e('An accountant explains what goes into the annual report.', TEXT_DOMAIN); ?></span>
+                            <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
                         </a>
                     </div>
                     <p class="resource-links">

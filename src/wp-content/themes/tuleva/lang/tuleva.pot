@@ -781,19 +781,15 @@ msgid "Who it suits and who it does not."
 msgstr ""
 
 #: templates/company-savings-content.php:202
-msgid "https://tuleva.ee/taskuhaaling/nuud-saavad-tulevas-koguda-ka-osauhingud/"
+msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 msgstr ""
 
 #: templates/company-savings-content.php:203
-msgid "Podcast about companies"
+msgid "How do you do the bookkeeping?"
 msgstr ""
 
 #: templates/company-savings-content.php:204
-msgid "How saving through a company works."
-msgstr ""
-
-#: templates/company-savings-content.php:205
-msgid "Listen →"
+msgid "An accountant explains what goes into the annual report."
 msgstr ""
 
 #: templates/company-savings-content.php:209
