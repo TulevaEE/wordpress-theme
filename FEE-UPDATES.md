@@ -85,7 +85,19 @@ for f in ['et', 'tuleva']:
 ```
 > `polib` can be installed with `pip install polib` if missing.
 
-### 3. API fallback values
+### 3. Savings fund landing pages
+
+Three pages write the figure into translatable strings. Change the PHP string and its
+`msgid` in `et.po` together, update the `msgstr`, then regenerate `.mo` as in step 2. One
+`msgid` is shared by all three templates, so change it in all three at once.
+
+| File | Page | Strings with the figure |
+|---|---|---|
+| `templates/savings-fund-landing-content.php` | TKF100 landing, `tuleva.ee/taiendav-kogumisfond/` | `The fund's fee is 0.28% per year, …`; `Fee <strong>0.28%</strong> per year, no extra charges` |
+| `templates/child-savings-content.php` | `tuleva.ee/lapsele-kogumine/` | `Fee <strong>0.28%</strong> per year, …`; `The fund's ongoing charges are 0.28% per year. …`; `LHV's Kasvukonto is a platform …` |
+| `templates/company-savings-content.php` | `tuleva.ee/osauhingule-kogumine/` | `A fund fee of 0.28% a year, …`; `Fee <strong>0.28%</strong> per year, …` |
+
+### 4. API fallback values
 
 These stand in for the API on `localhost` only, for local development. Production never
 reads them, so keeping them current is optional:
@@ -97,7 +109,7 @@ reads them, so keeping them current is optional:
 | `templates/fund-third-content.php` | same field | |
 | `templates/fund-savings-content.php` | same field | |
 
-### 4. Commit and push
+### 5. Commit and push
 
 ```bash
 git add \
@@ -106,6 +118,9 @@ git add \
   src/wp-content/themes/tuleva/templates/components/fund-third-details.php \
   src/wp-content/themes/tuleva/js/calculator.js \
   src/wp-content/themes/tuleva/templates/components/front-hero/calculator.php \
+  src/wp-content/themes/tuleva/templates/savings-fund-landing-content.php \
+  src/wp-content/themes/tuleva/templates/child-savings-content.php \
+  src/wp-content/themes/tuleva/templates/company-savings-content.php \
   src/wp-content/themes/tuleva/lang/et.po \
   src/wp-content/themes/tuleva/lang/et.mo \
   src/wp-content/themes/tuleva/templates/fund-stocks-content.php \
@@ -133,12 +148,28 @@ Find the page in WP Admin → edit content → update ongoing charges figure in 
 URL: `https://tuleva.ee/tasud-alla/`
 Find the page in WP Admin → edit content → update Tuleva's ongoing charges figure.
 
-### TKF100 savings fund ACF fields
-URL: `https://tuleva.ee/wp-admin/post.php?post=35292&action=edit`
+### TKF100 savings fund ACF field — both languages
+Edit **both** pages:
+- Estonian: `https://tuleva.ee/wp-admin/post.php?post=35292&action=edit`
+- English: `https://tuleva.ee/wp-admin/post.php?post=36156&action=edit`
+
 Scroll to the ACF custom fields section and update:
 - **Ongoing charges** field: display value e.g. `0,28%`
 
 Use the delete + re-add pattern (delete current value, click Add, type new value).
+
+Unlike the fund documents, this field is not read from the Estonian page:
+`fund-savings-details.php` reads it with `get_field()` from the page being viewed, and the
+English page keeps its own value. Changing only page 35292 leaves the English page on the
+old figure.
+
+### TKF100 documents page content
+On page 35292, the page content (the questions and answers) states the ongoing charges in
+free text. Update the figure there too.
+
+### TKF100 landing page SEO description
+The Yoast meta description of `tuleva.ee/taiendav-kogumisfond/` and its English page states
+the fee. Update it in the Yoast box on both pages.
 
 ---
 
@@ -152,7 +183,9 @@ After CI goes green and WP Admin edits are saved:
 - [ ] `tuleva.ee` homepage calculator — shows **0,28% aastas** (ET) and **0.28% per year** (EN at `/en/`)
 - [ ] `tuleva.ee/kuidas-tuua-pension-tulevasse/` — both language sections updated
 - [ ] `tuleva.ee/tasud-alla/` — Tuleva fee updated
-- [ ] TKF100 fund page — ACF ongoing charges updated
+- [ ] TKF100 documents page, `tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/` and `tuleva.ee/en/additional-investment-fund-documents/` — fund table and the questions and answers show the new ongoing charges
+- [ ] TKF100 landing page, `tuleva.ee/taiendav-kogumisfond/` and `/en/additional-investment-fund/` — page text and the search description
+- [ ] `tuleva.ee/lapsele-kogumine/` and `tuleva.ee/osauhingule-kogumine/` — fee figures in the page text
 
 Use a private/incognito window or hard-refresh (Cmd+Shift+R) to bypass browser cache.
 
