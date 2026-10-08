@@ -76,11 +76,15 @@ function tuleva_format_management_fee(float $rate, string $language): string
     return $whole . tuleva_decimal_separator($language) . str_pad($decimals, 2, '0') . '%';
 }
 
+/*
+ * Every fund's rules show a fractional unit to three decimals, rounded half up, so the
+ * page does the same with the register's figure rather than printing all its decimals.
+ */
 function tuleva_format_units(float $units, string $language): string
 {
     $separator = tuleva_decimal_separator($language);
 
-    return rtrim(rtrim(number_format($units, 5, $separator, ' '), '0'), $separator);
+    return rtrim(rtrim(number_format($units, 3, $separator, ' '), '0'), $separator);
 }
 
 function tuleva_format_figures_date(string $isoDate): string

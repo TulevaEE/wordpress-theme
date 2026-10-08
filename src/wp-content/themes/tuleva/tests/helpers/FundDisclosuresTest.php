@@ -739,14 +739,14 @@ final class FundDisclosuresTest extends TestCase
         FakeWordPress::respondWith(200, json_encode(array_map(fn ($listed) => [
             'isin' => $listed,
             'managementFeeRate' => $listed === $isin ? 0.00205 : 0.009,
-            'fundManagerUnits' => $listed === $isin ? 5747351 : 1,
+            'fundManagerUnits' => $listed === $isin ? 202901.49203 : 1,
             'fundManagerUnitsDate' => '2026-09-30',
         ], array_column(self::fundPagesWithTheirIsin(), 1))));
 
         $html = $this->renderFundPage($template);
 
         $this->assertMatchesRegularExpression('/Management fee<\/span>\s*<span>0,205%<\/span>/', $html);
-        $this->assertStringContainsString('5 747 351 units (as of 30.09.2026)', $html);
+        $this->assertStringContainsString('202 901,492 units (as of 30.09.2026)', $html);
     }
 
     #[Test]
