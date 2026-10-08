@@ -109,6 +109,18 @@ final class FundFiguresTest extends TestCase
     }
 
     #[Test]
+    public function roundsUnitsToThreeDecimalsHalfUpAsTheFundRulesDo(): void
+    {
+        $this->assertSame('202 901,492', tuleva_format_units(202901.49203, 'et'));
+        $this->assertSame('202 901,493', tuleva_format_units(202901.4925, 'et'));
+        $this->assertSame('202 901,492', tuleva_format_units(202901.4924, 'et'));
+        $this->assertSame('1,001', tuleva_format_units(1.0005, 'et'));
+        $this->assertSame('2', tuleva_format_units(1.9996, 'et'));
+        $this->assertSame('5 747 351', tuleva_format_units(5747351.0004, 'et'));
+        $this->assertSame('202 901.492', tuleva_format_units(202901.49203, 'en'));
+    }
+
+    #[Test]
     public function writesEstonianNumbersWhenThePageLanguageIsUnknown(): void
     {
         $this->assertSame('0,205%', tuleva_format_management_fee(0.00205, ''));
