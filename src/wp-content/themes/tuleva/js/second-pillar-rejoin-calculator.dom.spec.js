@@ -11,7 +11,7 @@ function renderCalculator() {
         <span id="resTenYears"></span>
         <span id="taxWinInfo"
               data-income-tax-label="Tulumaksuvõit"
-              data-social-tax-label="4% sotsiaalmaksust"></span>
+              data-social-tax-label="Sotsiaalmaksust (4% brutopalgast)"></span>
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -29,6 +29,9 @@ function typeSalary(value) {
 
 describe('II pillar rejoin calculator on the page', () => {
     beforeEach(renderCalculator);
+    afterEach(() => {
+        delete window.bootstrap;
+    });
 
     it('shows the 2000 € placeholder example while the salary field is empty', () => {
         expect(shown('resNetSalary')).toBe('94 €');
@@ -46,10 +49,29 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(shown('resTenYears')).toBe('36 000 €');
     });
 
-    it('explains the tax win as the income tax saving and the 4% from social tax', () => {
-        expect(document.getElementById('taxWinInfo').getAttribute('title').replace(/\s/g, ' ')).toBe(
-            'Tulumaksuvõit: 26 € · 4% sotsiaalmaksust: 80 €'
-        );
+    it('breaks the tax win down into the income tax saving and the part of social tax, one per row', () => {
+        const breakdown = document.createElement('div');
+        breakdown.innerHTML = document.getElementById('taxWinInfo').getAttribute('title');
+
+        expect(
+            [...breakdown.querySelectorAll('.rejoin-tax-win-breakdown > span')].map((cell) =>
+                cell.textContent.replace(/\s/g, ' ')
+            )
+        ).toEqual(['Tulumaksuvõit:', '26 €', 'Sotsiaalmaksust (4% brutopalgast):', '80 €']);
+    });
+
+    it('updates an initialized tooltip without putting markup back into the native title', () => {
+        const taxWinInfo = document.getElementById('taxWinInfo');
+        const tooltip = { setContent: jest.fn() };
+        window.bootstrap = { Tooltip: { getInstance: (element) => (element === taxWinInfo ? tooltip : null) } };
+        taxWinInfo.removeAttribute('title');
+
+        typeSalary('3000');
+
+        expect(taxWinInfo.hasAttribute('title')).toBe(false);
+        expect(tooltip.setContent).toHaveBeenLastCalledWith({
+            '.tooltip-inner': expect.stringContaining('rejoin-tax-win-breakdown')
+        });
     });
 
     it('caps a mistyped salary at 99 999 €', () => {

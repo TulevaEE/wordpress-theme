@@ -2573,7 +2573,7 @@ msgid "Income tax savings"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:40
-msgid "4% from social tax"
+msgid "From social tax (4% of gross salary)"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:47

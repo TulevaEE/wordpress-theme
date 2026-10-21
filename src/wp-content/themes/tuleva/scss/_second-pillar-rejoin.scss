@@ -1,13 +1,25 @@
 // II pillar rejoin landing page (page_second-pillar-rejoin.php)
+
+.bg-hero-rejoin {
+    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/funds-hero.jpg');
+    background-position: 0 0, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+}
+
+// Bootstrap places the tooltip under <body>, outside the page wrapper
+.rejoin-tax-win-breakdown {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: .75rem;
+    row-gap: .125rem;
+    font-variant-numeric: tabular-nums;
+}
 //
 // The calculator reads as a written sum: the two parts, a line, and the
 // total, with the operators in their own column so the labels align.
 
 .second-pillar-rejoin-page {
-
-    .hero {
-        padding: 5rem 0 4rem;
-    }
 
     .rejoin-sum__row {
         display: flex;
@@ -48,8 +60,7 @@
     }
 
     .rejoin-sum__row--total {
-        margin-top: .75rem;
-        padding-top: .75rem;
+        padding-top: .5rem;
         border-top: 1px solid $gray-border-3;
     }
 

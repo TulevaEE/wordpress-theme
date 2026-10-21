@@ -69,20 +69,26 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         return Math.min(raw, MAX_GROSS_SALARY);
     }
 
+    function breakdownRow(label, amount) {
+        return '<span>' + label + ':</span><span class="text-end">' + eur(amount) + '</span>';
+    }
+
     function describeTaxWin(result) {
         return (
-            taxWinInfo.dataset.incomeTaxLabel + ': ' + eur(result.incomeTaxSaved) + ' · ' +
-            taxWinInfo.dataset.socialTaxLabel + ': ' + eur(result.state)
+            '<div class="rejoin-tax-win-breakdown">' +
+            breakdownRow(taxWinInfo.dataset.incomeTaxLabel, result.incomeTaxSaved) +
+            breakdownRow(taxWinInfo.dataset.socialTaxLabel, result.state) +
+            '</div>'
         );
     }
 
-    function showTaxWinBreakdown(text) {
+    function showTaxWinBreakdown(html) {
         var tooltip = window.bootstrap && window.bootstrap.Tooltip.getInstance(taxWinInfo);
         if (tooltip) {
-            tooltip.setContent({ '.tooltip-inner': text });
+            tooltip.setContent({ '.tooltip-inner': html });
+        } else {
+            taxWinInfo.setAttribute('title', html);
         }
-        taxWinInfo.setAttribute('title', text);
-        taxWinInfo.setAttribute('data-bs-original-title', text);
     }
 
     function update() {

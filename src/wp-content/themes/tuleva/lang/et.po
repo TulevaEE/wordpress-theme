@@ -2743,8 +2743,8 @@ msgid "Income tax savings"
 msgstr "Tulumaksuvõit"
 
 #: templates/second-pillar-rejoin-content.php:40
-msgid "4% from social tax"
-msgstr "4% sotsiaalmaksust"
+msgid "From social tax (4% of gross salary)"
+msgstr "Sotsiaalmaksust (4% brutopalgast)"
 
 #: templates/second-pillar-rejoin-content.php:47
 msgid "Into your II pillar each month"

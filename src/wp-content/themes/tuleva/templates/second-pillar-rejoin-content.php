@@ -1,6 +1,6 @@
 <main id="main" class="page-container landing-page second-pillar-rejoin-page">
 
-    <section class="hero">
+    <section class="hero bg-hero-rejoin section-spacing">
         <div class="container">
             <div class="row align-items-center gy-5 gx-xl-5">
                 <div class="col-lg-6 text-center text-lg-start text-navy">
@@ -34,9 +34,9 @@
                                     <span class="rejoin-sum__operator" aria-hidden="true">+</span>
                                     <span class="rejoin-sum__label"><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
                                               aria-label="<?php echo esc_attr__('How the tax win is made up', TEXT_DOMAIN); ?>"
-                                              data-bs-toggle="tooltip" data-bs-placement="top"
+                                              data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                               data-income-tax-label="<?php echo esc_attr__('Income tax savings', TEXT_DOMAIN); ?>"
-                                              data-social-tax-label="<?php echo esc_attr__('4% from social tax', TEXT_DOMAIN); ?>"
+                                              data-social-tax-label="<?php echo esc_attr__('From social tax (4% of gross salary)', TEXT_DOMAIN); ?>"
                                               title=""></span>
                                     </span>
                                     <span class="rejoin-sum__amount" id="resTaxWin">106&nbsp;&euro;</span>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="rejoin-sum__ten-years">
                                     <span><?php _e('Saved in 10 years', TEXT_DOMAIN); ?></span>
-                                    <span id="resTenYears">24&nbsp;000&nbsp;&euro;</span>
+                                    <span class="fw-medium" id="resTenYears">24&nbsp;000&nbsp;&euro;</span>
                                 </div>
                                 <a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-primary btn-lg w-100 mt-4"><?php _e('Start saving again', TEXT_DOMAIN); ?></a>
                             </div>
