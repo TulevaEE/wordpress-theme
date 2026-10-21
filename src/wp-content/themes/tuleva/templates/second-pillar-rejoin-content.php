@@ -14,9 +14,9 @@
                         <div class="card-body p-2">
                             <div class="bg-gray-2 p-3 rounded-3">
                                 <div class="align-items-center row">
-                                    <label class="col-sm-6 col-form-label pe-0" for="calcSalary"><?php _e('Gross salary', TEXT_DOMAIN); ?></label>
-                                    <div class="col-sm-6">
-                                        <div class="input-group">
+                                    <label class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" for="calcSalary"><?php _e('Gross salary', TEXT_DOMAIN); ?></label>
+                                    <div class="col-sm-6 col-lg-7 col-xl-6">
+                                        <div class="input-group input-group-lg">
                                             <input class="form-control text-end" type="number" id="calcSalary" min="0" max="99999" step="100" value="2000" inputmode="numeric">
                                             <span class="input-group-text">&euro;</span>
                                         </div>
@@ -32,8 +32,7 @@
                                 </div>
                                 <div class="rejoin-sum__row rejoin-sum__row--tax-win">
                                     <span class="rejoin-sum__operator" aria-hidden="true">+</span>
-                                    <span class="rejoin-sum__label"><?php _e('Tax win', TEXT_DOMAIN); ?>
-                                        <span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
+                                    <span class="rejoin-sum__label"><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
                                               aria-label="<?php echo esc_attr__('How the tax win is made up', TEXT_DOMAIN); ?>"
                                               data-bs-toggle="tooltip" data-bs-placement="top"
                                               data-income-tax-label="<?php echo esc_attr__('Income tax savings', TEXT_DOMAIN); ?>"
