@@ -2739,12 +2739,12 @@ msgid "How the tax win is made up"
 msgstr "Millest maksuvõit koosneb"
 
 #: templates/second-pillar-rejoin-content.php:39
-msgid "Income tax savings"
-msgstr "Tulumaksuvõit"
+msgid "From income tax"
+msgstr "Tulumaksust"
 
 #: templates/second-pillar-rejoin-content.php:40
-msgid "From social tax (4% of gross salary)"
-msgstr "Sotsiaalmaksust (4% brutopalgast)"
+msgid "From social tax"
+msgstr "Sotsiaalmaksust"
 
 #: templates/second-pillar-rejoin-content.php:47
 msgid "Into your II pillar each month"

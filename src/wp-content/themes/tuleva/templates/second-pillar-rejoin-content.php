@@ -35,8 +35,8 @@
                                     <span class="rejoin-sum__label"><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
                                               aria-label="<?php echo esc_attr__('How the tax win is made up', TEXT_DOMAIN); ?>"
                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-                                              data-income-tax-label="<?php echo esc_attr__('Income tax savings', TEXT_DOMAIN); ?>"
-                                              data-social-tax-label="<?php echo esc_attr__('From social tax (4% of gross salary)', TEXT_DOMAIN); ?>"
+                                              data-income-tax-label="<?php echo esc_attr__('From income tax', TEXT_DOMAIN); ?>"
+                                              data-social-tax-label="<?php echo esc_attr__('From social tax', TEXT_DOMAIN); ?>"
                                               title=""></span>
                                     </span>
                                     <span class="rejoin-sum__amount" id="resTaxWin">106&nbsp;&euro;</span>

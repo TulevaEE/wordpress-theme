@@ -10,8 +10,8 @@ function renderCalculator() {
         <span id="resTotal"></span>
         <span id="resTenYears"></span>
         <span id="taxWinInfo"
-              data-income-tax-label="Tulumaksuvõit"
-              data-social-tax-label="Sotsiaalmaksust (4% brutopalgast)"></span>
+              data-income-tax-label="Tulumaksust"
+              data-social-tax-label="Sotsiaalmaksust"></span>
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -49,7 +49,7 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(shown('resTenYears')).toBe('36 000 €');
     });
 
-    it('breaks the tax win down into the income tax saving and the part of social tax, one per row', () => {
+    it('breaks the tax win down into what comes from income tax and from social tax, one per row', () => {
         const breakdown = document.createElement('div');
         breakdown.innerHTML = document.getElementById('taxWinInfo').getAttribute('title');
 
@@ -57,7 +57,7 @@ describe('II pillar rejoin calculator on the page', () => {
             [...breakdown.querySelectorAll('.rejoin-tax-win-breakdown > span')].map((cell) =>
                 cell.textContent.replace(/\s/g, ' ')
             )
-        ).toEqual(['Tulumaksuvõit:', '26 €', 'Sotsiaalmaksust (4% brutopalgast):', '80 €']);
+        ).toEqual(['Tulumaksust:', '26 €', 'Sotsiaalmaksust:', '80 €']);
     });
 
     it('updates an initialized tooltip without putting markup back into the native title', () => {

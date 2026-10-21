@@ -2569,11 +2569,11 @@ msgid "How the tax win is made up"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:39
-msgid "Income tax savings"
+msgid "From income tax"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:40
-msgid "From social tax (4% of gross salary)"
+msgid "From social tax"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:47
