@@ -62,7 +62,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     function read(field) {
-        var raw = Number(field.value);
+        var raw = field.value === '' ? Number(field.placeholder) : Number(field.value);
         if (!Number.isFinite(raw) || raw < 0) {
             return 0;
         }
