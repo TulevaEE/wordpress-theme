@@ -2729,7 +2729,7 @@ msgstr "II sambaga taasliitumine"
 
 #: templates/second-pillar-rejoin-content.php:8
 msgid "Get the <em>tax win</em> again"
-msgstr "Hakka jälle <em>maksuvõitu</em> saama"
+msgstr "Hakka taas <em>maksuvõitu</em> saama"
 
 #: templates/second-pillar-rejoin-content.php:9
 msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May."
