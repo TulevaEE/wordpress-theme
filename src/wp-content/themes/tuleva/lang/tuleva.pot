@@ -2557,7 +2557,7 @@ msgid "Get the <em>tax win</em> again"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:9
-msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May."
+msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:30

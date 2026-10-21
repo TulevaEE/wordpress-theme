@@ -6,7 +6,7 @@
                 <div class="col-lg-6 text-center text-lg-start text-navy">
                     <span class="eyebrow"><?php _e('Rejoining the II pillar', TEXT_DOMAIN); ?></span>
                     <h1 class="mb-4"><?php _e('Get the <em>tax win</em> again', TEXT_DOMAIN); ?></h1>
-                    <p class="m-0 lead"><?php _e('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May.', TEXT_DOMAIN); ?></p>
+                    <p class="m-0 lead"><?php _e('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May.', TEXT_DOMAIN); ?></p>
                 </div>
 
                 <div class="col-lg-6" id="kalkulaator">
