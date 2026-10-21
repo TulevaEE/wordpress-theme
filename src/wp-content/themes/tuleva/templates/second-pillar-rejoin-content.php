@@ -17,7 +17,7 @@
                                     <label class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" for="calcSalary"><?php _e('Gross salary', TEXT_DOMAIN); ?></label>
                                     <div class="col-sm-6 col-lg-7 col-xl-6">
                                         <div class="input-group input-group-lg">
-                                            <input class="form-control text-end" type="number" id="calcSalary" min="0" max="99999" step="100" placeholder="2000" inputmode="numeric">
+                                            <input class="form-control text-end" type="text" id="calcSalary" value="2000" inputmode="numeric" autocomplete="off">
                                             <span class="input-group-text">&euro;</span>
                                         </div>
                                     </div>

@@ -4,7 +4,7 @@
 
 function renderCalculator() {
     document.body.innerHTML = `
-        <input id="calcSalary" type="number" placeholder="2000" max="99999">
+        <input id="calcSalary" type="text" inputmode="numeric" value="2000">
         <span id="resNetSalary"></span>
         <span id="resTaxWin"></span>
         <span id="resTotal"></span>
@@ -33,7 +33,8 @@ describe('II pillar rejoin calculator on the page', () => {
         delete window.bootstrap;
     });
 
-    it('shows the 2000 € placeholder example while the salary field is empty', () => {
+    it('starts from a 2000 € salary the visitor can delete like any value', () => {
+        expect(document.getElementById('calcSalary').value).toBe('2000');
         expect(shown('resNetSalary')).toBe('94 €');
         expect(shown('resTaxWin')).toBe('106 €');
         expect(shown('resTotal')).toBe('200 €');
@@ -81,11 +82,27 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(document.getElementById('calcSalary').value).toBe('99999');
     });
 
-    it('goes back to the 2000 € example when the salary field is emptied', () => {
-        typeSalary('3000');
+    it('selects the whole salary on focus so typing replaces the example', () => {
+        jest.useFakeTimers();
+        const salary = document.getElementById('calcSalary');
+
+        salary.dispatchEvent(new Event('focus'));
+        jest.runAllTimers();
+
+        expect([salary.selectionStart, salary.selectionEnd]).toEqual([0, 4]);
+        jest.useRealTimers();
+    });
+
+    it('reads an emptied salary field as zero', () => {
         typeSalary('');
 
-        expect(shown('resTotal')).toBe('200 €');
+        expect(shown('resTotal')).toBe('0 €');
+    });
+
+    it('reads a salary typed with a thousands space', () => {
+        typeSalary('3 000');
+
+        expect(shown('resTotal')).toBe('300 €');
     });
 
     it('reads a typed zero as zero', () => {

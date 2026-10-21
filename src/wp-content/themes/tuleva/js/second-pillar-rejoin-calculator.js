@@ -61,8 +61,12 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         return value.toLocaleString(locale) + ' €';
     }
 
+    function parseEuros(text) {
+        return Number(text.replace(/\s/g, ''));
+    }
+
     function read(field) {
-        var raw = field.value === '' ? Number(field.placeholder) : Number(field.value);
+        var raw = parseEuros(field.value);
         if (!Number.isFinite(raw) || raw < 0) {
             return 0;
         }
@@ -101,8 +105,13 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     salary.addEventListener('input', update);
+    salary.addEventListener('focus', function () {
+        setTimeout(function () {
+            salary.select();
+        });
+    });
     salary.addEventListener('change', function () {
-        if (Number(salary.value) > MAX_GROSS_SALARY) {
+        if (parseEuros(salary.value) > MAX_GROSS_SALARY) {
             salary.value = MAX_GROSS_SALARY;
         }
     });
