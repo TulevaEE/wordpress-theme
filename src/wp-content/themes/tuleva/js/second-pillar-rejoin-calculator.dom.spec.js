@@ -2,9 +2,28 @@
  * @jest-environment jsdom
  */
 
+const fs = require('fs');
+const path = require('path');
+
+const template = fs.readFileSync(
+    path.join(__dirname, '../templates/second-pillar-rejoin-content.php'),
+    'utf8'
+);
+
+function fromTemplate(pattern) {
+    return template.match(pattern)[0];
+}
+
+function paintedInTemplate(id) {
+    return fromTemplate(new RegExp('id="' + id + '">[^<]*'))
+        .replace('id="' + id + '">', '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&euro;/g, '€');
+}
+
 function renderCalculator() {
     document.body.innerHTML = `
-        <input id="calcSalary" type="text" inputmode="numeric" value="2000">
+        ${fromTemplate(/<input[^>]*id="calcSalary"[^>]*>/)}
         <span id="resNetSalary"></span>
         <span id="resTaxWin"></span>
         <span id="resTotal"></span>
@@ -33,7 +52,7 @@ describe('II pillar rejoin calculator on the page', () => {
         delete window.bootstrap;
     });
 
-    it('starts from a 2000 € salary the visitor can delete like any value', () => {
+    it('starts from a 2000 € salary, where your part stays under 100 € and the tax win goes over it', () => {
         expect(document.getElementById('calcSalary').value).toBe('2000');
         expect(shown('resNetSalary')).toBe('94 €');
         expect(shown('resTaxWin')).toBe('106 €');
@@ -99,6 +118,12 @@ describe('II pillar rejoin calculator on the page', () => {
         window.dispatchEvent(new Event('pageshow'));
 
         expect(shown('resTotal')).toBe('300 €');
+    });
+
+    it('paints the same example in the page before the script runs', () => {
+        ['resNetSalary', 'resTaxWin', 'resTotal', 'resTenYears'].forEach((id) => {
+            expect(paintedInTemplate(id)).toBe(shown(id));
+        });
     });
 
     it('reads an emptied salary field as zero', () => {
