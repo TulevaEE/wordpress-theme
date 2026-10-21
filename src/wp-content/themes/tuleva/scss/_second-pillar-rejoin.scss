@@ -1,0 +1,55 @@
+// II pillar rejoin landing page (page_second-pillar-rejoin.php)
+//
+// The calculator reads as a written sum: the two parts, a line, and the
+// total, with the operators in their own column so the labels align.
+
+.second-pillar-rejoin-page {
+
+    .rejoin-sum__row {
+        display: flex;
+        align-items: baseline;
+        gap: .25rem;
+        color: $navy-blue;
+        font-size: 1.125rem;
+        font-weight: $font-weight-medium;
+    }
+
+    .rejoin-sum__row + .rejoin-sum__row {
+        margin-top: .5rem;
+    }
+
+    .rejoin-sum__operator {
+        flex-shrink: 0;
+        width: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+    }
+
+    .rejoin-sum__label {
+        flex-grow: 1;
+    }
+
+    .rejoin-sum__amount {
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+        white-space: nowrap;
+    }
+
+    .rejoin-sum__row--tax-win {
+        color: $green;
+    }
+
+    .rejoin-sum__row--total {
+        margin-top: .75rem;
+        padding-top: .75rem;
+        border-top: 1px solid $gray-border-3;
+    }
+
+    .rejoin-sum__ten-years {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+        color: $text-secondary;
+    }
+}

@@ -141,6 +141,19 @@ class ThemeEnqueue
                 ]
             );
         }
+        if (is_page_template('page_second-pillar-rejoin.php')) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'second-pillar-rejoin-calculator',
+                    'src' => $js_path . 'second-pillar-rejoin-calculator.js',
+                    'deps' => 'bootstrap',
+                    'ver' => $SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
         if (is_page_template('page_company-savings.php')) {
             array_push(
                 $assets,

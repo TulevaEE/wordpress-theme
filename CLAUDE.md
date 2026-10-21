@@ -129,9 +129,44 @@ replacing `scripts/update_acf.py` with one manifest-driven publisher are steps i
 
 See `README.md` for Docker setup instructions.
 
+## Building CSS
+
+`css/main.css` is committed as the **expanded** build from `npm run watch:scss`
+(`gulp --development`). Never run `gulp production`: it minifies every CSS file in
+`css/` (bootstrap, editor, vendor) and turns a small change into a ~60 000-line diff.
+
+For a one-off build without keeping a terminal open: start `npm run watch:scss` in the
+background, touch the `.scss` file you changed, wait for `Sourcemaps task finished`,
+then stop the watcher. Only `css/main.css` should change (`main.css.map` is not
+tracked); anything else in the diff means the wrong build ran.
+
+Inside a nested rule, `& + &` repeats the whole parent selector
+(`.page .row + .page .row`) and never matches. Write the sibling rule out instead.
+
+## Landing page calculators
+
+A landing page with a calculator in its hero (company savings, child savings, II pillar
+rejoin) is:
+
+- `page_<name>.php` (the template WordPress offers) and `templates/<name>-content.php`
+- `js/<name>-calculator.js`: plain JavaScript, no jQuery. Pure functions for the
+  arithmetic, a small DOM block that wires the inputs, and a CommonJS export
+- `js/<name>-calculator.spec.js` for the arithmetic; DOM wiring goes in
+  `js/<name>-calculator.dom.spec.js` with a `@jest-environment jsdom` docblock, which
+  renders the markup, `jest.isolateModules`-requires the script and drives the inputs
+- an `is_page_template()` entry in `helpers/enqueue.php` with its own version in
+  `helpers/enqueue_versions.php`
+- `scss/_<name>.scss`, imported in `scss/_styles.scss`, scoped under the page's class
+
+When the same calculator exists in the app (onboarding-client), port its numbers into
+the spec so the two cannot drift. The page itself is created in wp-admin (or over REST)
+with the template selected, after the theme change is deployed: WordPress rejects a
+template it cannot find.
+
 ## Translations
 
-After editing template strings, regenerate translation files:
+After editing template strings, regenerate translation files. Write the Estonian
+`msgstr` into `lang/et.po` between the `po` and `mo` steps:
 
 ```bash
 ./tools/i18n/generate-pot.sh

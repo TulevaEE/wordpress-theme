@@ -18780,6 +18780,64 @@ sup {
   padding-top: 0.2rem;
 }
 
+.second-pillar-rejoin-page .rejoin-sum__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 0.25rem;
+  color: #002f63;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.second-pillar-rejoin-page .rejoin-sum__row + .rejoin-sum__row {
+  margin-top: 0.5rem;
+}
+.second-pillar-rejoin-page .rejoin-sum__operator {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.second-pillar-rejoin-page .rejoin-sum__label {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.second-pillar-rejoin-page .rejoin-sum__amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.second-pillar-rejoin-page .rejoin-sum__row--tax-win {
+  color: #008300;
+}
+.second-pillar-rejoin-page .rejoin-sum__row--total {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--gray-border-3);
+}
+.second-pillar-rejoin-page .rejoin-sum__ten-years {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  color: #6B7074;
+}
+
 .custom-tooltip {
   position: absolute;
   z-index: 2;
