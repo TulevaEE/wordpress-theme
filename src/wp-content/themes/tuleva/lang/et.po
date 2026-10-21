@@ -2727,8 +2727,8 @@ msgid "Get the <em>tax win</em> again"
 msgstr "Hakka jälle <em>maksuvõitu</em> saama"
 
 #: templates/second-pillar-rejoin-content.php:9
-msgid "The state directs <b>part of your taxes</b> into your II pillar. Apply by <b>30 November</b> and saving starts next May."
-msgstr "Riik suunab <b>osa sinu maksudest</b> sinu II sambasse. Esita avaldus <b>30. novembriks</b> ja kogumine algab järgmise aasta mais."
+msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May."
+msgstr "<b>See&nbsp;on&nbsp;sinu&nbsp;raha.</b> Suuna osa oma maksudest enda&nbsp;kontole. Esita avaldus <b>30.&nbsp;novembriks</b> ja kogumine algab&nbsp;mais."
 
 #: templates/second-pillar-rejoin-content.php:30
 msgid "From your net salary"
