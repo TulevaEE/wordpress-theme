@@ -93,6 +93,14 @@ describe('II pillar rejoin calculator on the page', () => {
         jest.useRealTimers();
     });
 
+    it('recalculates for the salary the browser restores when the visitor comes back to the page', () => {
+        document.getElementById('calcSalary').value = '3000';
+
+        window.dispatchEvent(new Event('pageshow'));
+
+        expect(shown('resTotal')).toBe('300 €');
+    });
+
     it('reads an emptied salary field as zero', () => {
         typeSalary('');
 

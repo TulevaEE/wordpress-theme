@@ -105,6 +105,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     salary.addEventListener('input', update);
+    window.addEventListener('pageshow', update);
     salary.addEventListener('focus', function () {
         setTimeout(function () {
             salary.select();
