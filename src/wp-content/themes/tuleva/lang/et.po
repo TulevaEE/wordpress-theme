@@ -2723,8 +2723,8 @@ msgid "Rejoining the II pillar"
 msgstr "II sambaga taasliitumine"
 
 #: templates/second-pillar-rejoin-content.php:8
-msgid "Get the tax win again"
-msgstr "Hakka jälle maksuvõitu saama"
+msgid "Get the <em>tax win</em> again"
+msgstr "Hakka jälle <em>maksuvõitu</em> saama"
 
 #: templates/second-pillar-rejoin-content.php:9
 msgid "The state directs <b>part of your taxes</b> into your II pillar. Apply by <b>30 November</b> and saving starts next May."

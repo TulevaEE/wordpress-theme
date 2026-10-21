@@ -1,10 +1,25 @@
 // II pillar rejoin landing page (page_second-pillar-rejoin.php)
 
+// A fresh start rather than the washed photo of the other heroes: daylight
+// glows in brand blue and green, and the tax win underlined by hand
 .bg-hero-rejoin {
-    background-image: linear-gradient(180deg, rgba(209, 244, 255, .88), rgba(209, 244, 255, .88)), url('../img/funds-hero.jpg');
-    background-position: 0 0, 50% 50%;
-    background-size: auto, cover;
-    background-repeat: repeat, no-repeat;
+    background:
+        radial-gradient(45% 80% at 92% 30%, rgba($bright-blue, .55), transparent 70%),
+        radial-gradient(40% 70% at 62% 110%, rgba($green-light, .38), transparent 70%),
+        radial-gradient(35% 60% at 0 0, rgba($bright-blue, .22), transparent 70%),
+        #eef8ff;
+
+    h1 {
+        font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+        line-height: 1.12;
+    }
+
+    h1 em {
+        padding-bottom: .12em;
+        background: url('../img/second-pillar-rejoin-stroke.svg') left bottom / 100% .3em no-repeat;
+        font-style: normal;
+        white-space: nowrap;
+    }
 }
 
 // Bootstrap places the tooltip under <body>, outside the page wrapper

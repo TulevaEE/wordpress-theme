@@ -2553,7 +2553,7 @@ msgid "Rejoining the II pillar"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:8
-msgid "Get the tax win again"
+msgid "Get the <em>tax win</em> again"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:9

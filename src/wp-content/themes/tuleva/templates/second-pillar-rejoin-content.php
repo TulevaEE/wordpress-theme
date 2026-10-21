@@ -5,7 +5,7 @@
             <div class="row align-items-center gy-5 gx-xl-5">
                 <div class="col-lg-6 text-center text-lg-start text-navy">
                     <span class="eyebrow"><?php _e('Rejoining the II pillar', TEXT_DOMAIN); ?></span>
-                    <h1 class="mb-4"><?php _e('Get the tax win again', TEXT_DOMAIN); ?></h1>
+                    <h1 class="mb-4"><?php _e('Get the <em>tax win</em> again', TEXT_DOMAIN); ?></h1>
                     <p class="m-0 lead"><?php _e('The state directs <b>part of your taxes</b> into your II pillar. Apply by <b>30 November</b> and saving starts next May.', TEXT_DOMAIN); ?></p>
                 </div>
 

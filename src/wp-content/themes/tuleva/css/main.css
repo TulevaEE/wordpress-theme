@@ -18781,11 +18781,17 @@ sup {
 }
 
 .bg-hero-rejoin {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(209, 244, 255, 0.88)), to(rgba(209, 244, 255, 0.88))), url("../img/funds-hero.jpg");
-  background-image: linear-gradient(180deg, rgba(209, 244, 255, 0.88), rgba(209, 244, 255, 0.88)), url("../img/funds-hero.jpg");
-  background-position: 0 0, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
+  background: radial-gradient(45% 80% at 92% 30%, rgba(0, 174, 234, 0.55), transparent 70%), radial-gradient(40% 70% at 62% 110%, rgba(0, 161, 0, 0.38), transparent 70%), radial-gradient(35% 60% at 0 0, rgba(0, 174, 234, 0.22), transparent 70%), #eef8ff;
+}
+.bg-hero-rejoin h1, .bg-hero-rejoin .h1 {
+  font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+  line-height: 1.12;
+}
+.bg-hero-rejoin h1 em, .bg-hero-rejoin .h1 em {
+  padding-bottom: 0.12em;
+  background: url("../img/second-pillar-rejoin-stroke.svg") left bottom/100% 0.3em no-repeat;
+  font-style: normal;
+  white-space: nowrap;
 }
 
 .rejoin-tax-win-breakdown {
