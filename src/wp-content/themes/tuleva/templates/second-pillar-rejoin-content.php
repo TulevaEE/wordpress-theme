@@ -1,3 +1,4 @@
+<?php require_once get_template_directory() . '/helpers/second-pillar-rejoin.php'; ?>
 <main id="main" class="page-container landing-page second-pillar-rejoin-page">
 
     <section class="hero bg-hero-rejoin section-spacing">
@@ -6,7 +7,7 @@
                 <div class="col-lg-6 text-center text-lg-start text-navy">
                     <span class="eyebrow"><?php _e('Rejoining the II pillar', TEXT_DOMAIN); ?></span>
                     <h1 class="mb-4"><?php _e('Get the <em>tax win</em> again', TEXT_DOMAIN); ?></h1>
-                    <p class="m-0 lead"><?php _e('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May.', TEXT_DOMAIN); ?></p>
+                    <p class="m-0 lead"><?php echo get_second_pillar_rejoin_lead(get_current_time_tallinn()); ?></p>
                 </div>
 
                 <div class="col-lg-6" id="kalkulaator">
@@ -47,14 +48,17 @@
                                     <span class="rejoin-sum__amount" id="resTotal">200&nbsp;&euro;</span>
                                 </div>
                                 <div class="rejoin-sum__ten-years">
-                                    <span><?php _e('Saved in 10 years', TEXT_DOMAIN); ?></span>
+                                    <span><?php _e('Contributions over 10 years', TEXT_DOMAIN); ?></span>
                                     <span class="fw-medium" id="resTenYears">24&nbsp;000&nbsp;&euro;</span>
                                 </div>
                                 <a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-primary btn-lg w-100 mt-4"><?php _e('Start saving again', TEXT_DOMAIN); ?></a>
                             </div>
                         </div>
                     </div>
-                    <p class="text-secondary text-center mt-3 mb-0"><?php _e('The calculation assumes the highest possible contribution. Social tax paid into the II pillar also has a small effect on your I pillar.', TEXT_DOMAIN); ?></p>
+                    <p class="text-secondary text-center mt-3 mb-0"><?php printf(
+                        __('The calculation assumes the highest possible contribution. You can use the money from age 60, and after rejoining you can\'t stop contributions again. Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
+                        '<a class="text-reset" href="' . esc_url(__('https://tuleva.ee/en/sotsmaks', TEXT_DOMAIN)) . '">' . __('slightly reduces your I&nbsp;pillar', TEXT_DOMAIN) . '</a>'
+                    ); ?></p>
                 </div>
 
             </div>
@@ -125,7 +129,7 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
                         <h2><?php _e('Get back to saving', TEXT_DOMAIN); ?></h2>
-                        <p class="lead mx-auto"><?php _e('If you took money out of your II pillar in 2021, you can apply now. Do it by <b>30&nbsp;November</b> and your II pillar starts growing again as early as May.', TEXT_DOMAIN); ?></p>
+                        <p class="lead mx-auto"><?php echo get_second_pillar_rejoin_closing_lead(get_current_time_tallinn()); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Start saving again', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Over <strong>86,000</strong> people save with Tuleva', TEXT_DOMAIN); ?></span></li>
