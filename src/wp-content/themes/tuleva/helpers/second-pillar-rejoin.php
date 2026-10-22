@@ -20,8 +20,8 @@ function get_second_pillar_rejoin_lead(DateTimeInterface $now) {
  */
 function get_second_pillar_rejoin_closing_lead(DateTimeInterface $now) {
     return match ((int) get_next_second_pillar_deadline($now)->format('n')) {
-        3 => __('If you took money out of your II pillar in 2021, you can apply now. Do it by <b>31&nbsp;March</b> and your II pillar starts growing again as early as September.', TEXT_DOMAIN),
-        7 => __('If you took money out of your II pillar in 2021, you can apply now. Do it by <b>31&nbsp;July</b> and your II pillar starts growing again as early as January.', TEXT_DOMAIN),
-        11 => __('If you took money out of your II pillar in 2021, you can apply now. Do it by <b>30&nbsp;November</b> and your II pillar starts growing again as early as May.', TEXT_DOMAIN),
+        3 => __('<span class="rejoin-cta-line">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class="rejoin-cta-line">Do it by <b>31&nbsp;March</b> and you\'ll be saving in your II&nbsp;pillar again from September.</span>', TEXT_DOMAIN),
+        7 => __('<span class="rejoin-cta-line">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class="rejoin-cta-line">Do it by <b>31&nbsp;July</b> and you\'ll be saving in your II&nbsp;pillar again from January.</span>', TEXT_DOMAIN),
+        11 => __('<span class="rejoin-cta-line">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class="rejoin-cta-line">Do it by <b>30&nbsp;November</b> and you\'ll be saving in your II&nbsp;pillar again from May.</span>', TEXT_DOMAIN),
     };
 }
