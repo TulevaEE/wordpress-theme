@@ -57,6 +57,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     var total = document.getElementById('resTotal');
     var tenYears = document.getElementById('resTenYears');
     var taxWinInfo = document.getElementById('taxWinInfo');
+    var taxWinBreakdownTriggers = [taxWinInfo, document.getElementById('rejoinFigureTaxWinInfo')].filter(Boolean);
 
     var locale = typeof LANGCODE !== 'undefined' && LANGCODE === 'en' ? 'en-GB' : 'et-EE';
 
@@ -90,12 +91,14 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     function showTaxWinBreakdown(html) {
-        var tooltip = window.bootstrap && window.bootstrap.Tooltip.getInstance(taxWinInfo);
-        if (tooltip) {
-            tooltip.setContent({ '.tooltip-inner': html });
-        } else {
-            taxWinInfo.setAttribute('title', html);
-        }
+        taxWinBreakdownTriggers.forEach(function (trigger) {
+            var tooltip = window.bootstrap && window.bootstrap.Tooltip.getInstance(trigger);
+            if (tooltip) {
+                tooltip.setContent({ '.tooltip-inner': html });
+            } else {
+                trigger.setAttribute('title', html);
+            }
+        });
     }
 
     var figure = document.getElementById('rejoinFigure');

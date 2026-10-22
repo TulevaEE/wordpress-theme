@@ -63,6 +63,7 @@ function renderCalculator() {
               data-income-tax-label="Tulumaksust"
               data-social-tax-label="Sotsiaalmaksust"></span>
         <svg id="rejoinFigure">
+            ${fromTemplate(/<g id="rejoinFigureTaxWinInfo"[^>]*>/)}</g>
             ${FIGURE_SHAPES.map(shapeInTemplate).join('')}
             ${FIGURE_AMOUNTS.map(amountInTemplate).join('')}
         </svg>
@@ -72,6 +73,14 @@ function renderCalculator() {
 
 function shown(id) {
     return document.getElementById(id).textContent.replace(/\s/g, ' ');
+}
+
+function taxWinBreakdown(id) {
+    const breakdown = document.createElement('div');
+    breakdown.innerHTML = document.getElementById(id).getAttribute('title');
+    return [...breakdown.querySelectorAll('.rejoin-tax-win-breakdown > span')].map((cell) =>
+        cell.textContent.replace(/\s/g, ' ')
+    );
 }
 
 function typeSalary(value) {
@@ -105,14 +114,13 @@ describe('II pillar rejoin calculator on the page', () => {
     });
 
     it('breaks the tax win down into what comes from social tax and from income tax, larger part first', () => {
-        const breakdown = document.createElement('div');
-        breakdown.innerHTML = document.getElementById('taxWinInfo').getAttribute('title');
+        expect(taxWinBreakdown('taxWinInfo')).toEqual(['Sotsiaalmaksust', '80 €', 'Tulumaksust', '26 €']);
+    });
 
-        expect(
-            [...breakdown.querySelectorAll('.rejoin-tax-win-breakdown > span')].map((cell) =>
-                cell.textContent.replace(/\s/g, ' ')
-            )
-        ).toEqual(['Sotsiaalmaksust', '80 €', 'Tulumaksust', '26 €']);
+    it('breaks the tax win down on the green bar of the figure too, following the salary', () => {
+        typeSalary('3000');
+
+        expect(taxWinBreakdown('rejoinFigureTaxWinInfo')).toEqual(['Sotsiaalmaksust', '120 €', 'Tulumaksust', '40 €']);
     });
 
     it('updates an initialized tooltip without putting markup back into the native title', () => {

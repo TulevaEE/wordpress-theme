@@ -30,6 +30,18 @@
     row-gap: .125rem;
     font-variant-numeric: tabular-nums;
 }
+
+.rejoin-figure__tax-win {
+    cursor: pointer;
+
+    rect {
+        transition: fill .15s ease-out;
+    }
+
+    &:hover rect {
+        fill: $green-light;
+    }
+}
 //
 // The calculator reads as a written sum: the two parts, a line, and the
 // total, with the operators in their own column so the labels align.

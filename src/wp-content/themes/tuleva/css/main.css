@@ -18805,6 +18805,17 @@ sup {
   font-variant-numeric: tabular-nums;
 }
 
+.rejoin-figure__tax-win {
+  cursor: pointer;
+}
+.rejoin-figure__tax-win rect {
+  -webkit-transition: fill 0.15s ease-out;
+  transition: fill 0.15s ease-out;
+}
+.rejoin-figure__tax-win:hover rect {
+  fill: #00A100;
+}
+
 .second-pillar-rejoin-page .rejoin-sum__row {
   display: -webkit-box;
   display: -webkit-flex;

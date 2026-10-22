@@ -75,39 +75,45 @@
                     <h2 class="mb-5"><?php _e('Why start saving again?', TEXT_DOMAIN); ?></h2>
                     <div class="row justify-content-center mb-5">
                         <div class="col-md-10 col-lg-8">
-                            <svg id="rejoinFigure" class="w-100 h-auto" viewBox="70 0 660 600" aria-hidden="true">
-                                <g fill="none" stroke="#002F63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="356" y="28" width="100" height="58" rx="5" fill="#FFFFFF"/>
-                                    <rect x="350" y="22" width="100" height="58" rx="5" fill="#FFFFFF"/>
-                                    <path id="rejoinFigureTakeHomeArrow" d="M340 51 C240 51 220 150 220 322.4"/>
-                                    <path id="rejoinFigureTakeHomeArrowHead" d="M208 310.4 L220 324.4 L232 310.4"/>
-                                    <path d="M460 51 C550 51 580 110 580 172"/>
-                                    <path d="M568 160 L580 174 L592 160"/>
+                            <svg id="rejoinFigure" class="w-100 h-auto" viewBox="70 170 660 430" aria-hidden="true">
+                                <g id="rejoinFigureSource" display="none">
+                                    <g fill="none" stroke="#002F63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="356" y="28" width="100" height="58" rx="5" fill="#FFFFFF"/>
+                                        <rect x="350" y="22" width="100" height="58" rx="5" fill="#FFFFFF"/>
+                                        <path id="rejoinFigureTakeHomeArrow" d="M340 51 C240 51 220 150 220 322.4"/>
+                                        <path id="rejoinFigureTakeHomeArrowHead" d="M208 310.4 L220 324.4 L232 310.4"/>
+                                        <path d="M460 51 C550 51 580 110 580 172"/>
+                                        <path d="M568 160 L580 174 L592 160"/>
+                                    </g>
+                                    <rect x="134" y="196" width="176" height="34" style="fill: var(--gray-bg-1)"/>
+                                    <g text-anchor="middle" font-weight="700" fill="#002F63">
+                                        <text x="400" y="63" font-size="32">€</text>
+                                        <text x="400" y="128" font-size="28"><?php printf(esc_html__('%s of gross pay', TEXT_DOMAIN), '<tspan id="rejoinFigureContribution">120&nbsp;€</tspan>'); ?></text>
+                                        <text x="222" y="221" font-size="22" font-weight="400" fill="#6B7074"><?php printf(esc_html__('−%s income tax', TEXT_DOMAIN), '<tspan id="rejoinFigureIncomeTax">26&nbsp;€</tspan>'); ?></text>
+                                    </g>
                                 </g>
                                 <rect id="rejoinFigureTakeHomeBar" x="110" y="338.4" width="220" height="131.6" rx="6" fill="#C5DDF4"/>
                                 <rect x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
-                                <rect id="rejoinFigureTaxWinBar" x="470" y="190" width="220" height="148.4" rx="6" fill="#008300"/>
-                                <rect id="rejoinFigureTaxWinBarEdge" x="470" y="326.4" width="220" height="12" fill="#008300"/>
+                                <g id="rejoinFigureTaxWinInfo" class="rejoin-figure__tax-win" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="">
+                                    <rect id="rejoinFigureTaxWinBar" x="470" y="190" width="220" height="148.4" rx="6" fill="#008300"/>
+                                    <rect id="rejoinFigureTaxWinBarEdge" x="470" y="326.4" width="220" height="12" fill="#008300"/>
+                                </g>
                                 <rect id="rejoinFigurePillarBaseBar" x="470" y="338.4" width="220" height="131.6" fill="#C5DDF4"/>
                                 <g stroke="#002F63" stroke-width="3" stroke-linecap="round">
                                     <line x1="90" y1="470" x2="350" y2="470"/>
                                     <line x1="450" y1="470" x2="710" y2="470"/>
                                 </g>
-                                <rect x="134" y="196" width="176" height="34" style="fill: var(--gray-bg-1)"/>
-                                <line x1="400" y1="250" x2="400" y2="590" stroke="#ADB5BD" stroke-width="2" stroke-dasharray="6 6"/>
+                                <line x1="400" y1="190" x2="400" y2="590" stroke="#ADB5BD" stroke-width="2" stroke-dasharray="6 6"/>
                                 <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
-                                    <text x="400" y="63" font-size="32">€</text>
-                                    <text x="400" y="128" font-size="28"><?php printf(esc_html__('%s of gross pay', TEXT_DOMAIN), '<tspan id="rejoinFigureContribution">120&nbsp;€</tspan>'); ?></text>
-                                    <text x="222" y="221" font-size="22" font-weight="400" fill="#6B7074"><?php printf(esc_html__('−%s income tax', TEXT_DOMAIN), '<tspan id="rejoinFigureIncomeTax">26&nbsp;€</tspan>'); ?></text>
                                     <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
-                                    <text x="580" y="264" font-size="24" fill="#FFFFFF"><?php printf(esc_html__('Tax win %s', TEXT_DOMAIN), '<tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan>'); ?></text>
+                                    <text x="580" y="264" font-size="24" fill="#FFFFFF" pointer-events="none"><?php printf(esc_html__('Tax win %s', TEXT_DOMAIN), '<tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan>'); ?></text>
                                     <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
                                     <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
-                                    <text x="220" y="518" font-size="26"><?php esc_html_e('Take-home pay', TEXT_DOMAIN); ?></text>
-                                    <text x="220" y="568" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>
-                                    <text x="580" y="518" font-size="26"><?php esc_html_e('Into your II pillar', TEXT_DOMAIN); ?></text>
-                                    <text x="580" y="568" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigurePillarTotal">200&nbsp;€</tspan>'); ?></text>
+                                    <text x="220" y="526" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>
+                                    <text x="220" y="566" font-size="26"><?php esc_html_e('to your bank account', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="526" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigurePillarTotal">200&nbsp;€</tspan>'); ?></text>
+                                    <text x="580" y="566" font-size="26"><?php esc_html_e('to your II pillar account', TEXT_DOMAIN); ?></text>
                                 </g>
                             </svg>
                         </div>
