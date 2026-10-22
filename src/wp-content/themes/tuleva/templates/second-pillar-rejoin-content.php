@@ -75,21 +75,20 @@
                     <h2 class="mb-5"><?php _e('Why start saving again?', TEXT_DOMAIN); ?></h2>
                     <div class="row justify-content-center mb-5">
                         <div class="col-md-10 col-lg-8">
-                            <svg class="w-100 h-auto" viewBox="70 0 660 600" role="img" aria-labelledby="rejoinTaxWinFigureTitle">
-                                <title id="rejoinTaxWinFigureTitle"><?php esc_html_e('120 € of gross pay gives you 94 € a month in take-home pay, or 200 € a month in your II pillar.', TEXT_DOMAIN); ?></title>
+                            <svg id="rejoinFigure" class="w-100 h-auto" viewBox="70 0 660 600" aria-hidden="true">
                                 <g fill="none" stroke="#002F63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="356" y="28" width="100" height="58" rx="5" fill="#FFFFFF"/>
                                     <rect x="350" y="22" width="100" height="58" rx="5" fill="#FFFFFF"/>
-                                    <path d="M340 51 C240 51 220 150 220 322"/>
-                                    <path d="M208 310 L220 324 L232 310"/>
+                                    <path id="rejoinFigureTakeHomeArrow" d="M340 51 C240 51 220 150 220 322.4"/>
+                                    <path id="rejoinFigureTakeHomeArrowHead" d="M208 310.4 L220 324.4 L232 310.4"/>
                                     <path d="M460 51 C550 51 580 110 580 172"/>
                                     <path d="M568 160 L580 174 L592 160"/>
                                 </g>
-                                <rect x="110" y="338" width="220" height="132" rx="6" fill="#C5DDF4"/>
+                                <rect id="rejoinFigureTakeHomeBar" x="110" y="338.4" width="220" height="131.6" rx="6" fill="#C5DDF4"/>
                                 <rect x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
-                                <rect x="470" y="190" width="220" height="148" rx="6" fill="#008300"/>
-                                <rect x="470" y="326" width="220" height="12" fill="#008300"/>
-                                <rect x="470" y="338" width="220" height="132" fill="#C5DDF4"/>
+                                <rect id="rejoinFigureTaxWinBar" x="470" y="190" width="220" height="148.4" rx="6" fill="#008300"/>
+                                <rect id="rejoinFigureTaxWinBarEdge" x="470" y="326.4" width="220" height="12" fill="#008300"/>
+                                <rect id="rejoinFigurePillarBaseBar" x="470" y="338.4" width="220" height="131.6" fill="#C5DDF4"/>
                                 <g stroke="#002F63" stroke-width="3" stroke-linecap="round">
                                     <line x1="90" y1="470" x2="350" y2="470"/>
                                     <line x1="450" y1="470" x2="710" y2="470"/>
@@ -99,16 +98,16 @@
                                 <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
                                     <text x="400" y="63" font-size="32">€</text>
-                                    <text x="400" y="128" font-size="28"><?php esc_html_e('120 € of gross pay', TEXT_DOMAIN); ?></text>
-                                    <text x="222" y="221" font-size="22" font-weight="400" fill="#6B7074"><?php esc_html_e('−26 € income tax', TEXT_DOMAIN); ?></text>
-                                    <text x="220" y="413" font-size="26">94 €</text>
-                                    <text x="580" y="272" font-size="24" fill="#FFFFFF"><?php esc_html_e('Tax win 106 €', TEXT_DOMAIN); ?></text>
-                                    <text x="580" y="413" font-size="26">94 €</text>
+                                    <text x="400" y="128" font-size="28"><?php printf(esc_html__('%s of gross pay', TEXT_DOMAIN), '<tspan id="rejoinFigureContribution">120&nbsp;€</tspan>'); ?></text>
+                                    <text x="222" y="221" font-size="22" font-weight="400" fill="#6B7074"><?php printf(esc_html__('−%s income tax', TEXT_DOMAIN), '<tspan id="rejoinFigureIncomeTax">26&nbsp;€</tspan>'); ?></text>
+                                    <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
+                                    <text x="580" y="264" font-size="24" fill="#FFFFFF"><?php printf(esc_html__('Tax win %s', TEXT_DOMAIN), '<tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan>'); ?></text>
+                                    <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
                                     <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
                                     <text x="220" y="518" font-size="26"><?php esc_html_e('Take-home pay', TEXT_DOMAIN); ?></text>
-                                    <text x="220" y="568" font-size="40"><?php esc_html_e('94 € a month', TEXT_DOMAIN); ?></text>
+                                    <text x="220" y="568" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>
                                     <text x="580" y="518" font-size="26"><?php esc_html_e('Into your II pillar', TEXT_DOMAIN); ?></text>
-                                    <text x="580" y="568" font-size="40"><?php esc_html_e('200 € a month', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="568" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigurePillarTotal">200&nbsp;€</tspan>'); ?></text>
                                 </g>
                             </svg>
                         </div>
