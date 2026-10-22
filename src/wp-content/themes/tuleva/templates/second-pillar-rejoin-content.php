@@ -107,7 +107,8 @@
                                 <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
                                     <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
-                                    <text x="580" y="264" font-size="24" fill="#FFFFFF" pointer-events="none"><?php printf(esc_html__('Tax win %s', TEXT_DOMAIN), '<tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan>'); ?></text>
+                                    <text x="580" y="252" font-size="22" fill="#FFFFFF" pointer-events="none"><?php esc_html_e('Tax win', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="284" font-size="26" fill="#FFFFFF" pointer-events="none"><tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan></text>
                                     <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
                                     <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
                                     <text x="220" y="526" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>
