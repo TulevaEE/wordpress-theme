@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-22T10:07:06+00:00\n"
+"POT-Creation-Date: 2026-10-22T11:07:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -419,7 +419,7 @@ msgstr ""
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
 #: templates/savings-fund-landing-content.php:161
-#: templates/second-pillar-rejoin-content.php:148
+#: templates/second-pillar-rejoin-content.php:185
 msgid "Frequently asked questions"
 msgstr ""
 
@@ -466,8 +466,8 @@ msgstr ""
 #: templates/savings-fund-landing-content.php:272
 #: templates/savings-fund-landing-content.php:273
 #: templates/savings-fund-landing-content.php:274
-#: templates/second-pillar-rejoin-content.php:206
-#: templates/second-pillar-rejoin-content.php:211
+#: templates/second-pillar-rejoin-content.php:243
+#: templates/second-pillar-rejoin-content.php:248
 msgid "Read more →"
 msgstr ""
 
@@ -718,7 +718,7 @@ msgstr ""
 #: templates/child-savings-content.php:301
 #: templates/company-savings-content.php:195
 #: templates/savings-fund-landing-content.php:326
-#: templates/second-pillar-rejoin-content.php:201
+#: templates/second-pillar-rejoin-content.php:238
 msgid "Learn more"
 msgstr ""
 
@@ -816,7 +816,7 @@ msgid "The more of us who save together, the lower we can push the fees."
 msgstr ""
 
 #: templates/company-savings-content.php:99
-#: templates/second-pillar-rejoin-content.php:108
+#: templates/second-pillar-rejoin-content.php:145
 msgid "How to start"
 msgstr ""
 
@@ -2610,13 +2610,13 @@ msgid "Contributions over 10 years"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:54
-#: templates/second-pillar-rejoin-content.php:133
+#: templates/second-pillar-rejoin-content.php:170
 msgid "Start saving again"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:59
 #, php-format
-msgid "The calculation assumes the highest possible contribution. You can use the money from age 60, and after rejoining you can't stop contributions again. Social tax paid into the II&nbsp;pillar %s."
+msgid "The calculation assumes the highest possible contribution. Social tax paid into the II&nbsp;pillar %s."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:60
@@ -2631,178 +2631,214 @@ msgstr ""
 msgid "Why start saving again?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:81
-msgid "The easiest way to save"
+#: templates/second-pillar-rejoin-content.php:79
+msgid "120 € of gross pay gives you 94 € a month in take-home pay, or 200 € a month in your II pillar."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:82
-msgid "Your contribution goes into the II pillar straight from your salary and grows automatically along with it. You save every month without noticing."
+#: templates/second-pillar-rejoin-content.php:99
+msgid "120 € of gross pay"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:88
-msgid "You win on taxes"
+#: templates/second-pillar-rejoin-content.php:100
+msgid "−26 € income tax"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:89
-msgid "The state adds 4% from your social tax and takes no income tax on the part of your salary you direct into the II pillar."
+#: templates/second-pillar-rejoin-content.php:102
+msgid "Tax win 106 €"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:95
-msgid "The money is yours"
+#: templates/second-pillar-rejoin-content.php:104
+msgid "or"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:96
-msgid "Your II pillar assets are truly yours and can be inherited. From the age of 60 you can take them out all at once or monthly <b>free of income tax</b>."
+#: templates/second-pillar-rejoin-content.php:105
+msgid "Take-home pay"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:110
-msgid "Log in to Tuleva"
+#: templates/second-pillar-rejoin-content.php:106
+msgid "94 € a month"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:112
-msgid "Verify yourself with Smart-ID, mobile-ID, or an ID card. You do not need to be a Tuleva saver."
+#: templates/second-pillar-rejoin-content.php:107
+msgid "Into your II pillar"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:114
-msgid "Choose your contribution rate and fund"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:116
-msgid "If you do not change your fund, your contributions go where you saved before you took your money out."
+#: templates/second-pillar-rejoin-content.php:108
+msgid "200 € a month"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:118
-msgid "Sign"
+msgid "The easiest way to save"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:120
-msgid "You submit all the applications at once. We then send you a confirmation by email."
+#: templates/second-pillar-rejoin-content.php:119
+msgid "Your contribution goes into the II pillar straight from your salary and grows automatically along with it. You save every month without noticing."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:131
-msgid "Get back to saving"
+#: templates/second-pillar-rejoin-content.php:125
+msgid "You win on taxes"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:135
-msgid "Over <strong>86,000</strong> people save with Tuleva"
+#: templates/second-pillar-rejoin-content.php:126
+msgid "The state adds 4% from your social tax and takes no income tax on the part of your salary you direct into the II pillar."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:136
-msgid "Tuleva <strong>belongs to its savers</strong>"
+#: templates/second-pillar-rejoin-content.php:132
+msgid "The money is yours"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:133
+msgid "Your II pillar assets are truly yours and can be inherited. From the age of 60 you can take them out all at once or monthly <b>free of income tax</b>."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:147
+msgid "Log in to Tuleva"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:149
+msgid "Verify yourself with Smart-ID, mobile-ID, or an ID card. You do not need to be a Tuleva saver."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:151
-msgid "Which II pillar fund should I choose?"
+msgid "Choose your contribution rate and fund"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:153
-msgid "Look at two things: where the fund invests and how much it charges. An index fund that invests in global equities spreads your money across thousands of companies around the world."
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:154
-msgid "Today you can save with an annual fee below 0.3%. If a fund's ongoing charges are above 0.5% a year, you are paying too much."
+msgid "If you do not change your fund, your contributions go where you saved before you took your money out."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:155
+msgid "Sign"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:157
+msgid "You submit all the applications at once. We then send you a confirmation by email."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:168
+msgid "Get back to saving"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:172
+msgid "Over <strong>86,000</strong> people save with Tuleva"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:173
+msgid "Tuleva <strong>belongs to its savers</strong>"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:188
+msgid "Which II pillar fund should I choose?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:190
+msgid "Look at two things: where the fund invests and how much it charges. An index fund that invests in global equities spreads your money across thousands of companies around the world."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:191
+msgid "Today you can save with an annual fee below 0.3%. If a fund's ongoing charges are above 0.5% a year, you are paying too much."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:192
 #, php-format
 msgid "When you rejoin, you can use the money from the age of 60, so you have time to ride out market swings. That's why a low-fee index fund is worth considering. %s"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:155
+#: templates/second-pillar-rejoin-content.php:192
 msgid "https://tuleva.ee/vaata/pensionifondide-vordlus/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:155
+#: templates/second-pillar-rejoin-content.php:192
 msgid "Compare all II pillar funds →"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:159
+#: templates/second-pillar-rejoin-content.php:196
 msgid "Where do my contributions go if I don't choose a fund?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:161
+#: templates/second-pillar-rejoin-content.php:198
 msgid "To the fund where you saved before you took your money out. Banks have renamed many funds over the past five years, so you may not recognise your old fund by its name."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:162
+#: templates/second-pillar-rejoin-content.php:199
 msgid "That's why it's worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:166
+#: templates/second-pillar-rejoin-content.php:203
 msgid "How can I take money out of the II pillar later?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:168
+#: templates/second-pillar-rejoin-content.php:205
 #, php-format
 msgid "From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:168
+#: templates/second-pillar-rejoin-content.php:205
 msgid "https://tuleva.ee/pensioni-valjamaksed/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:168
+#: templates/second-pillar-rejoin-content.php:205
 msgid "in monthly payments free of income tax"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:169
-msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. Most people are better off saving at least until they stop working, so this restriction does not affect most of them."
+#: templates/second-pillar-rejoin-content.php:206
+msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can't stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:173
+#: templates/second-pillar-rejoin-content.php:210
 msgid "What if the state takes away the 4%?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:175
+#: templates/second-pillar-rejoin-content.php:212
 msgid "Money already paid in cannot be taken back, and your own contribution stays free of income tax even if the state paused its part. The law now also says the state must give at least five years' notice before reducing the 4%."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:176
+#: templates/second-pillar-rejoin-content.php:213
 msgid "Make use of the opportunity while it lasts."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:180
+#: templates/second-pillar-rejoin-content.php:217
 msgid "How does the II pillar affect my I pillar pension?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:182
+#: templates/second-pillar-rejoin-content.php:219
 #, php-format
 msgid "The state's 4%% comes from your social tax, which would otherwise go to the I pillar. That's why your I pillar pension will later be slightly smaller. Overall, saving in the II pillar leaves you ahead. %s"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:182
+#: templates/second-pillar-rejoin-content.php:219
 msgid "https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:182
+#: templates/second-pillar-rejoin-content.php:219
 msgid "See the calculation →"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:186
+#: templates/second-pillar-rejoin-content.php:223
 msgid "Do I need to be a Tuleva saver?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:188
+#: templates/second-pillar-rejoin-content.php:225
 msgid "No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us. There are already over 86,000 of us Tuleva savers."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:203
+#: templates/second-pillar-rejoin-content.php:240
 msgid "https://tuleva.ee/blogi/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:204
+#: templates/second-pillar-rejoin-content.php:241
 msgid "Is it worth saving in the II pillar again?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:205
+#: templates/second-pillar-rejoin-content.php:242
 msgid "Who should rejoin and who might not."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:209
+#: templates/second-pillar-rejoin-content.php:246
 msgid "II pillar fund comparison"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:210
+#: templates/second-pillar-rejoin-content.php:247
 msgid "All funds in one table: returns and fees."
 msgstr ""
 

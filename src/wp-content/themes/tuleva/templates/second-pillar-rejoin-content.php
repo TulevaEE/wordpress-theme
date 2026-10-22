@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <p class="text-secondary text-center mt-3 mb-0"><?php printf(
-                        __('The calculation assumes the highest possible contribution. You can use the money from age 60, and after rejoining you can\'t stop contributions again. Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
+                        __('The calculation assumes the highest possible contribution. Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
                         '<a class="text-reset" href="' . esc_url(__('https://tuleva.ee/en/sotsmaks', TEXT_DOMAIN)) . '">' . __('slightly reduces your I&nbsp;pillar', TEXT_DOMAIN) . '</a>'
                     ); ?></p>
                 </div>
@@ -73,6 +73,46 @@
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
                     <h2 class="mb-5"><?php _e('Why start saving again?', TEXT_DOMAIN); ?></h2>
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-10 col-lg-8">
+                            <svg class="w-100 h-auto" viewBox="70 0 660 600" role="img" aria-labelledby="rejoinTaxWinFigureTitle">
+                                <title id="rejoinTaxWinFigureTitle"><?php esc_html_e('120 € of gross pay gives you 94 € a month in take-home pay, or 200 € a month in your II pillar.', TEXT_DOMAIN); ?></title>
+                                <g fill="none" stroke="#002F63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="356" y="28" width="100" height="58" rx="5" fill="#FFFFFF"/>
+                                    <rect x="350" y="22" width="100" height="58" rx="5" fill="#FFFFFF"/>
+                                    <path d="M340 51 C240 51 220 150 220 322"/>
+                                    <path d="M208 310 L220 324 L232 310"/>
+                                    <path d="M460 51 C550 51 580 110 580 172"/>
+                                    <path d="M568 160 L580 174 L592 160"/>
+                                </g>
+                                <rect x="110" y="338" width="220" height="132" rx="6" fill="#C5DDF4"/>
+                                <rect x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
+                                <rect x="470" y="190" width="220" height="148" rx="6" fill="#008300"/>
+                                <rect x="470" y="326" width="220" height="12" fill="#008300"/>
+                                <rect x="470" y="338" width="220" height="132" fill="#C5DDF4"/>
+                                <g stroke="#002F63" stroke-width="3" stroke-linecap="round">
+                                    <line x1="90" y1="470" x2="350" y2="470"/>
+                                    <line x1="450" y1="470" x2="710" y2="470"/>
+                                </g>
+                                <rect x="134" y="196" width="176" height="34" style="fill: var(--gray-bg-1)"/>
+                                <line x1="400" y1="250" x2="400" y2="590" stroke="#ADB5BD" stroke-width="2" stroke-dasharray="6 6"/>
+                                <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
+                                <g text-anchor="middle" font-weight="700" fill="#002F63">
+                                    <text x="400" y="63" font-size="32">€</text>
+                                    <text x="400" y="128" font-size="28"><?php esc_html_e('120 € of gross pay', TEXT_DOMAIN); ?></text>
+                                    <text x="222" y="221" font-size="22" font-weight="400" fill="#6B7074"><?php esc_html_e('−26 € income tax', TEXT_DOMAIN); ?></text>
+                                    <text x="220" y="413" font-size="26">94 €</text>
+                                    <text x="580" y="272" font-size="24" fill="#FFFFFF"><?php esc_html_e('Tax win 106 €', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="413" font-size="26">94 €</text>
+                                    <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
+                                    <text x="220" y="518" font-size="26"><?php esc_html_e('Take-home pay', TEXT_DOMAIN); ?></text>
+                                    <text x="220" y="568" font-size="40"><?php esc_html_e('94 € a month', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="518" font-size="26"><?php esc_html_e('Into your II pillar', TEXT_DOMAIN); ?></text>
+                                    <text x="580" y="568" font-size="40"><?php esc_html_e('200 € a month', TEXT_DOMAIN); ?></text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="who">
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -166,7 +206,7 @@
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('How can I take money out of the II pillar later?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
                                 <p><?php printf(__('From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs.', TEXT_DOMAIN), '<a href="' . esc_url(__('https://tuleva.ee/pensioni-valjamaksed/', TEXT_DOMAIN)) . '">' . __('in monthly payments free of income tax', TEXT_DOMAIN) . '</a>'); ?></p>
-                                <p><?php _e('You cannot take the money out a second time before then. The only exception is a loss of capacity for work. Most people are better off saving at least until they stop working, so this restriction does not affect most of them.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can\'t stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kui-riik-4-protsenti-ara-votab">
