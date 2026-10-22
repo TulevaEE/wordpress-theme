@@ -94,7 +94,7 @@
                                 </g>
                                 <rect id="rejoinFigureTakeHomeBar" x="110" y="338.4" width="220" height="131.6" rx="6" fill="#C5DDF4"/>
                                 <rect x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
-                                <g id="rejoinFigureTaxWinInfo" class="rejoin-figure__tax-win" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="">
+                                <g id="rejoinFigureTaxWinInfo" class="rejoin-figure__tax-win" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="">
                                     <rect id="rejoinFigureTaxWinBar" x="470" y="190" width="220" height="148.4" rx="6" fill="#008300"/>
                                     <rect id="rejoinFigureTaxWinBarEdge" x="470" y="326.4" width="220" height="12" fill="#008300"/>
                                 </g>
@@ -116,6 +116,7 @@
                                     <text x="580" y="566" font-size="26"><?php esc_html_e('to your II pillar account', TEXT_DOMAIN); ?></text>
                                 </g>
                             </svg>
+                            <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %s', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>'); ?></p>
                         </div>
                     </div>
                     <div class="who">

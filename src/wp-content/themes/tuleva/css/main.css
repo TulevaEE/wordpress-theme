@@ -18815,6 +18815,9 @@ sup {
 .rejoin-figure__tax-win:hover rect {
   fill: #00A100;
 }
+.rejoin-figure__tax-win:focus {
+  outline: none;
+}
 
 .second-pillar-rejoin-page .rejoin-sum__row {
   display: -webkit-box;

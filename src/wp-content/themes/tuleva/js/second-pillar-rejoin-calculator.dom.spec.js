@@ -67,6 +67,7 @@ function renderCalculator() {
             ${FIGURE_SHAPES.map(shapeInTemplate).join('')}
             ${FIGURE_AMOUNTS.map(amountInTemplate).join('')}
         </svg>
+        ${fromTemplate(/<span id="rejoinFigureSalary">[^<]*<\/span>/)}
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -183,8 +184,14 @@ describe('II pillar rejoin calculator on the page', () => {
         ]);
     });
 
+    it('names the gross salary under the figure, following the calculator', () => {
+        typeSalary('3000');
+
+        expect(shown('rejoinFigureSalary')).toBe('3000 €');
+    });
+
     it('paints the figure for the same example before the script runs', () => {
-        FIGURE_AMOUNTS.forEach((id) => {
+        [...FIGURE_AMOUNTS, 'rejoinFigureSalary'].forEach((id) => {
             expect(paintedInTemplate(id)).toBe(shown(id));
         });
         FIGURE_SHAPES.forEach((id) => {

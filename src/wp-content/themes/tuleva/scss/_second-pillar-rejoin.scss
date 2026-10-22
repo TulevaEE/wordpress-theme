@@ -41,6 +41,10 @@
     &:hover rect {
         fill: $green-light;
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 //
 // The calculator reads as a written sum: the two parts, a line, and the

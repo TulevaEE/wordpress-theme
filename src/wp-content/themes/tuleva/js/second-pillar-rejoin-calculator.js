@@ -127,7 +127,8 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         );
     }
 
-    function showFigure(result) {
+    function showFigure(grossSalary, result) {
+        inFigure('Salary').textContent = eur(grossSalary);
         inFigure('Contribution').textContent = eur(result.netSalaryCost + result.incomeTaxSaved);
         inFigure('IncomeTax').textContent = eur(result.incomeTaxSaved);
         inFigure('TakeHome').textContent = eur(result.netSalaryCost);
@@ -141,14 +142,15 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     function update() {
-        var result = computeRejoinContributions(read(salary), PAYMENT_RATE_PERCENT);
+        var grossSalary = read(salary);
+        var result = computeRejoinContributions(grossSalary, PAYMENT_RATE_PERCENT);
         netSalary.textContent = eur(result.netSalaryCost);
         taxWin.textContent = eur(result.taxWin);
         total.textContent = eur(result.intoPillar);
         tenYears.textContent = eur(result.tenYearTotal);
         showTaxWinBreakdown(describeTaxWin(result));
         if (figure) {
-            showFigure(result);
+            showFigure(grossSalary, result);
         }
     }
 
