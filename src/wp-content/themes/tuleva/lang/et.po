@@ -2737,7 +2737,7 @@ msgstr "<b>See&nbsp;on&nbsp;sinu&nbsp;raha.</b> Suuna osa oma maksudest enda II&
 
 #: templates/second-pillar-rejoin-content.php:30
 msgid "From your net salary"
-msgstr "Sinu panus netopalgast"
+msgstr "Sinu netopalgast"
 
 #: templates/second-pillar-rejoin-content.php:36
 msgid "How the tax win is made up"
@@ -2765,8 +2765,8 @@ msgid "Start saving again"
 msgstr "Hakkan uuesti koguma"
 
 #: templates/second-pillar-rejoin-content.php:57
-msgid "The calculation assumes you contribute 6% of your gross salary. Social tax paid into the II pillar also has a small effect on your I pillar."
-msgstr "Arvutuses on sinu panus 6% brutopalgast. II sambasse makstud sotsiaalmaks mõjutab vähesel määral ka I sammast."
+msgid "The calculation assumes the highest possible contribution. Social tax paid into the II pillar also has a small effect on your I pillar."
+msgstr "Arvutus eeldab suurimat võimalikku panust. II sambasse makstud sotsiaalmaks mõjutab vähesel määral ka I sammast."
 
 #: templates/second-pillar-rejoin-content.php:71
 msgid "Why start saving again?"

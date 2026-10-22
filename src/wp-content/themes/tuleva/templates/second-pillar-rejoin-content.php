@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-secondary text-center mt-3 mb-0"><?php _e('The calculation assumes you contribute 6% of your gross salary. Social tax paid into the II pillar also has a small effect on your I pillar.', TEXT_DOMAIN); ?></p>
+                    <p class="text-secondary text-center mt-3 mb-0"><?php _e('The calculation assumes the highest possible contribution. Social tax paid into the II pillar also has a small effect on your I pillar.', TEXT_DOMAIN); ?></p>
                 </div>
 
             </div>

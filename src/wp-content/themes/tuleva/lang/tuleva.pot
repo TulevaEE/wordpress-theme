@@ -2595,7 +2595,7 @@ msgid "Start saving again"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:57
-msgid "The calculation assumes you contribute 6% of your gross salary. Social tax paid into the II pillar also has a small effect on your I pillar."
+msgid "The calculation assumes the highest possible contribution. Social tax paid into the II pillar also has a small effect on your I pillar."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:71

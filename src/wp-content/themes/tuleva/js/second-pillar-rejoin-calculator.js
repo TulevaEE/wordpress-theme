@@ -74,14 +74,14 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     }
 
     function breakdownRow(label, amount) {
-        return '<span>' + label + ':</span><span class="text-end">' + eur(amount) + '</span>';
+        return '<span>' + label + '</span><span class="text-end">' + eur(amount) + '</span>';
     }
 
     function describeTaxWin(result) {
         return (
             '<div class="rejoin-tax-win-breakdown">' +
-            breakdownRow(taxWinInfo.dataset.incomeTaxLabel, result.incomeTaxSaved) +
             breakdownRow(taxWinInfo.dataset.socialTaxLabel, result.state) +
+            breakdownRow(taxWinInfo.dataset.incomeTaxLabel, result.incomeTaxSaved) +
             '</div>'
         );
     }

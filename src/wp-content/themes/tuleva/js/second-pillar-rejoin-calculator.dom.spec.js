@@ -69,7 +69,7 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(shown('resTenYears')).toBe('36 000 €');
     });
 
-    it('breaks the tax win down into what comes from income tax and from social tax, one per row', () => {
+    it('breaks the tax win down into what comes from social tax and from income tax, larger part first', () => {
         const breakdown = document.createElement('div');
         breakdown.innerHTML = document.getElementById('taxWinInfo').getAttribute('title');
 
@@ -77,7 +77,7 @@ describe('II pillar rejoin calculator on the page', () => {
             [...breakdown.querySelectorAll('.rejoin-tax-win-breakdown > span')].map((cell) =>
                 cell.textContent.replace(/\s/g, ' ')
             )
-        ).toEqual(['Tulumaksust:', '26 €', 'Sotsiaalmaksust:', '80 €']);
+        ).toEqual(['Sotsiaalmaksust', '80 €', 'Tulumaksust', '26 €']);
     });
 
     it('updates an initialized tooltip without putting markup back into the native title', () => {
