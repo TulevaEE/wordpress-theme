@@ -68,24 +68,24 @@ final class SecondPillarRejoinTest extends TestCase
 
     public static function closingLeadProvider(): array
     {
-        $eligible = 'If you took money out of your II pillar in 2021, you can apply now.';
+        $eligible = '<span class="rejoin-cta-line">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br>';
 
         return [
             'last minute of 31 March applies by March for September' => [
                 '2026-03-31 23:59:00',
-                $eligible . ' Do it by <b>31&nbsp;March</b> and your II pillar starts growing again as early as September.',
+                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;March</b> and you\'ll be saving in your II&nbsp;pillar again from September.</span>',
             ],
             '1 April applies by July for January' => [
                 '2026-04-01 00:00:00',
-                $eligible . ' Do it by <b>31&nbsp;July</b> and your II pillar starts growing again as early as January.',
+                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;July</b> and you\'ll be saving in your II&nbsp;pillar again from January.</span>',
             ],
             '1 August applies by November for May' => [
                 '2026-08-01 00:00:00',
-                $eligible . ' Do it by <b>30&nbsp;November</b> and your II pillar starts growing again as early as May.',
+                $eligible . '<span class="rejoin-cta-line">Do it by <b>30&nbsp;November</b> and you\'ll be saving in your II&nbsp;pillar again from May.</span>',
             ],
             '1 December applies by March for September' => [
                 '2026-12-01 00:00:00',
-                $eligible . ' Do it by <b>31&nbsp;March</b> and your II pillar starts growing again as early as September.',
+                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;March</b> and you\'ll be saving in your II&nbsp;pillar again from September.</span>',
             ],
         ];
     }

@@ -87,3 +87,108 @@
         color: $text-secondary;
     }
 }
+
+// The rest of the page reuses the savings fund landing page's components; these
+// rules only cover what differs on the rejoin page.
+.second-pillar-rejoin-page {
+
+    .who-card p {
+        font-size: 1rem;
+    }
+
+    // How to start: three steps in a row on a line, not cards, so they don't
+    // read as a second set of the "why" cards above
+    .rejoin-steps {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 56rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 1.125rem;
+            left: 16.66%;
+            right: 16.66%;
+            height: 1px;
+            background: #c9dff5;
+        }
+
+        li {
+            position: relative;
+        }
+
+        h3 {
+            margin: 1rem 0 .4rem;
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.15rem;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            max-width: 17rem;
+            margin: 0 auto;
+            line-height: 1.55;
+        }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .rejoin-steps__number {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid #c9dff5;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 0 6px #fff;
+        color: $blue;
+        font-weight: $font-weight-medium;
+    }
+
+    // The closing call to action in the hero's daylight, in blue only
+    #alusta .emphasis-box {
+        background:
+            radial-gradient(60% 100% at 100% 0, rgba($bright-blue, .24), transparent 75%),
+            radial-gradient(45% 80% at 0 100%, rgba($bright-blue, .12), transparent 75%),
+            #eef8ff;
+
+        .lead {
+            max-width: none;
+            color: $navy-blue;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+
+            .rejoin-cta-line {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .ts-trust {
+            flex-wrap: nowrap;
+        }
+
+        .ts-trust li {
+            white-space: nowrap;
+        }
+    }
+}
