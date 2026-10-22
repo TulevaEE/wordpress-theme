@@ -3,15 +3,14 @@
 require_once __DIR__ . '/deadline-calculations.php';
 
 /**
- * Returns the rejoin page's hero lead for the deadline still open at $now: an application
- * filed by 31 March starts contributions in September, by 31 July in January and by
- * 30 November in May.
+ * Returns the rejoin page's hero lead for the deadline still open at $now: 31 March,
+ * 31 July or 30 November. The month contributions start is named in the closing lead.
  */
 function get_second_pillar_rejoin_lead(DateTimeInterface $now) {
     return match ((int) get_next_second_pillar_deadline($now)->format('n')) {
-        3 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;March</b> and saving starts in&nbsp;September.', TEXT_DOMAIN),
-        7 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;July</b> and saving starts in&nbsp;January.', TEXT_DOMAIN),
-        11 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May.', TEXT_DOMAIN),
+        3 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;March</b>.', TEXT_DOMAIN),
+        7 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;July</b>.', TEXT_DOMAIN),
+        11 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>30&nbsp;November</b>.', TEXT_DOMAIN),
     };
 }
 
