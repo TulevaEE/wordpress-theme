@@ -22,7 +22,7 @@ final class SecondPillarRejoinTest extends TestCase
 {
     #[Test]
     #[DataProvider('leadProvider')]
-    public function leadNamesTheDeadlineStillOpenInTallinnAndTheMonthSavingStarts(
+    public function leadNamesTheDeadlineStillOpenInTallinn(
         string $now,
         string $expectedLead
     ): void {
@@ -33,24 +33,24 @@ final class SecondPillarRejoinTest extends TestCase
 
     public static function leadProvider(): array
     {
-        $money = '<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account.';
+        $money = '<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again.';
 
         return [
             'last minute of 31 March applies by March for September' => [
                 '2026-03-31 23:59:00',
-                $money . ' Apply by <b>31&nbsp;March</b> and saving starts in&nbsp;September.',
+                $money . ' Apply by <b>31&nbsp;March</b>.',
             ],
             '1 April applies by July for January' => [
                 '2026-04-01 00:00:00',
-                $money . ' Apply by <b>31&nbsp;July</b> and saving starts in&nbsp;January.',
+                $money . ' Apply by <b>31&nbsp;July</b>.',
             ],
             '1 August applies by November for May' => [
                 '2026-08-01 00:00:00',
-                $money . ' Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May.',
+                $money . ' Apply by <b>30&nbsp;November</b>.',
             ],
             '1 December applies by March for September' => [
                 '2026-12-01 00:00:00',
-                $money . ' Apply by <b>31&nbsp;March</b> and saving starts in&nbsp;September.',
+                $money . ' Apply by <b>31&nbsp;March</b>.',
             ],
         ];
     }
