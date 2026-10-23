@@ -93,7 +93,7 @@
                                     </g>
                                 </g>
                                 <rect id="rejoinFigureTakeHomeBar" x="110" y="338.4" width="220" height="131.6" rx="6" fill="#C5DDF4"/>
-                                <rect x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
+                                <rect id="rejoinFigureTakeHomeBarEdge" x="110" y="458" width="220" height="12" fill="#C5DDF4"/>
                                 <g id="rejoinFigureTaxWinInfo" class="rejoin-figure__tax-win" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="">
                                     <rect id="rejoinFigureTaxWinBar" x="470" y="190" width="220" height="148.4" rx="6" fill="#008300"/>
                                     <rect id="rejoinFigureTaxWinBarEdge" x="470" y="326.4" width="220" height="12" fill="#008300"/>
@@ -107,8 +107,10 @@
                                 <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
                                     <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
-                                    <text x="580" y="252" font-size="22" fill="#FFFFFF" pointer-events="none"><?php esc_html_e('Tax win', TEXT_DOMAIN); ?></text>
-                                    <text x="580" y="284" font-size="26" fill="#FFFFFF" pointer-events="none"><tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan></text>
+                                    <g id="rejoinFigureTaxWinLabel" transform="translate(0 264.2)" fill="#FFFFFF" pointer-events="none">
+                                        <text x="580" y="-12" font-size="22"><?php esc_html_e('Tax win', TEXT_DOMAIN); ?></text>
+                                        <text x="580" y="20" font-size="26"><tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan></text>
+                                    </g>
                                     <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
                                     <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
                                     <text x="220" y="526" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>

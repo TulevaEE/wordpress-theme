@@ -111,15 +111,39 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         return String(Math.round(value * 10) / 10);
     }
 
+    function barHeight(amount, intoPillar) {
+        if (intoPillar === 0) {
+            return 0;
+        }
+        return ((FIGURE_BASELINE_Y - FIGURE_PILLAR_TOP_Y) * amount) / intoPillar;
+    }
+
+    function placeBar(bar, bottom, height) {
+        bar.setAttribute('y', oneDecimal(bottom - height));
+        bar.setAttribute('height', oneDecimal(height));
+    }
+
+    function placeBarWithSquareBottom(bar, edge, bottom, height) {
+        placeBar(bar, bottom, height);
+        placeBar(edge, bottom, Math.min(FIGURE_BAR_CORNER_EDGE, height));
+    }
+
+    function showInsideBar(label, amount) {
+        label.setAttribute('visibility', amount > 0 ? 'visible' : 'hidden');
+    }
+
     function stretchFigureBars(result) {
-        var fullHeight = FIGURE_BASELINE_Y - FIGURE_PILLAR_TOP_Y;
-        var takeHomeTop = FIGURE_BASELINE_Y - (fullHeight * result.netSalaryCost) / result.intoPillar;
-        [inFigure('TakeHomeBar'), inFigure('PillarBaseBar')].forEach(function (bar) {
-            bar.setAttribute('y', oneDecimal(takeHomeTop));
-            bar.setAttribute('height', oneDecimal(FIGURE_BASELINE_Y - takeHomeTop));
-        });
-        inFigure('TaxWinBar').setAttribute('height', oneDecimal(takeHomeTop - FIGURE_PILLAR_TOP_Y));
-        inFigure('TaxWinBarEdge').setAttribute('y', oneDecimal(takeHomeTop - FIGURE_BAR_CORNER_EDGE));
+        var takeHomeHeight = barHeight(result.netSalaryCost, result.intoPillar);
+        var takeHomeTop = FIGURE_BASELINE_Y - takeHomeHeight;
+        var taxWinHeight = barHeight(result.taxWin, result.intoPillar);
+        var taxWinLabel = inFigure('TaxWinLabel');
+        placeBarWithSquareBottom(inFigure('TakeHomeBar'), inFigure('TakeHomeBarEdge'), FIGURE_BASELINE_Y, takeHomeHeight);
+        placeBar(inFigure('PillarBaseBar'), FIGURE_BASELINE_Y, takeHomeHeight);
+        placeBarWithSquareBottom(inFigure('TaxWinBar'), inFigure('TaxWinBarEdge'), takeHomeTop, taxWinHeight);
+        taxWinLabel.setAttribute('transform', 'translate(0 ' + oneDecimal(takeHomeTop - taxWinHeight / 2) + ')');
+        showInsideBar(inFigure('TakeHome'), result.netSalaryCost);
+        showInsideBar(inFigure('PillarBase'), result.netSalaryCost);
+        showInsideBar(taxWinLabel, result.taxWin);
         inFigure('TakeHomeArrow').setAttribute('d', 'M340 51 C240 51 220 150 220 ' + oneDecimal(takeHomeTop - 16));
         inFigure('TakeHomeArrowHead').setAttribute(
             'd',
@@ -136,9 +160,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         inFigure('TaxWin').textContent = eur(result.taxWin);
         inFigure('TakeHomeTotal').textContent = eur(result.netSalaryCost);
         inFigure('PillarTotal').textContent = eur(result.intoPillar);
-        if (result.intoPillar > 0) {
-            stretchFigureBars(result);
-        }
+        stretchFigureBars(result);
     }
 
     function update() {

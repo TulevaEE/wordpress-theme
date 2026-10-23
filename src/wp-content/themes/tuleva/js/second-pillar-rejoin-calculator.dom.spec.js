@@ -35,6 +35,7 @@ const FIGURE_SHAPES = [
     'rejoinFigureTakeHomeArrow',
     'rejoinFigureTakeHomeArrowHead',
     'rejoinFigureTakeHomeBar',
+    'rejoinFigureTakeHomeBarEdge',
     'rejoinFigureTaxWinBar',
     'rejoinFigureTaxWinBarEdge',
     'rejoinFigurePillarBaseBar'
@@ -64,12 +65,35 @@ function renderCalculator() {
               data-social-tax-label="Sotsiaalmaksust"></span>
         <svg id="rejoinFigure">
             ${fromTemplate(/<g id="rejoinFigureTaxWinInfo"[^>]*>/)}</g>
+            ${fromTemplate(/<g id="rejoinFigureTaxWinLabel"[^>]*>/)}</g>
             ${FIGURE_SHAPES.map(shapeInTemplate).join('')}
             ${FIGURE_AMOUNTS.map(amountInTemplate).join('')}
         </svg>
         ${fromTemplate(/<span id="rejoinFigureSalary">[^<]*<\/span>/)}
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
+}
+
+const FIGURE_BARS = [
+    'rejoinFigureTakeHomeBar',
+    'rejoinFigureTakeHomeBarEdge',
+    'rejoinFigurePillarBaseBar',
+    'rejoinFigureTaxWinBar',
+    'rejoinFigureTaxWinBarEdge'
+];
+
+const LABELS_INSIDE_BARS = ['rejoinFigureTakeHome', 'rejoinFigurePillarBase', 'rejoinFigureTaxWinLabel'];
+
+function barHeights() {
+    return FIGURE_BARS.map((id) => document.getElementById(id).getAttribute('height'));
+}
+
+function taxWinLabelPosition(svg) {
+    return svg.querySelector('#rejoinFigureTaxWinLabel').getAttribute('transform');
+}
+
+function labelsInsideBarsVisibility() {
+    return LABELS_INSIDE_BARS.map((id) => document.getElementById(id).getAttribute('visibility'));
 }
 
 function shown(id) {
@@ -199,6 +223,9 @@ describe('II pillar rejoin calculator on the page', () => {
             painted.innerHTML = shapeInTemplate(id);
             expect(geometry(painted.firstChild)).toEqual(geometry(document.getElementById(id)));
         });
+        const painted = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        painted.innerHTML = fromTemplate(/<g id="rejoinFigureTaxWinLabel"[^>]*>/) + '</g>';
+        expect(taxWinLabelPosition(painted)).toBe(taxWinLabelPosition(document));
     });
 
     it('keeps the take-home bar as tall as the base of the II pillar column, with the tax win filling the rest', () => {
@@ -211,10 +238,33 @@ describe('II pillar rejoin calculator on the page', () => {
         ).toEqual(['168', '168', '112']);
     });
 
-    it('leaves the figure bars as they were for a zero salary', () => {
+    it('empties the figure for a zero salary, leaving no bar corners or amounts behind where the bars were', () => {
         typeSalary('0');
 
-        expect(document.getElementById('rejoinFigureTakeHomeBar').getAttribute('height')).toBe('131.6');
+        expect(barHeights()).toEqual(['0', '0', '0', '0', '0']);
+        expect(labelsInsideBarsVisibility()).toEqual(['hidden', 'hidden', 'hidden']);
+    });
+
+    it('leaves the green bar and its label out while the tax win rounds to zero, your part filling the II pillar column', () => {
+        typeSalary('10');
+
+        expect(barHeights()).toEqual(['280', '12', '280', '0', '0']);
+        expect(labelsInsideBarsVisibility()).toEqual(['visible', 'visible', 'hidden']);
+    });
+
+    it('keeps the tax win label in the middle of the green bar, also when rounding leaves the bar a third of the column', () => {
+        typeSalary('30');
+
+        expect(barHeights().slice(3)).toEqual(['93.3', '12']);
+        expect(taxWinLabelPosition(document)).toBe('translate(0 236.7)');
+    });
+
+    it('brings the bars and the amounts in them back once a salary follows a zero', () => {
+        typeSalary('0');
+        typeSalary('2000');
+
+        expect(barHeights()).toEqual(['131.6', '12', '131.6', '148.4', '12']);
+        expect(labelsInsideBarsVisibility()).toEqual(['visible', 'visible', 'visible']);
     });
 
     it('reads an emptied salary field as zero', () => {
