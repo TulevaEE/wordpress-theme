@@ -1,4 +1,5 @@
 <?php require_once get_template_directory() . '/helpers/second-pillar-rejoin.php'; ?>
+<?php $investor_count_over = tuleva_investor_count_over(ICL_LANGUAGE_CODE); ?>
 <main id="main" class="page-container landing-page second-pillar-rejoin-page">
 
     <section class="hero bg-hero-rejoin section-spacing">
@@ -163,8 +164,8 @@
                         </li>
                         <li>
                             <span class="rejoin-steps__number" aria-hidden="true">2</span>
-                            <h3><?php _e('Choose your contribution rate and fund', TEXT_DOMAIN); ?></h3>
-                            <p><?php _e('Choose 6% for the biggest tax win.', TEXT_DOMAIN); ?></p>
+                            <h3><?php _ex('Review', 'Step in the II pillar rejoin instructions', TEXT_DOMAIN); ?></h3>
+                            <p><?php _e('Your contribution size and fund choice.', TEXT_DOMAIN); ?></p>
                         </li>
                         <li>
                             <span class="rejoin-steps__number" aria-hidden="true">3</span>
@@ -186,7 +187,9 @@
                         <p class="lead mx-auto"><?php echo get_second_pillar_rejoin_closing_lead(get_current_time_tallinn()); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Start saving again', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Over <strong>86,000</strong> people save with Tuleva', TEXT_DOMAIN); ?></span></li>
+                            <?php if ($investor_count_over) { ?>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Over <strong>%s</strong> people save with Tuleva', TEXT_DOMAIN), $investor_count_over); ?></span></li>
+                            <?php } ?>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Tuleva <strong>belongs to its savers</strong>', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
@@ -217,7 +220,7 @@
                         <div class="qa__question-wrapper" id="kas-pean-olema-tuleva-koguja">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('Do I need to be a Tuleva saver?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
-                                <p><?php _e('No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us. There are already over 86,000 of us Tuleva savers.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us.', TEXT_DOMAIN); ?><?php if ($investor_count_over) { echo ' '; printf(__('There are already over %s of us Tuleva savers.', TEXT_DOMAIN), $investor_count_over); } ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="milline-fond-valida">

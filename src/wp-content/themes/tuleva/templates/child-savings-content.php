@@ -1,3 +1,4 @@
+<?php $investor_count_over = tuleva_investor_count_over(ICL_LANGUAGE_CODE); ?>
 <main id="main" class="page-container landing-page child-savings-page">
     <script>
         var LANGCODE = '<?php echo apply_filters( "wpml_current_language", NULL );  ?>'; // eslint-disable-line
@@ -135,7 +136,9 @@
                 <p class="lead mx-auto"><?php _e('Open an account in just a couple of minutes. The earlier you start, the longer your child\'s assets have to grow.', TEXT_DOMAIN); ?></p>
                 <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding/child'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open an account for my child', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
-                            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Over <strong>85,000</strong> people save with Tuleva', TEXT_DOMAIN); ?></span></li>
+                            <?php if ($investor_count_over) { ?>
+                                <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Over <strong>%s</strong> people save with Tuleva', TEXT_DOMAIN), $investor_count_over); ?></span></li>
+                            <?php } ?>
                             <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
