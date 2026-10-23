@@ -535,6 +535,28 @@ function third_pillar_calculator_shortcode() {
 }
 add_shortcode('third_pillar_calculator', 'third_pillar_calculator_shortcode');
 
+function investor_count_over_shortcode($atts, $content = '') {
+    return tuleva_investor_count_over(ICL_LANGUAGE_CODE) ?? $content;
+}
+add_shortcode('investor_count_over', 'investor_count_over_shortcode');
+
+function member_count_over_shortcode($atts, $content = '') {
+    return tuleva_member_count_over(ICL_LANGUAGE_CODE) ?? $content;
+}
+add_shortcode('member_count_over', 'member_count_over_shortcode');
+
+function fund_saver_count_over_shortcode($atts, $content = '') {
+    $atts = shortcode_atts(['isin' => ''], $atts);
+    return tuleva_fund_saver_count_over($atts['isin'], ICL_LANGUAGE_CODE) ?? $content;
+}
+add_shortcode('fund_saver_count_over', 'fund_saver_count_over_shortcode');
+
+function fund_volume_millions_over_shortcode($atts, $content = '') {
+    $atts = shortcode_atts(['isin' => ''], $atts);
+    return tuleva_fund_volume_millions_over($atts['isin'], ICL_LANGUAGE_CODE) ?? $content;
+}
+add_shortcode('fund_volume_millions_over', 'fund_volume_millions_over_shortcode');
+
 function term_link_domain_fix($term_link) {
     $site_url = get_site_url();
     $parsed_site_url = parse_url($site_url);
