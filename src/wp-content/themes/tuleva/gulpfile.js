@@ -36,6 +36,7 @@ const updateEnqueueVersion = async function (name) {
     const childSavingsEnqueueRegex = /\$CHILD_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
     const companySavingsEnqueueRegex = /\$COMPANY_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
     const secondPillarRejoinEnqueueRegex = /\$SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION.+\n/;
+    const readerViewEnqueueRegex = /\$READER_VIEW_JS_ENQUEUE_VERSION.+\n/;
 
     const getDateString = () => new Date().toISOString().split("T")[0];
 
@@ -83,6 +84,12 @@ const updateEnqueueVersion = async function (name) {
             secondPillarRejoinEnqueueRegex,
             `$SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/second-pillar-rejoin-calculator.js"
+            )}";\n`
+        )
+        .replace(
+            readerViewEnqueueRegex,
+            `$READER_VIEW_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/reader-view.js"
             )}";\n`
         );
 
