@@ -66,15 +66,12 @@
         </div>
     </section>
 
-    <!-- The sections below use the savings fund landing page's components (who-cards, emphasis box) -->
-    <div class="savings-fund-landing-page">
-
-    <section class="section-spacing bg-gray-1" id="miks">
+    <section class="section-spacing" id="valik">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
-                    <h2 class="mb-5"><?php _e('Why start saving again?', TEXT_DOMAIN); ?></h2>
-                    <div class="row justify-content-center mb-5">
+                    <h2 class="mb-5"><?php _e('Same money, two choices', TEXT_DOMAIN); ?></h2>
+                    <div class="row justify-content-center">
                         <div class="col-md-10 col-lg-8">
                             <svg id="rejoinFigure" class="w-100 h-auto" viewBox="70 170 660 430" aria-hidden="true">
                                 <g id="rejoinFigureSource" display="none">
@@ -123,6 +120,19 @@
                             <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %s', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>'); ?></p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The sections below use the savings fund landing page's components (who-cards, emphasis box) -->
+    <div class="savings-fund-landing-page">
+
+    <section class="section-spacing bg-gray-1" id="miks">
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-lg-11 col-xl-10 text-center">
+                    <h2 class="mb-5"><?php _e('Why start saving again?', TEXT_DOMAIN); ?></h2>
                     <div class="who">
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
