@@ -1,10 +1,8 @@
 const gulp = require("gulp");
-const sourcemaps = require("gulp-sourcemaps");
 const gulpif = require("gulp-if");
 const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
-const watch = require("gulp-watch");
 const log = require("fancy-log");
 const exit = require("gulp-exit");
 const crypto = require("crypto");
@@ -37,6 +35,8 @@ const updateEnqueueVersion = async function (name) {
     const calculatorEnqueueRegex = /\$CALCULATOR_JS_ENQUEUE_VERSION.+\n/;
     const childSavingsEnqueueRegex = /\$CHILD_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
     const companySavingsEnqueueRegex = /\$COMPANY_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
+    const secondPillarRejoinEnqueueRegex = /\$SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION.+\n/;
+    const readerViewEnqueueRegex = /\$READER_VIEW_JS_ENQUEUE_VERSION.+\n/;
 
     const getDateString = () => new Date().toISOString().split("T")[0];
 
@@ -79,6 +79,18 @@ const updateEnqueueVersion = async function (name) {
             `$COMPANY_SAVINGS_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/company-savings-calculator.js"
             )}";\n`
+        )
+        .replace(
+            secondPillarRejoinEnqueueRegex,
+            `$SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/second-pillar-rejoin-calculator.js"
+            )}";\n`
+        )
+        .replace(
+            readerViewEnqueueRegex,
+            `$READER_VIEW_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/reader-view.js"
+            )}";\n`
         );
 
     await fs.writeFile(enqueueVersionFile, newEnqueueFileContents, {
@@ -88,8 +100,7 @@ const updateEnqueueVersion = async function (name) {
 
 const buildCss = function (isCompressed) {
     return gulp
-        .src(sassSrc)
-        .pipe(gulpif(!isCompressed, sourcemaps.init()))
+        .src(sassSrc, { sourcemaps: !isCompressed })
         .pipe(
             sass({ outputStyle: isCompressed ? "compressed" : "expanded" })
                 .on("end", logFinishedTask("SASS"))
@@ -115,16 +126,7 @@ const buildCss = function (isCompressed) {
                 .on("end", logFinishedTask("Autoprefixer"))
                 .on("error", onError)
         )
-        .pipe(
-            gulpif(
-                !isCompressed,
-                sourcemaps
-                    .write(".")
-                    .on("end", logFinishedTask("Sourcemaps"))
-                    .on("error", onError)
-            )
-        )
-        .pipe(gulp.dest(cssDir))
+        .pipe(gulp.dest(cssDir, { sourcemaps: isCompressed ? false : "." }))
         .pipe(gulpif(isCompressed, exit()));
 };
 
@@ -133,9 +135,10 @@ gulp.task("production", function () {
 });
 
 gulp.task("default", function () {
-    return watch(sassSrc, function () {
-        return buildCss(false);
-    })
+    return gulp
+        .watch(sassSrc, function buildDevelopmentCss() {
+            return buildCss(false);
+        })
         .on("change", function (path) {
             log("Changed: " + path);
             updateEnqueueVersion();

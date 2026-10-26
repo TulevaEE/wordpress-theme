@@ -55,6 +55,23 @@ function get_second_pillar_deadlines($year) {
 }
 
 /**
+ * Returns the 2nd pillar deadline an application filed at $now still makes: the first
+ * deadline whose day has not yet ended in Tallinn.
+ */
+function get_next_second_pillar_deadline(DateTimeInterface $now) {
+    $tallinn_now = DateTimeImmutable::createFromInterface($now)->setTimezone(get_tallinn_timezone());
+    $today = $tallinn_now->format('Y-m-d');
+    $year = (int) $tallinn_now->format('Y');
+
+    $upcoming = array_filter(
+        array_merge(get_second_pillar_deadlines($year), get_second_pillar_deadlines($year + 1)),
+        fn($deadline) => $deadline->format('Y-m-d') >= $today
+    );
+
+    return reset($upcoming);
+}
+
+/**
  * Returns active 2nd pillar countdown info if within 14 working days of a deadline.
  * Returns ['end_ms' => timestamp, 'deadline_name' => 'Month Day'] or null if no active countdown.
  */

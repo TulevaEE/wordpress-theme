@@ -115,6 +115,13 @@ class ThemeEnqueue
                 'ver' => $JS_ENQUEUE_VERSION,
                 'js_in_header' => false,
                 'enqueue' => true
+            ],
+            [
+                'handle' => 'reader-view',
+                'src' => $js_path . 'reader-view.js',
+                'ver' => $READER_VIEW_JS_ENQUEUE_VERSION,
+                'js_in_header' => false,
+                'enqueue' => true
             ]
         ];
         array_push(

@@ -124,6 +124,52 @@ final class DeadlineCalculationsTest extends TestCase
     }
 
     #[Test]
+    #[DataProvider('nextSecondPillarDeadlineProvider')]
+    public function nextSecondPillarDeadlineIsTheFirstFilingDayNotYetOverInTallinn(
+        string $now,
+        string $expectedDeadline
+    ): void {
+        $deadline = get_next_second_pillar_deadline(new DateTimeImmutable($now, get_tallinn_timezone()));
+
+        $this->assertSame($expectedDeadline, $deadline->format('Y-m-d'));
+    }
+
+    public static function nextSecondPillarDeadlineProvider(): array
+    {
+        return [
+            'start of the year files by March' => ['2026-01-01 00:00:00', '2026-03-31'],
+            'last minute of 31 March still files by March' => ['2026-03-31 23:59:00', '2026-03-31'],
+            'last microsecond of 31 March still files by March' => ['2026-03-31 23:59:59.999999', '2026-03-31'],
+            '1 April files by July' => ['2026-04-01 00:00:00', '2026-07-31'],
+            'last minute of 31 July still files by July' => ['2026-07-31 23:59:00', '2026-07-31'],
+            '1 August files by November' => ['2026-08-01 00:00:00', '2026-11-30'],
+            'last minute of 30 November still files by November' => ['2026-11-30 23:59:00', '2026-11-30'],
+            '1 December files by March next year' => ['2026-12-01 00:00:00', '2027-03-31'],
+            'New Year\'s Eve files by March next year' => ['2026-12-31 23:59:59', '2027-03-31'],
+        ];
+    }
+
+    #[Test]
+    #[DataProvider('nextSecondPillarDeadlineFromUtcProvider')]
+    public function nextSecondPillarDeadlineReadsTheFilingDayInTallinnWhateverTheClockZone(
+        string $nowUtc,
+        string $expectedDeadline
+    ): void {
+        $deadline = get_next_second_pillar_deadline(new DateTimeImmutable($nowUtc, new DateTimeZone('UTC')));
+
+        $this->assertSame($expectedDeadline, $deadline->format('Y-m-d'));
+    }
+
+    public static function nextSecondPillarDeadlineFromUtcProvider(): array
+    {
+        return [
+            '31 March 21:00 UTC is already 1 April in Tallinn summer time' => ['2026-03-31 21:00:00', '2026-07-31'],
+            '31 March 20:59 UTC is still 31 March in Tallinn' => ['2026-03-31 20:59:00', '2026-03-31'],
+            '30 November 22:00 UTC is already 1 December in Tallinn winter time' => ['2026-11-30 22:00:00', '2027-03-31'],
+        ];
+    }
+
+    #[Test]
     public function isWithinDaysBeforeDeadlineReturnsTrueWhenWithinRange(): void
     {
         $deadline = get_current_time_tallinn();

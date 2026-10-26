@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-21T13:41:54+00:00\n"
+"POT-Creation-Date: 2026-10-25T08:22:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Tuleva"
 msgstr ""
 
-#: functions.php:29
+#: functions.php:30
 #: helpers/acf/init.php:20
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: helpers/extras.php:503
+#: helpers/extras.php:430
 #: templates/components/fund-bonds-details.php:147
 #: templates/components/fund-savings-details.php:205
 #: templates/components/fund-stocks-details.php:147
@@ -46,22 +46,22 @@ msgstr ""
 msgid "Investment reports"
 msgstr ""
 
-#: helpers/extras.php:557
-#: helpers/extras.php:568
+#: helpers/extras.php:484
+#: helpers/extras.php:495
 #: templates/components/countdown-timer.php:22
 #: templates/components/counter-hero.php:27
 msgid "days"
 msgstr ""
 
-#: helpers/extras.php:669
+#: helpers/extras.php:618
 msgid "Pagination"
 msgstr ""
 
-#: helpers/extras.php:673
+#: helpers/extras.php:622
 msgid "Newer"
 msgstr ""
 
-#: helpers/extras.php:716
+#: helpers/extras.php:665
 msgid "Older"
 msgstr ""
 
@@ -116,6 +116,30 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:90
 #: templates/components/fund-third-details.php:91
 msgid "Comparison index"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:11
+msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;March</b>."
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:12
+msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;July</b>."
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:13
+msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>30&nbsp;November</b>."
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:23
+msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:24
+msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:25
+msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
 msgstr ""
 
 #: helpers/setup.php:25
@@ -206,521 +230,528 @@ msgstr ""
 msgid "All articles"
 msgstr ""
 
-#: templates/child-savings-content.php:10
+#: templates/child-savings-content.php:11
 msgid "Tuleva Additional Investment Fund for your child"
 msgstr ""
 
-#: templates/child-savings-content.php:11
+#: templates/child-savings-content.php:12
 msgid "Put your child's money to work early"
 msgstr ""
 
-#: templates/child-savings-content.php:12
+#: templates/child-savings-content.php:13
 msgid "The assets belong to your child and grow in Tuleva's low-fee index fund. Start with as little as one euro."
 msgstr ""
 
-#: templates/child-savings-content.php:19
+#: templates/child-savings-content.php:20
 msgid "Child's age"
 msgstr ""
 
-#: templates/child-savings-content.php:26
+#: templates/child-savings-content.php:27
 msgid "Contribution"
 msgstr ""
 
-#: templates/child-savings-content.php:30
+#: templates/child-savings-content.php:31
 #: templates/components/front-hero/calculator.php:31
 #: templates/components/third-pillar-calculator.php:109
 msgid "&euro;/month"
 msgstr ""
 
-#: templates/child-savings-content.php:36
+#: templates/child-savings-content.php:37
 #: templates/company-savings-content.php:37
 msgid "Expected yearly return"
 msgstr ""
 
-#: templates/child-savings-content.php:36
-#: templates/child-savings-content.php:45
+#: templates/child-savings-content.php:37
+#: templates/child-savings-content.php:46
 #: templates/company-savings-content.php:37
 msgid "More information"
 msgstr ""
 
-#: templates/child-savings-content.php:36
+#: templates/child-savings-content.php:37
 #: templates/company-savings-content.php:37
 msgid "The final amount depends on the returns that actually materialize, and neither we nor anyone else can guarantee a return."
 msgstr ""
 
-#: templates/child-savings-content.php:40
+#: templates/child-savings-content.php:41
 #: templates/company-savings-content.php:41
 msgid "historic return of stocks 7%"
 msgstr ""
 
-#: templates/child-savings-content.php:45
-#: templates/second-pillar-rejoin-content.php:35
+#: templates/child-savings-content.php:46
+#: templates/second-pillar-rejoin-content.php:37
+#: templates/second-pillar-rejoin-content.php:109
 msgid "Tax win"
 msgstr ""
 
-#: templates/child-savings-content.php:45
+#: templates/child-savings-content.php:46
 msgid "The calculation assumes the child sells their fund units gradually over 4 years, between ages 18 and 21, not all at once, and uses their yearly tax-free income each year. Today this is 8,400 € per year if the child has no other income. The amount is set by law and will change over the years."
 msgstr ""
 
-#: templates/child-savings-content.php:46
+#: templates/child-savings-content.php:47
 msgid "At 18, your child has"
 msgstr ""
 
-#: templates/child-savings-content.php:46
+#: templates/child-savings-content.php:47
 msgid "17,280 €"
 msgstr ""
 
-#: templates/child-savings-content.php:49
-#: templates/child-savings-content.php:77
-#: templates/child-savings-content.php:136
+#: templates/child-savings-content.php:50
+#: templates/child-savings-content.php:78
+#: templates/child-savings-content.php:137
 msgid "Open an account for my child"
 msgstr ""
 
-#: templates/child-savings-content.php:51
+#: templates/child-savings-content.php:52
 #: templates/company-savings-content.php:52
 #: templates/savings-fund-landing-content.php:343
 msgid "Opening an account is free and takes only a few minutes."
 msgstr ""
 
-#: templates/child-savings-content.php:63
+#: templates/child-savings-content.php:64
 msgid "Open an account for your child quickly and easily"
 msgstr ""
 
-#: templates/child-savings-content.php:65
+#: templates/child-savings-content.php:66
 msgid "Log in and choose \"For a child\""
 msgstr ""
 
-#: templates/child-savings-content.php:67
+#: templates/child-savings-content.php:68
 #: templates/company-savings-content.php:103
 msgid "Verify yourself with Smart-ID, mobile-ID, or an ID card."
 msgstr ""
 
-#: templates/child-savings-content.php:69
+#: templates/child-savings-content.php:70
 msgid "Complete a short verification"
 msgstr ""
 
-#: templates/child-savings-content.php:71
+#: templates/child-savings-content.php:72
 msgid "Answer a few questions. There are no documents to upload."
 msgstr ""
 
-#: templates/child-savings-content.php:73
+#: templates/child-savings-content.php:74
 #: templates/company-savings-content.php:109
 msgid "Make the first contribution"
 msgstr ""
 
-#: templates/child-savings-content.php:75
+#: templates/child-savings-content.php:76
 msgid "Start with as little as 1 euro. You can also set up a recurring payment, for example in the amount of the child benefit."
 msgstr ""
 
-#: templates/child-savings-content.php:79
+#: templates/child-savings-content.php:80
 msgid "If you have several children, you can open a separate account for each one."
 msgstr ""
 
-#: templates/child-savings-content.php:94
+#: templates/child-savings-content.php:95
 msgid "Gifts straight to your child's account"
 msgstr ""
 
-#: templates/child-savings-content.php:96
+#: templates/child-savings-content.php:97
 #, php-format
 msgid "Grandparents and other loved ones can also make contributions straight to your child's savings fund account, for example for birthdays and other special occasions. If you have already opened an account for your child, you can share %s with them."
 msgstr ""
 
-#: templates/child-savings-content.php:97
+#: templates/child-savings-content.php:98
 msgid "your child's personal gift link"
 msgstr ""
 
-#: templates/child-savings-content.php:110
+#: templates/child-savings-content.php:111
 #: templates/savings-fund-landing-content.php:124
 msgid "Good to know before you start"
 msgstr ""
 
-#: templates/child-savings-content.php:112
+#: templates/child-savings-content.php:113
 msgid "Before investing for your child, save for yourself."
 msgstr ""
 
-#: templates/child-savings-content.php:114
+#: templates/child-savings-content.php:115
 #, php-format
 msgid "The greatest gift to a child is a parent who has taken care of their own future: second and third pillar tax benefits used and a rainy-day fund in place. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:115
+#: templates/child-savings-content.php:116
 msgid "Why take care of your own third pillar first? →"
 msgstr ""
 
-#: templates/child-savings-content.php:117
+#: templates/child-savings-content.php:118
 msgid "Money given to your child stays with your child."
 msgstr ""
 
-#: templates/child-savings-content.php:118
+#: templates/child-savings-content.php:119
 msgid "The assets belong to the child and withdrawals can only be made to the child's own bank account. This gives the assets reasonable protection."
 msgstr ""
 
-#: templates/child-savings-content.php:119
+#: templates/child-savings-content.php:120
 #: templates/savings-fund-landing-content.php:126
 msgid "Stock markets fluctuate."
 msgstr ""
 
-#: templates/child-savings-content.php:120
+#: templates/child-savings-content.php:121
 msgid "Stock prices can rise as well as fall over time. The fund is meant for long-term investing – and saving for a child usually is just that. Still, returns cannot be guaranteed."
 msgstr ""
 
-#: templates/child-savings-content.php:121
+#: templates/child-savings-content.php:122
 msgid "The fund's assets are protected."
 msgstr ""
 
-#: templates/child-savings-content.php:122
+#: templates/child-savings-content.php:123
 msgid "The fund's assets are held strictly separate from Tuleva's assets at an independent depositary, and Tuleva Fondid AS operates under the supervision of the Estonian Financial Supervision Authority."
 msgstr ""
 
-#: templates/child-savings-content.php:134
+#: templates/child-savings-content.php:135
 #: templates/company-savings-content.php:122
 msgid "Start today"
 msgstr ""
 
-#: templates/child-savings-content.php:135
+#: templates/child-savings-content.php:136
 msgid "Open an account in just a couple of minutes. The earlier you start, the longer your child's assets have to grow."
 msgstr ""
 
-#: templates/child-savings-content.php:138
-msgid "Over <strong>85,000</strong> people save with Tuleva"
+#: templates/child-savings-content.php:140
+#: templates/second-pillar-rejoin-content.php:201
+#, php-format
+msgid "Over <strong>%s</strong> people save with Tuleva"
 msgstr ""
 
-#: templates/child-savings-content.php:139
+#: templates/child-savings-content.php:142
 #: templates/company-savings-content.php:127
 #: templates/savings-fund-landing-content.php:150
 msgid "Fee <strong>0.28%</strong> per year, no extra charges"
 msgstr ""
 
-#: templates/child-savings-content.php:149
+#: templates/child-savings-content.php:152
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
 #: templates/savings-fund-landing-content.php:161
+#: templates/second-pillar-rejoin-content.php:215
 msgid "Frequently asked questions"
 msgstr ""
 
-#: templates/child-savings-content.php:154
+#: templates/child-savings-content.php:157
 msgid "Who can open a savings fund account for a child?"
 msgstr ""
 
-#: templates/child-savings-content.php:156
+#: templates/child-savings-content.php:159
 msgid "A child's account can be opened by their legal representative: a parent or a guardian. The child must be under 18 and an Estonian citizen or resident."
 msgstr ""
 
-#: templates/child-savings-content.php:157
+#: templates/child-savings-content.php:160
 msgid "To open the account, log in with your ID card, Mobile-ID or Smart-ID and choose \"Open an account for a child or company\". We check from the population register that you are the child's representative."
 msgstr ""
 
-#: templates/child-savings-content.php:158
+#: templates/child-savings-content.php:161
 msgid "One parent opens the account, but the other parent can also see the child's balance and make contributions."
 msgstr ""
 
-#: templates/child-savings-content.php:162
+#: templates/child-savings-content.php:165
 msgid "Why open an Additional Investment Fund for your child rather than a third pillar?"
 msgstr ""
 
-#: templates/child-savings-content.php:164
+#: templates/child-savings-content.php:167
 msgid "The third pillar's appeal is the tax benefit: you get income tax back on your contributions. But only a person who earns taxable income themselves gets the refund. A child usually doesn't, so paying into a child's third pillar creates no tax benefit."
 msgstr ""
 
-#: templates/child-savings-content.php:165
+#: templates/child-savings-content.php:168
 msgid "Second, the third pillar is meant for retirement: with the favorable tax rate, the money only becomes available close to retirement age. For a child, this would mean locking the money away for decades. From the Additional Investment Fund, your child can use the money when they need it, for example for education or a first home."
 msgstr ""
 
-#: templates/child-savings-content.php:166
+#: templates/child-savings-content.php:169
 msgid "Saving in the child's name in the Additional Investment Fund, the tax win comes from the other end: when selling units, the child can use their yearly tax-free income, which today is 8,400 € per year."
 msgstr ""
 
-#: templates/child-savings-content.php:168
+#: templates/child-savings-content.php:171
 #, php-format
 msgid "Once your child starts earning income themselves, they should consider their own third pillar too, because then they get a tax benefit as well. If your child already has a third pillar account opened before 2021, keep it as it is: these are separate accounts and don't mix. And your own third pillar is worth filling before you start saving for your child. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:169
+#: templates/child-savings-content.php:172
 #: templates/company-savings-content.php:200
 #: templates/company-savings-content.php:205
 #: templates/savings-fund-landing-content.php:272
 #: templates/savings-fund-landing-content.php:273
 #: templates/savings-fund-landing-content.php:274
+#: templates/second-pillar-rejoin-content.php:273
+#: templates/second-pillar-rejoin-content.php:278
 msgid "Read more →"
 msgstr ""
 
-#: templates/child-savings-content.php:174
+#: templates/child-savings-content.php:177
 msgid "Where is my child's money invested?"
 msgstr ""
 
-#: templates/child-savings-content.php:176
+#: templates/child-savings-content.php:179
 msgid "In stock markets across the whole world. For every euro we buy shares in close to 2,500 of the world's largest listed companies. The fund follows the MSCI ACWI index, which covers both developed and emerging markets. A sustainability filter leaves out a couple of hundred companies that comply least with ESG rules."
 msgstr ""
 
-#: templates/child-savings-content.php:177
+#: templates/child-savings-content.php:180
 msgid "We don't pick individual stocks and we don't try to time the market. We invest on the same principle in Tuleva's second and third pillar equity funds."
 msgstr ""
 
-#: templates/child-savings-content.php:178
+#: templates/child-savings-content.php:181
 msgid "The fund pays no dividends. It reinvests what it earns, so the money has longer to grow and there is no tax to pay in the meantime."
 msgstr ""
 
-#: templates/child-savings-content.php:179
+#: templates/child-savings-content.php:182
 msgid "Read more: where the Additional Investment Fund invests →"
 msgstr ""
 
-#: templates/child-savings-content.php:183
+#: templates/child-savings-content.php:186
 msgid "What return can I expect?"
 msgstr ""
 
-#: templates/child-savings-content.php:185
+#: templates/child-savings-content.php:188
 msgid "Nobody knows in advance. We don't try to outsmart the market. Our aim is to earn the average return of the world's stock markets at the lowest possible cost."
 msgstr ""
 
-#: templates/child-savings-content.php:186
+#: templates/child-savings-content.php:189
 msgid "Over the past hundred years, world stock markets have returned roughly 7% per year. That is a long-term average, not a promise. There have been very strong years, and there have been periods when markets fell for years on end. The fund can also make a loss in some years."
 msgstr ""
 
-#: templates/child-savings-content.php:187
+#: templates/child-savings-content.php:190
 msgid "When you save for a child, time is on your side. The longer you invest, the more single bad years even out in the average. A child's horizon is usually decades long."
 msgstr ""
 
-#: templates/child-savings-content.php:189
+#: templates/child-savings-content.php:192
 #, php-format
 msgid "We don't show the fund's own return on this page yet. The fund's history is too short for that, and a few months' numbers would confuse more than they explain. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:190
+#: templates/child-savings-content.php:193
 msgid "You can find the unit price history on the fund's documents page →"
 msgstr ""
 
-#: templates/child-savings-content.php:192
+#: templates/child-savings-content.php:195
 msgid "Returns are not guaranteed. The value of an investment can both rise and fall."
 msgstr ""
 
-#: templates/child-savings-content.php:196
+#: templates/child-savings-content.php:199
 msgid "How much does saving cost and what amount can I start with?"
 msgstr ""
 
-#: templates/child-savings-content.php:198
+#: templates/child-savings-content.php:201
 msgid "The fund's ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free."
 msgstr ""
 
-#: templates/child-savings-content.php:199
+#: templates/child-savings-content.php:202
 msgid "You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time."
 msgstr ""
 
-#: templates/child-savings-content.php:203
+#: templates/child-savings-content.php:206
 msgid "How does this differ from LHV's Kasvukonto and Swedbank's child products?"
 msgstr ""
 
-#: templates/child-savings-content.php:205
+#: templates/child-savings-content.php:208
 msgid "LHV's Kasvukonto is a platform where you choose yourself which fund your child's money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva's Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it."
 msgstr ""
 
-#: templates/child-savings-content.php:206
+#: templates/child-savings-content.php:209
 msgid "Swedbank's child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva's fund is meant for investing only. If you need insurance, that is a separate purchase."
 msgstr ""
 
-#: templates/child-savings-content.php:207
+#: templates/child-savings-content.php:210
 msgid "Read more: 3 reasons to avoid child-labeled savings products"
 msgstr ""
 
-#: templates/child-savings-content.php:211
+#: templates/child-savings-content.php:214
 msgid "Can I transfer my child's portfolio from elsewhere to Tuleva's Additional Investment Fund?"
 msgstr ""
 
-#: templates/child-savings-content.php:213
+#: templates/child-savings-content.php:216
 msgid "Not directly. Unlike pension funds, fund units and shares can't be transferred to Tuleva from another provider."
 msgstr ""
 
-#: templates/child-savings-content.php:214
+#: templates/child-savings-content.php:217
 msgid "To do this, sell the assets at your current provider and make a contribution to your child's savings fund account with the money. The gain on the sale may be subject to income tax, but your child can use their own tax-free income."
 msgstr ""
 
-#: templates/child-savings-content.php:215
+#: templates/child-savings-content.php:218
 msgid "If the existing assets are in your child's name, the law restricts selling them. Without the court's permission, a parent may sell and reinvest the part that was bought with their own money, together with its growth. For example:"
 msgstr ""
 
-#: templates/child-savings-content.php:217
+#: templates/child-savings-content.php:220
 msgid "A parent has given the child 100 euros to buy securities."
 msgstr ""
 
-#: templates/child-savings-content.php:218
+#: templates/child-savings-content.php:221
 msgid "The value of the securities has grown by 20 euros."
 msgstr ""
 
-#: templates/child-savings-content.php:219
+#: templates/child-savings-content.php:222
 msgid "The child has also received 20 euros in dividends."
 msgstr ""
 
-#: templates/child-savings-content.php:221
+#: templates/child-savings-content.php:224
 msgid "Without the court's permission, the parent may sell securities worth up to 120 euros and invest that money in Tuleva's fund. The child has \"earned\" the 20 euros of dividends themselves, so the parent may not buy securities with that money without the court's permission."
 msgstr ""
 
-#: templates/child-savings-content.php:222
+#: templates/child-savings-content.php:225
 msgid "If this seems too complicated, there is a simpler way: leave the assets you have already invested where they are and start making new contributions to Tuleva's fund."
 msgstr ""
 
-#: templates/child-savings-content.php:223
+#: templates/child-savings-content.php:226
 msgid "If you need help, write to us at tuleva@tuleva.ee or call 644 5100."
 msgstr ""
 
-#: templates/child-savings-content.php:227
+#: templates/child-savings-content.php:230
 msgid "How do I make contributions?"
 msgstr ""
 
-#: templates/child-savings-content.php:229
+#: templates/child-savings-content.php:232
 msgid "You can make contributions to your child's savings fund account both from your own bank account and from the child's. We have confirmed with the Estonian Tax and Customs Board that in both cases your child gets an acquisition cost for the units, and in the future only the gain is taxed on sale, not the whole amount."
 msgstr ""
 
-#: templates/child-savings-content.php:231
+#: templates/child-savings-content.php:234
 #, php-format
 msgid "Grandparents and other loved ones can pay straight to your child's savings fund account with a gift link. See \"Who can make contributions to a child's savings fund account?\" below and %s."
 msgstr ""
 
-#: templates/child-savings-content.php:232
+#: templates/child-savings-content.php:235
 msgid "the contributions page"
 msgstr ""
 
-#: templates/child-savings-content.php:237
+#: templates/child-savings-content.php:240
 msgid "Who can make contributions to a child's savings fund account?"
 msgstr ""
 
-#: templates/child-savings-content.php:239
+#: templates/child-savings-content.php:242
 msgid "Parents, and other loved ones too: grandparents, godparents, friends."
 msgstr ""
 
-#: templates/child-savings-content.php:240
+#: templates/child-savings-content.php:243
 msgid "A loved one doesn't need to open anything. A parent can create a gift link for the child on the Tuleva website and send it to them. They pay through the link from their own bank, and the money goes straight to the child's savings fund account. If they like, the payer can add a few words for the parent to read."
 msgstr ""
 
-#: templates/child-savings-content.php:242
+#: templates/child-savings-content.php:245
 #, php-format
 msgid "You can find more detailed instructions %s."
 msgstr ""
 
-#: templates/child-savings-content.php:243
+#: templates/child-savings-content.php:246
 msgid "on the contributions page"
 msgstr ""
 
-#: templates/child-savings-content.php:245
+#: templates/child-savings-content.php:248
 msgid "A contribution made to the savings fund can't be taken back: the assets belong to the child."
 msgstr ""
 
-#: templates/child-savings-content.php:249
+#: templates/child-savings-content.php:252
 msgid "How can the other parent view and manage the child's account?"
 msgstr ""
 
-#: templates/child-savings-content.php:251
+#: templates/child-savings-content.php:254
 msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
 msgstr ""
 
-#: templates/child-savings-content.php:252
+#: templates/child-savings-content.php:255
 msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
 msgstr ""
 
-#: templates/child-savings-content.php:253
+#: templates/child-savings-content.php:256
 msgid "Both parents' right of representation lasts until the child's 18th birthday."
 msgstr ""
 
-#: templates/child-savings-content.php:254
+#: templates/child-savings-content.php:257
 msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only."
 msgstr ""
 
-#: templates/child-savings-content.php:258
+#: templates/child-savings-content.php:261
 msgid "How do withdrawals work?"
 msgstr ""
 
-#: templates/child-savings-content.php:260
+#: templates/child-savings-content.php:263
 msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
 msgstr ""
 
-#: templates/child-savings-content.php:261
+#: templates/child-savings-content.php:264
 msgid "Units bought with the money you contributed yourself can be sold by you as your child's representative without extra conditions. If units were bought with the child's other money (for example a gift or an inheritance received straight to the child's account), the sale requires the court's consent by law. You can ask the court for a general consent covering the whole childhood. The state fee is 10 €."
 msgstr ""
 
-#: templates/child-savings-content.php:263
+#: templates/child-savings-content.php:266
 #, php-format
 msgid "The state is preparing a legislative change that would make investing in a child's name even simpler. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:264
+#: templates/child-savings-content.php:267
 msgid "We wrote about it on the blog →"
 msgstr ""
 
-#: templates/child-savings-content.php:269
+#: templates/child-savings-content.php:272
 msgid "Do I have to file a tax return in my child's name?"
 msgstr ""
 
-#: templates/child-savings-content.php:271
+#: templates/child-savings-content.php:274
 msgid "It depends on whether you make contributions from a regular bank account or through an investment account."
 msgstr ""
 
-#: templates/child-savings-content.php:272
+#: templates/child-savings-content.php:275
 msgid "<b>Making contributions from a regular bank account</b>, you don't need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child's name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all."
 msgstr ""
 
-#: templates/child-savings-content.php:273
+#: templates/child-savings-content.php:276
 msgid "<b>Making contributions from an investment account</b>, a tax return has to be filed in the child's name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven't sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you."
 msgstr ""
 
-#: templates/child-savings-content.php:274
+#: templates/child-savings-content.php:277
 msgid "Read on the blog which approach suits your family →"
 msgstr ""
 
-#: templates/child-savings-content.php:278
+#: templates/child-savings-content.php:281
 msgid "What happens if my child withdraws all the money at 18?"
 msgstr ""
 
-#: templates/child-savings-content.php:280
+#: templates/child-savings-content.php:283
 msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
 msgstr ""
 
-#: templates/child-savings-content.php:281
+#: templates/child-savings-content.php:284
 msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
 msgstr ""
 
-#: templates/child-savings-content.php:282
+#: templates/child-savings-content.php:285
 msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
 msgstr ""
 
-#: templates/child-savings-content.php:286
+#: templates/child-savings-content.php:289
 msgid "My child already has a third pillar with Tuleva. What should I do now?"
 msgstr ""
 
-#: templates/child-savings-content.php:288
+#: templates/child-savings-content.php:291
 msgid "A child's third pillar doesn't give an income tax refund, because a child generally doesn't earn enough income. That's why it's worth directing new contributions to your child's Additional Investment Fund; what's already saved keeps growing in the third pillar."
 msgstr ""
 
-#: templates/child-savings-content.php:301
+#: templates/child-savings-content.php:304
 #: templates/company-savings-content.php:195
 #: templates/savings-fund-landing-content.php:326
+#: templates/second-pillar-rejoin-content.php:268
 msgid "Learn more"
 msgstr ""
 
-#: templates/child-savings-content.php:304
+#: templates/child-savings-content.php:307
 msgid "Should you save in the child's name or your own?"
 msgstr ""
 
-#: templates/child-savings-content.php:305
+#: templates/child-savings-content.php:308
 msgid "The pros and cons of each option."
 msgstr ""
 
-#: templates/child-savings-content.php:306
-#: templates/child-savings-content.php:311
+#: templates/child-savings-content.php:309
+#: templates/child-savings-content.php:314
 msgid "Read on →"
 msgstr ""
 
-#: templates/child-savings-content.php:309
+#: templates/child-savings-content.php:312
 msgid "Do you need an investment account when saving for a child?"
 msgstr ""
 
-#: templates/child-savings-content.php:310
+#: templates/child-savings-content.php:313
 msgid "Two approaches to choose between."
 msgstr ""
 
-#: templates/child-savings-content.php:315
+#: templates/child-savings-content.php:318
 #: templates/company-savings-content.php:209
 msgid "More about the Tuleva Additional Investment Fund →"
 msgstr ""
 
-#: templates/child-savings-content.php:316
+#: templates/child-savings-content.php:319
 #: templates/company-savings-content.php:210
 msgid "Fund documents →"
 msgstr ""
@@ -966,7 +997,7 @@ msgstr ""
 
 #: templates/components/front-hero/calculator.php:23
 #: templates/components/third-pillar-calculator.php:98
-#: templates/second-pillar-rejoin-content.php:17
+#: templates/second-pillar-rejoin-content.php:19
 msgid "Gross salary"
 msgstr ""
 
@@ -2548,48 +2579,273 @@ msgstr ""
 msgid "Blog posts about the Additional Investment Fund"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:7
-msgid "Rejoining the II pillar"
+#: templates/second-pillar-rejoin-content.php:9
+#: templates/second-pillar-rejoin-content.php:196
+msgid "Keep saving in the II pillar"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:8
+#: templates/second-pillar-rejoin-content.php:10
 msgid "Get the <em>tax win</em> again"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:9
-msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b> and saving starts in&nbsp;May."
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:30
+#: templates/second-pillar-rejoin-content.php:32
 msgid "From your net salary"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:37
+#: templates/second-pillar-rejoin-content.php:38
 msgid "How the tax win is made up"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:39
+#: templates/second-pillar-rejoin-content.php:40
 msgid "From income tax"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:40
+#: templates/second-pillar-rejoin-content.php:41
 msgid "From social tax"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:47
+#: templates/second-pillar-rejoin-content.php:48
 msgid "Into your II pillar each month"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:51
-msgid "Saved in 10 years"
+#: templates/second-pillar-rejoin-content.php:52
+msgid "Contributions over 10 years"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:54
+#: templates/second-pillar-rejoin-content.php:55
+#: templates/second-pillar-rejoin-content.php:198
 msgid "Start saving again"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:58
-msgid "The calculation assumes you contribute 6% of your gross salary. Social tax paid into the II pillar also has a small effect on your I pillar."
+#: templates/second-pillar-rejoin-content.php:60
+#, php-format
+msgid "The calculation assumes the highest possible contribution. Social tax paid into the II&nbsp;pillar %s."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:61
+msgid "https://tuleva.ee/en/sotsmaks"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:61
+msgid "slightly reduces your I&nbsp;pillar"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:73
+msgid "Same money, two choices"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:89
+#, php-format
+msgid "%s of gross pay"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:90
+#, php-format
+msgid "−%s income tax"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:113
+msgid "or"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:114
+#: templates/second-pillar-rejoin-content.php:116
+#, php-format
+msgid "%s a month"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:115
+msgid "to your bank account"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:117
+msgid "to your II pillar account"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:120
+#, php-format
+msgid "For a gross salary of %s"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:135
+msgid "Why start saving again?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:141
+msgid "The easiest way to save"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:142
+msgid "Your contribution goes into the II pillar automatically, straight from your salary. You don't have to do a thing."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:148
+msgid "You win on taxes"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:149
+msgid "More than twice as much goes into your II pillar as comes off your pay."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:155
+msgid "The money is yours"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:156
+msgid "Your II pillar assets are truly yours and can be inherited. You can take the money out from the age of 60."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:168
+msgid "How do I start saving in the II pillar again?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:172
+msgid "Log in to Tuleva"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:173
+msgid "You don't need to be a Tuleva saver."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:177
+msgctxt "Step in the II pillar rejoin instructions"
+msgid "Review"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:178
+msgid "Your contribution size and fund choice."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:182
+msgid "Sign"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:183
+msgid "All the applications with one signature."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:203
+msgid "Tuleva <strong>belongs to its savers</strong>"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:218
+msgid "How can I take money out of the II pillar later?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:220
+#, php-format
+msgid "From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:220
+msgid "https://tuleva.ee/pensioni-valjamaksed/"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:220
+msgid "in monthly payments free of income tax"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:221
+msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can't stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:225
+msgid "How does the II pillar affect my I pillar pension?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:227
+#, php-format
+msgid "The state's 4%% comes from your social tax, which would otherwise go to the I pillar. That's why your I pillar pension will later be slightly smaller. Overall, saving in the II pillar leaves you ahead. %s"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:227
+msgid "https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:227
+msgid "See the calculation →"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:231
+msgid "Do I need to be a Tuleva saver?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:233
+msgid "No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:233
+#, php-format
+msgid "There are already over %s of us Tuleva savers."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:237
+msgid "Which II pillar fund should I choose?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:239
+msgid "Look at two things: where the fund invests and how much it charges. An index fund that invests in global equities spreads your money across thousands of companies around the world."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:240
+msgid "Today you can save with an annual fee below 0.3%. If a fund's ongoing charges are above 0.5% a year, you are paying too much."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:241
+#, php-format
+msgid "When you rejoin, you can use the money from the age of 60, so you have time to ride out market swings. That's why a low-fee index fund is worth considering. %s"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:241
+msgid "https://tuleva.ee/vaata/pensionifondide-vordlus/"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:241
+msgid "Compare all II pillar funds →"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:245
+msgid "Where do my contributions go if I don't choose a fund?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:247
+msgid "To the fund where you saved before you took your money out. Banks have renamed many funds over the past five years, so you may not recognise your old fund by its name."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:248
+msgid "That's why it's worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:252
+msgid "What if the state takes away the 4%?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:254
+msgid "Money already paid in cannot be taken back, and your own contribution stays free of income tax even if the state paused its part. The law now also says the state must give at least five years' notice before reducing the 4%."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:255
+msgid "Make use of the opportunity while it lasts."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:270
+msgid "https://tuleva.ee/blogi/"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:271
+msgid "Is it worth saving in the II pillar again?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:272
+msgid "Who should rejoin and who might not."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:276
+msgid "II pillar fund comparison"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:277
+msgid "All funds in one table: returns and fees."
 msgstr ""
 
 #: templates/single-content.php:49
