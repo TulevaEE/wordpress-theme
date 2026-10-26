@@ -82,18 +82,12 @@ const FIGURE_BARS = [
     'rejoinFigureTaxWinBarEdge'
 ];
 
-const LABELS_INSIDE_BARS = ['rejoinFigureTakeHome', 'rejoinFigurePillarBase', 'rejoinFigureTaxWinLabel'];
-
 function barHeights() {
     return FIGURE_BARS.map((id) => document.getElementById(id).getAttribute('height'));
 }
 
 function taxWinLabelPosition(svg) {
     return svg.querySelector('#rejoinFigureTaxWinLabel').getAttribute('transform');
-}
-
-function labelsInsideBarsVisibility() {
-    return LABELS_INSIDE_BARS.map((id) => document.getElementById(id).getAttribute('visibility'));
 }
 
 function shown(id) {
@@ -228,43 +222,42 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(taxWinLabelPosition(painted)).toBe(taxWinLabelPosition(document));
     });
 
-    it('keeps the take-home bar as tall as the base of the II pillar column, with the tax win filling the rest', () => {
-        typeSalary('500');
+    it('keeps the take-home bar as tall as the base of the II pillar column, with the tax win filling the rest and its label in the middle', () => {
+        typeSalary('3000');
 
         expect(
             ['rejoinFigureTakeHomeBar', 'rejoinFigurePillarBaseBar', 'rejoinFigureTaxWinBar'].map((id) =>
                 document.getElementById(id).getAttribute('height')
             )
-        ).toEqual(['168', '168', '112']);
+        ).toEqual(['130.7', '130.7', '149.3']);
+        expect(taxWinLabelPosition(document)).toBe('translate(0 264.7)');
     });
 
-    it('empties the figure for a zero salary, leaving no bar corners or amounts behind where the bars were', () => {
-        typeSalary('0');
+    it.each(['', '0', '2', '20', '200', '999'])(
+        'shows the page example in the figure for a salary of "%s", below 1000 €, as while the visitor is still typing',
+        (typed) => {
+            typeSalary(typed);
 
-        expect(barHeights()).toEqual(['0', '0', '0', '0', '0']);
-        expect(labelsInsideBarsVisibility()).toEqual(['hidden', 'hidden', 'hidden']);
+            [...FIGURE_AMOUNTS, 'rejoinFigureSalary'].forEach((id) => {
+                expect(shown(id)).toBe(paintedInTemplate(id));
+            });
+            expect(barHeights()).toEqual(['131.6', '12', '131.6', '148.4', '12']);
+        }
+    );
+
+    it('keeps calculating the visitor\'s own salary below 1000 €, the example staying in the figure', () => {
+        typeSalary('500');
+
+        expect(shown('resTotal')).toBe('50 €');
+        expect(taxWinBreakdown('taxWinInfo')).toEqual(['Sotsiaalmaksust', '20 €', 'Tulumaksust', '0 €']);
+        expect(taxWinBreakdown('rejoinFigureTaxWinInfo')).toEqual(['Sotsiaalmaksust', '80 €', 'Tulumaksust', '26 €']);
     });
 
-    it('leaves the green bar and its label out while the tax win rounds to zero, your part filling the II pillar column', () => {
-        typeSalary('10');
+    it('follows the salary in the figure from 1000 €', () => {
+        typeSalary('1000');
 
-        expect(barHeights()).toEqual(['280', '12', '280', '0', '0']);
-        expect(labelsInsideBarsVisibility()).toEqual(['visible', 'visible', 'hidden']);
-    });
-
-    it('keeps the tax win label in the middle of the green bar, also when rounding leaves the bar a third of the column', () => {
-        typeSalary('30');
-
-        expect(barHeights().slice(3)).toEqual(['93.3', '12']);
-        expect(taxWinLabelPosition(document)).toBe('translate(0 236.7)');
-    });
-
-    it('brings the bars and the amounts in them back once a salary follows a zero', () => {
-        typeSalary('0');
-        typeSalary('2000');
-
-        expect(barHeights()).toEqual(['131.6', '12', '131.6', '148.4', '12']);
-        expect(labelsInsideBarsVisibility()).toEqual(['visible', 'visible', 'visible']);
+        expect(shown('rejoinFigureSalary')).toBe('1000 €');
+        expect(shown('rejoinFigurePillarTotal')).toBe('100 €');
     });
 
     it('reads an emptied salary field as zero', () => {
