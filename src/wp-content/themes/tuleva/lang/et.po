@@ -2814,6 +2814,14 @@ msgid "That's why it's worth reviewing your fund along with your application. At
 msgstr "Seepärast tasub fond koos avaldusega üle vaadata. Tulevas saad fondi valida samal ajal, kui esitad II&nbsp;sambaga taasliitumise avalduse."
 
 #: templates/second-pillar-rejoin-content.php:218
+msgid "I took money out of the II pillar after 2021. When can I rejoin?"
+msgstr "Võtsin II&nbsp;sambast raha välja hiljem kui 2021. Millal saan uuesti liituda?"
+
+#: templates/second-pillar-rejoin-content.php:220
+msgid "Your contributions can start again once five years have passed since your payout. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgstr "Sinu sissemaksed saavad uuesti alata, kui väljamaksest on möödas viis aastat. Avalduse saad esitada juba enne seda. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
+
+#: templates/second-pillar-rejoin-content.php:218
 msgid "How can I take money out of the II pillar later?"
 msgstr "Kuidas II&nbsp;sambast saab raha hiljem kätte?"
 

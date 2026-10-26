@@ -214,6 +214,12 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <h2 class="text-center"><?php _e('Frequently asked questions', TEXT_DOMAIN); ?></h2>
                     <div class="faq-list">
+                        <div class="qa__question-wrapper" id="millal-saan-uuesti-liituda">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I took money out of the II pillar after 2021. When can I rejoin?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-7" class="collapse">
+                                <p><?php _e('Your contributions can start again once five years have passed since your payout. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
                         <div class="qa__question-wrapper" id="kuidas-raha-katte-saab">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('How can I take money out of the II pillar later?', TEXT_DOMAIN); ?></a>
                             <div id="answer-1" class="collapse">
