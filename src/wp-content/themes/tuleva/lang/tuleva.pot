@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-25T08:22:38+00:00\n"
+"POT-Creation-Date: 2026-10-27T08:23:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -634,124 +634,136 @@ msgid "A contribution made to the savings fund can't be taken back: the assets b
 msgstr ""
 
 #: templates/child-savings-content.php:252
-msgid "How can the other parent view and manage the child's account?"
+msgid "How can grandparents and other loved ones set up a recurring payment?"
 msgstr ""
 
 #: templates/child-savings-content.php:254
-msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
+msgid "To make a contribution to a child's savings fund account, ask the child's parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. You'll find what you need in the bank transfer section: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account."
 msgstr ""
 
 #: templates/child-savings-content.php:255
-msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
+msgid "Every payment is invested in the child's name. The parent sees on the child's account who has made contributions. The money stays with the child and can't be taken back."
 msgstr ""
 
-#: templates/child-savings-content.php:256
-msgid "Both parents' right of representation lasts until the child's 18th birthday."
-msgstr ""
-
-#: templates/child-savings-content.php:257
-msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only."
+#: templates/child-savings-content.php:259
+msgid "How can the other parent view and manage the child's account?"
 msgstr ""
 
 #: templates/child-savings-content.php:261
-msgid "How do withdrawals work?"
+msgid "Both parents can manage the child's account if the population register gives them the right to manage the child's property. We check this from the population register."
+msgstr ""
+
+#: templates/child-savings-content.php:262
+msgid "If one parent has already opened the account, the other doesn't need to open a new one. They do need to identify themselves once. To do that they log in to the Tuleva website and pick the child's name from the menu. The second parent then goes through a short questionnaire too. After that the child's account is an ordinary account for them. They see the balance, and they can make contributions and sell units just like the first parent."
 msgstr ""
 
 #: templates/child-savings-content.php:263
-msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
+msgid "Both parents' right of representation lasts until the child's 18th birthday."
 msgstr ""
 
 #: templates/child-savings-content.php:264
+msgid "If the register doesn't give the other parent the right to manage the child's property, they can't manage the account. This happens, for example, when a court has given the right to one parent only."
+msgstr ""
+
+#: templates/child-savings-content.php:268
+msgid "How do withdrawals work?"
+msgstr ""
+
+#: templates/child-savings-content.php:270
+msgid "Units can be sold at any time and the money is paid only to your child's own bank account. This keeps your child's assets protected: money cannot move to anyone else's account."
+msgstr ""
+
+#: templates/child-savings-content.php:271
 msgid "Units bought with the money you contributed yourself can be sold by you as your child's representative without extra conditions. If units were bought with the child's other money (for example a gift or an inheritance received straight to the child's account), the sale requires the court's consent by law. You can ask the court for a general consent covering the whole childhood. The state fee is 10 €."
 msgstr ""
 
-#: templates/child-savings-content.php:266
+#: templates/child-savings-content.php:273
 #, php-format
 msgid "The state is preparing a legislative change that would make investing in a child's name even simpler. %s"
 msgstr ""
 
-#: templates/child-savings-content.php:267
+#: templates/child-savings-content.php:274
 msgid "We wrote about it on the blog →"
 msgstr ""
 
-#: templates/child-savings-content.php:272
+#: templates/child-savings-content.php:279
 msgid "Do I have to file a tax return in my child's name?"
 msgstr ""
 
-#: templates/child-savings-content.php:274
+#: templates/child-savings-content.php:281
 msgid "It depends on whether you make contributions from a regular bank account or through an investment account."
 msgstr ""
 
-#: templates/child-savings-content.php:275
+#: templates/child-savings-content.php:282
 msgid "<b>Making contributions from a regular bank account</b>, you don't need to open a separate investment account for your child or file a tax return for them every spring. A tax return has to be filed in the child's name only when units are sold at a gain. Only the gain is taxed, and your child can use their own tax-free income, which today is 8,400 € per year. Selling units spread over several years, there may be no income tax at all."
 msgstr ""
 
-#: templates/child-savings-content.php:276
+#: templates/child-savings-content.php:283
 msgid "<b>Making contributions from an investment account</b>, a tax return has to be filed in the child's name every spring. You declare the difference between the money paid into the investment account and the money paid out of it. Contributions to the savings fund are marked neutral if you haven't sold any units in the same year. As the fund started in 2026, the first tax return is due in the spring of 2027 – by then we will have guides that make it as simple as possible for you."
 msgstr ""
 
-#: templates/child-savings-content.php:277
+#: templates/child-savings-content.php:284
 msgid "Read on the blog which approach suits your family →"
 msgstr ""
 
-#: templates/child-savings-content.php:281
+#: templates/child-savings-content.php:288
 msgid "What happens if my child withdraws all the money at 18?"
 msgstr ""
 
-#: templates/child-savings-content.php:283
+#: templates/child-savings-content.php:290
 msgid "At 18, the decision does indeed pass to your child, because the assets are theirs. In practice, this fear is usually bigger than the actual risk: a young person who has watched their money grow for years treats it as their future assets, not as a windfall."
 msgstr ""
 
-#: templates/child-savings-content.php:284
+#: templates/child-savings-content.php:291
 msgid "What helps most is involving your child in saving early on: show them how the account grows and talk about what you are saving for. That way the money won't come as a surprise at 18."
 msgstr ""
 
-#: templates/child-savings-content.php:285
+#: templates/child-savings-content.php:292
 msgid "Experience elsewhere shows the same: data on the UK's similar product (the Junior ISA) shows that only 6.5% of young people withdrew the whole amount right at 18 (AJ Bell, 2026)."
 msgstr ""
 
-#: templates/child-savings-content.php:289
+#: templates/child-savings-content.php:296
 msgid "My child already has a third pillar with Tuleva. What should I do now?"
 msgstr ""
 
-#: templates/child-savings-content.php:291
+#: templates/child-savings-content.php:298
 msgid "A child's third pillar doesn't give an income tax refund, because a child generally doesn't earn enough income. That's why it's worth directing new contributions to your child's Additional Investment Fund; what's already saved keeps growing in the third pillar."
 msgstr ""
 
-#: templates/child-savings-content.php:304
+#: templates/child-savings-content.php:311
 #: templates/company-savings-content.php:195
 #: templates/savings-fund-landing-content.php:326
 #: templates/second-pillar-rejoin-content.php:268
 msgid "Learn more"
 msgstr ""
 
-#: templates/child-savings-content.php:307
+#: templates/child-savings-content.php:314
 msgid "Should you save in the child's name or your own?"
 msgstr ""
 
-#: templates/child-savings-content.php:308
+#: templates/child-savings-content.php:315
 msgid "The pros and cons of each option."
 msgstr ""
 
-#: templates/child-savings-content.php:309
-#: templates/child-savings-content.php:314
+#: templates/child-savings-content.php:316
+#: templates/child-savings-content.php:321
 msgid "Read on →"
 msgstr ""
 
-#: templates/child-savings-content.php:312
+#: templates/child-savings-content.php:319
 msgid "Do you need an investment account when saving for a child?"
 msgstr ""
 
-#: templates/child-savings-content.php:313
+#: templates/child-savings-content.php:320
 msgid "Two approaches to choose between."
 msgstr ""
 
-#: templates/child-savings-content.php:318
+#: templates/child-savings-content.php:325
 #: templates/company-savings-content.php:209
 msgid "More about the Tuleva Additional Investment Fund →"
 msgstr ""
 
-#: templates/child-savings-content.php:319
+#: templates/child-savings-content.php:326
 #: templates/company-savings-content.php:210
 msgid "Fund documents →"
 msgstr ""
