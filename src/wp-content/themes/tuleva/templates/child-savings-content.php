@@ -251,8 +251,8 @@
                         <div class="qa__question-wrapper" id="kkk-16">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-16"><?php _e('How can grandparents and other loved ones set up a recurring payment?', TEXT_DOMAIN); ?></a>
                             <div id="answer-16" class="collapse">
-                                <p><?php _e('To make a contribution to a child\'s savings fund account, ask the child\'s parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. You\'ll find what you need in the bank transfer section: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('Every payment is invested in the child\'s name. The parent sees on the child\'s account who has made contributions. The money stays with the child and can\'t be taken back.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('To make a contribution to a child\'s savings fund account, ask the child\'s parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. To see them, choose "Payment info" instead of a bank: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Every payment is invested in the child\'s name. The parent usually sees who made the contribution. The money stays with the child and can\'t be taken back.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kkk-12">

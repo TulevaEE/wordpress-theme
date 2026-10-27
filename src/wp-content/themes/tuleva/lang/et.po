@@ -2707,12 +2707,12 @@ msgid "How can grandparents and other loved ones set up a recurring payment?"
 msgstr "Kuidas saavad teha püsimakseid vanavanemad ja teised lapse lähedased?"
 
 #: templates/child-savings-content.php:254
-msgid "To make a contribution to a child's savings fund account, ask the child's parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. You'll find what you need in the bank transfer section: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account."
-msgstr "Lapse kogumisfondi sissemakse tegemiseks küsi lapse vanemalt kinkimislinki. Püsimakse saad seadistada kinkimislingil olevate makseandmetega oma internetipangas. Vajalikud andmed leiad pangamakse osast: saaja Tuleva Täiendav Kogumisfond, kontonumber ja selgitus. Kopeeri selgitus täpselt nii, nagu see lehel on, et makse kohale jõuaks."
+msgid "To make a contribution to a child's savings fund account, ask the child's parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. To see them, choose \"Payment info\" instead of a bank: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account."
+msgstr "Lapse kogumisfondi sissemakse tegemiseks küsi lapse vanemalt kinkimislinki. Püsimakse saad seadistada kinkimislingil olevate makseandmetega oma internetipangas. Andmete nägemiseks vali panga asemel „Makseinfo“: saaja Tuleva Täiendav Kogumisfond, kontonumber ja selgitus. Kopeeri selgitus täpselt nii, nagu see lehel on, et makse jõuaks õigele kontole."
 
 #: templates/child-savings-content.php:255
-msgid "Every payment is invested in the child's name. The parent sees on the child's account who has made contributions. The money stays with the child and can't be taken back."
-msgstr "Iga laekumine investeeritakse lapse nimel. Vanem näeb lapse kontol, kes sissemakse tegi. Raha jääb lapsele ja seda ei saa tagasi võtta."
+msgid "Every payment is invested in the child's name. The parent usually sees who made the contribution. The money stays with the child and can't be taken back."
+msgstr "Iga laekumine investeeritakse lapse nimel. Vanem näeb enamasti, kes sissemakse tegi. Raha jääb lapsele ja seda ei saa tagasi võtta."
 
 #: templates/child-savings-content.php:234
 #, php-format
@@ -2827,7 +2827,7 @@ msgstr "Seepärast tasub fond koos avaldusega üle vaadata. Tulevas saad fondi v
 
 #: templates/second-pillar-rejoin-content.php:218
 msgid "I took money out of the II pillar after 2021. When can I rejoin?"
-msgstr "Võtsin II&nbsp;sambast raha välja hiljem kui 2021. Millal saan uuesti liituda?"
+msgstr "Võtsin II&nbsp;sambast raha välja pärast 2021. aastat. Millal saan uuesti liituda?"
 
 #: templates/second-pillar-rejoin-content.php:220
 msgid "Your contributions can start again once five years have passed since your payout. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
