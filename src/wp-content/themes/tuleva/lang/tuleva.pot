@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-27T08:23:49+00:00\n"
+"POT-Creation-Date: 2026-10-27T08:44:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -638,11 +638,11 @@ msgid "How can grandparents and other loved ones set up a recurring payment?"
 msgstr ""
 
 #: templates/child-savings-content.php:254
-msgid "To make a contribution to a child's savings fund account, ask the child's parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. You'll find what you need in the bank transfer section: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account."
+msgid "To make a contribution to a child's savings fund account, ask the child's parent for the gift link. You can set up a recurring payment in your own bank using the payment details on the gift link page. To see them, choose \"Payment info\" instead of a bank: the recipient Tuleva Täiendav Kogumisfond, the account number and the payment description. Copy the description exactly as it is on the page, so that the payment reaches the right account."
 msgstr ""
 
 #: templates/child-savings-content.php:255
-msgid "Every payment is invested in the child's name. The parent sees on the child's account who has made contributions. The money stays with the child and can't be taken back."
+msgid "Every payment is invested in the child's name. The parent usually sees who made the contribution. The money stays with the child and can't be taken back."
 msgstr ""
 
 #: templates/child-savings-content.php:259
