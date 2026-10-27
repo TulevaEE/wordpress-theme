@@ -117,8 +117,7 @@
                                     <text x="580" y="566" font-size="26"><?php esc_html_e('to your II pillar account', TEXT_DOMAIN); ?></text>
                                 </g>
                             </svg>
-                            <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %s', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>'); ?></p>
-                            <p class="text-secondary mt-1 mb-0"><?php _e('The difference comes from the income tax win and the part redirected from social tax, which slightly reduces your I&nbsp;pillar.', TEXT_DOMAIN); ?></p>
+                            <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %s', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>'); ?>. <?php _e('The social tax part slightly reduces your I&nbsp;pillar.', TEXT_DOMAIN); ?></p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +146,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
                             </div>
                             <h3><?php _e('You get more from taxes', TEXT_DOMAIN); ?></h3>
-                            <p><?php _e('More than twice as much goes into your II pillar as comes off your pay. The social tax part slightly reduces your I&nbsp;pillar.', TEXT_DOMAIN); ?></p>
+                            <p><?php _e('More than twice as much goes into your II pillar as comes off your pay.', TEXT_DOMAIN); ?></p>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -274,9 +273,9 @@
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <h2 class="mb-0 text-center"><?php _e('Learn more', TEXT_DOMAIN); ?></h2>
                     <div class="resources">
-                        <a class="resource resource--post" href="<?php echo esc_url(__('https://tuleva.ee/blogi/', TEXT_DOMAIN)); ?>">
-                            <span class="post-title"><?php _e('Is it worth saving in the II pillar again?', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('Who should rejoin and who might not.', TEXT_DOMAIN); ?></span>
+                        <a class="resource resource--post" href="https://tuleva.ee/analuusid/miks-tahaksid-paljud-ii-sambast-lahkunud-hakata-uuesti-koguma/">
+                            <span class="post-title"><?php _e('Why would many who left the II pillar like to start saving again?', TEXT_DOMAIN); ?></span>
+                            <span class="post-teaser"><?php _e('We asked savers who left the II pillar what they think about rejoining.', TEXT_DOMAIN); ?></span>
                             <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
                         </a>
                         <a class="resource resource--post" href="https://tuleva.ee/vaata/pensionifondide-vordlus/">
