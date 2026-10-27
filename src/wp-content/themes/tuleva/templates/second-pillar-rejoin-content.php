@@ -34,8 +34,8 @@
                                 </div>
                                 <div class="rejoin-sum__row rejoin-sum__row--tax-win">
                                     <span class="rejoin-sum__operator" aria-hidden="true">+</span>
-                                    <span class="rejoin-sum__label"><?php _e('Tax win', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
-                                              aria-label="<?php echo esc_attr__('How the tax win is made up', TEXT_DOMAIN); ?>"
+                                    <span class="rejoin-sum__label"><?php _e('From taxes', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
+                                              aria-label="<?php echo esc_attr__('What this amount is made of', TEXT_DOMAIN); ?>"
                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                               data-income-tax-label="<?php echo esc_attr__('From income tax', TEXT_DOMAIN); ?>"
                                               data-social-tax-label="<?php echo esc_attr__('From social tax', TEXT_DOMAIN); ?>"
@@ -106,7 +106,7 @@
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
                                     <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
                                     <g id="rejoinFigureTaxWinLabel" transform="translate(0 264.2)" fill="#FFFFFF" pointer-events="none">
-                                        <text x="580" y="-12" font-size="22"><?php esc_html_e('Tax win', TEXT_DOMAIN); ?></text>
+                                        <text x="580" y="-12" font-size="22"><?php esc_html_e('From taxes', TEXT_DOMAIN); ?></text>
                                         <text x="580" y="20" font-size="26"><tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan></text>
                                     </g>
                                     <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
@@ -118,6 +118,7 @@
                                 </g>
                             </svg>
                             <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %s', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>'); ?></p>
+                            <p class="text-secondary mt-1 mb-0"><?php _e('The difference comes from the income tax win and the part redirected from social tax, which slightly reduces your I&nbsp;pillar.', TEXT_DOMAIN); ?></p>
                         </div>
                     </div>
                 </div>
@@ -145,8 +146,8 @@
                             <div class="icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
                             </div>
-                            <h3><?php _e('You win on taxes', TEXT_DOMAIN); ?></h3>
-                            <p><?php _e('More than twice as much goes into your II pillar as comes off your pay.', TEXT_DOMAIN); ?></p>
+                            <h3><?php _e('You get more from taxes', TEXT_DOMAIN); ?></h3>
+                            <p><?php _e('More than twice as much goes into your II pillar as comes off your pay. The social tax part slightly reduces your I&nbsp;pillar.', TEXT_DOMAIN); ?></p>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
