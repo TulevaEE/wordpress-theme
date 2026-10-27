@@ -2873,18 +2873,6 @@ msgstr "Vaata arvutust →"
 msgid "Do I need to be a Tuleva saver?"
 msgstr "Kas pean selleks olema Tuleva koguja?"
 
-#: templates/second-pillar-rejoin-content.php:276
-msgid "https://tuleva.ee/blogi/"
-msgstr "https://tuleva.ee/blogi/"
-
-#: templates/second-pillar-rejoin-content.php:277
-msgid "Is it worth saving in the II pillar again?"
-msgstr "Kas II&nbsp;sambas tasub uuesti koguma hakata?"
-
-#: templates/second-pillar-rejoin-content.php:278
-msgid "Who should rejoin and who might not."
-msgstr "Kellel tasub taasliituda ja kellel pigem mitte."
-
 #: templates/second-pillar-rejoin-content.php:282
 msgid "II pillar fund comparison"
 msgstr "II&nbsp;samba fondide võrdlus"
@@ -3037,10 +3025,18 @@ msgstr "Millest see summa koosneb"
 msgid "You get more from taxes"
 msgstr "Saad maksudest juurde"
 
-#: templates/second-pillar-rejoin-content.php:149
-msgid "More than twice as much goes into your II pillar as comes off your pay. The social tax part slightly reduces your I&nbsp;pillar."
-msgstr "II&nbsp;sambasse jõuab rohkem kui kaks korda nii palju, kui sinu palgast vähemaks jääb. Sotsiaalmaksu osa vähendab veidi I&nbsp;sammast."
-
 #: templates/second-pillar-rejoin-content.php:120
 msgid "The social tax part slightly reduces your I&nbsp;pillar."
 msgstr "Sotsiaalmaksu osa vähendab veidi I&nbsp;sammast."
+
+#: templates/second-pillar-rejoin-content.php:149
+msgid "More than twice as much goes into your II pillar as comes off your pay."
+msgstr "II&nbsp;sambasse jõuab rohkem kui kaks korda nii palju, kui sinu palgast vähemaks jääb."
+
+#: templates/second-pillar-rejoin-content.php:277
+msgid "Why would many who left the II pillar like to start saving again?"
+msgstr "Miks tahaksid paljud II&nbsp;sambast lahkunud hakata uuesti koguma?"
+
+#: templates/second-pillar-rejoin-content.php:278
+msgid "We asked savers who left the II pillar what they think about rejoining."
+msgstr "Küsisime II&nbsp;sambast lahkunud kogujatelt, mida nad taasliitumisest arvavad."

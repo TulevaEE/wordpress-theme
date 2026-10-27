@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-27T15:21:37+00:00\n"
+"POT-Creation-Date: 2026-10-27T15:26:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -2703,7 +2703,7 @@ msgid "You get more from taxes"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:149
-msgid "More than twice as much goes into your II pillar as comes off your pay. The social tax part slightly reduces your I&nbsp;pillar."
+msgid "More than twice as much goes into your II pillar as comes off your pay."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:155
@@ -2855,16 +2855,12 @@ msgstr ""
 msgid "Make use of the opportunity while it lasts."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:276
-msgid "https://tuleva.ee/blogi/"
-msgstr ""
-
 #: templates/second-pillar-rejoin-content.php:277
-msgid "Is it worth saving in the II pillar again?"
+msgid "Why would many who left the II pillar like to start saving again?"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:278
-msgid "Who should rejoin and who might not."
+msgid "We asked savers who left the II pillar what they think about rejoining."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:282
