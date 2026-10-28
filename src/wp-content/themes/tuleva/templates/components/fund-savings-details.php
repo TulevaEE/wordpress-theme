@@ -18,10 +18,9 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 // the pre-ACF values and render only while a field is empty. Update the field, not the
 // literal — editing a literal whose field is already set changes nothing visible, which
 // is a quiet way to believe a document was published.
-$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Prospekt-alates-18.09.2026.pdf');
+$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf');
 $terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
-// The prospectus effective 29.10.2026 is approved; the terms do not change.
-$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf');
+$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file');
 $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file');
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
