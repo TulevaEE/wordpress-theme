@@ -2638,10 +2638,12 @@ msgid "The calculation assumes the highest possible contribution. Social tax pai
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:61
+#: templates/second-pillar-rejoin-content.php:122
 msgid "https://tuleva.ee/en/sotsmaks"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:61
+#: templates/second-pillar-rejoin-content.php:122
 msgid "slightly reduces your I&nbsp;pillar"
 msgstr ""
 
@@ -2682,8 +2684,9 @@ msgstr ""
 msgid "For a gross salary of %s"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:120
-msgid "The social tax part slightly reduces your I&nbsp;pillar."
+#: templates/second-pillar-rejoin-content.php:121
+#, php-format
+msgid "The social tax part %s."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:135
