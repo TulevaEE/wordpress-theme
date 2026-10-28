@@ -2886,10 +2886,12 @@ msgid "Contributions over 10 years"
 msgstr "Sissemaksed 10 aastaga"
 
 #: templates/second-pillar-rejoin-content.php:61
+#: templates/second-pillar-rejoin-content.php:122
 msgid "https://tuleva.ee/en/sotsmaks"
 msgstr "https://tuleva.ee/sotsmaks"
 
 #: templates/second-pillar-rejoin-content.php:61
+#: templates/second-pillar-rejoin-content.php:122
 msgid "slightly reduces your I&nbsp;pillar"
 msgstr "vähendab veidi I sammast"
 
@@ -3025,9 +3027,10 @@ msgstr "Millest see summa koosneb"
 msgid "You get more from taxes"
 msgstr "Saad maksudest juurde"
 
-#: templates/second-pillar-rejoin-content.php:120
-msgid "The social tax part slightly reduces your I&nbsp;pillar."
-msgstr "Sotsiaalmaksu osa vähendab veidi I&nbsp;sammast."
+#: templates/second-pillar-rejoin-content.php:121
+#, php-format
+msgid "The social tax part %s."
+msgstr "Sotsiaalmaksu osa %s."
 
 #: templates/second-pillar-rejoin-content.php:149
 msgid "More than twice as much goes into your II pillar as comes off your pay."
