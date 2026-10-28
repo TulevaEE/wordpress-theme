@@ -33,4 +33,21 @@ final class AccessReviewerRoleTest extends TestCase
 
         $this->assertSame(1, FakeRoles::$added);
     }
+
+    #[Test]
+    public function theUserListingGivesLoginEmailAndRolesAndNothingElse(): void
+    {
+        $users = [
+            (object) ['user_login' => 'access-review', 'user_email' => 'reviewer@example.com', 'roles' => ['access_reviewer'], 'user_pass' => 'hash'],
+            (object) ['user_login' => 'editor', 'user_email' => 'editor@example.com', 'roles' => [1 => 'editor'], 'user_pass' => 'hash'],
+        ];
+
+        $this->assertSame(
+            [
+                ['login' => 'access-review', 'email' => 'reviewer@example.com', 'roles' => ['access_reviewer']],
+                ['login' => 'editor', 'email' => 'editor@example.com', 'roles' => ['editor']],
+            ],
+            tuleva_access_review_users($users)
+        );
+    }
 }
