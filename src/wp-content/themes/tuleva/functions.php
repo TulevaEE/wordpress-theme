@@ -23,6 +23,7 @@ $theme_includes = [
     'helpers/setup.php', // Enqueue scripts & styles
     'helpers/schema.php', // Organization and FAQ structured data
     'helpers/fund-figures.php', // Management fee and fund manager's units on the fund pages
+    'helpers/access-reviewer.php', // Read-only role for the access review's user listing
 ];
 
 foreach ($theme_includes as $file) {
