@@ -32,7 +32,7 @@ $upcoming_dates_differ = $prospectus_upcoming_url !== '' && $terms_upcoming_url 
     && $prospectus_upcoming_date !== $terms_upcoming_date;
 $upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
 $model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
-$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Pohiteave-kehtib-alates-18.09.2026.pdf');
+$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/10/TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 // TKF100 has its own NAV procedure document, separate from the one the pension funds share.
