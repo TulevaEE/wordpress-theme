@@ -3051,10 +3051,6 @@ msgstr "https://public.pensionikeskus.ee/public/login.do?locale=et"
 msgid "Pensionikeskus self-service"
 msgstr "Pensionikeskuse iseteeninduses"
 
-#: templates/second-pillar-rejoin-content.php:12
-msgid "You choose your contribution: 2, 4 or 6%"
-msgstr "Oma osa valid ise:<br>2, 4 või 6%"
-
 #: templates/second-pillar-rejoin-content.php:14
 msgid "Your part is free of income tax"
 msgstr "Sinu osa on tulumaksuvaba"
@@ -3091,3 +3087,7 @@ msgstr "%1$s brutopalga ja %2$s panuse puhul"
 #: templates/second-pillar-rejoin-content.php:13
 msgid "4% of your pay comes from social tax"
 msgstr "4% palgast tuleb sotsiaalmaksust"
+
+#: templates/second-pillar-rejoin-content.php:12
+msgid "You pick 2, 4 or 6% as your part"
+msgstr "Oma osaks valid<br>2, 4 või 6%"

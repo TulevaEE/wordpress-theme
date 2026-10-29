@@ -9,7 +9,7 @@
                     <h1 class="mb-4"><?php _e('Save in the <em>II pillar</em> again and win on taxes', TEXT_DOMAIN); ?></h1>
                     <p class="m-0 lead"><?php echo get_second_pillar_rejoin_lead(get_current_time_tallinn()); ?></p>
                     <ul class="rejoin-facts">
-                        <li><?php _e('You choose your contribution: 2, 4 or 6%', TEXT_DOMAIN); ?></li>
+                        <li><?php _e('You pick 2, 4 or 6% as your part', TEXT_DOMAIN); ?></li>
                         <li><?php _e('4% of your pay comes from social tax', TEXT_DOMAIN); ?></li>
                         <li><?php _e('Your part is free of income tax', TEXT_DOMAIN); ?></li>
                     </ul>
