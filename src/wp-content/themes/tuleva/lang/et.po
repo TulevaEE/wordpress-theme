@@ -3034,9 +3034,6 @@ msgid "From your taxes"
 msgstr "Sinu maksudest"
 
 
-#: templates/second-pillar-rejoin-content.php:71
-msgid "Read on"
-msgstr "Vaata edasi"
 
 
 #: templates/second-pillar-rejoin-content.php:10

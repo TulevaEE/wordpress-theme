@@ -73,11 +73,10 @@
                 </div>
 
             </div>
-            <a class="rejoin-read-more" href="#valik"><?php _e('Read on', TEXT_DOMAIN); ?><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
         </div>
     </section>
 
-    <section class="section-spacing" id="valik">
+    <section class="section-spacing rejoin-after-hero" id="valik">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">

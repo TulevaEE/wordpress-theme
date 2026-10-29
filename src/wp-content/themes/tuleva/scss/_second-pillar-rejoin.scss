@@ -1,5 +1,22 @@
 // II pillar rejoin landing page (page_second-pillar-rejoin.php)
 
+// The next section's heading shows above the fold on a laptop or tablet screen, so the page doesn't
+// look finished at the end of the hero (a gap there reads as the bottom of the page)
+@include media-breakpoint-up(md) {
+    .second-pillar-rejoin-page {
+        // The spacing follows the screen's height: roomy on a tall screen, tight on a short
+        // laptop, where it is what lets the next heading show
+        .hero.section-spacing {
+            padding-top: clamp(3rem, 10vh, 7rem);
+            padding-bottom: clamp(2rem, 6vh, 4.5rem);
+        }
+
+        .rejoin-after-hero.section-spacing {
+            padding-top: clamp(2rem, 6vh, 4.5rem);
+        }
+    }
+}
+
 // A fresh start rather than the washed photo of the other heroes: daylight
 // glows in brand blue and green, and the tax win underlined by hand
 .bg-hero-rejoin {
@@ -68,35 +85,6 @@
             }
         }
     }
-
-    // Testers took the first screen for the whole page; this says there is more below
-    .rejoin-read-more {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: max-content;
-        margin: 4.5rem auto -1.5rem;
-        color: $text-secondary;
-        font-size: .875rem;
-        text-decoration: none;
-
-        svg {
-            width: 1.25rem;
-            height: 1.25rem;
-            animation: rejoin-read-more-nudge 2s ease-in-out infinite;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            svg {
-                animation: none;
-            }
-        }
-    }
-}
-
-@keyframes rejoin-read-more-nudge {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(.3rem); }
 }
 
 // Bootstrap places the tooltip under <body>, outside the page wrapper
