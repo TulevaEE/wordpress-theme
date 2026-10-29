@@ -2729,9 +2729,6 @@ msgstr "Kui teisel vanemal registri järgi varahooldusõigust ei ole (näiteks o
 msgid "II pillar rejoin page"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:10
-msgid "Get the <em>tax win</em> again"
-msgstr "Hakka taas <em>maksuvõitu</em> saama"
 
 #: templates/second-pillar-rejoin-content.php:32
 msgid "From your net salary"
@@ -2747,12 +2744,12 @@ msgstr "Sotsiaalmaksust"
 
 #: templates/second-pillar-rejoin-content.php:48
 msgid "Into your II pillar each month"
-msgstr "II sambasse kuus"
+msgstr "II&nbsp;sambasse iga kuu"
 
 #: templates/second-pillar-rejoin-content.php:55
 #: templates/second-pillar-rejoin-content.php:198
 msgid "Start saving again"
-msgstr "Hakkan uuesti koguma"
+msgstr "Alustan uuesti kogumist"
 
 #: templates/second-pillar-rejoin-content.php:135
 msgid "Why start saving again?"
@@ -2819,9 +2816,9 @@ msgstr "Seepärast tasub fond koos avaldusega üle vaadata. Tulevas saad fondi v
 msgid "I took money out of the II pillar after 2021. When can I rejoin?"
 msgstr "Võtsin II&nbsp;sambast raha välja pärast 2021. aastat. Millal saan uuesti liituda?"
 
-#: templates/second-pillar-rejoin-content.php:220
-msgid "Your contributions can start again once five years have passed since your payout. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
-msgstr "Sinu sissemaksed saavad uuesti alata, kui väljamaksest on möödas viis aastat. Avalduse saad esitada juba enne seda. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
+#: templates/second-pillar-rejoin-content.php:237
+msgid "You can start saving again five years after you submitted your withdrawal application. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgstr "Saad uuesti koguma hakata viis aastat pärast seda, kui esitasid raha väljavõtmise avalduse. Avalduse saad esitada juba enne seda. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
 
 #: templates/second-pillar-rejoin-content.php:224
 msgid "How can I take money out of the II pillar later?"
@@ -2840,17 +2837,8 @@ msgstr "https://tuleva.ee/pensioni-valjamaksed/"
 msgid "in monthly payments free of income tax"
 msgstr "tulumaksuvabalt igakuiste väljamaksetena"
 
-#: templates/second-pillar-rejoin-content.php:258
-msgid "What if the state takes away the 4%?"
-msgstr "Mis siis, kui riik 4% ära võtab?"
 
-#: templates/second-pillar-rejoin-content.php:260
-msgid "Money already paid in cannot be taken back, and your own contribution stays free of income tax even if the state paused its part. The law now also says the state must give at least five years' notice before reducing the 4%."
-msgstr "Juba makstud raha tagasi võtta ei saa ja sinu enda sissemakse jääb tulumaksuvabaks ka siis, kui riik oma osa peataks. Seadusesse lisandus ka reegel, et 4% vähendamisest peab riik ette teatama vähemalt viis aastat."
 
-#: templates/second-pillar-rejoin-content.php:261
-msgid "Make use of the opportunity while it lasts."
-msgstr "Kasuta võimalust seni, kuni see on."
 
 #: templates/second-pillar-rejoin-content.php:231
 msgid "How does the II pillar affect my I pillar pension?"
@@ -2895,10 +2883,6 @@ msgstr "https://tuleva.ee/sotsmaks"
 msgid "slightly reduces your I&nbsp;pillar"
 msgstr "vähendab veidi I sammast"
 
-#: templates/second-pillar-rejoin-content.php:60
-#, php-format
-msgid "The calculation assumes the highest possible contribution. Social tax paid into the II&nbsp;pillar %s."
-msgstr "Arvutus on tehtud suurima võimaliku sissemakse suurusega. II&nbsp;sambasse makstud sotsiaalmaks %s."
 
 #: templates/second-pillar-rejoin-content.php:227
 msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can't stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them."
@@ -2908,17 +2892,8 @@ msgstr "Enne seda raha teist korda välja võtta ei saa. Ainus erand on puuduv t
 msgid "or"
 msgstr "või"
 
-#: helpers/second-pillar-rejoin.php:11
-msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;March</b>."
-msgstr "<b>See&nbsp;on&nbsp;sinu&nbsp;raha.</b> Suuna osa oma maksudest uuesti enda II&nbsp;samba&nbsp;kontole. Esita avaldus <b>31.&nbsp;märtsiks</b>."
 
-#: helpers/second-pillar-rejoin.php:12
-msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;July</b>."
-msgstr "<b>See&nbsp;on&nbsp;sinu&nbsp;raha.</b> Suuna osa oma maksudest uuesti enda II&nbsp;samba&nbsp;kontole. Esita avaldus <b>31.&nbsp;juuliks</b>."
 
-#: helpers/second-pillar-rejoin.php:13
-msgid "<b>It's&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>30&nbsp;November</b>."
-msgstr "<b>See&nbsp;on&nbsp;sinu&nbsp;raha.</b> Suuna osa oma maksudest uuesti enda II&nbsp;samba&nbsp;kontole. Esita avaldus <b>30.&nbsp;novembriks</b>."
 
 #: templates/second-pillar-rejoin-content.php:9
 #: templates/second-pillar-rejoin-content.php:196
@@ -3010,9 +2985,9 @@ msgstr "Vaata üle"
 msgid "Your contribution size and fund choice."
 msgstr "Oma sissemakse suurus ja fondivalik."
 
-#: templates/second-pillar-rejoin-content.php:73
-msgid "Same money, two choices"
-msgstr "Sama raha, kaks võimalust"
+#: templates/second-pillar-rejoin-content.php:120
+msgid "Take it home as pay or let it grow in the II pillar?"
+msgstr "Palgana kätte või II&nbsp;sambasse kasvama?"
 
 #: templates/second-pillar-rejoin-content.php:37
 #: templates/second-pillar-rejoin-content.php:109
@@ -3043,3 +3018,109 @@ msgstr "Miks tahaksid paljud II&nbsp;sambast lahkunud hakata uuesti koguma?"
 #: templates/second-pillar-rejoin-content.php:278
 msgid "We asked savers who left the II pillar what they think about rejoining."
 msgstr "Küsisime II&nbsp;sambast lahkunud kogujatelt, mida nad taasliitumisest arvavad."
+
+
+
+
+
+
+#: templates/second-pillar-rejoin-content.php:28
+msgid "Your contribution"
+msgstr "Sinu panus brutopalgast"
+
+#: templates/second-pillar-rejoin-content.php:41
+#: templates/second-pillar-rejoin-content.php:115
+msgid "From your taxes"
+msgstr "Sinu maksudest"
+
+
+#: templates/second-pillar-rejoin-content.php:71
+msgid "Read on"
+msgstr "Vaata edasi"
+
+
+#: templates/second-pillar-rejoin-content.php:10
+msgid "Save in the <em>II pillar</em> again and win on taxes"
+msgstr "Kogu uuesti <em>II&nbsp;sambas</em> ja võida maksudelt"
+
+#: templates/second-pillar-rejoin-content.php:23
+msgid "Your gross salary"
+msgstr "Sinu brutopalk"
+
+#: templates/second-pillar-rejoin-content.php:72
+#, php-format
+msgid "Social tax paid into the II&nbsp;pillar %s."
+msgstr "II&nbsp;sambasse makstud sotsiaalmaks %s."
+
+#: templates/second-pillar-rejoin-content.php:110
+msgid "Read more on the blog about who can rejoin and why it pays to start saving again →"
+msgstr "Loe blogist rohkem, kes saab ja miks tasub uuesti koguma hakata →"
+
+
+
+
+
+#: helpers/second-pillar-rejoin.php:11
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;March</b>."
+msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kontole. Esita avaldus <b>31.&nbsp;märtsiks</b>."
+
+#: helpers/second-pillar-rejoin.php:12
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;July</b>."
+msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kontole. Esita avaldus <b>31.&nbsp;juuliks</b>."
+
+#: helpers/second-pillar-rejoin.php:13
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b>."
+msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kontole. Esita avaldus <b>30.&nbsp;novembriks</b>."
+
+#: templates/second-pillar-rejoin-content.php:245
+msgid "I don't remember when I took money out of the II pillar. Where can I check?"
+msgstr "Ma ei mäleta, millal II&nbsp;sambast raha välja võtsin. Kust seda vaadata?"
+
+#: templates/second-pillar-rejoin-content.php:248
+#, php-format
+msgid "%1$s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can. You can also check it in the %2$s."
+msgstr "%1$s ja vaata plokki „Sinu valikud“. II&nbsp;samba real on kirjas, kas saad juba uuesti liituda või mis kuupäevast saad. Seda saad vaadata ka %2$s."
+
+#: templates/second-pillar-rejoin-content.php:243
+msgid "https://public.pensionikeskus.ee/public/login.do?locale=en"
+msgstr "https://public.pensionikeskus.ee/public/login.do?locale=et"
+
+#: templates/second-pillar-rejoin-content.php:243
+msgid "Pensionikeskus self-service"
+msgstr "Pensionikeskuse iseteeninduses"
+
+#: templates/second-pillar-rejoin-content.php:13
+msgid "You choose your contribution: 2, 4 or 6%"
+msgstr "Oma osa valid ise:<br>2, 4 või 6%"
+
+#: templates/second-pillar-rejoin-content.php:14
+msgid "4% more comes from social tax"
+msgstr "Sotsiaalmaksust lisandub 4%"
+
+#: templates/second-pillar-rejoin-content.php:15
+msgid "Your part is free of income tax"
+msgstr "Sinu osa on tulumaksuvaba"
+
+#: templates/second-pillar-rejoin-content.php:239
+msgid "If I don't want to apply now, can I do it later?"
+msgstr "Kui ma ei taha praegu avaldust esitada, kas saan seda hiljem teha?"
+
+#: templates/second-pillar-rejoin-content.php:241
+msgid "Yes. You can apply at any time and there is no final deadline. Contributions start three times a year, depending on when you apply:"
+msgstr "Jah. Avalduse saad esitada igal ajal ja lõpptähtaega sellel ei ole. Sissemaksed algavad kolm korda aastas, olenevalt sellest, millal avalduse esitad:"
+
+#: templates/second-pillar-rejoin-content.php:243
+msgid "applied by 31 March: in September"
+msgstr "31.&nbsp;märtsiks esitatud avalduse järel septembris"
+
+#: templates/second-pillar-rejoin-content.php:244
+msgid "applied by 31 July: in January"
+msgstr "31.&nbsp;juuliks esitatud avalduse järel jaanuaris"
+
+#: templates/second-pillar-rejoin-content.php:245
+msgid "applied by 30 November: in May"
+msgstr "30.&nbsp;novembriks esitatud avalduse järel mais"
+
+#: templates/second-pillar-rejoin-content.php:247
+msgid "The sooner you start, the longer you gain from the tax win."
+msgstr "Mida varem alustad, seda kauem saad maksudelt võita."

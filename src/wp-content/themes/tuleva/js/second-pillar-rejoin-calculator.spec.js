@@ -10,8 +10,7 @@ describe('computeRejoinContributions', () => {
             incomeTaxSaved: 26,
             state: 80,
             taxWin: 106,
-            intoPillar: 200,
-            tenYearTotal: 24000
+            intoPillar: 200
         });
     });
 
@@ -28,8 +27,7 @@ describe('computeRejoinContributions', () => {
             incomeTaxSaved: 0,
             state: 20,
             taxWin: 20,
-            intoPillar: 50,
-            tenYearTotal: 6000
+            intoPillar: 50
         });
     });
 

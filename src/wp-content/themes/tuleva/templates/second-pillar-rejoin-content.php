@@ -6,9 +6,13 @@
         <div class="container">
             <div class="row align-items-center gy-5 gx-xl-5">
                 <div class="col-lg-6 text-center text-lg-start text-navy">
-                    <span class="eyebrow"><?php _e('Keep saving in the II pillar', TEXT_DOMAIN); ?></span>
-                    <h1 class="mb-4"><?php _e('Get the <em>tax win</em> again', TEXT_DOMAIN); ?></h1>
+                    <h1 class="mb-4"><?php _e('Save in the <em>II pillar</em> again and win on taxes', TEXT_DOMAIN); ?></h1>
                     <p class="m-0 lead"><?php echo get_second_pillar_rejoin_lead(get_current_time_tallinn()); ?></p>
+                    <ul class="rejoin-facts">
+                        <li><?php _e('You choose your contribution: 2, 4 or 6%', TEXT_DOMAIN); ?></li>
+                        <li><?php _e('4% more comes from social tax', TEXT_DOMAIN); ?></li>
+                        <li><?php _e('Your part is free of income tax', TEXT_DOMAIN); ?></li>
+                    </ul>
                 </div>
 
                 <div class="col-lg-6" id="kalkulaator">
@@ -16,11 +20,21 @@
                         <div class="card-body p-2">
                             <div class="bg-gray-2 p-3 rounded-3">
                                 <div class="align-items-center row">
-                                    <label class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" for="calcSalary"><?php _e('Gross salary', TEXT_DOMAIN); ?></label>
+                                    <label class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" for="calcSalary"><?php _e('Your gross salary', TEXT_DOMAIN); ?></label>
                                     <div class="col-sm-6 col-lg-7 col-xl-6">
                                         <div class="input-group input-group-lg">
                                             <input class="form-control text-end" type="text" id="calcSalary" value="2000" inputmode="numeric" autocomplete="off">
-                                            <span class="input-group-text">&euro;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center row mt-2" role="radiogroup" aria-labelledby="calcRateLabel">
+                                    <span class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" id="calcRateLabel"><?php _e('Your contribution', TEXT_DOMAIN); ?></span>
+                                    <div class="col-sm-6 col-lg-7 col-xl-6">
+                                        <div class="btn-group w-100 rejoin-rate">
+                                            <?php foreach ([2, 4, 6] as $rate) { ?>
+                                                <input type="radio" class="btn-check" name="calcRate" id="calcRate<?php echo $rate; ?>" value="<?php echo $rate; ?>" autocomplete="off"<?php echo $rate === 6 ? ' checked' : ''; ?>>
+                                                <label class="btn btn-outline-primary" for="calcRate<?php echo $rate; ?>"><?php echo $rate; ?>%</label>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -34,7 +48,7 @@
                                 </div>
                                 <div class="rejoin-sum__row rejoin-sum__row--tax-win">
                                     <span class="rejoin-sum__operator" aria-hidden="true">+</span>
-                                    <span class="rejoin-sum__label"><?php _e('From taxes', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
+                                    <span class="rejoin-sum__label"><?php _e('From your taxes', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
                                               aria-label="<?php echo esc_attr__('What this amount is made of', TEXT_DOMAIN); ?>"
                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                               data-income-tax-label="<?php echo esc_attr__('From income tax', TEXT_DOMAIN); ?>"
@@ -48,21 +62,18 @@
                                     <span class="rejoin-sum__label"><?php _e('Into your II pillar each month', TEXT_DOMAIN); ?></span>
                                     <span class="rejoin-sum__amount" id="resTotal">200&nbsp;&euro;</span>
                                 </div>
-                                <div class="rejoin-sum__ten-years">
-                                    <span><?php _e('Contributions over 10 years', TEXT_DOMAIN); ?></span>
-                                    <span class="fw-medium" id="resTenYears">24&nbsp;000&nbsp;&euro;</span>
-                                </div>
                                 <a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-primary btn-lg w-100 mt-4"><?php _e('Start saving again', TEXT_DOMAIN); ?></a>
                             </div>
                         </div>
                     </div>
                     <p class="text-secondary text-center mt-3 mb-0"><?php printf(
-                        __('The calculation assumes the highest possible contribution. Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
+                        __('Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
                         '<a class="text-reset" href="' . esc_url(__('https://tuleva.ee/en/sotsmaks', TEXT_DOMAIN)) . '">' . __('slightly reduces your I&nbsp;pillar', TEXT_DOMAIN) . '</a>'
                     ); ?></p>
                 </div>
 
             </div>
+            <a class="rejoin-read-more" href="#valik"><?php _e('Read on', TEXT_DOMAIN); ?><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
         </div>
     </section>
 
@@ -70,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
-                    <h2 class="mb-5"><?php _e('Same money, two choices', TEXT_DOMAIN); ?></h2>
+                    <h2 class="mb-5"><?php _e('Take it home as pay or let it grow in the II pillar?', TEXT_DOMAIN); ?></h2>
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-lg-8">
                             <svg id="rejoinFigure" class="w-100 h-auto" viewBox="70 170 660 430" aria-hidden="true">
@@ -104,12 +115,12 @@
                                 <line x1="400" y1="190" x2="400" y2="590" stroke="#ADB5BD" stroke-width="2" stroke-dasharray="6 6"/>
                                 <circle cx="400" cy="404" r="30" fill="#FFFFFF" stroke="#ADB5BD" stroke-width="2"/>
                                 <g text-anchor="middle" font-weight="700" fill="#002F63">
-                                    <text x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
+                                    <text id="rejoinFigureTakeHomeLabel" x="220" y="413" font-size="26"><tspan id="rejoinFigureTakeHome">94&nbsp;€</tspan></text>
                                     <g id="rejoinFigureTaxWinLabel" transform="translate(0 264.2)" fill="#FFFFFF" pointer-events="none">
-                                        <text x="580" y="-12" font-size="22"><?php esc_html_e('From taxes', TEXT_DOMAIN); ?></text>
+                                        <text x="580" y="-12" font-size="22"><?php esc_html_e('From your taxes', TEXT_DOMAIN); ?></text>
                                         <text x="580" y="20" font-size="26"><tspan id="rejoinFigureTaxWin">106&nbsp;€</tspan></text>
                                     </g>
-                                    <text x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
+                                    <text id="rejoinFigurePillarBaseLabel" x="580" y="413" font-size="26"><tspan id="rejoinFigurePillarBase">94&nbsp;€</tspan></text>
                                     <text x="400" y="412" font-size="22"><?php esc_html_e('or', TEXT_DOMAIN); ?></text>
                                     <text x="220" y="526" font-size="40"><?php printf(esc_html__('%s a month', TEXT_DOMAIN), '<tspan id="rejoinFigureTakeHomeTotal">94&nbsp;€</tspan>'); ?></text>
                                     <text x="220" y="566" font-size="26"><?php esc_html_e('to your bank account', TEXT_DOMAIN); ?></text>
@@ -128,10 +139,7 @@
         </div>
     </section>
 
-    <!-- The sections below use the savings fund landing page's components (who-cards, emphasis box) -->
-    <div class="savings-fund-landing-page">
-
-    <section class="section-spacing bg-gray-1" id="miks">
+    <section class="section-spacing bg-gray-1 savings-fund-landing-page" id="miks">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
@@ -159,10 +167,14 @@
                             <p><?php _e('Your II pillar assets are truly yours and can be inherited. You can take the money out from the age of 60.', TEXT_DOMAIN); ?></p>
                         </article>
                     </div>
+                    <p class="mt-4 mb-0"><a href="https://tuleva.ee/soovitused/ii-sambas-uuesti-koguma/"><?php _e('Read more on the blog about who can rejoin and why it pays to start saving again →', TEXT_DOMAIN); ?></a></p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- The sections below use the savings fund landing page's components (who-cards, emphasis box) -->
+    <div class="savings-fund-landing-page">
 
     <section class="section-spacing" id="kuidas">
         <div class="container">
@@ -220,7 +232,29 @@
                         <div class="qa__question-wrapper" id="millal-saan-uuesti-liituda">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I took money out of the II pillar after 2021. When can I rejoin?', TEXT_DOMAIN); ?></a>
                             <div id="answer-7" class="collapse">
-                                <p><?php _e('Your contributions can start again once five years have passed since your payout. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You can start saving again five years after you submitted your withdrawal application. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+                        <div class="qa__question-wrapper" id="kas-saan-hiljem-liituda">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('If I don\'t want to apply now, can I do it later?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-9" class="collapse">
+                                <p><?php _e('Yes. You can apply at any time and there is no final deadline. Contributions start three times a year, depending on when you apply:', TEXT_DOMAIN); ?></p>
+                                <ul>
+                                    <li><?php _e('applied by 31 March: in September', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('applied by 31 July: in January', TEXT_DOMAIN); ?></li>
+                                    <li><?php _e('applied by 30 November: in May', TEXT_DOMAIN); ?></li>
+                                </ul>
+                                <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+                        <div class="qa__question-wrapper" id="ei-maleta-millal-raha-valja-votsin">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-8"><?php _e('I don\'t remember when I took money out of the II pillar. Where can I check?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-8" class="collapse">
+                                <p><?php printf(
+                                    __('%1$s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can. You can also check it in the %2$s.', TEXT_DOMAIN),
+                                    '<a href="' . get_app_url('/') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>',
+                                    '<a href="' . esc_url(__('https://public.pensionikeskus.ee/public/login.do?locale=en', TEXT_DOMAIN)) . '">' . __('Pensionikeskus self-service', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kuidas-raha-katte-saab">
@@ -255,13 +289,6 @@
                             <div id="answer-5" class="collapse">
                                 <p><?php _e('To the fund where you saved before you took your money out. Banks have renamed many funds over the past five years, so you may not recognise your old fund by its name.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('That\'s why it\'s worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar.', TEXT_DOMAIN); ?></p>
-                            </div>
-                        </div>
-                        <div class="qa__question-wrapper" id="kui-riik-4-protsenti-ara-votab">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-6"><?php _e('What if the state takes away the 4%?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-6" class="collapse">
-                                <p><?php _e('Money already paid in cannot be taken back, and your own contribution stays free of income tax even if the state paused its part. The law now also says the state must give at least five years\' notice before reducing the 4%.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('Make use of the opportunity while it lasts.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
