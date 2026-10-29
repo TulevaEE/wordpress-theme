@@ -174,6 +174,18 @@ class ThemeEnqueue
                 ]
             );
         }
+        if (is_page_template('page_second-pillar-246.php')) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'second-pillar-246-calculator',
+                    'src' => $js_path . 'second-pillar-246-calculator.js',
+                    'ver' => $SECOND_PILLAR_246_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
 
         /* Get file that contains SimplyEnqueue class */
         require_once(get_template_directory() . '/lib/enqueue.php');

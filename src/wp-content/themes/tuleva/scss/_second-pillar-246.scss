@@ -1,0 +1,209 @@
+// II samba 2-4-6 maandumisleht — kalkulaatorid (maksuvõit + vara kasv).
+// Kõik stiilid on scoped .second-pillar-246-page alla, et mitte mõjutada muid lehti.
+// Prototüübi allikas: work/kristel/kalkulaator/landing-v5.html
+
+.second-pillar-246-page {
+  // Scoped CSS-muutujad
+  --navy:#002F63; --navy2:#5C738C; --state:#9FB3C8; --bright:#00AEEA;
+  --action:#006CE6; --action-l:#008DEE; --text:#293036; --text2:#5A6672;
+  --text3:#8A8D91; --green:#008300; --bg:#FFFFFF; --bg-blue:#EDF7FD;
+  --bg-blue2:#F2FAFE; --bg-gray:#F6F8FA; --border:#E4E9EF; --border-blue:#D3E8F5;
+  --gray-coin:#C8D0D8; --serif:'Merriweather',Georgia,serif; --sans:'Roboto',Arial,sans-serif;
+  --r2:8px; --r3:12px; --r4:16px; --maxw:728px;
+
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 20px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+
+  * { box-sizing: border-box; }
+
+  // HERO-BÄND
+  .hero{background:linear-gradient(180deg,#E6F3FB 0%,#EDF7FD 45%,#F6FBFE 100%);border-bottom:1px solid var(--border-blue);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-80px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(0,174,234,.10),transparent 70%);pointer-events:none}
+  .hero-in{max-width:1120px;margin:0 auto;padding:52px 24px 60px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center;position:relative;z-index:1}
+  .hero-text,.hero-card{min-width:0}
+  .hero-text h1{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:46px;line-height:1.14;margin:0 0 22px;letter-spacing:-.01em}
+  .hero-text .dek{font-size:21px;line-height:1.5;color:var(--text);margin:0}
+  .hero-text .dek .hl{background:linear-gradient(transparent 58%,#FCE22877 58%);padding:0 2px}
+  @media(max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr);gap:28px;padding:34px 20px 40px}.hero-text h1{font-size:34px}.hero-text .dek{font-size:19px}}
+
+  .article{max-width:var(--maxw);margin:0 auto;padding:16px 20px 24px}
+  .article p{margin:0 0 30px}
+  .article h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:52px 0 22px;text-align:center}
+  .article a.inline{color:var(--action);text-decoration:underline;text-underline-offset:2px}
+  .article strong{color:var(--navy)}
+
+  // Kalkulaatori ühine raam
+  .calc{border:1px solid var(--border-blue);border-radius:var(--r4);background:var(--bg-gray);padding:24px;margin:32px 0;font-size:17px}
+  .calc h3{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:21px;margin:0 0 14px;line-height:1.25}
+  .field{margin-bottom:16px}
+  .field:last-child{margin-bottom:0}
+  .hint{font-size:13px;color:var(--text2);margin-top:6px;line-height:1.4}
+  .salary-row{display:flex;align-items:center;gap:10px}
+  input[type=number]{font-family:var(--sans);font-size:20px;font-weight:700;color:var(--navy);border:1px solid var(--border);border-radius:var(--r2);padding:10px 12px;width:150px;background:#fff}
+  input[type=number]:focus{outline:none;border-color:var(--action);box-shadow:0 0 0 3px rgba(0,108,230,.15)}
+  .unit{color:var(--text2)}
+  .seg{display:inline-flex;border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;background:#fff}
+  .seg button{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--text2);background:#fff;border:0;padding:12px 24px;cursor:pointer;border-right:1px solid var(--border);min-width:68px}
+  .seg button:last-child{border-right:0}
+  .seg button[aria-pressed=true]{background:var(--action);color:#fff}
+  input[type=range]{width:100%;accent-color:var(--action)}
+  .rngval{font-weight:700;color:var(--navy)}
+  .adv{display:flex;gap:20px;flex-wrap:wrap}
+  .adv .field{flex:1;min-width:160px;margin:0}
+  .adv label{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:7px}
+  .hint .mark7{background:linear-gradient(transparent 55%,#FCE228 55%);font-weight:700;color:var(--navy);padding:0 2px}
+
+  // Maksuvõidu kalkulaator — kaardi-layout (hero kaart)
+  .calc-tax{background:#fff;border:1px solid var(--border-blue);box-shadow:0 18px 50px rgba(0,47,99,.12);padding:28px 30px;margin:0;border-radius:var(--r4)}
+  .calc-tax .trow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+  .calc-tax .trow-input{padding:9px 0}
+  .calc-tax .tlbl,.calc-tax .trow-input label{font-size:16px;color:var(--text);font-weight:400;margin:0}
+  .calc-tax .trow-input label{font-weight:600}
+  .calc-tax .tval{font-size:18px;font-weight:700;color:var(--navy);white-space:nowrap}
+  .calc-tax input[type=number]{width:140px;text-align:right}
+  .calc-tax .tdiv{border:0;border-top:1px solid var(--border);margin:10px 0 4px}
+  .calc-tax .trow-sub{padding-top:0;margin-top:-6px}
+  .calc-tax .trow-sub .tlbl{color:var(--text2);font-size:15px;padding-left:2px}
+  .calc-tax .trow-sum{border-top:1px solid var(--border);margin-top:4px;padding-top:11px}
+  .calc-tax .trow-sum .tlbl{font-weight:700;color:var(--navy);font-size:16px}
+  .calc-tax .trow-hero{padding-top:6px}
+  .calc-tax .trow-hero .tlbl{font-weight:700;color:var(--navy);font-size:17px}
+  .calc-tax .tval-win{font-family:var(--serif);font-size:32px;color:var(--green);font-weight:700}
+  .calc-tax .per{font-weight:400;color:var(--text2);font-size:14px}
+  .calc-tax .cta{margin-top:18px}
+  .calc-tax .tfoot{text-align:center;font-size:13px;color:var(--text2);margin:12px 0 0}
+  @media(max-width:560px){.calc-tax{padding:22px 18px}.calc-tax .tval-win{font-size:27px}}
+
+  // Vahe-sisend (vanus + tootlus)
+  .midinput{background:var(--bg-blue2);border:1px solid var(--border-blue);border-radius:var(--r3);padding:16px 18px;margin-bottom:14px}
+  .midinput .mi-lead{font-weight:600;color:var(--navy);font-size:15px;margin:0 0 12px}
+  .midinput .mi-lead .mi-note{font-weight:400;color:var(--text2)}
+
+  // Vara kasv
+  .wealth{background:#fff;border:1px solid var(--border-blue);border-radius:var(--r3);padding:18px;margin-bottom:14px}
+  .wealth h4{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:18px;margin:0 0 12px}
+  .wealth-viz{display:flex;gap:18px;align-items:stretch}
+  .vbars{display:flex;align-items:flex-end;gap:12px;flex:0 0 38%;height:196px;padding-top:2px}
+  .vbar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+  .vbar .vval{font-family:var(--serif);font-weight:700;font-size:12px;color:var(--navy);margin-bottom:6px;white-space:nowrap}
+  .vbar.dim .vval{color:var(--text2)}
+  .vbar .vcol{width:100%;max-width:50px;border-radius:7px 7px 0 0;background:var(--navy);transition:height .55s ease}
+  .vbar.dim .vcol{background:var(--gray-coin)}
+  .vbar .vlbl{font-size:14px;font-weight:700;color:var(--navy);margin-top:8px}
+  .vbar.dim .vlbl{color:var(--text2)}
+  .chart-wrap{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+  .chart-wrap svg{width:100%;height:auto;display:block}
+  .chart-wrap .cy,.chart-wrap .cx{font-size:10px;fill:var(--text3)}
+  .chart-wrap .grid{stroke:var(--border);stroke-width:1}
+  .chart-wrap .cend{font-size:11px;font-weight:700}
+  .chart-cap{font-size:12px;color:var(--text3);text-align:center;margin-top:6px}
+  .note-proj{font-size:13px;color:var(--text2);background:var(--bg-blue2);border-radius:var(--r2);padding:10px 12px;margin-top:12px;line-height:1.45}
+  @media(max-width:560px){.wealth-viz{flex-direction:column}.vbars{flex-basis:auto;width:100%;height:150px}}
+
+  // Lahtivolditavad (details)
+  details{border:1px solid var(--border);border-radius:var(--r2);margin-bottom:12px;background:#fff;overflow:hidden}
+  .calc details summary{cursor:pointer;padding:13px 16px;font-weight:600;color:var(--navy);font-size:15px;list-style:none;display:flex;justify-content:space-between}
+  summary::-webkit-details-marker{display:none}
+  .calc details summary .chev{color:var(--action);transition:transform .2s;display:inline-block}
+  .calc details[open] summary .chev{transform:rotate(90deg)}
+  .calc details .dbody{padding:4px 16px 16px}
+  .stack{display:flex;height:36px;border-radius:var(--r2);overflow:hidden;margin:4px 0 12px;border:1px solid var(--border)}
+  .stack span{display:block;height:100%;transition:width .5s}
+  .s-net{background:var(--navy2)}
+  .s-state{background:var(--state)}
+  .s-tax{background:var(--bright)}
+  .s-grow{background:var(--navy)}
+  .legend{display:flex;flex-direction:column;gap:7px;font-size:14px;margin-bottom:6px}
+  .legend div{display:flex;align-items:center;gap:8px}
+  .dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+  .d-net{background:var(--navy2)}
+  .d-state{background:var(--state)}
+  .d-tax{background:var(--bright)}
+  .d-grow{background:var(--navy)}
+  .legend .v{margin-left:auto;font-weight:700;color:var(--navy)}
+  .assume ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--text);line-height:1.5}
+  .assume li{margin-bottom:7px}
+
+  // CTA-nupud
+  .cta{display:block;width:100%;text-align:center;background:var(--action);color:#fff;font-weight:700;font-size:18px;border:0;border-radius:var(--r2);padding:15px;text-decoration:none}
+  .cta:hover{background:var(--action-l);color:#fff}
+  .cta-2l{display:flex;flex-direction:column;align-items:center;gap:3px;padding:14px 15px}
+  .cta-2l .cta-main{font-size:18px;font-weight:700}
+  .cta-2l .cta-dl{font-size:13px;font-weight:500;opacity:.9}
+
+  // Kogujate pildiplokk
+  .savers{margin:18px 0 6px;text-align:center}
+  .savers img{max-width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r3)}
+  .savers figcaption{font-size:13px;color:var(--text2);margin-top:10px;line-height:1.45;max-width:560px;margin-left:auto;margin-right:auto}
+
+  // KKK
+  .qa{border:1px solid var(--border-blue);border-radius:var(--r3);background:var(--bg-gray);overflow:hidden;margin:0 0 14px}
+  .qa summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:19px;line-height:1.3}
+  .qa summary .chev{color:var(--action);font-size:22px;transition:transform .2s;flex-shrink:0}
+  .qa[open] summary .chev{transform:rotate(90deg)}
+  .qa[open] summary{border-bottom:1px solid var(--border-blue)}
+  .qa .qabody{padding:14px 20px 2px}
+  .qa .qabody p{font-size:18px;line-height:1.55;margin:0 0 16px}
+
+  // CTA-bänd
+  .ctaband{background:var(--bg-blue);border-top:1px solid var(--border-blue);border-bottom:1px solid var(--border-blue);margin-top:52px;padding:52px 20px}
+  .ctaband-in{max-width:var(--maxw);margin:0 auto;text-align:left}
+  .ctaband h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:0 0 22px;text-align:left}
+  .ctaband p{font-size:18px;color:var(--text);margin:0 0 22px}
+  .ctaband .savers{margin:8px 0 26px;text-align:left}
+  .ctaband .savers img{mix-blend-mode:multiply;border-radius:0}
+  .ctaband .savers figcaption{margin-left:0}
+  .ctaband .cta{max-width:380px;margin:0}
+
+  // Õiguslik
+  .legal{max-width:var(--maxw);margin:40px auto 0;border-top:1px solid var(--border);padding:22px 20px 10px}
+  .legal p{font-size:12.5px;color:var(--text3);line-height:1.55;margin:0 0 10px}
+
+  // ===== MOBIIL (>50% liiklusest) =====
+  @media(max-width:560px){
+    & { font-size:18px; }
+    .hero-in{padding:26px 18px 32px}
+    .hero-text h1{font-size:30px;line-height:1.16;margin-bottom:16px}
+    .hero-text .dek{font-size:17px}
+    .calc-tax{padding:20px 16px}
+    .calc-tax .trow-input{flex-direction:column;align-items:stretch;gap:8px;padding:10px 0}
+    .calc-tax .trow-input label{margin-bottom:0}
+    .calc-tax .salary-row{width:100%}
+    .calc-tax .salary-row input[type=number]{flex:1;width:auto;text-align:right}
+    .calc-tax .seg{display:flex;width:100%}
+    .calc-tax .seg button{flex:1;min-width:0;padding:13px 0}
+    .calc-tax .tval-win{font-size:26px}
+    .article{padding:8px 18px 18px}
+    .article p{font-size:17px;margin-bottom:22px}
+    .article h2{font-size:25px;line-height:1.28;margin:40px 0 18px}
+    .calc{padding:18px 14px}
+    .adv{flex-direction:column;gap:16px}
+    .adv .field{min-width:0}
+    .wealth{padding:16px 14px}
+    .qa summary{font-size:17px;padding:14px 16px;gap:10px}
+    .qa .qabody{padding:12px 16px 2px}
+    .qa .qabody p{font-size:16px}
+    .ctaband{padding:38px 18px}
+    .ctaband h2{font-size:25px}
+    .ctaband p{font-size:17px}
+    .ctaband .cta{max-width:none}
+  }
+  // Kõige kitsamad ekraanid (iPhone SE/mini)
+  @media(max-width:430px){
+    .hero-text h1{font-size:27px}
+    .hero-text .dek{font-size:16px}
+    .calc-tax .tlbl{font-size:14.5px}
+    .calc-tax .tval{font-size:17px}
+    .calc-tax .per{font-size:12px}
+    .calc-tax .tval-win{font-size:24px}
+    .vbars{gap:8px;height:150px}
+    .vbar .vval{font-size:11px}
+    .vbar .vlbl{font-size:13px}
+    .article h2,.ctaband h2{font-size:23px}
+    .midinput{padding:14px 14px}
+    .note-proj{font-size:12.5px}
+  }
+}
