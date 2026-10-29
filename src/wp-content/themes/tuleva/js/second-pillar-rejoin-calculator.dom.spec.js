@@ -72,6 +72,7 @@ function renderCalculator() {
             <text id="rejoinFigurePillarBaseLabel"></text>
         </svg>
         ${fromTemplate(/<span id="rejoinFigureSalary">[^<]*<\/span>/)}
+        ${fromTemplate(/<span id="rejoinFigureRate">[^<]*<\/span>/)}
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -279,14 +280,31 @@ describe('II pillar rejoin calculator on the page', () => {
         ]);
     });
 
-    it('names the gross salary under the figure, following the calculator', () => {
+    it('names the gross salary and the contribution under the figure, following the calculator', () => {
         typeSalary('3000');
+        chooseRate('4');
 
         expect(shown('rejoinFigureSalary')).toBe('3000 €');
+        expect(shown('rejoinFigureRate')).toBe('4%');
+    });
+
+    it('draws a smaller contribution as a shorter II pillar column, measured against what 6% would put in', () => {
+        const columnHeight = () =>
+            ['rejoinFigurePillarBaseBar', 'rejoinFigureTaxWinBar']
+                .map((id) => Number(document.getElementById(id).getAttribute('height')))
+                .reduce((sum, height) => sum + height, 0);
+
+        expect(columnHeight()).toBeCloseTo(280, 1);
+
+        chooseRate('4');
+        expect(columnHeight()).toBeCloseTo(224, 1);
+
+        chooseRate('2');
+        expect(columnHeight()).toBeCloseTo(168, 1);
     });
 
     it('paints the figure for the same example before the script runs', () => {
-        [...FIGURE_AMOUNTS, 'rejoinFigureSalary'].forEach((id) => {
+        [...FIGURE_AMOUNTS, 'rejoinFigureSalary', 'rejoinFigureRate'].forEach((id) => {
             expect(paintedInTemplate(id)).toBe(shown(id));
         });
         FIGURE_SHAPES.forEach((id) => {

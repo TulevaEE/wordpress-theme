@@ -5,6 +5,7 @@
  */
 
 var DEFAULT_PAYMENT_RATE_PERCENT = 6;
+var HIGHEST_PAYMENT_RATE_PERCENT = 6;
 var STATE_CONTRIBUTION_PERCENT = 4;
 var INCOME_TAX_RATE = 0.22;
 var MONTHLY_BASIC_EXEMPTION = 700;
@@ -116,8 +117,8 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         return String(Math.round(value * 10) / 10);
     }
 
-    function barHeight(amount, intoPillar) {
-        return ((FIGURE_BASELINE_Y - FIGURE_PILLAR_TOP_Y) * amount) / intoPillar;
+    function barHeight(amount, intoPillarAtHighestRate) {
+        return ((FIGURE_BASELINE_Y - FIGURE_PILLAR_TOP_Y) * amount) / intoPillarAtHighestRate;
     }
 
     function placeBar(bar, bottom, height) {
@@ -130,10 +131,10 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         placeBar(edge, bottom, FIGURE_BAR_CORNER_EDGE);
     }
 
-    function stretchFigureBars(result) {
-        var takeHomeHeight = barHeight(result.netSalaryCost, result.intoPillar);
+    function stretchFigureBars(result, intoPillarAtHighestRate) {
+        var takeHomeHeight = barHeight(result.netSalaryCost, intoPillarAtHighestRate);
         var takeHomeTop = FIGURE_BASELINE_Y - takeHomeHeight;
-        var taxWinHeight = barHeight(result.taxWin, result.intoPillar);
+        var taxWinHeight = barHeight(result.taxWin, intoPillarAtHighestRate);
         var taxWinLabel = inFigure('TaxWinLabel');
         placeBarWithSquareBottom(inFigure('TakeHomeBar'), inFigure('TakeHomeBarEdge'), FIGURE_BASELINE_Y, takeHomeHeight);
         placeBar(inFigure('PillarBaseBar'), FIGURE_BASELINE_Y, takeHomeHeight);
@@ -153,7 +154,9 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     function showFigure(grossSalary, rate) {
         var figureSalary = grossSalary < FIGURE_FOLLOWS_SALARY_FROM ? figureExampleSalary : grossSalary;
         var result = computeRejoinContributions(figureSalary, rate);
+        var intoPillarAtHighestRate = computeRejoinContributions(figureSalary, HIGHEST_PAYMENT_RATE_PERCENT).intoPillar;
         inFigure('Salary').textContent = eur(figureSalary);
+        inFigure('Rate').textContent = rate + '%';
         inFigure('Contribution').textContent = eur(result.netSalaryCost + result.incomeTaxSaved);
         inFigure('IncomeTax').textContent = eur(result.incomeTaxSaved);
         inFigure('TakeHome').textContent = eur(result.netSalaryCost);
@@ -161,7 +164,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         inFigure('TaxWin').textContent = eur(result.taxWin);
         inFigure('TakeHomeTotal').textContent = eur(result.netSalaryCost);
         inFigure('PillarTotal').textContent = eur(result.intoPillar);
-        stretchFigureBars(result);
+        stretchFigureBars(result, intoPillarAtHighestRate);
         showTaxWinBreakdown(inFigure('TaxWinInfo'), result);
     }
 
