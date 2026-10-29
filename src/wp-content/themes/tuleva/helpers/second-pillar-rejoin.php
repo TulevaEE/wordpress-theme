@@ -8,9 +8,9 @@ require_once __DIR__ . '/deadline-calculations.php';
  */
 function get_second_pillar_rejoin_lead(DateTimeInterface $now) {
     return match ((int) get_next_second_pillar_deadline($now)->format('n')) {
-        3 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;March</b>.', TEXT_DOMAIN),
-        7 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>31&nbsp;July</b>.', TEXT_DOMAIN),
-        11 => __('<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again. Apply by <b>30&nbsp;November</b>.', TEXT_DOMAIN),
+        3 => __('See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;March</b>.', TEXT_DOMAIN),
+        7 => __('See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;July</b>.', TEXT_DOMAIN),
+        11 => __('See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b>.', TEXT_DOMAIN),
     };
 }
 
