@@ -19,7 +19,7 @@
                     <div class="card calculator rounded-4">
                         <div class="card-body p-2">
                             <div class="bg-gray-2 p-3 rounded-3">
-                                <div class="align-items-center row">
+                                <div class="mb-3 align-items-center row">
                                     <label class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" for="calcSalary"><?php _e('Your gross salary', TEXT_DOMAIN); ?></label>
                                     <div class="col-sm-6 col-lg-7 col-xl-6">
                                         <div class="input-group input-group-lg">
@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="align-items-center row mt-2" role="radiogroup" aria-labelledby="calcRateLabel">
+                                <div class="align-items-center row" role="radiogroup" aria-labelledby="calcRateLabel">
                                     <span class="col-sm-6 col-lg-5 col-xl-6 col-form-label pe-0" id="calcRateLabel"><?php _e('Your contribution', TEXT_DOMAIN); ?></span>
                                     <div class="col-sm-6 col-lg-7 col-xl-6">
                                         <div class="btn-group w-100 rejoin-rate">
