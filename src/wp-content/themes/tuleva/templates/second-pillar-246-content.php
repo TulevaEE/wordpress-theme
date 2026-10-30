@@ -41,16 +41,15 @@
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
       <div class="midinput">
-        <p class="mi-lead">Turgude tootlus kõigub, aga <b>kuni 3× maksuvõit</b> annab sulle kindla edumaa.</p>
         <div class="field mi-salary">
           <label for="gross2">Sinu brutopalk</label>
           <div class="salary-row"><input type="number" id="gross2" value="3000" min="0" step="any"> <span class="unit">€</span></div>
         </div>
         <div class="adv">
           <div class="field"><label for="age">Sinu vanus — <span class="rngval" id="ageVal">35</span></label>
-            <input type="range" id="age" min="18" max="62" value="35"><div class="hint">Arvutame siin kuni 65. eluaastani. Kui töötad edasi, saad kogumist jätkata ka hiljem. Ja tegelikult ei ole sul tõenäoliselt vaja raha ühe korraga – saad seda kasutada vähehaaval, samal ajal kui ülejäänu turgudel edasi tootlust teenib.</div></div>
+            <div class="slider-wrap"><input type="range" id="age" min="18" max="62" value="35"></div><div class="hint">Arvutame siin kuni 65. eluaastani. Kui töötad edasi, saad kogumist jätkata ka hiljem. Ja tegelikult ei ole sul tõenäoliselt vaja raha ühe korraga – saad seda kasutada vähehaaval, samal ajal kui ülejäänu turgudel edasi tootlust teenib.</div></div>
           <div class="field"><label for="ret">Oodatav tootlus aastas — <span class="rngval" id="retVal">0%</span></label>
-            <div class="ret-slider"><input type="range" id="ret" min="0" max="9" step="0.5" value="0"><span class="ret-mark" aria-hidden="true"><span class="ret-mark-arrow">↑</span><span class="ret-mark-lbl">aktsiate ajalooline tootlus 7%</span></span></div>
+            <div class="slider-wrap"><input type="range" id="ret" min="0" max="9" step="0.5" value="0"><span class="ret-mark" aria-hidden="true"><span class="ret-mark-arrow">↑</span><span class="ret-mark-lbl">aktsiate ajalooline tootlus 7%</span></span></div>
             <div class="hint">Maailma aktsiaturud on viimasel 30 aastal toonud <span class="mark7">keskmiselt 7% aastas</span> tulu, aga see ei ole tulevikutootluse garantii. Mis on kindel: pannes rohkem kõrvale, säästad rohkem maksudelt ja kogud rohkem.</div></div>
         </div>
       </div>
