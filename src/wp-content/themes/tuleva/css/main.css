@@ -19970,7 +19970,7 @@ sup {
   background: var(--bg-blue2);
   border: 1px solid var(--border-blue);
   border-radius: var(--r4);
-  padding: 28px 24px 18px;
+  padding: 30px 24px;
   margin: 4px 0 10px;
 }
 .second-pillar-246-page .coins {
@@ -20052,17 +20052,9 @@ sup {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-.second-pillar-246-page .coin-foot {
-  border-top: 1px solid var(--border-blue);
-  margin: 22px 0 0;
-  padding-top: 14px;
-  text-align: center;
-  font-size: 13.5px;
-  color: var(--text2);
-}
 @media (max-width: 560px) {
   .second-pillar-246-page .coin-card {
-    padding: 22px 16px 16px;
+    padding: 24px 16px;
   }
   .second-pillar-246-page .coins {
     gap: 14px;
