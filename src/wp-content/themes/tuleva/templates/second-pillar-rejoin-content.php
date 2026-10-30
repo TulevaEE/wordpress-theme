@@ -66,10 +66,6 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-secondary text-center mt-3 mb-0"><?php printf(
-                        __('Social tax paid into the II&nbsp;pillar %s.', TEXT_DOMAIN),
-                        '<a class="text-reset" href="' . esc_url(__('https://tuleva.ee/en/sotsmaks', TEXT_DOMAIN)) . '">' . __('slightly reduces your I&nbsp;pillar', TEXT_DOMAIN) . '</a>'
-                    ); ?></p>
                 </div>
 
             </div>
@@ -199,12 +195,65 @@
         </div>
     </section>
 
-    <section class="section-spacing-bottom" id="alusta">
+    <section class="section-spacing bg-gray-1" id="sotsiaalmaks">
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-lg-11 col-xl-10 text-center">
+                    <h2 class="mb-4"><?php _e('Which would you pick?', TEXT_DOMAIN); ?></h2>
+                    <div class="row justify-content-center">
+                        <p class="col-lg-9 col-xl-8 mb-5"><?php _e('When you save in the II&nbsp;pillar, 4% of your pay goes from social tax into your own II&nbsp;pillar account instead of the I&nbsp;pillar. That\'s why your I&nbsp;pillar pension will be slightly smaller, by a few euros a month for each year you save. But together with the income tax win, much more goes into your II&nbsp;pillar.', TEXT_DOMAIN); ?></p>
+                    </div>
+
+                    <div class="row justify-content-center g-3">
+                        <div class="col-6 col-lg-4">
+                            <div class="card rejoin-choice h-100 rounded-4 px-2 py-3 p-md-4">
+                                <p class="h5 text-reset mb-3"><?php _e('I&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="fs-2 fw-bold mb-1">+<span data-pillar-value="firstPillarMonthly">2&nbsp;€</span></p>
+                                <p class="mb-0"><?php _e('a month<br class="d-sm-none"> to your I&nbsp;pillar pension', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card rejoin-choice rejoin-choice--second-pillar h-100 rounded-4 px-2 py-3 p-md-4">
+                                <p class="h5 text-reset mb-3"><?php _e('II&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="fs-2 fw-bold mb-1">+<span data-pillar-value="secondPillarYearly">1277&nbsp;€</span></p>
+                                <p class="mb-0"><?php _e('a year<br class="d-sm-none"> to your II&nbsp;pillar account', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary mt-4 mb-0"><?php printf(esc_html__('For one year of saving at a gross salary of %1$s and a %2$s contribution.', TEXT_DOMAIN), '<span data-pillar-value="salary">2000&nbsp;€</span>', '<span data-pillar-value="rate">6%</span>'); ?>
+                        <a class="text-reset text-nowrap" data-bs-toggle="collapse" href="#rejoinChoiceCalculation" role="button" aria-expanded="false" aria-controls="rejoinChoiceCalculation"><?php _e('See the calculation', TEXT_DOMAIN); ?></a></p>
+                    <div class="collapse" id="rejoinChoiceCalculation">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-9 col-xl-8 text-start text-secondary pt-4">
+                                <p><?php printf(
+                                    __('<strong>I&nbsp;pillar, %1$s a month:</strong> every year you work earns you I&nbsp;pillar pension points. Half a point depends on your pay compared to the average, the other half is the same for everyone. A II&nbsp;pillar saver gets 80%% of them. At your pay the difference is %2$s points, or %3$s a month at a point value of %4$s. Source: %5$s.', TEXT_DOMAIN),
+                                    '<span data-pillar-value="firstPillarMonthly">2&nbsp;€</span>',
+                                    '<span data-pillar-value="firstPillarUnitsLost">0,194</span>',
+                                    '<span data-pillar-value="firstPillarMonthlyExact">2,04&nbsp;€</span>',
+                                    '<span data-pillar-value="pensionUnitValue">10,477&nbsp;€</span>',
+                                    '<a class="text-reset" href="' . esc_url(__('https://sotsiaalkindlustusamet.ee/en/pension-and-benefits/pension-amount/pension-calculation', TEXT_DOMAIN)) . '">' . __('Social Insurance Board', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                                <p class="mb-0"><?php printf(
+                                    __('<strong>II&nbsp;pillar, %1$s a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don\'t pay on your %4$s contribution.', TEXT_DOMAIN),
+                                    '<span data-pillar-value="secondPillarYearly">1277&nbsp;€</span>',
+                                    '<span data-pillar-value="socialTaxYearly">960&nbsp;€</span>',
+                                    '<span data-pillar-value="incomeTaxYearly">317&nbsp;€</span>',
+                                    '<span data-pillar-value="rate">6%</span>'
+                                ); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-spacing" id="alusta">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-9 col-xl-8">
                     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
-                        <h2><?php _e('Keep saving in the II pillar', TEXT_DOMAIN); ?></h2>
+                        <h2><?php _e('Save in the II pillar again', TEXT_DOMAIN); ?></h2>
                         <p class="lead mx-auto"><?php echo get_second_pillar_rejoin_closing_lead(get_current_time_tallinn()); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Start saving again', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
@@ -228,18 +277,7 @@
                         <div class="qa__question-wrapper" id="millal-saan-uuesti-liituda">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I took money out of the II pillar after 2021. When can I rejoin?', TEXT_DOMAIN); ?></a>
                             <div id="answer-7" class="collapse">
-                                <p><?php _e('You can start saving again five years after you submitted your withdrawal application. You can apply before then. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
-                            </div>
-                        </div>
-                        <div class="qa__question-wrapper" id="kas-saan-hiljem-liituda">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('If I don\'t want to apply now, can I do it later?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-9" class="collapse">
-                                <p><?php _e('Yes. You can apply at any time and there is no final deadline. Contributions start three times a year, depending on when you apply:', TEXT_DOMAIN); ?></p>
-                                <ul>
-                                    <li><?php _e('applied by 31 March: in September', TEXT_DOMAIN); ?></li>
-                                    <li><?php _e('applied by 31 July: in January', TEXT_DOMAIN); ?></li>
-                                    <li><?php _e('applied by 30 November: in May', TEXT_DOMAIN); ?></li>
-                                </ul>
+                                <p><?php _e('You can start saving again five years after you submitted your withdrawal application. You can apply before then, and there is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
@@ -251,19 +289,6 @@
                                     '<a href="' . get_app_url('/') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>',
                                     '<a href="' . esc_url(__('https://public.pensionikeskus.ee/public/login.do?locale=en', TEXT_DOMAIN)) . '">' . __('Pensionikeskus self-service', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
-                            </div>
-                        </div>
-                        <div class="qa__question-wrapper" id="kuidas-raha-katte-saab">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('How can I take money out of the II pillar later?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-1" class="collapse">
-                                <p><?php printf(__('From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs.', TEXT_DOMAIN), '<a href="' . esc_url(__('https://tuleva.ee/pensioni-valjamaksed/', TEXT_DOMAIN)) . '">' . __('in monthly payments free of income tax', TEXT_DOMAIN) . '</a>'); ?></p>
-                                <p><?php _e('You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can\'t stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them.', TEXT_DOMAIN); ?></p>
-                            </div>
-                        </div>
-                        <div class="qa__question-wrapper" id="moju-i-sambale">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-2"><?php _e('How does the II pillar affect my I pillar pension?', TEXT_DOMAIN); ?></a>
-                            <div id="answer-2" class="collapse">
-                                <p><?php printf(__('The state\'s 4%% comes from your social tax, which would otherwise go to the I pillar. That\'s why your I pillar pension will later be slightly smaller. Overall, saving in the II pillar leaves you ahead. %s', TEXT_DOMAIN), '<a href="' . esc_url(__('https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/', TEXT_DOMAIN)) . '">' . __('See the calculation →', TEXT_DOMAIN) . '</a>'); ?></p>
                             </div>
                         </div>
                         <div class="qa__question-wrapper" id="kas-pean-olema-tuleva-koguja">
@@ -287,29 +312,15 @@
                                 <p><?php _e('That\'s why it\'s worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
+                        <div class="qa__question-wrapper" id="kuidas-raha-katte-saab">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-1"><?php _e('How can I take money out of the II pillar later?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-1" class="collapse">
+                                <p><?php printf(__('From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs.', TEXT_DOMAIN), '<a href="' . esc_url(__('https://tuleva.ee/pensioni-valjamaksed/', TEXT_DOMAIN)) . '">' . __('in monthly payments free of income tax', TEXT_DOMAIN) . '</a>'); ?></p>
+                                <p><?php _e('You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can\'t stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-spacing-bottom" id="uuri-rohkem">
-        <div class="container">
-            <div class="row">
-                <div class="mx-auto col-lg-9 col-xl-8">
-                    <h2 class="mb-0 text-center"><?php _e('Learn more', TEXT_DOMAIN); ?></h2>
-                    <div class="resources">
-                        <a class="resource resource--post" href="https://tuleva.ee/analuusid/miks-tahaksid-paljud-ii-sambast-lahkunud-hakata-uuesti-koguma/">
-                            <span class="post-title"><?php _e('Why would many who left the II pillar like to start saving again?', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('We asked savers who left the II pillar what they think about rejoining.', TEXT_DOMAIN); ?></span>
-                            <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
-                        </a>
-                        <a class="resource resource--post" href="https://tuleva.ee/vaata/pensionifondide-vordlus/">
-                            <span class="post-title"><?php _e('II pillar fund comparison', TEXT_DOMAIN); ?></span>
-                            <span class="post-teaser"><?php _e('All funds in one table: returns and fees.', TEXT_DOMAIN); ?></span>
-                            <span class="post-more"><?php _e('Read more →', TEXT_DOMAIN); ?></span>
-                        </a>
-                    </div>
+                    <p class="text-center mt-4 mb-0"><a href="https://tuleva.ee/analuusid/miks-tahaksid-paljud-ii-sambast-lahkunud-hakata-uuesti-koguma/"><?php _e('We asked savers who left the II pillar what they think about rejoining →', TEXT_DOMAIN); ?></a></p>
                 </div>
             </div>
         </div>

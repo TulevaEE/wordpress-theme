@@ -17,6 +17,14 @@ var FIGURE_BASELINE_Y = 470;
 var FIGURE_PILLAR_TOP_Y = 190;
 var FIGURE_BAR_CORNER_EDGE = 12;
 var FIGURE_AMOUNT_BASELINE_SHIFT = 9;
+var MONTHS_IN_YEAR = 12;
+// The I pillar from 1 April 2026: the value of one pension unit a month, the minimum wage,
+// and the average salary that earns one unit, from the 2026 average social tax for pensions
+var PENSION_UNIT_VALUE = 10.477;
+var MINIMUM_WAGE = 946;
+var AVERAGE_INSURED_SALARY = 5092.7 / 0.2 / MONTHS_IN_YEAR;
+// A II pillar saver earns 16% instead of 20% of social tax and 0.8 instead of 1 of the equal half
+var SHARE_OF_PENSION_UNIT_TO_SECOND_PILLAR = 0.2;
 
 function incomeTaxSaved(grossSalary, ownContribution) {
     var taxableBeforeContribution =
@@ -46,6 +54,30 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     };
 }
 
+/**
+ * What one year in the II pillar is worth in each pillar, unrounded so that each figure on the
+ * page is rounded only once. The II pillar gets a year of the tax win. The I pillar would have
+ * paid for the social tax part with pension units: half of a unit follows the salary against
+ * the average, the other half is the same for everyone earning at least the minimum wage.
+ *
+ * @param {number} grossSalary - Gross monthly salary in euros
+ * @param {number} paymentRatePercent - Own contribution, e.g. 6
+ * @returns {{firstPillarUnitsLost: number, firstPillarMonthly: number, socialTaxYearly: number, secondPillarYearly: number}}
+ */
+function computeFirstPillarComparison(grossSalary, paymentRatePercent) {
+    var units =
+        0.5 * Math.min(1, grossSalary / MINIMUM_WAGE) + 0.5 * (grossSalary / AVERAGE_INSURED_SALARY);
+    var unitsLost = SHARE_OF_PENSION_UNIT_TO_SECOND_PILLAR * units;
+    var state = (grossSalary * STATE_CONTRIBUTION_PERCENT) / 100;
+    var ownContribution = (grossSalary * paymentRatePercent) / 100;
+    return {
+        firstPillarUnitsLost: unitsLost,
+        firstPillarMonthly: unitsLost * PENSION_UNIT_VALUE,
+        socialTaxYearly: MONTHS_IN_YEAR * state,
+        secondPillarYearly: MONTHS_IN_YEAR * (state + incomeTaxSaved(grossSalary, ownContribution))
+    };
+}
+
 (function () {
     if (typeof document === 'undefined') {
         return;
@@ -70,6 +102,11 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
     function eur(value) {
         return value.toLocaleString(locale) + ' €';
     }
+
+    function fixed(value, digits) {
+        return value.toLocaleString(locale, { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    }
+
 
     function parseEuros(text) {
         return Number(text.replace(/\s/g, ''));
@@ -168,6 +205,25 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         showTaxWinBreakdown(inFigure('TaxWinInfo'), result);
     }
 
+    function showFirstPillarComparison(grossSalary, rate) {
+        var figureSalary = grossSalary < FIGURE_FOLLOWS_SALARY_FROM ? figureExampleSalary : grossSalary;
+        var comparison = computeFirstPillarComparison(figureSalary, rate);
+        var values = {
+            salary: eur(figureSalary),
+            rate: rate + '%',
+            firstPillarMonthly: eur(Math.round(comparison.firstPillarMonthly)),
+            secondPillarYearly: eur(Math.round(comparison.secondPillarYearly)),
+            socialTaxYearly: eur(Math.round(comparison.socialTaxYearly)),
+            incomeTaxYearly: eur(Math.round(comparison.secondPillarYearly) - Math.round(comparison.socialTaxYearly)),
+            firstPillarUnitsLost: fixed(comparison.firstPillarUnitsLost, 3),
+            firstPillarMonthlyExact: fixed(comparison.firstPillarMonthly, 2) + ' €',
+            pensionUnitValue: eur(PENSION_UNIT_VALUE)
+        };
+        document.querySelectorAll('[data-pillar-value]').forEach(function (element) {
+            element.textContent = values[element.dataset.pillarValue];
+        });
+    }
+
     function update() {
         var grossSalary = read(salary);
         var rate = selectedRate();
@@ -179,6 +235,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
         if (figure) {
             showFigure(grossSalary, rate);
         }
+        showFirstPillarComparison(grossSalary, rate);
     }
 
     salary.addEventListener('input', update);
@@ -230,6 +287,7 @@ function computeRejoinContributions(grossSalary, paymentRatePercent) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         computeRejoinContributions: computeRejoinContributions,
+        computeFirstPillarComparison: computeFirstPillarComparison,
         MAX_GROSS_SALARY: MAX_GROSS_SALARY
     };
 }

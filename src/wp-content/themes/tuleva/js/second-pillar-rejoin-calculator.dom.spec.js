@@ -41,6 +41,22 @@ const FIGURE_SHAPES = [
     'rejoinFigurePillarBaseBar'
 ];
 
+const PILLAR_VALUES = [
+    'salary',
+    'rate',
+    'firstPillarMonthly',
+    'secondPillarYearly',
+    'socialTaxYearly',
+    'incomeTaxYearly',
+    'firstPillarUnitsLost',
+    'firstPillarMonthlyExact',
+    'pensionUnitValue'
+];
+
+function pillarValuesInTemplate() {
+    return template.match(/<(span|strong|text|tspan)[^>]*data-pillar-value="[^"]*"[^>]*>[^<]*<\/(span|strong|text|tspan)>/g).join('');
+}
+
 function shapeInTemplate(id) {
     return fromTemplate(new RegExp('<(rect|path) id="' + id + '"[^>]*>'));
 }
@@ -73,6 +89,7 @@ function renderCalculator() {
         </svg>
         ${fromTemplate(/<span id="rejoinFigureSalary">[^<]*<\/span>/)}
         ${fromTemplate(/<span id="rejoinFigureRate">[^<]*<\/span>/)}
+        <div id="pillarValues">${pillarValuesInTemplate()}</div>
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -91,6 +108,23 @@ function barHeights() {
 
 function taxWinLabelPosition(svg) {
     return svg.querySelector('#rejoinFigureTaxWinLabel').getAttribute('transform');
+}
+
+function pillarValues(root) {
+    return Object.fromEntries(
+        PILLAR_VALUES.map((name) => [
+            name,
+            [...new Set([...root.querySelectorAll(`[data-pillar-value="${name}"]`)].map((element) =>
+                element.textContent.replace(/\s/g, ' ').replace(/&nbsp;/g, ' ')
+            ))]
+        ])
+    );
+}
+
+function paintedPillarValues() {
+    const painted = document.createElement('div');
+    painted.innerHTML = pillarValuesInTemplate();
+    return pillarValues(painted);
 }
 
 function shown(id) {
@@ -371,5 +405,50 @@ describe('II pillar rejoin calculator on the page', () => {
         typeSalary('0');
 
         expect(shown('resTotal')).toBe('0 €');
+    });
+
+
+    it('weighs a year in the II pillar against the I pillar for the 2000 € example at 6%, everywhere it is shown', () => {
+        expect(pillarValues(document)).toEqual({
+            salary: ['2000 €'],
+            rate: ['6%'],
+            firstPillarMonthly: ['2 €'],
+            secondPillarYearly: ['1277 €'],
+            socialTaxYearly: ['960 €'],
+            incomeTaxYearly: ['317 €'],
+            firstPillarUnitsLost: ['0,194'],
+            firstPillarMonthlyExact: ['2,04 €'],
+            pensionUnitValue: ['10,477 €']
+        });
+    });
+
+    it('follows the salary and the contribution in the I and II pillar comparison from 1000 €', () => {
+        typeSalary('3000');
+        chooseRate('2');
+
+        expect(pillarValues(document)).toEqual({
+            salary: ['3000 €'],
+            rate: ['2%'],
+            firstPillarMonthly: ['3 €'],
+            secondPillarYearly: ['1598 €'],
+            socialTaxYearly: ['1440 €'],
+            incomeTaxYearly: ['158 €'],
+            firstPillarUnitsLost: ['0,241'],
+            firstPillarMonthlyExact: ['2,53 €'],
+            pensionUnitValue: ['10,477 €']
+        });
+    });
+
+    it.each(['', '2', '200', '999'])(
+        'keeps the page example in the I and II pillar comparison for a salary of "%s", below 1000 €',
+        (typed) => {
+            typeSalary(typed);
+
+            expect(pillarValues(document)).toEqual(paintedPillarValues());
+        }
+    );
+
+    it('paints the I and II pillar comparison for the same example before the script runs', () => {
+        expect(paintedPillarValues()).toEqual(pillarValues(document));
     });
 });

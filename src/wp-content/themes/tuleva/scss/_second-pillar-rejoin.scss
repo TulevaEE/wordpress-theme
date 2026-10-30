@@ -87,6 +87,21 @@
     }
 }
 
+// The I and II pillar choice: the I pillar card in the grey of an option you pass over,
+// the II pillar card in the green of the tax win in the figure above
+.second-pillar-rejoin-page {
+    .rejoin-choice {
+        border: 3px solid $gray-300;
+        color: $text-secondary;
+    }
+
+    .rejoin-choice--second-pillar {
+        border-color: $green;
+        background-color: mix($green, $white, 5%);
+        color: $green;
+    }
+}
+
 // Bootstrap places the tooltip under <body>, outside the page wrapper
 .rejoin-tax-win-breakdown {
     display: grid;
@@ -94,6 +109,19 @@
     column-gap: .75rem;
     row-gap: .125rem;
     font-variant-numeric: tabular-nums;
+}
+
+// On a phone the figure shrinks to about half its size, so its small labels grow to stay readable
+@include media-breakpoint-down(sm) {
+    #rejoinFigure {
+        text[font-size="22"] {
+            font-size: 26px;
+        }
+
+        text[font-size="26"] {
+            font-size: 30px;
+        }
+    }
 }
 
 .rejoin-figure__tax-win {
@@ -118,9 +146,12 @@
 .second-pillar-rejoin-page {
 
     // Labels in the grey input box start where the sum's labels do, past the + and = column
-    // (the box's row pulls back by half a gutter, which the column padding then has to cover)
-    .bg-gray-2 .col-form-label {
-        padding-left: calc(1.75rem + var(--bs-gutter-x) * .5);
+    // (the box's row pulls back by half a gutter, which the column padding then has to cover).
+    // On a phone the label sits above its field instead, so it starts where the field does
+    @include media-breakpoint-up(sm) {
+        .bg-gray-2 .col-form-label {
+            padding-left: calc(1.75rem + var(--bs-gutter-x) * .5);
+        }
     }
 
     .rejoin-rate .btn {
