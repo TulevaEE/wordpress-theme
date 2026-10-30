@@ -2979,10 +2979,6 @@ msgstr "Millest see summa koosneb"
 msgid "You get more from taxes"
 msgstr "Saad maksudest juurde"
 
-#: templates/second-pillar-rejoin-content.php:131
-#, php-format
-msgid "The social tax part %s."
-msgstr "Sotsiaalmaksu osa %s."
 
 #: templates/second-pillar-rejoin-content.php:159
 msgid "More than twice as much goes into your II pillar as comes off your pay."

@@ -127,10 +127,7 @@
                                     <text x="580" y="566" font-size="26"><?php esc_html_e('to your II pillar account', TEXT_DOMAIN); ?></text>
                                 </g>
                             </svg>
-                            <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %1$s and a %2$s contribution', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>', '<span id="rejoinFigureRate">6%</span>'); ?>.<span class="d-block"><?php printf(
-                                __('The social tax part %s.', TEXT_DOMAIN),
-                                '<a class="text-reset text-nowrap" href="' . esc_url(__('https://tuleva.ee/en/sotsmaks', TEXT_DOMAIN)) . '">' . __('slightly reduces your I&nbsp;pillar', TEXT_DOMAIN) . '</a>'
-                            ); ?></span></p>
+                            <p class="text-secondary mt-3 mb-0"><?php printf(esc_html__('For a gross salary of %1$s and a %2$s contribution', TEXT_DOMAIN), '<span id="rejoinFigureSalary">2000&nbsp;€</span>', '<span id="rejoinFigureRate">6%</span>'); ?>.</p>
                         </div>
                     </div>
                 </div>
