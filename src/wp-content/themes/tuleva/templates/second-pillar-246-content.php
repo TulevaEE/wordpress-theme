@@ -46,9 +46,9 @@
           <div class="salary-row"><input type="number" id="gross2" value="3000" min="0" step="any"> <span class="unit">€</span></div>
         </div>
         <div class="adv">
-          <div class="field"><label for="age">Sinu vanus — <span class="rngval" id="ageVal">35</span></label>
+          <div class="field"><label for="age">Sinu vanus – <span class="rngval" id="ageVal">35</span></label>
             <div class="slider-wrap"><input type="range" id="age" min="18" max="62" value="35"></div><div class="hint">Arvutame siin kuni 65. eluaastani. Kui töötad edasi, saad kogumist jätkata ka hiljem. Ja tegelikult ei ole sul tõenäoliselt vaja raha ühe korraga – saad seda kasutada vähehaaval, samal ajal kui ülejäänu turgudel edasi tootlust teenib.</div></div>
-          <div class="field"><label for="ret">Oodatav tootlus aastas — <span class="rngval" id="retVal">0%</span></label>
+          <div class="field"><label for="ret">Oodatav tootlus aastas – <span class="rngval" id="retVal">0%</span></label>
             <div class="slider-wrap"><input type="range" id="ret" min="0" max="9" step="0.5" value="0"><span class="ret-mark" aria-hidden="true"><span class="ret-mark-arrow">↑</span><span class="ret-mark-lbl">aktsiate ajalooline tootlus 7%</span></span></div>
             <div class="hint">Maailma aktsiaturud on viimasel 30 aastal toonud <span class="mark7">keskmiselt 7% aastas</span> tulu, aga see ei ole tulevikutootluse garantii. Mis on kindel: pannes rohkem kõrvale, säästad rohkem maksudelt ja kogud rohkem.</div></div>
         </div>
@@ -62,9 +62,9 @@
             <div class="vbar dim" data-r="4"><span class="vval" id="vv4"></span><span class="vtrack"><span class="vcol" id="vc4"></span></span><span class="vlbl">4%</span></div>
             <div class="vbar" data-r="6"><span class="vval" id="vv6"></span><span class="vtrack"><span class="vcol" id="vc6"></span></span><span class="vlbl">6%</span></div>
           </div>
-          <div class="chart-wrap"><div id="chart"></div><p class="chart-cap">Liittulu teeb aastatega oma töö · 2% / 4% / 6%</p></div>
+          <div class="chart-wrap"><div id="chart"></div><p class="chart-cap">Liittulu teeb aastatega oma töö.</p></div>
         </div>
-        <p class="note-proj">Arvutus algab uuest aastast ja näitab, kui sa valitud sissemaksega II sambasse tulevikus <strong>juurde</strong> kogud — lisaks sellele, mis juba siiani kogunud oled.</p>
+        <p class="note-proj">Arvutus algab uuest aastast ja näitab, kui sa valitud sissemaksega II sambasse tulevikus <strong>juurde</strong> kogud – lisaks sellele, mis juba siiani kogunud oled.</p>
       </div>
 
       <details id="dec">
@@ -84,11 +84,11 @@
         <summary>Kuidas me seda arvutame? <span class="chev" aria-hidden="true">›</span></summary>
         <div class="dbody"><ul>
           <li>Tulumaks 22%, maksuvaba tulu 700 €/kuus, töötuskindlustusmakse 1,6%</li>
-          <li>Riik suunab lisaks +4% brutopalga suurusest, võttes selle sotsiaalmaksust. See mõjutab I samba pensionit — <a class="inline" href="https://tuleva.ee/sotsmaks">tuleva.ee/sotsmaks</a></li>
+          <li>Riik suunab lisaks +4% brutopalga suurusest, võttes selle sotsiaalmaksust. See mõjutab I samba pensionit – <a class="inline" href="https://tuleva.ee/sotsmaks">tuleva.ee/sotsmaks</a></li>
           <li>Arvutustes oleme eeldanud, et sinu palk võiks kasvada 3% aastas.</li>
           <li>Vara keskmine näitlik tootlus aastas on sinu valitud liuguri väärtus. Mineviku tootlus ei ütle, milliseks kujuneb tootlus tulevikus. Selle näite mõte pole ennustada su vara kasvu, vaid teha arusaadavaks, kuidas mõjutab tulevikuvara see, kui palju sa täna kõrvale paned.</li>
           <li>Tulumaksuvabastus kehtib sissemaksete puhul – vara kasutusel tuleb maksta maksu sõltuvalt sellest, millal ja kuidas vara kasutusele võtad. Eelpensionieast alates saad vara kasutada soodustingimustel – tasud vaid 10% tulumaksu. Kui valid fondipensioni (võtad raha välja vähehaaval, jättes ülejäänu kasvama), ei maksa tulumaksu üldse.</li>
-          <li>Arvutused on näitlikud ja üldharivad, mitte personaalne investeerimissoovitus. Pikaajalised summad on näitlikud prognoosid, mitte lubadus – investeeringu väärtus võib aja jooksul nii kasvada kui kahaneda. Pane tähele, et maksemäära tõstmine vähendab sinu igakuist netopalka.</li>
+          <li>Arvutused on näitlikud ja üldharivad, mitte personaalne investeerimissoovitus. Pikaajalised summad on näitlikud prognoosid, mitte lubadus – investeeringu väärtus võib aja jooksul nii kasvada kui kahaneda. Pane tähele, et sissemakse tõstmine vähendab sinu igakuist netopalka.</li>
         </ul></div>
       </details>
 
@@ -99,7 +99,7 @@
     <details class="qa">
       <summary>Miks on kaval II sambasse rohkem koguda? <span class="chev" aria-hidden="true">›</span></summary>
       <div class="qabody">
-        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Tänu sellele saad iga <strong>78 sendi</strong> eest, mis sa oma netopalgast „ohverdad“, oma II sambasse <strong>terve euro</strong>. Kui investeeriksid sama raha mujale, alustaksid 22% miinusega.</p>
+        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Tänu sellele saad iga <strong>78 sendi</strong> eest, mis sa oma netopalgast „ohverdad”, oma II sambasse <strong>terve euro</strong>. Kui investeeriksid sama raha mujale, alustaksid 22% miinusega.</p>
         <div class="coin-card">
           <div class="coins">
             <div class="coin coin-net"><span class="coin-amt">0,78 €</span><span class="coin-lbl">vähem netopalka</span></div>
