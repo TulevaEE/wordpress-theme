@@ -3,7 +3,7 @@
   <section class="hero">
     <div class="hero-in">
       <div class="hero-text">
-        <h1>Tõsta täna II samba sissemakset</h1>
+        <h1><?php echo esc_html( get_field( 'hero_title' ) ?: 'Tõsta täna II samba sissemakset' ); ?></h1>
         <p class="dek">Nüüd saad ise valida, kas kogud 2, 4 või 6% brutopalgast. Suurem protsent tähendab rohkem maksuvõitu: iga tulevikuks kõrvale pandud euro maksab sulle <span class="hl">vaid 78 senti</span>.</p>
       </div>
       <div class="hero-card">
@@ -33,9 +33,9 @@
 
   <div class="article">
 
-    <p>See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.</p>
+    <p><?php echo esc_html( get_field( 'intro_1' ) ?: 'See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.' ); ?></p>
 
-    <p>II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.</p>
+    <p><?php echo esc_html( get_field( 'intro_2' ) ?: 'II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.' ); ?></p>
 
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
@@ -126,14 +126,13 @@
 
   <section class="ctaband">
     <div class="ctaband-in">
-      <h2>Kogu uuest aastast rohkem</h2>
-      <p>Me Tulevas oleme veendunud, et kõige kavalam on suunata II sambasse 6%. Ligi pool meiega koos kogujatest on sissemakset juba tõstnud.</p>
+      <h2><?php echo esc_html( get_field( 'cta_title' ) ?: 'Kogu uuest aastast rohkem' ); ?></h2>
+      <?php echo get_field( 'cta_intro' ) ?: '<p>Me Tulevas oleme veendunud, et kõige kavalam on suunata II sambasse 6%. Ligi pool meiega koos kogujatest on sissemakset juba tõstnud.</p>'; ?>
       <figure class="savers">
         <img src="https://tuleva.ee/wp-content/uploads/2024/11/246-faces-1.jpg" alt="Tuleva kogujad, kes on II samba makset juba tõstnud" loading="lazy">
         <figcaption>Nende hulgas Indrek Kasela, Riin Mäesalu, Marko Oolo, Kristi Saare, Priit Lepasepp ja teised.</figcaption>
       </figure>
-      <p>Tee avaldus enne 30. novembrit ära. Siis hakkab suurem tükike palgast sinu II sambasse liikuma juba uuest aastast. Kui tähtaeg mööda lasta, saad uue võimaluse suuremat maksuvõitu kasutada alles aasta pärast.</p>
-      <p>Avalduse tegemine võtab paar minutit. Tee see kohe ära ja siis tunne õigustatult uhkust. Oled teinud oma tuleviku heaks midagi, mis töötab edasi iseenesest, iga kuu, märkamatult.</p>
+      <?php echo get_field( 'cta_outro' ) ?: '<p>Tee avaldus enne 30. novembrit ära. Siis hakkab suurem tükike palgast sinu II sambasse liikuma juba uuest aastast. Kui tähtaeg mööda lasta, saad uue võimaluse suuremat maksuvõitu kasutada alles aasta pärast.</p><p>Avalduse tegemine võtab paar minutit. Tee see kohe ära ja siis tunne õigustatult uhkust. Oled teinud oma tuleviku heaks midagi, mis töötab edasi iseenesest, iga kuu, märkamatult.</p>'; ?>
       <a class="cta cta-2l" href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>"><span class="cta-main">Tõstan sissemakset →</span><span class="cta-dl">Tähtaeg 30. november</span></a>
     </div>
   </section>
