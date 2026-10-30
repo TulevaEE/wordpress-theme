@@ -34,9 +34,9 @@
 
   <div class="article">
 
-    <p><?php echo esc_html( get_field( 'intro_1' ) ?: 'See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.' ); ?></p>
+    <?php echo get_field( 'intro_1' ) ?: '<p>See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.</p>'; ?>
 
-    <p><?php echo esc_html( get_field( 'intro_2' ) ?: 'II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.' ); ?></p>
+    <?php echo get_field( 'intro_2' ) ?: '<p>II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.</p>'; ?>
 
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
