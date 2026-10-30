@@ -25,6 +25,8 @@ var MINIMUM_WAGE = 946;
 var AVERAGE_INSURED_SALARY = 5092.7 / 0.2 / MONTHS_IN_YEAR;
 // A II pillar saver earns 16% instead of 20% of social tax and 0.8 instead of 1 of the equal half
 var SHARE_OF_PENSION_UNIT_TO_SECOND_PILLAR = 0.2;
+// People aged 65 have 19.3 years left to live (Statistics Estonia, 2025)
+var AVERAGE_YEARS_IN_RETIREMENT = 19;
 
 function incomeTaxSaved(grossSalary, ownContribution) {
     var taxableBeforeContribution =
@@ -217,7 +219,16 @@ function computeFirstPillarComparison(grossSalary, paymentRatePercent) {
             incomeTaxYearly: eur(Math.round(comparison.secondPillarYearly) - Math.round(comparison.socialTaxYearly)),
             firstPillarUnitsLost: fixed(comparison.firstPillarUnitsLost, 3),
             firstPillarMonthlyExact: fixed(comparison.firstPillarMonthly, 2) + ' €',
-            pensionUnitValue: eur(PENSION_UNIT_VALUE)
+            pensionUnitValue: eur(PENSION_UNIT_VALUE),
+            firstPillarInRetirement: eur(
+                Math.round(AVERAGE_YEARS_IN_RETIREMENT * MONTHS_IN_YEAR * comparison.firstPillarMonthly)
+            ),
+            secondPillarTimesFirst: String(
+                Math.round(
+                    comparison.secondPillarYearly /
+                        (AVERAGE_YEARS_IN_RETIREMENT * MONTHS_IN_YEAR * comparison.firstPillarMonthly)
+                )
+            )
         };
         document.querySelectorAll('[data-pillar-value]').forEach(function (element) {
             element.textContent = values[element.dataset.pillarValue];

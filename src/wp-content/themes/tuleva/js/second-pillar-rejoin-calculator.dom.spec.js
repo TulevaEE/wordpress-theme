@@ -50,7 +50,9 @@ const PILLAR_VALUES = [
     'incomeTaxYearly',
     'firstPillarUnitsLost',
     'firstPillarMonthlyExact',
-    'pensionUnitValue'
+    'pensionUnitValue',
+    'firstPillarInRetirement',
+    'secondPillarTimesFirst'
 ];
 
 function pillarValuesInTemplate() {
@@ -418,7 +420,9 @@ describe('II pillar rejoin calculator on the page', () => {
             incomeTaxYearly: ['317 €'],
             firstPillarUnitsLost: ['0,194'],
             firstPillarMonthlyExact: ['2,04 €'],
-            pensionUnitValue: ['10,477 €']
+            pensionUnitValue: ['10,477 €'],
+            firstPillarInRetirement: ['464 €'],
+            secondPillarTimesFirst: ['3']
         });
     });
 
@@ -435,7 +439,9 @@ describe('II pillar rejoin calculator on the page', () => {
             incomeTaxYearly: ['158 €'],
             firstPillarUnitsLost: ['0,241'],
             firstPillarMonthlyExact: ['2,53 €'],
-            pensionUnitValue: ['10,477 €']
+            pensionUnitValue: ['10,477 €'],
+            firstPillarInRetirement: ['577 €'],
+            secondPillarTimesFirst: ['3']
         });
     });
 

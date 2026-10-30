@@ -1113,7 +1113,7 @@ msgstr "a"
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
 #: templates/savings-fund-landing-content.php:161
-#: templates/second-pillar-rejoin-content.php:275
+#: templates/second-pillar-rejoin-content.php:287
 msgid "Frequently asked questions"
 msgstr "Korduma kippuvad küsimused"
 
@@ -2742,102 +2742,102 @@ msgid "Into your II pillar each month"
 msgstr "II&nbsp;sambasse iga kuu"
 
 #: templates/second-pillar-rejoin-content.php:65
-#: templates/second-pillar-rejoin-content.php:258
+#: templates/second-pillar-rejoin-content.php:270
 msgid "Start saving again"
 msgstr "Alustan uuesti kogumist"
 
-#: templates/second-pillar-rejoin-content.php:138
+#: templates/second-pillar-rejoin-content.php:142
 msgid "Why start saving again?"
 msgstr "Miks tasub uuesti koguma hakata?"
 
-#: templates/second-pillar-rejoin-content.php:144
+#: templates/second-pillar-rejoin-content.php:148
 msgid "The easiest way to save"
 msgstr "Kõige lihtsam viis koguda"
 
-#: templates/second-pillar-rejoin-content.php:158
+#: templates/second-pillar-rejoin-content.php:162
 msgid "The money is yours"
 msgstr "Vara on sinu oma"
 
-#: templates/second-pillar-rejoin-content.php:179
-#: templates/second-pillar-rejoin-content.php:289
+#: templates/second-pillar-rejoin-content.php:183
+#: templates/second-pillar-rejoin-content.php:301
 msgid "Log in to Tuleva"
 msgstr "Logi Tulevasse sisse"
 
-#: templates/second-pillar-rejoin-content.php:189
+#: templates/second-pillar-rejoin-content.php:193
 msgid "Sign"
 msgstr "Allkirjasta"
 
-#: templates/second-pillar-rejoin-content.php:263
+#: templates/second-pillar-rejoin-content.php:275
 msgid "Tuleva <strong>belongs to its savers</strong>"
 msgstr "Tuleva <strong>kuulub kogujatele</strong>"
 
-#: templates/second-pillar-rejoin-content.php:301
+#: templates/second-pillar-rejoin-content.php:313
 msgid "Which II pillar fund should I choose?"
 msgstr "Milline II&nbsp;samba fond valida?"
 
-#: templates/second-pillar-rejoin-content.php:303
+#: templates/second-pillar-rejoin-content.php:315
 msgid "Look at two things: where the fund invests and how much it charges. An index fund that invests in global equities spreads your money across thousands of companies around the world."
 msgstr "Vaata fondi juures kahte asja: kuhu see investeerib ja kui palju tasu võtab. Maailma aktsiatesse investeeriv indeksfond hajutab sinu raha tuhandete ettevõtete vahel üle maailma."
 
-#: templates/second-pillar-rejoin-content.php:304
+#: templates/second-pillar-rejoin-content.php:316
 msgid "Today you can save with an annual fee below 0.3%. If a fund's ongoing charges are above 0.5% a year, you are paying too much."
 msgstr "Täna saad koguda alla 0,3% aastase tasuga. Kui fondi jooksvad tasud on üle 0,5% aastas, maksad liiga palju."
 
-#: templates/second-pillar-rejoin-content.php:305
+#: templates/second-pillar-rejoin-content.php:317
 #, php-format
 msgid "When you rejoin, you can use the money from the age of 60, so you have time to ride out market swings. That's why a low-fee index fund is worth considering. %s"
 msgstr "Uuesti kogudes saad raha kasutada alates 60.&nbsp;eluaastast, nii et sul on aega turu kõikumised üle elada. Seepärast tasub kaaluda madala tasuga indeksfondi. %s"
 
-#: templates/second-pillar-rejoin-content.php:305
+#: templates/second-pillar-rejoin-content.php:317
 msgid "https://tuleva.ee/vaata/pensionifondide-vordlus/"
 msgstr "https://tuleva.ee/vaata/pensionifondide-vordlus/"
 
-#: templates/second-pillar-rejoin-content.php:305
+#: templates/second-pillar-rejoin-content.php:317
 msgid "Compare all II pillar funds →"
 msgstr "Võrdle kõiki II&nbsp;samba fonde →"
 
-#: templates/second-pillar-rejoin-content.php:309
+#: templates/second-pillar-rejoin-content.php:321
 msgid "Where do my contributions go if I don't choose a fund?"
 msgstr "Kuhu lähevad minu sissemaksed, kui ma fondi ei vali?"
 
-#: templates/second-pillar-rejoin-content.php:311
+#: templates/second-pillar-rejoin-content.php:323
 msgid "To the fund where you saved before you took your money out. Banks have renamed many funds over the past five years, so you may not recognise your old fund by its name."
 msgstr "Sinna fondi, kus kogusid enne raha väljavõtmist. Pangad on viie aasta jooksul paljud fondid ümber nimetanud, nii et sa ei pruugi oma vana fondi nime järgi enam äragi tunda."
 
-#: templates/second-pillar-rejoin-content.php:312
+#: templates/second-pillar-rejoin-content.php:324
 msgid "That's why it's worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar."
 msgstr "Seepärast tasub fond koos avaldusega üle vaadata. Tulevas saad fondi valida samal ajal, kui esitad II&nbsp;sambaga taasliitumise avalduse."
 
-#: templates/second-pillar-rejoin-content.php:278
+#: templates/second-pillar-rejoin-content.php:290
 msgid "I took money out of the II pillar after 2021. When can I rejoin?"
 msgstr "Võtsin II&nbsp;sambast raha välja pärast 2021. aastat. Millal saan uuesti liituda?"
 
-#: templates/second-pillar-rejoin-content.php:316
+#: templates/second-pillar-rejoin-content.php:328
 msgid "How can I take money out of the II pillar later?"
 msgstr "Kuidas II&nbsp;sambast saab raha hiljem kätte?"
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:330
 #, php-format
 msgid "From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs."
 msgstr "Alates 60.&nbsp;eluaastast võid raha välja võtta kas ühe korraga või %s. Kui sinuga midagi juhtub, saavad II&nbsp;samba vara sinu pärijad."
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:330
 msgid "https://tuleva.ee/pensioni-valjamaksed/"
 msgstr "https://tuleva.ee/pensioni-valjamaksed/"
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:330
 msgid "in monthly payments free of income tax"
 msgstr "tulumaksuvabalt igakuiste väljamaksetena"
 
-#: templates/second-pillar-rejoin-content.php:295
+#: templates/second-pillar-rejoin-content.php:307
 msgid "Do I need to be a Tuleva saver?"
 msgstr "Kas pean selleks olema Tuleva koguja?"
 
-#: templates/second-pillar-rejoin-content.php:319
+#: templates/second-pillar-rejoin-content.php:331
 msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can't stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them."
 msgstr "Enne seda raha teist korda välja võtta ei saa. Ainus erand on puuduv töövõime. Pärast taasliitumist ei saa sa ka makseid uuesti lõpetada. Enamikul inimestel tasub aga koguda vähemalt töötamise lõpuni, seega need piirangud enamikku ei sega."
 
-#: templates/second-pillar-rejoin-content.php:119
+#: templates/second-pillar-rejoin-content.php:123
 msgid "or"
 msgstr "või"
 
@@ -2853,75 +2853,75 @@ msgstr "<span class=\"rejoin-cta-line\">Kui võtsid II&nbsp;sambast raha välja 
 msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
 msgstr "<span class=\"rejoin-cta-line\">Kui võtsid II&nbsp;sambast raha välja 2021. aastal, saad avalduse esitada kohe.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>30.&nbsp;novembriks</b> ja juba maist kogud II&nbsp;sambas uuesti.</span>"
 
-#: templates/second-pillar-rejoin-content.php:145
+#: templates/second-pillar-rejoin-content.php:149
 msgid "Your contribution goes into the II pillar automatically, straight from your salary. You don't have to do a thing."
 msgstr "Sissemakse läheb II&nbsp;sambasse automaatselt otse palgast. Sina ei pea midagi tegema."
 
-#: templates/second-pillar-rejoin-content.php:159
+#: templates/second-pillar-rejoin-content.php:163
 msgid "Your II pillar assets are truly yours and can be inherited. You can take the money out from the age of 60."
 msgstr "II&nbsp;samba vara on päriselt sinu ja pärandatav. Raha saad välja võtta alates 60.&nbsp;eluaastast."
 
-#: templates/second-pillar-rejoin-content.php:175
+#: templates/second-pillar-rejoin-content.php:179
 msgid "How do I start saving in the II pillar again?"
 msgstr "Kuidas taas II&nbsp;sambas koguda?"
 
-#: templates/second-pillar-rejoin-content.php:180
+#: templates/second-pillar-rejoin-content.php:184
 msgid "You don't need to be a Tuleva saver."
 msgstr "Selleks ei pea sa Tulevas koguma."
 
-#: templates/second-pillar-rejoin-content.php:190
+#: templates/second-pillar-rejoin-content.php:194
 msgid "All the applications with one signature."
 msgstr "Kõik avaldused ühe allkirjaga."
 
-#: templates/second-pillar-rejoin-content.php:95
+#: templates/second-pillar-rejoin-content.php:99
 #, php-format
 msgid "%s of gross pay"
 msgstr "%s brutopalgast"
 
-#: templates/second-pillar-rejoin-content.php:96
+#: templates/second-pillar-rejoin-content.php:100
 #, php-format
 msgid "−%s income tax"
 msgstr "−%s tulumaks"
 
-#: templates/second-pillar-rejoin-content.php:121
+#: templates/second-pillar-rejoin-content.php:125
 msgid "to your bank account"
 msgstr "pangakontole"
 
-#: templates/second-pillar-rejoin-content.php:123
+#: templates/second-pillar-rejoin-content.php:127
 msgid "to your II pillar account"
 msgstr "II samba kontole"
 
-#: templates/second-pillar-rejoin-content.php:120
-#: templates/second-pillar-rejoin-content.php:122
+#: templates/second-pillar-rejoin-content.php:124
+#: templates/second-pillar-rejoin-content.php:126
 #, php-format
 msgid "%s a month"
 msgstr "%s kuus"
 
 #: templates/child-savings-content.php:140
-#: templates/second-pillar-rejoin-content.php:261
+#: templates/second-pillar-rejoin-content.php:273
 #, php-format
 msgid "Over <strong>%s</strong> people save with Tuleva"
 msgstr "Üle <strong>%s</strong> inimese kogub Tulevas"
 
-#: templates/second-pillar-rejoin-content.php:297
+#: templates/second-pillar-rejoin-content.php:309
 msgid "No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us."
 msgstr "Ei pea. Logi Tulevasse sisse ja esita avaldus. Kui valid Tuleva fondi, oled üks meist."
 
-#: templates/second-pillar-rejoin-content.php:297
+#: templates/second-pillar-rejoin-content.php:309
 #, php-format
 msgid "There are already over %s of us Tuleva savers."
 msgstr "Meid, Tuleva kogujaid, on juba üle %s."
 
-#: templates/second-pillar-rejoin-content.php:184
+#: templates/second-pillar-rejoin-content.php:188
 msgctxt "Step in the II pillar rejoin instructions"
 msgid "Review"
 msgstr "Vaata üle"
 
-#: templates/second-pillar-rejoin-content.php:185
+#: templates/second-pillar-rejoin-content.php:189
 msgid "Your contribution size and fund choice."
 msgstr "Oma sissemakse suurus ja fondivalik."
 
-#: templates/second-pillar-rejoin-content.php:79
+#: templates/second-pillar-rejoin-content.php:83
 msgid "Take it home as pay or let it grow in the II pillar?"
 msgstr "Palgana kätte või II&nbsp;sambasse kasvama?"
 
@@ -2929,11 +2929,11 @@ msgstr "Palgana kätte või II&nbsp;sambasse kasvama?"
 msgid "What this amount is made of"
 msgstr "Millest see summa koosneb"
 
-#: templates/second-pillar-rejoin-content.php:151
+#: templates/second-pillar-rejoin-content.php:155
 msgid "You get more from taxes"
 msgstr "Saad maksudest juurde"
 
-#: templates/second-pillar-rejoin-content.php:152
+#: templates/second-pillar-rejoin-content.php:156
 msgid "More than twice as much goes into your II pillar as comes off your pay."
 msgstr "II&nbsp;sambasse jõuab rohkem kui kaks korda nii palju, kui sinu palgast vähemaks jääb."
 
@@ -2942,7 +2942,7 @@ msgid "Your contribution"
 msgstr "Sinu panus brutopalgast"
 
 #: templates/second-pillar-rejoin-content.php:51
-#: templates/second-pillar-rejoin-content.php:115
+#: templates/second-pillar-rejoin-content.php:119
 msgid "From your taxes"
 msgstr "Sinu maksudest"
 
@@ -2954,7 +2954,7 @@ msgstr "Kogu uuesti <em>II&nbsp;sambas</em> ja võida maksudelt"
 msgid "Your gross salary"
 msgstr "Sinu brutopalk"
 
-#: templates/second-pillar-rejoin-content.php:162
+#: templates/second-pillar-rejoin-content.php:166
 msgid "Read more on the blog about who can rejoin and why it pays to start saving again →"
 msgstr "Loe blogist rohkem, kes saab ja miks tasub uuesti koguma hakata →"
 
@@ -2970,20 +2970,20 @@ msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kont
 msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b>."
 msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kontole. Esita avaldus <b>30.&nbsp;novembriks</b>."
 
-#: templates/second-pillar-rejoin-content.php:285
+#: templates/second-pillar-rejoin-content.php:297
 msgid "I don't remember when I took money out of the II pillar. Where can I check?"
 msgstr "Ma ei mäleta, millal II&nbsp;sambast raha välja võtsin. Kust seda vaadata?"
 
-#: templates/second-pillar-rejoin-content.php:288
+#: templates/second-pillar-rejoin-content.php:300
 #, php-format
 msgid "%1$s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can. You can also check it in the %2$s."
 msgstr "%1$s ja vaata plokki „Sinu valikud“. II&nbsp;samba real on kirjas, kas saad juba uuesti liituda või mis kuupäevast saad. Seda saad vaadata ka %2$s."
 
-#: templates/second-pillar-rejoin-content.php:290
+#: templates/second-pillar-rejoin-content.php:302
 msgid "https://public.pensionikeskus.ee/public/login.do?locale=en"
 msgstr "https://public.pensionikeskus.ee/public/login.do?locale=et"
 
-#: templates/second-pillar-rejoin-content.php:290
+#: templates/second-pillar-rejoin-content.php:302
 msgid "Pensionikeskus self-service"
 msgstr "Pensionikeskuse iseteeninduses"
 
@@ -2991,11 +2991,11 @@ msgstr "Pensionikeskuse iseteeninduses"
 msgid "Your part is free of income tax"
 msgstr "Sinu osa on tulumaksuvaba"
 
-#: templates/second-pillar-rejoin-content.php:281
+#: templates/second-pillar-rejoin-content.php:293
 msgid "The sooner you start, the longer you gain from the tax win."
 msgstr "Mida varem alustad, seda kauem saad maksudelt võita."
 
-#: templates/second-pillar-rejoin-content.php:126
+#: templates/second-pillar-rejoin-content.php:130
 #, php-format
 msgid "For a gross salary of %1$s and a %2$s contribution"
 msgstr "%1$s brutopalga ja %2$s panuse puhul"
@@ -3008,20 +3008,20 @@ msgstr "4% palgast tuleb sotsiaalmaksust"
 msgid "You pick 2, 4 or 6% as your part"
 msgstr "Oma osaks valid<br>2, 4 või 6%"
 
-#: templates/second-pillar-rejoin-content.php:210
+#: templates/second-pillar-rejoin-content.php:214
 msgid "I&nbsp;pillar"
 msgstr "I&nbsp;sammas"
 
-#: templates/second-pillar-rejoin-content.php:217
+#: templates/second-pillar-rejoin-content.php:222
 msgid "II&nbsp;pillar"
 msgstr "II&nbsp;sammas"
 
-#: templates/second-pillar-rejoin-content.php:223
+#: templates/second-pillar-rejoin-content.php:229
 #, php-format
 msgid "For one year of saving at a gross salary of %1$s and a %2$s contribution."
 msgstr "Ühe kogumisaasta eest %1$s brutopalga ja %2$s panuse puhul."
 
-#: templates/second-pillar-rejoin-content.php:202
+#: templates/second-pillar-rejoin-content.php:206
 msgid "Which would you pick?"
 msgstr "Kumma sa valiksid?"
 
@@ -3029,48 +3029,78 @@ msgstr "Kumma sa valiksid?"
 msgid "II pillar 2-4-6 page"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:204
-msgid "When you save in the II&nbsp;pillar, 4% of your pay goes from social tax into your own II&nbsp;pillar account instead of the I&nbsp;pillar. That's why your I&nbsp;pillar pension will be slightly smaller, by a few euros a month for each year you save. But together with the income tax win, much more goes into your II&nbsp;pillar."
-msgstr "II&nbsp;sambas kogudes läheb 4% sinu palgast sotsiaalmaksu arvelt I&nbsp;samba asemel sinu enda II&nbsp;samba kontole. Seetõttu jääb su I&nbsp;samba pension veidi väiksemaks, iga kogumisaasta eest mõne euro võrra kuus. II&nbsp;sambasse jõuab koos tulumaksuvõiduga aga palju rohkem."
-
-#: templates/second-pillar-rejoin-content.php:323
+#: templates/second-pillar-rejoin-content.php:335
 msgid "We asked savers who left the II pillar what they think about rejoining →"
 msgstr "Küsisime II&nbsp;sambast lahkunud kogujatelt, mida nad taasliitumisest arvavad →"
 
-#: templates/second-pillar-rejoin-content.php:256
+#: templates/second-pillar-rejoin-content.php:268
 msgid "Save in the II pillar again"
 msgstr "Jätka II&nbsp;sambas kogumist"
 
-#: templates/second-pillar-rejoin-content.php:280
+#: templates/second-pillar-rejoin-content.php:292
 msgid "You can start saving again five years after you submitted your withdrawal application. You can apply before then, and there is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
 msgstr "Saad uuesti koguma hakata viis aastat pärast seda, kui esitasid raha väljavõtmise avalduse. Avalduse saad esitada juba enne seda ja lõplikku tähtaega pole. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
 
-#: templates/second-pillar-rejoin-content.php:224
+#: templates/second-pillar-rejoin-content.php:230
 msgid "See the calculation"
 msgstr "Vaata arvutust"
 
-#: templates/second-pillar-rejoin-content.php:234
+#: templates/second-pillar-rejoin-content.php:252
 msgid "https://sotsiaalkindlustusamet.ee/en/pension-and-benefits/pension-amount/pension-calculation"
 msgstr "https://sotsiaalkindlustusamet.ee/pension-ja-seotud-huvitised/pensioni-suurus/pensioni-suuruse-arvutamine"
 
-#: templates/second-pillar-rejoin-content.php:212
+#: templates/second-pillar-rejoin-content.php:217
 msgid "a month<br class=\"d-sm-none\"> to your I&nbsp;pillar pension"
 msgstr "kuus<br class=\"d-sm-none\"> I&nbsp;samba pensionile"
 
-#: templates/second-pillar-rejoin-content.php:219
+#: templates/second-pillar-rejoin-content.php:225
 msgid "a year<br class=\"d-sm-none\"> to your II&nbsp;pillar account"
 msgstr "aastas<br class=\"d-sm-none\"> II&nbsp;samba kontole"
 
-#: templates/second-pillar-rejoin-content.php:237
-#, php-format
-msgid "<strong>II&nbsp;pillar, %1$s a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don't pay on your %4$s contribution."
-msgstr "<strong>II&nbsp;sammas, %1$s aastas:</strong> %2$s tuleb sotsiaalmaksust, mis on 4%% sinu brutopalgast, ja %3$s on tulumaks, mida sa oma %4$s panuselt ei maksa."
-
-#: templates/second-pillar-rejoin-content.php:229
-#, php-format
-msgid "<strong>I&nbsp;pillar, %1$s a month:</strong> every year you work earns you I&nbsp;pillar pension points. Half a point depends on your pay compared to the average, the other half is the same for everyone. A II&nbsp;pillar saver gets 80%% of them. At your pay the difference is %2$s points, or %3$s a month at a point value of %4$s. Source: %5$s."
-msgstr "<strong>I&nbsp;sammas, %1$s kuus:</strong> iga tööaasta annab I&nbsp;sambas pensionipunkte. Pool punktist sõltub sinu palgast võrreldes keskmisega, teine pool on kõigile sama. II&nbsp;samba koguja saab neist 80%%. Sinu palga juures on vahe %2$s punkti ehk %3$s kuus, kui punkti väärtus on %4$s. Allikas: %5$s."
-
-#: templates/second-pillar-rejoin-content.php:234
+#: templates/second-pillar-rejoin-content.php:252
 msgid "Social Insurance Board"
 msgstr "Sotsiaalkindlustusamet"
+
+#: templates/second-pillar-rejoin-content.php:70
+#, php-format
+msgid "The social tax part slightly reduces your I&nbsp;pillar pension. %s"
+msgstr "Sotsiaalmaksu osa vähendab veidi sinu I&nbsp;samba pensioni. %s"
+
+#: templates/second-pillar-rejoin-content.php:71
+msgid "See the comparison"
+msgstr "Vaata võrdlust"
+
+#: templates/second-pillar-rejoin-content.php:235
+#, php-format
+msgid "<strong>I&nbsp;pillar, %1$s a month:</strong> every year you work earns you I&nbsp;pillar pension points. Half a point depends on your pay compared to the average, the other half is the same for everyone. A II&nbsp;pillar saver gets 80%% of them. At your pay the difference is %2$s points, or %3$s a month at a point value of %4$s. People are retired for 19 years on average, so that adds up to about %5$s."
+msgstr "<strong>I&nbsp;sammas, %1$s kuus:</strong> iga tööaasta annab I&nbsp;sambas pensionipunkte. Pool punktist sõltub sinu palgast võrreldes keskmisega, teine pool on kõigile sama. II&nbsp;samba koguja saab neist 80%%. Sinu palga juures on vahe %2$s punkti ehk %3$s kuus, kui punkti väärtus on %4$s. Pensionil ollakse keskmiselt 19 aastat, seega teeb see kokku umbes %5$s."
+
+#: templates/second-pillar-rejoin-content.php:253
+msgid "https://stat.ee/en/news/life-expectancy-in-estonia-is-798-years-healthy-life-expectancy-is-573-years"
+msgstr "https://stat.ee/et/uudised/oodatav-eluiga-on-798-aastat-millest-tervena-elatakse-573-aastat"
+
+#: templates/second-pillar-rejoin-content.php:253
+msgid "Statistics Estonia"
+msgstr "Statistikaamet"
+
+#: templates/second-pillar-rejoin-content.php:243
+#, php-format
+msgid "<strong>II&nbsp;pillar, %1$s a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don't pay on your %4$s contribution. That is about %5$s times what the I&nbsp;pillar promises to pay for the same year of saving over your retirement."
+msgstr "<strong>II&nbsp;sammas, %1$s aastas:</strong> %2$s tuleb sotsiaalmaksust, mis on 4%% sinu brutopalgast, ja %3$s on tulumaks, mida sa oma %4$s panuselt ei maksa. See on umbes %5$s korda rohkem, kui I&nbsp;sammas lubab sama kogumisaasta eest pensionipõlve jooksul maksta."
+
+#: templates/second-pillar-rejoin-content.php:251
+#, php-format
+msgid "The amounts are in today's money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund's returns and can also fall. Sources: %1$s, %2$s."
+msgstr "Summad on tänases rahas. I&nbsp;sammas on riigi lubadus: selle suurus ja indekseerimine sõltuvad tulevastest seadustest. II&nbsp;samba vara on sinu oma, aga selle väärtus sõltub fondi tootlusest ja võib ka langeda. Allikad: %1$s, %2$s."
+
+#: templates/second-pillar-rejoin-content.php:208
+msgid "When you save in the II&nbsp;pillar, 4% of your pay goes from social tax into your own II&nbsp;pillar account instead of the I&nbsp;pillar. That's why your I&nbsp;pillar pension will be slightly smaller."
+msgstr "II&nbsp;sambas kogudes läheb 4% sinu palgast sotsiaalmaksu arvelt I&nbsp;samba asemel sinu enda II&nbsp;samba kontole. Seetõttu jääb su I&nbsp;samba pension veidi väiksemaks."
+
+#: templates/second-pillar-rejoin-content.php:215
+msgid "a promise from the state"
+msgstr "riigi lubadus"
+
+#: templates/second-pillar-rejoin-content.php:223
+msgid "your own assets"
+msgstr "sinu vara"

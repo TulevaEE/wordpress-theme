@@ -18850,6 +18850,9 @@ sup {
   border: 3px solid #dee2e6;
   color: #6B7074;
 }
+.second-pillar-rejoin-page #sotsiaalmaks {
+  scroll-margin-top: calc(78px + 2rem);
+}
 .second-pillar-rejoin-page .rejoin-choice--second-pillar {
   border-color: #008300;
   background-color: rgb(95%, 97.568627451%, 95%);

@@ -66,6 +66,10 @@
                             </div>
                         </div>
                     </div>
+                    <p class="text-secondary text-center mt-3 mb-0"><?php printf(
+                        __('The social tax part slightly reduces your I&nbsp;pillar pension. %s', TEXT_DOMAIN),
+                        '<a class="text-reset text-nowrap" href="#sotsiaalmaks">' . __('See the comparison', TEXT_DOMAIN) . '</a>'
+                    ); ?></p>
                 </div>
 
             </div>
@@ -195,26 +199,28 @@
         </div>
     </section>
 
-    <section class="section-spacing bg-gray-1" id="sotsiaalmaks">
+    <section class="section-spacing bg-gray-1">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
-                    <h2 class="mb-4"><?php _e('Which would you pick?', TEXT_DOMAIN); ?></h2>
+                    <h2 class="mb-4" id="sotsiaalmaks"><?php _e('Which would you pick?', TEXT_DOMAIN); ?></h2>
                     <div class="row justify-content-center">
-                        <p class="col-lg-9 col-xl-8 mb-5"><?php _e('When you save in the II&nbsp;pillar, 4% of your pay goes from social tax into your own II&nbsp;pillar account instead of the I&nbsp;pillar. That\'s why your I&nbsp;pillar pension will be slightly smaller, by a few euros a month for each year you save. But together with the income tax win, much more goes into your II&nbsp;pillar.', TEXT_DOMAIN); ?></p>
+                        <p class="col-lg-9 col-xl-8 mb-5"><?php _e('When you save in the II&nbsp;pillar, 4% of your pay goes from social tax into your own II&nbsp;pillar account instead of the I&nbsp;pillar. That\'s why your I&nbsp;pillar pension will be slightly smaller.', TEXT_DOMAIN); ?></p>
                     </div>
 
                     <div class="row justify-content-center g-3">
                         <div class="col-6 col-lg-4">
                             <div class="card rejoin-choice h-100 rounded-4 px-2 py-3 p-md-4">
-                                <p class="h5 text-reset mb-3"><?php _e('I&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="h5 text-reset mb-1"><?php _e('I&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="mb-3"><?php _e('a promise from the state', TEXT_DOMAIN); ?></p>
                                 <p class="fs-2 fw-bold mb-1">+<span data-pillar-value="firstPillarMonthly">2&nbsp;€</span></p>
                                 <p class="mb-0"><?php _e('a month<br class="d-sm-none"> to your I&nbsp;pillar pension', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card rejoin-choice rejoin-choice--second-pillar h-100 rounded-4 px-2 py-3 p-md-4">
-                                <p class="h5 text-reset mb-3"><?php _e('II&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="h5 text-reset mb-1"><?php _e('II&nbsp;pillar', TEXT_DOMAIN); ?></p>
+                                <p class="mb-3"><?php _e('your own assets', TEXT_DOMAIN); ?></p>
                                 <p class="fs-2 fw-bold mb-1">+<span data-pillar-value="secondPillarYearly">1277&nbsp;€</span></p>
                                 <p class="mb-0"><?php _e('a year<br class="d-sm-none"> to your II&nbsp;pillar account', TEXT_DOMAIN); ?></p>
                             </div>
@@ -226,19 +232,25 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-9 col-xl-8 text-start text-secondary pt-4">
                                 <p><?php printf(
-                                    __('<strong>I&nbsp;pillar, %1$s a month:</strong> every year you work earns you I&nbsp;pillar pension points. Half a point depends on your pay compared to the average, the other half is the same for everyone. A II&nbsp;pillar saver gets 80%% of them. At your pay the difference is %2$s points, or %3$s a month at a point value of %4$s. Source: %5$s.', TEXT_DOMAIN),
+                                    __('<strong>I&nbsp;pillar, %1$s a month:</strong> every year you work earns you I&nbsp;pillar pension points. Half a point depends on your pay compared to the average, the other half is the same for everyone. A II&nbsp;pillar saver gets 80%% of them. At your pay the difference is %2$s points, or %3$s a month at a point value of %4$s. People are retired for 19 years on average, so that adds up to about %5$s.', TEXT_DOMAIN),
                                     '<span data-pillar-value="firstPillarMonthly">2&nbsp;€</span>',
                                     '<span data-pillar-value="firstPillarUnitsLost">0,194</span>',
                                     '<span data-pillar-value="firstPillarMonthlyExact">2,04&nbsp;€</span>',
                                     '<span data-pillar-value="pensionUnitValue">10,477&nbsp;€</span>',
-                                    '<a class="text-reset" href="' . esc_url(__('https://sotsiaalkindlustusamet.ee/en/pension-and-benefits/pension-amount/pension-calculation', TEXT_DOMAIN)) . '">' . __('Social Insurance Board', TEXT_DOMAIN) . '</a>'
+                                    '<span data-pillar-value="firstPillarInRetirement">464&nbsp;€</span>'
                                 ); ?></p>
-                                <p class="mb-0"><?php printf(
-                                    __('<strong>II&nbsp;pillar, %1$s a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don\'t pay on your %4$s contribution.', TEXT_DOMAIN),
+                                <p><?php printf(
+                                    __('<strong>II&nbsp;pillar, %1$s a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don\'t pay on your %4$s contribution. That is about %5$s times what the I&nbsp;pillar promises to pay for the same year of saving over your retirement.', TEXT_DOMAIN),
                                     '<span data-pillar-value="secondPillarYearly">1277&nbsp;€</span>',
                                     '<span data-pillar-value="socialTaxYearly">960&nbsp;€</span>',
                                     '<span data-pillar-value="incomeTaxYearly">317&nbsp;€</span>',
-                                    '<span data-pillar-value="rate">6%</span>'
+                                    '<span data-pillar-value="rate">6%</span>',
+                                    '<span data-pillar-value="secondPillarTimesFirst">3</span>'
+                                ); ?></p>
+                                <p class="mb-0"><?php printf(
+                                    __('The amounts are in today\'s money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund\'s returns and can also fall. Sources: %1$s, %2$s.', TEXT_DOMAIN),
+                                    '<a class="text-reset" href="' . esc_url(__('https://sotsiaalkindlustusamet.ee/en/pension-and-benefits/pension-amount/pension-calculation', TEXT_DOMAIN)) . '">' . __('Social Insurance Board', TEXT_DOMAIN) . '</a>',
+                                    '<a class="text-reset" href="' . esc_url(__('https://stat.ee/en/news/life-expectancy-in-estonia-is-798-years-healthy-life-expectancy-is-573-years', TEXT_DOMAIN)) . '">' . __('Statistics Estonia', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
                             </div>
                         </div>

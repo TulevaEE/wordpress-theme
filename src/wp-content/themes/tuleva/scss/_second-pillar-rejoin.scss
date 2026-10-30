@@ -95,6 +95,11 @@
         color: $text-secondary;
     }
 
+    // The hero's note about the I pillar jumps here; the heading lands with room under the header
+    #sotsiaalmaks {
+        scroll-margin-top: calc(#{$navbar-height} + 2rem);
+    }
+
     .rejoin-choice--second-pillar {
         border-color: $green;
         background-color: mix($green, $white, 5%);
