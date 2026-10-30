@@ -19496,35 +19496,27 @@ sup {
 }
 .second-pillar-246-page .ret-mark {
   position: absolute;
-  left: 77.8%;
+  left: 0;
+  right: 0;
   top: 20px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   pointer-events: none;
-  line-height: 1.1;
 }
 .second-pillar-246-page .ret-mark-arrow {
+  position: absolute;
+  left: 85%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   color: var(--text3);
   font-size: 15px;
+  line-height: 1;
 }
 .second-pillar-246-page .ret-mark-lbl {
+  position: absolute;
+  top: 18px;
+  right: 0;
   color: var(--text3);
   font-size: 11.5px;
   white-space: nowrap;
-  margin-top: 2px;
 }
 @media (max-width: 560px) {
   .second-pillar-246-page .ret-mark-lbl {
