@@ -83,6 +83,7 @@
           <li>Arvutustes oleme eeldanud, et sinu palk võiks kasvada 3% aastas.</li>
           <li>Vara keskmine näitlik tootlus aastas on sinu valitud liuguri väärtus. Mineviku tootlus ei ütle, milliseks kujuneb tootlus tulevikus. Selle näite mõte pole ennustada su vara kasvu, vaid teha arusaadavaks, kuidas mõjutab tulevikuvara see, kui palju sa täna kõrvale paned.</li>
           <li>Tulumaksuvabastus kehtib sissemaksete puhul – vara kasutusel tuleb maksta maksu sõltuvalt sellest, millal ja kuidas vara kasutusele võtad. Eelpensionieast alates saad vara kasutada soodustingimustel – tasud vaid 10% tulumaksu. Kui valid fondipensioni (võtad raha välja vähehaaval, jättes ülejäänu kasvama), ei maksa tulumaksu üldse.</li>
+          <li>Arvutused on näitlikud ja üldharivad, mitte personaalne investeerimissoovitus. Pikaajalised summad on näitlikud prognoosid, mitte lubadus – investeeringu väärtus võib aja jooksul nii kasvada kui kahaneda. Pane tähele, et maksemäära tõstmine vähendab sinu igakuist netopalka.</li>
         </ul></div>
       </details>
 
@@ -136,10 +137,5 @@
       <a class="cta cta-2l" href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>"><span class="cta-main">Tõstan sissemakset →</span><span class="cta-dl">Tähtaeg 30. november</span></a>
     </div>
   </section>
-
-  <div class="legal">
-    <p>Maksustamine oleneb isikuga seotud asjaoludest, sh residentsusest. Maksuseadused muutuvad ajas. Riigi 4% tuleb sotsiaalmaksust ja mõjutab I samba pensionit (<a class="inline" href="https://tuleva.ee/sotsmaks">tuleva.ee/sotsmaks</a>).</p>
-    <p>Kalkulaatori arvutused on näitlikud ja üldharivad, mitte personaalne investeerimissoovitus. Pikaajalised summad on näitlikud prognoosid, mitte lubadus — tootlus ei ole garanteeritud, mineviku tootlus ei taga tuleviku oma ja investeeringu väärtus võib nii kasvada kui kahaneda. Maksemäära tõstmine vähendab sinu netopalka.</p>
-  </div>
 
 </main>
