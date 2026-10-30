@@ -106,7 +106,6 @@
             <span class="coin-arrow" aria-hidden="true">→</span>
             <div class="coin coin-pil"><span class="coin-amt">1,00 €</span><span class="coin-lbl">rohkem tulevikuks</span></div>
           </div>
-          <p class="coin-foot">Turgude tootlust ei oska keegi ennustada, aga maksueelis annab kindla edumaa.</p>
         </div>
       </div>
     </details>
