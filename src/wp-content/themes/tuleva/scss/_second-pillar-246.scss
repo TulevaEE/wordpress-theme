@@ -88,9 +88,9 @@
   .midinput .mi-salary input[type=number]{text-align:right;width:160px}
   @media(max-width:560px){.midinput .mi-salary .salary-row{width:100%}.midinput .mi-salary input[type=number]{flex:1;width:auto}}
   .slider-wrap{position:relative;padding-bottom:38px}
-  .ret-mark{position:absolute;left:77.8%;top:20px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;pointer-events:none;line-height:1.1}
-  .ret-mark-arrow{color:var(--text3);font-size:15px}
-  .ret-mark-lbl{color:var(--text3);font-size:11.5px;white-space:nowrap;margin-top:2px}
+  .ret-mark{position:absolute;left:0;right:0;top:20px;pointer-events:none}
+  .ret-mark-arrow{position:absolute;left:85%;transform:translateX(-50%);color:var(--text3);font-size:15px;line-height:1}
+  .ret-mark-lbl{position:absolute;top:18px;right:0;color:var(--text3);font-size:11.5px;white-space:nowrap}
   @media(max-width:560px){.ret-mark-lbl{font-size:10.5px}}
 
   // Wealth projection
