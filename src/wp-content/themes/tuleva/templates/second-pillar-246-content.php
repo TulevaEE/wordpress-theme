@@ -41,7 +41,11 @@
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
       <div class="midinput">
-        <p class="mi-lead">Vali vanus ja katseta tootlusega <span class="mi-note">(aktsiate ajalooline tootlus 7%)</span></p>
+        <p class="mi-lead">Kontrolli oma palka, vali vanus ja katseta tootlusega <span class="mi-note">(aktsiate ajalooline tootlus 7%)</span></p>
+        <div class="field mi-salary">
+          <label for="gross2">Sinu brutopalk</label>
+          <div class="salary-row"><input type="number" id="gross2" value="3000" min="0" step="any"> <span class="unit">€</span></div>
+        </div>
         <div class="adv">
           <div class="field"><label for="age">Sinu vanus — <span class="rngval" id="ageVal">35</span></label>
             <input type="range" id="age" min="18" max="62" value="35"><div class="hint">Arvutame siin kuni 65. eluaastani. Kui töötad edasi, saad kogumist jätkata ka hiljem. Ja tegelikult ei ole sul tõenäoliselt vaja raha ühe korraga – saad seda kasutada vähehaaval, samal ajal kui ülejäänu turgudel edasi tootlust teenib.</div></div>

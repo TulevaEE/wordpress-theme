@@ -125,6 +125,7 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
         return;
     }
     var salary = page.querySelector('#gross');
+    var salary2 = page.querySelector('#gross2');
     var age = page.querySelector('#age');
     var annualReturn = page.querySelector('#ret');
     var rateButtons = page.querySelectorAll('#segRate button');
@@ -271,14 +272,35 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
             update();
         });
     });
-    [salary, age, annualReturn].forEach(function (field) {
+    // Both calculators share one gross salary: editing either salary field
+    // mirrors the value to the other, so the figures never disagree.
+    function mirrorSalary(source) {
+        var target = source === salary ? salary2 : salary;
+        if (target) {
+            target.value = source.value;
+        }
+        update();
+    }
+    [salary, salary2].forEach(function (field) {
+        if (!field) {
+            return;
+        }
+        field.addEventListener('input', function () {
+            mirrorSalary(field);
+        });
+        field.addEventListener('change', function () {
+            if (Number(field.value) > MAX_GROSS_SALARY) {
+                field.value = MAX_GROSS_SALARY;
+            }
+            mirrorSalary(field);
+        });
+    });
+    [age, annualReturn].forEach(function (field) {
         field.addEventListener('input', update);
     });
-    salary.addEventListener('change', function () {
-        if (Number(salary.value) > MAX_GROSS_SALARY) {
-            salary.value = MAX_GROSS_SALARY;
-        }
-    });
+    if (salary2) {
+        salary2.value = salary.value;
+    }
     window.addEventListener('pageshow', update);
     update();
 })();
