@@ -56,10 +56,10 @@ function geometry(element) {
 function renderCalculator() {
     document.body.innerHTML = `
         ${fromTemplate(/<input[^>]*id="calcSalary"[^>]*>/)}
+        ${[2, 4, 6].map((rate) => `<input type="radio" name="calcRate" value="${rate}"${rate === 6 ? ' checked' : ''}>`).join('')}
         <span id="resNetSalary"></span>
         <span id="resTaxWin"></span>
         <span id="resTotal"></span>
-        <span id="resTenYears"></span>
         <span id="taxWinInfo"
               data-income-tax-label="Tulumaksust"
               data-social-tax-label="Sotsiaalmaksust"></span>
@@ -68,8 +68,11 @@ function renderCalculator() {
             ${fromTemplate(/<g id="rejoinFigureTaxWinLabel"[^>]*>/)}</g>
             ${FIGURE_SHAPES.map(shapeInTemplate).join('')}
             ${FIGURE_AMOUNTS.map(amountInTemplate).join('')}
+            <text id="rejoinFigureTakeHomeLabel"></text>
+            <text id="rejoinFigurePillarBaseLabel"></text>
         </svg>
         ${fromTemplate(/<span id="rejoinFigureSalary">[^<]*<\/span>/)}
+        ${fromTemplate(/<span id="rejoinFigureRate">[^<]*<\/span>/)}
     `;
     jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
 }
@@ -109,6 +112,12 @@ function typeSalary(value) {
     salary.dispatchEvent(new Event('change', { bubbles: true }));
 }
 
+function chooseRate(value) {
+    const rate = document.querySelector(`input[name="calcRate"][value="${value}"]`);
+    rate.checked = true;
+    rate.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
 describe('II pillar rejoin calculator on the page', () => {
     beforeEach(renderCalculator);
     afterEach(() => {
@@ -120,7 +129,6 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(shown('resNetSalary')).toBe('94 €');
         expect(shown('resTaxWin')).toBe('106 €');
         expect(shown('resTotal')).toBe('200 €');
-        expect(shown('resTenYears')).toBe('24 000 €');
     });
 
     it('recalculates when the salary changes, grouping thousands only from five digits', () => {
@@ -129,7 +137,34 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(shown('resNetSalary')).toBe('140 €');
         expect(shown('resTaxWin')).toBe('160 €');
         expect(shown('resTotal')).toBe('300 €');
-        expect(shown('resTenYears')).toBe('36 000 €');
+    });
+
+    it('starts from the 6% contribution that is checked in the page', () => {
+        expect(fromTemplate(/<input[^>]*name="calcRate"[^>]*>/g)).toBeDefined();
+        expect(template).toMatch(/\$rate === 6 \? ' checked'/);
+    });
+
+    it('keeps the take-home amount inside its bar when a smaller contribution makes the bar shorter', () => {
+        const amountY = () => Number(document.getElementById('rejoinFigureTakeHomeLabel').getAttribute('y'));
+        const bar = document.getElementById('rejoinFigureTakeHomeBar');
+        const barTop = () => Number(bar.getAttribute('y'));
+
+        expect(amountY()).toBeCloseTo(413, 0);
+
+        chooseRate('2');
+
+        expect(amountY()).toBeGreaterThan(barTop());
+        expect(amountY()).toBeLessThan(470);
+        expect(document.getElementById('rejoinFigurePillarBaseLabel').getAttribute('y')).toBe(String(amountY()));
+    });
+
+    it('recalculates for the contribution the visitor picks, the state part staying the same', () => {
+        chooseRate('2');
+
+        expect(shown('resNetSalary')).toBe('31 €');
+        expect(shown('resTaxWin')).toBe('89 €');
+        expect(shown('resTotal')).toBe('120 €');
+        expect(shown('rejoinFigurePillarTotal')).toBe('120 €');
     });
 
     it('breaks the tax win down into what comes from social tax and from income tax, larger part first', () => {
@@ -163,6 +198,49 @@ describe('II pillar rejoin calculator on the page', () => {
         expect(document.getElementById('calcSalary').value).toBe('99999');
     });
 
+    it('focuses the salary on arrival on a desktop, so the field shows it can be typed into', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        renderCalculator();
+
+        expect(document.activeElement).toBe(document.getElementById('calcSalary'));
+        delete window.matchMedia;
+    });
+
+    it('shows a caret after the example on arrival, and the first digit typed replaces the example', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        renderCalculator();
+        const salary = document.getElementById('calcSalary');
+
+        expect([salary.selectionStart, salary.selectionEnd]).toEqual([4, 4]);
+
+        salary.dispatchEvent(new InputEvent('beforeinput', { inputType: 'insertText', data: '3' }));
+        expect(salary.value).toBe('');
+
+        salary.dispatchEvent(new InputEvent('beforeinput', { inputType: 'insertText', data: '0' }));
+        salary.value = '30';
+        expect(salary.value).toBe('30');
+        delete window.matchMedia;
+    });
+
+    it('lets the visitor delete digits of the example after arrival instead of clearing it', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        renderCalculator();
+        const salary = document.getElementById('calcSalary');
+
+        salary.dispatchEvent(new InputEvent('beforeinput', { inputType: 'deleteContentBackward' }));
+
+        expect(salary.value).toBe('2000');
+        delete window.matchMedia;
+    });
+
+    it('leaves the focus alone on a touch screen, where it would open the keyboard', () => {
+        window.matchMedia = jest.fn(() => ({ matches: false }));
+        renderCalculator();
+
+        expect(document.activeElement).not.toBe(document.getElementById('calcSalary'));
+        delete window.matchMedia;
+    });
+
     it('selects the whole salary on focus so typing replaces the example', () => {
         jest.useFakeTimers();
         const salary = document.getElementById('calcSalary');
@@ -183,7 +261,7 @@ describe('II pillar rejoin calculator on the page', () => {
     });
 
     it('paints the same example in the page before the script runs', () => {
-        ['resNetSalary', 'resTaxWin', 'resTotal', 'resTenYears'].forEach((id) => {
+        ['resNetSalary', 'resTaxWin', 'resTotal'].forEach((id) => {
             expect(paintedInTemplate(id)).toBe(shown(id));
         });
     });
@@ -202,14 +280,31 @@ describe('II pillar rejoin calculator on the page', () => {
         ]);
     });
 
-    it('names the gross salary under the figure, following the calculator', () => {
+    it('names the gross salary and the contribution under the figure, following the calculator', () => {
         typeSalary('3000');
+        chooseRate('4');
 
         expect(shown('rejoinFigureSalary')).toBe('3000 €');
+        expect(shown('rejoinFigureRate')).toBe('4%');
+    });
+
+    it('draws a smaller contribution as a shorter II pillar column, measured against what 6% would put in', () => {
+        const columnHeight = () =>
+            ['rejoinFigurePillarBaseBar', 'rejoinFigureTaxWinBar']
+                .map((id) => Number(document.getElementById(id).getAttribute('height')))
+                .reduce((sum, height) => sum + height, 0);
+
+        expect(columnHeight()).toBeCloseTo(280, 1);
+
+        chooseRate('4');
+        expect(columnHeight()).toBeCloseTo(224, 1);
+
+        chooseRate('2');
+        expect(columnHeight()).toBeCloseTo(168, 1);
     });
 
     it('paints the figure for the same example before the script runs', () => {
-        [...FIGURE_AMOUNTS, 'rejoinFigureSalary'].forEach((id) => {
+        [...FIGURE_AMOUNTS, 'rejoinFigureSalary', 'rejoinFigureRate'].forEach((id) => {
             expect(paintedInTemplate(id)).toBe(shown(id));
         });
         FIGURE_SHAPES.forEach((id) => {

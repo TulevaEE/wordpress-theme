@@ -33,7 +33,7 @@ final class SecondPillarRejoinTest extends TestCase
 
     public static function leadProvider(): array
     {
-        $money = '<b>It\'s&nbsp;your&nbsp;money.</b> Direct part of your taxes into your own II&nbsp;pillar&nbsp;account again.';
+        $money = 'See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account.';
 
         return [
             'last minute of 31 March applies by March for September' => [
