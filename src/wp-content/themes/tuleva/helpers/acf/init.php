@@ -12,7 +12,8 @@ $acf_includes = [
     'helpers/acf/fund-savings.php', // Savings fund page
     'helpers/acf/fund-disclosures.php', // Documents and disclosures on every fund page
     'helpers/acf/fund-choosing.php', // Instructions — Step 1 page fields
-    'helpers/acf/jobs.php' // Jobs page fields
+    'helpers/acf/jobs.php', // Jobs page fields
+    'helpers/acf/second-pillar-246.php' // II pillar 2-4-6 landing page text fields
 ];
 
 foreach ($acf_includes as $file) {

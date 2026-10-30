@@ -24,7 +24,10 @@
   .hero-text h1{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:46px;line-height:1.14;margin:0 0 22px;letter-spacing:-.01em}
   .hero-text .dek{font-size:21px;line-height:1.5;color:var(--text);margin:0}
   .hero-text .dek .hl{background:linear-gradient(transparent 58%,#FCE22877 58%);padding:0 2px}
+  .deadline-kicker{display:inline-flex;align-items:center;gap:7px;background:#FCE228;color:#4a3d00;font:700 13px/1 var(--sans);letter-spacing:.01em;padding:7px 14px;border-radius:999px;margin:0 0 18px}
+  .deadline-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:#E5A100}
   @media(max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr);gap:28px;padding:34px 20px 40px}.hero-text h1{font-size:34px}.hero-text .dek{font-size:19px}}
+  @media(max-width:560px){.deadline-kicker{font-size:12px;padding:6px 12px;margin-bottom:14px}}
 
   .article{max-width:var(--maxw);margin:0 auto;padding:16px 20px 24px}
   .article > p{margin:0 0 30px}
@@ -73,6 +76,7 @@
   .calc-tax .per{font-weight:400;color:var(--text2);font-size:14px}
   .calc-tax .cta{margin-top:18px}
   .calc-tax .tfoot{text-align:center;font-size:13px;color:var(--text2);margin:12px 0 0}
+  .calc-tax .tfoot .red-date{color:#DB2200;font-weight:700}
   @media(max-width:560px){.calc-tax{padding:22px 18px}.calc-tax .tval-win{font-size:27px}}
 
   // Age and return inputs
