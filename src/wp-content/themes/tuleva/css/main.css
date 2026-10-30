@@ -19031,7 +19031,7 @@ sup {
   --action-l:#008DEE;
   --text:#293036;
   --text2:#5A6672;
-  --text3:#8A8D91;
+  --text3:#6C757D;
   --green:#008300;
   --bg:#FFFFFF;
   --bg-blue:#EDF7FD;
@@ -19129,7 +19129,7 @@ sup {
   margin: 0 auto;
   padding: 16px 20px 24px;
 }
-.second-pillar-246-page .article p {
+.second-pillar-246-page .article > p {
   margin: 0 0 30px;
 }
 .second-pillar-246-page .article h2, .second-pillar-246-page .article .h2 {
@@ -19237,6 +19237,10 @@ sup {
   background: var(--action);
   color: #fff;
 }
+.second-pillar-246-page .seg button:focus-visible, .second-pillar-246-page summary:focus-visible, .second-pillar-246-page .cta:focus-visible {
+  outline: 3px solid var(--action);
+  outline-offset: -3px;
+}
 .second-pillar-246-page input[type=range] {
   width: 100%;
   accent-color: var(--action);
@@ -19305,13 +19309,13 @@ sup {
 .second-pillar-246-page .calc-tax .trow-input {
   padding: 9px 0;
 }
-.second-pillar-246-page .calc-tax .tlbl, .second-pillar-246-page .calc-tax .trow-input label {
+.second-pillar-246-page .calc-tax .tlbl, .second-pillar-246-page .calc-tax .trow-input label, .second-pillar-246-page .calc-tax .trow-label {
   font-size: 16px;
   color: var(--text);
   font-weight: 400;
   margin: 0;
 }
-.second-pillar-246-page .calc-tax .trow-input label {
+.second-pillar-246-page .calc-tax .trow-input label, .second-pillar-246-page .calc-tax .trow-label {
   font-weight: 600;
 }
 .second-pillar-246-page .calc-tax .tval {
@@ -19478,9 +19482,30 @@ sup {
 .second-pillar-246-page .vbar.dim .vval {
   color: var(--text2);
 }
+.second-pillar-246-page .vbar .vtrack {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .second-pillar-246-page .vbar .vcol {
   width: 100%;
   max-width: 50px;
+  min-height: 4px;
   border-radius: 7px 7px 0 0;
   background: var(--navy);
   -webkit-transition: height 0.55s ease;
@@ -19539,7 +19564,7 @@ sup {
   font-size: 12px;
   color: var(--text3);
   text-align: center;
-  margin-top: 6px;
+  margin: 6px 0 0;
 }
 .second-pillar-246-page .note-proj {
   font-size: 13px;
@@ -19547,7 +19572,7 @@ sup {
   background: var(--bg-blue2);
   border-radius: var(--r2);
   padding: 10px 12px;
-  margin-top: 12px;
+  margin: 12px 0 0;
   line-height: 1.45;
 }
 @media (max-width: 560px) {
@@ -19934,7 +19959,7 @@ sup {
   .second-pillar-246-page .article {
     padding: 8px 18px 18px;
   }
-  .second-pillar-246-page .article p {
+  .second-pillar-246-page .article > p {
     font-size: 17px;
     margin-bottom: 22px;
   }
