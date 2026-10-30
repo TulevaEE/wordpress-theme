@@ -83,6 +83,10 @@
   .midinput{background:var(--bg-blue2);border:1px solid var(--border-blue);border-radius:var(--r3);padding:16px 18px;margin-bottom:14px}
   .midinput .mi-lead{font-weight:600;color:var(--navy);font-size:15px;margin:0 0 12px}
   .midinput .mi-lead .mi-note{font-weight:400;color:var(--text2)}
+  .midinput .mi-salary{margin-bottom:16px}
+  .midinput .mi-salary label{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:7px}
+  .midinput .mi-salary input[type=number]{text-align:right;width:160px}
+  @media(max-width:560px){.midinput .mi-salary .salary-row{width:100%}.midinput .mi-salary input[type=number]{flex:1;width:auto}}
 
   // Wealth projection
   .wealth{background:#fff;border:1px solid var(--border-blue);border-radius:var(--r3);padding:18px;margin-bottom:14px}

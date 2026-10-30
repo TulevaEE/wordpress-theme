@@ -19464,6 +19464,32 @@ sup {
   font-weight: 400;
   color: var(--text2);
 }
+.second-pillar-246-page .midinput .mi-salary {
+  margin-bottom: 16px;
+}
+.second-pillar-246-page .midinput .mi-salary label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+.second-pillar-246-page .midinput .mi-salary input[type=number] {
+  text-align: right;
+  width: 160px;
+}
+@media (max-width: 560px) {
+  .second-pillar-246-page .midinput .mi-salary .salary-row {
+    width: 100%;
+  }
+  .second-pillar-246-page .midinput .mi-salary input[type=number] {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: auto;
+  }
+}
 .second-pillar-246-page .wealth {
   background: #fff;
   border: 1px solid var(--border-blue);
