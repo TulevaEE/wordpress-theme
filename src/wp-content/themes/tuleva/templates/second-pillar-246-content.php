@@ -3,7 +3,8 @@
   <section class="hero">
     <div class="hero-in">
       <div class="hero-text">
-        <h1><?php echo esc_html( get_field( 'hero_title' ) ?: 'Tõsta täna II samba sissemakset' ); ?></h1>
+        <span class="deadline-kicker">Tähtaeg 30. november</span>
+        <h1><?php echo esc_html( get_field( 'hero_title' ) ?: 'Tõsta II samba sissemakset' ); ?></h1>
         <p class="dek">Nüüd saad ise valida, kas kogud 2, 4 või 6% brutopalgast. Suurem protsent tähendab rohkem maksuvõitu: iga tulevikuks kõrvale pandud euro maksab sulle <span class="hl">vaid 78 senti</span>.</p>
       </div>
       <div class="hero-card">
@@ -25,7 +26,7 @@
           <div class="trow trow-hero"><span class="tlbl">Sinu tulumaksuvõit aastas</span><span class="tval tval-win" id="cTax">480 €</span></div>
           </div>
           <a class="cta" href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>">Tõstan sissemakset</a>
-          <p class="tfoot">Tähtaeg 30. november. Valikut saad igal aastal muuta.</p>
+          <p class="tfoot">Tähtaeg <b class="red-date">30. november</b>. Valikut saad igal aastal muuta.</p>
         </section>
       </div>
     </div>

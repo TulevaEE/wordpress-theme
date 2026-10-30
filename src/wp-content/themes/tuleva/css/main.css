@@ -19134,6 +19134,31 @@ sup {
   background: linear-gradient(transparent 58%, rgba(252, 226, 40, 0.4666666667) 58%);
   padding: 0 2px;
 }
+.second-pillar-246-page .deadline-kicker {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 7px;
+  background: #FCE228;
+  color: #4a3d00;
+  font: 700 13px/1 var(--sans);
+  letter-spacing: 0.01em;
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin: 0 0 18px;
+}
+.second-pillar-246-page .deadline-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #E5A100;
+}
 @media (max-width: 900px) {
   .second-pillar-246-page .hero-in {
     grid-template-columns: minmax(0, 1fr);
@@ -19145,6 +19170,13 @@ sup {
   }
   .second-pillar-246-page .hero-text .dek {
     font-size: 19px;
+  }
+}
+@media (max-width: 560px) {
+  .second-pillar-246-page .deadline-kicker {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-bottom: 14px;
   }
 }
 .second-pillar-246-page .article {
@@ -19402,6 +19434,10 @@ sup {
   font-size: 13px;
   color: var(--text2);
   margin: 12px 0 0;
+}
+.second-pillar-246-page .calc-tax .tfoot .red-date {
+  color: #DB2200;
+  font-weight: 700;
 }
 @media (max-width: 560px) {
   .second-pillar-246-page .calc-tax {

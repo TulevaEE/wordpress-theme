@@ -18,7 +18,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'label'         => 'Hero pealkiri',
 				'name'          => 'hero_title',
 				'type'          => 'text',
-				'default_value' => 'Tõsta täna II samba sissemakset',
+				'default_value' => 'Tõsta II samba sissemakset',
 			),
 			array(
 				'key'           => 'field_sp246_intro_1',
