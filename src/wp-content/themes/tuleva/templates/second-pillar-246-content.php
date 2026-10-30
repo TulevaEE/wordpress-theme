@@ -101,6 +101,14 @@
       <summary>Miks on kaval II sambasse rohkem koguda? <span class="chev" aria-hidden="true">›</span></summary>
       <div class="qabody">
         <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Tänu sellele saad iga <strong>78 sendi</strong> eest, mis sa oma netopalgast „ohverdad“, oma II sambasse <strong>terve euro</strong>. Kui investeeriksid sama raha mujale, alustaksid 22% miinusega.</p>
+        <div class="coin-card">
+          <div class="coins">
+            <div class="coin coin-net"><span class="coin-amt">0,78 €</span><span class="coin-lbl">vähem netopalka</span></div>
+            <span class="coin-arrow" aria-hidden="true">→</span>
+            <div class="coin coin-pil"><span class="coin-amt">1,00 €</span><span class="coin-lbl">rohkem tulevikuks</span></div>
+          </div>
+          <p class="coin-foot">Turgude tootlust ei oska keegi ennustada, aga maksueelis annab kindla edumaa.</p>
+        </div>
       </div>
     </details>
 
