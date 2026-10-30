@@ -159,6 +159,20 @@
   .qa[open] summary{border-bottom:1px solid var(--border-blue)}
   .qa .qabody{padding:14px 20px 2px}
   .qa .qabody p{font-size:18px;line-height:1.55;margin:0 0 16px}
+  // Müntide reframe-visuaal (0,78 € → 1,00 €)
+  .coin-card{background:var(--bg-blue2);border:1px solid var(--border-blue);border-radius:var(--r4);padding:28px 24px 18px;margin:4px 0 10px}
+  .coins{display:flex;align-items:center;justify-content:center;gap:24px}
+  .coin{border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0}
+  .coin-net{width:130px;height:130px;background:var(--gray-coin)}
+  .coin-pil{width:150px;height:150px;background:#4a9fd4}
+  .coin-amt{font-family:var(--serif);font-weight:700;font-size:26px;line-height:1}
+  .coin-lbl{font-size:14px;font-weight:600;margin-top:6px;padding:0 14px;line-height:1.25}
+  .coin-net .coin-amt,.coin-net .coin-lbl{color:var(--navy)}
+  .coin-pil .coin-amt{color:#fff;font-size:30px}
+  .coin-pil .coin-lbl{color:#fff}
+  .coin-arrow{color:var(--navy2);font-size:28px;flex-shrink:0}
+  .coin-foot{border-top:1px solid var(--border-blue);margin:22px 0 0;padding-top:14px;text-align:center;font-size:13.5px;color:var(--text2)}
+  @media(max-width:560px){.coin-card{padding:22px 16px 16px}.coins{gap:14px}.coin-net{width:108px;height:108px}.coin-pil{width:122px;height:122px}.coin-amt{font-size:21px}.coin-pil .coin-amt{font-size:24px}.coin-lbl{font-size:12px;padding:0 8px}.coin-arrow{font-size:22px}}
 
   // Call to action band
   .ctaband{background:var(--bg-blue);border-top:1px solid var(--border-blue);border-bottom:1px solid var(--border-blue);margin-top:52px;padding:52px 20px}

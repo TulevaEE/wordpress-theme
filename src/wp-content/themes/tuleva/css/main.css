@@ -19966,6 +19966,129 @@ sup {
   line-height: 1.55;
   margin: 0 0 16px;
 }
+.second-pillar-246-page .coin-card {
+  background: var(--bg-blue2);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--r4);
+  padding: 28px 24px 18px;
+  margin: 4px 0 10px;
+}
+.second-pillar-246-page .coins {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 24px;
+}
+.second-pillar-246-page .coin {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.second-pillar-246-page .coin-net {
+  width: 130px;
+  height: 130px;
+  background: var(--gray-coin);
+}
+.second-pillar-246-page .coin-pil {
+  width: 150px;
+  height: 150px;
+  background: #4a9fd4;
+}
+.second-pillar-246-page .coin-amt {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+}
+.second-pillar-246-page .coin-lbl {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 6px;
+  padding: 0 14px;
+  line-height: 1.25;
+}
+.second-pillar-246-page .coin-net .coin-amt, .second-pillar-246-page .coin-net .coin-lbl {
+  color: var(--navy);
+}
+.second-pillar-246-page .coin-pil .coin-amt {
+  color: #fff;
+  font-size: 30px;
+}
+.second-pillar-246-page .coin-pil .coin-lbl {
+  color: #fff;
+}
+.second-pillar-246-page .coin-arrow {
+  color: var(--navy2);
+  font-size: 28px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.second-pillar-246-page .coin-foot {
+  border-top: 1px solid var(--border-blue);
+  margin: 22px 0 0;
+  padding-top: 14px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text2);
+}
+@media (max-width: 560px) {
+  .second-pillar-246-page .coin-card {
+    padding: 22px 16px 16px;
+  }
+  .second-pillar-246-page .coins {
+    gap: 14px;
+  }
+  .second-pillar-246-page .coin-net {
+    width: 108px;
+    height: 108px;
+  }
+  .second-pillar-246-page .coin-pil {
+    width: 122px;
+    height: 122px;
+  }
+  .second-pillar-246-page .coin-amt {
+    font-size: 21px;
+  }
+  .second-pillar-246-page .coin-pil .coin-amt {
+    font-size: 24px;
+  }
+  .second-pillar-246-page .coin-lbl {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  .second-pillar-246-page .coin-arrow {
+    font-size: 22px;
+  }
+}
 .second-pillar-246-page .ctaband {
   background: var(--bg-blue);
   border-top: 1px solid var(--border-blue);
