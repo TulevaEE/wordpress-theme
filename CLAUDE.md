@@ -65,7 +65,8 @@ Slack, and the gateway writes the field over REST, reads it back and checks the 
 
 **From wp-admin:** only an Administrator can change a document field there. For anyone else
 the fields are hidden, and their values are listed in the *Documents* box on the edit
-screen; restoring a revision does not change them either. That includes
+screen; restoring a revision does not change them either, and WordPress's own Custom Fields
+form cannot reach them (`is_protected_meta`). That includes
 `investment_report_file`: the monthly report job writes it over REST, and which funds it
 publishes is decided there.
 

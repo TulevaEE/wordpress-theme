@@ -281,6 +281,16 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame($report, tuleva_disclosure_prepare_field($report));
     }
 
+    #[Test]
+    public function wordpress_s_own_custom_fields_form_cannot_reach_a_disclosure(): void
+    {
+        $this->assertTrue(tuleva_disclosure_is_protected_meta(false, 'investment_report_file', 'post'));
+        $this->assertTrue(tuleva_disclosure_is_protected_meta(false, 'prospectus_file', 'post'));
+        $this->assertFalse(tuleva_disclosure_is_protected_meta(false, 'hero_title', 'post'));
+        $this->assertFalse(tuleva_disclosure_is_protected_meta(false, 'prospectus_file', 'user'));
+        $this->assertTrue(tuleva_disclosure_is_protected_meta(true, '_edit_lock', 'post'));
+    }
+
     /**
      * A revision holds the values of the last wp-admin save, so restoring one would put back
      * documents that fund_pages or the upcoming-document switch have replaced since.

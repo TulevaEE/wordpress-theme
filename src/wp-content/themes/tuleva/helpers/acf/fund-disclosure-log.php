@@ -171,6 +171,18 @@ function tuleva_disclosure_prepare_field($field)
 add_filter('acf/prepare_field', 'tuleva_disclosure_prepare_field');
 
 /**
+ * Keeps the disclosures out of WordPress's own Custom Fields form, whose save handler writes post
+ * meta directly, past acf/update_value: a value posted there would change a document with no lock
+ * and no log. ACF and REST write through their own paths, which this does not touch.
+ */
+function tuleva_disclosure_is_protected_meta($protected, $meta_key, $meta_type)
+{
+    return $protected || ($meta_type === 'post' && tuleva_is_disclosure((string) $meta_key));
+}
+
+add_filter('is_protected_meta', 'tuleva_disclosure_is_protected_meta', 10, 3);
+
+/**
  * Restoring a revision copies its fields straight into post meta, past acf/update_value,
  * and a revision holds the values of the last wp-admin save, not those written since over
  * REST or by WP-Cron. So the disclosures are read before ACF's restore (priority 10) and
