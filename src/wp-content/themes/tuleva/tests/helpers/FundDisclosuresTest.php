@@ -1052,8 +1052,53 @@ final class FundDisclosuresTest extends TestCase
         );
 
         foreach (array_column(self::fundTemplates(), 0) as $template) {
-            $this->assertNull(tuleva_fund_disclosure_requirement('sustainability_risks_file', $template));
+            foreach (['sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file'] as $name) {
+                $this->assertNull(tuleva_fund_disclosure_requirement($name, $template), "$template $name");
+            }
         }
+    }
+
+    /**
+     * nav_procedure_file is the pension funds' procedure on the shared page and TKF100's own on
+     * its page. Neither may show up on the other's fund page.
+     */
+    #[Test]
+    public function the_shared_nav_procedure_reaches_the_pension_pages_and_not_tkf100(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.02.2027.pdf',
+        ];
+        FakeFundPage::$fields['nav_procedure_file']
+            = 'https://tuleva.ee/wp-content/uploads/2027/02/TKF100-NAV-sisekord-kehtib-alates-01.02.2027.pdf';
+
+        foreach (self::PENSION_TEMPLATES as $template) {
+            $html = $this->renderFundPage($template);
+            $this->assertStringContainsString('Pensionifondide-NAV-sisekord-kehtib-alates-01.02.2027.pdf', $html, $template);
+            $this->assertStringNotContainsString('TKF100-NAV-sisekord', $html, $template);
+        }
+
+        $savings = $this->renderSavingsPage();
+        $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.02.2027.pdf', $savings);
+        $this->assertStringNotContainsString('Pensionifondide-NAV-sisekord', $savings);
+    }
+
+    /**
+     * Before this page the upcoming URL was always empty, so the row never rendered. Now it is a
+     * field, and a filename with no date must not claim one.
+     */
+    #[Test]
+    public function an_undated_upcoming_pension_nav_procedure_claims_no_date(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-uus.pdf',
+        ];
+
+        $line = $this->lineContaining('Pensionifondide-NAV-sisekord-uus.pdf', explode('<br>', $this->renderFundPage('page_fund-bonds.php')));
+
+        $this->assertStringContainsString('Estonian)', $line);
+        $this->assertStringNotContainsString('effective from', $line);
     }
 
     /**
@@ -1142,7 +1187,8 @@ final class FundDisclosuresTest extends TestCase
 
     /**
      * The shared page shows its own fields, so whoever sets one sees what the fund pages now
-     * link, and agent-gateway's check of the public page has links to find.
+     * link, and once agent-gateway writes this page its check of the public page has links to
+     * find.
      */
     #[Test]
     public function the_shared_page_lists_exactly_the_shared_documents_a_fund_page_links(): void

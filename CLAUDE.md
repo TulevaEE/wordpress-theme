@@ -116,9 +116,12 @@ like a fund's. The helpers in `helpers/extras.php` read them from there
 (`tuleva_shared_document_url()`), so a fund page shows a new one with no deploy, and the page
 itself lists the same links. Write it as a fund page is written: the Estonian page, over REST.
 
-The theme finds the page by its template; one page is meant to be on it. Until an
-Administrator creates it, and while one of its fields is empty, the URL in `helpers/extras.php`
-renders instead.
+The theme finds the page by its template, and reads it only once it is published (a draft or
+private page is ignored); one page is meant to be on it. Until then, and while one of its fields
+is empty, the URL in `helpers/extras.php` renders instead. Create it as a new page, not as a copy
+of a fund page: a copy carries that fund's field values, and a copied TKF100 NAV procedure would
+show on the pension pages. To change nothing visible when first filling it, pick the attachments
+the URLs already point at; uploading the same PDF again gives it a `-1` name and a new link.
 
 ### Fallbacks still in place
 

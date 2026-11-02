@@ -146,7 +146,8 @@ function tuleva_fund_disclosure_catalogue(): array
 }
 
 /**
- * Which documents each fund page carries.
+ * Which documents each fund page carries, and the shared documents page (not a fund: code
+ * that wants only the funds leaves out TULEVA_SHARED_DOCUMENTS_TEMPLATE).
  *
  * Absent from a list means the document does not exist for that fund. Location rules
  * are per page template and every fund has its own, so turning a document off for one
