@@ -50,18 +50,15 @@
         font-weight: $font-weight-medium;
         line-height: 1.35;
 
-        // A width that splits into three whole pixels, so both dividers fall on a pixel
-        // edge and render equally thick (on a fractional edge one of them blurs)
+        // Columns sized by their text (each fact breaks into two lines with a <br>), the spare
+        // width shared between them, so the middle fact, the longest, gets the room it needs
         @include media-breakpoint-up(md) {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            width: 27rem;
+            grid-template-columns: repeat(3, auto);
+            width: 100%;
+            max-width: 30rem;
             margin-right: auto;
             margin-left: auto;
-        }
-
-        @include media-breakpoint-up(xl) {
-            width: 30rem;
         }
 
         li {
