@@ -346,7 +346,9 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 }
 
 /**
- * The pages on a template whose disclosures are read: the Estonian originals.
+ * The pages on a template whose disclosures are read: the Estonian originals, themselves
+ * published and on that template (a translation can be published while its original is not, or
+ * sit on another template).
  *
  * @return list<int>
  */
@@ -362,10 +364,15 @@ function tuleva_fund_pages_on(string $template): array
         'suppress_filters' => true,
     ]);
 
-    return array_values(array_unique(array_map(
+    $originals = array_unique(array_map(
         fn($page) => (int) tuleva_disclosure_source_post((int) $page),
         $pages
-    )));
+    ));
+
+    return array_values(array_filter(
+        $originals,
+        fn($page) => get_post_status($page) === 'publish' && get_page_template_slug($page) === $template
+    ));
 }
 
 /**

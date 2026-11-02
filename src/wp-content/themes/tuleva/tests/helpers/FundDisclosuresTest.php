@@ -37,6 +37,9 @@ final class FakeFundPage
     /** @var list<string> field keys whose writes ACF does not store */
     public static array $failing_writes = [];
 
+    /** @var array<int, string> post status by page, 'publish' when not listed */
+    public static array $statuses = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -48,6 +51,7 @@ final class FakeFundPage
         self::$pages = [];
         self::$updates = [];
         self::$failing_writes = [];
+        self::$statuses = [];
     }
 }
 
@@ -112,9 +116,27 @@ function apply_filters($hook, $value, ...$args)
     return $value;
 }
 
+/**
+ * The rendered page's template, or a listed page's.
+ */
 function get_page_template_slug($post = null)
 {
-    return FakeFundPage::$template;
+    if ($post === null) {
+        return FakeFundPage::$template;
+    }
+
+    foreach (FakeFundPage::$pages as $template => $pages) {
+        if (in_array($post, $pages, true)) {
+            return $template;
+        }
+    }
+
+    return '';
+}
+
+function get_post_status($post = null)
+{
+    return FakeFundPage::$statuses[$post] ?? 'publish';
 }
 
 /**
@@ -1041,6 +1063,31 @@ final class FundDisclosuresTest extends TestCase
             ['prospectus_file' => 102, 'prospectus_upcoming_file' => ''],
             FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
         );
+    }
+
+    /**
+     * The job writes the fields of the page a translation reads from, so that original has to be
+     * published and on the same template; otherwise one template's field keys would be written
+     * to another's page.
+     */
+    #[Test]
+    public function the_hourly_job_writes_only_an_original_that_is_published_on_the_same_template(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$pages['page_fund-stocks.php'] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+
+        FakeFundPage::$pages = [self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE]];
+        FakeFundPage::$statuses[FakeFundPage::ESTONIAN_PAGE] = 'draft';
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
     }
 
     /**
