@@ -88,8 +88,9 @@ From the date in its filename an upcoming prospectus, terms or NAV procedure ren
 current document and its upcoming row goes (`tuleva_document_versions()`); an hourly WP-Cron
 job then moves it into the current field and empties the upcoming one
 (`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
-the upcoming document was set. An upcoming document older than the current one, such as a
-template fallback that outlived its field, is dropped instead of promoted.
+the upcoming document was set. An upcoming document no newer than the current one, such as
+a template fallback that outlived its field, is dropped instead of promoted, and the job
+empties its field.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in

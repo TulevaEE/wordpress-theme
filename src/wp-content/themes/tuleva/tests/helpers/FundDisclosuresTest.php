@@ -28,9 +28,6 @@ final class FakeFundPage
     /** @var array<int, array<string, int>> the attachment ids ACF stores, by page */
     public static array $stored = [];
 
-    /** @var array<int, string> */
-    public static array $attachments = [];
-
     /** @var array<string, list<int>> the pages on each template, translations included */
     public static array $pages = [];
 
@@ -45,7 +42,6 @@ final class FakeFundPage
         self::$template = '';
         self::$today = self::TODAY;
         self::$stored = [];
-        self::$attachments = [];
         self::$pages = [];
         self::$updates = [];
     }
@@ -69,11 +65,6 @@ function update_field($selector, $value, $post_id = false)
     FakeFundPage::$updates[] = [$selector, $value, $post_id];
 
     return true;
-}
-
-function wp_get_attachment_url($attachment_id)
-{
-    return FakeFundPage::$attachments[$attachment_id] ?? false;
 }
 
 function get_posts($args = null)
@@ -219,6 +210,7 @@ if (!function_exists('get_the_title')) {
 }
 
 require_once __DIR__ . '/../support/FakeOptions.php';
+require_once __DIR__ . '/../support/FakeAttachments.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
@@ -241,6 +233,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::reset();
         FakeOptions::reset();
         FakeWordPress::reset();
+        FakeAttachments::reset();
     }
 
     #[Test]
@@ -943,7 +936,7 @@ final class FundDisclosuresTest extends TestCase
     {
         FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE];
         FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
-        FakeFundPage::$attachments = [
+        FakeAttachments::$urls = [
             101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
             102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
         ];
@@ -961,7 +954,7 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
-    public function the_hourly_job_leaves_a_document_not_yet_due_and_a_leftover_alone(): void
+    public function the_hourly_job_leaves_a_document_not_yet_due_and_empties_a_leftover(): void
     {
         FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
         FakeFundPage::$stored[17533] = [
@@ -970,7 +963,7 @@ final class FundDisclosuresTest extends TestCase
             'terms_file' => 203,
             'terms_upcoming_file' => 204,
         ];
-        FakeFundPage::$attachments = [
+        FakeAttachments::$urls = [
             201 => 'https://tuleva.ee/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf',
             202 => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf',
             203 => 'https://tuleva.ee/wp-content/uploads/2027/06/TUK75-tingimused-kehtivad-alates-01.07.2027.pdf',
@@ -978,11 +971,56 @@ final class FundDisclosuresTest extends TestCase
         ];
 
         $this->assertSame([], tuleva_promote_due_documents('2026-12-31'));
+        $this->assertSame([], FakeFundPage::$updates);
+
         $this->assertSame([['post' => 17533, 'field' => 'prospectus_file']], tuleva_promote_due_documents('2027-07-15'));
         $this->assertSame([
             ['field_fund_disclosure_stocks_prospectus_file', 202, 17533],
             ['field_fund_disclosure_stocks_prospectus_upcoming_file', '', 17533],
+            ['field_fund_disclosure_stocks_terms_upcoming_file', '', 17533],
         ], FakeFundPage::$updates);
+    }
+
+    /**
+     * Every template takes the switch for both its prospectus and its terms.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function every_fund_page_switches_its_upcoming_fields_on_their_date(string $template): void
+    {
+        FakeFundPage::$today = '2027-02-01';
+        FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/01/Old-Prospekt-kehtib-alates-01.01.2026.pdf',
+            'terms_file' => 'https://tuleva.ee/wp-content/uploads/2026/01/Old-tingimused-kehtivad-alates-01.01.2026.pdf',
+            'prospectus_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/New-Prospekt-kehtib-alates-01.02.2027.pdf',
+            'terms_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/New-tingimused-kehtivad-alates-01.02.2027.pdf',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('New-Prospekt-kehtib-alates-01.02.2027.pdf', $html);
+        $this->assertStringContainsString('New-tingimused-kehtivad-alates-01.02.2027.pdf', $html);
+        $this->assertStringNotContainsString('Old-Prospekt', $html);
+        $this->assertStringNotContainsString('Old-tingimused', $html);
+        $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    /**
+     * Once the job has moved a document into the current field, TUK75's template fallback
+     * for the upcoming terms comes back with the same date and a different file. The field's
+     * document stays.
+     */
+    #[Test]
+    public function a_fallback_with_the_current_document_s_date_does_not_replace_it(): void
+    {
+        FakeFundPage::$today = '2027-01-02';
+        FakeFundPage::$fields['terms_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-kehtivad-alates-01.01.2027.pdf';
+
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('2026/12/TUK75-tingimused-kehtivad-alates-01.01.2027.pdf', $html);
+        $this->assertStringNotContainsString('TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf', $html);
     }
 
     /**

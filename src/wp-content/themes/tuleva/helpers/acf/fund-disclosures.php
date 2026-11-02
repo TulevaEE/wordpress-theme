@@ -325,8 +325,10 @@ const TULEVA_UPCOMING_DISCLOSURES = [
  *
  * From its effective date an upcoming document is the current one, so the page switches on
  * that day with nobody acting: the switch was approved when the upcoming document was set.
- * An upcoming document older than the current one is a leftover, such as a template fallback
- * outliving its field, and is dropped rather than promoted over a newer document.
+ * An upcoming document no newer than the current one is a leftover and is dropped, not
+ * promoted. The usual one is a template fallback outliving its field: once the job below
+ * has moved the field's document into the current field, the fallback comes back as the
+ * upcoming URL with the same date, and must not replace the document the field held.
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
@@ -340,7 +342,7 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 
     $current_since = tuleva_document_effective_day($current);
 
-    return $current_since !== '' && $current_since > $takes_effect ? [$current, ''] : [$upcoming, ''];
+    return $current_since !== '' && $current_since >= $takes_effect ? [$current, ''] : [$upcoming, ''];
 }
 
 /**
@@ -368,16 +370,21 @@ function tuleva_fund_pages_on(string $template): array
 
 /**
  * Writes each switch tuleva_document_versions() makes on a page into its fields: the current
- * field gets the upcoming document and the upcoming field is emptied. The REST `acf` values
- * that the app and agent-gateway read then agree with what the page shows, and the next
- * upcoming document has an empty field to go into. The page itself switches at midnight
- * whether or not this has run.
+ * field gets the upcoming document and the upcoming field is emptied, and an upcoming field
+ * whose document the page drops as a leftover is emptied too. The REST `acf` values that the
+ * app and agent-gateway read then agree with what the page shows, and the next upcoming
+ * document has an empty field to go into. The page itself switches at midnight whether or
+ * not this has run.
  *
  * @return list<array{post: int, field: string}> the documents promoted
  */
 function tuleva_promote_due_documents(?string $today = null): array
 {
     $promoted = [];
+
+    if (!function_exists('update_field')) {
+        return $promoted;
+    }
 
     foreach (tuleva_fund_disclosure_scope() as $template => $scope) {
         foreach (tuleva_fund_pages_on($template) as $page) {
@@ -396,13 +403,18 @@ function tuleva_promote_due_documents(?string $today = null): array
                 $current_id = (int) get_field($current, $page, false);
                 $current_url = $current_id > 0 ? (string) wp_get_attachment_url($current_id) : '';
 
-                if (tuleva_document_versions($current_url, $upcoming_url, $today) !== [$upcoming_url, '']) {
+                [$now, $next] = tuleva_document_versions($current_url, $upcoming_url, $today);
+
+                if ($next !== '') {
                     continue;
                 }
 
-                update_field(tuleva_fund_disclosure_field($current, $template)['key'], $upcoming_id, $page);
+                if ($now === $upcoming_url) {
+                    update_field(tuleva_fund_disclosure_field($current, $template)['key'], $upcoming_id, $page);
+                    $promoted[] = ['post' => $page, 'field' => $current];
+                }
+
                 update_field(tuleva_fund_disclosure_field($upcoming, $template)['key'], '', $page);
-                $promoted[] = ['post' => $page, 'field' => $current];
             }
         }
     }
