@@ -380,7 +380,9 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 }
 
 /**
- * The pages on a template whose disclosures are read: the Estonian originals.
+ * The pages on a template whose disclosures are read: the Estonian originals, themselves
+ * published and on that template (a translation can be published while its original is not, or
+ * sit on another template).
  *
  * @return list<int>
  */
@@ -396,10 +398,15 @@ function tuleva_fund_pages_on(string $template): array
         'suppress_filters' => true,
     ]);
 
-    return array_values(array_unique(array_map(
+    $originals = array_unique(array_map(
         fn($page) => (int) tuleva_disclosure_source_post((int) $page),
         $pages
-    )));
+    ));
+
+    return array_values(array_filter(
+        $originals,
+        fn($page) => get_post_status($page) === 'publish' && get_page_template_slug($page) === $template
+    ));
 }
 
 /**
@@ -448,6 +455,11 @@ function &tuleva_shared_documents_page_found(): array
  * document has an empty field to go into. The page itself switches at midnight whether or
  * not this has run.
  *
+ * A page whose current field is empty is left alone: what it shows comes from a template URL
+ * this job cannot see, so comparing against nothing could promote a document older than the
+ * one on the page. The upcoming field is emptied only once the current field reads back as the
+ * promoted document, so a write that did not land is tried again the next hour.
+ *
  * @return list<array{post: int, field: string}> the documents promoted
  */
 function tuleva_promote_due_documents(?string $today = null): array
@@ -475,6 +487,10 @@ function tuleva_promote_due_documents(?string $today = null): array
                 $current_id = (int) get_field($current, $page, false);
                 $current_url = $current_id > 0 ? (string) wp_get_attachment_url($current_id) : '';
 
+                if ($current_url === '') {
+                    continue;
+                }
+
                 [$now, $next] = tuleva_document_versions($current_url, $upcoming_url, $today);
 
                 if ($next !== '') {
@@ -483,6 +499,11 @@ function tuleva_promote_due_documents(?string $today = null): array
 
                 if ($now === $upcoming_url) {
                     update_field(tuleva_fund_disclosure_field($current, $template)['key'], $upcoming_id, $page);
+
+                    if ((int) get_field($current, $page, false) !== $upcoming_id) {
+                        continue;
+                    }
+
                     $promoted[] = ['post' => $page, 'field' => $current];
                 }
 

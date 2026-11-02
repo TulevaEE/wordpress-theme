@@ -90,7 +90,9 @@ job then moves it into the current field and empties the upcoming one
 (`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
 the upcoming document was set. An upcoming document no newer than the current one, such as
 a template fallback that outlived its field, is dropped instead of promoted, and the job
-empties its field.
+empties its field. The job leaves a page whose current field is empty (a template URL it cannot
+see is what shows), so the pension pages' fields move only once they are filled; and it empties
+an upcoming field only after the current field reads back as the promoted document.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in

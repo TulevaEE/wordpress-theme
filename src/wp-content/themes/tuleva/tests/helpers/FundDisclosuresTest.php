@@ -37,6 +37,12 @@ final class FakeFundPage
     /** @var array<int, array<string, mixed>> what get_field() returns on a page other than the fund page */
     public static array $page_fields = [];
 
+    /** @var list<string> field keys whose writes ACF does not store */
+    public static array $failing_writes = [];
+
+    /** @var array<int, string> post status by page, 'publish' when not listed */
+    public static array $statuses = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -48,6 +54,8 @@ final class FakeFundPage
         self::$pages = [];
         self::$updates = [];
         self::$page_fields = [];
+        self::$failing_writes = [];
+        self::$statuses = [];
     }
 }
 
@@ -68,9 +76,24 @@ function get_field($name, $post_id = false, $format_value = true)
     return $fields[$name] ?? null;
 }
 
+/**
+ * Stores the value under the field's name, as ACF does, unless the key is set to fail.
+ */
 function update_field($selector, $value, $post_id = false)
 {
     FakeFundPage::$updates[] = [$selector, $value, $post_id];
+
+    if (in_array($selector, FakeFundPage::$failing_writes, true)) {
+        return false;
+    }
+
+    foreach (tuleva_fund_disclosure_scope() as $template => $scope) {
+        foreach (array_keys($scope) as $name) {
+            if (tuleva_fund_disclosure_field($name, $template)['key'] === $selector) {
+                FakeFundPage::$stored[$post_id][$name] = $value;
+            }
+        }
+    }
 
     return true;
 }
@@ -101,9 +124,27 @@ function apply_filters($hook, $value, ...$args)
     return $value;
 }
 
+/**
+ * The rendered page's template, or a listed page's.
+ */
 function get_page_template_slug($post = null)
 {
-    return FakeFundPage::$template;
+    if ($post === null) {
+        return FakeFundPage::$template;
+    }
+
+    foreach (FakeFundPage::$pages as $template => $pages) {
+        if (in_array($post, $pages, true)) {
+            return $template;
+        }
+    }
+
+    return '';
+}
+
+function get_post_status($post = null)
+{
+    return FakeFundPage::$statuses[$post] ?? 'publish';
 }
 
 /**
@@ -1002,6 +1043,74 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
+     * The pension pages' current documents are template URLs until their fields are filled. The
+     * job cannot see those, so an upcoming field that reads as older than the page's current
+     * document must not be promoted over it.
+     */
+    #[Test]
+    public function the_hourly_job_leaves_a_page_whose_current_field_is_empty(): void
+    {
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
+        FakeAttachments::$urls = [
+            204 => 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([], FakeFundPage::$updates);
+    }
+
+    #[Test]
+    public function an_upcoming_document_stays_for_the_next_run_when_the_current_write_did_not_land(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+        FakeFundPage::$failing_writes = ['field_fund_savings_prospectus'];
+
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+        $this->assertSame(102, FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]['prospectus_upcoming_file']);
+
+        FakeFundPage::$failing_writes = [];
+        $this->assertSame(
+            [['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']],
+            tuleva_promote_due_documents('2027-01-01')
+        );
+        $this->assertSame(
+            ['prospectus_file' => 102, 'prospectus_upcoming_file' => ''],
+            FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
+        );
+    }
+
+    /**
+     * The job writes the fields of the page a translation reads from, so that original has to be
+     * published and on the same template; otherwise one template's field keys would be written
+     * to another's page.
+     */
+    #[Test]
+    public function the_hourly_job_writes_only_an_original_that_is_published_on_the_same_template(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$pages['page_fund-stocks.php'] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+
+        FakeFundPage::$pages = [self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE]];
+        FakeFundPage::$statuses[FakeFundPage::ESTONIAN_PAGE] = 'draft';
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+    }
+
+    /**
      * Every template takes the switch for both its prospectus and its terms.
      */
     #[Test]
@@ -1173,6 +1282,37 @@ final class FundDisclosuresTest extends TestCase
             ['field_fund_disclosure_shared_documents_nav_procedure_file', 602, self::SHARED_PAGE],
             ['field_fund_disclosure_shared_documents_nav_procedure_upcoming_file', '', self::SHARED_PAGE],
         ], FakeFundPage::$updates);
+    }
+
+    /**
+     * With the shared page's current field empty, the pension pages show today's NAV procedure
+     * URL. An upcoming document older than that is dropped on the page and must not be promoted.
+     */
+    #[Test]
+    public function a_stale_upcoming_nav_procedure_neither_shows_nor_is_promoted_while_the_current_field_is_empty(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        $stale = 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => $stale];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => 602];
+        FakeAttachments::$urls = [602 => $stale];
+
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('kehtib-alates-01.09.2026.pdf', $html);
+        $this->assertSame([], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([], FakeFundPage::$updates);
+    }
+
+    #[Test]
+    public function a_shared_page_that_is_not_published_is_not_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/draft.pdf'];
+
+        $this->assertSame('https://tuleva.ee/today.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
     }
 
     #[Test]
