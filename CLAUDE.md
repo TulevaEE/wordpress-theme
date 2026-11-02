@@ -80,7 +80,16 @@ Local filenames use Estonian characters and spaces; `upload_docs.py` sanitises t
 uploads as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`.
 
 **Keep the effective date in the filename.** For an upcoming document the page reads
-`…alates-DD.MM.YYYY` out of the filename to label the row.
+`…alates-DD.MM.YYYY` out of the filename to label the row, and switches on that date.
+
+### Upcoming documents switch themselves
+
+From the date in its filename an upcoming prospectus, terms or NAV procedure renders as the
+current document and its upcoming row goes (`tuleva_document_versions()`); an hourly WP-Cron
+job then moves it into the current field and empties the upcoming one
+(`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
+the upcoming document was set. An upcoming document older than the current one, such as a
+template fallback that outlived its field, is dropped instead of promoted.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in
@@ -105,19 +114,17 @@ updating one is a commit and a deploy.
 
 Most per-fund documents also have a hardcoded URL in their template, which renders while
 the field is empty. The pension pages' fields are all empty, so they show the code URLs.
-On TKF100 the prospectus, terms, key information document, NAV procedure and upcoming
-prospectus have a code URL; the model portfolio, summary of investor rights, investment
-report, report archive, upcoming terms and upcoming NAV procedure do not — empty field, no
-row.
+On TKF100 the prospectus, terms, key information document and NAV procedure have a code
+URL; the model portfolio, summary of investor rights, investment report, report archive and
+the three upcoming documents do not — empty field, no row.
 
 The field wins over its literal, and an empty field falls back to it. So:
 
 - **To change a document, set the field.** Once it is set, editing the literal changes
   nothing visible.
 - **To take a document off the page, remove its literal.** Clearing the field brings the
-  literal back, so wp-admin alone cannot do it. This is what promoting an upcoming document
-  on its effective date runs into: the current field gets the new file, and the upcoming row
-  has to go — a template edit wherever that row has a code URL.
+  literal back, so wp-admin alone cannot do it. Promoting an upcoming document is not this
+  case: it switches itself on its date (see *Upcoming documents switch themselves*).
 - **A new document goes into the field, not into a new literal.** A literal added now is
   one more row that needs a deploy to retire.
 - The three pension pages' `investment_report_file` is written by the monthly report job.

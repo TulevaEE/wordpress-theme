@@ -20,6 +20,9 @@ $prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url()
 $terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/10/TUK75-tingimused-kehtivad-alates-31.08.2026.pdf');
 $prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf');
 $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file', get_site_url() . '/wp-content/uploads/2026/08/TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf');
+// From its effective date an upcoming document is the current one (tuleva_document_versions()).
+[$prospectus_url, $prospectus_upcoming_url] = tuleva_document_versions($prospectus_url, $prospectus_upcoming_url);
+[$terms_url, $terms_upcoming_url] = tuleva_document_versions($terms_url, $terms_upcoming_url);
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 // One suffix can only state one date. The prospectus and the terms are approved

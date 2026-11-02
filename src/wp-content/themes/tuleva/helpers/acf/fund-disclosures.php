@@ -261,8 +261,29 @@ function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?stri
  */
 function tuleva_document_effective_date(string $url, string $fallback = ''): string
 {
+    $date = tuleva_document_effective_parts($url);
+
+    return $date === null ? $fallback : "{$date[0]}.{$date[1]}.{$date[2]}";
+}
+
+/**
+ * The same date as 'YYYY-MM-DD', which compares as a string, or '' when the filename
+ * carries none.
+ */
+function tuleva_document_effective_day(string $url): string
+{
+    $date = tuleva_document_effective_parts($url);
+
+    return $date === null ? '' : "{$date[2]}-{$date[1]}-{$date[0]}";
+}
+
+/**
+ * @return array{0: string, 1: string, 2: string}|null day, month and year as the filename spells them
+ */
+function tuleva_document_effective_parts(string $url): ?array
+{
     if (!preg_match('/alates[-_. ](\d{2})\.(\d{2})\.(\d{4})/i', $url, $matches)) {
-        return $fallback;
+        return null;
     }
 
     [, $day, $month, $year] = array_map('intval', $matches);
@@ -272,11 +293,130 @@ function tuleva_document_effective_date(string $url, string $fallback = ''): str
     // published as "...kehtib-alates-02.03.3026.pdf" — a typo for 2026 — which is
     // harmless while the date is unused and is not once it is rendered.
     if (!checkdate($month, $day, $year) || abs($year - (int) date('Y')) > 10) {
-        return $fallback;
+        return null;
     }
 
-    return $matches[1] . '.' . $matches[2] . '.' . $matches[3];
+    return [$matches[1], $matches[2], $matches[3]];
 }
+
+/**
+ * Today in Tallinn, where a document's effective date is a calendar day. A filter so the
+ * tests can hold the day still.
+ */
+function tuleva_today(): string
+{
+    return apply_filters(
+        'tuleva_today',
+        (new DateTimeImmutable('now', new DateTimeZone('Europe/Tallinn')))->format('Y-m-d')
+    );
+}
+
+/**
+ * Each document that has an upcoming version, by its current field.
+ */
+const TULEVA_UPCOMING_DISCLOSURES = [
+    'prospectus_file' => 'prospectus_upcoming_file',
+    'terms_file' => 'terms_upcoming_file',
+    'nav_procedure_file' => 'nav_procedure_upcoming_file',
+];
+
+/**
+ * A document's current and upcoming URL, once the upcoming one's date is taken into account.
+ *
+ * From its effective date an upcoming document is the current one, so the page switches on
+ * that day with nobody acting: the switch was approved when the upcoming document was set.
+ * An upcoming document older than the current one is a leftover, such as a template fallback
+ * outliving its field, and is dropped rather than promoted over a newer document.
+ *
+ * @return array{0: string, 1: string} the current URL and the upcoming URL
+ */
+function tuleva_document_versions(string $current, string $upcoming, ?string $today = null): array
+{
+    $takes_effect = tuleva_document_effective_day($upcoming);
+
+    if ($takes_effect === '' || $takes_effect > ($today ?: tuleva_today())) {
+        return [$current, $upcoming];
+    }
+
+    $current_since = tuleva_document_effective_day($current);
+
+    return $current_since !== '' && $current_since > $takes_effect ? [$current, ''] : [$upcoming, ''];
+}
+
+/**
+ * The pages on a template whose disclosures are read: the Estonian originals.
+ *
+ * @return list<int>
+ */
+function tuleva_fund_pages_on(string $template): array
+{
+    $pages = get_posts([
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'meta_key' => '_wp_page_template',
+        'meta_value' => $template,
+        'fields' => 'ids',
+        'numberposts' => -1,
+        'suppress_filters' => true,
+    ]);
+
+    return array_values(array_unique(array_map(
+        fn($page) => (int) tuleva_disclosure_source_post((int) $page),
+        $pages
+    )));
+}
+
+/**
+ * Writes each switch tuleva_document_versions() makes on a page into its fields: the current
+ * field gets the upcoming document and the upcoming field is emptied. The REST `acf` values
+ * that the app and agent-gateway read then agree with what the page shows, and the next
+ * upcoming document has an empty field to go into. The page itself switches at midnight
+ * whether or not this has run.
+ *
+ * @return list<array{post: int, field: string}> the documents promoted
+ */
+function tuleva_promote_due_documents(?string $today = null): array
+{
+    $promoted = [];
+
+    foreach (tuleva_fund_disclosure_scope() as $template => $scope) {
+        foreach (tuleva_fund_pages_on($template) as $page) {
+            foreach (TULEVA_UPCOMING_DISCLOSURES as $current => $upcoming) {
+                if (!isset($scope[$current], $scope[$upcoming])) {
+                    continue;
+                }
+
+                $upcoming_id = (int) get_field($upcoming, $page, false);
+                $upcoming_url = $upcoming_id > 0 ? (string) wp_get_attachment_url($upcoming_id) : '';
+
+                if ($upcoming_url === '') {
+                    continue;
+                }
+
+                $current_id = (int) get_field($current, $page, false);
+                $current_url = $current_id > 0 ? (string) wp_get_attachment_url($current_id) : '';
+
+                if (tuleva_document_versions($current_url, $upcoming_url, $today) !== [$upcoming_url, '']) {
+                    continue;
+                }
+
+                update_field(tuleva_fund_disclosure_field($current, $template)['key'], $upcoming_id, $page);
+                update_field(tuleva_fund_disclosure_field($upcoming, $template)['key'], '', $page);
+                $promoted[] = ['post' => $page, 'field' => $current];
+            }
+        }
+    }
+
+    return $promoted;
+}
+
+// Hourly, so the fields follow the page within an hour of midnight.
+add_action('tuleva_promote_due_documents', 'tuleva_promote_due_documents', 10, 0);
+add_action('init', function (): void {
+    if (!wp_next_scheduled('tuleva_promote_due_documents')) {
+        wp_schedule_event(time(), 'hourly', 'tuleva_promote_due_documents');
+    }
+});
 
 /**
  * '' when the current page is not a fund page.
