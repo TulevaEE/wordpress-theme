@@ -34,6 +34,9 @@ final class FakeFundPage
     /** @var list<array{0: string, 1: mixed, 2: int}> field key, value, page */
     public static array $updates = [];
 
+    /** @var array<int, array<string, mixed>> what get_field() returns on a page other than the fund page */
+    public static array $page_fields = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -44,6 +47,7 @@ final class FakeFundPage
         self::$stored = [];
         self::$pages = [];
         self::$updates = [];
+        self::$page_fields = [];
     }
 }
 
@@ -51,6 +55,10 @@ function get_field($name, $post_id = false, $format_value = true)
 {
     if (!$format_value) {
         return FakeFundPage::$stored[$post_id][$name] ?? null;
+    }
+
+    if (isset(FakeFundPage::$page_fields[$post_id])) {
+        return FakeFundPage::$page_fields[$post_id][$name] ?? null;
     }
 
     $fields = ($post_id ?: FakeFundPage::$post_id) === FakeFundPage::ENGLISH_PAGE
@@ -202,6 +210,13 @@ if (!function_exists('get_permalink')) {
     }
 }
 
+if (!function_exists('have_posts')) {
+    function have_posts()
+    {
+        return false;
+    }
+}
+
 if (!function_exists('get_the_title')) {
     function get_the_title($post = 0)
     {
@@ -228,12 +243,17 @@ final class FundDisclosuresTest extends TestCase
 
     private const SAVINGS_TEMPLATE = 'page_fund-savings.php';
 
+    private const SHARED_PAGE = 41000;
+
     protected function setUp(): void
     {
         FakeFundPage::reset();
         FakeOptions::reset();
         FakeWordPress::reset();
         FakeAttachments::reset();
+
+        $found = &tuleva_shared_documents_page_found();
+        $found = [];
     }
 
     #[Test]
@@ -325,7 +345,7 @@ final class FundDisclosuresTest extends TestCase
     #[Test]
     public function the_investment_report_field_is_named_the_same_on_every_fund(): void
     {
-        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
+        foreach (array_column(self::fundTemplates(), 0) as $template) {
             $this->assertNotNull(
                 tuleva_fund_disclosure_requirement('investment_report_file', $template),
                 "$template must carry investment_report_file — onboarding-service sets it by name on every fund"
@@ -1021,6 +1041,131 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertStringContainsString('2026/12/TUK75-tingimused-kehtivad-alates-01.01.2027.pdf', $html);
         $this->assertStringNotContainsString('TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf', $html);
+    }
+
+    #[Test]
+    public function the_shared_documents_page_carries_the_documents_every_fund_links_and_nothing_per_fund(): void
+    {
+        $this->assertSame(
+            ['nav_procedure_file', 'nav_procedure_upcoming_file', 'sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file'],
+            array_keys(tuleva_fund_disclosure_scope()[TULEVA_SHARED_DOCUMENTS_TEMPLATE])
+        );
+
+        foreach (array_column(self::fundTemplates(), 0) as $template) {
+            $this->assertNull(tuleva_fund_disclosure_requirement('sustainability_risks_file', $template));
+        }
+    }
+
+    /**
+     * Until an Administrator creates the page and its fields are set, a fund page links what
+     * it links today.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_fund_page_links_today_s_shared_documents_while_there_is_no_shared_page(string $template): void
+    {
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
+        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html);
+        $this->assertStringContainsString('Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf', $html);
+    }
+
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_fund_page_links_the_shared_page_s_documents_once_they_are_set(string $template): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'sustainability_risks_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Jatkusuutlikkusriskid-kehtib-alates-01.02.2027.pdf',
+            'remuneration_policy_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Tasustamise-pohimotted-01.02.2027.pdf',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('Jatkusuutlikkusriskid-kehtib-alates-01.02.2027.pdf', $html);
+        $this->assertStringContainsString('Tasustamise-pohimotted-01.02.2027.pdf', $html);
+        $this->assertStringNotContainsString('Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
+        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html, 'an empty field keeps today\'s URL');
+    }
+
+    /**
+     * The pension funds' NAV procedure switches on its date like a fund's own upcoming
+     * document.
+     */
+    #[Test]
+    public function the_pension_funds_nav_procedure_switches_on_its_date_from_the_shared_page(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+        ];
+
+        FakeFundPage::$today = '2027-02-28';
+        $before = $this->renderFundPage('page_fund-stocks.php');
+        FakeFundPage::$today = '2027-03-01';
+        $after = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $before);
+        $this->assertStringContainsString('effective from 01.03.2027', $before);
+        $this->assertStringContainsString('Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf', $after);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $after);
+        $this->assertStringNotContainsString('effective from', $after);
+    }
+
+    #[Test]
+    public function the_hourly_job_moves_the_shared_page_s_due_nav_procedure_too(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_file' => 601, 'nav_procedure_upcoming_file' => 602];
+        FakeAttachments::$urls = [
+            601 => 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
+            602 => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+        ];
+
+        $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2027-03-01'));
+        $this->assertSame([
+            ['field_fund_disclosure_shared_documents_nav_procedure_file', 602, self::SHARED_PAGE],
+            ['field_fund_disclosure_shared_documents_nav_procedure_upcoming_file', '', self::SHARED_PAGE],
+        ], FakeFundPage::$updates);
+    }
+
+    #[Test]
+    public function with_two_pages_on_the_shared_template_the_oldest_is_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE + 5, self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/oldest.pdf'];
+        FakeFundPage::$page_fields[self::SHARED_PAGE + 5] = ['remuneration_policy_file' => 'https://tuleva.ee/newer.pdf'];
+
+        $this->assertSame('https://tuleva.ee/oldest.pdf', tuleva_shared_document_url('remuneration_policy_file'));
+    }
+
+    /**
+     * The shared page shows its own fields, so whoever sets one sees what the fund pages now
+     * link, and agent-gateway's check of the public page has links to find.
+     */
+    #[Test]
+    public function the_shared_page_lists_exactly_the_shared_documents_a_fund_page_links(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'adverse_impacts_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Negatiivse-moju-mittearvestamine-01.02.2027.pdf',
+        ];
+
+        ob_start();
+        try {
+            include __DIR__ . '/../../templates/fund-shared-documents-content.php';
+        } finally {
+            $shared = (string) ob_get_clean();
+        }
+        $fund = $this->renderFundPage('page_fund-third.php');
+
+        preg_match_all('/href="([^"]+)"/', $shared, $links);
+        $this->assertCount(4, $links[1]);
+        foreach ($links[1] as $link) {
+            $this->assertStringContainsString("href=\"$link\"", $fund);
+        }
+        $this->assertStringContainsString('Negatiivse-moju-mittearvestamine-01.02.2027.pdf', $shared);
     }
 
     /**

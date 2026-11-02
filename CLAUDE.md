@@ -108,8 +108,17 @@ WP_APP_PASSWORD   WordPress Application Password
 
 Sustainability, non-consideration of adverse impacts and remuneration policy are one
 document each for all four funds, and the three pension funds share one NAV procedure
-(TKF100 has its own, as a field). They are still URL constants in `helpers/extras.php`, so
-updating one is a commit and a deploy.
+(TKF100 has its own, as a field). They are fields on one page of their own, on the template
+*Fund shared documents* (`page_fund-shared-documents.php`): `sustainability_risks_file`,
+`adverse_impacts_file`, `remuneration_policy_file`, and `nav_procedure_file` plus
+`nav_procedure_upcoming_file` for the pension funds' procedure, which switches on its date
+like a fund's. The helpers in `helpers/extras.php` read them from there
+(`tuleva_shared_document_url()`), so a fund page shows a new one with no deploy, and the page
+itself lists the same links. Write it as a fund page is written: the Estonian page, over REST.
+
+The theme finds the page by its template; one page is meant to be on it. Until an
+Administrator creates it, and while one of its fields is empty, the URL in `helpers/extras.php`
+renders instead.
 
 ### Fallbacks still in place
 
@@ -131,8 +140,7 @@ The field wins over its literal, and an empty field falls back to it. So:
 - The three pension pages' `investment_report_file` is written by the monthly report job.
   Leave its literal alone.
 
-Removing the fallbacks, moving the firm-wide documents onto the options page and
-replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
+Removing the fallbacks and replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
 `TODO — Fund page document publishing.md`, in the private tuleva repo under
 `work/investeerimistegevus/docs/`.
 

@@ -16,6 +16,10 @@
  * that page's REST response, and renders nothing — which is a different thing from a
  * disclosure that applies but has not been supplied yet.
  *
+ * The documents that are the same for every fund (sustainability, adverse impacts,
+ * remuneration, the pension funds' NAV procedure) are fields too, on one page of their own,
+ * so one update reaches all four fund pages: tuleva_shared_document_url().
+ *
  * See "TODO — Fund page document publishing" in the tuleva repo,
  * work/investeerimistegevus/docs/.
  */
@@ -35,6 +39,11 @@ const TULEVA_DISCLOSURE_OPTIONAL = 'optional';
  * WPML's "copy" custom field preference: a translation takes the original's value.
  */
 const TULEVA_WPML_COPY_FROM_ORIGINAL = 1;
+
+/**
+ * The template of the one page that holds the documents every fund links.
+ */
+const TULEVA_SHARED_DOCUMENTS_TEMPLATE = 'page_fund-shared-documents.php';
 
 /**
  * Every disclosure a fund page can carry, defined once.
@@ -84,7 +93,7 @@ function tuleva_fund_disclosure_catalogue(): array
         'nav_procedure_file' => [
             'label' => 'NAV Procedure',
             'type' => 'file',
-            'instructions' => 'This fund\'s own procedure for determining net asset value. The pension funds share one document, a URL in helpers/extras.php, and have no field here.',
+            'instructions' => 'On a fund page, that fund\'s own procedure for determining net asset value. On the shared documents page, the one the three pension funds share.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_nav_procedure'],
         ],
         'nav_procedure_upcoming_file' => [
@@ -117,6 +126,21 @@ function tuleva_fund_disclosure_catalogue(): array
             'type' => 'text',
             'instructions' => 'Weighted average carbon intensity, number only (e.g. "83.68"). Quarterly.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_co2_intensity'],
+        ],
+        'sustainability_risks_file' => [
+            'label' => 'Sustainability Risk Policy',
+            'type' => 'file',
+            'instructions' => 'Jätkusuutlikkusriskide arvesse võtmise põhimõtted, linked from every fund page.',
+        ],
+        'adverse_impacts_file' => [
+            'label' => 'Non-consideration of Adverse Impacts',
+            'type' => 'file',
+            'instructions' => 'Kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine, linked from every fund page.',
+        ],
+        'remuneration_policy_file' => [
+            'label' => 'Remuneration Policy',
+            'type' => 'file',
+            'instructions' => 'Tuleva Fondid AS tasustamise põhimõtted, linked from every fund page.',
         ],
     ];
 }
@@ -163,6 +187,15 @@ function tuleva_fund_disclosure_scope(): array
             // fund_co2_intensity is deliberately absent: no CO2 intensity is calculated
             // for TKF100. The savings template renders the block the moment this line
             // exists, so starting to publish one is an edit here and nothing else.
+        ],
+        // Not a fund: the documents every fund page links, on one page so one update
+        // reaches all four. nav_procedure_* here is the pension funds' shared procedure.
+        TULEVA_SHARED_DOCUMENTS_TEMPLATE => [
+            'nav_procedure_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'nav_procedure_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+            'sustainability_risks_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'adverse_impacts_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'remuneration_policy_file' => TULEVA_DISCLOSURE_REQUIRED,
         ],
     ];
 }
@@ -366,6 +399,44 @@ function tuleva_fund_pages_on(string $template): array
         fn($page) => (int) tuleva_disclosure_source_post((int) $page),
         $pages
     )));
+}
+
+/**
+ * The URL of a document every fund links, from the shared documents page, or $fallback while
+ * its field is empty or no page is on that template yet.
+ */
+function tuleva_shared_document_url(string $name, string $fallback = ''): string
+{
+    $page = tuleva_shared_documents_page();
+    $value = $page === null ? '' : tuleva_disclosure_stored_value($name, $page);
+
+    return $value !== '' ? $value : $fallback;
+}
+
+/**
+ * The page on the shared documents template, looked up once a request: a fund page asks for
+ * five documents. One page is meant to be on it; if there are more, the oldest is read.
+ */
+function tuleva_shared_documents_page(): ?int
+{
+    $found = &tuleva_shared_documents_page_found();
+
+    if (!array_key_exists('page', $found)) {
+        $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
+        $found['page'] = $pages === [] ? null : min($pages);
+    }
+
+    return $found['page'];
+}
+
+/**
+ * @return array{page?: ?int} what tuleva_shared_documents_page() found, for the rest of the request
+ */
+function &tuleva_shared_documents_page_found(): array
+{
+    static $found = [];
+
+    return $found;
 }
 
 /**
