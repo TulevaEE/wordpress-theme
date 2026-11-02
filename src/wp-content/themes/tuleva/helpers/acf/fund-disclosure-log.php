@@ -125,7 +125,8 @@ function tuleva_disclosure_write_route(): string
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
-    $name = tuleva_disclosure_field_name($field);
+    // `name` is the meta key the value is stored under; a sub-field's `_name` is only its short name.
+    $name = is_array($field) ? (string) ($field['name'] ?? '') : '';
 
     if (!is_numeric($post_id) || !tuleva_is_disclosure($name)) {
         return $value;
