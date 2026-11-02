@@ -64,12 +64,14 @@ template.
 Slack, and the gateway writes the field over REST, reads it back and checks the page.
 
 **From wp-admin:** only an Administrator can change a document field there. For anyone else
-the fields are read-only, listed in the *Documents* box on the edit screen.
-`investment_report_file` stays editable while TKF100's report is set by hand.
+the fields are hidden, and their values are listed in the *Documents* box on the edit
+screen; restoring a revision does not change them either. `investment_report_file` stays
+editable while TKF100's report is set by hand.
 
-**Every write is logged** on the page, whatever its route (wp-admin, REST, WP-Cron): who,
-when, how, and the value before and after, a document with its URL. The *Documents* box
-shows the last 50 (`helpers/acf/fund-disclosure-log.php`).
+**Every write through ACF is logged** on the page (wp-admin, REST, WP-Cron), and so is a
+revision restore: who, when, how, and the value before and after, a document with its URL.
+The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
+post-meta write (WP-CLI, WPML's copy to a translation) is not logged.
 
 **Over the REST API:**
 

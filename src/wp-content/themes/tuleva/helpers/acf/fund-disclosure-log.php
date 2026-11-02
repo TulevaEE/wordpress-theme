@@ -3,10 +3,12 @@
  * Who may change a fund page's documents in wp-admin, and a record of every change.
  *
  * agent-gateway's fund_pages tool checks, approves (two people) and audits the writes it
- * makes over REST. This file covers every other route: each write to a disclosure field,
- * whoever makes it, is appended to a log on the page, and the fields are read-only in
- * wp-admin except for Administrators, so a change goes through the gateway.
- * `investment_report_file` stays editable while TKF100's monthly report is set by hand.
+ * makes over REST. This file covers the other routes: each write to a disclosure field
+ * through ACF (wp-admin, REST, WP-Cron) and each revision restore is appended to a log on
+ * the page, and in wp-admin the fields are hidden from everyone but Administrators, so a
+ * change goes through the gateway. `investment_report_file` stays editable while TKF100's
+ * monthly report is set by hand. A direct post-meta write (WP-CLI, WPML's copy to a
+ * translation) is not logged; nothing reads a translation's copy.
  *
  * REST writes stay open to any user who may edit pages: the reports' Apps Script and
  * onboarding-service publish the investment report that way.
@@ -34,6 +36,15 @@ function tuleva_is_disclosure(string $name): bool
     return isset(tuleva_fund_disclosure_catalogue()[$name]);
 }
 
+/**
+ * An ACF field's own name. When ACF renders a field it moves the name to `_name` and puts
+ * the form input's name (`acf[field_…]`) in `name`.
+ */
+function tuleva_disclosure_field_name($field): string
+{
+    return is_array($field) ? (string) ($field['_name'] ?? $field['name'] ?? '') : '';
+}
+
 function tuleva_disclosure_editable_in_admin(string $name, bool $is_administrator): bool
 {
     return $is_administrator || in_array($name, TULEVA_DISCLOSURES_EDITABLE_IN_ADMIN, true);
@@ -55,8 +66,8 @@ function tuleva_disclosure_scalar($value): string
 
 /**
  * The log entry for one write, or null when the value does not change. A document is
- * stored as an attachment id, so its URL is recorded beside it: the attachment may be gone
- * by the time anyone reads the log.
+ * stored as an attachment id, so its URL is recorded beside it while there is one: the
+ * attachment may be gone by the time anyone reads the log.
  *
  * @param callable(int): (string|false) $url_of
  */
@@ -79,8 +90,12 @@ function tuleva_disclosure_log_entry(
     $entry = ['at' => $at, 'who' => $who, 'route' => $route, 'field' => $name, 'before' => $before, 'after' => $after];
 
     if ((tuleva_fund_disclosure_catalogue()[$name]['type'] ?? 'file') === 'file') {
-        $entry['before_url'] = $before === '' ? '' : (string) $url_of((int) $before);
-        $entry['after_url'] = $after === '' ? '' : (string) $url_of((int) $after);
+        foreach (['before', 'after'] as $side) {
+            $url = $entry[$side] === '' ? '' : (string) $url_of((int) $entry[$side]);
+            if ($url !== '') {
+                $entry[$side . '_url'] = $url;
+            }
+        }
     }
 
     return $entry;
@@ -110,7 +125,7 @@ function tuleva_disclosure_write_route(): string
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
-    $name = is_array($field) ? (string) ($field['name'] ?? '') : '';
+    $name = tuleva_disclosure_field_name($field);
 
     if (!is_numeric($post_id) || !tuleva_is_disclosure($name)) {
         return $value;
@@ -123,11 +138,18 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
         return $before;
     }
 
+    tuleva_disclosure_log((int) $post_id, $name, $before, $value, $route);
+
+    return $value;
+}
+
+function tuleva_disclosure_log(int $post_id, string $name, $before, $after, string $route): void
+{
     $user = wp_get_current_user();
     $entry = tuleva_disclosure_log_entry(
         $name,
         $before,
-        $value,
+        $after,
         $user->exists() ? $user->user_login : ($route === 'cron' ? 'WP-Cron' : 'unknown'),
         $route,
         gmdate('Y-m-d\TH:i:s\Z'),
@@ -135,10 +157,8 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     );
 
     if ($entry !== null) {
-        add_post_meta((int) $post_id, TULEVA_DISCLOSURE_LOG, $entry);
+        add_post_meta($post_id, TULEVA_DISCLOSURE_LOG, $entry);
     }
-
-    return $value;
 }
 
 add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
@@ -149,14 +169,68 @@ add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
  */
 function tuleva_disclosure_prepare_field($field)
 {
-    if (!is_array($field) || !tuleva_is_disclosure((string) ($field['name'] ?? '')) || !is_admin()) {
+    $name = tuleva_disclosure_field_name($field);
+
+    if (!tuleva_is_disclosure($name) || !is_admin()) {
         return $field;
     }
 
-    return tuleva_disclosure_editable_in_admin($field['name'], current_user_can('manage_options')) ? $field : false;
+    return tuleva_disclosure_editable_in_admin($name, current_user_can('manage_options')) ? $field : false;
 }
 
 add_filter('acf/prepare_field', 'tuleva_disclosure_prepare_field');
+
+/**
+ * Restoring a revision copies its fields straight into post meta, past acf/update_value,
+ * and a revision holds the values of the last wp-admin save, not those written since over
+ * REST or by WP-Cron. So the disclosures are read before ACF's restore (priority 10) and
+ * compared after it: a user who may not change one in wp-admin gets it put back, anyone
+ * else's change is logged.
+ */
+function tuleva_disclosures_before_restore($post_id): void
+{
+    $held = &tuleva_disclosures_held_over_restore();
+    foreach (array_keys(tuleva_fund_disclosure_catalogue()) as $name) {
+        $held[(int) $post_id][$name] = get_post_meta((int) $post_id, $name, true);
+    }
+}
+
+function tuleva_disclosures_after_restore($post_id): void
+{
+    $post_id = (int) $post_id;
+    $is_administrator = current_user_can('manage_options');
+
+    $held = &tuleva_disclosures_held_over_restore();
+
+    foreach ($held[$post_id] ?? [] as $name => $before) {
+        $after = get_post_meta($post_id, $name, true);
+
+        if (tuleva_disclosure_scalar($before) === tuleva_disclosure_scalar($after)) {
+            continue;
+        }
+
+        if (tuleva_disclosure_editable_in_admin($name, $is_administrator)) {
+            tuleva_disclosure_log($post_id, $name, $before, $after, 'revision');
+        } else {
+            update_post_meta($post_id, $name, $before);
+        }
+    }
+
+    unset($held[$post_id]);
+}
+
+/**
+ * @return array<int, array<string, mixed>> the disclosures as they stood before a restore, by page
+ */
+function &tuleva_disclosures_held_over_restore(): array
+{
+    static $held = [];
+
+    return $held;
+}
+
+add_action('wp_restore_post_revision', 'tuleva_disclosures_before_restore', 5);
+add_action('wp_restore_post_revision', 'tuleva_disclosures_after_restore', 20);
 
 /**
  * The Documents box: each read-only field's value, then the change log.

@@ -107,6 +107,15 @@ if (!function_exists('get_post_meta')) {
     }
 }
 
+if (!function_exists('update_post_meta')) {
+    function update_post_meta($post_id, $meta_key, $meta_value, $prev_value = '')
+    {
+        FakeDisclosureWrite::$meta[$post_id][$meta_key] = [$meta_value];
+
+        return true;
+    }
+}
+
 if (!function_exists('add_post_meta')) {
     function add_post_meta($post_id, $meta_key, $meta_value, $unique = false)
     {
@@ -245,20 +254,89 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame([], FakeDisclosureWrite::$meta);
     }
 
+    /**
+     * ACF renders a field under its form input's name and keeps the field's own in `_name`.
+     */
     #[Test]
-    public function the_documents_box_lists_changes_newest_first_and_escapes_them(): void
+    public function wp_admin_hides_a_document_field_from_everyone_but_administrators(): void
+    {
+        $prospectus = ['name' => 'acf[field_fund_savings_prospectus]', '_name' => 'prospectus_file'];
+        $report = ['name' => 'acf[field_fund_savings_investment_report]', '_name' => 'investment_report_file'];
+        FakeDisclosureWrite::$in_admin = true;
+
+        $this->assertFalse(tuleva_disclosure_prepare_field($prospectus));
+        $this->assertSame($report, tuleva_disclosure_prepare_field($report));
+
+        FakeDisclosureWrite::$administrator = true;
+        $this->assertSame($prospectus, tuleva_disclosure_prepare_field($prospectus));
+    }
+
+    /**
+     * A revision holds the values of the last wp-admin save, so restoring one would put back
+     * documents that fund_pages or the upcoming-document switch have replaced since.
+     */
+    #[Test]
+    public function restoring_a_revision_does_not_change_a_document_for_an_editor(): void
+    {
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+
+        tuleva_disclosures_before_restore(self::PAGE);
+        update_post_meta(self::PAGE, 'prospectus_file', '101');
+        tuleva_disclosures_after_restore(self::PAGE);
+
+        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    #[Test]
+    public function an_administrator_s_revision_restore_is_logged(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+
+        tuleva_disclosures_before_restore(self::PAGE);
+        update_post_meta(self::PAGE, 'prospectus_file', '101');
+        tuleva_disclosures_after_restore(self::PAGE);
+
+        $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertSame(['an-administrator', 'revision', '202', '101'], $this->onlyEntry(['who', 'route', 'before', 'after']));
+    }
+
+    #[Test]
+    public function the_documents_box_lists_changes_newest_first(): void
+    {
+        $html = tuleva_disclosure_panel([], [
+            ['at' => '2026-11-01T08:00:00Z', 'who' => 'older-writer', 'route' => 'rest', 'field' => 'terms_file', 'before' => '', 'after' => '7', 'after_url' => 'https://tuleva.ee/t.pdf'],
+            ['at' => '2026-12-01T08:00:00Z', 'who' => 'newer-writer', 'route' => 'cron', 'field' => 'fund_co2_intensity', 'before' => '1', 'after' => '2'],
+        ]);
+
+        $this->assertLessThan(strpos($html, 'older-writer'), strpos($html, 'newer-writer'));
+        $this->assertStringContainsString('>t.pdf</a>', $html);
+    }
+
+    #[Test]
+    public function the_documents_box_escapes_what_it_shows(): void
     {
         $html = tuleva_disclosure_panel(
             ['prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt.pdf'],
-            [
-                ['at' => '2026-11-01T08:00:00Z', 'who' => 'first', 'route' => 'rest', 'field' => 'terms_file', 'before' => '', 'after' => '7', 'before_url' => '', 'after_url' => 'https://tuleva.ee/t.pdf'],
-                ['at' => '2026-12-01T08:00:00Z', 'who' => '<b>second</b>', 'route' => 'cron', 'field' => 'fund_co2_intensity', 'before' => '1', 'after' => '2'],
-            ]
+            [['at' => 'now', 'who' => '<b>x</b>', 'route' => 'rest', 'field' => 'fund_co2_intensity', 'before' => '1', 'after' => '2']]
         );
 
-        $this->assertLessThan(strpos($html, 'first'), strpos($html, 'second'));
-        $this->assertStringContainsString('&lt;b&gt;second&lt;/b&gt;', $html);
+        $this->assertStringContainsString('&lt;b&gt;x&lt;/b&gt;', $html);
         $this->assertStringContainsString('>Prospekt.pdf</a>', $html);
+    }
+
+    /**
+     * An attachment deleted before its change was logged has no URL; its id is what is left.
+     */
+    #[Test]
+    public function a_document_without_a_url_is_shown_by_its_attachment_id(): void
+    {
+        $entry = tuleva_disclosure_log_entry('prospectus_file', '101', '102', 'x', 'rest', 'now', fn(int $id) => false);
+
+        $this->assertArrayNotHasKey('before_url', $entry);
+        $this->assertStringContainsString('<td>101</td>', tuleva_disclosure_panel([], [$entry]));
     }
 
     /**
