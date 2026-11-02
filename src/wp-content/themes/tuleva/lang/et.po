@@ -2990,7 +2990,7 @@ msgstr "Pensionikeskuse iseteeninduses"
 
 #: templates/second-pillar-rejoin-content.php:14
 msgid "Your part is free of income tax"
-msgstr "Sinu osa on tulumaksuvaba"
+msgstr "Sinu osa on<br>tulumaksuvaba"
 
 #: templates/second-pillar-rejoin-content.php:294
 msgid "The sooner you start, the longer you gain from the tax win."
@@ -3002,12 +3002,12 @@ msgid "For a gross salary of %1$s and a %2$s contribution"
 msgstr "%1$s&nbsp;brutopalga ja %2$s&nbsp;panuse puhul"
 
 #: templates/second-pillar-rejoin-content.php:13
-msgid "4% of your pay comes from social tax"
-msgstr "4%&nbsp;palgast tuleb sotsiaalmaksust"
+msgid "Plus 4% funded from social tax"
+msgstr "Lisaks saad 4%<br>sotsiaalmaksu arvelt"
 
 #: templates/second-pillar-rejoin-content.php:12
-msgid "You pick 2, 4 or 6% as your part"
-msgstr "Oma osaks valid<br>2,&nbsp;4&nbsp;või&nbsp;6%"
+msgid "You pick 2, 4 or 6% of your pay"
+msgstr "Oma osaks valid<br>2,&nbsp;4&nbsp;või&nbsp;6%&nbsp;palgast"
 
 #: templates/second-pillar-rejoin-content.php:214
 msgid "I&nbsp;pillar"

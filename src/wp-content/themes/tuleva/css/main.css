@@ -18816,15 +18816,11 @@ sup {
 @media (min-width: 768px) {
   .bg-hero-rejoin .rejoin-facts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 27rem;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    max-width: 30rem;
     margin-right: auto;
     margin-left: auto;
-  }
-}
-@media (min-width: 1200px) {
-  .bg-hero-rejoin .rejoin-facts {
-    width: 30rem;
   }
 }
 .bg-hero-rejoin .rejoin-facts li {
