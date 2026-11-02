@@ -65,8 +65,9 @@ Slack, and the gateway writes the field over REST, reads it back and checks the 
 
 **From wp-admin:** only an Administrator can change a document field there. For anyone else
 the fields are hidden, and their values are listed in the *Documents* box on the edit
-screen; restoring a revision does not change them either. `investment_report_file` stays
-editable while TKF100's report is set by hand.
+screen; restoring a revision does not change them either. That includes
+`investment_report_file`: the monthly report job writes it over REST, and which funds it
+publishes is decided there.
 
 **Every write through ACF is logged** on the page (wp-admin, REST, WP-Cron), and so is a
 revision restore: who, when, how, and the value before and after, a document with its URL.

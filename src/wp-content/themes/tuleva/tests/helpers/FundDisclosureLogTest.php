@@ -190,14 +190,6 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame(['83.68', '84.10'], [$entry['before'], $entry['after']]);
     }
 
-    #[Test]
-    public function only_administrators_change_documents_in_wp_admin_but_the_report_stays_open(): void
-    {
-        $this->assertFalse(tuleva_disclosure_editable_in_admin('prospectus_file', false));
-        $this->assertTrue(tuleva_disclosure_editable_in_admin('prospectus_file', true));
-        $this->assertTrue(tuleva_disclosure_editable_in_admin('investment_report_file', false));
-    }
-
     /**
      * The field is not on an editor's screen, so a value for it arriving from wp-admin was
      * posted by hand. It is not taken, and nothing changed, so nothing is logged.
@@ -215,19 +207,34 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
     }
 
+    /**
+     * The investment report is locked like every other document: the report job publishes it
+     * over REST, and which funds it publishes is the job's decision, not an edit screen's.
+     */
     #[Test]
-    public function an_editor_still_sets_the_report_from_wp_admin_and_it_is_logged(): void
+    public function an_editor_cannot_set_the_investment_report_from_wp_admin_either(): void
     {
         FakeDisclosureWrite::$in_admin = true;
         FakeDisclosureWrite::$login = 'an-editor';
-        FakeAttachments::$urls[301] = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-aruanne-2026-11.pdf';
+
+        $kept = tuleva_disclosure_on_update(301, self::PAGE, ['name' => 'investment_report_file']);
+
+        $this->assertSame('', $kept);
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    #[Test]
+    public function the_report_job_s_write_outside_wp_admin_is_taken_and_logged(): void
+    {
+        FakeDisclosureWrite::$login = 'reports';
+        FakeAttachments::$urls[301] = 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf';
 
         $written = tuleva_disclosure_on_update(301, self::PAGE, ['name' => 'investment_report_file']);
 
         $this->assertSame(301, $written);
         $this->assertSame(
-            ['an-editor', 'wp-admin', '', '301', 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-aruanne-2026-11.pdf'],
-            $this->onlyEntry(['who', 'route', 'before', 'after', 'after_url'])
+            ['reports', '', '301', 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf'],
+            $this->onlyEntry(['who', 'before', 'after', 'after_url'])
         );
     }
 
@@ -262,13 +269,16 @@ final class FundDisclosureLogTest extends TestCase
     {
         $prospectus = ['name' => 'acf[field_fund_savings_prospectus]', '_name' => 'prospectus_file'];
         $report = ['name' => 'acf[field_fund_savings_investment_report]', '_name' => 'investment_report_file'];
+        $hero = ['name' => 'acf[field_hero_title]', '_name' => 'hero_title'];
         FakeDisclosureWrite::$in_admin = true;
 
         $this->assertFalse(tuleva_disclosure_prepare_field($prospectus));
-        $this->assertSame($report, tuleva_disclosure_prepare_field($report));
+        $this->assertFalse(tuleva_disclosure_prepare_field($report));
+        $this->assertSame($hero, tuleva_disclosure_prepare_field($hero));
 
         FakeDisclosureWrite::$administrator = true;
         $this->assertSame($prospectus, tuleva_disclosure_prepare_field($prospectus));
+        $this->assertSame($report, tuleva_disclosure_prepare_field($report));
     }
 
     /**

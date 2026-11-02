@@ -6,8 +6,7 @@
  * makes over REST. This file covers the other routes: each write to a disclosure field
  * through ACF (wp-admin, REST, WP-Cron) and each revision restore is appended to a log on
  * the page, and in wp-admin the fields are hidden from everyone but Administrators, so a
- * change goes through the gateway. `investment_report_file` stays editable while TKF100's
- * monthly report is set by hand. A direct post-meta write (WP-CLI, WPML's copy to a
+ * change goes through the gateway. A direct post-meta write (WP-CLI, WPML's copy to a
  * translation) is not logged; nothing reads a translation's copy.
  *
  * REST writes stay open to any user who may edit pages: the reports' Apps Script and
@@ -20,11 +19,6 @@
  * Post meta key of the log: one meta row per change, so appending never rewrites history.
  */
 const TULEVA_DISCLOSURE_LOG = '_tuleva_disclosure_log';
-
-/**
- * Fields anyone who may edit the page can still change in wp-admin.
- */
-const TULEVA_DISCLOSURES_EDITABLE_IN_ADMIN = ['investment_report_file'];
 
 /**
  * How many changes the edit screen lists, newest first.
@@ -43,11 +37,6 @@ function tuleva_is_disclosure(string $name): bool
 function tuleva_disclosure_field_name($field): string
 {
     return is_array($field) ? (string) ($field['_name'] ?? $field['name'] ?? '') : '';
-}
-
-function tuleva_disclosure_editable_in_admin(string $name, bool $is_administrator): bool
-{
-    return $is_administrator || in_array($name, TULEVA_DISCLOSURES_EDITABLE_IN_ADMIN, true);
 }
 
 /**
@@ -135,7 +124,7 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     $before = get_post_meta((int) $post_id, $name, true);
     $route = tuleva_disclosure_write_route();
 
-    if ($route === 'wp-admin' && !tuleva_disclosure_editable_in_admin($name, current_user_can('manage_options'))) {
+    if ($route === 'wp-admin' && !current_user_can('manage_options')) {
         return $before;
     }
 
@@ -176,7 +165,7 @@ function tuleva_disclosure_prepare_field($field)
         return $field;
     }
 
-    return tuleva_disclosure_editable_in_admin($name, current_user_can('manage_options')) ? $field : false;
+    return current_user_can('manage_options') ? $field : false;
 }
 
 add_filter('acf/prepare_field', 'tuleva_disclosure_prepare_field');
@@ -200,7 +189,6 @@ function tuleva_disclosures_after_restore($post_id): void
 {
     $post_id = (int) $post_id;
     $is_administrator = current_user_can('manage_options');
-
     $held = &tuleva_disclosures_held_over_restore();
 
     foreach ($held[$post_id] ?? [] as $name => $before) {
@@ -210,7 +198,7 @@ function tuleva_disclosures_after_restore($post_id): void
             continue;
         }
 
-        if (tuleva_disclosure_editable_in_admin($name, $is_administrator)) {
+        if ($is_administrator) {
             tuleva_disclosure_log($post_id, $name, $before, $after, 'revision');
         } else {
             update_post_meta($post_id, $name, $before);
@@ -245,7 +233,8 @@ function tuleva_disclosure_panel(array $locked, array $log): string
 
     if ($locked !== []) {
         $html .= '<p>These are changed through agent-gateway (<code>fund_pages</code>), which asks a'
-            . ' second person to approve in Slack.</p><table class="widefat striped"><tbody>';
+            . ' second person to approve in Slack, and the investment report by the monthly report job.</p>'
+            . '<table class="widefat striped"><tbody>';
         foreach ($locked as $name => $value) {
             $html .= '<tr><th>' . esc_html($name) . '</th><td>' . tuleva_disclosure_shown($value) . '</td></tr>';
         }
@@ -289,11 +278,10 @@ add_action('add_meta_boxes_page', function ($post): void {
     }
 
     add_meta_box('tuleva-disclosures', 'Documents', function ($post) use ($template): void {
-        $is_administrator = current_user_can('manage_options');
         $locked = [];
 
-        foreach (array_keys(tuleva_fund_disclosure_scope()[$template]) as $name) {
-            if (!tuleva_disclosure_editable_in_admin($name, $is_administrator)) {
+        if (!current_user_can('manage_options')) {
+            foreach (array_keys(tuleva_fund_disclosure_scope()[$template]) as $name) {
                 $locked[$name] = tuleva_disclosure_stored_value($name, $post->ID);
             }
         }
