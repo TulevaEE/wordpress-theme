@@ -376,6 +376,11 @@ function tuleva_fund_pages_on(string $template): array
  * document has an empty field to go into. The page itself switches at midnight whether or
  * not this has run.
  *
+ * A page whose current field is empty is left alone: what it shows comes from a template URL
+ * this job cannot see, so comparing against nothing could promote a document older than the
+ * one on the page. The upcoming field is emptied only once the current field reads back as the
+ * promoted document, so a write that did not land is tried again the next hour.
+ *
  * @return list<array{post: int, field: string}> the documents promoted
  */
 function tuleva_promote_due_documents(?string $today = null): array
@@ -403,6 +408,10 @@ function tuleva_promote_due_documents(?string $today = null): array
                 $current_id = (int) get_field($current, $page, false);
                 $current_url = $current_id > 0 ? (string) wp_get_attachment_url($current_id) : '';
 
+                if ($current_url === '') {
+                    continue;
+                }
+
                 [$now, $next] = tuleva_document_versions($current_url, $upcoming_url, $today);
 
                 if ($next !== '') {
@@ -411,6 +420,11 @@ function tuleva_promote_due_documents(?string $today = null): array
 
                 if ($now === $upcoming_url) {
                     update_field(tuleva_fund_disclosure_field($current, $template)['key'], $upcoming_id, $page);
+
+                    if ((int) get_field($current, $page, false) !== $upcoming_id) {
+                        continue;
+                    }
+
                     $promoted[] = ['post' => $page, 'field' => $current];
                 }
 

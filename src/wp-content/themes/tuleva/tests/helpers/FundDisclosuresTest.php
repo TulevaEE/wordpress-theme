@@ -34,6 +34,9 @@ final class FakeFundPage
     /** @var list<array{0: string, 1: mixed, 2: int}> field key, value, page */
     public static array $updates = [];
 
+    /** @var list<string> field keys whose writes ACF does not store */
+    public static array $failing_writes = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -44,6 +47,7 @@ final class FakeFundPage
         self::$stored = [];
         self::$pages = [];
         self::$updates = [];
+        self::$failing_writes = [];
     }
 }
 
@@ -60,9 +64,24 @@ function get_field($name, $post_id = false, $format_value = true)
     return $fields[$name] ?? null;
 }
 
+/**
+ * Stores the value under the field's name, as ACF does, unless the key is set to fail.
+ */
 function update_field($selector, $value, $post_id = false)
 {
     FakeFundPage::$updates[] = [$selector, $value, $post_id];
+
+    if (in_array($selector, FakeFundPage::$failing_writes, true)) {
+        return false;
+    }
+
+    foreach (tuleva_fund_disclosure_scope() as $template => $scope) {
+        foreach (array_keys($scope) as $name) {
+            if (tuleva_fund_disclosure_field($name, $template)['key'] === $selector) {
+                FakeFundPage::$stored[$post_id][$name] = $value;
+            }
+        }
+    }
 
     return true;
 }
@@ -979,6 +998,49 @@ final class FundDisclosuresTest extends TestCase
             ['field_fund_disclosure_stocks_prospectus_upcoming_file', '', 17533],
             ['field_fund_disclosure_stocks_terms_upcoming_file', '', 17533],
         ], FakeFundPage::$updates);
+    }
+
+    /**
+     * The pension pages' current documents are template URLs until their fields are filled. The
+     * job cannot see those, so an upcoming field that reads as older than the page's current
+     * document must not be promoted over it.
+     */
+    #[Test]
+    public function the_hourly_job_leaves_a_page_whose_current_field_is_empty(): void
+    {
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
+        FakeAttachments::$urls = [
+            204 => 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([], FakeFundPage::$updates);
+    }
+
+    #[Test]
+    public function an_upcoming_document_stays_for_the_next_run_when_the_current_write_did_not_land(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+        FakeFundPage::$failing_writes = ['field_fund_savings_prospectus'];
+
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+        $this->assertSame(102, FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]['prospectus_upcoming_file']);
+
+        FakeFundPage::$failing_writes = [];
+        $this->assertSame(
+            [['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']],
+            tuleva_promote_due_documents('2027-01-01')
+        );
+        $this->assertSame(
+            ['prospectus_file' => 102, 'prospectus_upcoming_file' => ''],
+            FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
+        );
     }
 
     /**
