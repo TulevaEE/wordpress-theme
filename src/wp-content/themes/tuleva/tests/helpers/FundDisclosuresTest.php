@@ -1442,6 +1442,29 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
+     * The shared documents are field values now, not paths in the theme, so they are escaped
+     * into the link like every other field URL on the page.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function the_shared_documents_are_escaped_into_their_links(string $template): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.10.2026.pdf?"data-x="nav',
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.03.2027.pdf?"data-x="nav-upcoming',
+            'sustainability_risks_file' => 'https://tuleva.ee/Jatkusuutlikkus.pdf?"data-x="sustainability',
+            'adverse_impacts_file' => 'https://tuleva.ee/Negatiivne-moju.pdf?"data-x="adverse',
+            'remuneration_policy_file' => 'https://tuleva.ee/Tasustamine.pdf?"data-x="remuneration',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('Tasustamine.pdf?&quot;data-x=&quot;remuneration', $html);
+        $this->assertStringNotContainsString('"data-x=', $html);
+    }
+
+    /**
      * A template's upcoming URL is the document after the template's current URL, so it says
      * nothing about a document an editor has set. Only the upcoming field can replace that one.
      */
