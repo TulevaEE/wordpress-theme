@@ -43,6 +43,9 @@ final class FakeFundPage
     /** @var array<int, string> post status by page, 'publish' when not listed */
     public static array $statuses = [];
 
+    /** @var array<string, array<string, int>> fields another request saves right after a write to a field key */
+    public static array $saved_meanwhile = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -56,6 +59,7 @@ final class FakeFundPage
         self::$page_fields = [];
         self::$failing_writes = [];
         self::$statuses = [];
+        self::$saved_meanwhile = [];
     }
 }
 
@@ -95,7 +99,24 @@ function update_field($selector, $value, $post_id = false)
         }
     }
 
+    foreach (FakeFundPage::$saved_meanwhile[$selector] ?? [] as $name => $saved) {
+        FakeFundPage::$stored[$post_id][$name] = $saved;
+    }
+
     return true;
+}
+
+if (!function_exists('wp_cache_delete')) {
+    function wp_cache_delete($key, $group = '')
+    {
+        return true;
+    }
+}
+
+if (!function_exists('acf_flush_value_cache')) {
+    function acf_flush_value_cache($post_id = 0, $field_name = '')
+    {
+    }
 }
 
 function get_posts($args = null)
@@ -1081,6 +1102,28 @@ final class FundDisclosuresTest extends TestCase
         );
         $this->assertSame(
             ['prospectus_file' => 102, 'prospectus_upcoming_file' => ''],
+            FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
+        );
+    }
+
+    #[Test]
+    public function an_upcoming_document_saved_while_the_job_promotes_the_last_one_stays(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+            103 => 'https://tuleva.ee/wp-content/uploads/2027/01/TKF100-Prospekt-kehtib-alates-01.04.2027.pdf',
+        ];
+        FakeFundPage::$saved_meanwhile = ['field_fund_savings_prospectus' => ['prospectus_upcoming_file' => 103]];
+
+        $this->assertSame(
+            [['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']],
+            tuleva_promote_due_documents('2027-01-01')
+        );
+        $this->assertSame(
+            ['prospectus_file' => 102, 'prospectus_upcoming_file' => 103],
             FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
         );
     }
