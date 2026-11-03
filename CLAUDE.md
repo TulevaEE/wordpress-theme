@@ -88,13 +88,14 @@ From the date in its filename an upcoming prospectus, terms or NAV procedure ren
 current document and its upcoming row goes (`tuleva_document_versions()`); an hourly WP-Cron
 job then moves it into the current field and empties the upcoming one
 (`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
-the upcoming document was set. An upcoming document no newer than the current one is dropped
-instead of promoted, and the job empties its field. A template's upcoming URL applies only while
-the current field is empty: once the current field is set, only the upcoming field can replace
-it, so filling a pension page's current field before its 01.01.2027 switch takes the template's
-upcoming row with it unless the upcoming field is filled too. The job leaves a page whose
-current field is empty (a template URL it cannot see is what shows), so the pension pages'
-fields move only once they are filled; and it empties an upcoming field only after the current
+the upcoming document was set. A filled field beats a template URL whatever the dates: an
+upcoming field takes over from the template's current URL on its date even if that URL is newer,
+and the job then moves it into the empty current field, so the page does not change when it runs.
+Put only a document not yet in force into an upcoming field. A template's upcoming URL applies
+only while the current field is empty, so filling a pension page's current field before its
+01.01.2027 switch takes the template's upcoming row with it unless the upcoming field is filled
+too. Between two fields, an upcoming document no newer than the current one is dropped instead of
+promoted, and the job empties its field. The job empties an upcoming field only after the current
 field reads back as the promoted document, and only while it still holds the document the job
 read (one saved there meanwhile stays).
 

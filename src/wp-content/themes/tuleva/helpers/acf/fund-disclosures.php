@@ -337,10 +337,9 @@ const TULEVA_UPCOMING_DISCLOSURES = [
  * From its effective date an upcoming document is the current one, so the page switches on
  * that day with nobody acting: the switch was approved when the upcoming document was set.
  * An upcoming document no newer than the current one is a leftover and is dropped, not
- * promoted: an upcoming field left behind once the current document moved past it, such as one
- * older than the template URL a page shows while its current field is empty. A template's own
- * upcoming URL never gets here beside a document an editor set, dated or not: it applies only
- * while the current field is empty (tuleva_fund_disclosure_value()).
+ * promoted: an upcoming field left behind once the current field moved past it. The two are of
+ * one standing, two fields or two template URLs; a filled field beats a template URL whatever the
+ * dates (tuleva_fund_document_versions()).
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
@@ -355,6 +354,30 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
     $current_since = tuleva_document_effective_day($current);
 
     return $current_since !== '' && $current_since >= $takes_effect ? [$current, ''] : [$upcoming, ''];
+}
+
+/**
+ * tuleva_document_versions() on a fund page, whose URLs may be the template's: $current and
+ * $upcoming are what tuleva_fund_disclosure_value() gave for $name and its upcoming field.
+ *
+ * A filled field beats a template URL whatever the dates. While the current field is empty the
+ * page shows the template's URL, and an upcoming field takes over from it on its date even if the
+ * URL is newer. The hourly job, which sees only the fields, then makes the same switch, so the page
+ * does not change when it runs. A template's upcoming URL meets only the template's current URL
+ * (tuleva_fund_disclosure_value()), and the two are compared by date.
+ *
+ * @return array{0: string, 1: string} the current URL and the upcoming URL
+ */
+function tuleva_fund_document_versions(string $name, string $current, string $upcoming, ?string $today = null): array
+{
+    if (tuleva_disclosure_stored_value($name) === ''
+        && tuleva_disclosure_stored_value(TULEVA_UPCOMING_DISCLOSURES[$name]) !== '') {
+        [$now, $next] = tuleva_document_versions('', $upcoming, $today);
+
+        return [$now !== '' ? $now : $current, $next];
+    }
+
+    return tuleva_document_versions($current, $upcoming, $today);
 }
 
 /**
@@ -395,12 +418,12 @@ function tuleva_fund_pages_on(string $template): array
  * document has an empty field to go into. The page itself switches at midnight whether or
  * not this has run.
  *
- * A page whose current field is empty is left alone: what it shows comes from a template URL
- * this job cannot see, so comparing against nothing could promote a document older than the
- * one on the page. The upcoming field is emptied only once the current field reads back as the
- * promoted document, so a write that did not land is tried again the next hour, and only while
- * it still holds the document the job read: one saved there meanwhile is the next upcoming
- * document and stays.
+ * A page whose current field is empty is no exception: it shows the template's URL, which this
+ * job cannot see, but a due upcoming field beats that whatever its date
+ * (tuleva_fund_document_versions()), so promoting it there changes nothing on the page either.
+ * The upcoming field is emptied only once the current field reads back as the promoted document,
+ * so a write that did not land is tried again the next hour, and only while it still holds the
+ * document the job read: one saved there meanwhile is the next upcoming document and stays.
  *
  * @return list<array{post: int, field: string}> the documents promoted
  */
@@ -428,10 +451,6 @@ function tuleva_promote_due_documents(?string $today = null): array
 
                 $current_id = (int) get_field($current, $page, false);
                 $current_url = $current_id > 0 ? (string) wp_get_attachment_url($current_id) : '';
-
-                if ($current_url === '') {
-                    continue;
-                }
 
                 [$now, $next] = tuleva_document_versions($current_url, $upcoming_url, $today);
 
