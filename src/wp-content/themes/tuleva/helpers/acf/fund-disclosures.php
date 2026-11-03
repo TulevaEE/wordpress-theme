@@ -628,24 +628,47 @@ function tuleva_shared_documents_page_notice(): string
         : '';
 }
 
-// The classic editor shows admin notices; the block editor hides them and takes its own.
-add_action('admin_notices', function (): void {
+/**
+ * admin_notices, for the classic editor. The block editor hides admin notices and gets its own
+ * (tuleva_shared_documents_page_block_editor_notice()), so it is left out here and each screen
+ * looks the pages up once.
+ */
+function tuleva_shared_documents_page_admin_notice(): void
+{
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+    if ($screen && method_exists($screen, 'is_block_editor') && $screen->is_block_editor()) {
+        return;
+    }
+
     $notice = tuleva_shared_documents_page_notice();
 
     if ($notice !== '') {
-        echo '<div class="notice notice-warning"><p>' . esc_html($notice) . '</p></div>';
+        echo '<div class="notice notice-warning is-dismissible"><p>' . esc_html($notice) . '</p></div>';
     }
-});
-add_action('enqueue_block_editor_assets', function (): void {
+}
+
+/**
+ * enqueue_block_editor_assets. Dismissible, since a save in the block editor does not reload the
+ * screen that still shows it.
+ */
+function tuleva_shared_documents_page_block_editor_notice(): void
+{
     $notice = tuleva_shared_documents_page_notice();
 
     if ($notice !== '') {
         wp_add_inline_script(
             'wp-notices',
-            sprintf('wp.data.dispatch("core/notices").createNotice("warning", %s, {isDismissible: false});', wp_json_encode($notice))
+            sprintf(
+                'wp.data.dispatch("core/notices").createNotice("warning", %s, {id: "tuleva-shared-documents-page", isDismissible: true});',
+                wp_json_encode($notice)
+            )
         );
     }
-});
+}
+
+add_action('admin_notices', 'tuleva_shared_documents_page_admin_notice');
+add_action('enqueue_block_editor_assets', 'tuleva_shared_documents_page_block_editor_notice');
 
 /**
  * Writes each switch tuleva_document_versions() makes on a page into its fields: the current

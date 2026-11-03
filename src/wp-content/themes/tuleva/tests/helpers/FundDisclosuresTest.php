@@ -54,6 +54,9 @@ final class FakeFundPage
     /** what get_current_screen() returns in wp-admin, null outside it */
     public static ?object $screen = null;
 
+    /** @var list<array{0: string, 1: string}> script handle and inline script added to it */
+    public static array $inline_scripts = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -71,6 +74,7 @@ final class FakeFundPage
         self::$status_sent = null;
         self::$template_parts = [];
         self::$screen = null;
+        self::$inline_scripts = [];
     }
 }
 
@@ -136,6 +140,15 @@ function get_posts($args = null)
         FakeFundPage::$pages[$args['meta_value']] ?? [],
         fn($page) => in_array(get_post_status($page), (array) ($args['post_status'] ?? 'publish'), true)
     ));
+}
+
+if (!function_exists('wp_add_inline_script')) {
+    function wp_add_inline_script($handle, $data, $position = 'after')
+    {
+        FakeFundPage::$inline_scripts[] = [$handle, $data];
+
+        return true;
+    }
 }
 
 if (!function_exists('get_current_screen')) {
@@ -1655,6 +1668,48 @@ final class FundDisclosuresTest extends TestCase
 
         FakeFundPage::$screen = null;
         $this->assertSame('', tuleva_shared_documents_page_notice());
+    }
+
+    /**
+     * The block editor hides admin notices and takes its own, so each editor shows the warning
+     * once and runs the lookup once. It can be dismissed: the block editor does not reload on save.
+     */
+    #[Test]
+    public function the_warning_shows_once_on_either_editor_and_can_be_dismissed(): void
+    {
+        FakeFundPage::$pages = [
+            'page_fund-stocks.php' => [17533],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, self::SHARED_PAGE + 5],
+        ];
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = new class {
+            public string $base = 'post';
+            public string $post_type = 'page';
+            public bool $block_editor = true;
+
+            public function is_block_editor(): bool
+            {
+                return $this->block_editor;
+            }
+        };
+
+        ob_start();
+        tuleva_shared_documents_page_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+        tuleva_shared_documents_page_block_editor_notice();
+
+        $this->assertSame('', $admin_notice);
+        $this->assertCount(1, FakeFundPage::$inline_scripts);
+        $this->assertSame('wp-notices', FakeFundPage::$inline_scripts[0][0]);
+        $this->assertStringContainsString('isDismissible: true', FakeFundPage::$inline_scripts[0][1]);
+
+        FakeFundPage::$screen->block_editor = false;
+        ob_start();
+        tuleva_shared_documents_page_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+
+        $this->assertStringContainsString('is-dismissible', $admin_notice);
+        $this->assertStringContainsString('Keep one page on the template', $admin_notice);
     }
 
     /**
