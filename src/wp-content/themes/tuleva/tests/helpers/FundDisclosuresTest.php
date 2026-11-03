@@ -130,18 +130,11 @@ if (!function_exists('acf_flush_value_cache')) {
     }
 }
 
-/**
- * 'any' is every status but the trash and an auto-draft, as in WordPress.
- */
 function get_posts($args = null)
 {
-    $statuses = (array) ($args['post_status'] ?? 'publish');
-
     return array_values(array_filter(
         FakeFundPage::$pages[$args['meta_value']] ?? [],
-        fn($page) => $statuses === ['any']
-            ? !in_array(get_post_status($page), ['trash', 'auto-draft'], true)
-            : in_array(get_post_status($page), $statuses, true)
+        fn($page) => in_array(get_post_status($page), (array) ($args['post_status'] ?? 'publish'), true)
     ));
 }
 
@@ -1550,17 +1543,11 @@ final class FundDisclosuresTest extends TestCase
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE + 5, self::SHARED_PAGE];
         FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
-        FakeFundPage::$statuses[self::SHARED_PAGE + 5] = 'draft';
 
         $problem = tuleva_shared_documents_page_problem();
 
         $this->assertStringContainsString('2 pages are on the Fund shared documents template', $problem);
         $this->assertStringContainsString('read only page ' . self::SHARED_PAGE, $problem);
-
-        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
-        $this->resetSharedPageLookup();
-
-        $this->assertStringContainsString('none is private or published', tuleva_shared_documents_page_problem());
     }
 
     /**
@@ -1616,6 +1603,21 @@ final class FundDisclosuresTest extends TestCase
     /**
      * A translation reads its Estonian original, so it is not a second page.
      */
+    /**
+     * The pages counted are the ones the fund pages could read: a translation on the template
+     * whose Estonian original is on another one is neither.
+     */
+    #[Test]
+    public function a_translation_whose_original_is_on_another_template_is_not_a_second_page(): void
+    {
+        FakeFundPage::$pages = [
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, FakeFundPage::ENGLISH_PAGE],
+            self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE],
+        ];
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
     #[Test]
     public function a_translation_of_the_shared_page_is_not_a_second_one(): void
     {

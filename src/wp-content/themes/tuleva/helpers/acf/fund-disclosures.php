@@ -587,38 +587,26 @@ add_filter('rest_pre_insert_page', 'tuleva_shared_documents_page_status_over_res
 
 /**
  * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
- * Of several pages on the template only the oldest is read, so the fund pages show the URLs in
- * the theme or another page's and nothing on them says so. No page yet is not a problem: the URLs
- * are meant.
+ * Of several pages on the template only the oldest is read, so an edit to another one changes
+ * nothing on the fund pages and nothing on them says so. No page yet is not a problem: the URLs in
+ * the theme are meant.
  */
 function tuleva_shared_documents_page_problem(): string
 {
-    $pages = array_values(array_unique(array_map(
-        fn($page) => (int) tuleva_disclosure_source_post((int) $page),
-        get_posts([
-            'post_type' => 'page',
-            'post_status' => 'any',
-            'meta_key' => '_wp_page_template',
-            'meta_value' => TULEVA_SHARED_DOCUMENTS_TEMPLATE,
-            'fields' => 'ids',
-            'numberposts' => -1,
-            'suppress_filters' => true,
-        ])
-    )));
-    $read = tuleva_shared_documents_page();
+    // The pages the fund pages could read, as they choose among them; pages on the template are
+    // saved as private, so no other status is left to count.
+    $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
 
-    if (count($pages) > 1) {
-        return sprintf(
-            $read === null
-                ? '%d pages are on the Fund shared documents template (%s) and none is private or published, so the fund pages show the URLs in the theme. Keep one page on the template and make it Private.'
-                : '%d pages are on the Fund shared documents template (%s). The fund pages read only page %d; the others change nothing on them. Keep one page on the template.',
-            count($pages),
-            implode(', ', $pages),
-            $read
-        );
+    if (count($pages) < 2) {
+        return '';
     }
 
-    return '';
+    return sprintf(
+        '%d pages are on the Fund shared documents template (%s). The fund pages read only page %d; the others change nothing on them. Keep one page on the template.',
+        count($pages),
+        implode(', ', $pages),
+        tuleva_shared_documents_page()
+    );
 }
 
 /**
