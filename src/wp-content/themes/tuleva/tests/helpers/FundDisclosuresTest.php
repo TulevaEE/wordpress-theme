@@ -284,13 +284,6 @@ if (!function_exists('_e')) {
     }
 }
 
-if (!function_exists('esc_url')) {
-    function esc_url($value)
-    {
-        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-    }
-}
-
 if (!function_exists('esc_html')) {
     function esc_html($value)
     {
@@ -342,6 +335,7 @@ if (!function_exists('get_the_title')) {
 
 require_once __DIR__ . '/../support/FakeOptions.php';
 require_once __DIR__ . '/../support/FakeAttachments.php';
+require_once __DIR__ . '/../support/FakeEscaping.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
@@ -1758,14 +1752,15 @@ final class FundDisclosuresTest extends TestCase
             'nav_procedure_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.10.2026.pdf?"data-x="nav',
             'nav_procedure_upcoming_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.03.2027.pdf?"data-x="nav-upcoming',
             'sustainability_risks_file' => 'https://tuleva.ee/Jatkusuutlikkus.pdf?"data-x="sustainability',
-            'adverse_impacts_file' => 'https://tuleva.ee/Negatiivne-moju.pdf?"data-x="adverse',
+            'adverse_impacts_file' => 'javascript:alert(document.cookie)',
             'remuneration_policy_file' => 'https://tuleva.ee/Tasustamine.pdf?"data-x="remuneration',
         ];
 
         $html = $this->renderFundPage($template);
 
-        $this->assertStringContainsString('Tasustamine.pdf?&quot;data-x=&quot;remuneration', $html);
+        $this->assertStringContainsString('href="https://tuleva.ee/Tasustamine.pdf?data-x=remuneration"', $html);
         $this->assertStringNotContainsString('"data-x=', $html);
+        $this->assertStringNotContainsString('javascript:', $html);
     }
 
     /**

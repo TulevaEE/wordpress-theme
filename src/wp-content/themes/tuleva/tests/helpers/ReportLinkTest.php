@@ -46,13 +46,6 @@ if (!function_exists('__')) {
     }
 }
 
-if (!function_exists('esc_url')) {
-    function esc_url($url)
-    {
-        return htmlspecialchars($url, ENT_QUOTES, 'UTF-8');
-    }
-}
-
 if (!function_exists('esc_html')) {
     function esc_html($text)
     {
@@ -60,6 +53,7 @@ if (!function_exists('esc_html')) {
     }
 }
 
+require_once __DIR__ . '/../support/FakeEscaping.php';
 require_once __DIR__ . '/../../helpers/extras.php';
 
 final class ReportLinkTest extends TestCase
@@ -161,9 +155,9 @@ final class ReportLinkTest extends TestCase
             'Reports <script>alert(1)</script>'
         );
 
-        // Assert what escaping has to achieve, not how a given implementation spells it. esc_url()
-        // is stubbed here with htmlspecialchars(), which writes & as &amp;, while real WordPress
-        // writes &#038;. Pinning either spelling tests the stub, not the behaviour.
+        // Assert what escaping has to achieve, not how a given implementation spells it. The
+        // stand-ins spell & differently (esc_url() &#038; as WordPress does, esc_html() &amp;), and
+        // pinning either spelling tests the stand-in, not the behaviour.
         $this->assertStringNotContainsString('<script>', $link);
         $this->assertDoesNotMatchRegularExpression('/href="[^"]*&(?!amp;|#0?3[48];)/', $link);
     }
