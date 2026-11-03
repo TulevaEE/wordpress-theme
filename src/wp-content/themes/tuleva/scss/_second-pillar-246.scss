@@ -146,11 +146,6 @@
   .cta-2l .cta-main{font-size:18px;font-weight:700}
   .cta-2l .cta-dl{font-size:13px;font-weight:500;opacity:.9}
 
-  // Savers photo
-  .savers{margin:18px 0 6px;text-align:center}
-  .savers img{max-width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r3)}
-  .savers figcaption{font-size:13px;color:var(--text2);margin-top:10px;line-height:1.45;max-width:560px;margin-left:auto;margin-right:auto}
-
   // FAQ
   .qa{border:1px solid var(--border-blue);border-radius:var(--r3);background:var(--bg-gray);overflow:hidden;margin:0 0 14px}
   .qa summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:19px;line-height:1.3}
@@ -178,9 +173,6 @@
   .ctaband-in{max-width:var(--maxw);margin:0 auto;text-align:left}
   .ctaband h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:0 0 22px;text-align:left}
   .ctaband p{font-size:18px;color:var(--text);margin:0 0 22px}
-  .ctaband .savers{margin:8px 0 26px;text-align:left}
-  .ctaband .savers img{mix-blend-mode:multiply;border-radius:0}
-  .ctaband .savers figcaption{margin-left:0}
   .ctaband .cta{max-width:380px;margin:0}
 
   // Legal notes
