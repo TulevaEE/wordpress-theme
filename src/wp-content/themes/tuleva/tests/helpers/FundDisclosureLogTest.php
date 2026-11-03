@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\Test;
 
 /**
  * Stands in for the request a write to a disclosure field arrives in: who is logged in, what
- * they may do, which screen, how a REST request was signed, and the page's post meta. A REST
+ * they may do, which screen and hook, how a REST request was signed, and the page's post meta. A REST
  * request is the REST_REQUEST constant, which a test defines in a process of its own.
  */
 final class FakeDisclosureWrite
@@ -19,6 +19,7 @@ final class FakeDisclosureWrite
     public static bool $writer = false;
     public static ?string $application_password = null;
     public static string $login = '';
+    public static ?string $doing_action = null;
 
     /** @var array<int, array<string, list<mixed>>> */
     public static array $meta = [];
@@ -31,6 +32,7 @@ final class FakeDisclosureWrite
         self::$writer = false;
         self::$application_password = null;
         self::$login = '';
+        self::$doing_action = null;
         self::$meta = [];
     }
 
@@ -121,6 +123,13 @@ if (!function_exists('wp_doing_cron')) {
     }
 }
 
+if (!function_exists('doing_action')) {
+    function doing_action($hook_name = null)
+    {
+        return $hook_name !== null && $hook_name === FakeDisclosureWrite::$doing_action;
+    }
+}
+
 if (!function_exists('rest_get_authenticated_app_password')) {
     function rest_get_authenticated_app_password()
     {
@@ -176,6 +185,7 @@ if (!function_exists('add_post_meta')) {
 require_once __DIR__ . '/../support/FakeAttachments.php';
 require_once __DIR__ . '/../support/FakeRoles.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
+require_once __DIR__ . '/../support/FakeOptions.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosure-log.php';
 
@@ -188,6 +198,7 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::reset();
         FakeAttachments::reset();
         FakeRoles::reset();
+        FakeOptions::reset();
     }
 
     #[Test]
@@ -297,16 +308,30 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     /**
-     * The upcoming-document switch runs from WP-Cron with nobody logged in. A cron run inside
-     * someone's session (ALTERNATE_WP_CRON, `wp cron event run --user=…`) writes as them.
+     * The upcoming-document switch writes while its own hook runs, whoever's request WP-Cron
+     * runs in (ALTERNATE_WP_CRON runs it inside a visitor's or an editor's). Any other cron
+     * run is refused like any other write.
      */
     #[Test]
-    public function wp_cron_writes_only_with_nobody_logged_in(): void
+    public function wp_cron_writes_only_while_the_upcoming_document_switch_runs(): void
     {
+        FakeDisclosureWrite::$doing_action = TULEVA_DISCLOSURE_SWITCH_HOOK;
         $this->assertTrue(tuleva_disclosure_may_write('cron'));
 
         FakeDisclosureWrite::$login = 'an-editor';
+        $this->assertTrue(tuleva_disclosure_may_write('cron'));
+
+        FakeDisclosureWrite::$doing_action = 'some_plugin_s_event';
         $this->assertFalse(tuleva_disclosure_may_write('cron'));
+
+        FakeDisclosureWrite::$login = '';
+        $this->assertFalse(tuleva_disclosure_may_write('cron'));
+    }
+
+    #[Test]
+    public function the_hook_is_the_one_the_upcoming_document_switch_is_scheduled_on(): void
+    {
+        $this->assertSame('tuleva_promote_due_documents', TULEVA_DISCLOSURE_SWITCH_HOOK);
     }
 
     /**
@@ -318,6 +343,7 @@ final class FundDisclosureLogTest extends TestCase
     {
         $this->assertFalse(tuleva_disclosure_may_write('other'));
         $this->assertFalse(tuleva_disclosure_may_write('rest'));
+        $this->assertFalse(tuleva_disclosure_may_write('cron'));
     }
 
     /**
@@ -436,6 +462,7 @@ final class FundDisclosureLogTest extends TestCase
     #[Test]
     public function a_document_field_named_by_its_acf_key_is_refused_too(): void
     {
+        FakeDisclosureWrite::$login = 'an-editor';
         $request = new FakeRestRequest('PATCH', ['acf' => ['field_fund_savings_prospectus' => 102, 'field_fund_disclosure_stocks_fund_co2_intensity' => '1']]);
 
         $refused = tuleva_disclosure_rest_guard(null, [], $request);
@@ -443,9 +470,20 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertStringEndsWith(': prospectus_file, fund_co2_intensity', $refused->get_error_message());
     }
 
+    /**
+     * Without a user, WordPress's own permission check answers (401), so a missing credential
+     * is not reported as a missing role.
+     */
+    #[Test]
+    public function a_request_without_a_user_is_left_to_wordpress_s_own_checks(): void
+    {
+        $this->assertNull(tuleva_disclosure_rest_guard(null, [], new FakeRestRequest('POST', ['acf' => ['prospectus_file' => 102]])));
+    }
+
     #[Test]
     public function a_rest_request_the_lock_does_not_concern_goes_on(): void
     {
+        FakeDisclosureWrite::$login = 'an-editor';
         $earlier = new WP_Error('rest_no_route', 'No route', ['status' => 404]);
 
         $this->assertNull(tuleva_disclosure_rest_guard(null, [], new FakeRestRequest('POST', ['acf' => ['hero_title' => 'x']])));
@@ -458,11 +496,14 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     /**
-     * Only what the REST writers' calls need: read pages and media, upload a PDF, and update a
-     * published page someone else wrote. A leaked application password can do no more.
+     * What the REST writers' calls need: read pages and media, upload a PDF, update a page
+     * someone else wrote, published or, the shared documents page, private. And
+     * unfiltered_html, which every Editor has: without it WordPress runs the stored page body
+     * and title through kses on each update, even one that sets only fields, and strips what
+     * it does not allow.
      */
     #[Test]
-    public function the_writer_role_may_update_pages_upload_media_and_write_the_fields_and_nothing_else(): void
+    public function the_writer_role_may_update_pages_private_ones_too_upload_media_and_write_the_fields(): void
     {
         tuleva_register_disclosure_writer_role();
 
@@ -473,6 +514,9 @@ final class FundDisclosureLogTest extends TestCase
                 'edit_pages' => true,
                 'edit_others_pages' => true,
                 'edit_published_pages' => true,
+                'read_private_pages' => true,
+                'edit_private_pages' => true,
+                'unfiltered_html' => true,
                 TULEVA_DISCLOSURE_WRITER => true,
             ]],
             FakeRoles::$roles['fund_document_writer']
@@ -483,14 +527,17 @@ final class FundDisclosureLogTest extends TestCase
     public function the_writer_role_is_added_once_and_not_rewritten_while_it_is_right(): void
     {
         tuleva_register_disclosure_writer_role();
+        FakeRoles::$roles['fund_document_writer']['capabilities'] = array_reverse(tuleva_disclosure_writer_capabilities());
         tuleva_register_disclosure_writer_role();
 
-        $this->assertSame([1, 0], [FakeRoles::$added, FakeRoles::$changed]);
+        $this->assertSame(1, FakeRoles::$added);
+        $this->assertSame([], FakeOptions::$options);
     }
 
     /**
      * A role stored with other capabilities, such as one cloned from Editor or one that got
-     * only the writer capability because Editor was missing, is put right on the next request.
+     * only the writer capability because Editor was missing, is put right on the next request,
+     * in one write of the roles option.
      */
     #[Test]
     public function a_writer_role_that_has_drifted_is_put_right(): void
@@ -504,21 +551,21 @@ final class FundDisclosureLogTest extends TestCase
 
         tuleva_register_disclosure_writer_role();
 
-        $held = FakeRoles::$roles['fund_document_writer']['capabilities'];
-        ksort($held);
-        $wanted = tuleva_disclosure_writer_capabilities();
-        ksort($wanted);
-        $this->assertSame($wanted, $held);
+        $this->assertSame(['wp_user_roles'], array_keys(FakeOptions::$options));
+        $this->assertSame(tuleva_disclosure_writer_capabilities(), FakeOptions::$options['wp_user_roles']['fund_document_writer']['capabilities']);
+        $this->assertSame('Fund document writer', FakeOptions::$options['wp_user_roles']['fund_document_writer']['name']);
         $this->assertSame(0, FakeRoles::$added);
     }
 
     /**
-     * The upcoming-document switch writes from WP-Cron with nobody logged in.
+     * The upcoming-document switch writes from WP-Cron, so the write is its own whoever's
+     * request it runs in.
      */
     #[Test]
     public function a_write_from_wp_cron_is_logged_as_such(): void
     {
         FakeDisclosureWrite::$in_cron = true;
+        FakeDisclosureWrite::$doing_action = TULEVA_DISCLOSURE_SWITCH_HOOK;
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
 
         tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']);

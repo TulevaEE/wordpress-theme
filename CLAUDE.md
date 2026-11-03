@@ -71,18 +71,26 @@ form cannot reach them (`is_protected_meta`). That includes
 publishes is decided there.
 
 **Who may write is decided by the account, not the route.** A write to a document field is
-taken from an Administrator, from WP-Cron with nobody logged in (the upcoming-document
-switch), and over REST from an account holding the capability `tuleva_write_fund_documents`
-that signs the request with an application password. Anyone else's is refused on every
-route, whether from a logged-in session or the user's own application password. Over REST
-the whole request is answered **403** `tuleva_fund_document_locked`, naming the fields, and
-nothing in it is saved; in wp-admin the value is not taken.
+taken from an Administrator, from the upcoming-document switch while its WP-Cron hook
+(`tuleva_promote_due_documents`) runs, and over REST from an account holding the capability
+`tuleva_write_fund_documents` that signs the request with an application password. Anyone
+else's is refused on every route, any other cron run included, whether from a logged-in
+session or the user's own application password. An authenticated REST request is answered
+**403** `tuleva_fund_document_locked`, naming the fields, and nothing in it is saved; one
+without a valid credential gets WordPress's own 401. In wp-admin the value is not taken.
 
 The capability comes with the *Fund document writer* role, which may read, upload media and
-update pages and nothing else; the theme puts the role back the way it is defined here on
-every request. Give it only to the accounts agent-gateway, onboarding-service and the
-reports' Apps Script write as. Each account's *Application Passwords* list on its profile
-shows when it was last used, which tells them apart.
+update pages, private ones too (the shared documents page is private), and holds
+`unfiltered_html` like every Editor: without it WordPress runs the stored page body and title
+through kses on every update, even one that sets only fields, and strips any iframe,
+script, form or SVG in them. So an application password of one of these accounts
+can put any HTML or script on tuleva.ee: keep each only in its service's secret store,
+never in a chat, a file or a shared sheet, and revoke it on the account's profile the moment
+it may have leaked. The theme puts the role back the way it is defined in
+`helpers/acf/fund-disclosure-log.php` on every request. Give it only to the accounts
+agent-gateway, onboarding-service and the reports' Apps Script write as. Each account's
+*Application Passwords* list on its profile shows when it was last used, which tells them
+apart.
 
 **Giving an account the capability**, and the order to do it in when this lock first
 deploys (a push to `master` deploys it):
@@ -128,7 +136,8 @@ uploads as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. A 403 `tuleva_fund_document_locked` means
-the account may not set those fields and nothing was saved. An `acf` key that is missing or
+the account signed in but may not set those fields, and nothing was saved; a 401 means the
+credential was not accepted. An `acf` key that is missing or
 empty in a 200 response means the write did not land: ACF answers 200 when it drops a field
 it does not expose over REST.
 

@@ -9,11 +9,12 @@
  * change goes through the gateway. A direct post-meta write (WP-CLI, WPML's copy to a
  * translation) is not logged; nothing reads a translation's copy.
  *
- * Who may write is decided by the writer, whatever the route: an Administrator, WP-Cron with
- * nobody logged in, or over REST an account with the Fund document writer role that signs
- * with an application password. Those accounts are agent-gateway's and the ones the reports'
- * Apps Script and onboarding-service publish the investment report as. Anyone else is
- * refused on every route; a REST request is answered 403 before anything in it is saved.
+ * Who may write is decided by the writer, whatever the route: an Administrator, the
+ * upcoming-document switch's WP-Cron job, or over REST an account with the Fund document
+ * writer role that signs with an application password. Those accounts are agent-gateway's
+ * and the ones the reports' Apps Script and onboarding-service publish the investment report
+ * as. Anyone else is refused on every route; their REST request is answered 403 before
+ * anything in it is saved.
  *
  * See "TODO — Fund page document publishing", step 11, in the tuleva repo.
  */
@@ -33,6 +34,12 @@ const TULEVA_DISCLOSURE_LOG_SHOWN = 50;
  * over REST and with an application password. The Fund document writer role carries it.
  */
 const TULEVA_DISCLOSURE_WRITER = 'tuleva_write_fund_documents';
+
+/**
+ * The hook WP-Cron runs the upcoming-document switch on, hourly; it writes the fields while
+ * this hook runs.
+ */
+const TULEVA_DISCLOSURE_SWITCH_HOOK = 'tuleva_promote_due_documents';
 
 function tuleva_is_disclosure(string $name): bool
 {
@@ -119,21 +126,17 @@ function tuleva_disclosure_write_route(): string
 /**
  * Whether the writer may change a disclosure field. Decided by who is writing, not by the
  * route, since an editor's logged-in session reaches REST with the wp-admin nonce and any
- * user can add an application password to their own profile. So: an Administrator; WP-Cron
- * with nobody logged in, which is how the upcoming-document switch runs (a cron run inside
- * someone's session, ALTERNATE_WP_CRON or `wp cron event run --user=…`, is theirs); or an
- * account holding TULEVA_DISCLOSURE_WRITER that signed this REST request with one of its
- * application passwords, since a browser logged in as that account is not the service that
- * writes as it. Anyone else is refused.
+ * user can add an application password to their own profile. So: an Administrator; the
+ * upcoming-document switch, while its hook runs, whoever's request WP-Cron runs it in
+ * (ALTERNATE_WP_CRON runs it inside a visitor's or an editor's); or an account holding
+ * TULEVA_DISCLOSURE_WRITER that signed this REST request with one of its application
+ * passwords, since a browser logged in as that account is not the service that writes as it.
+ * Anyone else is refused, any other cron run included.
  */
 function tuleva_disclosure_may_write(string $route): bool
 {
-    if (current_user_can('manage_options')) {
+    if (current_user_can('manage_options') || doing_action(TULEVA_DISCLOSURE_SWITCH_HOOK)) {
         return true;
-    }
-
-    if ($route === 'cron') {
-        return !wp_get_current_user()->exists();
     }
 
     return $route === 'rest'
@@ -153,34 +156,39 @@ function tuleva_disclosure_meta_key($field): string
 
 /**
  * The disclosure a REST `acf` key names, by the field's name or by its ACF key, which ACF
- * takes as well; '' for any other field.
+ * takes as well; '' for any other field. The keys are worked out once a request.
  */
 function tuleva_disclosure_named(string $selector): string
 {
-    if (tuleva_is_disclosure($selector)) {
-        return $selector;
-    }
+    static $by_key = null;
 
-    foreach (tuleva_fund_disclosure_scope() as $template => $names) {
-        foreach (array_keys($names) as $name) {
-            if (tuleva_fund_disclosure_field($name, $template)['key'] === $selector) {
-                return $name;
+    if ($by_key === null) {
+        $by_key = [];
+        foreach (tuleva_fund_disclosure_scope() as $template => $names) {
+            foreach (array_keys($names) as $name) {
+                $by_key[tuleva_fund_disclosure_field($name, $template)['key']] = $name;
             }
         }
     }
 
-    return '';
+    return tuleva_is_disclosure($selector) ? $selector : ($by_key[$selector] ?? '');
 }
 
 /**
  * Answers a REST write that sets a disclosure field its writer may not set with 403, before
  * anything in it is saved. Left to ACF, the old value would be kept and the request answered
  * 200, and an unattended writer would record a success. This runs before the route's own
- * permission check, and once for each request of a batch.
+ * permission check, and once for each request of a batch, so a request without a user is
+ * left to that check: a missing or refused credential is answered as WordPress answers it,
+ * not as a missing role.
  */
 function tuleva_disclosure_rest_guard($response, $handler, $request)
 {
-    if (is_wp_error($response) || !in_array($request->get_method(), ['POST', 'PUT', 'PATCH'], true)) {
+    if (
+        is_wp_error($response)
+        || !in_array($request->get_method(), ['POST', 'PUT', 'PATCH'], true)
+        || !wp_get_current_user()->exists()
+    ) {
         return $response;
     }
 
@@ -246,16 +254,16 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
 }
 
 /**
- * Every write tuleva_disclosure_may_write lets through without a user is WP-Cron's.
+ * A write made while the upcoming-document switch runs is WP-Cron's, whoever's request it
+ * runs in; every other write tuleva_disclosure_may_write lets through has a user.
  */
 function tuleva_disclosure_log(int $post_id, string $name, $before, $after, string $route): void
 {
-    $user = wp_get_current_user();
     $entry = tuleva_disclosure_log_entry(
         $name,
         $before,
         $after,
-        $user->exists() ? $user->user_login : 'WP-Cron',
+        doing_action(TULEVA_DISCLOSURE_SWITCH_HOOK) ? 'WP-Cron' : wp_get_current_user()->user_login,
         $route,
         gmdate('Y-m-d\TH:i:s\Z'),
         'wp_get_attachment_url'
@@ -269,9 +277,12 @@ function tuleva_disclosure_log(int $post_id, string $name, $before, $after, stri
 add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
 
 /**
- * What the REST writers' calls need and no more: read pages and media, upload a PDF
- * (onboarding-service, the reports' Apps Script), update a published page someone else wrote
- * (all of them, agent-gateway too), and TULEVA_DISCLOSURE_WRITER.
+ * What the REST writers' calls need: read pages and media, upload a PDF (onboarding-service,
+ * the reports' Apps Script), update a published page someone else wrote (all of them), read
+ * and update the private shared documents page (agent-gateway), and TULEVA_DISCLOSURE_WRITER.
+ * And unfiltered_html, as every Editor has: without it WordPress runs the stored page body and
+ * title through kses on each update, even one that sets only fields, and strips any iframe,
+ * script, form or SVG in them.
  */
 function tuleva_disclosure_writer_capabilities(): array
 {
@@ -281,6 +292,9 @@ function tuleva_disclosure_writer_capabilities(): array
         'edit_pages' => true,
         'edit_others_pages' => true,
         'edit_published_pages' => true,
+        'read_private_pages' => true,
+        'edit_private_pages' => true,
+        'unfiltered_html' => true,
         TULEVA_DISCLOSURE_WRITER => true,
     ];
 }
@@ -288,9 +302,10 @@ function tuleva_disclosure_writer_capabilities(): array
 /**
  * The role for the accounts that write the fields over REST. An Administrator gives it to an
  * account under Users in wp-admin. add_role stores a role in the options table, so it is
- * checked on every request and written only when it is missing or holds other capabilities
+ * compared on every request and written only when it is missing or holds other capabilities
  * than these: one added or taken away elsewhere is put back, and changing what the role may
- * do is a change here.
+ * do is a change here. It is put back in one write of the roles option; WP_Role::add_cap and
+ * remove_cap would each rewrite it.
  */
 function tuleva_register_disclosure_writer_role(): void
 {
@@ -303,12 +318,16 @@ function tuleva_register_disclosure_writer_role(): void
         return;
     }
 
-    foreach (array_keys(array_diff_key($role->capabilities, $capabilities)) as $capability) {
-        $role->remove_cap($capability);
+    if ($role->capabilities == $capabilities) {
+        return;
     }
 
-    foreach (array_keys(array_diff_assoc($capabilities, $role->capabilities)) as $capability) {
-        $role->add_cap($capability);
+    $roles = wp_roles();
+    $roles->roles['fund_document_writer']['capabilities'] = $capabilities;
+    $role->capabilities = $capabilities;
+
+    if ($roles->use_db) {
+        update_option($roles->role_key, $roles->roles);
     }
 }
 
