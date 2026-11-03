@@ -362,6 +362,13 @@ final class FundDisclosuresTest extends TestCase
         FakeWordPress::reset();
         FakeAttachments::reset();
         $this->resetSharedPageLookup();
+        $this->resetRestTemplates();
+    }
+
+    private function resetRestTemplates(): void
+    {
+        $templates = &tuleva_rest_page_templates();
+        $templates = [];
     }
 
     /**
@@ -1592,6 +1599,41 @@ final class FundDisclosuresTest extends TestCase
         $this->assertSame('private', $saved((object) ['ID' => self::SHARED_PAGE, 'post_status' => 'draft'], [])->post_status);
         $this->assertSame('draft', $saved((object) ['post_status' => 'draft'], ['template' => 'page_fund-stocks.php'])->post_status);
         $this->assertObjectNotHasProperty('post_status', $saved((object) [], []));
+    }
+
+    /**
+     * A REST update runs rest_pre_insert_page, then wp_insert_post_data with the page as it is
+     * stored merged in, its template still the one the request is changing.
+     */
+    private function saveOverRest(int $page, string $status, array $request): string
+    {
+        $post = tuleva_shared_documents_page_status_over_rest((object) ['ID' => $page, 'post_status' => $status], $request);
+
+        return tuleva_shared_documents_page_status_on_save(
+            ['post_type' => 'page', 'post_status' => $post->post_status],
+            ['ID' => $page, 'page_template' => (string) get_page_template_slug($page)]
+        )['post_status'];
+    }
+
+    #[Test]
+    public function moving_the_shared_page_off_its_template_over_rest_keeps_the_status_asked_for(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+
+        $this->assertSame('publish', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['template' => '']));
+    }
+
+    /**
+     * The block editor saves over REST and sends the template only when it changes.
+     */
+    #[Test]
+    public function a_block_editor_save_takes_the_template_it_sets_and_otherwise_the_page_s(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+
+        $this->assertSame('publish', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['template' => 'page_fund-stocks.php']));
+        $this->resetRestTemplates();
+        $this->assertSame('private', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['title' => 'Fund shared documents']));
     }
 
     #[Test]

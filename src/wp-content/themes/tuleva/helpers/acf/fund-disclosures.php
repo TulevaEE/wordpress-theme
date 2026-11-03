@@ -543,7 +543,9 @@ function tuleva_shared_documents_page_status(string $template, string $status): 
 }
 
 /**
- * wp_insert_post_data: a save from wp-admin or code carries the template, or the page has one.
+ * wp_insert_post_data: a save from wp-admin or code carries the template, or the page has one. A
+ * REST save, the block editor's included, carries the page as stored, so the template its request
+ * sets comes first (tuleva_rest_page_templates()).
  */
 function tuleva_shared_documents_page_status_on_save(array $data, array $postarr): array
 {
@@ -551,9 +553,11 @@ function tuleva_shared_documents_page_status_on_save(array $data, array $postarr
         return $data;
     }
 
-    $template = is_string($postarr['page_template'] ?? null) && $postarr['page_template'] !== ''
-        ? $postarr['page_template']
-        : (empty($postarr['ID']) ? '' : (string) get_page_template_slug((int) $postarr['ID']));
+    $page = (int) ($postarr['ID'] ?? 0);
+    $template = tuleva_rest_page_templates()[$page]
+        ?? (is_string($postarr['page_template'] ?? null) && $postarr['page_template'] !== ''
+            ? $postarr['page_template']
+            : ($page ? (string) get_page_template_slug($page) : ''));
     $data['post_status'] = tuleva_shared_documents_page_status($template, (string) ($data['post_status'] ?? ''));
 
     return $data;
@@ -569,6 +573,12 @@ function tuleva_shared_documents_page_status_on_save(array $data, array $postarr
 function tuleva_shared_documents_page_status_over_rest(object $post, $request): object
 {
     $page = (int) ($post->ID ?? 0);
+
+    if (isset($request['template']) && $page) {
+        $templates = &tuleva_rest_page_templates();
+        $templates[$page] = (string) $request['template'];
+    }
+
     $template = isset($request['template'])
         ? (string) $request['template']
         : ($page ? (string) get_page_template_slug($page) : '');
@@ -580,6 +590,18 @@ function tuleva_shared_documents_page_status_over_rest(object $post, $request): 
     }
 
     return $post;
+}
+
+/**
+ * @return array<int, string> the template a REST request sets on each page it saves, for the rest of
+ *   the request: WordPress stores it only after the page, so until then the page reads as still on
+ *   the one it is leaving
+ */
+function &tuleva_rest_page_templates(): array
+{
+    static $templates = [];
+
+    return $templates;
 }
 
 add_filter('wp_insert_post_data', 'tuleva_shared_documents_page_status_on_save', 10, 2);
