@@ -364,6 +364,17 @@ final class FundDisclosuresTest extends TestCase
         $this->resetSharedPageLookup();
     }
 
+    /**
+     * What get_field() formats from the attachment ids the page stores, as ACF would.
+     */
+    private function showStoredFields(int $page): void
+    {
+        FakeFundPage::$page_fields[$page] = array_map(
+            fn($id) => FakeAttachments::$urls[$id] ?? '',
+            FakeFundPage::$stored[$page]
+        );
+    }
+
     private function resetSharedPageLookup(): void
     {
         $found = &tuleva_shared_documents_page_found();
@@ -1439,24 +1450,57 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * With the shared page's current field empty, the pension pages show today's NAV procedure
-     * URL. An upcoming document older than that is dropped on the page and must not be promoted.
+     * A filled field beats the URL in the theme whatever the dates, on the shared page as on a fund
+     * page: with its current field empty, an upcoming NAV procedure dated before today's URL still
+     * takes over on its date, and the job moves it into the current field.
      */
     #[Test]
-    public function a_stale_upcoming_nav_procedure_neither_shows_nor_is_promoted_while_the_current_field_is_empty(): void
+    public function an_upcoming_nav_procedure_field_replaces_today_s_url_whatever_its_date_and_is_promoted(): void
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
-        $stale = 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
-        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => $stale];
+        $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => $upcoming];
         FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => 602];
-        FakeAttachments::$urls = [602 => $stale];
+        FakeAttachments::$urls = [602 => $upcoming];
 
         $html = $this->renderFundPage('page_fund-stocks.php');
 
-        $this->assertStringContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
-        $this->assertStringNotContainsString('kehtib-alates-01.09.2026.pdf', $html);
-        $this->assertSame([], tuleva_promote_due_documents('2026-11-02'));
-        $this->assertSame([], FakeFundPage::$updates);
+        $this->assertStringContainsString('kehtib-alates-01.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from 01.09.2026', $html);
+        $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2026-11-02'));
+    }
+
+    /**
+     * The procedure in force used to live only in the upcoming field once its date passed, so the
+     * next upcoming upload replaced it and the pension pages went back to the superseded URL in the
+     * theme. The job now moves it into the current field first.
+     */
+    #[Test]
+    public function the_next_upcoming_nav_procedure_does_not_take_the_one_in_force_off_the_pension_pages(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeAttachments::$urls = [
+            602 => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+            603 => 'https://tuleva.ee/wp-content/uploads/2027/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2027.pdf',
+        ];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => 602];
+        $this->showStoredFields(self::SHARED_PAGE);
+
+        FakeFundPage::$today = '2027-03-01';
+        $this->assertStringContainsString('NAV-sisekord-kehtib-alates-01.03.2027.pdf', $this->renderFundPage('page_fund-stocks.php'));
+        tuleva_promote_due_documents(FakeFundPage::$today);
+
+        FakeFundPage::$stored[self::SHARED_PAGE]['nav_procedure_upcoming_file'] = 603;
+        $this->showStoredFields(self::SHARED_PAGE);
+        FakeFundPage::$today = '2027-03-02';
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertMatchesRegularExpression(
+            '/NAV-sisekord-kehtib-alates-01\.03\.2027\.pdf.*?<br>.*?NAV-sisekord-kehtib-alates-01\.09\.2027\.pdf.*?effective from 01\.09\.2027/s',
+            $html
+        );
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
     }
 
     #[Test]

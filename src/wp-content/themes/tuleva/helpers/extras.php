@@ -360,17 +360,21 @@ function get_esg_document_url() {
 
 /**
  * The pension funds' NAV procedure, current and upcoming. From its effective date the upcoming
- * one is the current one (tuleva_document_versions()).
+ * one is the current one (tuleva_document_versions()). A filled field beats the path here
+ * whatever the dates, as on a fund page, so the switch is between the fields and the path fills
+ * in only where they leave no current document; the hourly job makes the same switch.
  *
  * @return array{0: string, 1: string}
  */
 function get_nav_procedure_documents() {
     $nav_procedure_document_path = '/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
 
-    return tuleva_document_versions(
-        tuleva_shared_document_url('nav_procedure_file', get_site_url() . $nav_procedure_document_path),
+    [$current, $upcoming] = tuleva_document_versions(
+        tuleva_shared_document_url('nav_procedure_file'),
         tuleva_shared_document_url('nav_procedure_upcoming_file')
     );
+
+    return [$current !== '' ? $current : get_site_url() . $nav_procedure_document_path, $upcoming];
 }
 
 function get_nav_procedure_document_url() {
