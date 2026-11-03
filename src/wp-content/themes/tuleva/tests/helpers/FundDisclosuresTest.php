@@ -51,6 +51,9 @@ final class FakeFundPage
     /** @var list<string> */
     public static array $template_parts = [];
 
+    /** what get_current_screen() returns in wp-admin, null outside it */
+    public static ?object $screen = null;
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -67,6 +70,7 @@ final class FakeFundPage
         self::$saved_meanwhile = [];
         self::$status_sent = null;
         self::$template_parts = [];
+        self::$screen = null;
     }
 }
 
@@ -126,12 +130,26 @@ if (!function_exists('acf_flush_value_cache')) {
     }
 }
 
+/**
+ * 'any' is every status but the trash and an auto-draft, as in WordPress.
+ */
 function get_posts($args = null)
 {
+    $statuses = (array) ($args['post_status'] ?? 'publish');
+
     return array_values(array_filter(
         FakeFundPage::$pages[$args['meta_value']] ?? [],
-        fn($page) => in_array(get_post_status($page), (array) ($args['post_status'] ?? 'publish'), true)
+        fn($page) => $statuses === ['any']
+            ? !in_array(get_post_status($page), ['trash', 'auto-draft'], true)
+            : in_array(get_post_status($page), $statuses, true)
     ));
+}
+
+if (!function_exists('get_current_screen')) {
+    function get_current_screen()
+    {
+        return FakeFundPage::$screen;
+    }
 }
 
 if (!function_exists('status_header')) {
@@ -343,7 +361,11 @@ final class FundDisclosuresTest extends TestCase
         FakeOptions::reset();
         FakeWordPress::reset();
         FakeAttachments::reset();
+        $this->resetSharedPageLookup();
+    }
 
+    private function resetSharedPageLookup(): void
+    {
         $found = &tuleva_shared_documents_page_found();
         $found = [];
     }
@@ -1406,6 +1428,99 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$page_fields[self::SHARED_PAGE + 5] = ['remuneration_policy_file' => 'https://tuleva.ee/newer.pdf'];
 
         $this->assertSame('https://tuleva.ee/oldest.pdf', tuleva_shared_document_url('remuneration_policy_file'));
+    }
+
+    /**
+     * The fund pages read one page, so a second one on the template changes nothing they show,
+     * and whoever edits it has to be told.
+     */
+    #[Test]
+    public function a_second_page_on_the_shared_template_is_reported(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE + 5, self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+        FakeFundPage::$statuses[self::SHARED_PAGE + 5] = 'draft';
+
+        $problem = tuleva_shared_documents_page_problem();
+
+        $this->assertStringContainsString('2 pages are on the Fund shared documents template', $problem);
+        $this->assertStringContainsString('read only page ' . self::SHARED_PAGE, $problem);
+
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+        $this->resetSharedPageLookup();
+
+        $this->assertStringContainsString('none is private or published', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * A page created over REST is a draft unless it says otherwise, and a draft is not read.
+     */
+    #[Test]
+    public function a_shared_page_left_in_draft_is_reported(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+
+        $problem = tuleva_shared_documents_page_problem();
+
+        $this->assertStringContainsString('has the status draft, so the fund pages do not read it', $problem);
+        $this->assertStringContainsString('Make it Private', $problem);
+    }
+
+    #[Test]
+    public function one_shared_page_that_is_read_or_none_yet_is_not_a_problem(): void
+    {
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE, self::SHARED_PAGE + 5];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+        FakeFundPage::$statuses[self::SHARED_PAGE + 5] = 'trash';
+        $this->resetSharedPageLookup();
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * A translation reads its Estonian original, so it is not a second page.
+     */
+    #[Test]
+    public function a_translation_of_the_shared_page_is_not_a_second_one(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$statuses[FakeFundPage::ESTONIAN_PAGE] = 'private';
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * Said where it matters: on the edit screen of each page that reads the shared page, and
+     * of the shared page itself.
+     */
+    #[Test]
+    public function the_problem_shows_on_the_edit_screens_of_the_fund_pages_and_the_shared_page(): void
+    {
+        FakeFundPage::$pages = [
+            'page_fund-stocks.php' => [17533],
+            'page_front.php' => [2],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE],
+        ];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        foreach ([17533, self::SHARED_PAGE] as $page) {
+            FakeFundPage::$post_id = $page;
+            $this->assertStringContainsString('Make it Private', tuleva_shared_documents_page_notice(), "page $page");
+        }
+
+        FakeFundPage::$post_id = 2;
+        $this->assertSame('', tuleva_shared_documents_page_notice());
+
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = (object) ['base' => 'edit', 'post_type' => 'page'];
+        $this->assertSame('', tuleva_shared_documents_page_notice());
+
+        FakeFundPage::$screen = null;
+        $this->assertSame('', tuleva_shared_documents_page_notice());
     }
 
     /**

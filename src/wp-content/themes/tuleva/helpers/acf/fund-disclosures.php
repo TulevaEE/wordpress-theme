@@ -468,6 +468,88 @@ function &tuleva_shared_documents_page_found(): array
 }
 
 /**
+ * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
+ * Either way they show the URLs in the theme and nothing on them says so: of several pages on the
+ * template only the oldest is read, and a page left in draft (what a page created over REST is
+ * unless it says otherwise) is not read at all. No page yet is not a problem: the URLs are meant.
+ */
+function tuleva_shared_documents_page_problem(): string
+{
+    $pages = array_values(array_unique(array_map(
+        fn($page) => (int) tuleva_disclosure_source_post((int) $page),
+        get_posts([
+            'post_type' => 'page',
+            'post_status' => 'any',
+            'meta_key' => '_wp_page_template',
+            'meta_value' => TULEVA_SHARED_DOCUMENTS_TEMPLATE,
+            'fields' => 'ids',
+            'numberposts' => -1,
+            'suppress_filters' => true,
+        ])
+    )));
+    $read = tuleva_shared_documents_page();
+
+    if (count($pages) > 1) {
+        return sprintf(
+            $read === null
+                ? '%d pages are on the Fund shared documents template (%s) and none is private or published, so the fund pages show the URLs in the theme. Keep one page on the template and make it Private.'
+                : '%d pages are on the Fund shared documents template (%s). The fund pages read only page %d; the others change nothing on them. Keep one page on the template.',
+            count($pages),
+            implode(', ', $pages),
+            $read
+        );
+    }
+
+    if ($pages !== [] && $read === null) {
+        return sprintf(
+            'The Fund shared documents page (%d) has the status %s, so the fund pages do not read it and show the URLs in the theme. Make it Private.',
+            $pages[0],
+            get_post_status($pages[0])
+        );
+    }
+
+    return '';
+}
+
+/**
+ * The problem, on the edit screen of a page that reads the shared documents page (a fund page)
+ * or of that page itself; '' on every other screen.
+ */
+function tuleva_shared_documents_page_notice(): string
+{
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+    if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'page') {
+        return '';
+    }
+
+    $page = get_the_ID();
+
+    return $page && array_key_exists((string) get_page_template_slug($page), tuleva_fund_disclosure_scope())
+        ? tuleva_shared_documents_page_problem()
+        : '';
+}
+
+// The classic editor shows admin notices; the block editor hides them and takes its own.
+add_action('admin_notices', function (): void {
+    $notice = tuleva_shared_documents_page_notice();
+
+    if ($notice !== '') {
+        echo '<div class="notice notice-warning"><p>' . esc_html($notice) . '</p></div>';
+    }
+});
+add_action('enqueue_block_editor_assets', function (): void {
+    $notice = tuleva_shared_documents_page_notice();
+
+    if ($notice !== '') {
+        wp_add_inline_script(
+            'wp-notices',
+            sprintf('wp.data.dispatch("core/notices").createNotice("warning", %s, {isDismissible: false});', wp_json_encode($notice))
+        );
+    }
+});
+
+/**
  * Writes each switch tuleva_document_versions() makes on a page into its fields: the current
  * field gets the upcoming document and the upcoming field is emptied, and an upcoming field
  * whose document the page drops as a leftover is emptied too. The REST `acf` values that the
