@@ -126,16 +126,15 @@ pension funds' procedure, which switches on its date like a fund's. The helpers 
 `helpers/extras.php` read them from there (`tuleva_shared_document_url()`), so a fund page shows a
 new one with no deploy. Write it as a fund page is written: the Estonian page, over REST.
 
-Create the page as **Private**, as a new page, not as a copy of a fund page: a copy carries that
-fund's field values, and a copied TKF100 NAV procedure would show on the pension pages. The
-template answers 404 to everyone, so even a page published by mistake shows nothing. The theme
-finds the page by its template and reads it when it is private or published (not a draft); one
-page is meant to be on it. Until it is, and while one of its fields is empty, the URL in
-`helpers/extras.php` renders instead; a due upcoming NAV procedure beats that URL whatever the
-dates, as on a fund page. If there are more pages on the template, or the one there is
-a draft, the edit screens of the fund pages and of the shared page say so. To change nothing
-visible when first filling it, pick the attachments the URLs already point at; uploading the same
-PDF again gives it a `-1` name and a new link.
+Create it as a new page, not as a copy of a fund page: a copy carries that fund's field values,
+and a copied TKF100 NAV procedure would show on the pension pages. The theme saves a page on that
+template as **Private** whatever status it is given (a draft would not be read), and the template
+answers 404 to everyone. The theme finds the page by its template; one page is meant to be on it.
+Until it is, and while one of its fields is empty, the URL in `helpers/extras.php` renders
+instead; a due upcoming NAV procedure beats that URL whatever the dates, as on a fund page. If
+there is more than one page on the template, the edit screens of the fund pages and of the shared
+page say so. To change nothing visible when first filling it, pick the attachments the URLs
+already point at; uploading the same PDF again gives it a `-1` name and a new link.
 
 ### Fallbacks still in place
 

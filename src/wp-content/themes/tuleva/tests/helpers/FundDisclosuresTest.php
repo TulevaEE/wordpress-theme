@@ -1564,18 +1564,40 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A page created over REST is a draft unless it says otherwise, and a draft is not read.
+     * The page is never shown, and a draft, what a page created over REST is unless it says
+     * otherwise, would not be read; so a page on the shared template is saved as private.
      */
     #[Test]
-    public function a_shared_page_left_in_draft_is_reported(): void
+    public function a_page_on_the_shared_template_is_saved_as_private(): void
     {
-        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
-        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE], 'page_fund-stocks.php' => [17533]];
+        $saved = fn(array $data, array $postarr) => tuleva_shared_documents_page_status_on_save($data, $postarr)['post_status'];
 
-        $problem = tuleva_shared_documents_page_problem();
+        foreach (['draft', 'pending', 'future', 'publish', 'private'] as $status) {
+            $this->assertSame('private', $saved(['post_type' => 'page', 'post_status' => $status], ['ID' => self::SHARED_PAGE]), $status);
+        }
 
-        $this->assertStringContainsString('has the status draft, so the fund pages do not read it', $problem);
-        $this->assertStringContainsString('Make it Private', $problem);
+        $this->assertSame('private', $saved(['post_type' => 'page', 'post_status' => 'draft'], ['ID' => 0, 'page_template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE]));
+        $this->assertSame('trash', $saved(['post_type' => 'page', 'post_status' => 'trash'], ['ID' => self::SHARED_PAGE]));
+        $this->assertSame('draft', $saved(['post_type' => 'page', 'post_status' => 'draft'], ['ID' => 17533]));
+        $this->assertSame('publish', $saved(['post_type' => 'post', 'post_status' => 'publish'], ['ID' => 0, 'page_template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE]));
+    }
+
+    /**
+     * Over REST WordPress sets the template only after the page is saved, so the status is set
+     * from the request.
+     */
+    #[Test]
+    public function a_page_created_over_rest_on_the_shared_template_is_saved_as_private(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+        $saved = fn(object $post, array $request) => tuleva_shared_documents_page_status_over_rest($post, $request);
+
+        $this->assertSame('private', $saved((object) [], ['template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE])->post_status);
+        $this->assertSame('private', $saved((object) ['post_status' => 'publish'], ['template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE])->post_status);
+        $this->assertSame('private', $saved((object) ['ID' => self::SHARED_PAGE, 'post_status' => 'draft'], [])->post_status);
+        $this->assertSame('draft', $saved((object) ['post_status' => 'draft'], ['template' => 'page_fund-stocks.php'])->post_status);
+        $this->assertObjectNotHasProperty('post_status', $saved((object) [], []));
     }
 
     #[Test]
@@ -1613,14 +1635,13 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$pages = [
             'page_fund-stocks.php' => [17533],
             'page_front.php' => [2],
-            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, self::SHARED_PAGE + 5],
         ];
-        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
         FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
 
         foreach ([17533, self::SHARED_PAGE] as $page) {
             FakeFundPage::$post_id = $page;
-            $this->assertStringContainsString('Make it Private', tuleva_shared_documents_page_notice(), "page $page");
+            $this->assertStringContainsString('Keep one page on the template', tuleva_shared_documents_page_notice(), "page $page");
         }
 
         FakeFundPage::$post_id = 2;

@@ -531,10 +531,65 @@ function &tuleva_shared_documents_page_found(): array
 }
 
 /**
+ * The status a page on the shared documents template is saved with: private, whatever it is given.
+ * The page is never shown, and a draft, what a page created over REST is unless it says otherwise,
+ * would not be read. The trash and an auto-draft keep theirs, and so does every other page.
+ */
+function tuleva_shared_documents_page_status(string $template, string $status): string
+{
+    return $template === TULEVA_SHARED_DOCUMENTS_TEMPLATE && in_array($status, ['draft', 'pending', 'future', 'publish'], true)
+        ? 'private'
+        : $status;
+}
+
+/**
+ * wp_insert_post_data: a save from wp-admin or code carries the template, or the page has one.
+ */
+function tuleva_shared_documents_page_status_on_save(array $data, array $postarr): array
+{
+    if (($data['post_type'] ?? '') !== 'page') {
+        return $data;
+    }
+
+    $template = is_string($postarr['page_template'] ?? null) && $postarr['page_template'] !== ''
+        ? $postarr['page_template']
+        : (empty($postarr['ID']) ? '' : (string) get_page_template_slug((int) $postarr['ID']));
+    $data['post_status'] = tuleva_shared_documents_page_status($template, (string) ($data['post_status'] ?? ''));
+
+    return $data;
+}
+
+/**
+ * rest_pre_insert_page: over REST WordPress sets the template only after the page is saved, so the
+ * request says which it will be.
+ *
+ * @param object $post the page as the request prepares it
+ * @param WP_REST_Request|array $request
+ */
+function tuleva_shared_documents_page_status_over_rest(object $post, $request): object
+{
+    $page = (int) ($post->ID ?? 0);
+    $template = isset($request['template'])
+        ? (string) $request['template']
+        : ($page ? (string) get_page_template_slug($page) : '');
+    $status = $post->post_status ?? ($page ? (string) get_post_status($page) : 'draft');
+    $saved = tuleva_shared_documents_page_status($template, $status);
+
+    if ($saved !== $status) {
+        $post->post_status = $saved;
+    }
+
+    return $post;
+}
+
+add_filter('wp_insert_post_data', 'tuleva_shared_documents_page_status_on_save', 10, 2);
+add_filter('rest_pre_insert_page', 'tuleva_shared_documents_page_status_over_rest', 10, 2);
+
+/**
  * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
- * Either way they show the URLs in the theme and nothing on them says so: of several pages on the
- * template only the oldest is read, and a page left in draft (what a page created over REST is
- * unless it says otherwise) is not read at all. No page yet is not a problem: the URLs are meant.
+ * Of several pages on the template only the oldest is read, so the fund pages show the URLs in
+ * the theme or another page's and nothing on them says so. No page yet is not a problem: the URLs
+ * are meant.
  */
 function tuleva_shared_documents_page_problem(): string
 {
@@ -560,14 +615,6 @@ function tuleva_shared_documents_page_problem(): string
             count($pages),
             implode(', ', $pages),
             $read
-        );
-    }
-
-    if ($pages !== [] && $read === null) {
-        return sprintf(
-            'The Fund shared documents page (%d) has the status %s, so the fund pages do not read it and show the URLs in the theme. Make it Private.',
-            $pages[0],
-            get_post_status($pages[0])
         );
     }
 
