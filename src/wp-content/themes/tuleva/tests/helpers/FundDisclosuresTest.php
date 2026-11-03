@@ -1469,6 +1469,10 @@ final class FundDisclosuresTest extends TestCase
         $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
         $this->assertStringNotContainsString('effective from 01.09.2026', $html);
         $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame(
+            ['nav_procedure_upcoming_file' => '', 'nav_procedure_file' => 602],
+            FakeFundPage::$stored[self::SHARED_PAGE]
+        );
     }
 
     /**
@@ -1490,6 +1494,10 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$today = '2027-03-01';
         $this->assertStringContainsString('NAV-sisekord-kehtib-alates-01.03.2027.pdf', $this->renderFundPage('page_fund-stocks.php'));
         tuleva_promote_due_documents(FakeFundPage::$today);
+        $this->assertSame(
+            ['nav_procedure_upcoming_file' => '', 'nav_procedure_file' => 602],
+            FakeFundPage::$stored[self::SHARED_PAGE]
+        );
 
         FakeFundPage::$stored[self::SHARED_PAGE]['nav_procedure_upcoming_file'] = 603;
         $this->showStoredFields(self::SHARED_PAGE);
