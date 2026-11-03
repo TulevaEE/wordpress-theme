@@ -65,7 +65,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'tabs'          => 'visual',
 				'toolbar'       => 'basic',
 				'media_upload'  => 0,
-				'default_value' => '<p>Tee avaldus enne 30. novembrit ära. Siis hakkab suurem tükike palgast sinu II sambasse liikuma juba uuest aastast. Kui tähtaeg mööda lasta, saad uue võimaluse suuremat maksuvõitu kasutada alles aasta pärast.</p><p>Avalduse tegemine võtab paar minutit. Tee see kohe ära ja siis tunne õigustatult uhkust. Oled teinud oma tuleviku heaks midagi, mis töötab edasi iseenesest, iga kuu, märkamatult.</p>',
+				'default_value' => '<p>Kui teed avalduse enne novembri lõppu, hakkab suurem tükike palgast sinu II sambasse liikuma juba uuest aastast. Kui tähtaeg mööda lasta, saad uue võimaluse alles aasta pärast.</p><p>Avalduse tegemine võtab paar minutit. Kui oled selle ära teinud, tunne õigustatult uhkust. Oled teinud oma tuleviku heaks midagi, mis töötab sinu kasuks edaspidi iseenesest.</p>',
 			),
 		),
 		'location' => array(
