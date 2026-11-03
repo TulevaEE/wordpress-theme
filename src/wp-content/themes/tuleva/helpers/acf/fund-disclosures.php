@@ -386,7 +386,9 @@ function tuleva_fund_pages_on(string $template): array
  * A page whose current field is empty is left alone: what it shows comes from a template URL
  * this job cannot see, so comparing against nothing could promote a document older than the
  * one on the page. The upcoming field is emptied only once the current field reads back as the
- * promoted document, so a write that did not land is tried again the next hour.
+ * promoted document, so a write that did not land is tried again the next hour, and only while
+ * it still holds the document the job read: one saved there meanwhile is the next upcoming
+ * document and stays.
  *
  * @return list<array{post: int, field: string}> the documents promoted
  */
@@ -405,7 +407,7 @@ function tuleva_promote_due_documents(?string $today = null): array
                     continue;
                 }
 
-                $upcoming_id = (int) get_field($upcoming, $page, false);
+                $upcoming_id = (int) tuleva_disclosure_stored_id_now($upcoming, $page);
                 $upcoming_url = $upcoming_id > 0 ? (string) wp_get_attachment_url($upcoming_id) : '';
 
                 if ($upcoming_url === '') {
@@ -435,12 +437,31 @@ function tuleva_promote_due_documents(?string $today = null): array
                     $promoted[] = ['post' => $page, 'field' => $current];
                 }
 
+                if ((int) tuleva_disclosure_stored_id_now($upcoming, $page) !== $upcoming_id) {
+                    continue;
+                }
+
                 update_field(tuleva_fund_disclosure_field($upcoming, $template)['key'], '', $page);
             }
         }
     }
 
     return $promoted;
+}
+
+/**
+ * A field's stored value as the database holds it now. WordPress caches a page's meta, and ACF
+ * each value, on the first read in a request; another request's save since then would not show.
+ */
+function tuleva_disclosure_stored_id_now(string $name, int $page)
+{
+    wp_cache_delete($page, 'post_meta');
+
+    if (function_exists('acf_flush_value_cache')) {
+        acf_flush_value_cache($page, $name);
+    }
+
+    return get_field($name, $page, false);
 }
 
 // Hourly, so the fields follow the page within an hour of midnight.

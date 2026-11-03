@@ -92,7 +92,8 @@ the upcoming document was set. An upcoming document no newer than the current on
 a template fallback that outlived its field, is dropped instead of promoted, and the job
 empties its field. The job leaves a page whose current field is empty (a template URL it cannot
 see is what shows), so the pension pages' fields move only once they are filled; and it empties
-an upcoming field only after the current field reads back as the promoted document.
+an upcoming field only after the current field reads back as the promoted document, and only
+while it still holds the document the job read (one saved there meanwhile stays).
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in
