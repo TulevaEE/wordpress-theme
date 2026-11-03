@@ -9,11 +9,11 @@
  * change goes through the gateway. A direct post-meta write (WP-CLI, WPML's copy to a
  * translation) is not logged; nothing reads a translation's copy.
  *
- * Who may write is decided by the writer, whatever the route: WP-Cron, an Administrator, or
- * over REST an account with the Fund document writer role that signs with an application
- * password. Those accounts are agent-gateway's and the ones the reports' Apps Script and
- * onboarding-service publish the investment report as. An editor's own session or own
- * application password is refused over REST as in wp-admin.
+ * Who may write is decided by the writer, whatever the route: an Administrator, WP-Cron with
+ * nobody logged in, or over REST an account with the Fund document writer role that signs
+ * with an application password. Those accounts are agent-gateway's and the ones the reports'
+ * Apps Script and onboarding-service publish the investment report as. Anyone else is
+ * refused on every route; a REST request is answered 403 before anything in it is saved.
  *
  * See "TODO — Fund page document publishing", step 11, in the tuleva repo.
  */
@@ -109,8 +109,7 @@ function tuleva_disclosure_write_route(): string
         return 'cron';
     }
 
-    // wp_is_serving_rest_request() is the same check, from WordPress 6.5 on.
-    if (function_exists('wp_is_serving_rest_request') ? wp_is_serving_rest_request() : (defined('REST_REQUEST') && REST_REQUEST)) {
+    if (defined('REST_REQUEST') && REST_REQUEST) {
         return 'rest';
     }
 
@@ -120,16 +119,21 @@ function tuleva_disclosure_write_route(): string
 /**
  * Whether the writer may change a disclosure field. Decided by who is writing, not by the
  * route, since an editor's logged-in session reaches REST with the wp-admin nonce and any
- * user can add an application password to their own profile. So: WP-Cron (the
- * upcoming-document switch), an Administrator, or an account holding
- * TULEVA_DISCLOSURE_WRITER that signed this REST request with one of its application
- * passwords; a browser logged in as that account is not the service that writes as it.
- * Anyone else is refused.
+ * user can add an application password to their own profile. So: an Administrator; WP-Cron
+ * with nobody logged in, which is how the upcoming-document switch runs (a cron run inside
+ * someone's session, ALTERNATE_WP_CRON or `wp cron event run --user=…`, is theirs); or an
+ * account holding TULEVA_DISCLOSURE_WRITER that signed this REST request with one of its
+ * application passwords, since a browser logged in as that account is not the service that
+ * writes as it. Anyone else is refused.
  */
 function tuleva_disclosure_may_write(string $route): bool
 {
-    if ($route === 'cron' || current_user_can('manage_options')) {
+    if (current_user_can('manage_options')) {
         return true;
+    }
+
+    if ($route === 'cron') {
+        return !wp_get_current_user()->exists();
     }
 
     return $route === 'rest'
@@ -139,14 +143,91 @@ function tuleva_disclosure_may_write(string $route): bool
 }
 
 /**
- * Logs a change to a disclosure field, and refuses one from a writer who may not make it
- * (tuleva_disclosure_may_write): the stored value is kept and nothing is logged. ACF still
- * answers a REST write with 200, so the writer's read-back is what shows the refusal.
+ * The meta key an ACF field's value is stored under. A sub-field's `_name` is only its short
+ * name.
+ */
+function tuleva_disclosure_meta_key($field): string
+{
+    return is_array($field) ? (string) ($field['name'] ?? '') : '';
+}
+
+/**
+ * The disclosure a REST `acf` key names, by the field's name or by its ACF key, which ACF
+ * takes as well; '' for any other field.
+ */
+function tuleva_disclosure_named(string $selector): string
+{
+    if (tuleva_is_disclosure($selector)) {
+        return $selector;
+    }
+
+    foreach (tuleva_fund_disclosure_scope() as $template => $names) {
+        foreach (array_keys($names) as $name) {
+            if (tuleva_fund_disclosure_field($name, $template)['key'] === $selector) {
+                return $name;
+            }
+        }
+    }
+
+    return '';
+}
+
+/**
+ * Answers a REST write that sets a disclosure field its writer may not set with 403, before
+ * anything in it is saved. Left to ACF, the old value would be kept and the request answered
+ * 200, and an unattended writer would record a success. This runs before the route's own
+ * permission check, and once for each request of a batch.
+ */
+function tuleva_disclosure_rest_guard($response, $handler, $request)
+{
+    if (is_wp_error($response) || !in_array($request->get_method(), ['POST', 'PUT', 'PATCH'], true)) {
+        return $response;
+    }
+
+    $fields = $request->get_param('acf');
+    $named = is_array($fields) ? array_filter(array_map('tuleva_disclosure_named', array_map('strval', array_keys($fields)))) : [];
+
+    if ($named === [] || tuleva_disclosure_may_write('rest')) {
+        return $response;
+    }
+
+    return new WP_Error(
+        'tuleva_fund_document_locked',
+        'Only an Administrator, or an account with the Fund document writer role signing with an'
+            . ' application password, may set these fund document fields: '
+            . implode(', ', array_unique($named)),
+        ['status' => 403]
+    );
+}
+
+add_filter('rest_request_before_callbacks', 'tuleva_disclosure_rest_guard', 10, 3);
+
+/**
+ * Stops ACF before it does anything with a disclosure value from a writer who may not set it
+ * (tuleva_disclosure_may_write): returning anything but null here skips the field type's own
+ * update_value, which would attach a posted document to the page, and the meta write, which
+ * would leave a row behind. A REST request has been answered 403 by then; this covers
+ * wp-admin, WP-Cron and anything else that writes through ACF.
+ */
+function tuleva_disclosure_pre_update($check, $value, $post_id, $field)
+{
+    if ($check !== null || !is_numeric($post_id) || !tuleva_is_disclosure(tuleva_disclosure_meta_key($field))) {
+        return $check;
+    }
+
+    return tuleva_disclosure_may_write(tuleva_disclosure_write_route()) ? null : false;
+}
+
+add_filter('acf/pre_update_value', 'tuleva_disclosure_pre_update', 10, 4);
+
+/**
+ * Logs a change to a disclosure field. A refused write stops at tuleva_disclosure_pre_update;
+ * should one get here anyway, the stored value is kept, and null has ACF delete rather than
+ * write where nothing was stored, so no empty row is left.
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
-    // `name` is the meta key the value is stored under; a sub-field's `_name` is only its short name.
-    $name = is_array($field) ? (string) ($field['name'] ?? '') : '';
+    $name = tuleva_disclosure_meta_key($field);
 
     if (!is_numeric($post_id) || !tuleva_is_disclosure($name)) {
         return $value;
@@ -156,7 +237,7 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     $route = tuleva_disclosure_write_route();
 
     if (!tuleva_disclosure_may_write($route)) {
-        return $before;
+        return $before === '' ? null : $before;
     }
 
     tuleva_disclosure_log((int) $post_id, $name, $before, $value, $route);
@@ -164,6 +245,9 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     return $value;
 }
 
+/**
+ * Every write tuleva_disclosure_may_write lets through without a user is WP-Cron's.
+ */
 function tuleva_disclosure_log(int $post_id, string $name, $before, $after, string $route): void
 {
     $user = wp_get_current_user();
@@ -171,7 +255,7 @@ function tuleva_disclosure_log(int $post_id, string $name, $before, $after, stri
         $name,
         $before,
         $after,
-        $user->exists() ? $user->user_login : ($route === 'cron' ? 'WP-Cron' : 'unknown'),
+        $user->exists() ? $user->user_login : 'WP-Cron',
         $route,
         gmdate('Y-m-d\TH:i:s\Z'),
         'wp_get_attachment_url'
@@ -185,28 +269,54 @@ function tuleva_disclosure_log(int $post_id, string $name, $before, $after, stri
 add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
 
 /**
- * The role for the accounts that write the fields over REST: an Editor's capabilities and
- * TULEVA_DISCLOSURE_WRITER, so moving an account onto it takes nothing away. An
- * Administrator gives it to an account under Users in wp-admin. add_role stores the role in
- * the options table, so it is added once, from Editor as it stands then, and left alone after.
+ * What the REST writers' calls need and no more: read pages and media, upload a PDF
+ * (onboarding-service, the reports' Apps Script), update a published page someone else wrote
+ * (all of them, agent-gateway too), and TULEVA_DISCLOSURE_WRITER.
+ */
+function tuleva_disclosure_writer_capabilities(): array
+{
+    return [
+        'read' => true,
+        'upload_files' => true,
+        'edit_pages' => true,
+        'edit_others_pages' => true,
+        'edit_published_pages' => true,
+        TULEVA_DISCLOSURE_WRITER => true,
+    ];
+}
+
+/**
+ * The role for the accounts that write the fields over REST. An Administrator gives it to an
+ * account under Users in wp-admin. add_role stores a role in the options table, so it is
+ * checked on every request and written only when it is missing or holds other capabilities
+ * than these: one added or taken away elsewhere is put back, and changing what the role may
+ * do is a change here.
  */
 function tuleva_register_disclosure_writer_role(): void
 {
-    if (get_role('fund_document_writer') === null) {
-        $editor = get_role('editor');
-        add_role(
-            'fund_document_writer',
-            'Fund document writer',
-            [TULEVA_DISCLOSURE_WRITER => true] + ($editor === null ? [] : $editor->capabilities)
-        );
+    $capabilities = tuleva_disclosure_writer_capabilities();
+    $role = get_role('fund_document_writer');
+
+    if ($role === null) {
+        add_role('fund_document_writer', 'Fund document writer', $capabilities);
+
+        return;
+    }
+
+    foreach (array_keys(array_diff_key($role->capabilities, $capabilities)) as $capability) {
+        $role->remove_cap($capability);
+    }
+
+    foreach (array_keys(array_diff_assoc($capabilities, $role->capabilities)) as $capability) {
+        $role->add_cap($capability);
     }
 }
 
 add_action('init', 'tuleva_register_disclosure_writer_role');
 
 /**
- * Hides a disclosure field from a wp-admin user who may not change it there. Its value is
- * in the Documents box under the fields.
+ * Hides a disclosure field from a wp-admin user who may not change it there
+ * (tuleva_disclosure_may_write). Its value is in the Documents box under the fields.
  */
 function tuleva_disclosure_prepare_field($field)
 {
@@ -216,7 +326,7 @@ function tuleva_disclosure_prepare_field($field)
         return $field;
     }
 
-    return current_user_can('manage_options') ? $field : false;
+    return tuleva_disclosure_may_write(tuleva_disclosure_write_route()) ? $field : false;
 }
 
 add_filter('acf/prepare_field', 'tuleva_disclosure_prepare_field');
@@ -237,8 +347,8 @@ add_filter('is_protected_meta', 'tuleva_disclosure_is_protected_meta', 10, 3);
  * Restoring a revision copies its fields straight into post meta, past acf/update_value,
  * and a revision holds the values of the last wp-admin save, not those written since over
  * REST or by WP-Cron. So the disclosures are read before ACF's restore (priority 10) and
- * compared after it: a user who may not change one in wp-admin gets it put back, anyone
- * else's change is logged.
+ * compared after it: a writer who may not change one (tuleva_disclosure_may_write) gets it
+ * put back, anyone else's change is logged.
  */
 function tuleva_disclosures_before_restore($post_id): void
 {
@@ -251,7 +361,7 @@ function tuleva_disclosures_before_restore($post_id): void
 function tuleva_disclosures_after_restore($post_id): void
 {
     $post_id = (int) $post_id;
-    $is_administrator = current_user_can('manage_options');
+    $may_write = tuleva_disclosure_may_write(tuleva_disclosure_write_route());
     $held = &tuleva_disclosures_held_over_restore();
 
     foreach ($held[$post_id] ?? [] as $name => $before) {
@@ -261,7 +371,7 @@ function tuleva_disclosures_after_restore($post_id): void
             continue;
         }
 
-        if ($is_administrator) {
+        if ($may_write) {
             tuleva_disclosure_log($post_id, $name, $before, $after, 'revision');
         } else {
             update_post_meta($post_id, $name, $before);
@@ -343,7 +453,7 @@ add_action('add_meta_boxes_page', function ($post): void {
     add_meta_box('tuleva-disclosures', 'Documents', function ($post) use ($template): void {
         $locked = [];
 
-        if (!current_user_can('manage_options')) {
+        if (!tuleva_disclosure_may_write(tuleva_disclosure_write_route())) {
             foreach (array_keys(tuleva_fund_disclosure_scope()[$template]) as $name) {
                 $locked[$name] = tuleva_disclosure_stored_value($name, $post->ID);
             }

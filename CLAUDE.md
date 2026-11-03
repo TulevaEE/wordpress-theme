@@ -71,21 +71,42 @@ form cannot reach them (`is_protected_meta`). That includes
 publishes is decided there.
 
 **Who may write is decided by the account, not the route.** A write to a document field is
-taken from WP-Cron, from an Administrator, and over REST from an account with the *Fund
-document writer* role (capability `tuleva_write_fund_documents`) that signs the request with
-an application password. Anyone else's is dropped, over REST as in wp-admin, whether from a
-logged-in session or the user's own application password; ACF still answers 200, so only the
-read-back shows it. The role is an Editor's capabilities plus that one. Give it only to the
-accounts agent-gateway, onboarding-service and the reports' Apps Script write as: Users → the
-account → Role.
+taken from an Administrator, from WP-Cron with nobody logged in (the upcoming-document
+switch), and over REST from an account holding the capability `tuleva_write_fund_documents`
+that signs the request with an application password. Anyone else's is refused on every
+route, whether from a logged-in session or the user's own application password. Over REST
+the whole request is answered **403** `tuleva_fund_document_locked`, naming the fields, and
+nothing in it is saved; in wp-admin the value is not taken.
+
+The capability comes with the *Fund document writer* role, which may read, upload media and
+update pages and nothing else; the theme puts the role back the way it is defined here on
+every request. Give it only to the accounts agent-gateway, onboarding-service and the
+reports' Apps Script write as. Each account's *Application Passwords* list on its profile
+shows when it was last used, which tells them apart.
+
+**Giving an account the capability**, and the order to do it in when this lock first
+deploys (a push to `master` deploys it):
+
+1. Before the deploy, if WP-CLI is available on the server:
+   `wp user add-cap <login> tuleva_write_fund_documents` for each account. A capability is
+   only a name, so this works before the theme knows it, and the account keeps its role.
+2. After the deploy, in wp-admin → Users → the account → Role, choose *Fund document writer*
+   (the role exists from the first request after the deploy). That takes away everything
+   else the account could do as an Editor. Without WP-CLI this is the only step, and from
+   the deploy until it is done each of those accounts' writes is answered 403.
+
+If nobody does either, every `fund_pages` write and every monthly investment report
+publication is answered 403 and changes nothing on the pages: the gateway reports the
+request as refused, onboarding-service's publishing fails, and the Apps Script lists the
+funds as failed. The pages keep the documents they had.
 
 **Every write through ACF is logged** on the page (wp-admin, REST, WP-Cron), and so is a
 revision restore: who, when, how, and the value before and after, a document with its URL.
 The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
 post-meta write (WP-CLI, WPML's copy to a translation) is not logged.
 
-**Over the REST API:** only as an account with the *Fund document writer* role, or an
-Administrator; an Editor's write is dropped.
+**Over the REST API:** only as an account holding `tuleva_write_fund_documents`, or an
+Administrator; an Editor's write is answered 403.
 
 ```bash
 # 1. upload the PDF (writes upload_results.json with the attachment IDs)
@@ -106,8 +127,10 @@ uploads as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`.
 `…alates-DD.MM.YYYY` out of the filename to label the row.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
-under `acf`, and the public page should show it. An `acf` key that is missing or empty in
-the response means the write did not land — ACF returns 200 either way.
+under `acf`, and the public page should show it. A 403 `tuleva_fund_document_locked` means
+the account may not set those fields and nothing was saved. An `acf` key that is missing or
+empty in a 200 response means the write did not land: ACF answers 200 when it drops a field
+it does not expose over REST.
 
 Required credentials, never hardcoded:
 
