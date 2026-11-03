@@ -1116,12 +1116,12 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The pension pages' current documents are template URLs until their fields are filled. The
-     * job cannot see those, so an upcoming field that reads as older than the page's current
-     * document must not be promoted over it.
+     * A filled field beats a template URL whatever the dates, so the job need not see the template
+     * URL a page with an empty current field shows: a due upcoming field is the current document
+     * there too. These terms are older than TUK75's template URL (31.08.2026) and still move.
      */
     #[Test]
-    public function the_hourly_job_leaves_a_page_whose_current_field_is_empty(): void
+    public function the_hourly_job_moves_a_due_upcoming_field_into_an_empty_current_field(): void
     {
         FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
         FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
@@ -1129,8 +1129,67 @@ final class FundDisclosuresTest extends TestCase
             204 => 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf',
         ];
 
-        $this->assertSame([], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([], tuleva_promote_due_documents('2026-06-30'));
         $this->assertSame([], FakeFundPage::$updates);
+
+        $this->assertSame([['post' => 17533, 'field' => 'terms_file']], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([
+            ['field_fund_disclosure_stocks_terms_file', 204, 17533],
+            ['field_fund_disclosure_stocks_terms_upcoming_file', '', 17533],
+        ], FakeFundPage::$updates);
+    }
+
+    /**
+     * What the job writes is what the page already showed, so the page does not change when it runs.
+     */
+    #[Test]
+    public function a_page_shows_the_same_before_and_after_the_job_fills_its_empty_current_field(): void
+    {
+        $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf';
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
+        FakeAttachments::$urls = [204 => $upcoming];
+        FakeFundPage::$fields['terms_upcoming_file'] = $upcoming;
+
+        $before = $this->renderFundPage('page_fund-stocks.php');
+        tuleva_promote_due_documents(FakeFundPage::TODAY);
+        FakeFundPage::$fields = array_map(fn($id) => FakeAttachments::$urls[$id] ?? '', FakeFundPage::$stored[17533]);
+        $after = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertSame(['terms_upcoming_file' => '', 'terms_file' => $upcoming], FakeFundPage::$fields);
+        $this->assertStringContainsString($upcoming, $before);
+        $this->assertSame($before, $after);
+    }
+
+    /**
+     * Every template's current URL gives way to a due upcoming field, even one dated before it.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_due_upcoming_field_replaces_the_template_s_current_url_whatever_its_date(string $template): void
+    {
+        FakeFundPage::$fields['terms_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/06/tingimused-kehtivad-alates-01.07.2026.pdf';
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('2026/06/tingimused-kehtivad-alates-01.07.2026.pdf', $html);
+        $this->assertStringNotContainsString('tingimused-kehtivad-alates-31.08.2026.pdf', $html);
+        $this->assertStringNotContainsString('ingimused-kehtivad-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from 01.07.2026', $html);
+    }
+
+    #[Test]
+    public function the_savings_page_s_upcoming_nav_procedure_field_replaces_its_template_url_whatever_its_date(): void
+    {
+        FakeFundPage::$fields['nav_procedure_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/08/TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from', $html);
     }
 
     #[Test]

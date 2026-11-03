@@ -22,9 +22,9 @@ $prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url()
 $terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
 $prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file');
 $terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file');
-// From its effective date an upcoming document is the current one (tuleva_document_versions()).
-[$prospectus_url, $prospectus_upcoming_url] = tuleva_document_versions($prospectus_url, $prospectus_upcoming_url);
-[$terms_url, $terms_upcoming_url] = tuleva_document_versions($terms_url, $terms_upcoming_url);
+// From its effective date an upcoming document is the current one (tuleva_fund_document_versions()).
+[$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document_versions('prospectus_file', $prospectus_url, $prospectus_upcoming_url);
+[$terms_url, $terms_upcoming_url] = tuleva_fund_document_versions('terms_file', $terms_url, $terms_upcoming_url);
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 // One suffix can only state one date. The prospectus and the terms are approved
@@ -41,7 +41,7 @@ $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 // TKF100 has its own NAV procedure document, separate from the one the pension funds share.
 $nav_procedure_url = tuleva_fund_disclosure_value('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
 $nav_procedure_upcoming_url = tuleva_fund_disclosure_value('nav_procedure_upcoming_file');
-[$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_document_versions($nav_procedure_url, $nav_procedure_upcoming_url);
+[$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_fund_document_versions('nav_procedure_file', $nav_procedure_url, $nav_procedure_upcoming_url);
 $nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
 $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 ?>
