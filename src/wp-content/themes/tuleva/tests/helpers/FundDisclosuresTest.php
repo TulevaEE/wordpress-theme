@@ -1235,27 +1235,89 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A template's upcoming URL is the document after the template's current URL, so it says
-     * nothing about a document an editor has set. Only the upcoming field can replace that one.
+     * The template's two URLs switch between themselves by date, and the fields go over the
+     * result: a filled field beats a template URL, except that a template URL dated after the
+     * current field's document is still the next one, a switch the template has scheduled.
      */
     #[Test]
-    public function a_template_upcoming_document_applies_only_while_the_current_field_is_empty(): void
+    public function the_fields_go_over_the_template_s_own_switch(): void
+    {
+        $template_current = 'https://tuleva.ee/t/Prospekt-kehtib-alates-02.03.2026.pdf';
+        $template_upcoming = 'https://tuleva.ee/t/Prospekt-kehtib-alates-01.01.2027.pdf';
+        $later = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.07.2027.pdf';
+        $in_force = 'https://tuleva.ee/f/Prospekt-kehtib-alates-31.08.2026.pdf';
+        $undated = 'https://tuleva.ee/f/Prospekt-uus.pdf';
+        $page = fn(string $current, string $upcoming, string $today)
+            => tuleva_document_versions_on_page($current, $upcoming, $template_current, $template_upcoming, $today);
+
+        $this->assertSame([$template_current, $template_upcoming], $page('', '', '2026-12-31'));
+        $this->assertSame([$template_upcoming, ''], $page('', '', '2027-01-01'));
+
+        $this->assertSame([$template_current, $later], $page('', $later, '2026-12-31'));
+        $this->assertSame([$template_upcoming, $later], $page('', $later, '2027-02-01'));
+
+        $this->assertSame([$in_force, $template_upcoming], $page($in_force, '', '2026-12-31'));
+        $this->assertSame([$template_upcoming, ''], $page($in_force, '', '2027-01-01'));
+        $this->assertSame([$in_force, $later], $page($in_force, $later, '2026-12-31'));
+
+        $this->assertSame([$undated, ''], $page($undated, '', '2027-01-01'));
+        $this->assertSame([$later, ''], $page($later, '', '2027-08-01'));
+    }
+
+    /**
+     * From 01.01.2027 TUK75's template prospectus of that date is the one in force. A later
+     * upcoming prospectus set in the field must not put the 02.03.2026 one back.
+     */
+    #[Test]
+    public function the_template_s_document_in_force_stays_beside_a_future_upcoming_field(): void
+    {
+        FakeFundPage::$today = '2027-02-01';
+        FakeFundPage::$fields['prospectus_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2027/01/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.07.2027.pdf';
+
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf', $html);
+        $this->assertStringNotContainsString('Prospekt-kehtib-alates-02.03.2026.pdf', $html);
+        $this->assertStringContainsString('effective from 01.07.2027', $html);
+    }
+
+    /**
+     * Filling TUK00's terms field with the terms in force, dated 31.08.2026, keeps the template's
+     * 01.01.2027 switch: the field's document is older than it.
+     */
+    #[Test]
+    public function filling_the_current_field_with_the_document_in_force_keeps_the_template_s_switch(): void
+    {
+        FakeFundPage::$fields['terms_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/11/TUK00-tingimused-kehtivad-alates-31.08.2026.pdf';
+
+        FakeFundPage::$today = '2026-12-31';
+        $before = $this->renderFundPage('page_fund-bonds.php');
+        FakeFundPage::$today = '2027-01-01';
+        $after = $this->renderFundPage('page_fund-bonds.php');
+
+        $this->assertStringContainsString('2026/11/TUK00-tingimused-kehtivad-alates-31.08.2026.pdf', $before);
+        $this->assertMatchesRegularExpression('/TUK00-tingimused-kehtivad-alates-01\.01\.2027\.pdf.*?effective from 01\.01\.2027/s', $before);
+        $this->assertStringContainsString('2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf', $after);
+        $this->assertStringNotContainsString('31.08.2026.pdf', $after);
+    }
+
+    /**
+     * Only the prospectus, the terms and the NAV procedure have an upcoming version; any other
+     * document resolves on its own, and one outside the fund's scope to nothing.
+     */
+    #[Test]
+    public function a_document_with_no_upcoming_version_resolves_on_its_own(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
-        $fallback = 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf';
-
-        $this->assertSame($fallback, tuleva_fund_disclosure_value('prospectus_upcoming_file', $fallback));
-
-        FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/wp-content/uploads/2026/11/Prospekt-uus.pdf';
-
-        $this->assertSame('', tuleva_fund_disclosure_value('prospectus_upcoming_file', $fallback));
-
-        FakeFundPage::$fields['prospectus_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2027/06/Prospekt-kehtib-alates-01.07.2027.pdf';
 
         $this->assertSame(
-            'https://tuleva.ee/wp-content/uploads/2027/06/Prospekt-kehtib-alates-01.07.2027.pdf',
-            tuleva_fund_disclosure_value('prospectus_upcoming_file', $fallback)
+            ['https://tuleva.ee/kid.pdf', ''],
+            tuleva_fund_document('key_investor_info_file', 'https://tuleva.ee/kid.pdf', 'https://tuleva.ee/kid-next.pdf')
         );
+        $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file', 'https://tuleva.ee/rights.pdf'));
+        $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file', 'https://tuleva.ee/nav.pdf'));
     }
 
     /**

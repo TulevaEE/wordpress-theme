@@ -88,16 +88,19 @@ From the date in its filename an upcoming prospectus, terms or NAV procedure ren
 current document and its upcoming row goes (`tuleva_document_versions()`); an hourly WP-Cron
 job then moves it into the current field and empties the upcoming one
 (`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
-the upcoming document was set. A filled field beats a template URL whatever the dates: an
-upcoming field takes over from the template's current URL on its date even if that URL is newer,
-and the job then moves it into the empty current field, so the page does not change when it runs.
-Put only a document not yet in force into an upcoming field. A template's upcoming URL applies
-only while the current field is empty, so filling a pension page's current field before its
-01.01.2027 switch takes the template's upcoming row with it unless the upcoming field is filled
-too. Between two fields, an upcoming document no newer than the current one is dropped instead of
-promoted, and the job empties its field. The job empties an upcoming field only after the current
-field reads back as the promoted document, and only while it still holds the document the job
-read (one saved there meanwhile stays).
+the upcoming document was set. The fields go over the template's URLs (`tuleva_fund_document()`),
+and a filled field beats a template URL whatever the dates: an upcoming field takes over on its
+date from the template's document even if that one is newer, and the job then moves it into the
+empty current field, so the page does not change when it runs. That includes a date already
+past: an upcoming field holding a document older than the one on the page replaces it at once and
+is promoted within the hour. Put only a document not yet in force into an upcoming field. The one
+exception keeps a switch the template has scheduled: its upcoming URL (TUK75's and TUK00's
+01.01.2027 prospectus and terms) still takes over on its date from a current field dated before
+it, so filling a current field with the document in force keeps the switch. An undated current
+field, or one dated on or after it, cancels it. Between two fields, an upcoming document no newer
+than the current one is dropped instead of promoted, and the job empties its field. The job
+empties an upcoming field only after the current field reads back as the promoted document, and
+only while it still holds the document the job read (one saved there meanwhile stays).
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in
