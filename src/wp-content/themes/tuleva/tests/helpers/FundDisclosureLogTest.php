@@ -5,14 +5,17 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
- * Stands in for the request a write to a disclosure field arrives in: who is logged in,
- * which screen or route, and the page's post meta.
+ * Stands in for the request a write to a disclosure field arrives in: who is logged in, what
+ * they may do, which screen or route, how a REST request was signed, and the page's post meta.
  */
 final class FakeDisclosureWrite
 {
     public static bool $in_admin = false;
     public static bool $in_cron = false;
+    public static bool $in_rest = false;
     public static bool $administrator = false;
+    public static bool $writer = false;
+    public static ?string $application_password = null;
     public static string $login = '';
 
     /** @var array<int, array<string, list<mixed>>> */
@@ -22,9 +25,23 @@ final class FakeDisclosureWrite
     {
         self::$in_admin = false;
         self::$in_cron = false;
+        self::$in_rest = false;
         self::$administrator = false;
+        self::$writer = false;
+        self::$application_password = null;
         self::$login = '';
         self::$meta = [];
+    }
+
+    /**
+     * An account with the writer role, signing a REST request with its application password.
+     */
+    public static function writerOverRest(string $login): void
+    {
+        self::$in_rest = true;
+        self::$writer = true;
+        self::$application_password = 'a-uuid';
+        self::$login = $login;
     }
 }
 
@@ -84,10 +101,28 @@ if (!function_exists('wp_doing_cron')) {
     }
 }
 
+if (!function_exists('wp_is_serving_rest_request')) {
+    function wp_is_serving_rest_request()
+    {
+        return FakeDisclosureWrite::$in_rest;
+    }
+}
+
+if (!function_exists('rest_get_authenticated_app_password')) {
+    function rest_get_authenticated_app_password()
+    {
+        return FakeDisclosureWrite::$application_password;
+    }
+}
+
 if (!function_exists('current_user_can')) {
     function current_user_can($capability, ...$args)
     {
-        return $capability === 'manage_options' && FakeDisclosureWrite::$administrator;
+        return match ($capability) {
+            'manage_options' => FakeDisclosureWrite::$administrator,
+            TULEVA_DISCLOSURE_WRITER => FakeDisclosureWrite::$writer,
+            default => false,
+        };
     }
 }
 
@@ -126,6 +161,7 @@ if (!function_exists('add_post_meta')) {
 }
 
 require_once __DIR__ . '/../support/FakeAttachments.php';
+require_once __DIR__ . '/../support/FakeRoles.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosure-log.php';
 
@@ -137,6 +173,7 @@ final class FundDisclosureLogTest extends TestCase
     {
         FakeDisclosureWrite::reset();
         FakeAttachments::reset();
+        FakeRoles::reset();
     }
 
     #[Test]
@@ -224,18 +261,135 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     #[Test]
-    public function the_report_job_s_write_outside_wp_admin_is_taken_and_logged(): void
+    public function the_report_job_s_write_over_rest_is_taken_and_logged(): void
     {
-        FakeDisclosureWrite::$login = 'reports';
+        FakeDisclosureWrite::writerOverRest('reports');
         FakeAttachments::$urls[301] = 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf';
 
         $written = tuleva_disclosure_on_update(301, self::PAGE, ['name' => 'investment_report_file']);
 
         $this->assertSame(301, $written);
         $this->assertSame(
-            ['reports', '', '301', 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf'],
-            $this->onlyEntry(['who', 'before', 'after', 'after_url'])
+            ['reports', 'rest', '', '301', 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf'],
+            $this->onlyEntry(['who', 'route', 'before', 'after', 'after_url'])
         );
+    }
+
+    /**
+     * The lock follows the writer, not the route: an editor's logged-in session can send the
+     * same POST to /wp-json/wp/v2/pages with the wp-admin nonce, and it is refused as the edit
+     * screen refuses it.
+     */
+    #[Test]
+    public function an_editor_s_own_session_cannot_change_a_document_over_rest(): void
+    {
+        FakeDisclosureWrite::$in_rest = true;
+        FakeDisclosureWrite::$login = 'an-editor';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $kept = tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']);
+
+        $this->assertSame('101', $kept);
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    /**
+     * Any user can add an application password to their own profile, so signing with one is
+     * not enough: the account has to hold the writer capability too.
+     */
+    #[Test]
+    public function an_editor_s_own_application_password_does_not_open_the_fields_either(): void
+    {
+        FakeDisclosureWrite::writerOverRest('an-editor');
+        FakeDisclosureWrite::$writer = false;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->assertSame('101', tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    /**
+     * The writers are services that sign each request. A browser logged in as one of them, or
+     * a script running in that browser, is not one of them.
+     */
+    #[Test]
+    public function a_writer_account_s_logged_in_session_is_refused_without_its_application_password(): void
+    {
+        FakeDisclosureWrite::writerOverRest('agent-gateway');
+        FakeDisclosureWrite::$application_password = null;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->assertSame('101', tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    #[Test]
+    public function a_writer_account_cannot_change_a_document_from_wp_admin(): void
+    {
+        FakeDisclosureWrite::writerOverRest('agent-gateway');
+        FakeDisclosureWrite::$in_rest = false;
+        FakeDisclosureWrite::$in_admin = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->assertSame('101', tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+    }
+
+    #[Test]
+    public function an_administrator_s_write_is_taken_from_wp_admin_and_over_rest(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$in_admin = true;
+
+        $this->assertSame(102, tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+
+        FakeDisclosureWrite::$in_admin = false;
+        FakeDisclosureWrite::$in_rest = true;
+        $this->assertSame('84.10', tuleva_disclosure_on_update('84.10', self::PAGE, ['name' => 'fund_co2_intensity']));
+
+        $this->assertSame(
+            [['wp-admin', 'prospectus_file'], ['rest', 'fund_co2_intensity']],
+            array_map(fn($entry) => [$entry['route'], $entry['field']], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG))
+        );
+    }
+
+    /**
+     * A writer nobody can name (no user, outside WP-Cron and REST: WP-CLI without --user, say)
+     * is refused rather than let through.
+     */
+    #[Test]
+    public function a_write_from_nobody_known_is_refused(): void
+    {
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->assertSame('101', tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    /**
+     * Holding the role is how an account is let write the fields; it can still do everything
+     * an Editor can, so moving an account onto it takes nothing away.
+     */
+    #[Test]
+    public function the_writer_role_is_an_editor_that_may_write_the_fields(): void
+    {
+        FakeRoles::$roles['editor'] = ['name' => 'Editor', 'capabilities' => ['edit_pages' => true, 'upload_files' => true]];
+
+        tuleva_register_disclosure_writer_role();
+
+        $this->assertSame(
+            ['name' => 'Fund document writer', 'capabilities' => [TULEVA_DISCLOSURE_WRITER => true, 'edit_pages' => true, 'upload_files' => true]],
+            FakeRoles::$roles['fund_document_writer']
+        );
+    }
+
+    #[Test]
+    public function the_writer_role_is_added_once_and_not_rewritten_on_every_request(): void
+    {
+        tuleva_register_disclosure_writer_role();
+        tuleva_register_disclosure_writer_role();
+
+        $this->assertSame(1, FakeRoles::$added);
     }
 
     /**

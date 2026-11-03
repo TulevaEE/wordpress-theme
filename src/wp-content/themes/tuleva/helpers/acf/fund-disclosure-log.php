@@ -1,6 +1,6 @@
 <?php
 /**
- * Who may change a fund page's documents in wp-admin, and a record of every change.
+ * Who may change a fund page's documents, and a record of every change.
  *
  * agent-gateway's fund_pages tool checks, approves (two people) and audits the writes it
  * makes over REST. This file covers the other routes: each write to a disclosure field
@@ -9,8 +9,11 @@
  * change goes through the gateway. A direct post-meta write (WP-CLI, WPML's copy to a
  * translation) is not logged; nothing reads a translation's copy.
  *
- * REST writes stay open to any user who may edit pages: the reports' Apps Script and
- * onboarding-service publish the investment report that way.
+ * Who may write is decided by the writer, whatever the route: WP-Cron, an Administrator, or
+ * over REST an account with the Fund document writer role that signs with an application
+ * password. Those accounts are agent-gateway's and the ones the reports' Apps Script and
+ * onboarding-service publish the investment report as. An editor's own session or own
+ * application password is refused over REST as in wp-admin.
  *
  * See "TODO — Fund page document publishing", step 11, in the tuleva repo.
  */
@@ -24,6 +27,12 @@ const TULEVA_DISCLOSURE_LOG = '_tuleva_disclosure_log';
  * How many changes the edit screen lists, newest first.
  */
 const TULEVA_DISCLOSURE_LOG_SHOWN = 50;
+
+/**
+ * The capability that lets an account other than an Administrator write a disclosure field,
+ * over REST and with an application password. The Fund document writer role carries it.
+ */
+const TULEVA_DISCLOSURE_WRITER = 'tuleva_write_fund_documents';
 
 function tuleva_is_disclosure(string $name): bool
 {
@@ -100,7 +109,8 @@ function tuleva_disclosure_write_route(): string
         return 'cron';
     }
 
-    if (defined('REST_REQUEST') && REST_REQUEST) {
+    // wp_is_serving_rest_request() is the same check, from WordPress 6.5 on.
+    if (function_exists('wp_is_serving_rest_request') ? wp_is_serving_rest_request() : (defined('REST_REQUEST') && REST_REQUEST)) {
         return 'rest';
     }
 
@@ -108,9 +118,30 @@ function tuleva_disclosure_write_route(): string
 }
 
 /**
- * Logs a change to a disclosure field, and refuses one posted from wp-admin by a user who
- * may not make it there: the field is not on that user's screen, so such a value was
- * posted by hand.
+ * Whether the writer may change a disclosure field. Decided by who is writing, not by the
+ * route, since an editor's logged-in session reaches REST with the wp-admin nonce and any
+ * user can add an application password to their own profile. So: WP-Cron (the
+ * upcoming-document switch), an Administrator, or an account holding
+ * TULEVA_DISCLOSURE_WRITER that signed this REST request with one of its application
+ * passwords; a browser logged in as that account is not the service that writes as it.
+ * Anyone else is refused.
+ */
+function tuleva_disclosure_may_write(string $route): bool
+{
+    if ($route === 'cron' || current_user_can('manage_options')) {
+        return true;
+    }
+
+    return $route === 'rest'
+        && current_user_can(TULEVA_DISCLOSURE_WRITER)
+        && function_exists('rest_get_authenticated_app_password')
+        && rest_get_authenticated_app_password() !== null;
+}
+
+/**
+ * Logs a change to a disclosure field, and refuses one from a writer who may not make it
+ * (tuleva_disclosure_may_write): the stored value is kept and nothing is logged. ACF still
+ * answers a REST write with 200, so the writer's read-back is what shows the refusal.
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
@@ -124,7 +155,7 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     $before = get_post_meta((int) $post_id, $name, true);
     $route = tuleva_disclosure_write_route();
 
-    if ($route === 'wp-admin' && !current_user_can('manage_options')) {
+    if (!tuleva_disclosure_may_write($route)) {
         return $before;
     }
 
@@ -152,6 +183,26 @@ function tuleva_disclosure_log(int $post_id, string $name, $before, $after, stri
 }
 
 add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
+
+/**
+ * The role for the accounts that write the fields over REST: an Editor's capabilities and
+ * TULEVA_DISCLOSURE_WRITER, so moving an account onto it takes nothing away. An
+ * Administrator gives it to an account under Users in wp-admin. add_role stores the role in
+ * the options table, so it is added once, from Editor as it stands then, and left alone after.
+ */
+function tuleva_register_disclosure_writer_role(): void
+{
+    if (get_role('fund_document_writer') === null) {
+        $editor = get_role('editor');
+        add_role(
+            'fund_document_writer',
+            'Fund document writer',
+            [TULEVA_DISCLOSURE_WRITER => true] + ($editor === null ? [] : $editor->capabilities)
+        );
+    }
+}
+
+add_action('init', 'tuleva_register_disclosure_writer_role');
 
 /**
  * Hides a disclosure field from a wp-admin user who may not change it there. Its value is

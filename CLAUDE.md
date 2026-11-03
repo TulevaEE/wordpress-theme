@@ -70,12 +70,22 @@ form cannot reach them (`is_protected_meta`). That includes
 `investment_report_file`: the monthly report job writes it over REST, and which funds it
 publishes is decided there.
 
+**Who may write is decided by the account, not the route.** A write to a document field is
+taken from WP-Cron, from an Administrator, and over REST from an account with the *Fund
+document writer* role (capability `tuleva_write_fund_documents`) that signs the request with
+an application password. Anyone else's is dropped, over REST as in wp-admin, whether from a
+logged-in session or the user's own application password; ACF still answers 200, so only the
+read-back shows it. The role is an Editor's capabilities plus that one. Give it only to the
+accounts agent-gateway, onboarding-service and the reports' Apps Script write as: Users → the
+account → Role.
+
 **Every write through ACF is logged** on the page (wp-admin, REST, WP-Cron), and so is a
 revision restore: who, when, how, and the value before and after, a document with its URL.
 The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
 post-meta write (WP-CLI, WPML's copy to a translation) is not logged.
 
-**Over the REST API:**
+**Over the REST API:** only as an account with the *Fund document writer* role, or an
+Administrator; an Editor's write is dropped.
 
 ```bash
 # 1. upload the PDF (writes upload_results.json with the attachment IDs)
