@@ -281,6 +281,11 @@ function tuleva_disclosure_source_post($post_id = null)
  * A document outside this fund's scope returns '' and never reaches $fallback: an
  * empty TKF100 CO2 figure must not borrow a pension fund's, and a pension fund with
  * no summary of investor rights must not borrow TKF100's.
+ *
+ * An upcoming document's $fallback is the document after the template's current URL, so it
+ * applies only while that URL is the one shown, the current field being empty. Once an editor
+ * has set the current field only the upcoming field can replace it: the template's date would
+ * otherwise take a newer document off the page whenever that one's filename has no date.
  */
 function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?string $template = null): string
 {
@@ -290,7 +295,13 @@ function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?stri
 
     $value = tuleva_disclosure_stored_value($name);
 
-    return $value !== '' ? $value : $fallback;
+    if ($value !== '') {
+        return $value;
+    }
+
+    $current = array_search($name, TULEVA_UPCOMING_DISCLOSURES, true);
+
+    return $current !== false && tuleva_disclosure_stored_value($current) !== '' ? '' : $fallback;
 }
 
 /**
@@ -367,9 +378,10 @@ const TULEVA_UPCOMING_DISCLOSURES = [
  * From its effective date an upcoming document is the current one, so the page switches on
  * that day with nobody acting: the switch was approved when the upcoming document was set.
  * An upcoming document no newer than the current one is a leftover and is dropped, not
- * promoted. The usual one is a template fallback outliving its field: once the job below
- * has moved the field's document into the current field, the fallback comes back as the
- * upcoming URL with the same date, and must not replace the document the field held.
+ * promoted: an upcoming field left behind once the current document moved past it, such as one
+ * older than the template URL a page shows while its current field is empty. A template's own
+ * upcoming URL never gets here beside a document an editor set, dated or not: it applies only
+ * while the current field is empty (tuleva_fund_disclosure_value()).
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
