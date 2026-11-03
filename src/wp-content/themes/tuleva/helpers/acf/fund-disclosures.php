@@ -41,9 +41,16 @@ const TULEVA_DISCLOSURE_OPTIONAL = 'optional';
 const TULEVA_WPML_COPY_FROM_ORIGINAL = 1;
 
 /**
- * The template of the one page that holds the documents every fund links.
+ * The template of the one page that holds the documents every fund links. The page is private
+ * and never shown (page_fund-shared-documents.php): the documents show on the fund pages.
  */
 const TULEVA_SHARED_DOCUMENTS_TEMPLATE = 'page_fund-shared-documents.php';
+
+/**
+ * A page whose disclosures are read is published or private (the shared documents page); a
+ * draft, a page pending review or one in the trash is not.
+ */
+const TULEVA_DISCLOSURE_PAGE_STATUSES = ['publish', 'private'];
 
 /**
  * Every disclosure a fund page can carry, defined once.
@@ -381,8 +388,8 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 
 /**
  * The pages on a template whose disclosures are read: the Estonian originals, themselves
- * published and on that template (a translation can be published while its original is not, or
- * sit on another template).
+ * published or private and on that template (a translation can be published while its original
+ * is not, or sit on another template).
  *
  * @return list<int>
  */
@@ -390,7 +397,7 @@ function tuleva_fund_pages_on(string $template): array
 {
     $pages = get_posts([
         'post_type' => 'page',
-        'post_status' => 'publish',
+        'post_status' => TULEVA_DISCLOSURE_PAGE_STATUSES,
         'meta_key' => '_wp_page_template',
         'meta_value' => $template,
         'fields' => 'ids',
@@ -405,7 +412,8 @@ function tuleva_fund_pages_on(string $template): array
 
     return array_values(array_filter(
         $originals,
-        fn($page) => get_post_status($page) === 'publish' && get_page_template_slug($page) === $template
+        fn($page) => in_array(get_post_status($page), TULEVA_DISCLOSURE_PAGE_STATUSES, true)
+            && get_page_template_slug($page) === $template
     ));
 }
 

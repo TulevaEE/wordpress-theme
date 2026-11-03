@@ -111,20 +111,22 @@ WP_APP_PASSWORD   WordPress Application Password
 
 Sustainability, non-consideration of adverse impacts and remuneration policy are one
 document each for all four funds, and the three pension funds share one NAV procedure
-(TKF100 has its own, as a field). They are fields on one page of their own, on the template
-*Fund shared documents* (`page_fund-shared-documents.php`): `sustainability_risks_file`,
-`adverse_impacts_file`, `remuneration_policy_file`, and `nav_procedure_file` plus
-`nav_procedure_upcoming_file` for the pension funds' procedure, which switches on its date
-like a fund's. The helpers in `helpers/extras.php` read them from there
-(`tuleva_shared_document_url()`), so a fund page shows a new one with no deploy, and the page
-itself lists the same links. Write it as a fund page is written: the Estonian page, over REST.
+(TKF100 has its own, as a field). They show on the fund pages only. Their fields are held by one
+private page that is never shown, on the template *Fund shared documents*
+(`page_fund-shared-documents.php`): `sustainability_risks_file`, `adverse_impacts_file`,
+`remuneration_policy_file`, and `nav_procedure_file` plus `nav_procedure_upcoming_file` for the
+pension funds' procedure, which switches on its date like a fund's. The helpers in
+`helpers/extras.php` read them from there (`tuleva_shared_document_url()`), so a fund page shows a
+new one with no deploy. Write it as a fund page is written: the Estonian page, over REST.
 
-The theme finds the page by its template, and reads it only once it is published (a draft or
-private page is ignored); one page is meant to be on it. Until then, and while one of its fields
-is empty, the URL in `helpers/extras.php` renders instead. Create it as a new page, not as a copy
-of a fund page: a copy carries that fund's field values, and a copied TKF100 NAV procedure would
-show on the pension pages. To change nothing visible when first filling it, pick the attachments
-the URLs already point at; uploading the same PDF again gives it a `-1` name and a new link.
+Create the page as **Private**, as a new page, not as a copy of a fund page: a copy carries that
+fund's field values, and a copied TKF100 NAV procedure would show on the pension pages. The
+template answers 404 to everyone, so even a page published by mistake shows nothing. The theme
+finds the page by its template and reads it when it is private or published (not a draft); one
+page is meant to be on it. Until then, and while one of its fields is empty, the URL in
+`helpers/extras.php` renders instead. To change nothing visible when first filling it, pick the
+attachments the URLs already point at; uploading the same PDF again gives it a `-1` name and a
+new link.
 
 ### Fallbacks still in place
 

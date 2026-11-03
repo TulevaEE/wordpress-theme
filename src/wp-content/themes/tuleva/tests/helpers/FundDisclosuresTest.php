@@ -46,6 +46,11 @@ final class FakeFundPage
     /** @var array<string, array<string, int>> fields another request saves right after a write to a field key */
     public static array $saved_meanwhile = [];
 
+    public static ?int $status_sent = null;
+
+    /** @var list<string> */
+    public static array $template_parts = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -60,6 +65,8 @@ final class FakeFundPage
         self::$failing_writes = [];
         self::$statuses = [];
         self::$saved_meanwhile = [];
+        self::$status_sent = null;
+        self::$template_parts = [];
     }
 }
 
@@ -121,7 +128,30 @@ if (!function_exists('acf_flush_value_cache')) {
 
 function get_posts($args = null)
 {
-    return FakeFundPage::$pages[$args['meta_value']] ?? [];
+    return array_values(array_filter(
+        FakeFundPage::$pages[$args['meta_value']] ?? [],
+        fn($page) => in_array(get_post_status($page), (array) ($args['post_status'] ?? 'publish'), true)
+    ));
+}
+
+if (!function_exists('status_header')) {
+    function status_header($code, $description = '')
+    {
+        FakeFundPage::$status_sent = $code;
+    }
+}
+
+if (!function_exists('nocache_headers')) {
+    function nocache_headers()
+    {
+    }
+}
+
+if (!function_exists('get_template_part')) {
+    function get_template_part($slug, $name = null, $args = [])
+    {
+        FakeFundPage::$template_parts[] = $slug;
+    }
 }
 
 function get_the_ID()
@@ -1349,7 +1379,17 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
-    public function a_shared_page_that_is_not_published_is_not_read(): void
+    public function the_private_shared_page_is_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/policy.pdf'];
+
+        $this->assertSame('https://tuleva.ee/policy.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
+    }
+
+    #[Test]
+    public function a_shared_page_in_draft_is_not_read(): void
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
         FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
@@ -1369,32 +1409,36 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The shared page shows its own fields, so whoever sets one sees what the fund pages now
-     * link, and once agent-gateway writes this page its check of the public page has links to
-     * find.
+     * The documents show on the fund pages only. The page that holds them answers 404 to
+     * everyone, so publishing it by mistake does not put a second list of them on the site.
      */
     #[Test]
-    public function the_shared_page_lists_exactly_the_shared_documents_a_fund_page_links(): void
+    public function the_shared_page_is_never_shown(): void
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
-        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
-            'adverse_impacts_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Negatiivse-moju-mittearvestamine-01.02.2027.pdf',
-        ];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/policy.pdf'];
+        $GLOBALS['wp_query'] = new class {
+            public bool $is_404 = false;
+
+            public function set_404(): void
+            {
+                $this->is_404 = true;
+            }
+        };
 
         ob_start();
         try {
-            include __DIR__ . '/../../templates/fund-shared-documents-content.php';
+            include __DIR__ . '/../../page_fund-shared-documents.php';
         } finally {
-            $shared = (string) ob_get_clean();
+            $html = (string) ob_get_clean();
+            $query = $GLOBALS['wp_query'];
+            unset($GLOBALS['wp_query']);
         }
-        $fund = $this->renderFundPage('page_fund-third.php');
 
-        preg_match_all('/href="([^"]+)"/', $shared, $links);
-        $this->assertCount(4, $links[1]);
-        foreach ($links[1] as $link) {
-            $this->assertStringContainsString("href=\"$link\"", $fund);
-        }
-        $this->assertStringContainsString('Negatiivse-moju-mittearvestamine-01.02.2027.pdf', $shared);
+        $this->assertTrue($query->is_404);
+        $this->assertSame(404, FakeFundPage::$status_sent);
+        $this->assertSame(['404'], FakeFundPage::$template_parts);
+        $this->assertStringNotContainsString('policy.pdf', $html);
     }
 
     /**
