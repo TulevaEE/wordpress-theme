@@ -19026,9 +19026,6 @@ sup {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
-  .second-pillar-rejoin-page #alusta .emphasis-box .rejoin-cta-line {
-    white-space: nowrap;
-  }
 }
 @media (min-width: 768px) {
   .second-pillar-rejoin-page .ts-trust {
