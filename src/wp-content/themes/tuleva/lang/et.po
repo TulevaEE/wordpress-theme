@@ -2809,8 +2809,8 @@ msgid "That's why it's worth reviewing your fund along with your application. At
 msgstr "Seepärast tasub fond koos avaldusega üle vaadata. Tulevas saad fondi valida samal ajal, kui esitad II&nbsp;sambaga taasliitumise avalduse."
 
 #: templates/second-pillar-rejoin-content.php:291
-msgid "I took money out of the II pillar after 2021. When can I rejoin?"
-msgstr "Võtsin II&nbsp;sambast raha välja pärast 2021. aastat. Millal saan uuesti liituda?"
+msgid "I received my money later than May 2022. When can I rejoin?"
+msgstr "Sain raha kätte hiljem kui 2022. aasta mais. Millal saan uuesti liituda?"
 
 #: templates/second-pillar-rejoin-content.php:329
 msgid "How can I take money out of the II pillar later?"
@@ -2843,16 +2843,16 @@ msgid "or"
 msgstr "või"
 
 #: helpers/second-pillar-rejoin.php:23
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui võtsid II&nbsp;sambast raha välja 2021. aastal, saad avalduse esitada kohe.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;märtsiks</b> ja juba septembrist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;märtsiks</b> ja juba septembrist kogud II&nbsp;sambas uuesti.</span>"
 
 #: helpers/second-pillar-rejoin.php:24
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui võtsid II&nbsp;sambast raha välja 2021. aastal, saad avalduse esitada kohe.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;juuliks</b> ja juba jaanuarist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;juuliks</b> ja juba jaanuarist kogud II&nbsp;sambas uuesti.</span>"
 
 #: helpers/second-pillar-rejoin.php:25
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui võtsid II&nbsp;sambast raha välja 2021. aastal, saad avalduse esitada kohe.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>30.&nbsp;novembriks</b> ja juba maist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>30.&nbsp;novembriks</b> ja juba maist kogud II&nbsp;sambas uuesti.</span>"
 
 #: templates/second-pillar-rejoin-content.php:149
 msgid "Your contribution goes into the II pillar automatically, straight from your salary. You don't have to do a thing."
@@ -3034,8 +3034,8 @@ msgid "Save in the II pillar again"
 msgstr "Jätka II&nbsp;sambas kogumist"
 
 #: templates/second-pillar-rejoin-content.php:293
-msgid "You can start saving again five years after you submitted your withdrawal application. You can apply before then, and there is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
-msgstr "Saad uuesti koguma hakata viis aastat pärast seda, kui esitasid raha väljavõtmise avalduse. Avalduse saad esitada juba enne seda ja lõplikku tähtaega pole. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
+msgid "The five years are counted from the date you submitted your withdrawal application, not from when the money reached you. If you applied in 2022 or later, you can apply again five years after that. There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgstr "Viit aastat loetakse raha väljavõtmise avalduse esitamisest, mitte raha laekumisest. Kui esitasid avalduse 2022. aastal või hiljem, saad uue avalduse esitada viis aastat pärast seda. Lõplikku tähtaega pole. Novembri lõpuks esitatud avalduse järel algavad sissemaksed mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris."
 
 #: templates/second-pillar-rejoin-content.php:231
 msgid "See the calculation"

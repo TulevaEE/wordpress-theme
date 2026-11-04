@@ -68,7 +68,7 @@ final class SecondPillarRejoinTest extends TestCase
 
     public static function closingLeadProvider(): array
     {
-        $eligible = '<span class="rejoin-cta-line">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br>';
+        $eligible = '<span class="rejoin-cta-line">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br>';
 
         return [
             'last minute of 31 March applies by March for September' => [
