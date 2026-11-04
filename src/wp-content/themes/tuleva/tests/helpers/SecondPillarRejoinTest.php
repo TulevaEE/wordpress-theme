@@ -68,24 +68,24 @@ final class SecondPillarRejoinTest extends TestCase
 
     public static function closingLeadProvider(): array
     {
-        $eligible = '<span class="rejoin-cta-line">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br>';
+        $eligible = '<span class="rejoin-cta-line">If you submitted your withdrawal application by November 2021, you can start saving again from ';
 
         return [
             'last minute of 31 March applies by March for September' => [
                 '2026-03-31 23:59:00',
-                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;March</b> and you\'ll be saving in your II&nbsp;pillar again from September.</span>',
+                $eligible . 'September.</span><br><span class="rejoin-cta-line">To do that, apply by <b>31&nbsp;March</b>.</span>',
             ],
             '1 April applies by July for January' => [
                 '2026-04-01 00:00:00',
-                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;July</b> and you\'ll be saving in your II&nbsp;pillar again from January.</span>',
+                $eligible . 'next January.</span><br><span class="rejoin-cta-line">To do that, apply by <b>31&nbsp;July</b>.</span>',
             ],
             '1 August applies by November for May' => [
                 '2026-08-01 00:00:00',
-                $eligible . '<span class="rejoin-cta-line">Do it by <b>30&nbsp;November</b> and you\'ll be saving in your II&nbsp;pillar again from May.</span>',
+                $eligible . 'next May.</span><br><span class="rejoin-cta-line">To do that, apply by <b>30&nbsp;November</b>.</span>',
             ],
             '1 December applies by March for September' => [
                 '2026-12-01 00:00:00',
-                $eligible . '<span class="rejoin-cta-line">Do it by <b>31&nbsp;March</b> and you\'ll be saving in your II&nbsp;pillar again from September.</span>',
+                $eligible . 'September.</span><br><span class="rejoin-cta-line">To do that, apply by <b>31&nbsp;March</b>.</span>',
             ],
         ];
     }

@@ -2843,16 +2843,16 @@ msgid "or"
 msgstr "või"
 
 #: helpers/second-pillar-rejoin.php:23
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;märtsiks</b> ja juba septembrist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from September.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>31&nbsp;March</b>.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse hiljemalt 2021. aasta novembris, saad taas koguma hakata septembrist.</span><br><span class=\"rejoin-cta-line\">Selleks esita avaldus hiljemalt <b>31.&nbsp;märtsiks</b>.</span>"
 
 #: helpers/second-pillar-rejoin.php:24
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>31.&nbsp;juuliks</b> ja juba jaanuarist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from next January.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>31&nbsp;July</b>.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse hiljemalt 2021. aasta novembris, saad taas koguma hakata järgmise aasta jaanuarist.</span><br><span class=\"rejoin-cta-line\">Selleks esita avaldus hiljemalt <b>31.&nbsp;juuliks</b>.</span>"
 
 #: helpers/second-pillar-rejoin.php:25
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
-msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse 2021. aastal, saad uue avalduse esitada kohe, ka siis, kui raha laekus alles 2022. aasta jaanuaris või mais.</span><br><span class=\"rejoin-cta-line\">Tee seda <b>30.&nbsp;novembriks</b> ja juba maist kogud II&nbsp;sambas uuesti.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from next May.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>30&nbsp;November</b>.</span>"
+msgstr "<span class=\"rejoin-cta-line\">Kui esitasid raha väljavõtmise avalduse hiljemalt 2021. aasta novembris, saad taas koguma hakata järgmise aasta maist.</span><br><span class=\"rejoin-cta-line\">Selleks esita avaldus hiljemalt <b>30.&nbsp;novembriks</b>.</span>"
 
 #: templates/second-pillar-rejoin-content.php:149
 msgid "Your contribution goes into the II pillar automatically, straight from your salary. You don't have to do a thing."
