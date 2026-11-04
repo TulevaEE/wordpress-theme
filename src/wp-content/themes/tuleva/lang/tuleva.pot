@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-04T08:19:12+00:00\n"
+"POT-Creation-Date: 2026-11-04T10:47:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -131,15 +131,15 @@ msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nb
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:23
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from September.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>31&nbsp;March</b>.</span>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:24
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from next January.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>31&nbsp;July</b>.</span>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:25
-msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from next May.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>30&nbsp;November</b>.</span>"
 msgstr ""
 
 #: helpers/setup.php:25
