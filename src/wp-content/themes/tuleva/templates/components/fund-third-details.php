@@ -16,8 +16,7 @@ $fund['manager_participation_date'] = $figures['manager_units_date'];
 // the pre-ACF values and render only while a field is empty. Update the field, not the
 // literal — editing a literal whose field is already set changes nothing visible, which
 // is a quiet way to believe a document was published.
-// With its upcoming version: the fields over the URLs here, each switching on its date (tuleva_fund_document()).
-// The template has no upcoming prospectus or terms: the 18.09.2026 versions are in force.
+// With its upcoming version, which only a field holds; the URL here stands in for an empty current field (tuleva_fund_document()).
 [$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document('prospectus_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-Prospekt-kehtib-alates-18.09.2026.pdf');
 [$terms_url, $terms_upcoming_url] = tuleva_fund_document('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TUV100-tingimused-kehtivad-alates-18.09.2026.pdf');
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
