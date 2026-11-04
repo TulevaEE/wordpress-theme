@@ -282,8 +282,8 @@ function tuleva_disclosure_source_post($post_id = null)
  * empty TKF100 CO2 figure must not borrow a pension fund's, and a pension fund with
  * no summary of investor rights must not borrow TKF100's.
  *
- * A document with an upcoming version is read with tuleva_fund_document() instead, which
- * takes both versions' fallbacks.
+ * A document with an upcoming version is read with tuleva_fund_document() instead, which reads
+ * both versions.
  */
 function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?string $template = null): string
 {
@@ -370,9 +370,8 @@ const TULEVA_UPCOMING_DISCLOSURES = [
  * From its effective date an upcoming document is the current one, so the page switches on
  * that day with nobody acting: the switch was approved when the upcoming document was set.
  * An upcoming document no newer than the current one is a leftover and is dropped, not
- * promoted: an upcoming field left behind once the current field moved past it. The two are of
- * one standing, two fields or two template URLs; how fields go over template URLs is
- * tuleva_document_versions_on_page().
+ * promoted: an upcoming field left behind once the current field moved past it. How the fields go
+ * over a template's URL is tuleva_document_versions_on_page().
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
@@ -390,19 +389,14 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 }
 
 /**
- * The current and upcoming URL a page shows for a document, from its two fields and the URLs its
- * template falls back to.
+ * The current and upcoming URL a page shows for a document, from its two fields and the URL its
+ * template falls back to for the current one.
  *
- * The fields switch first, as the hourly job switches them (tuleva_document_versions()), and a
- * filled field beats a template URL whatever the dates: a due upcoming field takes over from the
- * template's document, even a newer one, and an upcoming field replaces the template's upcoming
- * row. Where no field holds the document in force, the template's two URLs switch
- * between themselves by date. One exception keeps a switch the template has scheduled: its
- * upcoming URL dated after the current field's document is still the next one, so filling the
- * current field with the document in force does not cancel it. An undated current field, or one
- * dated on or after it, does.
- *
- * The job writes only what this already shows, so the page does not change when it runs.
+ * The fields switch by date as the hourly job switches them (tuleva_document_versions()), and the
+ * template's URL fills in only where they leave no current document: a filled field beats a
+ * template URL whatever the dates, so a due upcoming field takes over from it even if the URL is
+ * newer. A template has no upcoming URL: a document is scheduled only in its upcoming field. The
+ * job writes only what this already shows, so the page does not change when it runs.
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
@@ -410,42 +404,22 @@ function tuleva_document_versions_on_page(
     string $current_field,
     string $upcoming_field,
     string $current_fallback = '',
-    string $upcoming_fallback = '',
     ?string $today = null
 ): array {
     [$current, $upcoming] = tuleva_document_versions($current_field, $upcoming_field, $today);
 
-    if ($current === '') {
-        [$current, $template_upcoming] = tuleva_document_versions($current_fallback, $upcoming_fallback, $today);
-
-        return [$current, $upcoming !== '' ? $upcoming : $template_upcoming];
-    }
-
-    $current_since = tuleva_document_effective_day($current);
-    $template_takes_effect = tuleva_document_effective_day($upcoming_fallback);
-
-    if ($current_since === '' || $template_takes_effect === '' || $template_takes_effect <= $current_since) {
-        return [$current, $upcoming];
-    }
-
-    [$current, $template_upcoming] = tuleva_document_versions($current, $upcoming_fallback, $today);
-
-    return [$current, $upcoming !== '' ? $upcoming : $template_upcoming];
+    return [$current !== '' ? $current : $current_fallback, $upcoming];
 }
 
 /**
  * A fund page's current and upcoming URL for a document (tuleva_document_versions_on_page()), from
- * this page's fields and the template's fallbacks for both. A document with no upcoming version
- * resolves on its own, and one outside the fund's scope to nothing, fallbacks included.
+ * this page's fields and the template's fallback for the current one. A document with no upcoming
+ * version resolves on its own, and one outside the fund's scope to nothing, fallback included.
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
-function tuleva_fund_document(
-    string $name,
-    string $current_fallback = '',
-    string $upcoming_fallback = '',
-    ?string $template = null
-): array {
+function tuleva_fund_document(string $name, string $current_fallback = '', ?string $template = null): array
+{
     if (!tuleva_fund_disclosure_applies($name, $template)) {
         return ['', ''];
     }
@@ -456,8 +430,7 @@ function tuleva_fund_document(
     return tuleva_document_versions_on_page(
         tuleva_disclosure_stored_value($name),
         $has_upcoming ? tuleva_disclosure_stored_value($upcoming_name) : '',
-        $current_fallback,
-        $has_upcoming ? $upcoming_fallback : ''
+        $current_fallback
     );
 }
 

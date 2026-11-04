@@ -1030,7 +1030,7 @@ final class FundDisclosuresTest extends TestCase
     /**
      * @return array<string, array{string, string, string}>
      */
-    public static function pensionFundsWithUpcomingFallbacks(): array
+    public static function pensionFundsSwitchingOn01012027(): array
     {
         return [
             'TUK75' => ['page_fund-stocks.php', 'TUK75-tingimused-kehtivad-alates-31.08.2026.pdf', 'TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf'],
@@ -1040,15 +1040,20 @@ final class FundDisclosuresTest extends TestCase
 
     /**
      * TUK75's and TUK00's new prospectus and terms take effect on 01.01.2027, a public
-     * holiday, and still render from template fallbacks rather than fields.
+     * holiday. They switch from the upcoming fields, which an Administrator fills before this
+     * deploys, while the current documents still render from the template.
      */
     #[Test]
-    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsWithUpcomingFallbacks')]
+    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
     public function a_pension_page_shows_its_upcoming_documents_as_current_from_their_date(
         string $template,
         string $terms,
         string $upcoming_terms
     ): void {
+        FakeFundPage::$fields = [
+            'prospectus_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf',
+            'terms_upcoming_file' => "https://tuleva.ee/wp-content/uploads/2026/08/$upcoming_terms",
+        ];
         FakeFundPage::$today = '2026-12-31';
         $before = $this->renderFundPage($template);
 
@@ -1062,6 +1067,29 @@ final class FundDisclosuresTest extends TestCase
         $this->assertStringNotContainsString('TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf', $after);
         $this->assertStringNotContainsString($terms, $after);
         $this->assertStringNotContainsString('effective from', $after);
+    }
+
+    /**
+     * A document is scheduled only by its upcoming field; the template has no upcoming URL to
+     * fall back to, so with the field empty the page keeps the document in force.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
+    public function a_pension_page_schedules_no_document_its_fields_do_not_hold(
+        string $template,
+        string $terms,
+        string $upcoming_terms
+    ): void {
+        $before = $this->renderFundPage($template);
+        FakeFundPage::$today = '2027-01-02';
+        $after = $this->renderFundPage($template);
+
+        foreach ([$before, $after] as $html) {
+            $this->assertStringContainsString($terms, $html);
+            $this->assertStringContainsString('TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf', $html);
+            $this->assertStringNotContainsString($upcoming_terms, $html);
+            $this->assertStringNotContainsString('01.01.2027', $html);
+        }
     }
 
     #[Test]
@@ -1304,24 +1332,6 @@ final class FundDisclosuresTest extends TestCase
         $this->assertStringNotContainsString('Old-Prospekt', $html);
         $this->assertStringNotContainsString('Old-tingimused', $html);
         $this->assertStringNotContainsString('effective from', $html);
-    }
-
-    /**
-     * Once the job has moved a document into the current field, TUK75's template fallback
-     * for the upcoming terms, with the same date and a different file, does not come back.
-     * The field's document stays.
-     */
-    #[Test]
-    public function a_fallback_with_the_current_document_s_date_does_not_replace_it(): void
-    {
-        FakeFundPage::$today = '2027-01-02';
-        FakeFundPage::$fields['terms_file']
-            = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-kehtivad-alates-01.01.2027.pdf';
-
-        $html = $this->renderFundPage('page_fund-stocks.php');
-
-        $this->assertStringContainsString('2026/12/TUK75-tingimused-kehtivad-alates-01.01.2027.pdf', $html);
-        $this->assertStringNotContainsString('TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf', $html);
     }
 
     #[Test]
@@ -1806,72 +1816,29 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The template's two URLs switch between themselves by date, and the fields go over the
-     * result: a filled field beats a template URL, except that a template URL dated after the
-     * current field's document is still the next one, a switch the template has scheduled.
+     * The fields switch by date and the template's URL fills in where they leave no current
+     * document: a due upcoming field takes over from it whatever its date, and between two fields
+     * an upcoming one dated on or before the current one is a leftover.
      */
     #[Test]
-    public function the_fields_go_over_the_template_s_own_switch(): void
+    public function the_fields_go_over_the_template_s_url(): void
     {
-        $template_current = 'https://tuleva.ee/t/Prospekt-kehtib-alates-02.03.2026.pdf';
-        $template_upcoming = 'https://tuleva.ee/t/Prospekt-kehtib-alates-01.01.2027.pdf';
-        $later = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.07.2027.pdf';
-        $in_force = 'https://tuleva.ee/f/Prospekt-kehtib-alates-31.08.2026.pdf';
+        $template = 'https://tuleva.ee/t/Prospekt-kehtib-alates-31.08.2026.pdf';
+        $older = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.07.2026.pdf';
+        $next = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.01.2027.pdf';
         $undated = 'https://tuleva.ee/f/Prospekt-uus.pdf';
         $page = fn(string $current, string $upcoming, string $today)
-            => tuleva_document_versions_on_page($current, $upcoming, $template_current, $template_upcoming, $today);
+            => tuleva_document_versions_on_page($current, $upcoming, $template, $today);
 
-        $this->assertSame([$template_current, $template_upcoming], $page('', '', '2026-12-31'));
-        $this->assertSame([$template_upcoming, ''], $page('', '', '2027-01-01'));
+        $this->assertSame([$template, ''], $page('', '', '2027-01-01'));
+        $this->assertSame([$template, $next], $page('', $next, '2026-12-31'));
+        $this->assertSame([$next, ''], $page('', $next, '2027-01-01'));
+        $this->assertSame([$older, ''], $page('', $older, '2026-11-02'));
 
-        $this->assertSame([$template_current, $later], $page('', $later, '2026-12-31'));
-        $this->assertSame([$template_upcoming, $later], $page('', $later, '2027-02-01'));
-
-        $this->assertSame([$in_force, $template_upcoming], $page($in_force, '', '2026-12-31'));
-        $this->assertSame([$template_upcoming, ''], $page($in_force, '', '2027-01-01'));
-        $this->assertSame([$in_force, $later], $page($in_force, $later, '2026-12-31'));
-
-        $this->assertSame([$undated, ''], $page($undated, '', '2027-01-01'));
-        $this->assertSame([$later, ''], $page($later, '', '2027-08-01'));
-    }
-
-    /**
-     * From 01.01.2027 TUK75's template prospectus of that date is the one in force. A later
-     * upcoming prospectus set in the field must not put the 02.03.2026 one back.
-     */
-    #[Test]
-    public function the_template_s_document_in_force_stays_beside_a_future_upcoming_field(): void
-    {
-        FakeFundPage::$today = '2027-02-01';
-        FakeFundPage::$fields['prospectus_upcoming_file']
-            = 'https://tuleva.ee/wp-content/uploads/2027/01/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.07.2027.pdf';
-
-        $html = $this->renderFundPage('page_fund-stocks.php');
-
-        $this->assertStringContainsString('2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf', $html);
-        $this->assertStringNotContainsString('Prospekt-kehtib-alates-02.03.2026.pdf', $html);
-        $this->assertStringContainsString('effective from 01.07.2027', $html);
-    }
-
-    /**
-     * Filling TUK00's terms field with the terms in force, dated 31.08.2026, keeps the template's
-     * 01.01.2027 switch: the field's document is older than it.
-     */
-    #[Test]
-    public function filling_the_current_field_with_the_document_in_force_keeps_the_template_s_switch(): void
-    {
-        FakeFundPage::$fields['terms_file']
-            = 'https://tuleva.ee/wp-content/uploads/2026/11/TUK00-tingimused-kehtivad-alates-31.08.2026.pdf';
-
-        FakeFundPage::$today = '2026-12-31';
-        $before = $this->renderFundPage('page_fund-bonds.php');
-        FakeFundPage::$today = '2027-01-01';
-        $after = $this->renderFundPage('page_fund-bonds.php');
-
-        $this->assertStringContainsString('2026/11/TUK00-tingimused-kehtivad-alates-31.08.2026.pdf', $before);
-        $this->assertMatchesRegularExpression('/TUK00-tingimused-kehtivad-alates-01\.01\.2027\.pdf.*?effective from 01\.01\.2027/s', $before);
-        $this->assertStringContainsString('2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf', $after);
-        $this->assertStringNotContainsString('31.08.2026.pdf', $after);
+        $this->assertSame([$older, $next], $page($older, $next, '2026-12-31'));
+        $this->assertSame([$next, ''], $page($older, $next, '2027-01-01'));
+        $this->assertSame([$next, ''], $page($next, $older, '2027-01-01'));
+        $this->assertSame([$next, ''], $page($undated, $next, '2027-01-01'));
     }
 
     /**
@@ -1885,33 +1852,10 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertSame(
             ['https://tuleva.ee/kid.pdf', ''],
-            tuleva_fund_document('key_investor_info_file', 'https://tuleva.ee/kid.pdf', 'https://tuleva.ee/kid-next.pdf')
+            tuleva_fund_document('key_investor_info_file', 'https://tuleva.ee/kid.pdf')
         );
         $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file', 'https://tuleva.ee/rights.pdf'));
         $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file', 'https://tuleva.ee/nav.pdf'));
-    }
-
-    /**
-     * A current document whose filename has no date is not older than anything. The template's
-     * upcoming terms must not take it off the page on their date, nor list themselves before it.
-     */
-    #[Test]
-    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsWithUpcomingFallbacks')]
-    public function an_undated_current_field_outlasts_the_template_s_upcoming_date(
-        string $template,
-        string $terms,
-        string $upcoming_terms
-    ): void {
-        FakeFundPage::$fields['terms_file'] = 'https://tuleva.ee/wp-content/uploads/2026/11/tingimused-uus.pdf';
-
-        FakeFundPage::$today = '2026-12-31';
-        $before = $this->renderFundPage($template);
-        FakeFundPage::$today = '2027-01-02';
-        $after = $this->renderFundPage($template);
-
-        $this->assertStringNotContainsString($upcoming_terms, $before);
-        $this->assertStringContainsString('2026/11/tingimused-uus.pdf', $after);
-        $this->assertStringNotContainsString($upcoming_terms, $after);
     }
 
     /**
