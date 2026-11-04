@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-02T13:00:26+00:00\n"
+"POT-Creation-Date: 2026-11-04T08:19:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -131,15 +131,15 @@ msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nb
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:23
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;March</b> and you'll be saving in your II&nbsp;pillar again from September.</span>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:24
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>31&nbsp;July</b> and you'll be saving in your II&nbsp;pillar again from January.</span>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:25
-msgid "<span class=\"rejoin-cta-line\">If you took money out of your II&nbsp;pillar in 2021, you can apply now.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
+msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application in 2021, you can apply now, even if the money only reached you in January or May&nbsp;2022.</span><br><span class=\"rejoin-cta-line\">Do it by <b>30&nbsp;November</b> and you'll be saving in your II&nbsp;pillar again from May.</span>"
 msgstr ""
 
 #: helpers/setup.php:25
@@ -2833,11 +2833,11 @@ msgid "Tuleva <strong>belongs to its savers</strong>"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:291
-msgid "I took money out of the II pillar after 2021. When can I rejoin?"
+msgid "I received my money later than May 2022. When can I rejoin?"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:293
-msgid "You can start saving again five years after you submitted your withdrawal application. You can apply before then, and there is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgid "The five years are counted from the date you submitted your withdrawal application, not from when the money reached you. If you applied in 2022 or later, you can apply again five years after that. There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:294
