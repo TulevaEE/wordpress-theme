@@ -17249,18 +17249,6 @@ sup {
   background-color: var(--blue-bg-2) !important;
 }
 
-.bg-notice {
-  background-color: #fff6d9 !important;
-  color: rgb(39.5294117647%, 35.4509803922%, 6.2745098039%);
-}
-.bg-notice a {
-  color: rgb(39.5294117647%, 35.4509803922%, 6.2745098039%);
-}
-.bg-notice .badge-notice {
-  background-color: rgb(39.5294117647%, 35.4509803922%, 6.2745098039%);
-  color: #fff;
-}
-
 .bg-gray-1 {
   background-color: var(--gray-bg-1);
 }

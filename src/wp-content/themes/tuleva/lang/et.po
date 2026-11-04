@@ -1052,10 +1052,6 @@ msgstr "kaitseb kõigi pensionifondide investoreid halvima vastu, kui fondivalit
 msgid "Read more"
 msgstr "Uuri lähemalt"
 
-#: templates/components/notice.php:6
-msgid "New"
-msgstr "Uus"
-
 #: templates/components/payout-calculator.php:6
 msgid "Accumulated by age 65"
 msgstr "Olen 65. eluaastaks kogunud"
