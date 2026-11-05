@@ -146,6 +146,28 @@ function tuleva_disclosure_may_write(string $route): bool
 }
 
 /**
+ * The post an ACF object id names, or null for any other object (a term, user, comment,
+ * option or block). ACF hands its filters the id as given, 17533, '17533' or 'post_17533',
+ * and decodes it only when it writes, so the lock and the log decode it the same way: with
+ * acf_decode_post_id() when ACF is loaded, otherwise as it reads its post forms.
+ */
+function tuleva_disclosure_post_id($post_id): ?int
+{
+    if (function_exists('acf_decode_post_id')) {
+        $decoded = acf_decode_post_id($post_id);
+        $is_post = ($decoded['type'] ?? '') === 'post' && is_numeric($decoded['id'] ?? null);
+        $id = $is_post ? abs((int) $decoded['id']) : 0;
+    } elseif (is_numeric($post_id)) {
+        $id = abs((int) $post_id);
+    } else {
+        $is_post = is_string($post_id) && preg_match('/^(?:post|attachment|menu_item)_(\d+)$/', $post_id, $form);
+        $id = $is_post ? (int) $form[1] : 0;
+    }
+
+    return $id > 0 ? $id : null;
+}
+
+/**
  * The meta key an ACF field's value is stored under. A sub-field's `_name` is only its short
  * name.
  */
@@ -219,7 +241,7 @@ add_filter('rest_request_before_callbacks', 'tuleva_disclosure_rest_guard', 10, 
  */
 function tuleva_disclosure_pre_update($check, $value, $post_id, $field)
 {
-    if ($check !== null || !is_numeric($post_id) || !tuleva_is_disclosure(tuleva_disclosure_meta_key($field))) {
+    if ($check !== null || tuleva_disclosure_post_id($post_id) === null || !tuleva_is_disclosure(tuleva_disclosure_meta_key($field))) {
         return $check;
     }
 
@@ -236,12 +258,13 @@ add_filter('acf/pre_update_value', 'tuleva_disclosure_pre_update', 10, 4);
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
     $name = tuleva_disclosure_meta_key($field);
+    $page = tuleva_disclosure_post_id($post_id);
 
-    if (!is_numeric($post_id) || !tuleva_is_disclosure($name)) {
+    if ($page === null || !tuleva_is_disclosure($name)) {
         return $value;
     }
 
-    $before = get_post_meta((int) $post_id, $name, true);
+    $before = get_post_meta($page, $name, true);
 
     if (!tuleva_disclosure_may_write(tuleva_disclosure_write_route())) {
         return $before === '' ? null : $before;
@@ -258,17 +281,19 @@ add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
  * WordPress has stored it (tuleva_disclosure_on_meta_write). ACF writes a field's value and
  * then the field's reference row, through these same filters, so the reference write ends
  * the note: a note applies to this one write, stored or not, and never to a later one.
- * Last, so a filter that short-circuits the write is seen. A revision or an autosave (a
- * preview) is not noted, since its log entry would land on the page; the lock still applies
- * to it.
+ * Last, so a filter that short-circuits the write is seen. These filters get the id as given,
+ * before ACF decodes it; the note is kept under the decoded one, which the meta hooks get. A
+ * revision or an autosave (a preview) is not noted, since its log entry would land on the
+ * page; the lock still applies to it.
  */
 function tuleva_disclosure_note_write($pre, $post_id, $name, $value = '', $hidden = false)
 {
-    if (!is_numeric($post_id) || !tuleva_is_disclosure((string) $name)) {
+    $post_id = tuleva_disclosure_post_id($post_id);
+
+    if ($post_id === null || !tuleva_is_disclosure((string) $name)) {
         return $pre;
     }
 
-    $post_id = (int) $post_id;
     $pending = &tuleva_disclosure_writes_pending();
     unset($pending[$post_id][$name]);
 

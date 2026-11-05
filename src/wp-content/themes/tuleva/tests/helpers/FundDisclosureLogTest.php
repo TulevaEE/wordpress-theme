@@ -383,6 +383,81 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame([], FakeDisclosureWrite::$meta);
     }
 
+    /**
+     * ACF hands its filters the object id as given and decodes it only when it writes, so a
+     * page can arrive as 17533, '17533' or 'post_17533' (attachment_ and menu_item_ name posts
+     * too). Without ACF loaded, the id is read the way ACF reads it.
+     */
+    #[Test]
+    public function an_acf_object_id_is_read_as_the_post_it_names_and_nothing_else(): void
+    {
+        foreach ([17533, '17533', 'post_17533', 'attachment_17533', 'menu_item_17533'] as $id) {
+            $this->assertSame(17533, tuleva_disclosure_post_id($id), (string) $id);
+        }
+
+        foreach (['term_5', 'menu_5', 'user_3', 'comment_4', 'options', 'option_x', 'block_abc', 'post_', 'post_x', 0, '0', null] as $id) {
+            $this->assertNull(tuleva_disclosure_post_id($id), var_export($id, true));
+        }
+    }
+
+    /**
+     * update_field('prospectus_file', …, 'post_17533'), from WP-CLI say, reaches the same
+     * page's meta, so it meets the same lock.
+     */
+    #[Test]
+    public function an_editor_s_write_by_the_post_id_form_is_refused(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->assertFalse(tuleva_disclosure_pre_update(null, 102, 'post_' . self::PAGE, ['name' => 'prospectus_file']));
+        $this->assertSame('101', tuleva_disclosure_on_update(102, 'post_' . self::PAGE, ['name' => 'prospectus_file']));
+    }
+
+    #[Test]
+    public function an_administrator_s_write_by_the_post_id_form_is_logged_against_the_page(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->acfWrites(102, 'prospectus_file', 'post_' . self::PAGE);
+
+        $this->assertSame(['an-administrator', 'prospectus_file', '101', '102'], $this->onlyEntry(['who', 'field', 'before', 'after']));
+    }
+
+    #[Test]
+    public function a_write_to_a_term_is_left_alone(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+
+        $this->assertNull(tuleva_disclosure_pre_update(null, 102, 'term_5', ['name' => 'prospectus_file']));
+        $this->assertSame(102, tuleva_disclosure_on_update(102, 'term_5', ['name' => 'prospectus_file']));
+
+        FakeDisclosureWrite::$administrator = true;
+        tuleva_disclosure_note_write(null, 'term_5', 'prospectus_file', 102, false);
+        tuleva_disclosure_on_meta_write(7, 5, 'prospectus_file', 102);
+        $this->assertSame([], FakeDisclosureWrite::$meta);
+    }
+
+    /**
+     * With ACF loaded, its own decoding decides, acf/decode_post_id filter and all. Defining
+     * a function cannot be undone, so this runs in a process of its own.
+     */
+    #[Test]
+    #[RunInSeparateProcess]
+    #[PreserveGlobalState(false)]
+    public function with_acf_loaded_its_own_decoding_of_an_object_id_decides(): void
+    {
+        function acf_decode_post_id($post_id = 0)
+        {
+            return $post_id === 'custom_17533' ? ['type' => 'post', 'id' => '17533'] : ['type' => 'option', 'id' => $post_id];
+        }
+
+        $this->assertSame(17533, tuleva_disclosure_post_id('custom_17533'));
+        $this->assertNull(tuleva_disclosure_post_id('post_17533'));
+    }
+
     #[Test]
     public function acf_goes_on_with_a_value_the_writer_may_set_and_with_any_other_field(): void
     {
@@ -872,30 +947,33 @@ final class FundDisclosureLogTest extends TestCase
      * What acf_update_value does with a value: the pre filter, the update_value filters, then
      * for the value and for its reference row each, ACF's pre-metadata filter and the meta
      * write (null deletes both), with the hook WordPress fires once the value's write lands.
-     * update_metadata writes to the id it is given, a revision too.
+     * The filters get the id as given; ACF decodes it ('post_17533' is 17533) for the meta
+     * write, and update_metadata writes to the id it is given, a revision too.
      */
-    private function acfWrites($value, string $name, int $post_id = self::PAGE)
+    private function acfWrites($value, string $name, int|string $post_id = self::PAGE)
     {
         $field = ['name' => $name, 'key' => 'field_' . $name];
+        $acf_post_id = $post_id;
+        $post_id = (int) preg_replace('/^post_/', '', (string) $post_id);
 
-        if (tuleva_disclosure_pre_update(null, $value, $post_id, $field) !== null) {
+        if (tuleva_disclosure_pre_update(null, $value, $acf_post_id, $field) !== null) {
             return 'short-circuited';
         }
 
-        $value = tuleva_disclosure_on_update($value, $post_id, $field);
+        $value = tuleva_disclosure_on_update($value, $acf_post_id, $field);
 
         if ($value === null) {
-            tuleva_disclosure_note_delete(null, $post_id, $name, false);
+            tuleva_disclosure_note_delete(null, $acf_post_id, $name, false);
             if (isset(FakeDisclosureWrite::$meta[$post_id][$name])) {
                 unset(FakeDisclosureWrite::$meta[$post_id][$name]);
                 tuleva_disclosure_on_meta_write([7], $post_id, $name, '');
             }
-            tuleva_disclosure_note_delete(null, $post_id, $name, true);
+            tuleva_disclosure_note_delete(null, $acf_post_id, $name, true);
         } else {
-            tuleva_disclosure_note_write(null, $post_id, $name, $value, false);
+            tuleva_disclosure_note_write(null, $acf_post_id, $name, $value, false);
             FakeDisclosureWrite::$meta[$post_id][$name] = [$value];
             tuleva_disclosure_on_meta_write(7, $post_id, $name, $value);
-            tuleva_disclosure_note_write(null, $post_id, $name, $field['key'], true);
+            tuleva_disclosure_note_write(null, $acf_post_id, $name, $field['key'], true);
         }
 
         return $value;
