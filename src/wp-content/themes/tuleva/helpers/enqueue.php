@@ -80,7 +80,7 @@ class ThemeEnqueue
                 'handle' => 'animatedModal',
                 'src' => $js_path . 'vendor/animatedModal.min.js',
                 'deps' => 'jquery',
-                'ver' => '1.0.0',
+                'ver' => '1.0.1',
                 'js_in_header' => false,
                 'enqueue' => true
             ],
