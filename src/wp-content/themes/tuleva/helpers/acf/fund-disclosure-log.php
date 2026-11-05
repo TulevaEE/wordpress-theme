@@ -251,6 +251,23 @@ function tuleva_disclosure_pre_update($check, $value, $post_id, $field)
 add_filter('acf/pre_update_value', 'tuleva_disclosure_pre_update', 10, 4);
 
 /**
+ * The same lock for ACF's deletions. delete_field(), and acf_delete_value() wherever it is
+ * called from, do not pass acf/pre_update_value; ACF asks this filter before it deletes the
+ * value and again before it deletes the field's reference row, and an answer other than null
+ * stops each. So a writer who may not change the field leaves both rows as they are.
+ */
+function tuleva_disclosure_pre_delete($pre, $post_id, $name, $hidden = false)
+{
+    if ($pre !== null || tuleva_disclosure_post_id($post_id) === null || !tuleva_is_disclosure((string) $name)) {
+        return $pre;
+    }
+
+    return tuleva_disclosure_may_write(tuleva_disclosure_write_route()) ? null : false;
+}
+
+add_filter('acf/pre_delete_metadata', 'tuleva_disclosure_pre_delete', 10, 4);
+
+/**
  * A refused write stops at tuleva_disclosure_pre_update; should one get here anyway, the
  * stored value is kept, and null has ACF delete rather than write where nothing was stored,
  * so no empty row is left.
@@ -489,6 +506,7 @@ add_filter('is_protected_meta', 'tuleva_disclosure_is_protected_meta', 10, 3);
  * (tuleva_disclosure_may_write), ACF's copy leaves them and their references out: it reads
  * the revision through acf_get_meta(), whose result this filters. So nothing changes, and
  * nothing has to be put back afterwards over a value another request wrote meanwhile.
+ * What the restore does write is logged from those writes (tuleva_disclosure_note_restore).
  */
 function tuleva_disclosures_out_of_restore($meta, $post_id)
 {
@@ -510,49 +528,51 @@ function tuleva_disclosures_out_of_restore($meta, $post_id)
 add_filter('acf/load_meta', 'tuleva_disclosures_out_of_restore', 10, 2);
 
 /**
- * A writer who may change the disclosures has them restored, and the change logged once
- * stored: they are read before ACF's restore (priority 10) and compared after it.
+ * Notes a write a revision restore makes to a disclosure field, as WordPress makes it, to be
+ * logged once stored (tuleva_disclosure_on_meta_write) with the route 'revision'. ACF's
+ * restore copies the revision's meta with update_metadata, past its own filters, so the note
+ * is taken from WordPress's action before each write: update_post_meta for a row that
+ * exists, add_post_meta for a new one, neither for a value that is unchanged. A field the
+ * restore does not write gets no entry, whatever another request writes to it meanwhile.
+ * ACF's copy to the latest revision is not the page's and is not noted.
  */
-function tuleva_disclosures_before_restore($post_id): void
+function tuleva_disclosure_note_restore($object_id, $meta_key, $meta_value): void
 {
-    if (!tuleva_disclosure_may_write(tuleva_disclosure_write_route())) {
+    $post_id = (int) $object_id;
+
+    if (
+        !doing_action('wp_restore_post_revision')
+        || !tuleva_is_disclosure((string) $meta_key)
+        || wp_is_post_revision($post_id)
+    ) {
         return;
     }
 
-    $held = &tuleva_disclosures_held_over_restore();
-    foreach (array_keys(tuleva_fund_disclosure_catalogue()) as $name) {
-        $held[(int) $post_id][$name] = get_post_meta((int) $post_id, $name, true);
+    $pending = &tuleva_disclosure_writes_pending();
+    $before = get_post_meta($post_id, $meta_key, true);
+    unset($pending[$post_id][$meta_key]);
+
+    if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($meta_value)) {
+        $pending[$post_id][$meta_key] = [
+            'before' => $before,
+            'after' => tuleva_disclosure_scalar($meta_value),
+            'route' => 'revision',
+        ];
     }
 }
 
-function tuleva_disclosures_after_restore($post_id): void
+function tuleva_disclosure_note_restore_update($meta_id, $object_id, $meta_key, $meta_value): void
 {
-    $post_id = (int) $post_id;
-    $held = &tuleva_disclosures_held_over_restore();
-
-    foreach ($held[$post_id] ?? [] as $name => $before) {
-        $after = get_post_meta($post_id, $name, true);
-
-        if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($after)) {
-            tuleva_disclosure_record($post_id, $name, $before, $after, 'revision');
-        }
-    }
-
-    unset($held[$post_id]);
+    tuleva_disclosure_note_restore($object_id, $meta_key, $meta_value);
 }
 
-/**
- * @return array<int, array<string, mixed>> the disclosures as they stood before a restore, by page
- */
-function &tuleva_disclosures_held_over_restore(): array
+function tuleva_disclosure_note_restore_add($object_id, $meta_key, $meta_value): void
 {
-    static $held = [];
-
-    return $held;
+    tuleva_disclosure_note_restore($object_id, $meta_key, $meta_value);
 }
 
-add_action('wp_restore_post_revision', 'tuleva_disclosures_before_restore', 5);
-add_action('wp_restore_post_revision', 'tuleva_disclosures_after_restore', 20);
+add_action('update_post_meta', 'tuleva_disclosure_note_restore_update', 10, 4);
+add_action('add_post_meta', 'tuleva_disclosure_note_restore_add', 10, 3);
 
 /**
  * The Documents box: each read-only field's value, then the change log.

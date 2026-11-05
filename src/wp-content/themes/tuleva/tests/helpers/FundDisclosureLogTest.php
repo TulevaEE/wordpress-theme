@@ -217,8 +217,6 @@ final class FundDisclosureLogTest extends TestCase
         FakeOptions::reset();
         $pending = &tuleva_disclosure_writes_pending();
         $pending = [];
-        $held = &tuleva_disclosures_held_over_restore();
-        $held = [];
     }
 
     #[Test]
@@ -603,14 +601,57 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
         FakeDisclosureWrite::$log_fails = true;
 
-        $errors = $this->errorLog(function (): void {
-            tuleva_disclosures_before_restore(self::PAGE);
-            update_post_meta(self::PAGE, 'prospectus_file', '101');
-            tuleva_disclosures_after_restore(self::PAGE);
-        });
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+
+        $errors = $this->errorLog(fn() => $this->restoreCopies(self::PAGE, 'prospectus_file', '101'));
 
         $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
         $this->assertStringContainsString('page ' . self::PAGE . ': prospectus_file 202 -> 101 (revision)', $errors);
+    }
+
+    /**
+     * delete_field() and ACF's other deletions skip acf/pre_update_value, so the lock answers
+     * ACF's pre-delete filter too, which ACF asks for the value and then for its reference
+     * row: refused, neither goes.
+     */
+    #[Test]
+    public function an_unauthorised_delete_field_leaves_the_value_and_its_reference(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+        FakeDisclosureWrite::$meta[self::PAGE]['_prospectus_file'] = ['field_fund_disclosure_stocks_prospectus_file'];
+
+        $this->acfDeletes('prospectus_file');
+        $this->acfDeletes('prospectus_file', 'post_' . self::PAGE);
+
+        $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertSame('field_fund_disclosure_stocks_prospectus_file', get_post_meta(self::PAGE, '_prospectus_file', true));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    #[Test]
+    public function an_authorised_delete_field_deletes_the_value_and_its_reference_and_is_logged(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+        FakeDisclosureWrite::$meta[self::PAGE]['_prospectus_file'] = ['field_fund_disclosure_stocks_prospectus_file'];
+
+        $this->acfDeletes('prospectus_file');
+
+        $this->assertSame([], get_post_meta(self::PAGE, 'prospectus_file'));
+        $this->assertSame([], get_post_meta(self::PAGE, '_prospectus_file'));
+        $this->assertSame(['an-administrator', '101', ''], $this->onlyEntry(['who', 'before', 'after']));
+    }
+
+    #[Test]
+    public function a_deletion_from_another_object_is_left_alone(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+
+        $this->assertNull(tuleva_disclosure_pre_delete(null, 'term_5', 'prospectus_file', false));
+        $this->assertNull(tuleva_disclosure_pre_delete(null, self::PAGE, 'hero_title', false));
+        $this->assertSame('decided', tuleva_disclosure_pre_delete('decided', self::PAGE, 'prospectus_file', false));
     }
 
     #[Test]
@@ -875,36 +916,69 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     /**
-     * So nothing is put back after an editor's restore, and a value fund_pages writes while
-     * it runs stays.
+     * A restore's entries are the writes it made, each once WordPress has stored it. ACF's
+     * copy to the latest revision is not one of the page's.
      */
     #[Test]
-    public function a_document_written_during_an_editor_s_restore_stays(): void
-    {
-        FakeDisclosureWrite::$login = 'an-editor';
-        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
-
-        tuleva_disclosures_before_restore(self::PAGE);
-        update_post_meta(self::PAGE, 'prospectus_file', '202');
-        tuleva_disclosures_after_restore(self::PAGE);
-
-        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
-        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
-    }
-
-    #[Test]
-    public function an_administrator_s_revision_restore_is_logged(): void
+    public function an_administrator_s_revision_restore_is_logged_from_the_writes_it_made(): void
     {
         FakeDisclosureWrite::$administrator = true;
         FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        FakeDisclosureWrite::$revisions[90002] = self::PAGE;
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
 
-        tuleva_disclosures_before_restore(self::PAGE);
-        update_post_meta(self::PAGE, 'prospectus_file', '101');
-        tuleva_disclosures_after_restore(self::PAGE);
+        $this->restoreCopies(self::PAGE, 'prospectus_file', '101');
+        $this->restoreCopies(self::PAGE, 'terms_file', '301');
+        $this->restoreCopies(self::PAGE, 'hero_title', 'Old');
+        $this->restoreCopies(90002, 'prospectus_file', '101');
 
         $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
-        $this->assertSame(['an-administrator', 'revision', '202', '101'], $this->onlyEntry(['who', 'route', 'before', 'after']));
+        $this->assertSame(
+            [
+                ['an-administrator', 'revision', 'prospectus_file', '202', '101'],
+                ['an-administrator', 'revision', 'terms_file', '', '301'],
+            ],
+            array_map(
+                fn($entry) => [$entry['who'], $entry['route'], $entry['field'], $entry['before'], $entry['after']],
+                get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG)
+            )
+        );
+    }
+
+    /**
+     * A revision with no prospectus copies none, so nothing about it is logged as the
+     * restore's: the upcoming-document switch writing the prospectus meanwhile, in a request
+     * of its own, is logged once, as its own.
+     */
+    #[Test]
+    public function a_document_the_restore_did_not_write_is_not_logged_as_the_restore_s(): void
+    {
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        $this->restoreCopies(self::PAGE, 'hero_title', 'Old');
+
+        FakeDisclosureWrite::$administrator = false;
+        FakeDisclosureWrite::$login = '';
+        FakeDisclosureWrite::$in_cron = true;
+        FakeDisclosureWrite::$doing_action = TULEVA_DISCLOSURE_SWITCH_HOOK;
+        $this->acfWrites(102, 'prospectus_file');
+
+        $this->assertSame(['WP-Cron', 'cron', '101', '102'], $this->onlyEntry(['who', 'route', 'before', 'after']));
+    }
+
+    #[Test]
+    public function a_meta_write_outside_a_restore_is_not_taken_for_one(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+
+        $this->restoreCopies(self::PAGE, 'prospectus_file', '101');
+
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
     }
 
     #[Test]
@@ -963,12 +1037,7 @@ final class FundDisclosureLogTest extends TestCase
         $value = tuleva_disclosure_on_update($value, $acf_post_id, $field);
 
         if ($value === null) {
-            tuleva_disclosure_note_delete(null, $acf_post_id, $name, false);
-            if (isset(FakeDisclosureWrite::$meta[$post_id][$name])) {
-                unset(FakeDisclosureWrite::$meta[$post_id][$name]);
-                tuleva_disclosure_on_meta_write([7], $post_id, $name, '');
-            }
-            tuleva_disclosure_note_delete(null, $acf_post_id, $name, true);
+            $this->acfDeletes($name, $acf_post_id);
         } else {
             tuleva_disclosure_note_write(null, $acf_post_id, $name, $value, false);
             FakeDisclosureWrite::$meta[$post_id][$name] = [$value];
@@ -977,6 +1046,57 @@ final class FundDisclosureLogTest extends TestCase
         }
 
         return $value;
+    }
+
+    /**
+     * What acf_delete_value does, for delete_field() and an update to null alike: for the
+     * value and then for its reference row, ACF's pre-delete filters (the lock, then the note)
+     * and the delete unless one answered, with the hook WordPress fires once the value's row
+     * goes.
+     */
+    private function acfDeletes(string $name, int|string $acf_post_id = self::PAGE): void
+    {
+        $post_id = (int) preg_replace('/^post_/', '', (string) $acf_post_id);
+
+        foreach ([false, true] as $hidden) {
+            $pre = tuleva_disclosure_note_delete(
+                tuleva_disclosure_pre_delete(null, $acf_post_id, $name, $hidden),
+                $acf_post_id,
+                $name,
+                $hidden
+            );
+            $key = ($hidden ? '_' : '') . $name;
+
+            if ($pre === null && isset(FakeDisclosureWrite::$meta[$post_id][$key])) {
+                unset(FakeDisclosureWrite::$meta[$post_id][$key]);
+                if (!$hidden) {
+                    tuleva_disclosure_on_meta_write([7], $post_id, $name, '');
+                }
+            }
+        }
+    }
+
+    /**
+     * What ACF's revision restore does with one key of the revision's meta: update_metadata
+     * straight on the page, past ACF's filters. WordPress does nothing for an unchanged value,
+     * fires add_post_meta or update_post_meta before the write, and the -ed hook after it.
+     */
+    private function restoreCopies(int $post_id, string $key, $value): void
+    {
+        $stored = FakeDisclosureWrite::$meta[$post_id][$key][0] ?? null;
+
+        if ($stored === $value) {
+            return;
+        }
+
+        if ($stored === null) {
+            tuleva_disclosure_note_restore_add($post_id, $key, $value);
+        } else {
+            tuleva_disclosure_note_restore_update(7, $post_id, $key, $value);
+        }
+
+        FakeDisclosureWrite::$meta[$post_id][$key] = [$value];
+        tuleva_disclosure_on_meta_write(7, $post_id, $key, $value);
     }
 
     /**

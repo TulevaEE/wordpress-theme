@@ -70,14 +70,16 @@ form cannot reach them (`is_protected_meta`). That includes
 `investment_report_file`: the monthly report job writes it over REST, and which funds it
 publishes is decided there.
 
-**Who may write is decided by the account, not the route.** A write to a document field is
-taken from an Administrator, from the upcoming-document switch while its WP-Cron hook
-(`tuleva_promote_due_documents`) runs, and over REST from an account holding the capability
-`tuleva_write_fund_documents` that signs the request with an application password. Anyone
-else's is refused on every route, any other cron run included, whether from a logged-in
-session or the user's own application password. An authenticated REST request is answered
-**403** `tuleva_fund_document_locked`, naming the fields, and nothing in it is saved; one
-without a valid credential gets WordPress's own 401. In wp-admin the value is not taken.
+**Who may write is decided by the account, not the route.** A write to a document field,
+`delete_field()` and ACF's other deletions included, is taken from an Administrator, from
+the upcoming-document switch while its WP-Cron hook (`tuleva_promote_due_documents`) runs,
+and over REST from an account holding the capability `tuleva_write_fund_documents` that
+signs the request with an application password. Anyone else's is refused on every route,
+any other cron run included, whether from a logged-in session or the user's own
+application password. An authenticated REST request is answered **403**
+`tuleva_fund_document_locked`, naming the fields, and nothing in it is saved; one without a
+valid credential gets WordPress's own 401. In wp-admin the value is not taken; a refused
+deletion leaves the value and its ACF reference row in place.
 
 The capability comes with the *Fund document writer* role, which may read, upload media and
 update pages, private ones too (the shared documents page is private), and holds
@@ -112,8 +114,10 @@ funds as failed. The pages keep the documents they had.
 revision restore: who, when, how, and the value before and after, a document with its URL.
 An entry is written once WordPress has stored the value, so a write that fails is not
 logged. If the log itself cannot be written, the change stays as stored and the PHP error
-log gets one line: page, field, the values before and after, and the route. An editor's
-revision restore leaves the document fields out of ACF's copy, so it changes none of them.
+log gets one line: page, field, the values before and after, and the route. A restore is
+logged from the writes it makes, so a field it does not write gets no entry, whatever
+another request writes to it meanwhile. An editor's revision restore leaves the document
+fields out of ACF's copy, so it changes none of them.
 The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
 post-meta write (WP-CLI, WPML's copy to a translation) is not logged, nor is a preview's or
 an autosave's copy, which is written to a revision.
