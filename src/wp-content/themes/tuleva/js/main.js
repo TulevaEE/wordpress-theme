@@ -71,7 +71,7 @@ $(document).ready(function ($) {
         initModalEscClose = function () {
             $(document).on('keyup', function (ev) {
                 if (ev.keyCode === 27) {
-                    $('[class^="close-button-').each(function () {
+                    $('[class^="close-button-"]').each(function () {
                         $(this).trigger('click');
                     });
                 }

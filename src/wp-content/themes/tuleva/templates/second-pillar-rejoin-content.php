@@ -288,9 +288,9 @@
                     <h2 class="text-center"><?php _e('Frequently asked questions', TEXT_DOMAIN); ?></h2>
                     <div class="faq-list">
                         <div class="qa__question-wrapper" id="millal-saan-uuesti-liituda">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I took money out of the II pillar after 2021. When can I rejoin?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I received my money later than May 2022. When can I rejoin?', TEXT_DOMAIN); ?></a>
                             <div id="answer-7" class="collapse">
-                                <p><?php _e('You can start saving again five years after you submitted your withdrawal application. You can apply before then, and there is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('The five years are counted from the date you submitted your withdrawal application, not from when the money reached you. If you applied in 2022 or later, you can apply again five years after that. There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
