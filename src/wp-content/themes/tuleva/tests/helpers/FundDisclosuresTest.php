@@ -34,6 +34,9 @@ final class FakeFundPage
     /** @var list<array{0: string, 1: mixed, 2: int}> field key, value, page */
     public static array $updates = [];
 
+    /** @var array<int, array<string, mixed>> what get_field() returns on a page other than the fund page */
+    public static array $page_fields = [];
+
     /** @var list<string> field keys whose writes ACF does not store */
     public static array $failing_writes = [];
 
@@ -42,6 +45,17 @@ final class FakeFundPage
 
     /** @var array<string, array<string, int>> fields another request saves right after a write to a field key */
     public static array $saved_meanwhile = [];
+
+    public static ?int $status_sent = null;
+
+    /** @var list<string> */
+    public static array $template_parts = [];
+
+    /** what get_current_screen() returns in wp-admin, null outside it */
+    public static ?object $screen = null;
+
+    /** @var list<array{0: string, 1: string}> script handle and inline script added to it */
+    public static array $inline_scripts = [];
 
     public static function reset(): void
     {
@@ -53,9 +67,14 @@ final class FakeFundPage
         self::$stored = [];
         self::$pages = [];
         self::$updates = [];
+        self::$page_fields = [];
         self::$failing_writes = [];
         self::$statuses = [];
         self::$saved_meanwhile = [];
+        self::$status_sent = null;
+        self::$template_parts = [];
+        self::$screen = null;
+        self::$inline_scripts = [];
     }
 }
 
@@ -63,6 +82,10 @@ function get_field($name, $post_id = false, $format_value = true)
 {
     if (!$format_value) {
         return FakeFundPage::$stored[$post_id][$name] ?? null;
+    }
+
+    if (isset(FakeFundPage::$page_fields[$post_id])) {
+        return FakeFundPage::$page_fields[$post_id][$name] ?? null;
     }
 
     $fields = ($post_id ?: FakeFundPage::$post_id) === FakeFundPage::ENGLISH_PAGE
@@ -113,7 +136,46 @@ if (!function_exists('acf_flush_value_cache')) {
 
 function get_posts($args = null)
 {
-    return FakeFundPage::$pages[$args['meta_value']] ?? [];
+    return array_values(array_filter(
+        FakeFundPage::$pages[$args['meta_value']] ?? [],
+        fn($page) => in_array(get_post_status($page), (array) ($args['post_status'] ?? 'publish'), true)
+    ));
+}
+
+if (!function_exists('wp_add_inline_script')) {
+    function wp_add_inline_script($handle, $data, $position = 'after')
+    {
+        FakeFundPage::$inline_scripts[] = [$handle, $data];
+
+        return true;
+    }
+}
+
+if (!function_exists('get_current_screen')) {
+    function get_current_screen()
+    {
+        return FakeFundPage::$screen;
+    }
+}
+
+if (!function_exists('status_header')) {
+    function status_header($code, $description = '')
+    {
+        FakeFundPage::$status_sent = $code;
+    }
+}
+
+if (!function_exists('nocache_headers')) {
+    function nocache_headers()
+    {
+    }
+}
+
+if (!function_exists('get_template_part')) {
+    function get_template_part($slug, $name = null, $args = [])
+    {
+        FakeFundPage::$template_parts[] = $slug;
+    }
 }
 
 function get_the_ID()
@@ -222,13 +284,6 @@ if (!function_exists('_e')) {
     }
 }
 
-if (!function_exists('esc_url')) {
-    function esc_url($value)
-    {
-        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-    }
-}
-
 if (!function_exists('esc_html')) {
     function esc_html($value)
     {
@@ -264,6 +319,13 @@ if (!function_exists('get_permalink')) {
     }
 }
 
+if (!function_exists('have_posts')) {
+    function have_posts()
+    {
+        return false;
+    }
+}
+
 if (!function_exists('get_the_title')) {
     function get_the_title($post = 0)
     {
@@ -273,6 +335,7 @@ if (!function_exists('get_the_title')) {
 
 require_once __DIR__ . '/../support/FakeOptions.php';
 require_once __DIR__ . '/../support/FakeAttachments.php';
+require_once __DIR__ . '/../support/FakeEscaping.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
@@ -290,12 +353,39 @@ final class FundDisclosuresTest extends TestCase
 
     private const SAVINGS_TEMPLATE = 'page_fund-savings.php';
 
+    private const SHARED_PAGE = 41000;
+
     protected function setUp(): void
     {
         FakeFundPage::reset();
         FakeOptions::reset();
         FakeWordPress::reset();
         FakeAttachments::reset();
+        $this->resetSharedPageLookup();
+        $this->resetRestTemplates();
+    }
+
+    private function resetRestTemplates(): void
+    {
+        $templates = &tuleva_rest_page_templates();
+        $templates = [];
+    }
+
+    /**
+     * What get_field() formats from the attachment ids the page stores, as ACF would.
+     */
+    private function showStoredFields(int $page): void
+    {
+        FakeFundPage::$page_fields[$page] = array_map(
+            fn($id) => FakeAttachments::$urls[$id] ?? '',
+            FakeFundPage::$stored[$page]
+        );
+    }
+
+    private function resetSharedPageLookup(): void
+    {
+        $found = &tuleva_shared_documents_page_found();
+        $found = [];
     }
 
     #[Test]
@@ -387,7 +477,7 @@ final class FundDisclosuresTest extends TestCase
     #[Test]
     public function the_investment_report_field_is_named_the_same_on_every_fund(): void
     {
-        foreach (array_keys(tuleva_fund_disclosure_scope()) as $template) {
+        foreach (array_column(self::fundTemplates(), 0) as $template) {
             $this->assertNotNull(
                 tuleva_fund_disclosure_requirement('investment_report_file', $template),
                 "$template must carry investment_report_file — onboarding-service sets it by name on every fund"
@@ -1242,6 +1332,487 @@ final class FundDisclosuresTest extends TestCase
         $this->assertStringNotContainsString('Old-Prospekt', $html);
         $this->assertStringNotContainsString('Old-tingimused', $html);
         $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    #[Test]
+    public function the_shared_documents_page_carries_the_documents_every_fund_links_and_nothing_per_fund(): void
+    {
+        $this->assertSame(
+            ['nav_procedure_file', 'nav_procedure_upcoming_file', 'sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file'],
+            array_keys(tuleva_fund_disclosure_scope()[TULEVA_SHARED_DOCUMENTS_TEMPLATE])
+        );
+
+        foreach (array_column(self::fundTemplates(), 0) as $template) {
+            foreach (['sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file'] as $name) {
+                $this->assertNull(tuleva_fund_disclosure_requirement($name, $template), "$template $name");
+            }
+        }
+    }
+
+    /**
+     * nav_procedure_file is the pension funds' procedure on the shared page and TKF100's own on
+     * its page. Neither may show up on the other's fund page.
+     */
+    #[Test]
+    public function the_shared_nav_procedure_reaches_the_pension_pages_and_not_tkf100(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.02.2027.pdf',
+        ];
+        FakeFundPage::$fields['nav_procedure_file']
+            = 'https://tuleva.ee/wp-content/uploads/2027/02/TKF100-NAV-sisekord-kehtib-alates-01.02.2027.pdf';
+
+        foreach (self::PENSION_TEMPLATES as $template) {
+            $html = $this->renderFundPage($template);
+            $this->assertStringContainsString('Pensionifondide-NAV-sisekord-kehtib-alates-01.02.2027.pdf', $html, $template);
+            $this->assertStringNotContainsString('TKF100-NAV-sisekord', $html, $template);
+        }
+
+        $savings = $this->renderSavingsPage();
+        $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.02.2027.pdf', $savings);
+        $this->assertStringNotContainsString('Pensionifondide-NAV-sisekord', $savings);
+    }
+
+    /**
+     * Before this page the upcoming URL was always empty, so the row never rendered. Now it is a
+     * field, and a filename with no date must not claim one.
+     */
+    #[Test]
+    public function an_undated_upcoming_pension_nav_procedure_claims_no_date(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-uus.pdf',
+        ];
+
+        $line = $this->lineContaining('Pensionifondide-NAV-sisekord-uus.pdf', explode('<br>', $this->renderFundPage('page_fund-bonds.php')));
+
+        $this->assertStringContainsString('Estonian)', $line);
+        $this->assertStringNotContainsString('effective from', $line);
+    }
+
+    /**
+     * Until an Administrator creates the page and its fields are set, a fund page links what
+     * it links today.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_fund_page_links_today_s_shared_documents_while_there_is_no_shared_page(string $template): void
+    {
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
+        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html);
+        $this->assertStringContainsString('Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf', $html);
+    }
+
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_fund_page_links_the_shared_page_s_documents_once_they_are_set(string $template): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'sustainability_risks_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Jatkusuutlikkusriskid-kehtib-alates-01.02.2027.pdf',
+            'remuneration_policy_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/Tasustamise-pohimotted-01.02.2027.pdf',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('Jatkusuutlikkusriskid-kehtib-alates-01.02.2027.pdf', $html);
+        $this->assertStringContainsString('Tasustamise-pohimotted-01.02.2027.pdf', $html);
+        $this->assertStringNotContainsString('Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
+        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html, 'an empty field keeps today\'s URL');
+    }
+
+    /**
+     * The pension funds' NAV procedure switches on its date like a fund's own upcoming
+     * document.
+     */
+    #[Test]
+    public function the_pension_funds_nav_procedure_switches_on_its_date_from_the_shared_page(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+        ];
+
+        FakeFundPage::$today = '2027-02-28';
+        $before = $this->renderFundPage('page_fund-stocks.php');
+        FakeFundPage::$today = '2027-03-01';
+        $after = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $before);
+        $this->assertStringContainsString('effective from 01.03.2027', $before);
+        $this->assertStringContainsString('Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf', $after);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $after);
+        $this->assertStringNotContainsString('effective from', $after);
+    }
+
+    #[Test]
+    public function the_hourly_job_moves_the_shared_page_s_due_nav_procedure_too(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_file' => 601, 'nav_procedure_upcoming_file' => 602];
+        FakeAttachments::$urls = [
+            601 => 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
+            602 => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+        ];
+
+        $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2027-03-01'));
+        $this->assertSame([
+            ['field_fund_disclosure_shared_documents_nav_procedure_file', 602, self::SHARED_PAGE],
+            ['field_fund_disclosure_shared_documents_nav_procedure_upcoming_file', '', self::SHARED_PAGE],
+        ], FakeFundPage::$updates);
+    }
+
+    /**
+     * A filled field beats the URL in the theme whatever the dates, on the shared page as on a fund
+     * page: with its current field empty, an upcoming NAV procedure dated before today's URL still
+     * takes over on its date, and the job moves it into the current field.
+     */
+    #[Test]
+    public function an_upcoming_nav_procedure_field_replaces_today_s_url_whatever_its_date_and_is_promoted(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => $upcoming];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => 602];
+        FakeAttachments::$urls = [602 => $upcoming];
+
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertStringContainsString('kehtib-alates-01.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from 01.09.2026', $html);
+        $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame(
+            ['nav_procedure_upcoming_file' => '', 'nav_procedure_file' => 602],
+            FakeFundPage::$stored[self::SHARED_PAGE]
+        );
+    }
+
+    /**
+     * The procedure in force used to live only in the upcoming field once its date passed, so the
+     * next upcoming upload replaced it and the pension pages went back to the superseded URL in the
+     * theme. The job now moves it into the current field first.
+     */
+    #[Test]
+    public function the_next_upcoming_nav_procedure_does_not_take_the_one_in_force_off_the_pension_pages(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeAttachments::$urls = [
+            602 => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
+            603 => 'https://tuleva.ee/wp-content/uploads/2027/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2027.pdf',
+        ];
+        FakeFundPage::$stored[self::SHARED_PAGE] = ['nav_procedure_upcoming_file' => 602];
+        $this->showStoredFields(self::SHARED_PAGE);
+
+        FakeFundPage::$today = '2027-03-01';
+        $this->assertStringContainsString('NAV-sisekord-kehtib-alates-01.03.2027.pdf', $this->renderFundPage('page_fund-stocks.php'));
+        tuleva_promote_due_documents(FakeFundPage::$today);
+        $this->assertSame(
+            ['nav_procedure_upcoming_file' => '', 'nav_procedure_file' => 602],
+            FakeFundPage::$stored[self::SHARED_PAGE]
+        );
+
+        FakeFundPage::$stored[self::SHARED_PAGE]['nav_procedure_upcoming_file'] = 603;
+        $this->showStoredFields(self::SHARED_PAGE);
+        FakeFundPage::$today = '2027-03-02';
+        $html = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertMatchesRegularExpression(
+            '/NAV-sisekord-kehtib-alates-01\.03\.2027\.pdf.*?<br>.*?NAV-sisekord-kehtib-alates-01\.09\.2027\.pdf.*?effective from 01\.09\.2027/s',
+            $html
+        );
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+    }
+
+    #[Test]
+    public function the_private_shared_page_is_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/policy.pdf'];
+
+        $this->assertSame('https://tuleva.ee/policy.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
+    }
+
+    #[Test]
+    public function a_shared_page_in_draft_is_not_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/draft.pdf'];
+
+        $this->assertSame('https://tuleva.ee/today.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
+    }
+
+    #[Test]
+    public function with_two_pages_on_the_shared_template_the_oldest_is_read(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE + 5, self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/oldest.pdf'];
+        FakeFundPage::$page_fields[self::SHARED_PAGE + 5] = ['remuneration_policy_file' => 'https://tuleva.ee/newer.pdf'];
+
+        $this->assertSame('https://tuleva.ee/oldest.pdf', tuleva_shared_document_url('remuneration_policy_file'));
+    }
+
+    /**
+     * The fund pages read one page, so a second one on the template changes nothing they show,
+     * and whoever edits it has to be told.
+     */
+    #[Test]
+    public function a_second_page_on_the_shared_template_is_reported(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE + 5, self::SHARED_PAGE];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+
+        $problem = tuleva_shared_documents_page_problem();
+
+        $this->assertStringContainsString('2 pages are on the Fund shared documents template', $problem);
+        $this->assertStringContainsString('read only page ' . self::SHARED_PAGE, $problem);
+    }
+
+    /**
+     * The page is never shown, and a draft, what a page created over REST is unless it says
+     * otherwise, would not be read; so a page on the shared template is saved as private.
+     */
+    #[Test]
+    public function a_page_on_the_shared_template_is_saved_as_private(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE], 'page_fund-stocks.php' => [17533]];
+        $saved = fn(array $data, array $postarr) => tuleva_shared_documents_page_status_on_save($data, $postarr)['post_status'];
+
+        foreach (['draft', 'pending', 'future', 'publish', 'private'] as $status) {
+            $this->assertSame('private', $saved(['post_type' => 'page', 'post_status' => $status], ['ID' => self::SHARED_PAGE]), $status);
+        }
+
+        $this->assertSame('private', $saved(['post_type' => 'page', 'post_status' => 'draft'], ['ID' => 0, 'page_template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE]));
+        $this->assertSame('trash', $saved(['post_type' => 'page', 'post_status' => 'trash'], ['ID' => self::SHARED_PAGE]));
+        $this->assertSame('draft', $saved(['post_type' => 'page', 'post_status' => 'draft'], ['ID' => 17533]));
+        $this->assertSame('publish', $saved(['post_type' => 'post', 'post_status' => 'publish'], ['ID' => 0, 'page_template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE]));
+    }
+
+    /**
+     * Over REST WordPress sets the template only after the page is saved, so the status is set
+     * from the request.
+     */
+    #[Test]
+    public function a_page_created_over_rest_on_the_shared_template_is_saved_as_private(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+        $saved = fn(object $post, array $request) => tuleva_shared_documents_page_status_over_rest($post, $request);
+
+        $this->assertSame('private', $saved((object) [], ['template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE])->post_status);
+        $this->assertSame('private', $saved((object) ['post_status' => 'publish'], ['template' => TULEVA_SHARED_DOCUMENTS_TEMPLATE])->post_status);
+        $this->assertSame('private', $saved((object) ['ID' => self::SHARED_PAGE, 'post_status' => 'draft'], [])->post_status);
+        $this->assertSame('draft', $saved((object) ['post_status' => 'draft'], ['template' => 'page_fund-stocks.php'])->post_status);
+        $this->assertObjectNotHasProperty('post_status', $saved((object) [], []));
+    }
+
+    /**
+     * A REST update runs rest_pre_insert_page, then wp_insert_post_data with the page as it is
+     * stored merged in, its template still the one the request is changing.
+     */
+    private function saveOverRest(int $page, string $status, array $request): string
+    {
+        $post = tuleva_shared_documents_page_status_over_rest((object) ['ID' => $page, 'post_status' => $status], $request);
+
+        return tuleva_shared_documents_page_status_on_save(
+            ['post_type' => 'page', 'post_status' => $post->post_status],
+            ['ID' => $page, 'page_template' => (string) get_page_template_slug($page)]
+        )['post_status'];
+    }
+
+    #[Test]
+    public function moving_the_shared_page_off_its_template_over_rest_keeps_the_status_asked_for(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+
+        $this->assertSame('publish', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['template' => '']));
+    }
+
+    /**
+     * The block editor saves over REST and sends the template only when it changes.
+     */
+    #[Test]
+    public function a_block_editor_save_takes_the_template_it_sets_and_otherwise_the_page_s(): void
+    {
+        FakeFundPage::$pages = [TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE]];
+
+        $this->assertSame('publish', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['template' => 'page_fund-stocks.php']));
+        $this->resetRestTemplates();
+        $this->assertSame('private', $this->saveOverRest(self::SHARED_PAGE, 'publish', ['title' => 'Fund shared documents']));
+    }
+
+    #[Test]
+    public function one_shared_page_that_is_read_or_none_yet_is_not_a_problem(): void
+    {
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE, self::SHARED_PAGE + 5];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
+        FakeFundPage::$statuses[self::SHARED_PAGE + 5] = 'trash';
+        $this->resetSharedPageLookup();
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * A translation reads its Estonian original, so it is not a second page.
+     */
+    /**
+     * The pages counted are the ones the fund pages could read: a translation on the template
+     * whose Estonian original is on another one is neither.
+     */
+    #[Test]
+    public function a_translation_whose_original_is_on_another_template_is_not_a_second_page(): void
+    {
+        FakeFundPage::$pages = [
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, FakeFundPage::ENGLISH_PAGE],
+            self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE],
+        ];
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    #[Test]
+    public function a_translation_of_the_shared_page_is_not_a_second_one(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$statuses[FakeFundPage::ESTONIAN_PAGE] = 'private';
+
+        $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * Said where it matters: on the edit screen of each page that reads the shared page, and
+     * of the shared page itself.
+     */
+    #[Test]
+    public function the_problem_shows_on_the_edit_screens_of_the_fund_pages_and_the_shared_page(): void
+    {
+        FakeFundPage::$pages = [
+            'page_fund-stocks.php' => [17533],
+            'page_front.php' => [2],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, self::SHARED_PAGE + 5],
+        ];
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        foreach ([17533, self::SHARED_PAGE] as $page) {
+            FakeFundPage::$post_id = $page;
+            $this->assertStringContainsString('Keep one page on the template', tuleva_shared_documents_page_notice(), "page $page");
+        }
+
+        FakeFundPage::$post_id = 2;
+        $this->assertSame('', tuleva_shared_documents_page_notice());
+
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = (object) ['base' => 'edit', 'post_type' => 'page'];
+        $this->assertSame('', tuleva_shared_documents_page_notice());
+
+        FakeFundPage::$screen = null;
+        $this->assertSame('', tuleva_shared_documents_page_notice());
+    }
+
+    /**
+     * The block editor hides admin notices and takes its own, so each editor shows the warning
+     * once and runs the lookup once. It can be dismissed: the block editor does not reload on save.
+     */
+    #[Test]
+    public function the_warning_shows_once_on_either_editor_and_can_be_dismissed(): void
+    {
+        FakeFundPage::$pages = [
+            'page_fund-stocks.php' => [17533],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE, self::SHARED_PAGE + 5],
+        ];
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = new class {
+            public string $base = 'post';
+            public string $post_type = 'page';
+            public bool $block_editor = true;
+
+            public function is_block_editor(): bool
+            {
+                return $this->block_editor;
+            }
+        };
+
+        ob_start();
+        tuleva_shared_documents_page_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+        tuleva_shared_documents_page_block_editor_notice();
+
+        $this->assertSame('', $admin_notice);
+        $this->assertCount(1, FakeFundPage::$inline_scripts);
+        $this->assertSame('wp-notices', FakeFundPage::$inline_scripts[0][0]);
+        $this->assertStringContainsString('isDismissible: true', FakeFundPage::$inline_scripts[0][1]);
+
+        FakeFundPage::$screen->block_editor = false;
+        ob_start();
+        tuleva_shared_documents_page_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+
+        $this->assertStringContainsString('is-dismissible', $admin_notice);
+        $this->assertStringContainsString('Keep one page on the template', $admin_notice);
+    }
+
+    /**
+     * The documents show on the fund pages only. The page that holds them answers 404 to
+     * everyone, so publishing it by mistake does not put a second list of them on the site.
+     */
+    #[Test]
+    public function the_shared_page_is_never_shown(): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/policy.pdf'];
+        $GLOBALS['wp_query'] = new class {
+            public bool $is_404 = false;
+
+            public function set_404(): void
+            {
+                $this->is_404 = true;
+            }
+        };
+
+        ob_start();
+        try {
+            include __DIR__ . '/../../page_fund-shared-documents.php';
+        } finally {
+            $html = (string) ob_get_clean();
+            $query = $GLOBALS['wp_query'];
+            unset($GLOBALS['wp_query']);
+        }
+
+        $this->assertTrue($query->is_404);
+        $this->assertSame(404, FakeFundPage::$status_sent);
+        $this->assertSame(['404'], FakeFundPage::$template_parts);
+        $this->assertStringNotContainsString('policy.pdf', $html);
+    }
+
+    /**
+     * The shared documents are field values now, not paths in the theme, so they are escaped
+     * into the link like every other field URL on the page.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function the_shared_documents_are_escaped_into_their_links(string $template): void
+    {
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.10.2026.pdf?"data-x="nav',
+            'nav_procedure_upcoming_file' => 'https://tuleva.ee/NAV-sisekord-kehtib-alates-01.03.2027.pdf?"data-x="nav-upcoming',
+            'sustainability_risks_file' => 'https://tuleva.ee/Jatkusuutlikkus.pdf?"data-x="sustainability',
+            'adverse_impacts_file' => 'javascript:alert(document.cookie)',
+            'remuneration_policy_file' => 'https://tuleva.ee/Tasustamine.pdf?"data-x="remuneration',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('href="https://tuleva.ee/Tasustamine.pdf?data-x=remuneration"', $html);
+        $this->assertStringNotContainsString('"data-x=', $html);
+        $this->assertStringNotContainsString('javascript:', $html);
     }
 
     /**
