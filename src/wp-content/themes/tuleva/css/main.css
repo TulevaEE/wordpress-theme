@@ -20299,8 +20299,6 @@ sup {
 }
 .future-me-page .future-me-login-note {
   margin: 1rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.5;
 }
 .future-me-page .future-me-answers {
   margin-top: 0;
@@ -20334,6 +20332,9 @@ sup {
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.35;
+}
+.future-me-page .future-me-answers .who-card p {
+  font-size: 1rem;
 }
 .future-me-page .future-me-arc {
   position: relative;
@@ -20397,8 +20398,6 @@ sup {
 .future-me-page .future-me-stage .question {
   margin-top: 0.125rem;
   color: #6B7074;
-  font-size: 0.9375rem;
-  line-height: 1.5;
 }
 .future-me-page .future-me-stage--result::before {
   top: 0.3rem;
@@ -20411,7 +20410,7 @@ sup {
 @media (min-width: 992px) {
   .future-me-page .future-me-arc {
     max-width: none;
-    height: 23rem;
+    height: 28rem;
     margin-top: 1.5rem;
   }
   .future-me-page .future-me-arc-line {
@@ -20436,7 +20435,7 @@ sup {
     position: absolute;
     top: var(--y);
     left: var(--x);
-    width: 15%;
+    width: 16%;
     padding: 1.5rem 0 0;
     text-align: center;
     -webkit-transform: translateX(-50%);
@@ -20454,12 +20453,6 @@ sup {
   }
   .future-me-page .future-me-stage .age {
     font-size: 1.25rem;
-  }
-  .future-me-page .future-me-stage .what {
-    font-size: 0.9375rem;
-  }
-  .future-me-page .future-me-stage .question {
-    font-size: 0.875rem;
   }
   .future-me-page .future-me-stage--result::before {
     left: 50%;
@@ -20486,8 +20479,6 @@ sup {
   max-width: 40rem;
   margin: 2rem auto 0;
   color: #6B7074;
-  font-size: 0.875rem;
-  line-height: 1.55;
   text-align: center;
 }
 

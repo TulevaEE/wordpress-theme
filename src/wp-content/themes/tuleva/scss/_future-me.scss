@@ -51,8 +51,6 @@
 
     .future-me-login-note {
         margin: 1rem 0 0;
-        font-size: .875rem;
-        line-height: 1.5;
     }
 
     .future-me-answers {
@@ -89,6 +87,10 @@
             font-weight: $font-weight-bold;
             letter-spacing: normal;
             line-height: 1.35;
+        }
+
+        .who-card p {
+            font-size: 1rem;
         }
     }
 
@@ -164,8 +166,6 @@
         .question {
             margin-top: .125rem;
             color: $text-secondary;
-            font-size: .9375rem;
-            line-height: 1.5;
         }
     }
 
@@ -181,7 +181,7 @@
     @include media-breakpoint-up(lg) {
         .future-me-arc {
             max-width: none;
-            height: 23rem;
+            height: 28rem;
             margin-top: 1.5rem;
         }
 
@@ -210,7 +210,7 @@
             position: absolute;
             top: var(--y);
             left: var(--x);
-            width: 15%;
+            width: 16%;
             padding: 1.5rem 0 0;
             text-align: center;
             transform: translateX(-50%);
@@ -228,14 +228,6 @@
 
             .age {
                 font-size: 1.25rem;
-            }
-
-            .what {
-                font-size: .9375rem;
-            }
-
-            .question {
-                font-size: .875rem;
             }
         }
 
@@ -267,8 +259,6 @@
         max-width: 40rem;
         margin: 2rem auto 0;
         color: $text-secondary;
-        font-size: .875rem;
-        line-height: 1.55;
         text-align: center;
     }
 }
