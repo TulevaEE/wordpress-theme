@@ -13,10 +13,35 @@ final class FakeFundPage
     public const ESTONIAN_PAGE = 35292;
     public const ENGLISH_PAGE = 36156;
 
+    /**
+     * A day before any test document takes effect, so a rendered page does not change as
+     * the calendar passes the dates the tests use.
+     */
+    public const TODAY = '2026-11-02';
+
     public static array $fields = [];
     public static array $english_fields = [];
     public static int $post_id = self::ESTONIAN_PAGE;
     public static string $template = '';
+    public static string $today = self::TODAY;
+
+    /** @var array<int, array<string, int>> the attachment ids ACF stores, by page */
+    public static array $stored = [];
+
+    /** @var array<string, list<int>> the pages on each template, translations included */
+    public static array $pages = [];
+
+    /** @var list<array{0: string, 1: mixed, 2: int}> field key, value, page */
+    public static array $updates = [];
+
+    /** @var list<string> field keys whose writes ACF does not store */
+    public static array $failing_writes = [];
+
+    /** @var array<int, string> post status by page, 'publish' when not listed */
+    public static array $statuses = [];
+
+    /** @var array<string, array<string, int>> fields another request saves right after a write to a field key */
+    public static array $saved_meanwhile = [];
 
     public static function reset(): void
     {
@@ -24,16 +49,71 @@ final class FakeFundPage
         self::$english_fields = [];
         self::$post_id = self::ESTONIAN_PAGE;
         self::$template = '';
+        self::$today = self::TODAY;
+        self::$stored = [];
+        self::$pages = [];
+        self::$updates = [];
+        self::$failing_writes = [];
+        self::$statuses = [];
+        self::$saved_meanwhile = [];
     }
 }
 
-function get_field($name, $post_id = false)
+function get_field($name, $post_id = false, $format_value = true)
 {
+    if (!$format_value) {
+        return FakeFundPage::$stored[$post_id][$name] ?? null;
+    }
+
     $fields = ($post_id ?: FakeFundPage::$post_id) === FakeFundPage::ENGLISH_PAGE
         ? FakeFundPage::$english_fields
         : FakeFundPage::$fields;
 
     return $fields[$name] ?? null;
+}
+
+/**
+ * Stores the value under the field's name, as ACF does, unless the key is set to fail.
+ */
+function update_field($selector, $value, $post_id = false)
+{
+    FakeFundPage::$updates[] = [$selector, $value, $post_id];
+
+    if (in_array($selector, FakeFundPage::$failing_writes, true)) {
+        return false;
+    }
+
+    foreach (tuleva_fund_disclosure_scope() as $template => $scope) {
+        foreach (array_keys($scope) as $name) {
+            if (tuleva_fund_disclosure_field($name, $template)['key'] === $selector) {
+                FakeFundPage::$stored[$post_id][$name] = $value;
+            }
+        }
+    }
+
+    foreach (FakeFundPage::$saved_meanwhile[$selector] ?? [] as $name => $saved) {
+        FakeFundPage::$stored[$post_id][$name] = $saved;
+    }
+
+    return true;
+}
+
+if (!function_exists('wp_cache_delete')) {
+    function wp_cache_delete($key, $group = '')
+    {
+        return true;
+    }
+}
+
+if (!function_exists('acf_flush_value_cache')) {
+    function acf_flush_value_cache($post_id = 0, $field_name = '')
+    {
+    }
+}
+
+function get_posts($args = null)
+{
+    return FakeFundPage::$pages[$args['meta_value']] ?? [];
 }
 
 function get_the_ID()
@@ -50,12 +130,34 @@ function apply_filters($hook, $value, ...$args)
         return FakeFundPage::ESTONIAN_PAGE;
     }
 
+    if ($hook === 'tuleva_today') {
+        return FakeFundPage::$today;
+    }
+
     return $value;
 }
 
+/**
+ * The rendered page's template, or a listed page's.
+ */
 function get_page_template_slug($post = null)
 {
-    return FakeFundPage::$template;
+    if ($post === null) {
+        return FakeFundPage::$template;
+    }
+
+    foreach (FakeFundPage::$pages as $template => $pages) {
+        if (in_array($post, $pages, true)) {
+            return $template;
+        }
+    }
+
+    return '';
+}
+
+function get_post_status($post = null)
+{
+    return FakeFundPage::$statuses[$post] ?? 'publish';
 }
 
 /**
@@ -76,6 +178,20 @@ if (!function_exists('add_filter')) {
 if (!function_exists('add_action')) {
     function add_action($hook, $callback, $priority = 10, $args = 1)
     {
+    }
+}
+
+if (!function_exists('wp_next_scheduled')) {
+    function wp_next_scheduled($hook, $args = [])
+    {
+        return false;
+    }
+}
+
+if (!function_exists('wp_schedule_event')) {
+    function wp_schedule_event($timestamp, $recurrence, $hook, $args = [])
+    {
+        return true;
     }
 }
 
@@ -156,6 +272,7 @@ if (!function_exists('get_the_title')) {
 }
 
 require_once __DIR__ . '/../support/FakeOptions.php';
+require_once __DIR__ . '/../support/FakeAttachments.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
@@ -178,6 +295,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::reset();
         FakeOptions::reset();
         FakeWordPress::reset();
+        FakeAttachments::reset();
     }
 
     #[Test]
@@ -779,6 +897,394 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertStringNotContainsString('Management fee', $html);
         $this->assertStringNotContainsString("Fund manager's participation rate in fund", $html);
+    }
+
+    /**
+     * The switch was approved when the upcoming document was set, so on its date the page
+     * makes it with nobody acting.
+     */
+    #[Test]
+    public function an_upcoming_document_is_the_current_one_from_its_date(): void
+    {
+        $current = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.2026.pdf';
+        $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/08/Prospekt-kehtib-alates-01.01.2027.pdf';
+
+        $this->assertSame([$current, $upcoming], tuleva_document_versions($current, $upcoming, '2026-12-31'));
+        $this->assertSame([$upcoming, ''], tuleva_document_versions($current, $upcoming, '2027-01-01'));
+        $this->assertSame([$upcoming, ''], tuleva_document_versions('', $upcoming, '2027-01-01'));
+    }
+
+    /**
+     * A template fallback outlives its field: once the current field has moved on to a
+     * newer document, the fallback's date has passed as well, and promoting it would put
+     * the older document back on the page.
+     */
+    #[Test]
+    public function an_upcoming_document_older_than_the_current_one_is_dropped(): void
+    {
+        $current = 'https://tuleva.ee/wp-content/uploads/2027/06/Prospekt-kehtib-alates-01.07.2027.pdf';
+        $leftover = 'https://tuleva.ee/wp-content/uploads/2026/08/Prospekt-kehtib-alates-01.01.2027.pdf';
+
+        $this->assertSame([$current, ''], tuleva_document_versions($current, $leftover, '2027-08-01'));
+    }
+
+    #[Test]
+    public function an_upcoming_document_with_no_date_stays_upcoming(): void
+    {
+        $current = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.2026.pdf';
+        $undated = 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-uus.pdf';
+
+        $this->assertSame([$current, $undated], tuleva_document_versions($current, $undated, '2030-01-01'));
+    }
+
+    /**
+     * @return array<string, array{string, string, string}>
+     */
+    public static function pensionFundsSwitchingOn01012027(): array
+    {
+        return [
+            'TUK75' => ['page_fund-stocks.php', 'TUK75-tingimused-kehtivad-alates-31.08.2026.pdf', 'TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf'],
+            'TUK00' => ['page_fund-bonds.php', 'TUK00-tingimused-kehtivad-alates-31.08.2026.pdf', 'TUK00-tingimused-kehtivad-alates-01.01.2027.pdf'],
+        ];
+    }
+
+    /**
+     * TUK75's and TUK00's new prospectus and terms take effect on 01.01.2027, a public
+     * holiday. They switch from the upcoming fields, which an Administrator fills before this
+     * deploys, while the current documents still render from the template.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
+    public function a_pension_page_shows_its_upcoming_documents_as_current_from_their_date(
+        string $template,
+        string $terms,
+        string $upcoming_terms
+    ): void {
+        FakeFundPage::$fields = [
+            'prospectus_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf',
+            'terms_upcoming_file' => "https://tuleva.ee/wp-content/uploads/2026/08/$upcoming_terms",
+        ];
+        FakeFundPage::$today = '2026-12-31';
+        $before = $this->renderFundPage($template);
+
+        FakeFundPage::$today = '2027-01-01';
+        $after = $this->renderFundPage($template);
+
+        $this->assertStringContainsString($terms, $before);
+        $this->assertStringContainsString('effective from 01.01.2027', $before);
+        $this->assertStringContainsString('TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf', $after);
+        $this->assertStringContainsString($upcoming_terms, $after);
+        $this->assertStringNotContainsString('TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf', $after);
+        $this->assertStringNotContainsString($terms, $after);
+        $this->assertStringNotContainsString('effective from', $after);
+    }
+
+    /**
+     * A document is scheduled only by its upcoming field; the template has no upcoming URL to
+     * fall back to, so with the field empty the page keeps the document in force.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
+    public function a_pension_page_schedules_no_document_its_fields_do_not_hold(
+        string $template,
+        string $terms,
+        string $upcoming_terms
+    ): void {
+        $before = $this->renderFundPage($template);
+        FakeFundPage::$today = '2027-01-02';
+        $after = $this->renderFundPage($template);
+
+        foreach ([$before, $after] as $html) {
+            $this->assertStringContainsString($terms, $html);
+            $this->assertStringContainsString('TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf', $html);
+            $this->assertStringNotContainsString($upcoming_terms, $html);
+            $this->assertStringNotContainsString('01.01.2027', $html);
+        }
+    }
+
+    #[Test]
+    public function the_savings_page_switches_its_own_nav_procedure_too(): void
+    {
+        FakeFundPage::$today = '2027-03-01';
+        FakeFundPage::$fields['nav_procedure_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2027/02/TKF100-NAV-sisekord-kehtib-alates-01.03.2027.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.03.2027.pdf', $html);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    /**
+     * The REST `acf` values that the app and agent-gateway read have to follow the page,
+     * and the next upcoming document needs an empty field to go into. The English page is
+     * a translation that reads the Estonian one, so it is never written.
+     */
+    #[Test]
+    public function the_hourly_job_moves_a_due_upcoming_document_into_the_current_field(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+
+        $promoted = tuleva_promote_due_documents('2027-01-01');
+
+        $this->assertSame([['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']], $promoted);
+        $this->assertSame(
+            [
+                ['field_fund_savings_prospectus', 102, FakeFundPage::ESTONIAN_PAGE],
+                ['field_fund_savings_prospectus_upcoming', '', FakeFundPage::ESTONIAN_PAGE],
+            ],
+            FakeFundPage::$updates
+        );
+    }
+
+    #[Test]
+    public function the_hourly_job_leaves_a_document_not_yet_due_and_empties_a_leftover(): void
+    {
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = [
+            'prospectus_file' => 201,
+            'prospectus_upcoming_file' => 202,
+            'terms_file' => 203,
+            'terms_upcoming_file' => 204,
+        ];
+        FakeAttachments::$urls = [
+            201 => 'https://tuleva.ee/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf',
+            202 => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf',
+            203 => 'https://tuleva.ee/wp-content/uploads/2027/06/TUK75-tingimused-kehtivad-alates-01.07.2027.pdf',
+            204 => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-12-31'));
+        $this->assertSame([], FakeFundPage::$updates);
+
+        $this->assertSame([['post' => 17533, 'field' => 'prospectus_file']], tuleva_promote_due_documents('2027-07-15'));
+        $this->assertSame([
+            ['field_fund_disclosure_stocks_prospectus_file', 202, 17533],
+            ['field_fund_disclosure_stocks_prospectus_upcoming_file', '', 17533],
+            ['field_fund_disclosure_stocks_terms_upcoming_file', '', 17533],
+        ], FakeFundPage::$updates);
+    }
+
+    /**
+     * A filled field beats a template URL whatever the dates, so the job need not see the template
+     * URL a page with an empty current field shows: a due upcoming field is the current document
+     * there too. These terms are older than TUK75's template URL (31.08.2026) and still move.
+     */
+    #[Test]
+    public function the_hourly_job_moves_a_due_upcoming_field_into_an_empty_current_field(): void
+    {
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
+        FakeAttachments::$urls = [
+            204 => 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-06-30'));
+        $this->assertSame([], FakeFundPage::$updates);
+
+        $this->assertSame([['post' => 17533, 'field' => 'terms_file']], tuleva_promote_due_documents('2026-11-02'));
+        $this->assertSame([
+            ['field_fund_disclosure_stocks_terms_file', 204, 17533],
+            ['field_fund_disclosure_stocks_terms_upcoming_file', '', 17533],
+        ], FakeFundPage::$updates);
+    }
+
+    /**
+     * What the job writes is what the page already showed, so the page does not change when it runs.
+     */
+    #[Test]
+    public function a_page_shows_the_same_before_and_after_the_job_fills_its_empty_current_field(): void
+    {
+        $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/06/TUK75-tingimused-kehtivad-alates-01.07.2026.pdf';
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$stored[17533] = ['terms_upcoming_file' => 204];
+        FakeAttachments::$urls = [204 => $upcoming];
+        FakeFundPage::$fields['terms_upcoming_file'] = $upcoming;
+
+        $before = $this->renderFundPage('page_fund-stocks.php');
+        tuleva_promote_due_documents(FakeFundPage::TODAY);
+        FakeFundPage::$fields = array_map(fn($id) => FakeAttachments::$urls[$id] ?? '', FakeFundPage::$stored[17533]);
+        $after = $this->renderFundPage('page_fund-stocks.php');
+
+        $this->assertSame(['terms_upcoming_file' => '', 'terms_file' => $upcoming], FakeFundPage::$fields);
+        $this->assertStringContainsString($upcoming, $before);
+        $this->assertSame($before, $after);
+    }
+
+    /**
+     * Every template's current URL gives way to a due upcoming field, even one dated before it.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function a_due_upcoming_field_replaces_the_template_s_current_url_whatever_its_date(string $template): void
+    {
+        FakeFundPage::$fields['terms_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/06/tingimused-kehtivad-alates-01.07.2026.pdf';
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('2026/06/tingimused-kehtivad-alates-01.07.2026.pdf', $html);
+        $this->assertStringNotContainsString('tingimused-kehtivad-alates-31.08.2026.pdf', $html);
+        $this->assertStringNotContainsString('ingimused-kehtivad-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from 01.07.2026', $html);
+    }
+
+    #[Test]
+    public function the_savings_page_s_upcoming_nav_procedure_field_replaces_its_template_url_whatever_its_date(): void
+    {
+        FakeFundPage::$fields['nav_procedure_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2026/08/TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
+        $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    #[Test]
+    public function an_upcoming_document_stays_for_the_next_run_when_the_current_write_did_not_land(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+        FakeFundPage::$failing_writes = ['field_fund_savings_prospectus'];
+
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+        $this->assertSame(102, FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]['prospectus_upcoming_file']);
+
+        FakeFundPage::$failing_writes = [];
+        $this->assertSame(
+            [['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']],
+            tuleva_promote_due_documents('2027-01-01')
+        );
+        $this->assertSame(
+            ['prospectus_file' => 102, 'prospectus_upcoming_file' => ''],
+            FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
+        );
+    }
+
+    #[Test]
+    public function an_upcoming_document_saved_while_the_job_promotes_the_last_one_stays(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf',
+            103 => 'https://tuleva.ee/wp-content/uploads/2027/01/TKF100-Prospekt-kehtib-alates-01.04.2027.pdf',
+        ];
+        FakeFundPage::$saved_meanwhile = ['field_fund_savings_prospectus' => ['prospectus_upcoming_file' => 103]];
+
+        $this->assertSame(
+            [['post' => FakeFundPage::ESTONIAN_PAGE, 'field' => 'prospectus_file']],
+            tuleva_promote_due_documents('2027-01-01')
+        );
+        $this->assertSame(
+            ['prospectus_file' => 102, 'prospectus_upcoming_file' => 103],
+            FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE]
+        );
+    }
+
+    /**
+     * The job writes the fields of the page a translation reads from, so that original has to be
+     * published and on the same template; otherwise one template's field keys would be written
+     * to another's page.
+     */
+    #[Test]
+    public function the_hourly_job_writes_only_an_original_that_is_published_on_the_same_template(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::ENGLISH_PAGE];
+        FakeFundPage::$pages['page_fund-stocks.php'] = [FakeFundPage::ESTONIAN_PAGE];
+        FakeFundPage::$stored[FakeFundPage::ESTONIAN_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+
+        FakeFundPage::$pages = [self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE]];
+        FakeFundPage::$statuses[FakeFundPage::ESTONIAN_PAGE] = 'draft';
+
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+    }
+
+    /**
+     * Every template takes the switch for both its prospectus and its terms.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
+    public function every_fund_page_switches_its_upcoming_fields_on_their_date(string $template): void
+    {
+        FakeFundPage::$today = '2027-02-01';
+        FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/01/Old-Prospekt-kehtib-alates-01.01.2026.pdf',
+            'terms_file' => 'https://tuleva.ee/wp-content/uploads/2026/01/Old-tingimused-kehtivad-alates-01.01.2026.pdf',
+            'prospectus_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/New-Prospekt-kehtib-alates-01.02.2027.pdf',
+            'terms_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/01/New-tingimused-kehtivad-alates-01.02.2027.pdf',
+        ];
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringContainsString('New-Prospekt-kehtib-alates-01.02.2027.pdf', $html);
+        $this->assertStringContainsString('New-tingimused-kehtivad-alates-01.02.2027.pdf', $html);
+        $this->assertStringNotContainsString('Old-Prospekt', $html);
+        $this->assertStringNotContainsString('Old-tingimused', $html);
+        $this->assertStringNotContainsString('effective from', $html);
+    }
+
+    /**
+     * The fields switch by date and the template's URL fills in where they leave no current
+     * document: a due upcoming field takes over from it whatever its date, and between two fields
+     * an upcoming one dated on or before the current one is a leftover.
+     */
+    #[Test]
+    public function the_fields_go_over_the_template_s_url(): void
+    {
+        $template = 'https://tuleva.ee/t/Prospekt-kehtib-alates-31.08.2026.pdf';
+        $older = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.07.2026.pdf';
+        $next = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.01.2027.pdf';
+        $undated = 'https://tuleva.ee/f/Prospekt-uus.pdf';
+        $page = fn(string $current, string $upcoming, string $today)
+            => tuleva_document_versions_on_page($current, $upcoming, $template, $today);
+
+        $this->assertSame([$template, ''], $page('', '', '2027-01-01'));
+        $this->assertSame([$template, $next], $page('', $next, '2026-12-31'));
+        $this->assertSame([$next, ''], $page('', $next, '2027-01-01'));
+        $this->assertSame([$older, ''], $page('', $older, '2026-11-02'));
+
+        $this->assertSame([$older, $next], $page($older, $next, '2026-12-31'));
+        $this->assertSame([$next, ''], $page($older, $next, '2027-01-01'));
+        $this->assertSame([$next, ''], $page($next, $older, '2027-01-01'));
+        $this->assertSame([$next, ''], $page($undated, $next, '2027-01-01'));
+    }
+
+    /**
+     * Only the prospectus, the terms and the NAV procedure have an upcoming version; any other
+     * document resolves on its own, and one outside the fund's scope to nothing.
+     */
+    #[Test]
+    public function a_document_with_no_upcoming_version_resolves_on_its_own(): void
+    {
+        FakeFundPage::$template = 'page_fund-stocks.php';
+
+        $this->assertSame(
+            ['https://tuleva.ee/kid.pdf', ''],
+            tuleva_fund_document('key_investor_info_file', 'https://tuleva.ee/kid.pdf')
+        );
+        $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file', 'https://tuleva.ee/rights.pdf'));
+        $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file', 'https://tuleva.ee/nav.pdf'));
     }
 
     /**
