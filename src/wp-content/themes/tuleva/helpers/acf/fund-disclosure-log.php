@@ -229,11 +229,9 @@ function tuleva_disclosure_pre_update($check, $value, $post_id, $field)
 add_filter('acf/pre_update_value', 'tuleva_disclosure_pre_update', 10, 4);
 
 /**
- * Notes a change to a disclosure field, to be logged once ACF's meta write lands
- * (tuleva_disclosure_on_meta_write): a write that fails is then never logged. A refused write
- * stops at tuleva_disclosure_pre_update; should one get here anyway, the stored value is
- * kept, and null has ACF delete rather than write where nothing was stored, so no empty row
- * is left.
+ * A refused write stops at tuleva_disclosure_pre_update; should one get here anyway, the
+ * stored value is kept, and null has ACF delete rather than write where nothing was stored,
+ * so no empty row is left.
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
@@ -244,15 +242,9 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
     }
 
     $before = get_post_meta((int) $post_id, $name, true);
-    $route = tuleva_disclosure_write_route();
 
-    if (!tuleva_disclosure_may_write($route)) {
+    if (!tuleva_disclosure_may_write(tuleva_disclosure_write_route())) {
         return $before === '' ? null : $before;
-    }
-
-    if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($value)) {
-        $pending = &tuleva_disclosure_writes_pending();
-        $pending[(int) $post_id][$name] = ['before' => $before, 'route' => $route];
     }
 
     return $value;
@@ -261,8 +253,53 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
 add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
 
 /**
- * @return array<int, array<string, array{before: mixed, route: string}>> the changes ACF is
- *     about to store, by page and field, for this request
+ * Notes the change ACF is about to store in a disclosure field, as it stores it: the value
+ * before, the value it writes (a deletion writes ''), and the route, to be logged once
+ * WordPress has stored it (tuleva_disclosure_on_meta_write). ACF writes a field's value and
+ * then the field's reference row, through these same filters, so the reference write ends
+ * the note: a note applies to this one write, stored or not, and never to a later one.
+ * Last, so a filter that short-circuits the write is seen. A revision or an autosave (a
+ * preview) is not noted, since its log entry would land on the page; the lock still applies
+ * to it.
+ */
+function tuleva_disclosure_note_write($pre, $post_id, $name, $value = '', $hidden = false)
+{
+    if (!is_numeric($post_id) || !tuleva_is_disclosure((string) $name)) {
+        return $pre;
+    }
+
+    $post_id = (int) $post_id;
+    $pending = &tuleva_disclosure_writes_pending();
+    unset($pending[$post_id][$name]);
+
+    if ($pre !== null || $hidden || wp_is_post_revision($post_id)) {
+        return $pre;
+    }
+
+    $before = get_post_meta($post_id, $name, true);
+
+    if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($value)) {
+        $pending[$post_id][$name] = [
+            'before' => $before,
+            'after' => tuleva_disclosure_scalar($value),
+            'route' => tuleva_disclosure_write_route(),
+        ];
+    }
+
+    return $pre;
+}
+
+function tuleva_disclosure_note_delete($pre, $post_id, $name, $hidden = false)
+{
+    return tuleva_disclosure_note_write($pre, $post_id, $name, '', $hidden);
+}
+
+add_filter('acf/pre_update_metadata', 'tuleva_disclosure_note_write', PHP_INT_MAX, 5);
+add_filter('acf/pre_delete_metadata', 'tuleva_disclosure_note_delete', PHP_INT_MAX, 4);
+
+/**
+ * @return array<int, array<string, array{before: mixed, after: string, route: string}>> the
+ *     write ACF is making, by page and field, for this request
  */
 function &tuleva_disclosure_writes_pending(): array
 {
@@ -274,14 +311,14 @@ function &tuleva_disclosure_writes_pending(): array
 /**
  * Logs a change ACF noted, once WordPress has stored it: these hooks fire only after the row
  * is added, updated or deleted. Any other write to the key (WP-CLI, WPML's copy to a
- * translation, a revision's copy) has nothing noted and is passed over.
+ * translation, a revision's copy) has nothing noted, or another value, and is passed over.
  */
 function tuleva_disclosure_on_meta_write($meta_id, $object_id, $meta_key, $meta_value): void
 {
     $pending = &tuleva_disclosure_writes_pending();
     $write = $pending[(int) $object_id][(string) $meta_key] ?? null;
 
-    if ($write === null) {
+    if ($write === null || tuleva_disclosure_scalar($meta_value) !== $write['after']) {
         return;
     }
 
@@ -294,9 +331,9 @@ add_action('updated_post_meta', 'tuleva_disclosure_on_meta_write', 10, 4);
 add_action('deleted_post_meta', 'tuleva_disclosure_on_meta_write', 10, 4);
 
 /**
- * Logs a stored change. A change the log cannot hold is put back, so a document does not
- * change unrecorded, and the PHP error log says so: the writer's read-back then finds the old
- * value.
+ * Logs a stored change. This runs inside WordPress's and ACF's own writes, with the value
+ * already stored, so a change the log cannot hold is left as it is and reported in the PHP
+ * error log, one line: page, field, the values before and after, and the route.
  */
 function tuleva_disclosure_record(int $post_id, string $name, $before, $after, string $route): void
 {
@@ -305,24 +342,13 @@ function tuleva_disclosure_record(int $post_id, string $name, $before, $after, s
     }
 
     error_log(sprintf(
-        'Fund document log: the change to %s on page %d could not be logged, so it is put back.',
+        'Fund document log: could not record a change on page %d: %s %s -> %s (%s)',
+        $post_id,
         $name,
-        $post_id
+        tuleva_disclosure_scalar($before) === '' ? 'empty' : tuleva_disclosure_scalar($before),
+        tuleva_disclosure_scalar($after) === '' ? 'empty' : tuleva_disclosure_scalar($after),
+        $route
     ));
-    tuleva_disclosure_put_back($post_id, $name, $before, $after);
-}
-
-/**
- * Puts a value back only where the field still holds the one written: a value another
- * request has written since stays. A document that was new is taken away again.
- */
-function tuleva_disclosure_put_back(int $post_id, string $name, $before, $after): void
-{
-    if (tuleva_disclosure_scalar($before) === '') {
-        delete_post_meta($post_id, $name, $after);
-    } else {
-        update_post_meta($post_id, $name, $before, $after);
-    }
 }
 
 /**

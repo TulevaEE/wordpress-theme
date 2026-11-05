@@ -22,6 +22,9 @@ final class FakeDisclosureWrite
     public static ?string $doing_action = null;
     public static bool $log_fails = false;
 
+    /** @var array<int, int> revision or autosave id => the page it belongs to */
+    public static array $revisions = [];
+
     /** @var array<int, array<string, list<mixed>>> */
     public static array $meta = [];
 
@@ -35,6 +38,7 @@ final class FakeDisclosureWrite
         self::$login = '';
         self::$doing_action = null;
         self::$log_fails = false;
+        self::$revisions = [];
         self::$meta = [];
     }
 
@@ -159,40 +163,30 @@ if (!function_exists('get_post_meta')) {
     }
 }
 
-/**
- * As WordPress's: given a previous value, only a row that still holds it is changed.
- */
 if (!function_exists('update_post_meta')) {
     function update_post_meta($post_id, $meta_key, $meta_value, $prev_value = '')
     {
-        $stored = FakeDisclosureWrite::$meta[$post_id][$meta_key][0] ?? '';
-        if ($prev_value !== '' && (string) $stored !== (string) $prev_value) {
-            return false;
-        }
-
         FakeDisclosureWrite::$meta[$post_id][$meta_key] = [$meta_value];
 
         return true;
     }
 }
 
-if (!function_exists('delete_post_meta')) {
-    function delete_post_meta($post_id, $meta_key, $meta_value = '')
+if (!function_exists('wp_is_post_revision')) {
+    function wp_is_post_revision($post)
     {
-        $stored = FakeDisclosureWrite::$meta[$post_id][$meta_key][0] ?? null;
-        if ($stored === null || ($meta_value !== '' && (string) $stored !== (string) $meta_value)) {
-            return false;
-        }
-
-        unset(FakeDisclosureWrite::$meta[$post_id][$meta_key]);
-
-        return true;
+        return FakeDisclosureWrite::$revisions[(int) $post] ?? false;
     }
 }
 
+/**
+ * As WordPress's, it writes a revision's meta to the page the revision belongs to.
+ */
 if (!function_exists('add_post_meta')) {
     function add_post_meta($post_id, $meta_key, $meta_value, $unique = false)
     {
+        $post_id = wp_is_post_revision($post_id) ?: $post_id;
+
         if ($meta_key === TULEVA_DISCLOSURE_LOG && FakeDisclosureWrite::$log_fails) {
             return false;
         }
@@ -441,11 +435,107 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::$login = 'an-administrator';
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
 
-        tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']);
+        tuleva_disclosure_note_write(null, self::PAGE, 'prospectus_file', 102, false);
         $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
 
         tuleva_disclosure_on_meta_write(7, self::PAGE, 'prospectus_file', 102);
         $this->assertSame(['101', '102'], $this->onlyEntry(['before', 'after']));
+    }
+
+    /**
+     * A note is for the one write ACF is making. When WordPress does not store it (the value
+     * is unchanged, a filter short-circuits it, the query fails), ACF's write of the field's
+     * reference row ends the note, so a later write to the field in the same request is not
+     * logged with this one's value before and route.
+     */
+    #[Test]
+    public function a_note_ends_with_acf_s_write_of_that_field_whether_or_not_it_was_stored(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        tuleva_disclosure_note_write(null, self::PAGE, 'prospectus_file', 102, false);
+        tuleva_disclosure_note_write(null, self::PAGE, 'prospectus_file', 'field_fund_savings_prospectus', true);
+        tuleva_disclosure_on_meta_write(8, self::PAGE, 'prospectus_file', 102);
+
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    #[Test]
+    public function a_note_applies_only_to_the_value_acf_is_writing(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        tuleva_disclosure_note_write(null, self::PAGE, 'prospectus_file', 102, false);
+        tuleva_disclosure_on_meta_write(8, self::PAGE, 'prospectus_file', 103);
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+
+        tuleva_disclosure_on_meta_write(8, self::PAGE, 'prospectus_file', '102');
+        $this->assertSame(['101', '102'], $this->onlyEntry(['before', 'after']));
+    }
+
+    /**
+     * A preview's or an autosave's values are written to a revision, and a log entry added to
+     * a revision lands on the page it belongs to, as if the page had changed. The lock still
+     * applies to a revision.
+     */
+    #[Test]
+    public function a_write_to_a_revision_is_not_logged_on_the_page(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$revisions[90001] = self::PAGE;
+
+        $this->acfWrites(102, 'prospectus_file', 90001);
+
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+        $this->assertSame([], get_post_meta(90001, TULEVA_DISCLOSURE_LOG));
+
+        FakeDisclosureWrite::$administrator = false;
+        FakeDisclosureWrite::$login = 'an-editor';
+        $this->assertFalse(tuleva_disclosure_pre_update(null, 103, 90001, ['name' => 'prospectus_file']));
+    }
+
+    /**
+     * The value is already stored when the log is written, inside WordPress's and ACF's own
+     * writes, so a failed log write changes nothing else: the PHP error log gets one line
+     * saying which page, field, values and route.
+     */
+    #[Test]
+    public function a_failed_log_write_leaves_the_value_as_written_and_is_reported(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$in_admin = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+        FakeDisclosureWrite::$log_fails = true;
+
+        $errors = $this->errorLog(fn() => $this->acfWrites(102, 'prospectus_file'));
+
+        $this->assertSame(102, get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertStringContainsString('page ' . self::PAGE . ': prospectus_file 101 -> 102 (wp-admin)', $errors);
+        $this->assertSame(1, substr_count(trim($errors), "\n") + 1);
+    }
+
+    #[Test]
+    public function a_failed_log_write_leaves_an_administrator_s_restore_in_place(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        FakeDisclosureWrite::$log_fails = true;
+
+        $errors = $this->errorLog(function (): void {
+            tuleva_disclosures_before_restore(self::PAGE);
+            update_post_meta(self::PAGE, 'prospectus_file', '101');
+            tuleva_disclosures_after_restore(self::PAGE);
+        });
+
+        $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertStringContainsString('page ' . self::PAGE . ': prospectus_file 202 -> 101 (revision)', $errors);
     }
 
     #[Test]
@@ -472,44 +562,6 @@ final class FundDisclosureLogTest extends TestCase
         tuleva_disclosure_on_meta_write(7, self::PAGE, 'prospectus_file', 102);
 
         $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
-    }
-
-    /**
-     * A document must not change unrecorded: when the log cannot be written, the value is put
-     * back and the PHP error log says so.
-     */
-    #[Test]
-    public function a_change_the_log_cannot_hold_is_put_back_and_reported(): void
-    {
-        FakeDisclosureWrite::$administrator = true;
-        FakeDisclosureWrite::$login = 'an-administrator';
-        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
-        FakeDisclosureWrite::$log_fails = true;
-
-        $errors = $this->errorLog(fn() => $this->acfWrites(102, 'prospectus_file'));
-
-        $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
-        $this->assertStringContainsString('prospectus_file on page ' . self::PAGE, $errors);
-    }
-
-    /**
-     * Putting back touches only a value that is still the one written: one written since,
-     * by another request, stays. A document that was new is taken away again.
-     */
-    #[Test]
-    public function putting_back_leaves_a_value_written_since_alone(): void
-    {
-        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
-        FakeDisclosureWrite::$meta[self::PAGE]['terms_file'] = ['202'];
-        FakeDisclosureWrite::$meta[self::PAGE]['model_portfolio_file'] = ['301'];
-
-        tuleva_disclosure_put_back(self::PAGE, 'prospectus_file', '101', 102);
-        tuleva_disclosure_put_back(self::PAGE, 'terms_file', '', 102);
-        tuleva_disclosure_put_back(self::PAGE, 'model_portfolio_file', '', 301);
-
-        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
-        $this->assertSame('202', get_post_meta(self::PAGE, 'terms_file', true));
-        $this->assertSame([], get_post_meta(self::PAGE, 'model_portfolio_file'));
     }
 
     /**
@@ -781,24 +833,6 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     #[Test]
-    public function an_administrator_s_restore_the_log_cannot_hold_is_put_back(): void
-    {
-        FakeDisclosureWrite::$administrator = true;
-        FakeDisclosureWrite::$login = 'an-administrator';
-        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
-        FakeDisclosureWrite::$log_fails = true;
-
-        $errors = $this->errorLog(function (): void {
-            tuleva_disclosures_before_restore(self::PAGE);
-            update_post_meta(self::PAGE, 'prospectus_file', '101');
-            tuleva_disclosures_after_restore(self::PAGE);
-        });
-
-        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
-        $this->assertStringContainsString('prospectus_file on page ' . self::PAGE, $errors);
-    }
-
-    #[Test]
     public function the_documents_box_lists_changes_newest_first(): void
     {
         $html = tuleva_disclosure_panel([], [
@@ -835,25 +869,33 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     /**
-     * What acf_update_value does with a value: the pre filter, the update_value filters, the
-     * meta write (null deletes), and the hook WordPress fires once the write lands.
+     * What acf_update_value does with a value: the pre filter, the update_value filters, then
+     * for the value and for its reference row each, ACF's pre-metadata filter and the meta
+     * write (null deletes both), with the hook WordPress fires once the value's write lands.
+     * update_metadata writes to the id it is given, a revision too.
      */
-    private function acfWrites($value, string $name)
+    private function acfWrites($value, string $name, int $post_id = self::PAGE)
     {
-        $field = ['name' => $name];
+        $field = ['name' => $name, 'key' => 'field_' . $name];
 
-        if (tuleva_disclosure_pre_update(null, $value, self::PAGE, $field) !== null) {
+        if (tuleva_disclosure_pre_update(null, $value, $post_id, $field) !== null) {
             return 'short-circuited';
         }
 
-        $value = tuleva_disclosure_on_update($value, self::PAGE, $field);
+        $value = tuleva_disclosure_on_update($value, $post_id, $field);
 
         if ($value === null) {
-            unset(FakeDisclosureWrite::$meta[self::PAGE][$name]);
-            tuleva_disclosure_on_meta_write([7], self::PAGE, $name, '');
+            tuleva_disclosure_note_delete(null, $post_id, $name, false);
+            if (isset(FakeDisclosureWrite::$meta[$post_id][$name])) {
+                unset(FakeDisclosureWrite::$meta[$post_id][$name]);
+                tuleva_disclosure_on_meta_write([7], $post_id, $name, '');
+            }
+            tuleva_disclosure_note_delete(null, $post_id, $name, true);
         } else {
-            FakeDisclosureWrite::$meta[self::PAGE][$name] = [$value];
-            tuleva_disclosure_on_meta_write(7, self::PAGE, $name, $value);
+            tuleva_disclosure_note_write(null, $post_id, $name, $value, false);
+            FakeDisclosureWrite::$meta[$post_id][$name] = [$value];
+            tuleva_disclosure_on_meta_write(7, $post_id, $name, $value);
+            tuleva_disclosure_note_write(null, $post_id, $name, $field['key'], true);
         }
 
         return $value;
