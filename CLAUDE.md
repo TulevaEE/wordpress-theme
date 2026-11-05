@@ -115,8 +115,9 @@ revision restore: who, when, how, and the value before and after, a document wit
 An entry is written once WordPress has stored the value, so a write that fails is not
 logged. If the log itself cannot be written, the change stays as stored and the PHP error
 log gets one line: page, field, the values before and after, and the route. A restore is
-logged from the writes it makes, so a field it does not write gets no entry, whatever
-another request writes to it meanwhile. An editor's revision restore leaves the document
+logged from the writes it makes to the restored page, so a field it does not write gets no
+entry, whatever another request writes to it meanwhile, and WPML's copy to the English
+page during it is not logged either. An editor's revision restore leaves the document
 fields out of ACF's copy, so it changes none of them.
 The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
 post-meta write (WP-CLI, WPML's copy to a translation) is not logged, nor is a preview's or

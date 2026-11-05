@@ -528,23 +528,58 @@ function tuleva_disclosures_out_of_restore($meta, $post_id)
 add_filter('acf/load_meta', 'tuleva_disclosures_out_of_restore', 10, 2);
 
 /**
- * Notes a write a revision restore makes to a disclosure field, as WordPress makes it, to be
- * logged once stored (tuleva_disclosure_on_meta_write) with the route 'revision'. ACF's
- * restore copies the revision's meta with update_metadata, past its own filters, so the note
- * is taken from WordPress's action before each write: update_post_meta for a row that
- * exists, add_post_meta for a new one, neither for a value that is unchanged. A field the
- * restore does not write gets no entry, whatever another request writes to it meanwhile.
- * ACF's copy to the latest revision is not the page's and is not noted.
+ * @return int|null the page a revision restore is writing to, from before ACF's copy to after
+ *     it; null at any other time
+ */
+function &tuleva_disclosure_restore_target(): ?int
+{
+    static $post_id = null;
+
+    return $post_id;
+}
+
+/**
+ * ACF copies the revision's meta at priority 10, so the restored page is known from 5 to 20.
+ * Every meta write made in between is nested in the action, WPML's copy to the English page
+ * among them, so only writes to this page are the restore's.
+ */
+function tuleva_disclosure_restore_begins($post_id, $revision_id = 0): void
+{
+    $target = &tuleva_disclosure_restore_target();
+    $target = (int) $post_id;
+}
+
+/**
+ * Ends the restore, and with it any note for the page still pending: a restore write
+ * WordPress did not store leaves one, which a later write of the same value would take.
+ */
+function tuleva_disclosure_restore_ends($post_id, $revision_id = 0): void
+{
+    $target = &tuleva_disclosure_restore_target();
+    $pending = &tuleva_disclosure_writes_pending();
+    unset($pending[(int) $post_id]);
+    $target = null;
+}
+
+add_action('wp_restore_post_revision', 'tuleva_disclosure_restore_begins', 5, 2);
+add_action('wp_restore_post_revision', 'tuleva_disclosure_restore_ends', 20, 2);
+
+/**
+ * Notes a write a revision restore makes to a disclosure field of the restored page, as
+ * WordPress makes it, to be logged once stored (tuleva_disclosure_on_meta_write) with the
+ * route 'revision'. The note is taken from WordPress's action just before each write:
+ * update_post_meta for a row that exists, add_post_meta for a new one, neither for a value
+ * that is unchanged. From ACF 6.4 the restore copies with update_metadata, past ACF's own
+ * filters; before 6.4 it went through acf_update_metadata(), so tuleva_disclosure_note_write
+ * has noted the write first, with the request's route, and this note replaces it. A field
+ * the restore does not write gets no entry, whatever another request writes to it
+ * meanwhile, and ACF's copy to the latest revision is another post's.
  */
 function tuleva_disclosure_note_restore($object_id, $meta_key, $meta_value): void
 {
     $post_id = (int) $object_id;
 
-    if (
-        !doing_action('wp_restore_post_revision')
-        || !tuleva_is_disclosure((string) $meta_key)
-        || wp_is_post_revision($post_id)
-    ) {
+    if ($post_id !== tuleva_disclosure_restore_target() || !tuleva_is_disclosure((string) $meta_key)) {
         return;
     }
 

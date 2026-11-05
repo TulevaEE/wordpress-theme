@@ -208,6 +208,7 @@ require_once __DIR__ . '/../../helpers/acf/fund-disclosure-log.php';
 final class FundDisclosureLogTest extends TestCase
 {
     private const PAGE = 17533;
+    private const ENGLISH_PAGE = 17534;
 
     protected function setUp(): void
     {
@@ -217,6 +218,8 @@ final class FundDisclosureLogTest extends TestCase
         FakeOptions::reset();
         $pending = &tuleva_disclosure_writes_pending();
         $pending = [];
+        $restoring = &tuleva_disclosure_restore_target();
+        $restoring = null;
     }
 
     #[Test]
@@ -601,7 +604,7 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
         FakeDisclosureWrite::$log_fails = true;
 
-        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        $this->restoreBegins(self::PAGE);
 
         $errors = $this->errorLog(fn() => $this->restoreCopies(self::PAGE, 'prospectus_file', '101'));
 
@@ -924,7 +927,7 @@ final class FundDisclosureLogTest extends TestCase
     {
         FakeDisclosureWrite::$administrator = true;
         FakeDisclosureWrite::$login = 'an-administrator';
-        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        $this->restoreBegins(self::PAGE);
         FakeDisclosureWrite::$revisions[90002] = self::PAGE;
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
 
@@ -958,7 +961,7 @@ final class FundDisclosureLogTest extends TestCase
 
         FakeDisclosureWrite::$administrator = true;
         FakeDisclosureWrite::$login = 'an-administrator';
-        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        $this->restoreBegins(self::PAGE);
         $this->restoreCopies(self::PAGE, 'hero_title', 'Old');
 
         FakeDisclosureWrite::$administrator = false;
@@ -968,6 +971,67 @@ final class FundDisclosureLogTest extends TestCase
         $this->acfWrites(102, 'prospectus_file');
 
         $this->assertSame(['WP-Cron', 'cron', '101', '102'], $this->onlyEntry(['who', 'route', 'before', 'after']));
+    }
+
+    /**
+     * WPML copies the fields to the English page inside the same restore, as do other
+     * plugins' writes to other posts: none of them is the restore's write to its page.
+     */
+    #[Test]
+    public function a_write_to_another_post_during_a_restore_is_not_logged_as_the_restore_s(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::ENGLISH_PAGE]['prospectus_file'] = ['202'];
+        $this->restoreBegins(self::PAGE);
+
+        $this->restoreCopies(self::ENGLISH_PAGE, 'prospectus_file', '101');
+
+        $this->assertSame([], get_post_meta(self::ENGLISH_PAGE, TULEVA_DISCLOSURE_LOG));
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    /**
+     * A restore write WordPress does not store (a failed query, say) leaves its note behind;
+     * the end of the restore clears it, so a later write of the same value is not taken for
+     * the restore's.
+     */
+    #[Test]
+    public function a_restore_note_does_not_outlive_the_restore(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        $this->restoreBegins(self::PAGE);
+
+        tuleva_disclosure_note_write(null, self::PAGE, 'prospectus_file', '101', false);
+        tuleva_disclosure_note_restore_update(7, self::PAGE, 'prospectus_file', '101');
+        $this->restoreEnds(self::PAGE);
+
+        tuleva_disclosure_on_meta_write(7, self::PAGE, 'prospectus_file', '101');
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+        $this->assertSame([], tuleva_disclosure_writes_pending());
+    }
+
+    /**
+     * Before ACF 6.4 the restore copied through acf_update_metadata(), so ACF's own filter
+     * notes the write first, with the request's route, and WordPress's action just before
+     * the write then makes it the restore's: one entry, 'revision'.
+     */
+    #[Test]
+    public function a_restore_through_acf_s_own_metadata_write_is_logged_once_as_the_restore_s(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$in_admin = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        $this->restoreBegins(self::PAGE);
+
+        $this->restoreCopies(self::PAGE, 'prospectus_file', '101', true);
+        $this->restoreCopies(self::PAGE, '_prospectus_file', 'field_fund_disclosure_stocks_prospectus_file', true);
+        $this->restoreEnds(self::PAGE);
+
+        $this->assertSame(['an-administrator', 'revision', '202', '101'], $this->onlyEntry(['who', 'route', 'before', 'after']));
     }
 
     #[Test]
@@ -1077,12 +1141,18 @@ final class FundDisclosureLogTest extends TestCase
     }
 
     /**
-     * What ACF's revision restore does with one key of the revision's meta: update_metadata
-     * straight on the page, past ACF's filters. WordPress does nothing for an unchanged value,
+     * What ACF's revision restore does with one key of the revision's meta. From ACF 6.4 it
+     * calls update_metadata straight, past its own filters; before 6.4 ($through_acf) it went
+     * through acf_update_metadata(), whose acf/pre_update_metadata filter runs first, a
+     * reference row under its own '_' name. WordPress does nothing for an unchanged value,
      * fires add_post_meta or update_post_meta before the write, and the -ed hook after it.
      */
-    private function restoreCopies(int $post_id, string $key, $value): void
+    private function restoreCopies(int $post_id, string $key, $value, bool $through_acf = false): void
     {
+        if ($through_acf) {
+            tuleva_disclosure_note_write(null, $post_id, $key, $value, false);
+        }
+
         $stored = FakeDisclosureWrite::$meta[$post_id][$key][0] ?? null;
 
         if ($stored === $value) {
@@ -1097,6 +1167,21 @@ final class FundDisclosureLogTest extends TestCase
 
         FakeDisclosureWrite::$meta[$post_id][$key] = [$value];
         tuleva_disclosure_on_meta_write(7, $post_id, $key, $value);
+    }
+
+    /**
+     * WordPress's wp_restore_post_revision action for a page, around ACF's copy (priority 10).
+     */
+    private function restoreBegins(int $post_id): void
+    {
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        tuleva_disclosure_restore_begins($post_id, 90001);
+    }
+
+    private function restoreEnds(int $post_id): void
+    {
+        tuleva_disclosure_restore_ends($post_id, 90001);
+        FakeDisclosureWrite::$doing_action = null;
     }
 
     /**
