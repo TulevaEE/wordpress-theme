@@ -207,14 +207,14 @@ msgstr "0,28% aastas"
 #: templates/components/fund-bonds-details.php:44
 #: templates/components/fund-savings-details.php:50
 #: templates/components/fund-stocks-details.php:44
-#: templates/components/fund-third-details.php:45
+#: templates/components/fund-third-details.php:44
 msgid "Fund details"
 msgstr "Fondi info"
 
 #: templates/components/fund-bonds-details.php:50
 #: templates/components/fund-savings-details.php:58
 #: templates/components/fund-stocks-details.php:50
-#: templates/components/fund-third-details.php:51
+#: templates/components/fund-third-details.php:50
 msgid "Currency"
 msgstr "Valuuta"
 
@@ -222,7 +222,7 @@ msgstr "Valuuta"
 #: templates/components/fund-bonds-details.php:54
 #: templates/components/fund-savings-details.php:63
 #: templates/components/fund-stocks-details.php:54
-#: templates/components/fund-third-details.php:55
+#: templates/components/fund-third-details.php:54
 msgid "Date of inception"
 msgstr "Moodustamise kuupäev"
 
@@ -234,7 +234,7 @@ msgstr "27. märts 2017"
 #: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-savings-details.php:68
 #: templates/components/fund-stocks-details.php:58
-#: templates/components/fund-third-details.php:59
+#: templates/components/fund-third-details.php:58
 msgid "Fund volume"
 msgstr "Fondi maht"
 
@@ -242,7 +242,7 @@ msgstr "Fondi maht"
 #: templates/components/fund-bonds-details.php:67
 #: templates/components/fund-savings-details.php:77
 #: templates/components/fund-stocks-details.php:67
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-third-details.php:67
 msgid "Management fee"
 msgstr "Valitsemistasu"
 
@@ -250,7 +250,7 @@ msgstr "Valitsemistasu"
 #: templates/components/fund-bonds-details.php:72
 #: templates/components/fund-savings-details.php:83
 #: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:73
+#: templates/components/fund-third-details.php:72
 msgid "Ongoing charges"
 msgstr "Jooksvad tasud"
 
@@ -258,21 +258,21 @@ msgstr "Jooksvad tasud"
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-savings-details.php:89
 #: templates/components/fund-stocks-details.php:76
-#: templates/components/fund-third-details.php:77
+#: templates/components/fund-third-details.php:76
 msgid "Redemption fee and issue fee"
 msgstr "Väljalasketasu ja tagasivõtmistasu"
 
 #: templates/components/fund-bonds-details.php:81
 #: templates/components/fund-savings-details.php:95
 #: templates/components/fund-stocks-details.php:81
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-third-details.php:81
 msgid "Fund manager's participation rate in fund"
 msgstr "Fondivalitseja osalus fondis"
 
 #: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-savings-details.php:96
 #: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:82
 msgid "units"
 msgstr "osakut"
 
@@ -280,7 +280,7 @@ msgstr "osakut"
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-savings-details.php:101
 #: templates/components/fund-stocks-details.php:86
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-third-details.php:86
 msgid "Risk profile"
 msgstr "Riskiprofiil"
 
@@ -292,14 +292,14 @@ msgstr "Konservatiivne"
 #: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-savings-details.php:107
 #: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:91
+#: templates/components/fund-third-details.php:90
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
 #: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-savings-details.php:113
 #: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:98
+#: templates/components/fund-third-details.php:97
 msgid "Documents"
 msgstr "Dokumendid"
 
@@ -312,9 +312,9 @@ msgstr "Dokumendid"
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:105
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:109
 msgid "Prospectus"
 msgstr "Prospekt"
 
@@ -324,8 +324,8 @@ msgstr "Prospekt"
 #: templates/components/fund-savings-details.php:140
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:109
 msgid " and "
 msgstr " ja "
 
@@ -338,9 +338,9 @@ msgstr " ja "
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
 msgid "Terms and conditions"
 msgstr "tingimused"
 
@@ -382,18 +382,18 @@ msgstr "tingimused"
 #: templates/components/fund-stocks-details.php:138
 #: templates/components/fund-stocks-details.php:147
 #: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
-#: templates/components/fund-third-details.php:117
-#: templates/components/fund-third-details.php:122
-#: templates/components/fund-third-details.php:126
-#: templates/components/fund-third-details.php:133
-#: templates/components/fund-third-details.php:136
-#: templates/components/fund-third-details.php:139
-#: templates/components/fund-third-details.php:148
-#: templates/components/fund-third-details.php:159
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
+#: templates/components/fund-third-details.php:116
+#: templates/components/fund-third-details.php:121
+#: templates/components/fund-third-details.php:125
+#: templates/components/fund-third-details.php:132
+#: templates/components/fund-third-details.php:135
+#: templates/components/fund-third-details.php:138
+#: templates/components/fund-third-details.php:147
+#: templates/components/fund-third-details.php:158
 msgid " (in Estonian)"
 msgstr " "
 
@@ -409,10 +409,10 @@ msgstr " "
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-stocks-details.php:109
 #: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
-#: templates/components/fund-third-details.php:129
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
+#: templates/components/fund-third-details.php:128
 #, php-format
 msgid " (in Estonian, effective from %s)"
 msgstr " (jõustub %s)"
@@ -420,7 +420,7 @@ msgstr " (jõustub %s)"
 #: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-savings-details.php:96
 #: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:82
 #, php-format
 msgid "(as of %s)"
 msgstr "(seisuga %s)"
@@ -428,14 +428,14 @@ msgstr "(seisuga %s)"
 #: templates/components/fund-bonds-details.php:116
 #: templates/components/fund-savings-details.php:153
 #: templates/components/fund-stocks-details.php:116
-#: templates/components/fund-third-details.php:117
+#: templates/components/fund-third-details.php:116
 msgid "Model portfolio"
 msgstr "Mudelportfell"
 
 #: templates/components/fund-bonds-details.php:121
 #: templates/components/fund-savings-details.php:160
 #: templates/components/fund-stocks-details.php:121
-#: templates/components/fund-third-details.php:122
+#: templates/components/fund-third-details.php:121
 msgid "Key Investor Information"
 msgstr "Põhiteave"
 
@@ -445,36 +445,36 @@ msgstr "Põhiteave"
 #: templates/components/fund-savings-details.php:171
 #: templates/components/fund-stocks-details.php:125
 #: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:126
-#: templates/components/fund-third-details.php:129
+#: templates/components/fund-third-details.php:125
+#: templates/components/fund-third-details.php:128
 msgid "Procedure for determining net worth of fund"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
 #: templates/components/fund-bonds-details.php:132
 #: templates/components/fund-savings-details.php:177
 #: templates/components/fund-stocks-details.php:132
-#: templates/components/fund-third-details.php:133
+#: templates/components/fund-third-details.php:132
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
 #: templates/components/fund-bonds-details.php:135
 #: templates/components/fund-savings-details.php:182
 #: templates/components/fund-stocks-details.php:135
-#: templates/components/fund-third-details.php:136
+#: templates/components/fund-third-details.php:135
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
 
 #: templates/components/fund-bonds-details.php:138
 #: templates/components/fund-savings-details.php:187
 #: templates/components/fund-stocks-details.php:138
-#: templates/components/fund-third-details.php:139
+#: templates/components/fund-third-details.php:138
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
 #: templates/components/fund-bonds-details.php:142
 #: templates/components/fund-savings-details.php:199
 #: templates/components/fund-stocks-details.php:142
-#: templates/components/fund-third-details.php:143
+#: templates/components/fund-third-details.php:142
 msgid "Reports"
 msgstr "Aruanded"
 
@@ -482,21 +482,21 @@ msgstr "Aruanded"
 #: templates/components/fund-bonds-details.php:147
 #: templates/components/fund-savings-details.php:204
 #: templates/components/fund-stocks-details.php:147
-#: templates/components/fund-third-details.php:148
+#: templates/components/fund-third-details.php:147
 msgid "Investment reports"
 msgstr "Investeeringute aruanded"
 
 #: templates/components/fund-bonds-details.php:153
 #: templates/components/fund-savings-details.php:212
 #: templates/components/fund-stocks-details.php:153
-#: templates/components/fund-third-details.php:154
+#: templates/components/fund-third-details.php:153
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
 #: templates/components/fund-bonds-details.php:158
 #: templates/components/fund-savings-details.php:217
 #: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:159
+#: templates/components/fund-third-details.php:158
 msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
@@ -511,21 +511,21 @@ msgstr "Lae alla NAV-i ajalugu"
 #: templates/components/fund-bonds-details.php:163
 #: templates/components/fund-savings-details.php:230
 #: templates/components/fund-stocks-details.php:163
-#: templates/components/fund-third-details.php:164
+#: templates/components/fund-third-details.php:163
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
 #: templates/components/fund-bonds-details.php:165
 #: templates/components/fund-savings-details.php:232
 #: templates/components/fund-stocks-details.php:165
-#: templates/components/fund-third-details.php:166
+#: templates/components/fund-third-details.php:165
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
 #: templates/components/fund-bonds-details.php:166
 #: templates/components/fund-savings-details.php:233
 #: templates/components/fund-stocks-details.php:166
-#: templates/components/fund-third-details.php:167
+#: templates/components/fund-third-details.php:166
 #, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
@@ -822,6 +822,7 @@ msgstr "2026. a maksuvaba tulu kuus"
 
 #: templates/components/modal-payout-calculator.php:31
 #: templates/components/modal-second-pillar-payment-rate.php:31
+#: templates/future-me-content.php:10
 msgid "Retirement age"
 msgstr "Pensioniiga"
 
@@ -1108,6 +1109,7 @@ msgstr "a"
 #: templates/child-savings-content.php:152
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
+#: templates/future-me-content.php:155
 #: templates/savings-fund-landing-content.php:161
 #: templates/second-pillar-rejoin-content.php:288
 msgid "Frequently asked questions"
@@ -3101,3 +3103,170 @@ msgstr "<strong>II&nbsp;sammas, %1$s&nbsp;aastas:</strong> %2$s tuleb sotsiaalma
 #, php-format
 msgid "For each year of saving at a gross salary of %1$s and a %2$s contribution."
 msgstr "Iga kogumisaasta eest %1$s&nbsp;brutopalga ja %2$s&nbsp;panuse puhul."
+
+#. Template Name of the theme
+msgid "Future Me landing page"
+msgstr ""
+
+#: templates/future-me-content.php:4
+msgid "https://tuleva.ee/en/recommendations/going-to-retire/"
+msgstr "https://tuleva.ee/pensioni-valjamaksed/"
+
+#: templates/future-me-content.php:7
+msgid "0-55"
+msgstr "0-55"
+
+#: templates/future-me-content.php:7
+msgid "Saving"
+msgstr "Kogumine"
+
+#: templates/future-me-content.php:7
+msgid "How much have you saved so far?"
+msgstr "Kui palju sul juba kogunenud on?"
+
+#: templates/future-me-content.php:8
+msgid "III pillar, if you started saving before 2021"
+msgstr "III sammas, kui alustasid kogumist enne 2021"
+
+#: templates/future-me-content.php:8
+msgid "What will you do with your III pillar savings?"
+msgstr "Mida teed III samba varaga?"
+
+#: templates/future-me-content.php:9
+msgid "Payouts"
+msgstr "Väljamakse"
+
+#: templates/future-me-content.php:9
+msgid "What will you do with your II and III pillar savings?"
+msgstr "Mida teed II ja III samba varaga?"
+
+#: templates/future-me-content.php:10
+msgid "Do you take your state pension earlier or later?"
+msgstr "Kas võtad riikliku pensioni varem või hiljem?"
+
+#: templates/future-me-content.php:11
+msgid "Later life"
+msgstr "Vanaduspõlv"
+
+#: templates/future-me-content.php:11
+msgid "How long do your payouts last?"
+msgstr "Kui kaua väljamaksed kestavad?"
+
+#: templates/future-me-content.php:12
+msgid "Result"
+msgstr "Tulemus"
+
+#: templates/future-me-content.php:12
+msgid "Does your income cover your costs in later life?"
+msgstr "Kas tulud katavad vanaduses kulud?"
+
+#: templates/future-me-content.php:17
+msgid "Who is Future Me for?"
+msgstr "Kellele tulevane mina on mõeldud?"
+
+#: templates/future-me-content.php:18
+msgid "Anyone who wants to know whether their income will cover their costs in later life. You do not need to be an expert or save with Tuleva."
+msgstr "Igaühele, kes tahab teada, kas tema tulud katavad vanaduses kulud. Sa ei pea olema asjatundja ega Tulevas koguma."
+
+#: templates/future-me-content.php:21
+msgid "What are retirement age and flexible pension?"
+msgstr "Mis on pensioniiga ja paindlik pension?"
+
+#: templates/future-me-content.php:22
+msgid "Retirement age is the age at which you gain the right to a state old-age pension. With the flexible pension you can start receiving it earlier or later. Future Me works out this age and shows you your options."
+msgstr "Pensioniiga on vanus, millal tekib õigus riiklikule vanaduspensionile. Paindliku pensioni korral saad seda hakata saama varem või hiljem. Tulevane mina arvutab selle vanuse ja näitab sulle võimalusi."
+
+#: templates/future-me-content.php:25
+msgid "What are the state pension and the II and III pillar?"
+msgstr "Mis on riiklik pension ja II ning III sammas?"
+
+#: templates/future-me-content.php:26
+msgid "The state pension, or I pillar, is a monthly amount guaranteed by the state. Part of your salary goes to the II pillar, and you make III pillar contributions yourself, with an income tax benefit on up to 15% of your gross income, but no more than 6,000 € a year. Your II and III pillar savings can be inherited."
+msgstr "Riiklik pension ehk I sammas on riigi tagatud igakuine summa. II sambasse läheb osa sinu palgast, III sambasse teed sissemakseid ise ja tulumaksusoodustus kehtib kuni 15% ulatuses brutotulust, kuid mitte rohkem kui 6000 € aastas. II ja III samba vara on sinu pärandvara."
+
+#: templates/future-me-content.php:29
+msgid "How do I withdraw my II and III pillar money?"
+msgstr "Kuidas II ja III samba raha välja võtta?"
+
+#: templates/future-me-content.php:30
+#, php-format
+msgid "You withdraw II and III pillar money with an application: as monthly payouts, also known as a funded pension, or as partial payouts. On favorable terms you can withdraw from the II and III pillar 5 years before your retirement age, and from the III pillar from age 55 if you started saving before 2021. If the fund payouts last at least your statistically remaining years, they are free of income tax. Future Me shows how your chosen payout type and income tax affect your income in later life."
+msgstr "II ja III samba raha võtad välja avaldusega: igakuise väljamaksena ehk fondipensionina või osaliste väljamaksetena. Soodustingimustel saad II ja III sambast raha välja võtta 5 aastat enne pensioniiga, III sambast alates 55. eluaastast, kui alustasid kogumist enne 2021. aastat. Kui fondi väljamaksed kestavad vähemalt sinu statistiliselt elada jäänud aastad, on need tulumaksuvabad. Tulevane mina näitab, kuidas valitud viis ja tulumaks mõjutavad sinu tulusid vanaduses."
+
+#: templates/future-me-content.php:34
+msgid "Can I work while receiving a pension?"
+msgstr "Kas ma võin pensionil töötada?"
+
+#: templates/future-me-content.php:35
+msgid "Yes. Reaching retirement age does not mean you have to stop working: if you keep working, part of your salary still goes to the II pillar, and you can keep contributing to the III pillar. If you keep contributing, money is added to your II and III pillar, which can increase your future payouts. Once you start II pillar payouts, your II pillar contributions stop for good, but you can keep paying into the III pillar."
+msgstr "Jah. Pensioniikka jõudes ei pea töötamist lõpetama: kui jätkad, läheb osa sinu palgast edasi II sambasse ja III sambasse võid sissemakseid edasi teha. Sissemakseid jätkates lisandub sinu II ja III sambasse raha, mis võib tulevasi väljamakseid suurendada. Kui alustad II sambast väljamakseid, lõppevad sissemaksed II sambasse igaveseks, III sambasse saad sissemakseid edasi teha."
+
+#: templates/future-me-content.php:45
+msgid "What is your retirement age and will your income cover your costs in later life?"
+msgstr "Mis on sinu pensioniiga ja kas tulud katavad vanaduses kulud?"
+
+#: templates/future-me-content.php:46
+msgid "<strong>Future Me</strong> works out your retirement age and shows whether your income covers your costs in later life. Go through your decisions by age and see the effect of each."
+msgstr "<strong>Tulevane mina</strong> arvutab sinu pensioniea ja näitab, kas tulud katavad vanaduses kulud. Läbi otsused vanuse järgi ja vaata iga otsuse mõju."
+
+#: templates/future-me-content.php:48
+#: templates/future-me-content.php:145
+msgid "Open Future Me"
+msgstr "Avan tulevase mina"
+
+#: templates/future-me-content.php:49
+msgid "See the decisions"
+msgstr "Vaata otsuseid"
+
+#: templates/future-me-content.php:69
+msgid "When can I retire?"
+msgstr "Millal saan pensionile minna?"
+
+#: templates/future-me-content.php:70
+msgid "Future Me works out the age at which you start receiving your state pension and shows your income and costs at each age."
+msgstr "Tulevane mina arvutab vanuse, millal hakkad saama riiklikku pensioni, ja näitab sinu tulusid ja kulusid igas vanuses."
+
+#: templates/future-me-content.php:92
+msgid "How much money will I have in later life?"
+msgstr "Kui palju raha mul vanaduses on?"
+
+#: templates/future-me-content.php:93
+msgid "Future Me shows your income and costs in later life year by year: state pension and II and III pillar payouts on one side, costs on the other. You see your own amount after entering your data."
+msgstr "Tulevane mina näitab sinu tulusid ja kulusid vanaduses aasta kaupa: ühel pool on riiklik pension ning II ja III samba väljamaksed, teisel pool kulud. Oma summat näed pärast andmete sisestamist."
+
+#: templates/future-me-content.php:101
+msgid "How do payouts work and how much will I get per month?"
+msgstr "Kuidas väljamaksed käivad ja kui palju ma kuus saan?"
+
+#: templates/future-me-content.php:102
+msgid "You can use your II and III pillar savings as monthly payouts. Future Me shows from your data how much you get per month and how income tax affects it."
+msgstr "II ja III samba vara saad kasutada igakuise väljamaksena. Tulevane mina näitab sinu andmete põhjal, kui palju sa kuus saad ja kuidas tulumaks seda mõjutab."
+
+#: templates/future-me-content.php:31
+#: templates/future-me-content.php:103
+msgid "Read about pension payouts"
+msgstr "Loe pensioni väljamaksete kohta"
+
+#: templates/future-me-content.php:113
+msgid "Which decisions are ahead of you?"
+msgstr "Millised otsused sind ees ootavad?"
+
+#: templates/future-me-content.php:114
+msgid "Future Me takes you through your decisions by age and shows the effect of each on the end result."
+msgstr "Tulevane mina viib sind otsustest läbi vanuse järgi ja näitab iga otsuse mõju lõpptulemusele."
+
+#: templates/future-me-content.php:134
+msgid "Ages are as of 2026. Retirement age depends on your year of birth, so your ages may differ: Future Me works them out from your data."
+msgstr "Vanused on 2026. aasta seisuga. Pensioniiga oleneb sünniaastast, nii et sinu vanused võivad olla teised: tulevane mina arvutab need sinu andmete põhjal."
+
+#: templates/future-me-content.php:143
+msgid "Meet your future self"
+msgstr "Kohtu oma tulevase minaga"
+
+#: templates/future-me-content.php:3
+msgid "You log in with Smart-ID, mobile-ID or an ID card."
+msgstr "Logid sisse Smart-ID, mobiil-ID või ID-kaardiga."
+
+#: templates/future-me-content.php:144
+msgid "What should you do with your II and III pillar? See how each choice affects your income in later life and whether it covers your costs."
+msgstr "Mida teha oma II ja III sambaga? Vaata, kuidas iga valik mõjutab sinu tulusid vanaduses ja kas need katavad kulud."
