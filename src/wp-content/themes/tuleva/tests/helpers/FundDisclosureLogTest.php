@@ -20,6 +20,7 @@ final class FakeDisclosureWrite
     public static ?string $application_password = null;
     public static string $login = '';
     public static ?string $doing_action = null;
+    public static bool $log_fails = false;
 
     /** @var array<int, array<string, list<mixed>>> */
     public static array $meta = [];
@@ -33,6 +34,7 @@ final class FakeDisclosureWrite
         self::$application_password = null;
         self::$login = '';
         self::$doing_action = null;
+        self::$log_fails = false;
         self::$meta = [];
     }
 
@@ -164,10 +166,32 @@ if (!function_exists('get_post_meta')) {
     }
 }
 
+/**
+ * As WordPress's: given a previous value, only a row that still holds it is changed.
+ */
 if (!function_exists('update_post_meta')) {
     function update_post_meta($post_id, $meta_key, $meta_value, $prev_value = '')
     {
+        $stored = FakeDisclosureWrite::$meta[$post_id][$meta_key][0] ?? '';
+        if ($prev_value !== '' && (string) $stored !== (string) $prev_value) {
+            return false;
+        }
+
         FakeDisclosureWrite::$meta[$post_id][$meta_key] = [$meta_value];
+
+        return true;
+    }
+}
+
+if (!function_exists('delete_post_meta')) {
+    function delete_post_meta($post_id, $meta_key, $meta_value = '')
+    {
+        $stored = FakeDisclosureWrite::$meta[$post_id][$meta_key][0] ?? null;
+        if ($stored === null || ($meta_value !== '' && (string) $stored !== (string) $meta_value)) {
+            return false;
+        }
+
+        unset(FakeDisclosureWrite::$meta[$post_id][$meta_key]);
 
         return true;
     }
@@ -176,6 +200,10 @@ if (!function_exists('update_post_meta')) {
 if (!function_exists('add_post_meta')) {
     function add_post_meta($post_id, $meta_key, $meta_value, $unique = false)
     {
+        if ($meta_key === TULEVA_DISCLOSURE_LOG && FakeDisclosureWrite::$log_fails) {
+            return false;
+        }
+
         FakeDisclosureWrite::$meta[$post_id][$meta_key][] = $meta_value;
 
         return true;
@@ -199,6 +227,10 @@ final class FundDisclosureLogTest extends TestCase
         FakeAttachments::reset();
         FakeRoles::reset();
         FakeOptions::reset();
+        $pending = &tuleva_disclosure_writes_pending();
+        $pending = [];
+        $held = &tuleva_disclosures_held_over_restore();
+        $held = [];
     }
 
     #[Test]
@@ -400,8 +432,90 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::$login = 'an-administrator';
         FakeDisclosureWrite::$in_admin = true;
 
-        $this->assertSame(102, tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']));
+        $this->assertSame(102, $this->acfWrites(102, 'prospectus_file'));
         $this->assertSame(['an-administrator', 'wp-admin'], $this->onlyEntry(['who', 'route']));
+    }
+
+    /**
+     * The log follows the meta write, so a value ACF never stores is never logged, and one
+     * it stores is logged with what it replaced.
+     */
+    #[Test]
+    public function a_change_is_logged_once_its_value_is_stored_and_not_before(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']);
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+
+        tuleva_disclosure_on_meta_write(7, self::PAGE, 'prospectus_file', 102);
+        $this->assertSame(['101', '102'], $this->onlyEntry(['before', 'after']));
+    }
+
+    #[Test]
+    public function a_document_acf_deletes_is_logged_when_its_row_goes(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+
+        $this->acfWrites(null, 'prospectus_file');
+
+        $this->assertSame(['101', ''], $this->onlyEntry(['before', 'after']));
+    }
+
+    /**
+     * WPML's copy to a translation, WP-CLI, a revision's copy: written past ACF, not logged
+     * here.
+     */
+    #[Test]
+    public function a_meta_write_acf_did_not_make_is_not_logged(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+
+        tuleva_disclosure_on_meta_write(7, self::PAGE, 'prospectus_file', 102);
+
+        $this->assertSame([], get_post_meta(self::PAGE, TULEVA_DISCLOSURE_LOG));
+    }
+
+    /**
+     * A document must not change unrecorded: when the log cannot be written, the value is put
+     * back and the PHP error log says so.
+     */
+    #[Test]
+    public function a_change_the_log_cannot_hold_is_put_back_and_reported(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
+        FakeDisclosureWrite::$log_fails = true;
+
+        $errors = $this->errorLog(fn() => $this->acfWrites(102, 'prospectus_file'));
+
+        $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertStringContainsString('prospectus_file on page ' . self::PAGE, $errors);
+    }
+
+    /**
+     * Putting back touches only a value that is still the one written: one written since,
+     * by another request, stays. A document that was new is taken away again.
+     */
+    #[Test]
+    public function putting_back_leaves_a_value_written_since_alone(): void
+    {
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        FakeDisclosureWrite::$meta[self::PAGE]['terms_file'] = ['202'];
+        FakeDisclosureWrite::$meta[self::PAGE]['model_portfolio_file'] = ['301'];
+
+        tuleva_disclosure_put_back(self::PAGE, 'prospectus_file', '101', 102);
+        tuleva_disclosure_put_back(self::PAGE, 'terms_file', '', 102);
+        tuleva_disclosure_put_back(self::PAGE, 'model_portfolio_file', '', 301);
+
+        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertSame('202', get_post_meta(self::PAGE, 'terms_file', true));
+        $this->assertSame([], get_post_meta(self::PAGE, 'model_portfolio_file'));
     }
 
     /**
@@ -417,10 +531,8 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::writerSigning('reports');
         FakeAttachments::$urls[301] = 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf';
 
-        $this->assertNull(tuleva_disclosure_pre_update(null, 301, self::PAGE, ['name' => 'investment_report_file']));
-        $written = tuleva_disclosure_on_update(301, self::PAGE, ['name' => 'investment_report_file']);
+        $this->assertSame(301, $this->acfWrites(301, 'investment_report_file'));
 
-        $this->assertSame(301, $written);
         $this->assertSame(
             ['reports', 'rest', '', '301', 'https://tuleva.ee/wp-content/uploads/2026/12/Aruanne-2026-11.pdf'],
             $this->onlyEntry(['who', 'route', 'before', 'after', 'after_url'])
@@ -568,7 +680,7 @@ final class FundDisclosureLogTest extends TestCase
         FakeDisclosureWrite::$doing_action = TULEVA_DISCLOSURE_SWITCH_HOOK;
         FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
 
-        tuleva_disclosure_on_update(102, self::PAGE, ['name' => 'prospectus_file']);
+        $this->acfWrites(102, 'prospectus_file');
 
         $this->assertSame(['WP-Cron', 'cron'], $this->onlyEntry(['who', 'route']));
     }
@@ -614,15 +726,45 @@ final class FundDisclosureLogTest extends TestCase
 
     /**
      * A revision holds the values of the last wp-admin save, so restoring one would put back
-     * documents that fund_pages or the upcoming-document switch have replaced since.
+     * documents that fund_pages or the upcoming-document switch have replaced since. For a
+     * writer who may not set them, ACF's copy of the revision leaves them and their
+     * references out.
      */
     #[Test]
-    public function restoring_a_revision_does_not_change_a_document_for_an_editor(): void
+    public function an_editor_s_revision_restore_leaves_the_documents_out_of_acf_s_copy(): void
     {
-        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        FakeDisclosureWrite::$login = 'an-editor';
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        $revision = ['prospectus_file' => '101', '_prospectus_file' => 'field_a', 'hero_title' => 'Old', '_hero_title' => 'field_b'];
+
+        $this->assertSame(['hero_title' => 'Old', '_hero_title' => 'field_b'], tuleva_disclosures_out_of_restore($revision, 99));
+    }
+
+    #[Test]
+    public function acf_s_meta_is_left_whole_outside_a_restore_and_for_an_administrator(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+        $revision = ['prospectus_file' => '101', '_prospectus_file' => 'field_a'];
+
+        $this->assertSame($revision, tuleva_disclosures_out_of_restore($revision, 99));
+
+        FakeDisclosureWrite::$doing_action = 'wp_restore_post_revision';
+        FakeDisclosureWrite::$administrator = true;
+        $this->assertSame($revision, tuleva_disclosures_out_of_restore($revision, 99));
+    }
+
+    /**
+     * So nothing is put back after an editor's restore, and a value fund_pages writes while
+     * it runs stays.
+     */
+    #[Test]
+    public function a_document_written_during_an_editor_s_restore_stays(): void
+    {
+        FakeDisclosureWrite::$login = 'an-editor';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['101'];
 
         tuleva_disclosures_before_restore(self::PAGE);
-        update_post_meta(self::PAGE, 'prospectus_file', '101');
+        update_post_meta(self::PAGE, 'prospectus_file', '202');
         tuleva_disclosures_after_restore(self::PAGE);
 
         $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
@@ -642,6 +784,24 @@ final class FundDisclosureLogTest extends TestCase
 
         $this->assertSame('101', get_post_meta(self::PAGE, 'prospectus_file', true));
         $this->assertSame(['an-administrator', 'revision', '202', '101'], $this->onlyEntry(['who', 'route', 'before', 'after']));
+    }
+
+    #[Test]
+    public function an_administrator_s_restore_the_log_cannot_hold_is_put_back(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$meta[self::PAGE]['prospectus_file'] = ['202'];
+        FakeDisclosureWrite::$log_fails = true;
+
+        $errors = $this->errorLog(function (): void {
+            tuleva_disclosures_before_restore(self::PAGE);
+            update_post_meta(self::PAGE, 'prospectus_file', '101');
+            tuleva_disclosures_after_restore(self::PAGE);
+        });
+
+        $this->assertSame('202', get_post_meta(self::PAGE, 'prospectus_file', true));
+        $this->assertStringContainsString('prospectus_file on page ' . self::PAGE, $errors);
     }
 
     #[Test]
@@ -678,6 +838,51 @@ final class FundDisclosureLogTest extends TestCase
 
         $this->assertArrayNotHasKey('before_url', $entry);
         $this->assertStringContainsString('<td>101</td>', tuleva_disclosure_panel([], [$entry]));
+    }
+
+    /**
+     * What acf_update_value does with a value: the pre filter, the update_value filters, the
+     * meta write (null deletes), and the hook WordPress fires once the write lands.
+     */
+    private function acfWrites($value, string $name)
+    {
+        $field = ['name' => $name];
+
+        if (tuleva_disclosure_pre_update(null, $value, self::PAGE, $field) !== null) {
+            return 'short-circuited';
+        }
+
+        $value = tuleva_disclosure_on_update($value, self::PAGE, $field);
+
+        if ($value === null) {
+            unset(FakeDisclosureWrite::$meta[self::PAGE][$name]);
+            tuleva_disclosure_on_meta_write([7], self::PAGE, $name, '');
+        } else {
+            FakeDisclosureWrite::$meta[self::PAGE][$name] = [$value];
+            tuleva_disclosure_on_meta_write(7, self::PAGE, $name, $value);
+        }
+
+        return $value;
+    }
+
+    /**
+     * What PHP's error_log() wrote while $run ran.
+     */
+    private function errorLog(callable $run): string
+    {
+        $file = tempnam(sys_get_temp_dir(), 'tuleva-error-log');
+        $previous = ini_set('error_log', $file);
+
+        try {
+            $run();
+        } finally {
+            ini_set('error_log', (string) $previous);
+        }
+
+        $written = (string) file_get_contents($file);
+        unlink($file);
+
+        return $written;
     }
 
     /**

@@ -110,8 +110,11 @@ funds as failed. The pages keep the documents they had.
 
 **Every write through ACF is logged** on the page (wp-admin, REST, WP-Cron), and so is a
 revision restore: who, when, how, and the value before and after, a document with its URL.
-The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`). A direct
-post-meta write (WP-CLI, WPML's copy to a translation) is not logged.
+An entry is written once WordPress has stored the value, so a write that fails is not
+logged; a change the log cannot hold is put back and the PHP error log says so. An
+editor's revision restore leaves the document fields out of ACF's copy, so it changes
+none of them. The *Documents* box shows the last 50 (`helpers/acf/fund-disclosure-log.php`).
+A direct post-meta write (WP-CLI, WPML's copy to a translation) is not logged.
 
 **Over the REST API:** only as an account holding `tuleva_write_fund_documents`, or an
 Administrator; an Editor's write is answered 403.

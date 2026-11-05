@@ -5,9 +5,9 @@
  * agent-gateway's fund_pages tool checks, approves (two people) and audits the writes it
  * makes over REST. This file covers the other routes: each write to a disclosure field
  * through ACF (wp-admin, REST, WP-Cron) and each revision restore is appended to a log on
- * the page, and in wp-admin the fields are hidden from everyone but Administrators, so a
- * change goes through the gateway. A direct post-meta write (WP-CLI, WPML's copy to a
- * translation) is not logged; nothing reads a translation's copy.
+ * the page once it is stored, and in wp-admin the fields are hidden from everyone but
+ * Administrators, so a change goes through the gateway. A direct post-meta write (WP-CLI,
+ * WPML's copy to a translation) is not logged; nothing reads a translation's copy.
  *
  * Who may write is decided by the writer, whatever the route: an Administrator, the
  * upcoming-document switch's WP-Cron job, or over REST an account with the Fund document
@@ -229,9 +229,11 @@ function tuleva_disclosure_pre_update($check, $value, $post_id, $field)
 add_filter('acf/pre_update_value', 'tuleva_disclosure_pre_update', 10, 4);
 
 /**
- * Logs a change to a disclosure field. A refused write stops at tuleva_disclosure_pre_update;
- * should one get here anyway, the stored value is kept, and null has ACF delete rather than
- * write where nothing was stored, so no empty row is left.
+ * Notes a change to a disclosure field, to be logged once ACF's meta write lands
+ * (tuleva_disclosure_on_meta_write): a write that fails is then never logged. A refused write
+ * stops at tuleva_disclosure_pre_update; should one get here anyway, the stored value is
+ * kept, and null has ACF delete rather than write where nothing was stored, so no empty row
+ * is left.
  */
 function tuleva_disclosure_on_update($value, $post_id, $field)
 {
@@ -248,16 +250,87 @@ function tuleva_disclosure_on_update($value, $post_id, $field)
         return $before === '' ? null : $before;
     }
 
-    tuleva_disclosure_log((int) $post_id, $name, $before, $value, $route);
+    if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($value)) {
+        $pending = &tuleva_disclosure_writes_pending();
+        $pending[(int) $post_id][$name] = ['before' => $before, 'route' => $route];
+    }
 
     return $value;
 }
 
+add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
+
 /**
- * A write made while the upcoming-document switch runs is WP-Cron's, whoever's request it
- * runs in; every other write tuleva_disclosure_may_write lets through has a user.
+ * @return array<int, array<string, array{before: mixed, route: string}>> the changes ACF is
+ *     about to store, by page and field, for this request
  */
-function tuleva_disclosure_log(int $post_id, string $name, $before, $after, string $route): void
+function &tuleva_disclosure_writes_pending(): array
+{
+    static $pending = [];
+
+    return $pending;
+}
+
+/**
+ * Logs a change ACF noted, once WordPress has stored it: these hooks fire only after the row
+ * is added, updated or deleted. Any other write to the key (WP-CLI, WPML's copy to a
+ * translation, a revision's copy) has nothing noted and is passed over.
+ */
+function tuleva_disclosure_on_meta_write($meta_id, $object_id, $meta_key, $meta_value): void
+{
+    $pending = &tuleva_disclosure_writes_pending();
+    $write = $pending[(int) $object_id][(string) $meta_key] ?? null;
+
+    if ($write === null) {
+        return;
+    }
+
+    unset($pending[(int) $object_id][(string) $meta_key]);
+    tuleva_disclosure_record((int) $object_id, (string) $meta_key, $write['before'], $meta_value, $write['route']);
+}
+
+add_action('added_post_meta', 'tuleva_disclosure_on_meta_write', 10, 4);
+add_action('updated_post_meta', 'tuleva_disclosure_on_meta_write', 10, 4);
+add_action('deleted_post_meta', 'tuleva_disclosure_on_meta_write', 10, 4);
+
+/**
+ * Logs a stored change. A change the log cannot hold is put back, so a document does not
+ * change unrecorded, and the PHP error log says so: the writer's read-back then finds the old
+ * value.
+ */
+function tuleva_disclosure_record(int $post_id, string $name, $before, $after, string $route): void
+{
+    if (tuleva_disclosure_log($post_id, $name, $before, $after, $route)) {
+        return;
+    }
+
+    error_log(sprintf(
+        'Fund document log: the change to %s on page %d could not be logged, so it is put back.',
+        $name,
+        $post_id
+    ));
+    tuleva_disclosure_put_back($post_id, $name, $before, $after);
+}
+
+/**
+ * Puts a value back only where the field still holds the one written: a value another
+ * request has written since stays. A document that was new is taken away again.
+ */
+function tuleva_disclosure_put_back(int $post_id, string $name, $before, $after): void
+{
+    if (tuleva_disclosure_scalar($before) === '') {
+        delete_post_meta($post_id, $name, $after);
+    } else {
+        update_post_meta($post_id, $name, $before, $after);
+    }
+}
+
+/**
+ * Appends one entry, and answers whether the log now holds it (or there was nothing to
+ * hold). A write made while the upcoming-document switch runs is WP-Cron's, whoever's
+ * request it runs in; every other write tuleva_disclosure_may_write lets through has a user.
+ */
+function tuleva_disclosure_log(int $post_id, string $name, $before, $after, string $route): bool
 {
     $entry = tuleva_disclosure_log_entry(
         $name,
@@ -269,12 +342,8 @@ function tuleva_disclosure_log(int $post_id, string $name, $before, $after, stri
         'wp_get_attachment_url'
     );
 
-    if ($entry !== null) {
-        add_post_meta($post_id, TULEVA_DISCLOSURE_LOG, $entry);
-    }
+    return $entry === null || add_post_meta($post_id, TULEVA_DISCLOSURE_LOG, $entry) !== false;
 }
-
-add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
 
 /**
  * What the REST writers' calls need: read pages and media, upload a PDF (onboarding-service,
@@ -363,14 +432,42 @@ function tuleva_disclosure_is_protected_meta($protected, $meta_key, $meta_type)
 add_filter('is_protected_meta', 'tuleva_disclosure_is_protected_meta', 10, 3);
 
 /**
- * Restoring a revision copies its fields straight into post meta, past acf/update_value,
- * and a revision holds the values of the last wp-admin save, not those written since over
- * REST or by WP-Cron. So the disclosures are read before ACF's restore (priority 10) and
- * compared after it: a writer who may not change one (tuleva_disclosure_may_write) gets it
- * put back, anyone else's change is logged.
+ * Restoring a revision has ACF copy its fields straight into post meta, past
+ * acf/update_value, and a revision holds the values of the last wp-admin save, not those
+ * written since over REST or by WP-Cron. For a writer who may not change the disclosures
+ * (tuleva_disclosure_may_write), ACF's copy leaves them and their references out: it reads
+ * the revision through acf_get_meta(), whose result this filters. So nothing changes, and
+ * nothing has to be put back afterwards over a value another request wrote meanwhile.
+ */
+function tuleva_disclosures_out_of_restore($meta, $post_id)
+{
+    if (
+        !is_array($meta)
+        || !doing_action('wp_restore_post_revision')
+        || tuleva_disclosure_may_write(tuleva_disclosure_write_route())
+    ) {
+        return $meta;
+    }
+
+    foreach (array_keys(tuleva_fund_disclosure_catalogue()) as $name) {
+        unset($meta[$name], $meta['_' . $name]);
+    }
+
+    return $meta;
+}
+
+add_filter('acf/load_meta', 'tuleva_disclosures_out_of_restore', 10, 2);
+
+/**
+ * A writer who may change the disclosures has them restored, and the change logged once
+ * stored: they are read before ACF's restore (priority 10) and compared after it.
  */
 function tuleva_disclosures_before_restore($post_id): void
 {
+    if (!tuleva_disclosure_may_write(tuleva_disclosure_write_route())) {
+        return;
+    }
+
     $held = &tuleva_disclosures_held_over_restore();
     foreach (array_keys(tuleva_fund_disclosure_catalogue()) as $name) {
         $held[(int) $post_id][$name] = get_post_meta((int) $post_id, $name, true);
@@ -380,20 +477,13 @@ function tuleva_disclosures_before_restore($post_id): void
 function tuleva_disclosures_after_restore($post_id): void
 {
     $post_id = (int) $post_id;
-    $may_write = tuleva_disclosure_may_write(tuleva_disclosure_write_route());
     $held = &tuleva_disclosures_held_over_restore();
 
     foreach ($held[$post_id] ?? [] as $name => $before) {
         $after = get_post_meta($post_id, $name, true);
 
-        if (tuleva_disclosure_scalar($before) === tuleva_disclosure_scalar($after)) {
-            continue;
-        }
-
-        if ($may_write) {
-            tuleva_disclosure_log($post_id, $name, $before, $after, 'revision');
-        } else {
-            update_post_meta($post_id, $name, $before);
+        if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($after)) {
+            tuleva_disclosure_record($post_id, $name, $before, $after, 'revision');
         }
     }
 
