@@ -23,7 +23,7 @@ $faq = [
     ],
     [
         'question' => __('What are the state pension and the II and III pillar?', TEXT_DOMAIN),
-        'answer' => __('The state pension, or I pillar, is a monthly amount guaranteed by the state. Part of your salary goes to the II pillar, and you make III pillar contributions yourself, with an income tax benefit on up to 15% of your gross income, but no more than 6,000 € a year. Your II and III pillar savings can be inherited.', TEXT_DOMAIN),
+        'answer' => __('The state pension, or I pillar, is a monthly amount paid by the state. Part of your salary goes to the II pillar, and you make III pillar contributions yourself, with an income tax benefit on up to 15% of your gross income, but no more than 6,000 € a year. Your II and III pillar savings can be inherited.', TEXT_DOMAIN),
     ],
     [
         'question' => __('How do I withdraw my II and III pillar money?', TEXT_DOMAIN),
