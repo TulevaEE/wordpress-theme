@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row align-items-center gy-5 gx-xl-5">
                 <div class="col-lg-6 text-center text-lg-start text-navy">
-                    <h1 class="mb-4"><?php _e('Save in the <em>II pillar</em> again and win on taxes', TEXT_DOMAIN); ?></h1>
+                    <h1 class="mb-4"><?php _e('Rejoin the <em>II pillar</em> and win on taxes', TEXT_DOMAIN); ?></h1>
                     <p class="m-0 lead"><?php echo get_second_pillar_rejoin_lead(get_current_time_tallinn()); ?></p>
                     <ul class="rejoin-facts">
                         <li><?php _e('You pick 2, 4 or 6% of your pay', TEXT_DOMAIN); ?></li>
@@ -176,7 +176,7 @@
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
-                    <h2><?php _e('How do I start saving in the II pillar again?', TEXT_DOMAIN); ?></h2>
+                    <h2><?php _e('How do I rejoin the II pillar?', TEXT_DOMAIN); ?></h2>
                     <ol class="rejoin-steps list-unstyled mt-5 mb-0">
                         <li>
                             <span class="rejoin-steps__number" aria-hidden="true">1</span>
@@ -288,9 +288,40 @@
                     <h2 class="text-center"><?php _e('Frequently asked questions', TEXT_DOMAIN); ?></h2>
                     <div class="faq-list">
                         <div class="qa__question-wrapper" id="millal-saan-uuesti-liituda">
-                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('I received my money later than May 2022. When can I rejoin?', TEXT_DOMAIN); ?></a>
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-7"><?php _e('When can I rejoin the II pillar?', TEXT_DOMAIN); ?></a>
                             <div id="answer-7" class="collapse">
-                                <p><?php _e('The five years are counted from the date you submitted your withdrawal application, not from when the money reached you. If you applied in 2022 or later, you can apply again five years after that. There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('You can rejoin the II pillar once five years have passed since you took your money out. The five years are counted from the date you submitted your withdrawal application, not from when the money reached you.', TEXT_DOMAIN); ?></p>
+                                <table class="table rejoin-when">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><?php _e('You applied to withdraw', TEXT_DOMAIN); ?></th>
+                                            <th scope="col"><?php _e('You can apply again', TEXT_DOMAIN); ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php _e('By November&nbsp;2021', TEXT_DOMAIN); ?></td>
+                                            <td><?php _e('From November&nbsp;2026', TEXT_DOMAIN); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?php _e('December&nbsp;2021 to March&nbsp;2022', TEXT_DOMAIN); ?></td>
+                                            <td><?php _e('From December&nbsp;2026', TEXT_DOMAIN); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?php _e('April to July&nbsp;2022', TEXT_DOMAIN); ?></td>
+                                            <td><?php _e('From April&nbsp;2027', TEXT_DOMAIN); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?php _e('August to November&nbsp;2022', TEXT_DOMAIN); ?></td>
+                                            <td><?php _e('From August&nbsp;2027', TEXT_DOMAIN); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><?php _e('Later', TEXT_DOMAIN); ?></td>
+                                            <td><?php _e('Five years after your application', TEXT_DOMAIN); ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><?php _e('There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
@@ -298,9 +329,18 @@
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-8"><?php _e('I don\'t remember when I took money out of the II pillar. Where can I check?', TEXT_DOMAIN); ?></a>
                             <div id="answer-8" class="collapse">
                                 <p><?php printf(
-                                    __('%1$s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can. You can also check it in the %2$s.', TEXT_DOMAIN),
-                                    '<a href="' . get_app_url('/') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>',
-                                    '<a href="' . esc_url(__('https://public.pensionikeskus.ee/public/login.do?locale=en', TEXT_DOMAIN)) . '">' . __('Pensionikeskus self-service', TEXT_DOMAIN) . '</a>'
+                                    __('%s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can.', TEXT_DOMAIN),
+                                    '<a href="' . get_app_url('/') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                            </div>
+                        </div>
+                        <div class="qa__question-wrapper" id="kas-tasub-uuesti-liituda">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-9"><?php _e('Is it worth rejoining the II pillar?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-9" class="collapse">
+                                <p><?php _e('It makes sense to start saving in the II pillar again if you earn a salary and want to save for the long term.', TEXT_DOMAIN); ?></p>
+                                <p><?php printf(
+                                    __('Your contributions go in before income tax, and part of your social tax goes in as well. That makes your I&nbsp;pillar pension somewhat smaller, but in the II&nbsp;pillar you build assets of your own, whose value depends on the fund\'s returns and can also fall. %s', TEXT_DOMAIN),
+                                    '<a href="#sotsiaalmaks">' . __('See the comparison', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
                             </div>
                         </div>
