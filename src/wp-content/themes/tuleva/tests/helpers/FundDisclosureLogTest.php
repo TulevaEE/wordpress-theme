@@ -97,13 +97,6 @@ if (!function_exists('add_action')) {
     }
 }
 
-if (!function_exists('esc_url')) {
-    function esc_url($value)
-    {
-        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-    }
-}
-
 if (!function_exists('esc_html')) {
     function esc_html($value)
     {
@@ -210,6 +203,7 @@ if (!function_exists('add_post_meta')) {
     }
 }
 
+require_once __DIR__ . '/../support/FakeEscaping.php';
 require_once __DIR__ . '/../support/FakeAttachments.php';
 require_once __DIR__ . '/../support/FakeRoles.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
