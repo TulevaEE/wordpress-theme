@@ -93,7 +93,10 @@ function renderCalculator() {
         ${fromTemplate(/<span id="rejoinFigureRate">[^<]*<\/span>/)}
         <div id="pillarValues">${pillarValuesInTemplate()}</div>
     `;
-    jest.isolateModules(() => require('./second-pillar-rejoin-calculator'));
+    jest.isolateModules(() => {
+        require('./salary-arrival-focus');
+        require('./second-pillar-rejoin-calculator');
+    });
 }
 
 const FIGURE_BARS = [
