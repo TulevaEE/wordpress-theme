@@ -152,9 +152,16 @@ class ThemeEnqueue
             array_push(
                 $assets,
                 [
+                    'handle' => 'salary-arrival-focus',
+                    'src' => $js_path . 'salary-arrival-focus.js',
+                    'ver' => $SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ],
+                [
                     'handle' => 'second-pillar-rejoin-calculator',
                     'src' => $js_path . 'second-pillar-rejoin-calculator.js',
-                    'deps' => 'bootstrap',
+                    'deps' => ['bootstrap', 'salary-arrival-focus'],
                     'ver' => $SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION,
                     'js_in_header' => false,
                     'enqueue' => true
