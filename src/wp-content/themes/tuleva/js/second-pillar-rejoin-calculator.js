@@ -28,6 +28,25 @@ var SHARE_OF_PENSION_UNIT_TO_SECOND_PILLAR = 0.2;
 // People aged 65 have 19.3 years left to live (Statistics Estonia, 2025)
 var AVERAGE_YEARS_IN_RETIREMENT = 19;
 
+var LINE_SCROLL_PX = 40;
+var PAGE_SCROLL_SHARE = 0.85;
+
+function replacesArrivalExample(event) {
+    return event.inputType === 'insertFromPaste' || /^\d/.test(event.data || '');
+}
+
+function arrivalScrollDistance(event) {
+    var page = window.innerHeight * PAGE_SCROLL_SHARE;
+    var distances = {
+        ' ': event.shiftKey ? -page : page,
+        PageDown: page,
+        PageUp: -page,
+        ArrowDown: LINE_SCROLL_PX,
+        ArrowUp: -LINE_SCROLL_PX
+    };
+    return distances[event.key];
+}
+
 function incomeTaxSaved(grossSalary, ownContribution) {
     var taxableBeforeContribution =
         grossSalary * (1 - UNEMPLOYMENT_INSURANCE_RATE) - MONTHLY_BASIC_EXEMPTION;
@@ -265,12 +284,24 @@ function computeFirstPillarComparison(grossSalary, paymentRatePercent) {
         });
     });
     // After the arrival focus the caret blinks at the end of the example; the first digit
-    // typed still replaces the example, while deleting or clicking edits it as usual
+    // typed or a paste still replaces the example, while deleting or clicking edits it as usual
     salary.addEventListener('beforeinput', function (event) {
-        if (replaceOnFirstKey && event.inputType.indexOf('insert') === 0) {
+        if (replaceOnFirstKey && replacesArrivalExample(event)) {
             salary.value = '';
         }
         replaceOnFirstKey = false;
+    });
+    // The arrival focus must not take the page's keys: a visitor who came to read presses
+    // Space or an arrow to scroll, so those hand the page back instead of editing the salary
+    salary.addEventListener('keydown', function (event) {
+        var distance = arrivalScrollDistance(event);
+        if (!replaceOnFirstKey || distance === undefined) {
+            return;
+        }
+        event.preventDefault();
+        replaceOnFirstKey = false;
+        salary.blur();
+        window.scrollBy({ top: distance });
     });
     ['mousedown', 'blur'].forEach(function (type) {
         salary.addEventListener(type, function () {
