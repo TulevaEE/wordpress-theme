@@ -6,7 +6,7 @@ $net_salary_label = $effective_year === (int) $now->format('Y') + 1
     ? __('Net salary from next year', TEXT_DOMAIN)
     : sprintf(__('Net salary %d', TEXT_DOMAIN), $effective_year);
 $contribution_label = __('Contribution per month', TEXT_DOMAIN);
-$tax_win_label = __('Yearly gain from income tax', TEXT_DOMAIN);
+$tax_win_label = __('Yearly tax gain', TEXT_DOMAIN);
 $tax_win_words = explode(' ', $tax_win_label);
 $tax_win_last_word = array_pop($tax_win_words);
 ?>

@@ -1122,7 +1122,6 @@ msgstr "Rohkem küsimusi"
 msgid "Less questions"
 msgstr "Vähem küsimusi"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:9
 #: templates/components/third-pillar-calculator.php:65
 #: templates/components/third-pillar-calculator.php:138
 msgid "Yearly gain from income tax"
@@ -3341,3 +3340,7 @@ msgstr "jõuab sinu II samba kontole"
 #: templates/components/second-pillar-payment-rate-calculator.php:55
 msgid "The tax-free allowance covers your whole salary"
 msgstr "Maksuvaba tulu katab kogu palga"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:9
+msgid "Yearly tax gain"
+msgstr "Tulumaksuvõit aastas"
