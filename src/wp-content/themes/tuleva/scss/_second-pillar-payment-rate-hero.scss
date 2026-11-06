@@ -88,6 +88,7 @@ $payment-rate-calculator-divider: #d6dee6;
 }
 
 .payment-rate-calculator {
+    --control-height: 3.375rem;
     container-type: inline-size;
     border: 0;
     border-radius: 1.5rem;
@@ -130,6 +131,7 @@ $payment-rate-calculator-divider: #d6dee6;
     &__salary {
         display: flex;
         align-items: baseline;
+        min-height: var(--control-height);
         padding: .5rem 1.125rem;
         border: 1px solid $payment-rate-calculator-outline;
         border-radius: 999px;
@@ -201,7 +203,7 @@ $payment-rate-calculator-divider: #d6dee6;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 2.75rem;
+        min-height: calc(var(--control-height) - .5rem);
         border-radius: 999px;
         color: $navy-blue;
         font-size: 1.125rem;
@@ -283,9 +285,12 @@ $payment-rate-calculator-divider: #d6dee6;
     }
 
     &__cta {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        padding-block: .9375rem;
+        min-height: var(--control-height);
+        padding-block: .5rem;
         border-radius: 999px;
         text-wrap: balance;
     }
@@ -327,6 +332,8 @@ $payment-rate-calculator-divider: #d6dee6;
     }
 
     .payment-rate-calculator {
+        --control-height: 3.125rem;
+
         .card-body {
             padding: .25rem;
         }
@@ -349,10 +356,6 @@ $payment-rate-calculator-divider: #d6dee6;
 
         &__salary {
             padding-block: .375rem;
-        }
-
-        &__rate {
-            min-height: 2.625rem;
         }
 
         &__figures {
