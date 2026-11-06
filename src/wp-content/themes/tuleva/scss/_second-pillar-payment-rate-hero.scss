@@ -63,10 +63,9 @@ $payment-rate-calculator-divider: #d6dee6;
         text-wrap: pretty;
 
         .text-highlight {
-            padding: .05em .5em .1em;
-            border-radius: 999px;
-            background: $yellow;
-            color: $navy-blue;
+            padding: 0;
+            background: none;
+            color: $yellow;
             font-weight: $font-weight-semibold;
             white-space: nowrap;
         }
@@ -324,10 +323,6 @@ $payment-rate-calculator-divider: #d6dee6;
             margin-top: .75rem;
             font-size: .9375rem;
             line-height: 1.5;
-
-            .text-highlight {
-                padding-inline: .4em;
-            }
         }
     }
 

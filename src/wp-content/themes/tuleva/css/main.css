@@ -20335,10 +20335,9 @@ sup {
   text-wrap: pretty;
 }
 .payment-rate-hero__lead .text-highlight {
-  padding: 0.05em 0.5em 0.1em;
-  border-radius: 999px;
-  background: #fce228;
-  color: #002f63;
+  padding: 0;
+  background: none;
+  color: #fce228;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -20591,9 +20590,6 @@ sup {
     margin-top: 0.75rem;
     font-size: 0.9375rem;
     line-height: 1.5;
-  }
-  .payment-rate-hero__lead .text-highlight {
-    padding-inline: 0.4em;
   }
   .payment-rate-calculator .card-body {
     padding: 0.25rem;
