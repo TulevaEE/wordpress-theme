@@ -72,6 +72,17 @@ function get_next_second_pillar_deadline(DateTimeInterface $now) {
 }
 
 /**
+ * Returns the year a 2nd pillar payment rate application filed at $now takes effect: next January
+ * until the November 30 deadline ends in Tallinn, so from December the January after that.
+ */
+function get_second_pillar_payment_rate_effective_year(DateTimeInterface $now) {
+    $tallinn = DateTimeImmutable::createFromInterface($now)->setTimezone(get_tallinn_timezone());
+    $year = (int) $tallinn->format('Y');
+
+    return (int) $tallinn->format('n') === 12 ? $year + 2 : $year + 1;
+}
+
+/**
  * Returns active 2nd pillar countdown info if within 14 working days of a deadline.
  * Returns ['end_ms' => timestamp, 'deadline_name' => 'Month Day'] or null if no active countdown.
  */

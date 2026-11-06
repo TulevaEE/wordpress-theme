@@ -231,4 +231,27 @@ final class DeadlineCalculationsTest extends TestCase
         $this->assertSame('2025', $tallinnTime->format('Y'));
         $this->assertSame('01', $tallinnTime->format('d'));
     }
+
+    #[Test]
+    #[DataProvider('paymentRateEffectiveYearProvider')]
+    public function paymentRateChangeTakesEffectNextJanuaryUntilTheNovemberDeadlineEndsInTallinn(
+        string $now,
+        string $zone,
+        int $expectedYear
+    ): void {
+        $year = get_second_pillar_payment_rate_effective_year(new DateTimeImmutable($now, new DateTimeZone($zone)));
+
+        $this->assertSame($expectedYear, $year);
+    }
+
+    public static function paymentRateEffectiveYearProvider(): array
+    {
+        return [
+            'January applies from next year' => ['2026-01-15 12:00:00', 'Europe/Tallinn', 2027],
+            'last minute of the deadline applies from next year' => ['2026-11-30 23:59:00', 'Europe/Tallinn', 2027],
+            'first minute of December applies a year later' => ['2026-12-01 00:00:00', 'Europe/Tallinn', 2028],
+            'New Year\'s Eve applies a year later' => ['2026-12-31 23:00:00', 'Europe/Tallinn', 2028],
+            'December already started in Tallinn while still November in UTC' => ['2026-11-30 22:30:00', 'UTC', 2028],
+        ];
+    }
 }

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-05T15:38:06+00:00\n"
+"POT-Creation-Date: 2026-11-06T09:55:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Tuleva"
 msgstr ""
 
-#: functions.php:31
+#: functions.php:32
 #: helpers/acf/init.php:21
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
@@ -1018,8 +1018,7 @@ msgstr ""
 
 #: templates/components/front-hero/calculator.php:39
 #: templates/components/front-hero/calculator.php:43
-#: templates/components/second-pillar-payment-rate-calculator.php:16
-#: templates/components/second-pillar-payment-rate-calculator.php:20
+#: templates/components/second-pillar-payment-rate-calculator.php:25
 msgid "Your II pillar contribution"
 msgstr ""
 
@@ -1909,32 +1908,44 @@ msgid "Less questions"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:6
-msgid "Monthly gross salary"
+msgid "Net salary from next year"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:41
-msgid "Net salary from 2027"
+#: templates/components/second-pillar-payment-rate-calculator.php:7
+#, php-format
+msgid "Net salary %d"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "Assuming income tax rate of 22% and tax-free allowance of 700 euros per month."
+#: templates/components/second-pillar-payment-rate-calculator.php:8
+msgid "Contribution per month"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:9
+msgid "Yearly tax gain"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:17
+msgid "Enter your gross salary"
 msgstr ""
 
 #: templates/components/second-pillar-payment-rate-calculator.php:52
-msgid "Your monthly contribution"
+msgid "The calculation assumes 22% income tax, a 700 € monthly tax-free allowance and a 1.6% unemployment insurance contribution."
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:59
-#: templates/components/third-pillar-calculator.php:65
-#: templates/components/third-pillar-calculator.php:138
-msgid "Yearly gain from income tax"
+#: templates/components/second-pillar-payment-rate-calculator.php:54
+#: templates/components/second-pillar-payment-rate-calculator.php:55
+msgid "goes to your II pillar account"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:69
+#: templates/components/second-pillar-payment-rate-calculator.php:55
+msgid "The tax-free allowance covers your whole salary"
+msgstr ""
+
+#: templates/components/second-pillar-payment-rate-calculator.php:61
 msgid "Increase contribution"
 msgstr ""
 
-#: templates/components/second-pillar-payment-rate-calculator.php:73
+#: templates/components/second-pillar-payment-rate-calculator.php:64
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr ""
 
@@ -1975,6 +1986,11 @@ msgstr ""
 
 #: templates/components/third-pillar-calculator.php:48
 msgid "Gifts and donations, education costs, including kindergarten fees. Limited to 1200 euros in total, but no more than 50 percent of taxable income in Estonia."
+msgstr ""
+
+#: templates/components/third-pillar-calculator.php:65
+#: templates/components/third-pillar-calculator.php:138
+msgid "Yearly gain from income tax"
 msgstr ""
 
 #: templates/components/third-pillar-calculator.php:68

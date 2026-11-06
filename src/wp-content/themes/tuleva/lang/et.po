@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: .\n"
 
-#: functions.php:31
+#: functions.php:32
 #: helpers/acf/init.php:21
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
@@ -138,8 +138,7 @@ msgstr "&euro;&nbsp;kuus"
 
 #: templates/components/front-hero/calculator.php:39
 #: templates/components/front-hero/calculator.php:43
-#: templates/components/second-pillar-payment-rate-calculator.php:16
-#: templates/components/second-pillar-payment-rate-calculator.php:20
+#: templates/components/second-pillar-payment-rate-calculator.php:25
 msgid "Your II pillar contribution"
 msgstr "Sinu panus brutopalgast"
 
@@ -1123,33 +1122,16 @@ msgstr "Rohkem küsimusi"
 msgid "Less questions"
 msgstr "Vähem küsimusi"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:6
-msgid "Monthly gross salary"
-msgstr "Brutopalk"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:41
-msgid "Net salary from 2027"
-msgstr "Netopalk alates 2027"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:44
-msgid "Assuming income tax rate of 22% and tax-free allowance of 700 euros per month."
-msgstr "Eeldame, et tulumaks on 22% ja maksuvaba tulu 700 eurot kuus."
-
-#: templates/components/second-pillar-payment-rate-calculator.php:52
-msgid "Your monthly contribution"
-msgstr "Sinu igakuine panus"
-
-#: templates/components/second-pillar-payment-rate-calculator.php:59
 #: templates/components/third-pillar-calculator.php:65
 #: templates/components/third-pillar-calculator.php:138
 msgid "Yearly gain from income tax"
 msgstr "Tulumaksuvõit aastas"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:69
+#: templates/components/second-pillar-payment-rate-calculator.php:61
 msgid "Increase contribution"
 msgstr "Tõstan sissemakset"
 
-#: templates/components/second-pillar-payment-rate-calculator.php:73
+#: templates/components/second-pillar-payment-rate-calculator.php:64
 msgid "Submitting the application is <strong>free</strong> and takes only 2 minutes."
 msgstr "Avalduse esitamine on <strong>tasuta</strong> ja võtab vaid 2 minutit."
 
@@ -3328,3 +3310,37 @@ msgstr "Lõplikku tähtaega pole. Novembri lõpuks esitatud avalduse järel alga
 #, php-format
 msgid "%s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can."
 msgstr "%s ja vaata plokki „Sinu valikud“. II&nbsp;samba real on kirjas, kas saad juba uuesti liituda või mis kuupäevast saad."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:6
+msgid "Net salary from next year"
+msgstr "Netopalk järgmisest aastast"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:7
+#, php-format
+msgid "Net salary %d"
+msgstr "Netopalk %d"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:8
+msgid "Contribution per month"
+msgstr "Sissemakse kuus"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:17
+msgid "Enter your gross salary"
+msgstr "Sisesta oma brutopalk"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:52
+msgid "The calculation assumes 22% income tax, a 700 € monthly tax-free allowance and a 1.6% unemployment insurance contribution."
+msgstr "Arvutus eeldab 22% tulumaksu, 700 € maksuvaba tulu kuus ja 1,6% töötuskindlustusmakset."
+
+#: templates/components/second-pillar-payment-rate-calculator.php:54
+#: templates/components/second-pillar-payment-rate-calculator.php:55
+msgid "goes to your II pillar account"
+msgstr "jõuab sinu II samba kontole"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:55
+msgid "The tax-free allowance covers your whole salary"
+msgstr "Maksuvaba tulu katab kogu palga"
+
+#: templates/components/second-pillar-payment-rate-calculator.php:9
+msgid "Yearly tax gain"
+msgstr "Tulumaksuvõit aastas"

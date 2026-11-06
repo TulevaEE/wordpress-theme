@@ -1,0 +1,373 @@
+$payment-rate-hero-lead: #cfe2f3;
+$payment-rate-calculator-outline: #8193a6;
+$payment-rate-calculator-track: #f2f5f8;
+$payment-rate-calculator-divider: #d6dee6;
+
+.payment-rate-hero {
+    --navy-raised: rgba(255, 255, 255, .12);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: clamp(3.5rem, 10vh, 7rem);
+    background: $navy-blue;
+    color: $white;
+
+    ::selection {
+        background: $blue-light;
+        color: $navy-blue;
+    }
+
+    &__bars {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &__bar {
+        position: absolute;
+        right: -4%;
+        width: 48%;
+        background: var(--navy-raised);
+        transform: skewX(-13deg);
+        transform-origin: left bottom;
+    }
+
+    &__bar--upper {
+        top: 18%;
+        height: 22%;
+    }
+
+    &__bar--lower {
+        top: 46%;
+        height: 14%;
+    }
+
+    &__title {
+        margin: 0;
+        color: $white;
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bold;
+        font-size: clamp(2.25rem, 1.3rem + 3.1vw, 4.25rem);
+        line-height: 1.05;
+        letter-spacing: -.025em;
+        text-wrap: balance;
+    }
+
+    &__lead {
+        max-width: 30em;
+        margin: 1.5rem 0 0;
+        color: $payment-rate-hero-lead;
+        font-size: clamp(1.125rem, 1rem + .4vw, 1.3125rem);
+        line-height: 1.6;
+        text-wrap: pretty;
+
+        .text-highlight {
+            padding: 0;
+            background: none;
+            color: $yellow;
+            font-weight: $font-weight-semibold;
+            white-space: nowrap;
+        }
+    }
+
+    .counter-small {
+        margin: 2rem 0 0 !important;
+
+        .counter-number > span {
+            background: var(--navy-raised);
+            color: $white;
+        }
+
+        .counter-label {
+            color: $payment-rate-hero-lead;
+            font-weight: $font-weight-medium;
+            text-transform: none;
+        }
+    }
+}
+
+.payment-rate-calculator {
+    --control-height: 3.375rem;
+    container-type: inline-size;
+    border: 0;
+    border-radius: 1.5rem;
+    color: $navy-blue;
+
+    .card-body {
+        padding: .5rem;
+    }
+
+    &__inputs {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    &__results {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    &__field {
+        min-width: 0;
+        margin: 0 0 1rem;
+        padding: 0;
+        border: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: block;
+        float: none;
+        width: auto;
+        margin: 0 0 .5rem;
+        padding: 0;
+        color: $navy-blue;
+        font-size: 1rem;
+        font-weight: $font-weight-medium;
+    }
+
+    &__salary {
+        display: flex;
+        align-items: baseline;
+        min-height: var(--control-height);
+        padding: .5rem 1.125rem;
+        border: 1px solid $payment-rate-calculator-outline;
+        border-radius: 999px;
+        background: $white;
+        cursor: text;
+        transition: border-color .2s ease, box-shadow .2s ease;
+
+        &:hover {
+            border-color: $blue;
+        }
+
+        &:focus-within {
+            border-color: $blue;
+            box-shadow: 0 0 0 3px rgba($blue, .2);
+        }
+
+        input {
+            width: 100%;
+            min-width: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: $navy-blue;
+            font-size: 1.5rem;
+            font-weight: $font-weight-medium;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+            caret-color: $blue;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        > span {
+            padding-left: .25rem;
+            color: $navy-blue;
+            font-size: 1.5rem;
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    // A desktop shows the caret of the arrival focus instead; a touch screen needs the hint
+    &__edit {
+        flex-shrink: 0;
+        align-self: center;
+        margin-left: .75rem;
+        color: $navy-blue;
+
+        .payment-rate-calculator__salary:focus-within & {
+            display: none;
+        }
+
+        @media (min-width: 992px) and (pointer: fine) {
+            display: none;
+        }
+    }
+
+    &__rates {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .25rem;
+        padding: .25rem;
+        border-radius: 999px;
+        background: $payment-rate-calculator-track;
+    }
+
+    &__rate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(var(--control-height) - .5rem);
+        border-radius: 999px;
+        color: $navy-blue;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .btn-check:checked + &__rate {
+        background: $blue;
+        color: $white;
+    }
+
+    .btn-check:focus-visible + &__rate {
+        outline: 2px solid $blue;
+        outline-offset: 2px;
+    }
+
+    &__divider {
+        margin: 0 1rem;
+        border: 0;
+        border-top: 1px solid $payment-rate-calculator-divider;
+        opacity: 1;
+    }
+
+    &__figures {
+        margin: 0 0 1.25rem;
+    }
+
+    &__figure {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: .3125rem 0;
+
+        dt {
+            font-weight: $font-weight-normal;
+        }
+
+        dd {
+            margin: 0;
+            font-size: 1.125rem;
+            font-weight: $font-weight-bold;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+    }
+
+    &__figure--tax-win {
+        align-items: center;
+        margin-top: .5rem;
+
+        dt {
+            font-size: 1.125rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.3;
+        }
+
+        dd {
+            color: $green;
+            font-size: clamp(1.75rem, 10.5cqi, 2.5rem);
+            line-height: 1;
+            letter-spacing: -.02em;
+        }
+    }
+
+    &.is-tax-free &__figure--tax-win dd {
+        color: $navy-blue;
+    }
+
+    &__note {
+        display: block;
+        font-size: .875rem;
+        font-weight: $font-weight-normal;
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: var(--control-height);
+        padding-block: .5rem;
+        border-radius: 999px;
+        text-wrap: balance;
+    }
+
+    &__fine-print {
+        margin: .75rem 0 0;
+        font-size: .875rem;
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .payment-rate-hero {
+        padding-block: 2.5rem 3rem;
+
+        &__lead {
+            margin-inline: auto;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .payment-rate-hero {
+        padding-block: .75rem 2.5rem;
+
+        .row {
+            --bs-gutter-y: 1rem;
+        }
+
+        &__title {
+            font-size: 2.125rem;
+        }
+
+        &__lead {
+            margin-top: .75rem;
+            font-size: .9375rem;
+            line-height: 1.5;
+        }
+    }
+
+    .payment-rate-calculator {
+        --control-height: 3.125rem;
+
+        .card-body {
+            padding: .25rem;
+        }
+
+        &__inputs {
+            padding: .75rem .875rem 1rem;
+        }
+
+        &__results {
+            padding: 1rem .875rem .875rem;
+        }
+
+        &__field {
+            margin-bottom: .75rem;
+        }
+
+        &__label {
+            margin-bottom: .375rem;
+        }
+
+        &__salary {
+            padding-block: .375rem;
+        }
+
+        &__figures {
+            margin-bottom: 1rem;
+        }
+
+        &__figure {
+            padding-block: .25rem;
+        }
+
+        &__figure--tax-win {
+            margin-top: .25rem;
+        }
+    }
+}

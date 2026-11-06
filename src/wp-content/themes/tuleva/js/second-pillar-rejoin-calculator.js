@@ -11,7 +11,6 @@ var INCOME_TAX_RATE = 0.22;
 var MONTHLY_BASIC_EXEMPTION = 700;
 var UNEMPLOYMENT_INSURANCE_RATE = 0.016;
 var MAX_GROSS_SALARY = 99999;
-var AUTOFOCUS_MEDIA = '(min-width: 992px) and (pointer: fine)';
 var FIGURE_FOLLOWS_SALARY_FROM = 1000;
 var FIGURE_BASELINE_Y = 470;
 var FIGURE_PILLAR_TOP_Y = 190;
@@ -254,29 +253,6 @@ function computeFirstPillarComparison(grossSalary, paymentRatePercent) {
         rate.addEventListener('change', update);
     });
     window.addEventListener('pageshow', update);
-    var replaceOnFirstKey = false;
-
-    salary.addEventListener('focus', function () {
-        if (replaceOnFirstKey) {
-            return;
-        }
-        setTimeout(function () {
-            salary.select();
-        });
-    });
-    // After the arrival focus the caret blinks at the end of the example; the first digit
-    // typed still replaces the example, while deleting or clicking edits it as usual
-    salary.addEventListener('beforeinput', function (event) {
-        if (replaceOnFirstKey && event.inputType.indexOf('insert') === 0) {
-            salary.value = '';
-        }
-        replaceOnFirstKey = false;
-    });
-    ['mousedown', 'blur'].forEach(function (type) {
-        salary.addEventListener(type, function () {
-            replaceOnFirstKey = false;
-        });
-    });
     salary.addEventListener('change', function () {
         if (parseEuros(salary.value) > MAX_GROSS_SALARY) {
             salary.value = MAX_GROSS_SALARY;
@@ -284,15 +260,7 @@ function computeFirstPillarComparison(grossSalary, paymentRatePercent) {
     });
     update();
 
-    // Testers didn't see that the salary can be changed. On a desktop the field takes the
-    // focus on arrival with a blinking caret, as a search box does. Not on touch screens,
-    // where it would open the keyboard over the page, and not when the visitor came for a
-    // section further down
-    if (window.matchMedia && window.matchMedia(AUTOFOCUS_MEDIA).matches && !window.location.hash) {
-        replaceOnFirstKey = true;
-        salary.focus({ preventScroll: true });
-        salary.setSelectionRange(salary.value.length, salary.value.length);
-    }
+    window.initSalaryArrivalFocus(salary);
 })();
 
 if (typeof module !== 'undefined' && module.exports) {
