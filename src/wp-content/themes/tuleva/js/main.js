@@ -205,48 +205,6 @@ $(document).ready(function ($) {
             });
             calculateThirdPillarSavings();
         },
-        calculateSecondPillarPaymentRate = function () {
-            var $calculator = $('.second-pillar-payment-rate-calculator');
-
-            var grossSalary = parseInt($calculator.find('#monthlyWage').val());
-            grossSalary = isNaN(grossSalary) ? 2000 : grossSalary;
-
-            // 2, 4 or 6
-            var pillarContribution = parseInt($calculator.find('input[name="pillarContribution"]:checked').val());
-            var yourSecondPillarContribution = pillarContribution / 100 * grossSalary;
-
-            var incomeTaxRate = 0.22;
-            var unemploymentInsurance = 0.016 * grossSalary;
-            var taxFreeWage = 700;
-            var incomeTax =
-                Math.max((grossSalary - unemploymentInsurance - yourSecondPillarContribution - taxFreeWage) * incomeTaxRate, 0);
-            var netSalary = grossSalary - unemploymentInsurance - yourSecondPillarContribution - incomeTax;
-
-            // 2026 at 0% contribution rate
-            var incomeTax0Percent = Math.max((grossSalary - unemploymentInsurance - taxFreeWage) * incomeTaxRate, 0);
-
-            var monthlyTaxWin = Math.max((incomeTax0Percent - incomeTax), 0);
-            var yearlyTaxWin = monthlyTaxWin * 12;
-
-            $calculator.find('#netWage').text(`${format(netSalary)} €`);
-            $calculator.find('#monthlyContributionYou').text(`${format(yourSecondPillarContribution)} €`);
-            $calculator.find('#yearlyTaxWin').text(`${format(yearlyTaxWin)} €`);
-        },
-        initSecondPillarPaymentRateCalculator = function () {
-            var $input = $('.second-pillar-payment-rate-calculator input');
-            $input.on('change', calculateSecondPillarPaymentRate);
-            $input.on('keyup', calculateSecondPillarPaymentRate);
-            $input.closest('form').on('submit', function (ev) {
-                ev.preventDefault();
-                return false;
-            });
-            var $formRange = $('.second-pillar-payment-rate-calculator .form-range');
-
-            $formRange.on('input', function () {
-                calculateSecondPillarPaymentRate();
-            });
-            calculateSecondPillarPaymentRate();
-        },
         initPayoutCalculator = function () {
             $('.payout-calculator').each(function () {
                 var $calculator = $(this);
@@ -602,9 +560,6 @@ $(document).ready(function ($) {
         },
         function () {
             initThirdPillarCalculator();
-        },
-        function () {
-            initSecondPillarPaymentRateCalculator();
         },
         function () {
             initPayoutCalculator();

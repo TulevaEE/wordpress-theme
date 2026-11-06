@@ -148,7 +148,8 @@ class ThemeEnqueue
                 ]
             );
         }
-        if (is_page_template('page_second-pillar-rejoin.php')) {
+        $uses_payment_rate_hero = current_page_uses_component('second_pillar_payment_rate_hero');
+        if (is_page_template('page_second-pillar-rejoin.php') || $uses_payment_rate_hero) {
             array_push(
                 $assets,
                 [
@@ -157,7 +158,25 @@ class ThemeEnqueue
                     'ver' => $SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION,
                     'js_in_header' => false,
                     'enqueue' => true
-                ],
+                ]
+            );
+        }
+        if ($uses_payment_rate_hero) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'second-pillar-payment-rate-calculator',
+                    'src' => $js_path . 'second-pillar-payment-rate-calculator.js',
+                    'deps' => 'salary-arrival-focus',
+                    'ver' => $SECOND_PILLAR_PAYMENT_RATE_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
+        if (is_page_template('page_second-pillar-rejoin.php')) {
+            array_push(
+                $assets,
                 [
                     'handle' => 'second-pillar-rejoin-calculator',
                     'src' => $js_path . 'second-pillar-rejoin-calculator.js',
