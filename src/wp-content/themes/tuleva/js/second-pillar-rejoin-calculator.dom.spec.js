@@ -258,6 +258,42 @@ describe('II pillar rejoin calculator on the page', () => {
         delete window.matchMedia;
     });
 
+    it('hands the page back on Space after arrival, so the example stays and the page scrolls', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        window.scrollBy = jest.fn();
+        renderCalculator();
+        const salary = document.getElementById('calcSalary');
+
+        const space = new KeyboardEvent('keydown', { key: ' ', cancelable: true });
+        salary.dispatchEvent(space);
+
+        expect([salary.value, document.activeElement === salary, space.defaultPrevented, window.scrollBy.mock.calls.length])
+            .toEqual(['2000', false, true, 1]);
+        delete window.matchMedia;
+    });
+
+    it('keeps the example when the first key typed after arrival is not a digit', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        renderCalculator();
+        const salary = document.getElementById('calcSalary');
+
+        salary.dispatchEvent(new InputEvent('beforeinput', { inputType: 'insertText', data: 'a' }));
+
+        expect(salary.value).toBe('2000');
+        delete window.matchMedia;
+    });
+
+    it('replaces the example with a salary pasted right after arrival', () => {
+        window.matchMedia = jest.fn(() => ({ matches: true }));
+        renderCalculator();
+        const salary = document.getElementById('calcSalary');
+
+        salary.dispatchEvent(new InputEvent('beforeinput', { inputType: 'insertFromPaste' }));
+
+        expect(salary.value).toBe('');
+        delete window.matchMedia;
+    });
+
     it('lets the visitor delete digits of the example after arrival instead of clearing it', () => {
         window.matchMedia = jest.fn(() => ({ matches: true }));
         renderCalculator();
