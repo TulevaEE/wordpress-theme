@@ -657,10 +657,10 @@ final class FundDisclosuresTest extends TestCase
         }
 
         $this->assertSame(
-            tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ESTONIAN_PAGE),
-            tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE)
+            $this->missingOnThePage(self::SAVINGS_TEMPLATE, FakeFundPage::ESTONIAN_PAGE),
+            $this->missingOnThePage(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE)
         );
-        $this->assertContains('prospectus_file', tuleva_fund_disclosures_missing(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE));
+        $this->assertContains('prospectus_file', $this->missingOnThePage(self::SAVINGS_TEMPLATE, FakeFundPage::ENGLISH_PAGE));
     }
 
     #[Test]
@@ -699,7 +699,7 @@ final class FundDisclosuresTest extends TestCase
         // upcoming documents and previous_reports_url are optional and unset.
         $this->assertSame(
             ['key_investor_info_file', 'fund_co2_intensity'],
-            tuleva_fund_disclosures_missing()
+            $this->missingOnThePage()
         );
     }
 
@@ -714,7 +714,7 @@ final class FundDisclosuresTest extends TestCase
             }
         }
 
-        $this->assertSame([], tuleva_fund_disclosures_missing());
+        $this->assertSame([], $this->missingOnThePage());
     }
 
     /**
@@ -943,7 +943,22 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$fields['fund_co2_intensity'] = '0';
 
         $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
-        $this->assertNotContains('fund_co2_intensity', tuleva_fund_disclosures_missing());
+        $this->assertNotContains('fund_co2_intensity', $this->missingOnThePage());
+    }
+
+    /**
+     * The required fields empty on the page itself, as its gaps list them.
+     *
+     * @return list<string>
+     */
+    private function missingOnThePage(?string $template = null, $post_id = null): array
+    {
+        $gaps = tuleva_fund_disclosure_gaps($template ?? FakeFundPage::$template, $post_id);
+
+        return array_column(
+            array_filter($gaps, fn(array $gap) => $gap['problem'] === 'missing' && $gap['page'] === 'fund'),
+            'field'
+        );
     }
 
     /**
@@ -1115,10 +1130,47 @@ final class FundDisclosuresTest extends TestCase
         $this->fillPensionAndSharedPages();
         unset(FakeFundPage::$fields['investment_report_file']);
 
-        $this->assertStringEndsWith(
-            'Set them through agent-gateway fund_pages. The investment report comes from the monthly report job.',
+        $this->assertSame(
+            'Required on this page and empty: investment_report_file. The investment report comes from the monthly report job.',
             tuleva_describe_disclosure_gaps(tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533))
         );
+
+        unset(FakeFundPage::$fields['model_portfolio_file']);
+
+        $this->assertStringEndsWith(
+            'Set them through agent-gateway fund_pages, except the investment report, which comes from the monthly report job.',
+            tuleva_describe_disclosure_gaps(tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533))
+        );
+    }
+
+    /**
+     * WordPress reads a missing page ID as the current page's, so it must not answer that page's
+     * gaps, least of all an empty list that reads as complete.
+     */
+    #[Test]
+    public function a_missing_page_id_has_no_gaps_rather_than_the_current_page_s(): void
+    {
+        $this->fillPensionAndSharedPages();
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$post_id = 17533;
+
+        $this->assertNull(tuleva_disclosure_gaps_for_rest(['id' => 0]));
+    }
+
+    /**
+     * An English page reads its Estonian original's fields, so its edit screen sends the editor there.
+     */
+    #[Test]
+    public function an_english_page_s_notice_names_the_estonian_page(): void
+    {
+        FakeFundPage::$pages = [self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE]];
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        FakeFundPage::$post_id = FakeFundPage::ENGLISH_PAGE;
+        $this->assertStringStartsWith('Required on the Estonian page and empty: prospectus_file', tuleva_disclosure_gaps_notice());
+
+        FakeFundPage::$post_id = FakeFundPage::ESTONIAN_PAGE;
+        $this->assertStringStartsWith('Required on this page and empty: prospectus_file', tuleva_disclosure_gaps_notice());
     }
 
     #[Test]

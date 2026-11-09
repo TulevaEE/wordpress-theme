@@ -55,23 +55,6 @@ function tuleva_fund_disclosure_gaps(string $template, $post_id = null): array
 }
 
 /**
- * Documents a fund is expected to publish but has not got a value for, on the page itself. Optional
- * documents and documents outside the fund's scope never appear here.
- *
- * @return list<string>
- */
-function tuleva_fund_disclosures_missing(?string $template = null, $post_id = null): array
-{
-    $gaps = tuleva_disclosure_gaps_in(
-        tuleva_fund_disclosure_scope()[$template ?? tuleva_current_fund_template()] ?? [],
-        fn(string $name) => tuleva_disclosure_stored_value($name, $post_id),
-        TULEVA_DISCLOSURE_GAP_ON_FUND_PAGE
-    );
-
-    return array_column(array_filter($gaps, fn(array $gap) => $gap['problem'] === TULEVA_DISCLOSURE_GAP_MISSING), 'field');
-}
-
-/**
  * @param array<string, string> $scope field name => requirement
  * @param callable(string): string $stored_value
  * @return list<array{field: string, problem: string, page: string}>
@@ -96,18 +79,19 @@ function tuleva_disclosure_gaps_in(array $scope, callable $stored_value, string 
 }
 
 /**
- * The gaps as one notice for an edit screen, or '' when there are none.
+ * The gaps as one notice for an edit screen, or '' when there are none. $where names the page whose
+ * fields they are: an English page's are its Estonian original's.
  *
  * @param list<array{field: string, problem: string, page: string}> $gaps
  */
-function tuleva_describe_disclosure_gaps(array $gaps): string
+function tuleva_describe_disclosure_gaps(array $gaps, string $where = 'this page'): string
 {
     $fields = fn(string $problem, ?string $page = null) => array_column(array_filter(
         $gaps,
         fn(array $gap) => $gap['problem'] === $problem && ($page === null || $gap['page'] === $page)
     ), 'field');
     $sentences = array_filter([
-        'Required on this page and empty' => $fields(TULEVA_DISCLOSURE_GAP_MISSING, TULEVA_DISCLOSURE_GAP_ON_FUND_PAGE),
+        "Required on $where and empty" => $fields(TULEVA_DISCLOSURE_GAP_MISSING, TULEVA_DISCLOSURE_GAP_ON_FUND_PAGE),
         'Required on the shared documents page and empty' => $fields(TULEVA_DISCLOSURE_GAP_MISSING, TULEVA_DISCLOSURE_GAP_ON_SHARED_PAGE),
         'No effective date in the filename' => $fields(TULEVA_DISCLOSURE_GAP_NO_EFFECTIVE_DATE),
     ]);
@@ -121,11 +105,15 @@ function tuleva_describe_disclosure_gaps(array $gaps): string
         array_keys($sentences),
         $sentences
     );
-    $report = in_array('investment_report_file', array_column($gaps, 'field'), true)
-        ? ' The investment report comes from the monthly report job.'
-        : '';
+    // The investment report is the one document not set by hand: the monthly report job publishes it.
+    $report = in_array('investment_report_file', array_column($gaps, 'field'), true);
+    $action = match (true) {
+        $report && count($gaps) > 1 => 'Set them through agent-gateway fund_pages, except the investment report, which comes from the monthly report job.',
+        $report => 'The investment report comes from the monthly report job.',
+        default => 'Set them through agent-gateway fund_pages.',
+    };
 
-    return implode(' ', $described) . ' Set them through agent-gateway fund_pages.' . $report;
+    return implode(' ', $described) . ' ' . $action;
 }
 
 /**
@@ -140,9 +128,10 @@ function tuleva_disclosure_gaps_notice(): string
         return '';
     }
 
-    $page = get_the_ID();
+    $page = (int) get_the_ID();
+    $gaps = tuleva_disclosure_gaps_of_page($page) ?? [];
 
-    return $page ? tuleva_describe_disclosure_gaps(tuleva_disclosure_gaps_of_page($page) ?? []) : '';
+    return tuleva_describe_disclosure_gaps($gaps, tuleva_disclosure_original($page) === $page ? 'this page' : 'the Estonian page');
 }
 
 /**
@@ -154,10 +143,24 @@ function tuleva_disclosure_gaps_notice(): string
  */
 function tuleva_disclosure_gaps_of_page(int $page): ?array
 {
-    $original = (int) tuleva_disclosure_source_post($page);
+    $original = tuleva_disclosure_original($page);
+
+    // WordPress reads a missing ID as the current page's, which would answer another page's gaps.
+    if ($original <= 0) {
+        return null;
+    }
+
     $template = (string) get_page_template_slug($original);
 
     return isset(tuleva_fund_disclosure_scope()[$template]) ? tuleva_fund_disclosure_gaps($template, $original) : null;
+}
+
+/**
+ * The Estonian original of a page, or 0 when there is no page to resolve.
+ */
+function tuleva_disclosure_original(int $page): int
+{
+    return $page > 0 ? (int) tuleva_disclosure_source_post($page) : 0;
 }
 
 /**
