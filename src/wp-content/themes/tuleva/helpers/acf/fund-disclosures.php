@@ -190,7 +190,8 @@ function tuleva_fund_disclosure_scope(): array
             'nav_procedure_file' => TULEVA_DISCLOSURE_REQUIRED,
             'nav_procedure_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'investor_rights_file' => TULEVA_DISCLOSURE_REQUIRED,
-            'investment_report_file' => TULEVA_DISCLOSURE_REQUIRED,
+            // TKF100 has no monthly report duty; the report job decides which funds get one.
+            'investment_report_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'previous_reports_url' => TULEVA_DISCLOSURE_OPTIONAL,
             // fund_co2_intensity is deliberately absent: no CO2 intensity is calculated
             // for TKF100. The savings template renders the block the moment this line

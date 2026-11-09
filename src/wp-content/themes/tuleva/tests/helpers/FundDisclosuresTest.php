@@ -60,6 +60,9 @@ final class FakeFundPage
     /** @var list<array{0: string, 1: string}> script handle and inline script added to it */
     public static array $inline_scripts = [];
 
+    /** @var list<array{0: string, 1: string, 2: array<string, mixed>}> object type, field and arguments */
+    public static array $rest_fields = [];
+
     public static function reset(): void
     {
         self::$fields = [];
@@ -78,6 +81,7 @@ final class FakeFundPage
         self::$template_parts = [];
         self::$screen = null;
         self::$inline_scripts = [];
+        self::$rest_fields = [];
     }
 }
 
@@ -151,6 +155,13 @@ if (!function_exists('wp_add_inline_script')) {
         FakeFundPage::$inline_scripts[] = [$handle, $data];
 
         return true;
+    }
+}
+
+if (!function_exists('register_rest_field')) {
+    function register_rest_field($object_type, $attribute, $args = [])
+    {
+        FakeFundPage::$rest_fields[] = [$object_type, $attribute, $args];
     }
 }
 
@@ -348,6 +359,7 @@ require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
+require_once __DIR__ . '/../../helpers/acf/fund-disclosure-gaps.php';
 require_once __DIR__ . '/../../helpers/extras.php';
 require_once __DIR__ . '/../../helpers/schema.php';
 
@@ -932,6 +944,231 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
         $this->assertNotContains('fund_co2_intensity', tuleva_fund_disclosures_missing());
+    }
+
+    /**
+     * TUK75's page as it is today, and the shared page with the documents every fund links.
+     */
+    private function fillPensionAndSharedPages(): void
+    {
+        FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf',
+            'terms_file' => 'https://tuleva.ee/wp-content/uploads/2026/10/TUK75-tingimused-kehtivad-alates-31.08.2026.pdf',
+            'model_portfolio_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf',
+            'key_investor_info_file' => 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUK75-kehtib-alates-19.03.2026-.pdf',
+            'investment_report_file' => 'https://tuleva.ee/wp-content/uploads/2026/10/tuleva-maailma-aktsiate-pensionifondi-investeeringute-aruanne-2026-09.pdf',
+            'fund_co2_intensity' => '83.68',
+        ];
+        FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
+        FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
+            'sustainability_risks_file' => 'https://tuleva.ee/wp-content/uploads/2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf',
+            'adverse_impacts_file' => 'https://tuleva.ee/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026-1.pdf',
+            'remuneration_policy_file' => 'https://tuleva.ee/wp-content/uploads/2026/06/Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf',
+        ];
+    }
+
+    #[Test]
+    public function a_pension_page_with_every_required_document_has_no_gaps(): void
+    {
+        $this->fillPensionAndSharedPages();
+
+        $this->assertSame([], tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533));
+    }
+
+    #[Test]
+    public function an_empty_required_field_is_a_gap_and_an_empty_optional_one_is_not(): void
+    {
+        $this->fillPensionAndSharedPages();
+        unset(FakeFundPage::$fields['model_portfolio_file']);
+
+        $this->assertSame(
+            [['field' => 'model_portfolio_file', 'problem' => 'missing', 'page' => 'fund']],
+            tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533)
+        );
+    }
+
+    /**
+     * TKF100 has no monthly report duty, and its NAV procedure is its own, not the pension funds'
+     * on the shared page.
+     */
+    #[Test]
+    public function tkf100_has_no_gap_for_its_investment_report_or_the_pension_funds_nav_procedure(): void
+    {
+        $this->fillPensionAndSharedPages();
+        unset(FakeFundPage::$page_fields[self::SHARED_PAGE]['nav_procedure_file']);
+        FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf',
+            'terms_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf',
+            'model_portfolio_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf',
+            'key_investor_info_file' => 'https://tuleva.ee/wp-content/uploads/2026/10/TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf',
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
+            'investor_rights_file' => 'https://tuleva.ee/wp-content/uploads/2026/01/Tuleva-Taiendav-Kogumisfond.-Investori-oiguste-kokkuvote.-12.01.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_fund_disclosure_gaps(self::SAVINGS_TEMPLATE, FakeFundPage::ESTONIAN_PAGE));
+    }
+
+    /**
+     * A fund page shows the documents every fund links from the shared page, so it is missing them
+     * while that page is, with nothing on the page to show they come from elsewhere.
+     */
+    #[Test]
+    public function a_fund_page_is_missing_the_shared_documents_while_there_is_no_shared_page(): void
+    {
+        $this->fillPensionAndSharedPages();
+        FakeFundPage::$pages = [];
+
+        $shared = fn(string $field) => ['field' => $field, 'problem' => 'missing', 'page' => 'shared'];
+
+        $this->assertSame(
+            array_map($shared, ['nav_procedure_file', 'sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file']),
+            tuleva_fund_disclosure_gaps('page_fund-bonds.php', 17537)
+        );
+        $this->assertSame(
+            array_map($shared, ['sustainability_risks_file', 'adverse_impacts_file', 'remuneration_policy_file']),
+            array_values(array_filter(
+                tuleva_fund_disclosure_gaps(self::SAVINGS_TEMPLATE, FakeFundPage::ESTONIAN_PAGE),
+                fn(array $gap) => $gap['page'] === 'shared'
+            ))
+        );
+    }
+
+    /**
+     * The page switches a prospectus, terms or NAV procedure on the date in its filename, and leaves
+     * one with no readable date where it is for ever. A key information document's date is never read.
+     */
+    #[Test]
+    public function a_document_that_switches_on_its_date_needs_a_readable_one_in_its_filename(): void
+    {
+        $this->fillPensionAndSharedPages();
+        FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.3026.pdf';
+        FakeFundPage::$fields['terms_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-uued.pdf';
+        FakeFundPage::$fields['key_investor_info_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUK75.pdf';
+
+        $this->assertSame([
+            ['field' => 'prospectus_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'terms_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+        ], tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533));
+    }
+
+    #[Test]
+    public function the_shared_documents_page_reports_its_own_gaps(): void
+    {
+        $this->fillPensionAndSharedPages();
+        unset(FakeFundPage::$page_fields[self::SHARED_PAGE]['remuneration_policy_file']);
+        FakeFundPage::$page_fields[self::SHARED_PAGE]['nav_procedure_upcoming_file']
+            = 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-uus.pdf';
+
+        $this->assertSame([
+            ['field' => 'nav_procedure_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'shared'],
+            ['field' => 'remuneration_policy_file', 'problem' => 'missing', 'page' => 'shared'],
+        ], tuleva_fund_disclosure_gaps(TULEVA_SHARED_DOCUMENTS_TEMPLATE, self::SHARED_PAGE));
+        $this->assertSame([], tuleva_fund_disclosure_gaps('page_front.php', 2));
+    }
+
+    /**
+     * onboarding-service reads the Estonian pages. An English page answers its original's gaps, and
+     * a page that is not a fund page answers null, so it is never read as having none.
+     */
+    #[Test]
+    public function the_rest_answer_carries_a_fund_page_s_gaps_and_null_elsewhere(): void
+    {
+        FakeFundPage::$pages = [
+            self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE, FakeFundPage::ENGLISH_PAGE],
+            'page_front.php' => [2],
+        ];
+        FakeFundPage::$english_fields['prospectus_file'] = 'https://tuleva.ee/Prospekt-kehtib-alates-01.01.2026.pdf';
+
+        $estonian = tuleva_disclosure_gaps_for_rest(['id' => FakeFundPage::ESTONIAN_PAGE]);
+
+        $this->assertContains(['field' => 'prospectus_file', 'problem' => 'missing', 'page' => 'fund'], $estonian);
+        $this->assertSame($estonian, tuleva_disclosure_gaps_for_rest(['id' => FakeFundPage::ENGLISH_PAGE]));
+        $this->assertNull(tuleva_disclosure_gaps_for_rest(['id' => 2]));
+    }
+
+    #[Test]
+    public function the_gaps_are_a_read_only_field_of_the_pages_rest_answer(): void
+    {
+        tuleva_register_disclosure_gaps_rest_field();
+
+        [$object_type, $field, $args] = FakeFundPage::$rest_fields[0];
+        $this->assertSame('page', $object_type);
+        $this->assertSame('tuleva_disclosure_gaps', $field);
+        $this->assertSame('tuleva_disclosure_gaps_for_rest', $args['get_callback']);
+        $this->assertArrayNotHasKey('update_callback', $args);
+        $this->assertTrue($args['schema']['readonly']);
+    }
+
+    #[Test]
+    public function the_edit_screen_of_a_fund_page_lists_its_gaps(): void
+    {
+        $this->fillPensionAndSharedPages();
+        unset(FakeFundPage::$fields['model_portfolio_file'], FakeFundPage::$page_fields[self::SHARED_PAGE]['remuneration_policy_file']);
+        FakeFundPage::$fields['terms_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-uued.pdf';
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        $this->assertSame(
+            'Required on this page and empty: model_portfolio_file. Required on the shared documents page and empty: remuneration_policy_file. No effective date in the filename: terms_upcoming_file. Set them through agent-gateway fund_pages.',
+            tuleva_disclosure_gaps_notice()
+        );
+
+        FakeFundPage::$screen = (object) ['base' => 'edit', 'post_type' => 'page'];
+        $this->assertSame('', tuleva_disclosure_gaps_notice());
+    }
+
+    #[Test]
+    public function a_complete_fund_page_and_any_other_page_get_no_gaps_notice(): void
+    {
+        $this->fillPensionAndSharedPages();
+        FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
+        FakeFundPage::$pages['page_front.php'] = [2];
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        FakeFundPage::$post_id = 17533;
+        $this->assertSame('', tuleva_disclosure_gaps_notice());
+
+        FakeFundPage::$post_id = 2;
+        $this->assertSame('', tuleva_disclosure_gaps_notice());
+    }
+
+    /**
+     * The block editor hides admin notices and takes its own, so each editor shows the gaps once.
+     */
+    #[Test]
+    public function the_gaps_notice_shows_once_on_either_editor(): void
+    {
+        FakeFundPage::$pages = ['page_fund-stocks.php' => [17533]];
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = new class {
+            public string $base = 'post';
+            public string $post_type = 'page';
+            public bool $block_editor = true;
+
+            public function is_block_editor(): bool
+            {
+                return $this->block_editor;
+            }
+        };
+
+        ob_start();
+        tuleva_disclosure_gaps_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+        tuleva_disclosure_gaps_block_editor_notice();
+
+        $this->assertSame('', $admin_notice);
+        $this->assertCount(1, FakeFundPage::$inline_scripts);
+        $this->assertStringContainsString('tuleva-disclosure-gaps', FakeFundPage::$inline_scripts[0][1]);
+
+        FakeFundPage::$screen->block_editor = false;
+        ob_start();
+        tuleva_disclosure_gaps_admin_notice();
+        $admin_notice = (string) ob_get_clean();
+
+        $this->assertStringContainsString('notice-error', $admin_notice);
+        $this->assertStringContainsString('Required on this page and empty: prospectus_file', $admin_notice);
     }
 
     /**
