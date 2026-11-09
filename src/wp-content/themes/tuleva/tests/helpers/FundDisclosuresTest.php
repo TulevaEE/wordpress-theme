@@ -13,6 +13,9 @@ final class FakeFundPage
     public const ESTONIAN_PAGE = 35292;
     public const ENGLISH_PAGE = 36156;
 
+    /** An English page published with no Estonian original. */
+    public const UNTRANSLATED_ENGLISH_PAGE = 36157;
+
     /**
      * A day before any test document takes effect, so a rendered page does not change as
      * the calendar passes the dates the tests use.
@@ -122,12 +125,17 @@ function get_the_ID()
 }
 
 /**
- * WPML's answer on production: the English page is a translation of the Estonian one.
+ * WPML's answer on production: the English page is a translation of the Estonian one. A page with
+ * no Estonian original answers itself only when asked to fall back to it, and null otherwise.
  */
 function apply_filters($hook, $value, ...$args)
 {
     if ($hook === 'wpml_object_id' && $value === FakeFundPage::ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
         return FakeFundPage::ESTONIAN_PAGE;
+    }
+
+    if ($hook === 'wpml_object_id' && $value === FakeFundPage::UNTRANSLATED_ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
+        return ($args[1] ?? false) ? $value : null;
     }
 
     if ($hook === 'tuleva_today') {
@@ -1218,6 +1226,29 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
         $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+    }
+
+    /**
+     * The fields are written on the Estonian pages only. An English page published with no
+     * Estonian original reads its own fields when rendered, but the job leaves them alone.
+     */
+    #[Test]
+    public function the_hourly_job_leaves_an_english_page_with_no_estonian_original_alone(): void
+    {
+        FakeFundPage::$pages[self::SAVINGS_TEMPLATE] = [FakeFundPage::UNTRANSLATED_ENGLISH_PAGE];
+        FakeFundPage::$stored[FakeFundPage::UNTRANSLATED_ENGLISH_PAGE] = ['prospectus_file' => 101, 'prospectus_upcoming_file' => 102];
+        FakeAttachments::$urls = [
+            101 => 'https://tuleva.ee/wp-content/uploads/2026/09/Prospekt-alates-29.10.2026.pdf',
+            102 => 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-kehtib-alates-01.01.2027.pdf',
+        ];
+
+        $this->assertSame(
+            FakeFundPage::UNTRANSLATED_ENGLISH_PAGE,
+            tuleva_disclosure_source_post(FakeFundPage::UNTRANSLATED_ENGLISH_PAGE)
+        );
+        $this->assertSame([], tuleva_fund_pages_on(self::SAVINGS_TEMPLATE));
+        $this->assertSame([], tuleva_promote_due_documents('2027-01-01'));
+        $this->assertSame([], FakeFundPage::$updates);
     }
 
     /**
