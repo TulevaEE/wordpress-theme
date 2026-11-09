@@ -55,6 +55,23 @@ function tuleva_fund_disclosure_gaps(string $template, $post_id = null): array
 }
 
 /**
+ * Documents a fund is expected to publish but has not got a value for, on the page itself. Optional
+ * documents and documents outside the fund's scope never appear here.
+ *
+ * @return list<string>
+ */
+function tuleva_fund_disclosures_missing(?string $template = null, $post_id = null): array
+{
+    $gaps = tuleva_disclosure_gaps_in(
+        tuleva_fund_disclosure_scope()[$template ?? tuleva_current_fund_template()] ?? [],
+        fn(string $name) => tuleva_disclosure_stored_value($name, $post_id),
+        TULEVA_DISCLOSURE_GAP_ON_FUND_PAGE
+    );
+
+    return array_column(array_filter($gaps, fn(array $gap) => $gap['problem'] === TULEVA_DISCLOSURE_GAP_MISSING), 'field');
+}
+
+/**
  * @param array<string, string> $scope field name => requirement
  * @param callable(string): string $stored_value
  * @return list<array{field: string, problem: string, page: string}>
@@ -104,8 +121,11 @@ function tuleva_describe_disclosure_gaps(array $gaps): string
         array_keys($sentences),
         $sentences
     );
+    $report = in_array('investment_report_file', array_column($gaps, 'field'), true)
+        ? ' The investment report comes from the monthly report job.'
+        : '';
 
-    return implode(' ', $described) . ' Set them through agent-gateway fund_pages.';
+    return implode(' ', $described) . ' Set them through agent-gateway fund_pages.' . $report;
 }
 
 /**
@@ -116,13 +136,28 @@ function tuleva_disclosure_gaps_notice(): string
 {
     $screen = function_exists('get_current_screen') ? get_current_screen() : null;
 
-    if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'page') {
+    if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'page' || !function_exists('get_field')) {
         return '';
     }
 
     $page = get_the_ID();
 
-    return $page ? tuleva_describe_disclosure_gaps(tuleva_fund_disclosure_gaps((string) get_page_template_slug($page), $page)) : '';
+    return $page ? tuleva_describe_disclosure_gaps(tuleva_disclosure_gaps_of_page($page) ?? []) : '';
+}
+
+/**
+ * The gaps of a page as its Estonian original holds them: the original's template decides what is
+ * required, as its fields decide what is there. Null on a page that is not a fund page or the
+ * shared documents page.
+ *
+ * @return list<array{field: string, problem: string, page: string}>|null
+ */
+function tuleva_disclosure_gaps_of_page(int $page): ?array
+{
+    $original = (int) tuleva_disclosure_source_post($page);
+    $template = (string) get_page_template_slug($original);
+
+    return isset(tuleva_fund_disclosure_scope()[$template]) ? tuleva_fund_disclosure_gaps($template, $original) : null;
 }
 
 /**
@@ -145,7 +180,8 @@ function tuleva_disclosure_gaps_admin_notice(): void
 }
 
 /**
- * enqueue_block_editor_assets.
+ * enqueue_block_editor_assets. Dismissible, since a save in the block editor does not reload the
+ * screen that still shows it.
  */
 function tuleva_disclosure_gaps_block_editor_notice(): void
 {
@@ -155,7 +191,7 @@ function tuleva_disclosure_gaps_block_editor_notice(): void
         wp_add_inline_script(
             'wp-notices',
             sprintf(
-                'wp.data.dispatch("core/notices").createNotice("error", %s, {id: "tuleva-disclosure-gaps", isDismissible: false});',
+                'wp.data.dispatch("core/notices").createNotice("error", %s, {id: "tuleva-disclosure-gaps", isDismissible: true});',
                 wp_json_encode($notice)
             )
         );
@@ -163,21 +199,26 @@ function tuleva_disclosure_gaps_block_editor_notice(): void
 }
 
 /**
- * The REST answer's `tuleva_disclosure_gaps`: the page's gaps, an English page's those of its
- * Estonian original, and null on a page that is not a fund page or the shared documents page.
+ * The REST answer's `tuleva_disclosure_gaps` (tuleva_disclosure_gaps_of_page()).
  *
  * @param array{id: int} $page
  * @return list<array{field: string, problem: string, page: string}>|null
  */
 function tuleva_disclosure_gaps_for_rest(array $page): ?array
 {
-    $template = (string) get_page_template_slug($page['id']);
-
-    return isset(tuleva_fund_disclosure_scope()[$template]) ? tuleva_fund_disclosure_gaps($template, $page['id']) : null;
+    return tuleva_disclosure_gaps_of_page((int) $page['id']);
 }
 
+/**
+ * Only while ACF is there to read the fields: without it the field is left out, so a check reads
+ * the pages as unchecked rather than complete, and a list of pages still answers.
+ */
 function tuleva_register_disclosure_gaps_rest_field(): void
 {
+    if (!function_exists('get_field')) {
+        return;
+    }
+
     register_rest_field('page', 'tuleva_disclosure_gaps', [
         'get_callback' => 'tuleva_disclosure_gaps_for_rest',
         'schema' => [

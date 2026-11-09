@@ -225,24 +225,6 @@ function tuleva_fund_disclosure_applies(string $name, ?string $template = null):
 }
 
 /**
- * Documents a fund is expected to publish but has not got a value for. Optional
- * documents and documents outside the fund's scope never appear here.
- */
-function tuleva_fund_disclosures_missing(?string $template = null, $post_id = null): array
-{
-    $template = $template ?? tuleva_current_fund_template();
-    $missing = [];
-
-    foreach (tuleva_fund_disclosure_scope()[$template] ?? [] as $name => $requirement) {
-        if ($requirement === TULEVA_DISCLOSURE_REQUIRED && tuleva_disclosure_stored_value($name, $post_id) === '') {
-            $missing[] = $name;
-        }
-    }
-
-    return $missing;
-}
-
-/**
  * What ACF holds for a disclosure, as a string. No fallback, no scope check.
  *
  * Only '' means "nothing stored". A truthiness test would read the string "0" as

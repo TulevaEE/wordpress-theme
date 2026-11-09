@@ -1087,6 +1087,40 @@ final class FundDisclosuresTest extends TestCase
         $this->assertNull(tuleva_disclosure_gaps_for_rest(['id' => 2]));
     }
 
+    /**
+     * An English page on another template than its original still answers the original's gaps:
+     * the original's template decides what is required, as its fields decide what is there.
+     */
+    #[Test]
+    public function an_english_page_on_another_template_answers_its_original_s_gaps(): void
+    {
+        FakeFundPage::$pages = [
+            self::SAVINGS_TEMPLATE => [FakeFundPage::ESTONIAN_PAGE],
+            'page_fund-stocks.php' => [FakeFundPage::ENGLISH_PAGE],
+        ];
+
+        $english = tuleva_disclosure_gaps_for_rest(['id' => FakeFundPage::ENGLISH_PAGE]);
+
+        $this->assertSame(tuleva_disclosure_gaps_for_rest(['id' => FakeFundPage::ESTONIAN_PAGE]), $english);
+        $this->assertContains(['field' => 'investor_rights_file', 'problem' => 'missing', 'page' => 'fund'], $english);
+        $this->assertNotContains(['field' => 'fund_co2_intensity', 'problem' => 'missing', 'page' => 'fund'], $english);
+    }
+
+    /**
+     * The investment report is not set by hand: a missing one points at the job that publishes it.
+     */
+    #[Test]
+    public function a_missing_investment_report_points_at_the_report_job(): void
+    {
+        $this->fillPensionAndSharedPages();
+        unset(FakeFundPage::$fields['investment_report_file']);
+
+        $this->assertStringEndsWith(
+            'Set them through agent-gateway fund_pages. The investment report comes from the monthly report job.',
+            tuleva_describe_disclosure_gaps(tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533))
+        );
+    }
+
     #[Test]
     public function the_gaps_are_a_read_only_field_of_the_pages_rest_answer(): void
     {
@@ -1161,6 +1195,7 @@ final class FundDisclosuresTest extends TestCase
         $this->assertSame('', $admin_notice);
         $this->assertCount(1, FakeFundPage::$inline_scripts);
         $this->assertStringContainsString('tuleva-disclosure-gaps', FakeFundPage::$inline_scripts[0][1]);
+        $this->assertStringContainsString('isDismissible: true', FakeFundPage::$inline_scripts[0][1]);
 
         FakeFundPage::$screen->block_editor = false;
         ob_start();
