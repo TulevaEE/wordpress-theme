@@ -19002,6 +19002,49 @@ sup {
   color: #006CE6;
   font-weight: 500;
 }
+.second-pillar-rejoin-page .rejoin-when {
+  font-variant-numeric: tabular-nums;
+}
+.second-pillar-rejoin-page .rejoin-when th,
+.second-pillar-rejoin-page .rejoin-when td {
+  width: 50%;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+.second-pillar-rejoin-page .rejoin-when th {
+  padding-top: 0;
+  color: #6B7074;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.second-pillar-rejoin-page .rejoin-when th:last-child,
+.second-pillar-rejoin-page .rejoin-when td:last-child {
+  padding-right: 0;
+  padding-left: 2.25rem;
+}
+.second-pillar-rejoin-page .rejoin-when td:last-child {
+  position: relative;
+  font-weight: 500;
+}
+.second-pillar-rejoin-page .rejoin-when td:last-child::before, .second-pillar-rejoin-page .rejoin-when td:last-child::after {
+  content: "";
+  position: absolute;
+  top: calc(0.75rem + 0.7em);
+  left: 0.25rem;
+}
+.second-pillar-rejoin-page .rejoin-when td:last-child::before {
+  width: 1.25rem;
+  height: 1px;
+  background: #006CE6;
+}
+.second-pillar-rejoin-page .rejoin-when td:last-child::after {
+  left: 1.125rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-top: 1px solid #006CE6;
+  border-right: 1px solid #006CE6;
+  -webkit-transform: translateY(-0.18rem) rotate(45deg);
+  transform: translateY(-0.18rem) rotate(45deg);
+}
 .second-pillar-rejoin-page #alusta .emphasis-box {
   background: radial-gradient(60% 100% at 100% 0, rgba(0, 174, 234, 0.24), transparent 75%), radial-gradient(45% 80% at 0 100%, rgba(0, 174, 234, 0.12), transparent 75%), #eef8ff;
 }
@@ -20230,6 +20273,256 @@ sup {
   .second-pillar-246-page .note-proj {
     font-size: 12.5px;
   }
+}
+
+.bg-hero-future-me {
+  padding: clamp(3rem, 10vh, 7rem) 0 clamp(2.5rem, 7vh, 5rem);
+  background: radial-gradient(45% 80% at 92% 30%, rgba(0, 174, 234, 0.55), transparent 70%), radial-gradient(40% 70% at 62% 110%, rgba(0, 161, 0, 0.38), transparent 70%), radial-gradient(35% 60% at 0 0, rgba(0, 174, 234, 0.22), transparent 70%), #eef8ff;
+}
+.bg-hero-future-me .lead {
+  max-width: 40rem;
+}
+.bg-hero-future-me .future-me-tap-link {
+  color: #002f63;
+}
+
+.future-me-page h1, .future-me-page .h1 {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.18;
+}
+.future-me-page .future-me-actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .future-me-page .future-me-actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .future-me-page .future-me-actions {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+.future-me-page .future-me-tap-link {
+  display: inline-block;
+  padding: 0.75rem 0;
+}
+.future-me-page .future-me-login-note {
+  margin: 1rem 0 0;
+}
+.future-me-page .future-me-answers {
+  margin-top: 0;
+}
+.future-me-page .future-me-answers .who-card {
+  overflow: hidden;
+  padding: 0 1.6rem 1.6rem;
+}
+.future-me-page .future-me-answers .future-me-answer-visual {
+  margin: 0 -1.6rem 1.4rem;
+  padding: 1.25rem 1.6rem;
+  background: #edf7fd;
+}
+.future-me-page .future-me-answers .future-me-answer-visual svg {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: 5.5rem;
+  margin-inline: auto;
+}
+@media (max-width: 991.98px) {
+  .future-me-page .future-me-answers {
+    grid-template-columns: 1fr;
+  }
+}
+.future-me-page .future-me-answers .who-card h2, .future-me-page .future-me-answers .who-card .h2 {
+  margin: 0 0 0.75rem;
+  color: #002f63;
+  font-family: Roboto, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.35;
+}
+.future-me-page .future-me-answers .who-card p {
+  font-size: 1rem;
+}
+.future-me-page .future-me-arc {
+  position: relative;
+  max-width: 26rem;
+  margin: 2.5rem auto 0;
+}
+.future-me-page .future-me-arc-line {
+  display: none;
+}
+.future-me-page .future-me-stages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.future-me-page .future-me-stage {
+  position: relative;
+  padding: 0 0 1.75rem 2.5rem;
+}
+.future-me-page .future-me-stage:last-child {
+  padding-bottom: 0;
+}
+.future-me-page .future-me-stage::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0.35rem;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid #006CE6;
+  border-radius: 50%;
+  background: #fff;
+}
+.future-me-page .future-me-stage::after {
+  content: "";
+  position: absolute;
+  top: 1.6rem;
+  bottom: -0.25rem;
+  left: calc(0.5rem - 1px);
+  width: 2px;
+  background: #d3e8f5;
+}
+.future-me-page .future-me-stage:last-child::after {
+  display: none;
+}
+.future-me-page .future-me-stage p {
+  margin: 0;
+}
+.future-me-page .future-me-stage .age {
+  color: #002f63;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.future-me-page .future-me-stage .what {
+  margin-top: 0.25rem;
+  color: #002f63;
+  font-weight: 500;
+}
+.future-me-page .future-me-stage .question {
+  margin-top: 0.125rem;
+  color: #6B7074;
+}
+.future-me-page .future-me-stage--result::before {
+  top: 0.3rem;
+  left: -0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-color: #002f63;
+  background: #002f63;
+}
+@media (min-width: 992px) {
+  .future-me-page .future-me-arc {
+    max-width: none;
+    height: 28rem;
+    margin-top: 1.5rem;
+  }
+  .future-me-page .future-me-arc-line {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .future-me-page .future-me-arc-line path {
+    fill: none;
+    stroke: #006CE6;
+    stroke-linecap: round;
+    stroke-width: 2.5;
+  }
+  .future-me-page .future-me-arc-line .ghost {
+    stroke: #d3e8f5;
+    stroke-width: 10;
+  }
+  .future-me-page .future-me-stage {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 16%;
+    padding: 1.5rem 0 0;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .future-me-page .future-me-stage::before {
+    top: 0;
+    left: 50%;
+    margin-left: -0.5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .future-me-page .future-me-stage::after {
+    display: none;
+  }
+  .future-me-page .future-me-stage .age {
+    font-size: 1.25rem;
+  }
+  .future-me-page .future-me-stage--result::before {
+    left: 50%;
+    margin-left: -0.625rem;
+  }
+}
+@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+  .future-me-page .future-me-arc-line {
+    -webkit-transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .future-me-page .future-me-stage {
+    -webkit-transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-transition-delay: calc(var(--i) * 0.14s + 0.2s);
+    transition-delay: calc(var(--i) * 0.14s + 0.2s);
+  }
+  .future-me-page .future-me-arc.is-waiting .future-me-arc-line,
+  .future-me-page .future-me-arc.is-waiting .future-me-stage {
+    opacity: 0;
+  }
+}
+.future-me-page .future-me-note {
+  max-width: 40rem;
+  margin: 2rem auto 0;
+  color: #6B7074;
+  text-align: center;
 }
 
 .custom-tooltip {

@@ -30,3 +30,11 @@ function add_role($role, $display_name, $capabilities = [])
 
     return (object) FakeRoles::$roles[$role];
 }
+
+/**
+ * The roles store as wp_roles() hands it out: what is stored, and the option it is stored in.
+ */
+function wp_roles()
+{
+    return (object) ['roles' => FakeRoles::$roles, 'role_key' => 'wp_user_roles', 'use_db' => true];
+}

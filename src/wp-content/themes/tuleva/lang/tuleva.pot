@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-04T15:28:32+00:00\n"
+"POT-Creation-Date: 2026-11-05T15:38:06+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -42,7 +42,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:147
 #: templates/components/fund-savings-details.php:204
 #: templates/components/fund-stocks-details.php:147
-#: templates/components/fund-third-details.php:148
+#: templates/components/fund-third-details.php:147
 msgid "Investment reports"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:72
 #: templates/components/fund-savings-details.php:83
 #: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:73
+#: templates/components/fund-third-details.php:72
 msgid "Ongoing charges"
 msgstr ""
 
@@ -82,7 +82,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:67
 #: templates/components/fund-savings-details.php:77
 #: templates/components/fund-stocks-details.php:67
-#: templates/components/fund-third-details.php:68
+#: templates/components/fund-third-details.php:67
 msgid "Management fee"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:76
 #: templates/components/fund-savings-details.php:89
 #: templates/components/fund-stocks-details.php:76
-#: templates/components/fund-third-details.php:77
+#: templates/components/fund-third-details.php:76
 msgid "Redemption fee and issue fee"
 msgstr ""
 
@@ -98,7 +98,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:54
 #: templates/components/fund-savings-details.php:63
 #: templates/components/fund-stocks-details.php:54
-#: templates/components/fund-third-details.php:55
+#: templates/components/fund-third-details.php:54
 msgid "Date of inception"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:86
 #: templates/components/fund-savings-details.php:101
 #: templates/components/fund-stocks-details.php:86
-#: templates/components/fund-third-details.php:87
+#: templates/components/fund-third-details.php:86
 msgid "Risk profile"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:90
 #: templates/components/fund-savings-details.php:107
 #: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:91
+#: templates/components/fund-third-details.php:90
 msgid "Comparison index"
 msgstr ""
 
@@ -180,6 +180,10 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Fund third page"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Future Me landing page"
 msgstr ""
 
 #. Template Name of the theme
@@ -423,6 +427,7 @@ msgstr ""
 #: templates/child-savings-content.php:152
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
+#: templates/future-me-content.php:152
 #: templates/savings-fund-landing-content.php:161
 #: templates/second-pillar-rejoin-content.php:288
 msgid "Frequently asked questions"
@@ -1086,42 +1091,42 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:44
 #: templates/components/fund-savings-details.php:50
 #: templates/components/fund-stocks-details.php:44
-#: templates/components/fund-third-details.php:45
+#: templates/components/fund-third-details.php:44
 msgid "Fund details"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:50
 #: templates/components/fund-savings-details.php:58
 #: templates/components/fund-stocks-details.php:50
-#: templates/components/fund-third-details.php:51
+#: templates/components/fund-third-details.php:50
 msgid "Currency"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:58
 #: templates/components/fund-savings-details.php:68
 #: templates/components/fund-stocks-details.php:58
-#: templates/components/fund-third-details.php:59
+#: templates/components/fund-third-details.php:58
 msgid "Fund volume"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:81
 #: templates/components/fund-savings-details.php:95
 #: templates/components/fund-stocks-details.php:81
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-third-details.php:81
 msgid "Fund manager's participation rate in fund"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-savings-details.php:96
 #: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:82
 msgid "units"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:82
 #: templates/components/fund-savings-details.php:96
 #: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:83
+#: templates/components/fund-third-details.php:82
 #, php-format
 msgid "(as of %s)"
 msgstr ""
@@ -1129,7 +1134,7 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:97
 #: templates/components/fund-savings-details.php:113
 #: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:98
+#: templates/components/fund-third-details.php:97
 msgid "Documents"
 msgstr ""
 
@@ -1142,9 +1147,9 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:105
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:109
 msgid "Prospectus"
 msgstr ""
 
@@ -1154,8 +1159,8 @@ msgstr ""
 #: templates/components/fund-savings-details.php:140
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:109
 msgid " and "
 msgstr ""
 
@@ -1168,9 +1173,9 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:101
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
 msgid "Terms and conditions"
 msgstr ""
 
@@ -1212,18 +1217,18 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:138
 #: templates/components/fund-stocks-details.php:147
 #: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:102
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
-#: templates/components/fund-third-details.php:117
-#: templates/components/fund-third-details.php:122
-#: templates/components/fund-third-details.php:126
-#: templates/components/fund-third-details.php:133
-#: templates/components/fund-third-details.php:136
-#: templates/components/fund-third-details.php:139
-#: templates/components/fund-third-details.php:148
-#: templates/components/fund-third-details.php:159
+#: templates/components/fund-third-details.php:101
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
+#: templates/components/fund-third-details.php:116
+#: templates/components/fund-third-details.php:121
+#: templates/components/fund-third-details.php:125
+#: templates/components/fund-third-details.php:132
+#: templates/components/fund-third-details.php:135
+#: templates/components/fund-third-details.php:138
+#: templates/components/fund-third-details.php:147
+#: templates/components/fund-third-details.php:158
 msgid " (in Estonian)"
 msgstr ""
 
@@ -1239,10 +1244,10 @@ msgstr ""
 #: templates/components/fund-stocks-details.php:107
 #: templates/components/fund-stocks-details.php:109
 #: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:106
-#: templates/components/fund-third-details.php:108
-#: templates/components/fund-third-details.php:110
-#: templates/components/fund-third-details.php:129
+#: templates/components/fund-third-details.php:105
+#: templates/components/fund-third-details.php:107
+#: templates/components/fund-third-details.php:109
+#: templates/components/fund-third-details.php:128
 #, php-format
 msgid " (in Estonian, effective from %s)"
 msgstr ""
@@ -1250,14 +1255,14 @@ msgstr ""
 #: templates/components/fund-bonds-details.php:116
 #: templates/components/fund-savings-details.php:153
 #: templates/components/fund-stocks-details.php:116
-#: templates/components/fund-third-details.php:117
+#: templates/components/fund-third-details.php:116
 msgid "Model portfolio"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:121
 #: templates/components/fund-savings-details.php:160
 #: templates/components/fund-stocks-details.php:121
-#: templates/components/fund-third-details.php:122
+#: templates/components/fund-third-details.php:121
 msgid "Key Investor Information"
 msgstr ""
 
@@ -1267,71 +1272,71 @@ msgstr ""
 #: templates/components/fund-savings-details.php:171
 #: templates/components/fund-stocks-details.php:125
 #: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:126
-#: templates/components/fund-third-details.php:129
+#: templates/components/fund-third-details.php:125
+#: templates/components/fund-third-details.php:128
 msgid "Procedure for determining net worth of fund"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:132
 #: templates/components/fund-savings-details.php:177
 #: templates/components/fund-stocks-details.php:132
-#: templates/components/fund-third-details.php:133
+#: templates/components/fund-third-details.php:132
 msgid "Sustainability"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:135
 #: templates/components/fund-savings-details.php:182
 #: templates/components/fund-stocks-details.php:135
-#: templates/components/fund-third-details.php:136
+#: templates/components/fund-third-details.php:135
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:138
 #: templates/components/fund-savings-details.php:187
 #: templates/components/fund-stocks-details.php:138
-#: templates/components/fund-third-details.php:139
+#: templates/components/fund-third-details.php:138
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:142
 #: templates/components/fund-savings-details.php:199
 #: templates/components/fund-stocks-details.php:142
-#: templates/components/fund-third-details.php:143
+#: templates/components/fund-third-details.php:142
 msgid "Reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:153
 #: templates/components/fund-savings-details.php:212
 #: templates/components/fund-stocks-details.php:153
-#: templates/components/fund-third-details.php:154
+#: templates/components/fund-third-details.php:153
 msgid "Previous reports"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:158
 #: templates/components/fund-savings-details.php:217
 #: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:159
+#: templates/components/fund-third-details.php:158
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:163
 #: templates/components/fund-savings-details.php:230
 #: templates/components/fund-stocks-details.php:163
-#: templates/components/fund-third-details.php:164
+#: templates/components/fund-third-details.php:163
 msgid "Sustainability information"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:165
 #: templates/components/fund-savings-details.php:232
 #: templates/components/fund-stocks-details.php:165
-#: templates/components/fund-third-details.php:166
+#: templates/components/fund-third-details.php:165
 msgid "CO2 intensity"
 msgstr ""
 
 #: templates/components/fund-bonds-details.php:166
 #: templates/components/fund-savings-details.php:233
 #: templates/components/fund-stocks-details.php:166
-#: templates/components/fund-third-details.php:167
+#: templates/components/fund-third-details.php:166
 #, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr ""
@@ -1636,6 +1641,7 @@ msgstr ""
 
 #: templates/components/modal-payout-calculator.php:31
 #: templates/components/modal-second-pillar-payment-rate.php:31
+#: templates/future-me-content.php:10
 msgid "Retirement age"
 msgstr ""
 
@@ -2077,6 +2083,168 @@ msgstr ""
 
 #: templates/footer/not-logged-in-mailing-list-form.php:10
 msgid "Join mailing list"
+msgstr ""
+
+#: templates/future-me-content.php:3
+msgid "You log in with Smart-ID, mobile-ID or an ID card."
+msgstr ""
+
+#: templates/future-me-content.php:4
+msgid "https://tuleva.ee/en/recommendations/going-to-retire/"
+msgstr ""
+
+#: templates/future-me-content.php:7
+msgid "0-55"
+msgstr ""
+
+#: templates/future-me-content.php:7
+msgid "Saving"
+msgstr ""
+
+#: templates/future-me-content.php:7
+msgid "How much have you saved so far?"
+msgstr ""
+
+#: templates/future-me-content.php:8
+msgid "III pillar, if you started saving before 2021"
+msgstr ""
+
+#: templates/future-me-content.php:8
+msgid "What will you do with your III pillar savings?"
+msgstr ""
+
+#: templates/future-me-content.php:9
+msgid "Payouts"
+msgstr ""
+
+#: templates/future-me-content.php:9
+msgid "What will you do with your II and III pillar savings?"
+msgstr ""
+
+#: templates/future-me-content.php:10
+msgid "Do you take your state pension earlier or later?"
+msgstr ""
+
+#: templates/future-me-content.php:11
+msgid "Later life"
+msgstr ""
+
+#: templates/future-me-content.php:11
+msgid "How long do your payouts last?"
+msgstr ""
+
+#: templates/future-me-content.php:12
+msgid "Result"
+msgstr ""
+
+#: templates/future-me-content.php:12
+msgid "Does your income cover your costs in later life?"
+msgstr ""
+
+#: templates/future-me-content.php:17
+msgid "Who is Future Me for?"
+msgstr ""
+
+#: templates/future-me-content.php:18
+msgid "Anyone who wants to know whether their income will cover their costs in later life. You do not need to be an expert or save with Tuleva."
+msgstr ""
+
+#: templates/future-me-content.php:21
+msgid "What are retirement age and flexible pension?"
+msgstr ""
+
+#: templates/future-me-content.php:22
+msgid "Retirement age is the age at which you gain the right to a state old-age pension. With the flexible pension you can start receiving it earlier or later. Future Me works out this age and shows you your options."
+msgstr ""
+
+#: templates/future-me-content.php:25
+msgid "What are the state pension and the II and III pillar?"
+msgstr ""
+
+#: templates/future-me-content.php:26
+msgid "The state pension, or I pillar, is a monthly amount paid by the state. Part of your salary goes to the II pillar, and you make III pillar contributions yourself, with an income tax benefit on up to 15% of your gross income, but no more than 6,000 € a year. Your II and III pillar savings can be inherited."
+msgstr ""
+
+#: templates/future-me-content.php:29
+msgid "How do I withdraw my II and III pillar money?"
+msgstr ""
+
+#: templates/future-me-content.php:30
+msgid "You withdraw II and III pillar money with an application: as monthly payouts, also known as a funded pension, or as partial payouts. On favorable terms you can withdraw from the II and III pillar 5 years before your retirement age, and from the III pillar from age 55 if you started saving before 2021. If the fund payouts last at least your statistically remaining years, they are free of income tax. Future Me shows how your chosen payout type and income tax affect your income in later life."
+msgstr ""
+
+#: templates/future-me-content.php:31
+#: templates/future-me-content.php:100
+msgid "Read about pension payouts"
+msgstr ""
+
+#: templates/future-me-content.php:34
+msgid "Can I work while receiving a pension?"
+msgstr ""
+
+#: templates/future-me-content.php:35
+msgid "Yes. Reaching retirement age does not mean you have to stop working: if you keep working, part of your salary still goes to the II pillar, and you can keep contributing to the III pillar. If you keep contributing, money is added to your II and III pillar, which can increase your future payouts. Once you start II pillar payouts, your II pillar contributions stop for good, but you can keep paying into the III pillar."
+msgstr ""
+
+#: templates/future-me-content.php:45
+msgid "What is your retirement age and will your income cover your costs in later life?"
+msgstr ""
+
+#: templates/future-me-content.php:46
+msgid "<strong>Future Me</strong> works out your retirement age and shows whether your income covers your costs in later life. Go through your decisions by age and see the effect of each."
+msgstr ""
+
+#: templates/future-me-content.php:48
+#: templates/future-me-content.php:142
+msgid "Open Future Me"
+msgstr ""
+
+#: templates/future-me-content.php:49
+msgid "See the decisions"
+msgstr ""
+
+#: templates/future-me-content.php:69
+msgid "When can I retire?"
+msgstr ""
+
+#: templates/future-me-content.php:70
+msgid "Future Me works out the age at which you start receiving your state pension and shows your income and costs at each age."
+msgstr ""
+
+#: templates/future-me-content.php:82
+msgid "How much money will I have in later life?"
+msgstr ""
+
+#: templates/future-me-content.php:83
+msgid "Future Me shows your income and costs in later life year by year: state pension and II and III pillar payouts on one side, costs on the other. You see your own amount after entering your data."
+msgstr ""
+
+#: templates/future-me-content.php:98
+msgid "How do payouts work and how much will I get per month?"
+msgstr ""
+
+#: templates/future-me-content.php:99
+msgid "You can use your II and III pillar savings as monthly payouts. Future Me shows from your data how much you get per month and how income tax affects it."
+msgstr ""
+
+#: templates/future-me-content.php:110
+msgid "Which decisions are ahead of you?"
+msgstr ""
+
+#: templates/future-me-content.php:111
+msgid "Future Me takes you through your decisions by age and shows the effect of each on the end result."
+msgstr ""
+
+#: templates/future-me-content.php:131
+msgid "Ages are as of 2026. Retirement age depends on your year of birth, so your ages may differ: Future Me works them out from your data."
+msgstr ""
+
+#: templates/future-me-content.php:140
+msgid "Meet your future self"
+msgstr ""
+
+#: templates/future-me-content.php:141
+msgid "What should you do with your II and III pillar? See how each choice affects your income in later life and whether it covers your costs."
 msgstr ""
 
 #: templates/header/main.php:9
@@ -2586,7 +2754,7 @@ msgid "Blog posts about the Additional Investment Fund"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:9
-msgid "Save in the <em>II pillar</em> again and win on taxes"
+msgid "Rejoin the <em>II pillar</em> and win on taxes"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:12
@@ -2645,6 +2813,7 @@ msgid "The social tax part slightly reduces your I&nbsp;pillar pension. %s"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:71
+#: templates/second-pillar-rejoin-content.php:343
 msgid "See the comparison"
 msgstr ""
 
@@ -2719,11 +2888,11 @@ msgid "Read more on the blog about who can rejoin and why it pays to start savin
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:179
-msgid "How do I start saving in the II pillar again?"
+msgid "How do I rejoin the II pillar?"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:183
-#: templates/second-pillar-rejoin-content.php:302
+#: templates/second-pillar-rejoin-content.php:333
 msgid "Log in to Tuleva"
 msgstr ""
 
@@ -2829,106 +2998,163 @@ msgid "Tuleva <strong>belongs to its savers</strong>"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:291
-msgid "I received my money later than May 2022. When can I rejoin?"
+msgid "When can I rejoin the II pillar?"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:293
-msgid "The five years are counted from the date you submitted your withdrawal application, not from when the money reached you. If you applied in 2022 or later, you can apply again five years after that. There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgid "You can rejoin the II pillar once five years have passed since you took your money out. The five years are counted from the date you submitted your withdrawal application, not from when the money reached you."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:294
-msgid "The sooner you start, the longer you gain from the tax win."
+#: templates/second-pillar-rejoin-content.php:297
+msgid "You applied to withdraw"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:298
-msgid "I don't remember when I took money out of the II pillar. Where can I check?"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:301
-#, php-format
-msgid "%1$s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can. You can also check it in the %2$s."
+msgid "You can apply again"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:303
-msgid "https://public.pensionikeskus.ee/public/login.do?locale=en"
+msgid "By November&nbsp;2021"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:303
-msgid "Pensionikeskus self-service"
+#: templates/second-pillar-rejoin-content.php:304
+msgid "From November&nbsp;2026"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:307
+msgid "December&nbsp;2021 to March&nbsp;2022"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:308
+msgid "From December&nbsp;2026"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:311
+msgid "April to July&nbsp;2022"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:312
+msgid "From April&nbsp;2027"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:315
+msgid "August to November&nbsp;2022"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:316
+msgid "From August&nbsp;2027"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:319
+msgid "Later"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:320
+msgid "Five years after your application"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:324
+msgid "There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:325
+msgid "The sooner you start, the longer you gain from the tax win."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:329
+msgid "I don't remember when I took money out of the II pillar. Where can I check?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:332
+#, php-format
+msgid "%s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:338
+msgid "Is it worth rejoining the II pillar?"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:340
+msgid "It makes sense to start saving in the II pillar again if you earn a salary and want to save for the long term."
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:342
+#, php-format
+msgid "Your contributions go in before income tax, and part of your social tax goes in as well. That makes your I&nbsp;pillar pension somewhat smaller, but in the II&nbsp;pillar you build assets of your own, whose value depends on the fund's returns and can also fall. %s"
+msgstr ""
+
+#: templates/second-pillar-rejoin-content.php:348
 msgid "Do I need to be a Tuleva saver?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:310
+#: templates/second-pillar-rejoin-content.php:350
 msgid "No. Log in to Tuleva and submit the application. If you choose a Tuleva fund, you will be one of us."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:310
+#: templates/second-pillar-rejoin-content.php:350
 #, php-format
 msgid "There are already over %s of us Tuleva savers."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:314
+#: templates/second-pillar-rejoin-content.php:354
 msgid "Which II pillar fund should I choose?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:316
+#: templates/second-pillar-rejoin-content.php:356
 msgid "Look at two things: where the fund invests and how much it charges. An index fund that invests in global equities spreads your money across thousands of companies around the world."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:317
+#: templates/second-pillar-rejoin-content.php:357
 msgid "Today you can save with an annual fee below 0.3%. If a fund's ongoing charges are above 0.5% a year, you are paying too much."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:358
 #, php-format
 msgid "When you rejoin, you can use the money from the age of 60, so you have time to ride out market swings. That's why a low-fee index fund is worth considering. %s"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:358
 msgid "https://tuleva.ee/vaata/pensionifondide-vordlus/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:318
+#: templates/second-pillar-rejoin-content.php:358
 msgid "Compare all II pillar funds →"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:322
+#: templates/second-pillar-rejoin-content.php:362
 msgid "Where do my contributions go if I don't choose a fund?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:324
+#: templates/second-pillar-rejoin-content.php:364
 msgid "To the fund where you saved before you took your money out. Banks have renamed many funds over the past five years, so you may not recognise your old fund by its name."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:325
+#: templates/second-pillar-rejoin-content.php:365
 msgid "That's why it's worth reviewing your fund along with your application. At Tuleva you can choose your fund at the same time as you apply to rejoin the II pillar."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:329
+#: templates/second-pillar-rejoin-content.php:369
 msgid "How can I take money out of the II pillar later?"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:331
+#: templates/second-pillar-rejoin-content.php:371
 #, php-format
 msgid "From the age of 60 you can take the money out all at once or %s. If something happens to you, your II pillar assets go to your heirs."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:331
+#: templates/second-pillar-rejoin-content.php:371
 msgid "https://tuleva.ee/pensioni-valjamaksed/"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:331
+#: templates/second-pillar-rejoin-content.php:371
 msgid "in monthly payments free of income tax"
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:332
+#: templates/second-pillar-rejoin-content.php:372
 msgid "You cannot take the money out a second time before then. The only exception is a loss of capacity for work. After rejoining you also can't stop contributions again. Most people are better off saving at least until they stop working, so these restrictions do not affect most of them."
 msgstr ""
 
-#: templates/second-pillar-rejoin-content.php:336
+#: templates/second-pillar-rejoin-content.php:376
 msgid "We asked savers who left the II pillar what they think about rejoining →"
 msgstr ""
 

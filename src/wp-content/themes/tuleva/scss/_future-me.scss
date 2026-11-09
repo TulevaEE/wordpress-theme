@@ -1,0 +1,264 @@
+// Future Me landing page (page_future-me.php)
+
+// The same daylight as the II pillar rejoin hero, so the two read as one family
+.bg-hero-future-me {
+    padding: clamp(3rem, 10vh, 7rem) 0 clamp(2.5rem, 7vh, 5rem);
+    background:
+        radial-gradient(45% 80% at 92% 30%, rgba($bright-blue, .55), transparent 70%),
+        radial-gradient(40% 70% at 62% 110%, rgba($green-light, .38), transparent 70%),
+        radial-gradient(35% 60% at 0 0, rgba($bright-blue, .22), transparent 70%),
+        #eef8ff;
+
+    .lead {
+        max-width: 40rem;
+    }
+
+    .future-me-tap-link {
+        color: $navy-blue;
+    }
+}
+
+.future-me-page {
+    h1 {
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        line-height: 1.18;
+    }
+
+    .future-me-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .5rem;
+        margin-top: 2rem;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            justify-content: flex-start;
+        }
+    }
+
+    .future-me-tap-link {
+        display: inline-block;
+        padding: .75rem 0;
+    }
+
+    .future-me-login-note {
+        margin: 1rem 0 0;
+    }
+
+    .future-me-answers {
+        margin-top: 0;
+
+        .who-card {
+            overflow: hidden;
+            padding: 0 1.6rem 1.6rem;
+        }
+
+        .future-me-answer-visual {
+            margin: 0 -1.6rem 1.4rem;
+            padding: 1.25rem 1.6rem;
+            background: #edf7fd;
+
+            svg {
+                display: block;
+                width: 100%;
+                max-width: 20rem;
+                height: 5.5rem;
+                margin-inline: auto;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            grid-template-columns: 1fr;
+        }
+
+        .who-card h2 {
+            margin: 0 0 .75rem;
+            color: $navy-blue;
+            font-family: $font-family-sans-serif;
+            font-size: 1.15rem;
+            font-weight: $font-weight-bold;
+            letter-spacing: normal;
+            line-height: 1.35;
+        }
+
+        .who-card p {
+            font-size: 1rem;
+        }
+    }
+
+    .future-me-arc {
+        position: relative;
+        max-width: 26rem;
+        margin: 2.5rem auto 0;
+    }
+
+    .future-me-arc-line {
+        display: none;
+    }
+
+    .future-me-stages {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .future-me-stage {
+        position: relative;
+        padding: 0 0 1.75rem 2.5rem;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: .35rem;
+            left: 0;
+            width: 1rem;
+            height: 1rem;
+            border: 3px solid $blue;
+            border-radius: 50%;
+            background: $white;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 1.6rem;
+            bottom: -.25rem;
+            left: calc(.5rem - 1px);
+            width: 2px;
+            background: #d3e8f5;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .age {
+            color: $navy-blue;
+            font-family: $font-family-serif;
+            font-size: 1.375rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .what {
+            margin-top: .25rem;
+            color: $navy-blue;
+            font-weight: 500;
+        }
+
+        .question {
+            margin-top: .125rem;
+            color: $text-secondary;
+        }
+    }
+
+    .future-me-stage--result::before {
+        top: .3rem;
+        left: -.125rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-color: $navy-blue;
+        background: $navy-blue;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .future-me-arc {
+            max-width: none;
+            height: 28rem;
+            margin-top: 1.5rem;
+        }
+
+        .future-me-arc-line {
+            display: block;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+
+            path {
+                fill: none;
+                stroke: $blue;
+                stroke-linecap: round;
+                stroke-width: 2.5;
+            }
+
+            .ghost {
+                stroke: #d3e8f5;
+                stroke-width: 10;
+            }
+        }
+
+        .future-me-stage {
+            position: absolute;
+            top: var(--y);
+            left: var(--x);
+            width: 16%;
+            padding: 1.5rem 0 0;
+            text-align: center;
+            transform: translateX(-50%);
+
+            &::before {
+                top: 0;
+                left: 50%;
+                margin-left: -.5rem;
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                display: none;
+            }
+
+            .age {
+                font-size: 1.25rem;
+            }
+        }
+
+        .future-me-stage--result::before {
+            left: 50%;
+            margin-left: -.625rem;
+        }
+    }
+
+    @media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+        .future-me-arc-line {
+            transition: opacity .8s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .future-me-stage {
+            transition: opacity .6s cubic-bezier(.16, 1, .3, 1);
+            transition-delay: calc(var(--i) * .14s + .2s);
+        }
+
+        .future-me-arc.is-waiting {
+            .future-me-arc-line,
+            .future-me-stage {
+                opacity: 0;
+            }
+        }
+    }
+
+    .future-me-note {
+        max-width: 40rem;
+        margin: 2rem auto 0;
+        color: $text-secondary;
+        text-align: center;
+    }
+}
