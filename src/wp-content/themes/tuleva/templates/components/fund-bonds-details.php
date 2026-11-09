@@ -30,6 +30,12 @@ $key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
+// The documents every fund links, from the shared documents page (helpers/extras.php).
+[$nav_procedure_url, $nav_procedure_upcoming_url] = get_nav_procedure_documents();
+$nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
+$sustainability_url = get_esg_document_url();
+$adverse_impacts_url = get_esg_factors_document_url();
+$remuneration_policy_url = get_remuneration_document_url();
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -117,28 +123,28 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
                                 <a href="<?php echo esc_url($key_investor_info_url); ?>" target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <?php endif; ?>
-                            <?php if (get_nav_procedure_document_url()): ?>
+                            <?php if ($nav_procedure_url): ?>
                             <li>
-                                <a href="<?php echo esc_url(get_nav_procedure_document_url()); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                                <?php if (get_nav_procedure_upcoming_document_url()): ?>
+                                <a href="<?php echo esc_url($nav_procedure_url); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <?php if ($nav_procedure_upcoming_url): ?>
                                     <br>
-                                    <a href="<?php echo esc_url(get_nav_procedure_upcoming_document_url()); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php if (get_nav_procedure_upcoming_effective_date()): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html(get_nav_procedure_upcoming_effective_date())); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                    <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>" target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a><?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                 <?php endif; ?>
                             </li>
                             <?php endif; ?>
-                            <?php if (get_esg_document_url()): ?>
+                            <?php if ($sustainability_url): ?>
                             <li>
-                                <a href="<?php echo esc_url(get_esg_document_url()); ?>" target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo esc_url($sustainability_url); ?>" target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <?php endif; ?>
-                            <?php if (get_esg_factors_document_url()): ?>
+                            <?php if ($adverse_impacts_url): ?>
                             <li>
-                                <a href="<?php echo esc_url(get_esg_factors_document_url()); ?>" target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo esc_url($adverse_impacts_url); ?>" target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <?php endif; ?>
-                            <?php if (get_remuneration_document_url()): ?>
+                            <?php if ($remuneration_policy_url): ?>
                             <li>
-                                <a href="<?php echo esc_url(get_remuneration_document_url()); ?>" target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                <a href="<?php echo esc_url($remuneration_policy_url); ?>" target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <?php endif; ?>
                         </ul>

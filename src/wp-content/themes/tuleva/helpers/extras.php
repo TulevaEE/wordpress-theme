@@ -369,18 +369,6 @@ function get_nav_procedure_documents() {
     );
 }
 
-function get_nav_procedure_document_url() {
-    return get_nav_procedure_documents()[0];
-}
-
-function get_nav_procedure_upcoming_document_url() {
-    return get_nav_procedure_documents()[1];
-}
-
-function get_nav_procedure_upcoming_effective_date() {
-    return tuleva_document_effective_date(get_nav_procedure_upcoming_document_url());
-}
-
 function get_esg_factors_document_url() {
     return tuleva_shared_document_url('adverse_impacts_file');
 }

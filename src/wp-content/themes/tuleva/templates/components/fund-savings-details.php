@@ -35,6 +35,10 @@ $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 [$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_fund_document('nav_procedure_file');
 $nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
 $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
+// The documents every fund links, from the shared documents page (helpers/extras.php).
+$sustainability_url = get_esg_document_url();
+$adverse_impacts_url = get_esg_factors_document_url();
+$remuneration_policy_url = get_remuneration_document_url();
 ?>
 <section id="details" class="pt-5 section-spacing-bottom">
     <div class="container">
@@ -169,23 +173,23 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>
-                            <?php if (get_esg_document_url()): ?>
+                            <?php if ($sustainability_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url(get_esg_document_url()); ?>"
+                                    <a href="<?php echo esc_url($sustainability_url); ?>"
                                        target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
-                            <?php if (get_esg_factors_document_url()): ?>
+                            <?php if ($adverse_impacts_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url(get_esg_factors_document_url()); ?>"
+                                    <a href="<?php echo esc_url($adverse_impacts_url); ?>"
                                        target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
-                            <?php if (get_remuneration_document_url()): ?>
+                            <?php if ($remuneration_policy_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url(get_remuneration_document_url()); ?>"
+                                    <a href="<?php echo esc_url($remuneration_policy_url); ?>"
                                        target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>

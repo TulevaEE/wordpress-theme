@@ -555,15 +555,19 @@ add_filter('rest_pre_insert_page', 'tuleva_shared_documents_page_status_over_res
 
 /**
  * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
- * Of several pages on the template only the oldest is read, so an edit to another one changes
- * nothing on the fund pages and nothing on them says so. No page yet is not a problem: the URLs in
- * the theme are meant.
+ * With no page on the template, trashed or moved to another one, the fund pages show none of the
+ * documents it holds. Of several pages on the template only the oldest is read, so an edit to
+ * another one changes nothing on the fund pages and nothing on them says so.
  */
 function tuleva_shared_documents_page_problem(): string
 {
     // The pages the fund pages could read, as they choose among them; pages on the template are
     // saved as private, so no other status is left to count.
     $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
+
+    if ($pages === []) {
+        return 'No page is on the Fund shared documents template, so the fund pages show no sustainability, adverse impacts, remuneration policy or pension funds\' NAV procedure document. Restore the page from the trash, or set its template back to Fund shared documents.';
+    }
 
     if (count($pages) < 2) {
         return '';

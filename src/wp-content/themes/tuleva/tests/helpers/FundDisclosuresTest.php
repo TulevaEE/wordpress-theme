@@ -666,18 +666,27 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A field is the only source of a document, so no template or helper carries a URL to fall
-     * back on: one would bring a cleared document back.
+     * A field is the only source of a document, so no template or helper carries a URL or a figure
+     * to fall back on: one would bring a cleared document back. A second argument to these calls
+     * would be taken for a template, and the row would show nothing.
      */
     #[Test]
-    public function no_fund_template_or_document_helper_carries_a_document_url(): void
+    public function no_fund_template_or_document_helper_carries_a_fallback(): void
     {
         $theme = __DIR__ . '/../..';
-        $files = [...glob("$theme/templates/components/fund-*-details.php"), "$theme/helpers/extras.php"];
+        $files = [
+            ...glob("$theme/templates/components/fund-*-details.php"),
+            ...glob("$theme/page_fund-*.php"),
+            "$theme/helpers/extras.php",
+        ];
+        $call = '(tuleva_fund_disclosure_value|tuleva_fund_document|tuleva_shared_document_url)\(';
 
-        $this->assertCount(5, $files);
+        $this->assertCount(10, $files);
         foreach ($files as $file) {
-            $this->assertStringNotContainsString('/wp-content/uploads/', (string) file_get_contents($file), basename($file));
+            $code = (string) file_get_contents($file);
+            $this->assertStringNotContainsString('/wp-content/uploads/', $code, basename($file));
+            $this->assertDoesNotMatchRegularExpression("/$call'[a-z0-9_]+'\s*,/", $code, basename($file));
+            $this->assertDoesNotMatchRegularExpression("/$call'[a-z0-9_]+'\)\s*\?:/", $code, basename($file));
         }
     }
 
@@ -1449,7 +1458,8 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderFundPage($template);
 
         $this->assertStringNotContainsString('href=""', $html);
-        $this->assertDoesNotMatchRegularExpression('/>Documents<\/h2>\s*<ul[^>]*>\s*<li>/', $html);
+        $this->assertSame(1, preg_match('/>Documents<\/h2>\s*<ul[^>]*>(.*?)<\/ul>/s', $html, $documents));
+        $this->assertStringNotContainsString('<li', $documents[1]);
     }
 
     #[Test]
@@ -1690,16 +1700,34 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
-    public function one_shared_page_that_is_read_or_none_yet_is_not_a_problem(): void
+    public function one_shared_page_that_is_read_is_not_a_problem(): void
     {
-        $this->assertSame('', tuleva_shared_documents_page_problem());
-
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE, self::SHARED_PAGE + 5];
         FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
         FakeFundPage::$statuses[self::SHARED_PAGE + 5] = 'trash';
         $this->resetSharedPageLookup();
 
         $this->assertSame('', tuleva_shared_documents_page_problem());
+    }
+
+    /**
+     * The fund pages have no URL of their own for the documents the shared page holds, so with no
+     * page on its template they show none of them, and whoever edits a fund page is told.
+     */
+    #[Test]
+    public function no_page_on_the_shared_template_is_a_problem_on_the_fund_pages_edit_screens(): void
+    {
+        $this->assertStringContainsString('No page is on the Fund shared documents template', tuleva_shared_documents_page_problem());
+
+        FakeFundPage::$pages = [
+            'page_fund-stocks.php' => [17533],
+            TULEVA_SHARED_DOCUMENTS_TEMPLATE => [self::SHARED_PAGE],
+        ];
+        FakeFundPage::$statuses[self::SHARED_PAGE] = 'trash';
+        FakeFundPage::$post_id = 17533;
+        FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
+
+        $this->assertStringContainsString('Restore the page from the trash', tuleva_shared_documents_page_notice());
     }
 
     /**
