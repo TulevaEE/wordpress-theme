@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:31
-#: helpers/acf/init.php:21
+#: helpers/acf/init.php:22
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
 #, php-format
@@ -26,22 +26,22 @@ msgstr "%s kutsumisel esines viga"
 msgid "Skip to content"
 msgstr "Liigu edasi sisu juurde"
 
-#: helpers/extras.php:484
-#: helpers/extras.php:495
+#: helpers/extras.php:497
+#: helpers/extras.php:508
 #: templates/components/countdown-timer.php:22
 #: templates/components/counter-hero.php:27
 msgid "days"
 msgstr "päeva"
 
-#: helpers/extras.php:618
+#: helpers/extras.php:631
 msgid "Pagination"
 msgstr "Leheküljed"
 
-#: helpers/extras.php:622
+#: helpers/extras.php:635
 msgid "Newer"
 msgstr "Uuemad"
 
-#: helpers/extras.php:665
+#: helpers/extras.php:678
 msgid "Older"
 msgstr "Vanemad"
 
@@ -204,25 +204,25 @@ msgstr "Tuleva Maailma Aktsiate Pensionifond"
 msgid "0.28% per year"
 msgstr "0,28% aastas"
 
-#: templates/components/fund-bonds-details.php:44
-#: templates/components/fund-savings-details.php:50
-#: templates/components/fund-stocks-details.php:44
-#: templates/components/fund-third-details.php:44
+#: templates/components/fund-bonds-details.php:43
+#: templates/components/fund-savings-details.php:48
+#: templates/components/fund-stocks-details.php:43
+#: templates/components/fund-third-details.php:43
 msgid "Fund details"
 msgstr "Fondi info"
 
-#: templates/components/fund-bonds-details.php:50
-#: templates/components/fund-savings-details.php:58
-#: templates/components/fund-stocks-details.php:50
-#: templates/components/fund-third-details.php:50
+#: templates/components/fund-bonds-details.php:49
+#: templates/components/fund-savings-details.php:56
+#: templates/components/fund-stocks-details.php:49
+#: templates/components/fund-third-details.php:49
 msgid "Currency"
 msgstr "Valuuta"
 
 #: helpers/schema.php:115
-#: templates/components/fund-bonds-details.php:54
-#: templates/components/fund-savings-details.php:63
-#: templates/components/fund-stocks-details.php:54
-#: templates/components/fund-third-details.php:54
+#: templates/components/fund-bonds-details.php:53
+#: templates/components/fund-savings-details.php:61
+#: templates/components/fund-stocks-details.php:53
+#: templates/components/fund-third-details.php:53
 msgid "Date of inception"
 msgstr "Moodustamise kuupäev"
 
@@ -231,56 +231,56 @@ msgstr "Moodustamise kuupäev"
 msgid "27 March 2017"
 msgstr "27. märts 2017"
 
-#: templates/components/fund-bonds-details.php:58
-#: templates/components/fund-savings-details.php:68
-#: templates/components/fund-stocks-details.php:58
-#: templates/components/fund-third-details.php:58
+#: templates/components/fund-bonds-details.php:57
+#: templates/components/fund-savings-details.php:66
+#: templates/components/fund-stocks-details.php:57
+#: templates/components/fund-third-details.php:57
 msgid "Fund volume"
 msgstr "Fondi maht"
 
 #: helpers/schema.php:113
-#: templates/components/fund-bonds-details.php:67
-#: templates/components/fund-savings-details.php:77
-#: templates/components/fund-stocks-details.php:67
-#: templates/components/fund-third-details.php:67
+#: templates/components/fund-bonds-details.php:66
+#: templates/components/fund-savings-details.php:75
+#: templates/components/fund-stocks-details.php:66
+#: templates/components/fund-third-details.php:66
 msgid "Management fee"
 msgstr "Valitsemistasu"
 
 #: helpers/schema.php:111
-#: templates/components/fund-bonds-details.php:72
-#: templates/components/fund-savings-details.php:83
-#: templates/components/fund-stocks-details.php:72
-#: templates/components/fund-third-details.php:72
+#: templates/components/fund-bonds-details.php:71
+#: templates/components/fund-savings-details.php:81
+#: templates/components/fund-stocks-details.php:71
+#: templates/components/fund-third-details.php:71
 msgid "Ongoing charges"
 msgstr "Jooksvad tasud"
 
 #: helpers/schema.php:114
-#: templates/components/fund-bonds-details.php:76
-#: templates/components/fund-savings-details.php:89
-#: templates/components/fund-stocks-details.php:76
-#: templates/components/fund-third-details.php:76
+#: templates/components/fund-bonds-details.php:75
+#: templates/components/fund-savings-details.php:87
+#: templates/components/fund-stocks-details.php:75
+#: templates/components/fund-third-details.php:75
 msgid "Redemption fee and issue fee"
 msgstr "Väljalasketasu ja tagasivõtmistasu"
 
-#: templates/components/fund-bonds-details.php:81
-#: templates/components/fund-savings-details.php:95
-#: templates/components/fund-stocks-details.php:81
-#: templates/components/fund-third-details.php:81
+#: templates/components/fund-bonds-details.php:80
+#: templates/components/fund-savings-details.php:93
+#: templates/components/fund-stocks-details.php:80
+#: templates/components/fund-third-details.php:80
 msgid "Fund manager's participation rate in fund"
 msgstr "Fondivalitseja osalus fondis"
 
-#: templates/components/fund-bonds-details.php:82
-#: templates/components/fund-savings-details.php:96
-#: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-bonds-details.php:81
+#: templates/components/fund-savings-details.php:94
+#: templates/components/fund-stocks-details.php:81
+#: templates/components/fund-third-details.php:81
 msgid "units"
 msgstr "osakut"
 
 #: helpers/schema.php:116
-#: templates/components/fund-bonds-details.php:86
-#: templates/components/fund-savings-details.php:101
-#: templates/components/fund-stocks-details.php:86
-#: templates/components/fund-third-details.php:86
+#: templates/components/fund-bonds-details.php:85
+#: templates/components/fund-savings-details.php:99
+#: templates/components/fund-stocks-details.php:85
+#: templates/components/fund-third-details.php:85
 msgid "Risk profile"
 msgstr "Riskiprofiil"
 
@@ -289,243 +289,246 @@ msgid "Conservative"
 msgstr "Konservatiivne"
 
 #: helpers/schema.php:117
-#: templates/components/fund-bonds-details.php:90
-#: templates/components/fund-savings-details.php:107
-#: templates/components/fund-stocks-details.php:90
-#: templates/components/fund-third-details.php:90
+#: templates/components/fund-bonds-details.php:89
+#: templates/components/fund-savings-details.php:105
+#: templates/components/fund-stocks-details.php:89
+#: templates/components/fund-third-details.php:89
 msgid "Comparison index"
 msgstr "Võrdlusindeks"
 
-#: templates/components/fund-bonds-details.php:97
-#: templates/components/fund-savings-details.php:113
-#: templates/components/fund-stocks-details.php:97
-#: templates/components/fund-third-details.php:97
+#: templates/components/fund-bonds-details.php:96
+#: templates/components/fund-savings-details.php:111
+#: templates/components/fund-stocks-details.php:96
+#: templates/components/fund-third-details.php:96
 msgid "Documents"
 msgstr "Dokumendid"
 
-#: templates/components/fund-bonds-details.php:101
-#: templates/components/fund-bonds-details.php:105
-#: templates/components/fund-bonds-details.php:109
-#: templates/components/fund-savings-details.php:119
-#: templates/components/fund-savings-details.php:131
-#: templates/components/fund-savings-details.php:138
-#: templates/components/fund-stocks-details.php:101
-#: templates/components/fund-stocks-details.php:105
-#: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:101
-#: templates/components/fund-third-details.php:105
-#: templates/components/fund-third-details.php:109
+#: templates/components/fund-bonds-details.php:100
+#: templates/components/fund-bonds-details.php:104
+#: templates/components/fund-bonds-details.php:108
+#: templates/components/fund-savings-details.php:117
+#: templates/components/fund-savings-details.php:129
+#: templates/components/fund-savings-details.php:136
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-stocks-details.php:104
+#: templates/components/fund-stocks-details.php:108
+#: templates/components/fund-third-details.php:100
+#: templates/components/fund-third-details.php:104
+#: templates/components/fund-third-details.php:108
 msgid "Prospectus"
 msgstr "Prospekt"
 
-#: templates/components/fund-bonds-details.php:101
-#: templates/components/fund-bonds-details.php:109
-#: templates/components/fund-savings-details.php:121
-#: templates/components/fund-savings-details.php:140
-#: templates/components/fund-stocks-details.php:101
-#: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:101
-#: templates/components/fund-third-details.php:109
+#: templates/components/fund-bonds-details.php:100
+#: templates/components/fund-bonds-details.php:108
+#: templates/components/fund-savings-details.php:119
+#: templates/components/fund-savings-details.php:138
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-stocks-details.php:108
+#: templates/components/fund-third-details.php:100
+#: templates/components/fund-third-details.php:108
 msgid " and "
 msgstr " ja "
 
-#: templates/components/fund-bonds-details.php:101
-#: templates/components/fund-bonds-details.php:107
-#: templates/components/fund-bonds-details.php:109
-#: templates/components/fund-savings-details.php:124
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:143
-#: templates/components/fund-stocks-details.php:101
-#: templates/components/fund-stocks-details.php:107
-#: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-third-details.php:101
-#: templates/components/fund-third-details.php:107
-#: templates/components/fund-third-details.php:109
+#: templates/components/fund-bonds-details.php:100
+#: templates/components/fund-bonds-details.php:106
+#: templates/components/fund-bonds-details.php:108
+#: templates/components/fund-savings-details.php:122
+#: templates/components/fund-savings-details.php:132
+#: templates/components/fund-savings-details.php:141
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-stocks-details.php:106
+#: templates/components/fund-stocks-details.php:108
+#: templates/components/fund-third-details.php:100
+#: templates/components/fund-third-details.php:106
+#: templates/components/fund-third-details.php:108
 msgid "Terms and conditions"
 msgstr "tingimused"
 
-#: templates/components/fund-bonds-details.php:101
-#: templates/components/fund-bonds-details.php:105
-#: templates/components/fund-bonds-details.php:107
-#: templates/components/fund-bonds-details.php:109
-#: templates/components/fund-bonds-details.php:116
-#: templates/components/fund-bonds-details.php:121
-#: templates/components/fund-bonds-details.php:125
-#: templates/components/fund-bonds-details.php:132
-#: templates/components/fund-bonds-details.php:135
-#: templates/components/fund-bonds-details.php:138
-#: templates/components/fund-bonds-details.php:147
-#: templates/components/fund-bonds-details.php:158
-#: templates/components/fund-savings-details.php:126
-#: templates/components/fund-savings-details.php:131
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:145
-#: templates/components/fund-savings-details.php:154
-#: templates/components/fund-savings-details.php:161
-#: templates/components/fund-savings-details.php:167
-#: templates/components/fund-savings-details.php:172
-#: templates/components/fund-savings-details.php:178
-#: templates/components/fund-savings-details.php:183
-#: templates/components/fund-savings-details.php:188
-#: templates/components/fund-savings-details.php:194
-#: templates/components/fund-savings-details.php:205
-#: templates/components/fund-savings-details.php:218
-#: templates/components/fund-stocks-details.php:101
-#: templates/components/fund-stocks-details.php:105
-#: templates/components/fund-stocks-details.php:107
-#: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-stocks-details.php:116
-#: templates/components/fund-stocks-details.php:121
-#: templates/components/fund-stocks-details.php:125
-#: templates/components/fund-stocks-details.php:132
-#: templates/components/fund-stocks-details.php:135
-#: templates/components/fund-stocks-details.php:138
-#: templates/components/fund-stocks-details.php:147
-#: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:101
-#: templates/components/fund-third-details.php:105
-#: templates/components/fund-third-details.php:107
-#: templates/components/fund-third-details.php:109
-#: templates/components/fund-third-details.php:116
-#: templates/components/fund-third-details.php:121
-#: templates/components/fund-third-details.php:125
-#: templates/components/fund-third-details.php:132
-#: templates/components/fund-third-details.php:135
-#: templates/components/fund-third-details.php:138
-#: templates/components/fund-third-details.php:147
-#: templates/components/fund-third-details.php:158
+#: templates/components/fund-bonds-details.php:100
+#: templates/components/fund-bonds-details.php:104
+#: templates/components/fund-bonds-details.php:106
+#: templates/components/fund-bonds-details.php:108
+#: templates/components/fund-bonds-details.php:115
+#: templates/components/fund-bonds-details.php:120
+#: templates/components/fund-bonds-details.php:124
+#: templates/components/fund-bonds-details.php:127
+#: templates/components/fund-bonds-details.php:131
+#: templates/components/fund-bonds-details.php:134
+#: templates/components/fund-bonds-details.php:137
+#: templates/components/fund-bonds-details.php:146
+#: templates/components/fund-bonds-details.php:157
+#: templates/components/fund-savings-details.php:124
+#: templates/components/fund-savings-details.php:129
+#: templates/components/fund-savings-details.php:132
+#: templates/components/fund-savings-details.php:143
+#: templates/components/fund-savings-details.php:152
+#: templates/components/fund-savings-details.php:159
+#: templates/components/fund-savings-details.php:165
+#: templates/components/fund-savings-details.php:170
+#: templates/components/fund-savings-details.php:176
+#: templates/components/fund-savings-details.php:181
+#: templates/components/fund-savings-details.php:186
+#: templates/components/fund-savings-details.php:192
+#: templates/components/fund-savings-details.php:203
+#: templates/components/fund-savings-details.php:216
+#: templates/components/fund-stocks-details.php:100
+#: templates/components/fund-stocks-details.php:104
+#: templates/components/fund-stocks-details.php:106
+#: templates/components/fund-stocks-details.php:108
+#: templates/components/fund-stocks-details.php:115
+#: templates/components/fund-stocks-details.php:120
+#: templates/components/fund-stocks-details.php:124
+#: templates/components/fund-stocks-details.php:127
+#: templates/components/fund-stocks-details.php:131
+#: templates/components/fund-stocks-details.php:134
+#: templates/components/fund-stocks-details.php:137
+#: templates/components/fund-stocks-details.php:146
+#: templates/components/fund-stocks-details.php:157
+#: templates/components/fund-third-details.php:100
+#: templates/components/fund-third-details.php:104
+#: templates/components/fund-third-details.php:106
+#: templates/components/fund-third-details.php:108
+#: templates/components/fund-third-details.php:115
+#: templates/components/fund-third-details.php:120
+#: templates/components/fund-third-details.php:124
+#: templates/components/fund-third-details.php:127
+#: templates/components/fund-third-details.php:131
+#: templates/components/fund-third-details.php:134
+#: templates/components/fund-third-details.php:137
+#: templates/components/fund-third-details.php:146
+#: templates/components/fund-third-details.php:157
 msgid " (in Estonian)"
 msgstr " "
 
-#: templates/components/fund-bonds-details.php:105
-#: templates/components/fund-bonds-details.php:107
-#: templates/components/fund-bonds-details.php:109
-#: templates/components/fund-bonds-details.php:128
-#: templates/components/fund-savings-details.php:131
-#: templates/components/fund-savings-details.php:134
-#: templates/components/fund-savings-details.php:145
-#: templates/components/fund-savings-details.php:172
-#: templates/components/fund-stocks-details.php:105
-#: templates/components/fund-stocks-details.php:107
-#: templates/components/fund-stocks-details.php:109
-#: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:105
-#: templates/components/fund-third-details.php:107
-#: templates/components/fund-third-details.php:109
-#: templates/components/fund-third-details.php:128
+#: templates/components/fund-bonds-details.php:104
+#: templates/components/fund-bonds-details.php:106
+#: templates/components/fund-bonds-details.php:108
+#: templates/components/fund-bonds-details.php:127
+#: templates/components/fund-savings-details.php:129
+#: templates/components/fund-savings-details.php:132
+#: templates/components/fund-savings-details.php:143
+#: templates/components/fund-savings-details.php:170
+#: templates/components/fund-stocks-details.php:104
+#: templates/components/fund-stocks-details.php:106
+#: templates/components/fund-stocks-details.php:108
+#: templates/components/fund-stocks-details.php:127
+#: templates/components/fund-third-details.php:104
+#: templates/components/fund-third-details.php:106
+#: templates/components/fund-third-details.php:108
+#: templates/components/fund-third-details.php:127
 #, php-format
 msgid " (in Estonian, effective from %s)"
 msgstr " (jõustub %s)"
 
-#: templates/components/fund-bonds-details.php:82
-#: templates/components/fund-savings-details.php:96
-#: templates/components/fund-stocks-details.php:82
-#: templates/components/fund-third-details.php:82
+#: templates/components/fund-bonds-details.php:81
+#: templates/components/fund-savings-details.php:94
+#: templates/components/fund-stocks-details.php:81
+#: templates/components/fund-third-details.php:81
 #, php-format
 msgid "(as of %s)"
 msgstr "(seisuga %s)"
 
-#: templates/components/fund-bonds-details.php:116
-#: templates/components/fund-savings-details.php:153
-#: templates/components/fund-stocks-details.php:116
-#: templates/components/fund-third-details.php:116
+#: templates/components/fund-bonds-details.php:115
+#: templates/components/fund-savings-details.php:151
+#: templates/components/fund-stocks-details.php:115
+#: templates/components/fund-third-details.php:115
 msgid "Model portfolio"
 msgstr "Mudelportfell"
 
-#: templates/components/fund-bonds-details.php:121
-#: templates/components/fund-savings-details.php:160
-#: templates/components/fund-stocks-details.php:121
-#: templates/components/fund-third-details.php:121
+#: templates/components/fund-bonds-details.php:120
+#: templates/components/fund-savings-details.php:158
+#: templates/components/fund-stocks-details.php:120
+#: templates/components/fund-third-details.php:120
 msgid "Key Investor Information"
 msgstr "Põhiteave"
 
-#: templates/components/fund-bonds-details.php:125
-#: templates/components/fund-bonds-details.php:128
-#: templates/components/fund-savings-details.php:166
-#: templates/components/fund-savings-details.php:171
-#: templates/components/fund-stocks-details.php:125
-#: templates/components/fund-stocks-details.php:128
-#: templates/components/fund-third-details.php:125
-#: templates/components/fund-third-details.php:128
+#: templates/components/fund-bonds-details.php:124
+#: templates/components/fund-bonds-details.php:127
+#: templates/components/fund-savings-details.php:164
+#: templates/components/fund-savings-details.php:169
+#: templates/components/fund-stocks-details.php:124
+#: templates/components/fund-stocks-details.php:127
+#: templates/components/fund-third-details.php:124
+#: templates/components/fund-third-details.php:127
 msgid "Procedure for determining net worth of fund"
 msgstr "Fondi vara puhasväärtuse määramise kord"
 
-#: templates/components/fund-bonds-details.php:132
-#: templates/components/fund-savings-details.php:177
-#: templates/components/fund-stocks-details.php:132
-#: templates/components/fund-third-details.php:132
+#: templates/components/fund-bonds-details.php:131
+#: templates/components/fund-savings-details.php:175
+#: templates/components/fund-stocks-details.php:131
+#: templates/components/fund-third-details.php:131
 msgid "Sustainability"
 msgstr "Jätkusuutlikkus"
 
-#: templates/components/fund-bonds-details.php:135
-#: templates/components/fund-savings-details.php:182
-#: templates/components/fund-stocks-details.php:135
-#: templates/components/fund-third-details.php:135
+#: templates/components/fund-bonds-details.php:134
+#: templates/components/fund-savings-details.php:180
+#: templates/components/fund-stocks-details.php:134
+#: templates/components/fund-third-details.php:134
 msgid "Non-consideration of adverse impacts of investment decisions on sustainability factors"
 msgstr "Investeerimisotsuste poolt kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine"
 
-#: templates/components/fund-bonds-details.php:138
-#: templates/components/fund-savings-details.php:187
-#: templates/components/fund-stocks-details.php:138
-#: templates/components/fund-third-details.php:138
+#: templates/components/fund-bonds-details.php:137
+#: templates/components/fund-savings-details.php:185
+#: templates/components/fund-stocks-details.php:137
+#: templates/components/fund-third-details.php:137
 msgid "Remuneration Policy of Tuleva Fondid AS"
 msgstr "Tuleva Fondid AS tasustamise põhimõtted"
 
-#: templates/components/fund-bonds-details.php:142
-#: templates/components/fund-savings-details.php:199
-#: templates/components/fund-stocks-details.php:142
-#: templates/components/fund-third-details.php:142
+#: templates/components/fund-bonds-details.php:141
+#: templates/components/fund-savings-details.php:197
+#: templates/components/fund-stocks-details.php:141
+#: templates/components/fund-third-details.php:141
 msgid "Reports"
 msgstr "Aruanded"
 
-#: helpers/extras.php:430
-#: templates/components/fund-bonds-details.php:147
-#: templates/components/fund-savings-details.php:204
-#: templates/components/fund-stocks-details.php:147
-#: templates/components/fund-third-details.php:147
+#: helpers/extras.php:443
+#: templates/components/fund-bonds-details.php:146
+#: templates/components/fund-savings-details.php:202
+#: templates/components/fund-stocks-details.php:146
+#: templates/components/fund-third-details.php:146
 msgid "Investment reports"
 msgstr "Investeeringute aruanded"
 
-#: templates/components/fund-bonds-details.php:153
-#: templates/components/fund-savings-details.php:212
-#: templates/components/fund-stocks-details.php:153
-#: templates/components/fund-third-details.php:153
+#: templates/components/fund-bonds-details.php:152
+#: templates/components/fund-savings-details.php:210
+#: templates/components/fund-stocks-details.php:152
+#: templates/components/fund-third-details.php:152
 msgid "Previous reports"
 msgstr "Eelnevad aruanded"
 
-#: templates/components/fund-bonds-details.php:158
-#: templates/components/fund-savings-details.php:217
-#: templates/components/fund-stocks-details.php:158
-#: templates/components/fund-third-details.php:158
+#: templates/components/fund-bonds-details.php:157
+#: templates/components/fund-savings-details.php:215
+#: templates/components/fund-stocks-details.php:157
+#: templates/components/fund-third-details.php:157
 msgid "Financial reports of fund and fund manager"
 msgstr "Fondi ja fondivalitseja finantsaruanded"
 
-#: templates/components/fund-savings-details.php:222
+#: templates/components/fund-savings-details.php:220
 msgid "Fund unit price change"
 msgstr "Fondi osakuhinna muutus"
 
-#: templates/components/fund-savings-details.php:225
+#: templates/components/fund-savings-details.php:223
 msgid "Download NAV history"
 msgstr "Lae alla NAV-i ajalugu"
 
-#: templates/components/fund-bonds-details.php:163
-#: templates/components/fund-savings-details.php:230
-#: templates/components/fund-stocks-details.php:163
-#: templates/components/fund-third-details.php:163
+#: templates/components/fund-bonds-details.php:162
+#: templates/components/fund-savings-details.php:228
+#: templates/components/fund-stocks-details.php:162
+#: templates/components/fund-third-details.php:162
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
-#: templates/components/fund-bonds-details.php:165
-#: templates/components/fund-savings-details.php:232
-#: templates/components/fund-stocks-details.php:165
-#: templates/components/fund-third-details.php:165
+#: templates/components/fund-bonds-details.php:164
+#: templates/components/fund-savings-details.php:230
+#: templates/components/fund-stocks-details.php:164
+#: templates/components/fund-third-details.php:164
 msgid "CO2 intensity"
 msgstr "CO2 intensiivsus"
 
-#: templates/components/fund-bonds-details.php:166
-#: templates/components/fund-savings-details.php:233
-#: templates/components/fund-stocks-details.php:166
-#: templates/components/fund-third-details.php:166
+#: templates/components/fund-bonds-details.php:165
+#: templates/components/fund-savings-details.php:231
+#: templates/components/fund-stocks-details.php:165
+#: templates/components/fund-third-details.php:165
 #, php-format
 msgid "%s tons / $1M turnover per year"
 msgstr "%s tonni / $1M käibe kohta aastas"
@@ -558,11 +561,11 @@ msgstr "“Lähtun Vanguardi indeksifondide asutaja Jack Bogle’i põhimõttest
 msgid "Tõnu has been working in the investment field for over 30 years. Before founding Tuleva, he headed an investment company he part-owned, Karu Capital. Before that, Tõnu ran Eastern European financial sector development projects at the European Bank for Reconstruction and Development and worked as head of investment banking at Hansabank. He holds a master’s degree from London Business School-and a bachelor’s degree from the University of Tartu."
 msgstr "Tõnu on investeerimisalal tegutsenud üle 30 aasta. Enne Tuleva asutamist juhtis ta oma kaasosalusega investeerimisettevõtet Karu Capital. Varem on Tõnu muuhulgas vedanud Euroopa Rekonstruktsiooni- ning Arengupangas Ida-Euroopa finantssektori arendusprojekte ning töötanud Hansapangas investeerimispanganduse juhina. Tõnu sai finantsteaduste magistriks London Business School-is ja omandas finantsteaduste bakalaureuse kraadi Tartu Ülikoolis."
 
-#: templates/components/fund-savings-details.php:193
+#: templates/components/fund-savings-details.php:191
 msgid "Summary of Investor Rights"
 msgstr "Investori õiguste kokkuvõte"
 
-#: templates/components/fund-savings-details.php:243
+#: templates/components/fund-savings-details.php:241
 #: templates/components/fund-savings-header.php:12
 msgid "Tuleva Additional Investment Fund"
 msgstr "Tuleva Täiendav Kogumisfond"
@@ -1109,7 +1112,7 @@ msgstr "a"
 #: templates/child-savings-content.php:152
 #: templates/company-savings-content.php:139
 #: templates/components/qa-block.php:6
-#: templates/future-me-content.php:152
+#: templates/future-me-content.php:156
 #: templates/savings-fund-landing-content.php:161
 #: templates/second-pillar-rejoin-content.php:288
 msgid "Frequently asked questions"
@@ -3169,65 +3172,65 @@ msgstr "Kas ma võin pensionil töötada?"
 msgid "Yes. Reaching retirement age does not mean you have to stop working: if you keep working, part of your salary still goes to the II pillar, and you can keep contributing to the III pillar. If you keep contributing, money is added to your II and III pillar, which can increase your future payouts. Once you start II pillar payouts, your II pillar contributions stop for good, but you can keep paying into the III pillar."
 msgstr "Jah. Pensioniikka jõudes ei pea töötamist lõpetama: kui jätkad, läheb osa sinu palgast edasi II sambasse ja III sambasse võid sissemakseid edasi teha. Sissemakseid jätkates lisandub sinu II ja III sambasse raha, mis võib tulevasi väljamakseid suurendada. Kui alustad II sambast väljamakseid, lõppevad sissemaksed II sambasse igaveseks, III sambasse saad sissemakseid edasi teha."
 
-#: templates/future-me-content.php:45
+#: templates/future-me-content.php:49
 msgid "What is your retirement age and will your income cover your costs in later life?"
 msgstr "Mis on sinu pensioniiga ja kas tulud katavad vanaduses kulud?"
 
-#: templates/future-me-content.php:46
+#: templates/future-me-content.php:50
 msgid "<strong>Future Me</strong> works out your retirement age and shows whether your income covers your costs in later life. Go through your decisions by age and see the effect of each."
 msgstr "<strong>Tulevane mina</strong> arvutab sinu pensioniea ja näitab, kas tulud katavad vanaduses kulud. Läbi otsused vanuse järgi ja vaata iga otsuse mõju."
 
-#: templates/future-me-content.php:48
-#: templates/future-me-content.php:142
+#: templates/future-me-content.php:52
+#: templates/future-me-content.php:146
 msgid "Open Future Me"
 msgstr "Avan tulevase mina"
 
-#: templates/future-me-content.php:49
+#: templates/future-me-content.php:53
 msgid "See the decisions"
 msgstr "Vaata otsuseid"
 
-#: templates/future-me-content.php:69
+#: templates/future-me-content.php:73
 msgid "When can I retire?"
 msgstr "Millal saan pensionile minna?"
 
-#: templates/future-me-content.php:70
+#: templates/future-me-content.php:74
 msgid "Future Me works out the age at which you start receiving your state pension and shows your income and costs at each age."
 msgstr "Tulevane mina arvutab vanuse, millal hakkad saama riiklikku pensioni, ja näitab sinu tulusid ja kulusid igas vanuses."
 
-#: templates/future-me-content.php:82
+#: templates/future-me-content.php:86
 msgid "How much money will I have in later life?"
 msgstr "Kui palju raha mul vanaduses on?"
 
-#: templates/future-me-content.php:83
+#: templates/future-me-content.php:87
 msgid "Future Me shows your income and costs in later life year by year: state pension and II and III pillar payouts on one side, costs on the other. You see your own amount after entering your data."
 msgstr "Tulevane mina näitab sinu tulusid ja kulusid vanaduses aasta kaupa: ühel pool on riiklik pension ning II ja III samba väljamaksed, teisel pool kulud. Oma summat näed pärast andmete sisestamist."
 
-#: templates/future-me-content.php:98
+#: templates/future-me-content.php:102
 msgid "How do payouts work and how much will I get per month?"
 msgstr "Kuidas väljamaksed käivad ja kui palju ma kuus saan?"
 
-#: templates/future-me-content.php:99
+#: templates/future-me-content.php:103
 msgid "You can use your II and III pillar savings as monthly payouts. Future Me shows from your data how much you get per month and how income tax affects it."
 msgstr "II ja III samba vara saad kasutada igakuise väljamaksena. Tulevane mina näitab sinu andmete põhjal, kui palju sa kuus saad ja kuidas tulumaks seda mõjutab."
 
 #: templates/future-me-content.php:31
-#: templates/future-me-content.php:100
+#: templates/future-me-content.php:104
 msgid "Read about pension payouts"
 msgstr "Loe pensioni väljamaksete kohta"
 
-#: templates/future-me-content.php:110
+#: templates/future-me-content.php:114
 msgid "Which decisions are ahead of you?"
 msgstr "Millised otsused sind ees ootavad?"
 
-#: templates/future-me-content.php:111
+#: templates/future-me-content.php:115
 msgid "Future Me takes you through your decisions by age and shows the effect of each on the end result."
 msgstr "Tulevane mina viib sind otsustest läbi vanuse järgi ja näitab iga otsuse mõju lõpptulemusele."
 
-#: templates/future-me-content.php:131
+#: templates/future-me-content.php:135
 msgid "Ages are as of 2026. Retirement age depends on your year of birth, so your ages may differ: Future Me works them out from your data."
 msgstr "Vanused on 2026. aasta seisuga. Pensioniiga oleneb sünniaastast, nii et sinu vanused võivad olla teised: tulevane mina arvutab need sinu andmete põhjal."
 
-#: templates/future-me-content.php:140
+#: templates/future-me-content.php:144
 msgid "Meet your future self"
 msgstr "Kohtu oma tulevase minaga"
 
@@ -3235,7 +3238,7 @@ msgstr "Kohtu oma tulevase minaga"
 msgid "You log in with Smart-ID, mobile-ID or an ID card."
 msgstr "Logid sisse Smart-ID, mobiil-ID või ID-kaardiga."
 
-#: templates/future-me-content.php:141
+#: templates/future-me-content.php:145
 msgid "What should you do with your II and III pillar? See how each choice affects your income in later life and whether it covers your costs."
 msgstr "Mida teha oma II ja III sambaga? Vaata, kuidas iga valik mõjutab sinu tulusid vanaduses ja kas need katavad kulud."
 
@@ -3328,3 +3331,15 @@ msgstr "Lõplikku tähtaega pole. Novembri lõpuks esitatud avalduse järel alga
 #, php-format
 msgid "%s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can."
 msgstr "%s ja vaata plokki „Sinu valikud“. II&nbsp;samba real on kirjas, kas saad juba uuesti liituda või mis kuupäevast saad."
+
+#. Template Name of the theme
+msgid "Fund shared documents"
+msgstr ""
+
+#: templates/future-me-content.php:38
+msgid "How was Future Me born?"
+msgstr "Kuidas tulevane mina sündis?"
+
+#: templates/future-me-content.php:39
+msgid "Future Me was born as one of the winning ideas at the Tuleva members' hackathon in October 2026, with the help of more than 300 Tuleva members. Thank you Kadi, Dain, Meelis, Priit and Mirko for contributing to it."
+msgstr "Tulevane mina sündis rohkem kui 300 Tuleva liikme kaasabil Tuleva liikmete häkatonil oktoobris 2026 ühe võiduideena. Aitäh Kadi, Dain, Meelis, Priit ja Mirko, et lahendusse panustasite."

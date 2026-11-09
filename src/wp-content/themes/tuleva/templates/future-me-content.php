@@ -34,6 +34,10 @@ $faq = [
         'question' => __('Can I work while receiving a pension?', TEXT_DOMAIN),
         'answer' => __('Yes. Reaching retirement age does not mean you have to stop working: if you keep working, part of your salary still goes to the II pillar, and you can keep contributing to the III pillar. If you keep contributing, money is added to your II and III pillar, which can increase your future payouts. Once you start II pillar payouts, your II pillar contributions stop for good, but you can keep paying into the III pillar.', TEXT_DOMAIN),
     ],
+    [
+        'question' => __('How was Future Me born?', TEXT_DOMAIN),
+        'answer' => __('Future Me was born as one of the winning ideas at the Tuleva members\' hackathon in October 2026, with the help of more than 300 Tuleva members. Thank you Kadi, Dain, Meelis, Priit and Mirko for contributing to it.', TEXT_DOMAIN),
+    ],
 ];
 ?>
 <main id="main" class="page-container landing-page future-me-page">
