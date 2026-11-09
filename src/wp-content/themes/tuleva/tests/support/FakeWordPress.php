@@ -34,11 +34,31 @@ final class FakeWordPress
     }
 }
 
+/**
+ * With no arguments, the error a timed-out HTTP request answers.
+ */
 class WP_Error
 {
+    public function __construct(
+        private string $code = 'http_request_failed',
+        private string $message = 'cURL error 28: Connection timed out',
+        private mixed $data = ''
+    ) {
+    }
+
+    public function get_error_code(): string
+    {
+        return $this->code;
+    }
+
     public function get_error_message(): string
     {
-        return 'cURL error 28: Connection timed out';
+        return $this->message;
+    }
+
+    public function get_error_data(): mixed
+    {
+        return $this->data;
     }
 }
 
