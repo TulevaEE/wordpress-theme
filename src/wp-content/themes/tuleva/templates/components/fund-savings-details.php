@@ -18,10 +18,9 @@ $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 // the pre-ACF values and render only while a field is empty. Update the field, not the
 // literal — editing a literal whose field is already set changes nothing visible, which
 // is a quiet way to believe a document was published.
-$prospectus_url = tuleva_fund_disclosure_value('prospectus_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf');
-$terms_url = tuleva_fund_disclosure_value('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
-$prospectus_upcoming_url = tuleva_fund_disclosure_value('prospectus_upcoming_file');
-$terms_upcoming_url = tuleva_fund_disclosure_value('terms_upcoming_file');
+// With its upcoming version, which only a field holds; the URL here stands in for an empty current field (tuleva_fund_document()).
+[$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document('prospectus_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf');
+[$terms_url, $terms_upcoming_url] = tuleva_fund_document('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 // One suffix can only state one date. The prospectus and the terms are approved
@@ -36,8 +35,7 @@ $key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', 
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 // TKF100 has its own NAV procedure document, separate from the one the pension funds share.
-$nav_procedure_url = tuleva_fund_disclosure_value('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
-$nav_procedure_upcoming_url = tuleva_fund_disclosure_value('nav_procedure_upcoming_file');
+[$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_fund_document('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
 $nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
 $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 ?>
