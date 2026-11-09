@@ -219,11 +219,12 @@ function apply_filters($hook, $value, ...$args)
 }
 
 /**
- * The rendered page's template, or a listed page's.
+ * The rendered page's template, or a listed page's. WordPress reads a missing ID, 0 included, as
+ * the current page's.
  */
 function get_page_template_slug($post = null)
 {
-    if ($post === null) {
+    if (!$post) {
         return FakeFundPage::$template;
     }
 
@@ -1153,6 +1154,7 @@ final class FundDisclosuresTest extends TestCase
         $this->fillPensionAndSharedPages();
         FakeFundPage::$pages['page_fund-stocks.php'] = [17533];
         FakeFundPage::$post_id = 17533;
+        FakeFundPage::$template = 'page_fund-stocks.php';
 
         $this->assertNull(tuleva_disclosure_gaps_for_rest(['id' => 0]));
     }
