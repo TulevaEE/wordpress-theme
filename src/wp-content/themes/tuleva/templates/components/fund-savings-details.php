@@ -14,13 +14,10 @@ $fund_comparison_index = get_field('fund_comparison_index');
 // Out of scope for TKF100 today, so this is '' and the block below stays hidden.
 $fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 
-// Documents. The ACF fields on this page are the source of truth; the URLs below are
-// the pre-ACF values and render only while a field is empty. Update the field, not the
-// literal — editing a literal whose field is already set changes nothing visible, which
-// is a quiet way to believe a document was published.
-// With its upcoming version, which only a field holds; the URL here stands in for an empty current field (tuleva_fund_document()).
-[$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document('prospectus_file', get_site_url() . '/wp-content/uploads/2026/09/TKF100-Prospekt-alates-29.10.2026.pdf');
-[$terms_url, $terms_upcoming_url] = tuleva_fund_document('terms_file', get_site_url() . '/wp-content/uploads/2026/08/TKF100-Tingimused-kehtivad-alates-18.09.2026.pdf');
+// Documents, from the ACF fields on this page: an empty field shows no row.
+// The prospectus and terms come with their upcoming version (tuleva_fund_document()).
+[$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document('prospectus_file');
+[$terms_url, $terms_upcoming_url] = tuleva_fund_document('terms_file');
 $prospectus_upcoming_date = tuleva_document_effective_date($prospectus_upcoming_url);
 $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 // One suffix can only state one date. The prospectus and the terms are approved
@@ -31,11 +28,11 @@ $upcoming_dates_differ = $prospectus_upcoming_url !== '' && $terms_upcoming_url 
     && $prospectus_upcoming_date !== $terms_upcoming_date;
 $upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
 $model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
-$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file', get_site_url() . '/wp-content/uploads/2026/10/TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf');
+$key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
 // TKF100 has its own NAV procedure document, separate from the one the pension funds share.
-[$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_fund_document('nav_procedure_file', get_site_url() . '/wp-content/uploads/2026/08/Tuleva-Taiendav-Kogumisfond-Fondi-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf');
+[$nav_procedure_url, $nav_procedure_upcoming_url] = tuleva_fund_document('nav_procedure_file');
 $nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
 $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
 ?>
@@ -159,32 +156,40 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
-                            <li>
-                                <a href="<?php echo esc_url($nav_procedure_url); ?>"
-                                   target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
-                                <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                                <?php if ($nav_procedure_upcoming_url): ?>
-                                    <br>
-                                    <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
+                            <?php if ($nav_procedure_url): ?>
+                                <li>
+                                    <a href="<?php echo esc_url($nav_procedure_url); ?>"
                                        target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
-                                    <?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
-                                <?php endif; ?>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(get_esg_document_url()); ?>"
-                                   target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
-                                <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(get_esg_factors_document_url()); ?>"
-                                   target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
-                                <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                            </li>
-                            <li>
-                                <a href="<?php echo esc_url(get_remuneration_document_url()); ?>"
-                                   target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
-                                <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
-                            </li>
+                                    <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                    <?php if ($nav_procedure_upcoming_url): ?>
+                                        <br>
+                                        <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
+                                           target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
+                                        <?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endif; ?>
+                            <?php if (get_esg_document_url()): ?>
+                                <li>
+                                    <a href="<?php echo esc_url(get_esg_document_url()); ?>"
+                                       target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
+                                    <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                </li>
+                            <?php endif; ?>
+                            <?php if (get_esg_factors_document_url()): ?>
+                                <li>
+                                    <a href="<?php echo esc_url(get_esg_factors_document_url()); ?>"
+                                       target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
+                                    <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                </li>
+                            <?php endif; ?>
+                            <?php if (get_remuneration_document_url()): ?>
+                                <li>
+                                    <a href="<?php echo esc_url(get_remuneration_document_url()); ?>"
+                                       target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
+                                    <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
+                                </li>
+                            <?php endif; ?>
                             <?php if ($investor_rights_url): ?>
                                 <li>
                                     <a href="<?php echo esc_url($investor_rights_url); ?>"

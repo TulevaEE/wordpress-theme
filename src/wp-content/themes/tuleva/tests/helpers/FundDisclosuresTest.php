@@ -537,7 +537,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$template = self::SAVINGS_TEMPLATE;
         FakeFundPage::$fields['fund_co2_intensity'] = '83.68';
 
-        $this->assertSame('', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
+        $this->assertSame('', tuleva_fund_disclosure_value('fund_co2_intensity'));
     }
 
     #[Test]
@@ -555,32 +555,28 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
-    public function a_document_outside_a_fund_scope_never_falls_back_to_another_fund_document(): void
+    public function a_document_outside_a_fund_scope_renders_nothing_even_when_its_field_holds_one(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
+        FakeFundPage::$fields['investor_rights_file'] = 'https://tuleva.ee/tkf100-investor-rights.pdf';
 
-        $this->assertSame(
-            '',
-            tuleva_fund_disclosure_value('investor_rights_file', 'https://tuleva.ee/tkf100-investor-rights.pdf')
-        );
+        $this->assertSame('', tuleva_fund_disclosure_value('investor_rights_file'));
     }
 
+    /**
+     * The field is the only source: an empty one renders nothing, so clearing it takes the
+     * document off the page.
+     */
     #[Test]
-    public function a_scoped_document_falls_back_only_while_its_field_is_empty(): void
+    public function a_scoped_document_renders_its_field_and_nothing_while_the_field_is_empty(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
 
-        $this->assertSame(
-            'https://tuleva.ee/old-prospectus.pdf',
-            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
-        );
+        $this->assertSame('', tuleva_fund_disclosure_value('prospectus_file'));
 
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/new-prospectus.pdf';
 
-        $this->assertSame(
-            'https://tuleva.ee/new-prospectus.pdf',
-            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/old-prospectus.pdf')
-        );
+        $this->assertSame('https://tuleva.ee/new-prospectus.pdf', tuleva_fund_disclosure_value('prospectus_file'));
     }
 
     /**
@@ -598,7 +594,7 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertSame(
             'https://tuleva.ee/Prospekt-alates-18.09.2026.pdf',
-            tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/fallback.pdf')
+            tuleva_fund_disclosure_value('prospectus_file')
         );
     }
 
@@ -621,16 +617,13 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
-    public function an_english_page_falls_back_where_its_estonian_original_has_no_value(): void
+    public function an_english_page_shows_nothing_where_its_estonian_original_has_no_value(): void
     {
         FakeFundPage::$template = self::SAVINGS_TEMPLATE;
         FakeFundPage::$english_fields['key_investor_info_file'] = 'https://tuleva.ee/Pohiteave-12.01.2026.pdf';
         FakeFundPage::$post_id = FakeFundPage::ENGLISH_PAGE;
 
-        $this->assertSame(
-            'https://tuleva.ee/Pohiteave-kehtib-alates-18.09.2026.pdf',
-            tuleva_fund_disclosure_value('key_investor_info_file', 'https://tuleva.ee/Pohiteave-kehtib-alates-18.09.2026.pdf')
-        );
+        $this->assertSame('', tuleva_fund_disclosure_value('key_investor_info_file'));
     }
 
     #[Test]
@@ -669,7 +662,23 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$template = 'page_front.php';
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/prospectus.pdf';
 
-        $this->assertSame('', tuleva_fund_disclosure_value('prospectus_file', 'https://tuleva.ee/fallback.pdf'));
+        $this->assertSame('', tuleva_fund_disclosure_value('prospectus_file'));
+    }
+
+    /**
+     * A field is the only source of a document, so no template or helper carries a URL to fall
+     * back on: one would bring a cleared document back.
+     */
+    #[Test]
+    public function no_fund_template_or_document_helper_carries_a_document_url(): void
+    {
+        $theme = __DIR__ . '/../..';
+        $files = [...glob("$theme/templates/components/fund-*-details.php"), "$theme/helpers/extras.php"];
+
+        $this->assertCount(5, $files);
+        foreach ($files as $file) {
+            $this->assertStringNotContainsString('/wp-content/uploads/', (string) file_get_contents($file), basename($file));
+        }
     }
 
     #[Test]
@@ -823,6 +832,7 @@ final class FundDisclosuresTest extends TestCase
     #[Test]
     public function an_upcoming_document_with_no_date_in_its_filename_claims_no_date(): void
     {
+        $this->setCurrentProspectusAndTerms();
         FakeFundPage::$fields['prospectus_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-uus.pdf';
 
@@ -835,6 +845,7 @@ final class FundDisclosuresTest extends TestCase
     #[Test]
     public function an_upcoming_document_states_the_date_its_filename_carries(): void
     {
+        $this->setCurrentProspectusAndTerms();
         FakeFundPage::$fields['prospectus_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/09/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
 
@@ -844,14 +855,14 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A shared "effective from" suffix can only speak for one date. Publishing the terms
-     * through the field while the prospectus is still on its pre-ACF URL is enough to put
-     * two dates in one list item, and the shared suffix would then state the stale
-     * document's date over the fresh one.
+     * A shared "effective from" suffix can only speak for one date. A prospectus and terms
+     * approved for different dates put two dates in one list item, and the shared suffix
+     * would then state one document's date over the other's.
      */
     #[Test]
     public function upcoming_documents_with_different_dates_each_state_their_own(): void
     {
+        $this->setCurrentProspectusAndTerms();
         FakeFundPage::$fields['prospectus_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
         FakeFundPage::$fields['terms_upcoming_file']
@@ -891,6 +902,7 @@ final class FundDisclosuresTest extends TestCase
     #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
     public function an_undated_upcoming_document_does_not_take_the_other_document_date(string $template): void
     {
+        $this->setCurrentProspectusAndTerms();
         FakeFundPage::$fields['prospectus_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/12/Prospekt-uus.pdf';
         FakeFundPage::$fields['terms_upcoming_file']
@@ -909,6 +921,7 @@ final class FundDisclosuresTest extends TestCase
     #[Test]
     public function upcoming_documents_that_take_effect_together_share_one_suffix(): void
     {
+        $this->setCurrentProspectusAndTerms();
         FakeFundPage::$fields['prospectus_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/12/TKF100-Prospekt-kehtib-alates-01.01.2027.pdf';
         FakeFundPage::$fields['terms_upcoming_file']
@@ -930,7 +943,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$template = 'page_fund-stocks.php';
         FakeFundPage::$fields['fund_co2_intensity'] = '0';
 
-        $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity', '83.68'));
+        $this->assertSame('0', tuleva_fund_disclosure_value('fund_co2_intensity'));
         $this->assertNotContains('fund_co2_intensity', tuleva_fund_disclosures_missing());
     }
 
@@ -1013,9 +1026,9 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A template fallback outlives its field: once the current field has moved on to a
-     * newer document, the fallback's date has passed as well, and promoting it would put
-     * the older document back on the page.
+     * An upcoming field left behind once the current field has moved on to a newer document:
+     * its date has passed as well, and promoting it would put the older document back on the
+     * page.
      */
     #[Test]
     public function an_upcoming_document_older_than_the_current_one_is_dropped(): void
@@ -1048,8 +1061,7 @@ final class FundDisclosuresTest extends TestCase
 
     /**
      * TUK75's and TUK00's new prospectus and terms take effect on 01.01.2027, a public
-     * holiday. They switch from the upcoming fields, which an Administrator fills before this
-     * deploys, while the current documents still render from the template.
+     * holiday. They switch from the upcoming fields over the current ones.
      */
     #[Test]
     #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
@@ -1059,6 +1071,8 @@ final class FundDisclosuresTest extends TestCase
         string $upcoming_terms
     ): void {
         FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf',
+            'terms_file' => "https://tuleva.ee/wp-content/uploads/2026/10/$terms",
             'prospectus_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf',
             'terms_upcoming_file' => "https://tuleva.ee/wp-content/uploads/2026/08/$upcoming_terms",
         ];
@@ -1078,8 +1092,8 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A document is scheduled only by its upcoming field; the template has no upcoming URL to
-     * fall back to, so with the field empty the page keeps the document in force.
+     * A document is scheduled only by its upcoming field, so with the field empty the page keeps
+     * the document in force.
      */
     #[Test]
     #[PHPUnit\Framework\Attributes\DataProvider('pensionFundsSwitchingOn01012027')]
@@ -1088,6 +1102,10 @@ final class FundDisclosuresTest extends TestCase
         string $terms,
         string $upcoming_terms
     ): void {
+        FakeFundPage::$fields = [
+            'prospectus_file' => 'https://tuleva.ee/wp-content/uploads/2026/03/TUK75-ja-TUK00-Prospekt-kehtib-alates-02.03.2026.pdf',
+            'terms_file' => "https://tuleva.ee/wp-content/uploads/2026/10/$terms",
+        ];
         $before = $this->renderFundPage($template);
         FakeFundPage::$today = '2027-01-02';
         $after = $this->renderFundPage($template);
@@ -1110,7 +1128,6 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderSavingsPage();
 
         $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.03.2027.pdf', $html);
-        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
         $this->assertStringNotContainsString('effective from', $html);
     }
 
@@ -1170,9 +1187,8 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A filled field beats a template URL whatever the dates, so the job need not see the template
-     * URL a page with an empty current field shows: a due upcoming field is the current document
-     * there too. These terms are older than TUK75's template URL (31.08.2026) and still move.
+     * A page with an empty current field shows a due upcoming field as the current document, so the
+     * job moves it there too.
      */
     #[Test]
     public function the_hourly_job_moves_a_due_upcoming_field_into_an_empty_current_field(): void
@@ -1216,11 +1232,12 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * Every template's current URL gives way to a due upcoming field, even one dated before it.
+     * Every fund page shows a due upcoming document as the current one while its current field is
+     * empty, as the hourly job is about to make it.
      */
     #[Test]
     #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
-    public function a_due_upcoming_field_replaces_the_template_s_current_url_whatever_its_date(string $template): void
+    public function a_due_upcoming_field_is_the_current_document_while_the_current_field_is_empty(string $template): void
     {
         FakeFundPage::$fields['terms_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/06/tingimused-kehtivad-alates-01.07.2026.pdf';
@@ -1228,13 +1245,11 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderFundPage($template);
 
         $this->assertStringContainsString('2026/06/tingimused-kehtivad-alates-01.07.2026.pdf', $html);
-        $this->assertStringNotContainsString('tingimused-kehtivad-alates-31.08.2026.pdf', $html);
-        $this->assertStringNotContainsString('ingimused-kehtivad-alates-18.09.2026.pdf', $html);
         $this->assertStringNotContainsString('effective from 01.07.2026', $html);
     }
 
     #[Test]
-    public function the_savings_page_s_upcoming_nav_procedure_field_replaces_its_template_url_whatever_its_date(): void
+    public function the_savings_page_s_due_upcoming_nav_procedure_is_current_while_its_current_field_is_empty(): void
     {
         FakeFundPage::$fields['nav_procedure_upcoming_file']
             = 'https://tuleva.ee/wp-content/uploads/2026/08/TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
@@ -1242,7 +1257,6 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderSavingsPage();
 
         $this->assertStringContainsString('TKF100-NAV-sisekord-kehtib-alates-01.09.2026.pdf', $html);
-        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
         $this->assertStringNotContainsString('effective from', $html);
     }
 
@@ -1414,6 +1428,7 @@ final class FundDisclosuresTest extends TestCase
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
         FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
             'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-uus.pdf',
         ];
 
@@ -1424,18 +1439,17 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * Until an Administrator creates the page and its fields are set, a fund page links what
-     * it links today.
+     * With no field set there is nothing to link, so a fund page lists no document rather than a
+     * link that goes nowhere: the shared documents too, with no shared page to read them from.
      */
     #[Test]
     #[PHPUnit\Framework\Attributes\DataProvider('fundTemplates')]
-    public function a_fund_page_links_today_s_shared_documents_while_there_is_no_shared_page(string $template): void
+    public function a_fund_page_with_no_field_set_lists_no_document_and_no_empty_link(string $template): void
     {
         $html = $this->renderFundPage($template);
 
-        $this->assertStringContainsString('2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
-        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html);
-        $this->assertStringContainsString('Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf', $html);
+        $this->assertStringNotContainsString('href=""', $html);
+        $this->assertDoesNotMatchRegularExpression('/>Documents<\/h2>\s*<ul[^>]*>\s*<li>/', $html);
     }
 
     #[Test]
@@ -1452,8 +1466,8 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertStringContainsString('Jatkusuutlikkusriskid-kehtib-alates-01.02.2027.pdf', $html);
         $this->assertStringContainsString('Tasustamise-pohimotted-01.02.2027.pdf', $html);
-        $this->assertStringNotContainsString('Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf', $html);
-        $this->assertStringContainsString('negatiivse-moju-mittearvestamine_16.06.2026-1.pdf', $html, 'an empty field keeps today\'s URL');
+        $this->assertStringNotContainsString('Non-consideration of adverse impacts', $html, 'an empty field shows no row');
+        $this->assertStringNotContainsString('href=""', $html);
     }
 
     /**
@@ -1465,6 +1479,7 @@ final class FundDisclosuresTest extends TestCase
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
         FakeFundPage::$page_fields[self::SHARED_PAGE] = [
+            'nav_procedure_file' => 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf',
             'nav_procedure_upcoming_file' => 'https://tuleva.ee/wp-content/uploads/2027/02/Pensionifondide-NAV-sisekord-kehtib-alates-01.03.2027.pdf',
         ];
 
@@ -1498,12 +1513,11 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * A filled field beats the URL in the theme whatever the dates, on the shared page as on a fund
-     * page: with its current field empty, an upcoming NAV procedure dated before today's URL still
-     * takes over on its date, and the job moves it into the current field.
+     * On the shared page as on a fund page, a due upcoming NAV procedure is the current one while
+     * the current field is empty, and the job moves it into the current field.
      */
     #[Test]
-    public function an_upcoming_nav_procedure_field_replaces_today_s_url_whatever_its_date_and_is_promoted(): void
+    public function a_due_upcoming_nav_procedure_shows_while_the_current_field_is_empty_and_is_promoted(): void
     {
         FakeFundPage::$pages[TULEVA_SHARED_DOCUMENTS_TEMPLATE] = [self::SHARED_PAGE];
         $upcoming = 'https://tuleva.ee/wp-content/uploads/2026/08/Pensionifondide-NAV-sisekord-kehtib-alates-01.09.2026.pdf';
@@ -1514,7 +1528,6 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderFundPage('page_fund-stocks.php');
 
         $this->assertStringContainsString('kehtib-alates-01.09.2026.pdf', $html);
-        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
         $this->assertStringNotContainsString('effective from 01.09.2026', $html);
         $this->assertSame([['post' => self::SHARED_PAGE, 'field' => 'nav_procedure_file']], tuleva_promote_due_documents('2026-11-02'));
         $this->assertSame(
@@ -1525,8 +1538,8 @@ final class FundDisclosuresTest extends TestCase
 
     /**
      * The procedure in force used to live only in the upcoming field once its date passed, so the
-     * next upcoming upload replaced it and the pension pages went back to the superseded URL in the
-     * theme. The job now moves it into the current field first.
+     * next upcoming upload replaced it and took it off the pension pages. The job now moves it into
+     * the current field first.
      */
     #[Test]
     public function the_next_upcoming_nav_procedure_does_not_take_the_one_in_force_off_the_pension_pages(): void
@@ -1556,7 +1569,6 @@ final class FundDisclosuresTest extends TestCase
             '/NAV-sisekord-kehtib-alates-01\.03\.2027\.pdf.*?<br>.*?NAV-sisekord-kehtib-alates-01\.09\.2027\.pdf.*?effective from 01\.09\.2027/s',
             $html
         );
-        $this->assertStringNotContainsString('sisekord-kehtib-alates-18.09.2026.pdf', $html);
     }
 
     #[Test]
@@ -1566,7 +1578,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$statuses[self::SHARED_PAGE] = 'private';
         FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/policy.pdf'];
 
-        $this->assertSame('https://tuleva.ee/policy.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
+        $this->assertSame('https://tuleva.ee/policy.pdf', tuleva_shared_document_url('remuneration_policy_file'));
     }
 
     #[Test]
@@ -1576,7 +1588,7 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$statuses[self::SHARED_PAGE] = 'draft';
         FakeFundPage::$page_fields[self::SHARED_PAGE] = ['remuneration_policy_file' => 'https://tuleva.ee/draft.pdf'];
 
-        $this->assertSame('https://tuleva.ee/today.pdf', tuleva_shared_document_url('remuneration_policy_file', 'https://tuleva.ee/today.pdf'));
+        $this->assertSame('', tuleva_shared_document_url('remuneration_policy_file'));
     }
 
     #[Test]
@@ -1847,22 +1859,21 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The fields switch by date and the template's URL fills in where they leave no current
-     * document: a due upcoming field takes over from it whatever its date, and between two fields
-     * an upcoming one dated on or before the current one is a leftover.
+     * The two fields switch by date: a due upcoming field becomes the current document, an empty
+     * current field included, unless it is dated on or before the current one, which makes it a
+     * leftover.
      */
     #[Test]
-    public function the_fields_go_over_the_template_s_url(): void
+    public function the_fields_switch_by_date_with_or_without_a_current_document(): void
     {
-        $template = 'https://tuleva.ee/t/Prospekt-kehtib-alates-31.08.2026.pdf';
         $older = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.07.2026.pdf';
         $next = 'https://tuleva.ee/f/Prospekt-kehtib-alates-01.01.2027.pdf';
         $undated = 'https://tuleva.ee/f/Prospekt-uus.pdf';
         $page = fn(string $current, string $upcoming, string $today)
-            => tuleva_document_versions_on_page($current, $upcoming, $template, $today);
+            => tuleva_document_versions($current, $upcoming, $today);
 
-        $this->assertSame([$template, ''], $page('', '', '2027-01-01'));
-        $this->assertSame([$template, $next], $page('', $next, '2026-12-31'));
+        $this->assertSame(['', ''], $page('', '', '2027-01-01'));
+        $this->assertSame(['', $next], $page('', $next, '2026-12-31'));
         $this->assertSame([$next, ''], $page('', $next, '2027-01-01'));
         $this->assertSame([$older, ''], $page('', $older, '2026-11-02'));
 
@@ -1880,20 +1891,27 @@ final class FundDisclosuresTest extends TestCase
     public function a_document_with_no_upcoming_version_resolves_on_its_own(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
+        FakeFundPage::$fields = [
+            'key_investor_info_file' => 'https://tuleva.ee/kid.pdf',
+            'investor_rights_file' => 'https://tuleva.ee/rights.pdf',
+            'nav_procedure_file' => 'https://tuleva.ee/nav.pdf',
+        ];
 
-        $this->assertSame(
-            ['https://tuleva.ee/kid.pdf', ''],
-            tuleva_fund_document('key_investor_info_file', 'https://tuleva.ee/kid.pdf')
-        );
-        $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file', 'https://tuleva.ee/rights.pdf'));
-        $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file', 'https://tuleva.ee/nav.pdf'));
+        $this->assertSame(['https://tuleva.ee/kid.pdf', ''], tuleva_fund_document('key_investor_info_file'));
+        $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file'));
+        $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file'));
     }
 
     /**
-     * TKF100 is the one page whose documents all come from fields, with no code URL left
-     * to stand in, so it is the only one where a template can be rendered with a
-     * disclosure genuinely absent.
+     * An upcoming prospectus or terms is listed in the row of the documents in force, which every
+     * fund page has.
      */
+    private function setCurrentProspectusAndTerms(): void
+    {
+        FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.2026.pdf';
+        FakeFundPage::$fields['terms_file'] = 'https://tuleva.ee/wp-content/uploads/2026/08/tingimused-kehtivad-alates-31.08.2026.pdf';
+    }
+
     private function renderSavingsPage(): string
     {
         return $this->renderFundPage(self::SAVINGS_TEMPLATE);
