@@ -171,17 +171,17 @@ $investor_rights_url = tuleva_fund_disclosure_value('investor_rights_file');
                                 <?php endif; ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_esg_document_url(); ?>"
+                                <a href="<?php echo esc_url(get_esg_document_url()); ?>"
                                    target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_esg_factors_document_url(); ?>"
+                                <a href="<?php echo esc_url(get_esg_factors_document_url()); ?>"
                                    target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                             <li>
-                                <a href="<?php echo get_remuneration_document_url(); ?>"
+                                <a href="<?php echo esc_url(get_remuneration_document_url()); ?>"
                                    target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
                                 <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>

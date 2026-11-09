@@ -16,6 +16,10 @@
  * that page's REST response, and renders nothing — which is a different thing from a
  * disclosure that applies but has not been supplied yet.
  *
+ * The documents that are the same for every fund (sustainability, adverse impacts,
+ * remuneration, the pension funds' NAV procedure) are fields too, on one page of their own,
+ * so one update reaches all four fund pages: tuleva_shared_document_url().
+ *
  * See "TODO — Fund page document publishing" in the tuleva repo,
  * work/investeerimistegevus/docs/.
  */
@@ -35,6 +39,18 @@ const TULEVA_DISCLOSURE_OPTIONAL = 'optional';
  * WPML's "copy" custom field preference: a translation takes the original's value.
  */
 const TULEVA_WPML_COPY_FROM_ORIGINAL = 1;
+
+/**
+ * The template of the one page that holds the documents every fund links. The page is private
+ * and never shown (page_fund-shared-documents.php): the documents show on the fund pages.
+ */
+const TULEVA_SHARED_DOCUMENTS_TEMPLATE = 'page_fund-shared-documents.php';
+
+/**
+ * A page whose disclosures are read is published or private (the shared documents page); a
+ * draft, a page pending review or one in the trash is not.
+ */
+const TULEVA_DISCLOSURE_PAGE_STATUSES = ['publish', 'private'];
 
 /**
  * Every disclosure a fund page can carry, defined once.
@@ -84,7 +100,7 @@ function tuleva_fund_disclosure_catalogue(): array
         'nav_procedure_file' => [
             'label' => 'NAV Procedure',
             'type' => 'file',
-            'instructions' => 'This fund\'s own procedure for determining net asset value. The pension funds share one document, a URL in helpers/extras.php, and have no field here.',
+            'instructions' => 'On a fund page, that fund\'s own procedure for determining net asset value. On the shared documents page, the one the three pension funds share.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_nav_procedure'],
         ],
         'nav_procedure_upcoming_file' => [
@@ -118,11 +134,27 @@ function tuleva_fund_disclosure_catalogue(): array
             'instructions' => 'Weighted average carbon intensity, number only (e.g. "83.68"). Quarterly.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_co2_intensity'],
         ],
+        'sustainability_risks_file' => [
+            'label' => 'Sustainability Risk Policy',
+            'type' => 'file',
+            'instructions' => 'Jätkusuutlikkusriskide arvesse võtmise põhimõtted, linked from every fund page.',
+        ],
+        'adverse_impacts_file' => [
+            'label' => 'Non-consideration of Adverse Impacts',
+            'type' => 'file',
+            'instructions' => 'Kestlikkusteguritele avaldatava negatiivse mõju mittearvestamine, linked from every fund page.',
+        ],
+        'remuneration_policy_file' => [
+            'label' => 'Remuneration Policy',
+            'type' => 'file',
+            'instructions' => 'Tuleva Fondid AS tasustamise põhimõtted, linked from every fund page.',
+        ],
     ];
 }
 
 /**
- * Which documents each fund page carries.
+ * Which documents each fund page carries, and the shared documents page (not a fund: code
+ * that wants only the funds leaves out TULEVA_SHARED_DOCUMENTS_TEMPLATE).
  *
  * Absent from a list means the document does not exist for that fund. Location rules
  * are per page template and every fund has its own, so turning a document off for one
@@ -163,6 +195,15 @@ function tuleva_fund_disclosure_scope(): array
             // fund_co2_intensity is deliberately absent: no CO2 intensity is calculated
             // for TKF100. The savings template renders the block the moment this line
             // exists, so starting to publish one is an edit here and nothing else.
+        ],
+        // Not a fund: the documents every fund page links, on one page so one update
+        // reaches all four. nav_procedure_* here is the pension funds' shared procedure.
+        TULEVA_SHARED_DOCUMENTS_TEMPLATE => [
+            'nav_procedure_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'nav_procedure_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
+            'sustainability_risks_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'adverse_impacts_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'remuneration_policy_file' => TULEVA_DISCLOSURE_REQUIRED,
         ],
     ];
 }
@@ -395,9 +436,9 @@ function tuleva_fund_document(string $name, string $current_fallback = '', ?stri
 
 /**
  * The pages on a template whose disclosures are read: the Estonian originals, themselves
- * published and on that template (a translation can be published while its original is not, or
- * sit on another template). An English page with no Estonian original is left out: the fields
- * are written on the Estonian pages only, so WPML is asked without falling back to the page
+ * published or private and on that template (a translation can be published while its original
+ * is not, or sit on another template). An English page with no Estonian original is left out: the
+ * fields are written on the Estonian pages only, so WPML is asked without falling back to the page
  * itself, as tuleva_disclosure_source_post() does for rendering.
  *
  * @return list<int>
@@ -406,7 +447,7 @@ function tuleva_fund_pages_on(string $template): array
 {
     $pages = get_posts([
         'post_type' => 'page',
-        'post_status' => 'publish',
+        'post_status' => TULEVA_DISCLOSURE_PAGE_STATUSES,
         'meta_key' => '_wp_page_template',
         'meta_value' => $template,
         'fields' => 'ids',
@@ -421,9 +462,210 @@ function tuleva_fund_pages_on(string $template): array
 
     return array_values(array_filter(
         $originals,
-        fn($page) => get_post_status($page) === 'publish' && get_page_template_slug($page) === $template
+        fn($page) => in_array(get_post_status($page), TULEVA_DISCLOSURE_PAGE_STATUSES, true)
+            && get_page_template_slug($page) === $template
     ));
 }
+
+/**
+ * The URL of a document every fund links, from the shared documents page, or $fallback while
+ * its field is empty or no page is on that template yet.
+ */
+function tuleva_shared_document_url(string $name, string $fallback = ''): string
+{
+    $page = tuleva_shared_documents_page();
+    $value = $page === null ? '' : tuleva_disclosure_stored_value($name, $page);
+
+    return $value !== '' ? $value : $fallback;
+}
+
+/**
+ * The page on the shared documents template, looked up once a request: a fund page asks for
+ * five documents. One page is meant to be on it; if there are more, the oldest is read.
+ */
+function tuleva_shared_documents_page(): ?int
+{
+    $found = &tuleva_shared_documents_page_found();
+
+    if (!array_key_exists('page', $found)) {
+        $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
+        $found['page'] = $pages === [] ? null : min($pages);
+    }
+
+    return $found['page'];
+}
+
+/**
+ * @return array{page?: ?int} what tuleva_shared_documents_page() found, for the rest of the request
+ */
+function &tuleva_shared_documents_page_found(): array
+{
+    static $found = [];
+
+    return $found;
+}
+
+/**
+ * The status a page on the shared documents template is saved with: private, whatever it is given.
+ * The page is never shown, and a draft, what a page created over REST is unless it says otherwise,
+ * would not be read. The trash and an auto-draft keep theirs, and so does every other page.
+ */
+function tuleva_shared_documents_page_status(string $template, string $status): string
+{
+    return $template === TULEVA_SHARED_DOCUMENTS_TEMPLATE && in_array($status, ['draft', 'pending', 'future', 'publish'], true)
+        ? 'private'
+        : $status;
+}
+
+/**
+ * wp_insert_post_data: a save from wp-admin or code carries the template, or the page has one. A
+ * REST save, the block editor's included, carries the page as stored, so the template its request
+ * sets comes first (tuleva_rest_page_templates()).
+ */
+function tuleva_shared_documents_page_status_on_save(array $data, array $postarr): array
+{
+    if (($data['post_type'] ?? '') !== 'page') {
+        return $data;
+    }
+
+    $page = (int) ($postarr['ID'] ?? 0);
+    $template = tuleva_rest_page_templates()[$page]
+        ?? (is_string($postarr['page_template'] ?? null) && $postarr['page_template'] !== ''
+            ? $postarr['page_template']
+            : ($page ? (string) get_page_template_slug($page) : ''));
+    $data['post_status'] = tuleva_shared_documents_page_status($template, (string) ($data['post_status'] ?? ''));
+
+    return $data;
+}
+
+/**
+ * rest_pre_insert_page: over REST WordPress sets the template only after the page is saved, so the
+ * request says which it will be.
+ *
+ * @param object $post the page as the request prepares it
+ * @param WP_REST_Request|array $request
+ */
+function tuleva_shared_documents_page_status_over_rest(object $post, $request): object
+{
+    $page = (int) ($post->ID ?? 0);
+
+    if (isset($request['template']) && $page) {
+        $templates = &tuleva_rest_page_templates();
+        $templates[$page] = (string) $request['template'];
+    }
+
+    $template = isset($request['template'])
+        ? (string) $request['template']
+        : ($page ? (string) get_page_template_slug($page) : '');
+    $status = $post->post_status ?? ($page ? (string) get_post_status($page) : 'draft');
+    $saved = tuleva_shared_documents_page_status($template, $status);
+
+    if ($saved !== $status) {
+        $post->post_status = $saved;
+    }
+
+    return $post;
+}
+
+/**
+ * @return array<int, string> the template a REST request sets on each page it saves, for the rest of
+ *   the request: WordPress stores it only after the page, so until then the page reads as still on
+ *   the one it is leaving
+ */
+function &tuleva_rest_page_templates(): array
+{
+    static $templates = [];
+
+    return $templates;
+}
+
+add_filter('wp_insert_post_data', 'tuleva_shared_documents_page_status_on_save', 10, 2);
+add_filter('rest_pre_insert_page', 'tuleva_shared_documents_page_status_over_rest', 10, 2);
+
+/**
+ * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
+ * Of several pages on the template only the oldest is read, so an edit to another one changes
+ * nothing on the fund pages and nothing on them says so. No page yet is not a problem: the URLs in
+ * the theme are meant.
+ */
+function tuleva_shared_documents_page_problem(): string
+{
+    // The pages the fund pages could read, as they choose among them; pages on the template are
+    // saved as private, so no other status is left to count.
+    $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
+
+    if (count($pages) < 2) {
+        return '';
+    }
+
+    return sprintf(
+        '%d pages are on the Fund shared documents template (%s). The fund pages read only page %d; the others change nothing on them. Keep one page on the template.',
+        count($pages),
+        implode(', ', $pages),
+        tuleva_shared_documents_page()
+    );
+}
+
+/**
+ * The problem, on the edit screen of a page that reads the shared documents page (a fund page)
+ * or of that page itself; '' on every other screen.
+ */
+function tuleva_shared_documents_page_notice(): string
+{
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+    if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'page') {
+        return '';
+    }
+
+    $page = get_the_ID();
+
+    return $page && array_key_exists((string) get_page_template_slug($page), tuleva_fund_disclosure_scope())
+        ? tuleva_shared_documents_page_problem()
+        : '';
+}
+
+/**
+ * admin_notices, for the classic editor. The block editor hides admin notices and gets its own
+ * (tuleva_shared_documents_page_block_editor_notice()), so it is left out here and each screen
+ * looks the pages up once.
+ */
+function tuleva_shared_documents_page_admin_notice(): void
+{
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+    if ($screen && method_exists($screen, 'is_block_editor') && $screen->is_block_editor()) {
+        return;
+    }
+
+    $notice = tuleva_shared_documents_page_notice();
+
+    if ($notice !== '') {
+        echo '<div class="notice notice-warning is-dismissible"><p>' . esc_html($notice) . '</p></div>';
+    }
+}
+
+/**
+ * enqueue_block_editor_assets. Dismissible, since a save in the block editor does not reload the
+ * screen that still shows it.
+ */
+function tuleva_shared_documents_page_block_editor_notice(): void
+{
+    $notice = tuleva_shared_documents_page_notice();
+
+    if ($notice !== '') {
+        wp_add_inline_script(
+            'wp-notices',
+            sprintf(
+                'wp.data.dispatch("core/notices").createNotice("warning", %s, {id: "tuleva-shared-documents-page", isDismissible: true});',
+                wp_json_encode($notice)
+            )
+        );
+    }
+}
+
+add_action('admin_notices', 'tuleva_shared_documents_page_admin_notice');
+add_action('enqueue_block_editor_assets', 'tuleva_shared_documents_page_block_editor_notice');
 
 /**
  * Writes each switch tuleva_document_versions() makes on a page into its fields: the current
