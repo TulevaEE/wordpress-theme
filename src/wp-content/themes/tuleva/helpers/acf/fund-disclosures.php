@@ -566,7 +566,7 @@ function tuleva_shared_documents_page_problem(): string
     $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
 
     if ($pages === []) {
-        return 'No page is on the Fund shared documents template, so the fund pages show no sustainability, adverse impacts, remuneration policy or pension funds\' NAV procedure document. Restore the page from the trash, or set its template back to Fund shared documents.';
+        return 'No page is on the Fund shared documents template, so the fund pages show no sustainability, adverse impacts, remuneration policy or pension funds\' NAV procedure document. Keep one page in Estonian on that template, saved as Private: create it, restore it from the trash, or set its template back.';
     }
 
     if (count($pages) < 2) {

@@ -190,8 +190,8 @@ and a copied TKF100 NAV procedure would show on the pension pages. The theme sav
 template as **Private** whatever status it is given (a draft would not be read), and the template
 answers 404 to everyone. The theme finds the page by its template; one page is meant to be on it.
 While no page is on it, or one of its fields is empty, that document has no row on the fund
-pages. If there is more than one page on the template, the edit screens of the fund pages and of
-the shared page say so. To point a field at a PDF already in the media library, pick that
+pages. If there is no page on the template, the edit screens of the fund pages say so; if there
+is more than one, they and the shared page's do. To point a field at a PDF already in the media library, pick that
 attachment; uploading the same PDF again gives it a `-1` name and a new link.
 
 ---

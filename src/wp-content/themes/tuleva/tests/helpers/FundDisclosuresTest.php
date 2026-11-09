@@ -679,14 +679,15 @@ final class FundDisclosuresTest extends TestCase
             ...glob("$theme/page_fund-*.php"),
             "$theme/helpers/extras.php",
         ];
-        $call = '(tuleva_fund_disclosure_value|tuleva_fund_document|tuleva_shared_document_url)\(';
+        $read = '(tuleva_fund_disclosure_value|tuleva_fund_document|tuleva_shared_document_url)\(\s*[\'"][a-z0-9_]+[\'"]';
+        $helper = '(get_esg_document_url|get_esg_factors_document_url|get_remuneration_document_url|get_nav_procedure_documents)\(';
 
         $this->assertCount(10, $files);
         foreach ($files as $file) {
             $code = (string) file_get_contents($file);
             $this->assertStringNotContainsString('/wp-content/uploads/', $code, basename($file));
-            $this->assertDoesNotMatchRegularExpression("/$call'[a-z0-9_]+'\s*,/", $code, basename($file));
-            $this->assertDoesNotMatchRegularExpression("/$call'[a-z0-9_]+'\)\s*\?:/", $code, basename($file));
+            $this->assertDoesNotMatchRegularExpression("/$read\s*,/", $code, basename($file));
+            $this->assertDoesNotMatchRegularExpression("/($read|$helper)\s*\)\s*(\?:|\?\?)/", $code, basename($file));
         }
     }
 
@@ -1727,12 +1728,9 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$post_id = 17533;
         FakeFundPage::$screen = (object) ['base' => 'post', 'post_type' => 'page'];
 
-        $this->assertStringContainsString('Restore the page from the trash', tuleva_shared_documents_page_notice());
+        $this->assertStringContainsString('restore it from the trash', tuleva_shared_documents_page_notice());
     }
 
-    /**
-     * A translation reads its Estonian original, so it is not a second page.
-     */
     /**
      * The pages counted are the ones the fund pages could read: a translation on the template
      * whose Estonian original is on another one is neither.
