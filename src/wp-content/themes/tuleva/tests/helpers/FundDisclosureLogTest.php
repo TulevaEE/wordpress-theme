@@ -172,6 +172,16 @@ if (!function_exists('update_post_meta')) {
     }
 }
 
+/**
+ * As WordPress's: backslashes come off strings, deep in arrays too.
+ */
+if (!function_exists('wp_unslash')) {
+    function wp_unslash($value)
+    {
+        return is_array($value) ? array_map('wp_unslash', $value) : (is_string($value) ? stripslashes($value) : $value);
+    }
+}
+
 if (!function_exists('wp_is_post_revision')) {
     function wp_is_post_revision($post)
     {
@@ -657,6 +667,40 @@ final class FundDisclosureLogTest extends TestCase
         $this->assertSame('decided', tuleva_disclosure_pre_delete('decided', self::PAGE, 'prospectus_file', false));
     }
 
+    /**
+     * wp-admin posts a value slashed, and ACF hands it on so to its metadata filter; WordPress
+     * unslashes it before it stores it and before its meta hooks. An apostrophe in a URL must
+     * not part the note from the write it is for.
+     */
+    #[Test]
+    public function a_value_wp_admin_posts_slashed_is_logged_once_as_stored(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$login = 'an-administrator';
+        FakeDisclosureWrite::$in_admin = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['previous_reports_url'] = ['https://tuleva.ee/aruanded/'];
+
+        $this->acfWrites("https://tuleva.ee/aruanded/?fond=tuk75\\'s", 'previous_reports_url');
+
+        $stored = "https://tuleva.ee/aruanded/?fond=tuk75's";
+        $this->assertSame($stored, get_post_meta(self::PAGE, 'previous_reports_url', true));
+        $this->assertSame(['https://tuleva.ee/aruanded/', $stored], $this->onlyEntry(['before', 'after']));
+    }
+
+    /**
+     * Posting back the value already stored, slashed, is no change.
+     */
+    #[Test]
+    public function a_stored_value_posted_back_slashed_is_no_change(): void
+    {
+        FakeDisclosureWrite::$administrator = true;
+        FakeDisclosureWrite::$meta[self::PAGE]['previous_reports_url'] = ["https://tuleva.ee/aruanded/?fond=tuk75's"];
+
+        tuleva_disclosure_note_write(null, self::PAGE, 'previous_reports_url', "https://tuleva.ee/aruanded/?fond=tuk75\\'s", false);
+
+        $this->assertSame([], tuleva_disclosure_writes_pending());
+    }
+
     #[Test]
     public function a_document_acf_deletes_is_logged_when_its_row_goes(): void
     {
@@ -1086,7 +1130,9 @@ final class FundDisclosureLogTest extends TestCase
      * for the value and for its reference row each, ACF's pre-metadata filter and the meta
      * write (null deletes both), with the hook WordPress fires once the value's write lands.
      * The filters get the id as given; ACF decodes it ('post_17533' is 17533) for the meta
-     * write, and update_metadata writes to the id it is given, a revision too.
+     * write, and update_metadata writes to the id it is given, a revision too. ACF hands the
+     * value on as it got it, slashed from wp-admin; WordPress unslashes it before it stores
+     * it and before its hooks.
      */
     private function acfWrites($value, string $name, int|string $post_id = self::PAGE)
     {
@@ -1104,8 +1150,8 @@ final class FundDisclosureLogTest extends TestCase
             $this->acfDeletes($name, $acf_post_id);
         } else {
             tuleva_disclosure_note_write(null, $acf_post_id, $name, $value, false);
-            FakeDisclosureWrite::$meta[$post_id][$name] = [$value];
-            tuleva_disclosure_on_meta_write(7, $post_id, $name, $value);
+            FakeDisclosureWrite::$meta[$post_id][$name] = [wp_unslash($value)];
+            tuleva_disclosure_on_meta_write(7, $post_id, $name, wp_unslash($value));
             tuleva_disclosure_note_write(null, $acf_post_id, $name, $field['key'], true);
         }
 

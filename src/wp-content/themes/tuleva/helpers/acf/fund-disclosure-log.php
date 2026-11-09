@@ -301,7 +301,10 @@ add_filter('acf/update_value', 'tuleva_disclosure_on_update', 99, 3);
  * Last, so a filter that short-circuits the write is seen. These filters get the id as given,
  * before ACF decodes it; the note is kept under the decoded one, which the meta hooks get. A
  * revision or an autosave (a preview) is not noted, since its log entry would land on the
- * page; the lock still applies to it.
+ * page; the lock still applies to it. ACF hands the value on as it got it, slashed from
+ * wp-admin's form, and WordPress unslashes it before it stores it and before its meta hooks;
+ * the note holds it unslashed, as stored. The restore's note comes from WordPress's own
+ * actions, after the unslashing, and a deletion's value is ''.
  */
 function tuleva_disclosure_note_write($pre, $post_id, $name, $value = '', $hidden = false)
 {
@@ -319,11 +322,12 @@ function tuleva_disclosure_note_write($pre, $post_id, $name, $value = '', $hidde
     }
 
     $before = get_post_meta($post_id, $name, true);
+    $after = tuleva_disclosure_scalar(wp_unslash($value));
 
-    if (tuleva_disclosure_scalar($before) !== tuleva_disclosure_scalar($value)) {
+    if (tuleva_disclosure_scalar($before) !== $after) {
         $pending[$post_id][$name] = [
             'before' => $before,
-            'after' => tuleva_disclosure_scalar($value),
+            'after' => $after,
             'route' => tuleva_disclosure_write_route(),
         ];
     }
