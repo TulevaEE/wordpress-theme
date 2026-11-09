@@ -437,7 +437,9 @@ function tuleva_fund_document(string $name, string $current_fallback = '', ?stri
 /**
  * The pages on a template whose disclosures are read: the Estonian originals, themselves
  * published or private and on that template (a translation can be published while its original
- * is not, or sit on another template).
+ * is not, or sit on another template). An English page with no Estonian original is left out: the
+ * fields are written on the Estonian pages only, so WPML is asked without falling back to the page
+ * itself, as tuleva_disclosure_source_post() does for rendering.
  *
  * @return list<int>
  */
@@ -453,10 +455,10 @@ function tuleva_fund_pages_on(string $template): array
         'suppress_filters' => true,
     ]);
 
-    $originals = array_unique(array_map(
-        fn($page) => (int) tuleva_disclosure_source_post((int) $page),
+    $originals = array_unique(array_filter(array_map(
+        fn($page) => (int) apply_filters('wpml_object_id', (int) $page, 'page', false, 'et'),
         $pages
-    ));
+    )));
 
     return array_values(array_filter(
         $originals,

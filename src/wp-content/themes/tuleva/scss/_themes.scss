@@ -166,18 +166,6 @@
     background-color: $body-color-alt !important;
 }
 
-.bg-notice {
-    background-color: $note-bg !important;
-    color: $warning-text-emphasis;
-    a {
-        color: $warning-text-emphasis;
-    }
-    .badge-notice {
-        background-color: $warning-text-emphasis;
-        color: $white;
-    }
-}
-
 // Backgrounds
 
 .bg-gray-1 { background-color: $gray-bg-1; }

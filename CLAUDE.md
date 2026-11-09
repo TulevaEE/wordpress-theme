@@ -100,13 +100,16 @@ empties its field. The job empties an upcoming field only after the current fiel
 the promoted document, and only while it still holds the document the job read (one saved there
 meanwhile stays).
 
-**Before this deploys**, an Administrator fills these upcoming fields on the Estonian pages with
-the attachments the URLs already point at (pick them in the media library; uploading again gives
-a `-1` name and a new link). They were the templates' upcoming URLs, after `get_site_url()`, and
-the templates no longer carry them, so without the fields the 01.01.2027 documents never show.
+**Before this deploys**, these upcoming fields on the Estonian pages are filled, through
+agent-gateway's `fund_pages` or by an Administrator in wp-admin, with the attachments the URLs
+already point at (pick them in the media library; uploading again gives a `-1` name and a new
+link). They were the templates' upcoming URLs, after `get_site_url()`, and
+the templates no longer carry them, so without the fields the 01.01.2027 and 06.12.2026 documents
+never show.
 On master a filled upcoming field already wins over the URL (`helpers/acf/fund-disclosures.php:252`,
-called from `fund-stocks-details.php:21-22` and `fund-bonds-details.php:21-22`), so filling them
-early changes nothing visible. TUV100 and TKF100 had no upcoming URL.
+called from `fund-stocks-details.php:21-22`, `fund-bonds-details.php:21-22` and
+`fund-third-details.php:21-22`), so filling them early changes nothing visible. TKF100 had no
+upcoming URL; TUV100's came with #151.
 
 | Page | Field | Document |
 |---|---|---|
@@ -114,6 +117,8 @@ early changes nothing visible. TUV100 and TKF100 had no upcoming URL.
 | TUK75, 17533 `tuleva-maailma-aktsiate-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/08/TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf` |
 | TUK00, 17537 `tuleva-maailma-volakirjade-pensionifond` | `prospectus_upcoming_file` | `/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf` |
 | TUK00, 17537 `tuleva-maailma-volakirjade-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf` |
+| TUV100, 20938 `tuleva-iii-samba-pensionifond` | `prospectus_upcoming_file` | `/wp-content/uploads/2026/11/TUV100-Prospekt-kehtib-alates-06.12.2026.pdf` |
+| TUV100, 20938 `tuleva-iii-samba-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/11/TUV100-tingimused-kehtivad-alates-06.12.2026.pdf` |
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. An `acf` key that is missing or empty in
