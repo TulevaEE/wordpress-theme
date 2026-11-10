@@ -19222,6 +19222,7 @@ sup {
 .second-pillar-246-page .article > p {
   margin: 0 0 30px;
   text-align: center;
+  text-wrap: balance;
 }
 .second-pillar-246-page .article h2, .second-pillar-246-page .article .h2 {
   font-family: var(--serif);
