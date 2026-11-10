@@ -40,27 +40,27 @@
                                 </div>
                             </div>
 
-                            <div class="px-3 pt-4 pb-3 rejoin-sum" role="status" aria-live="polite">
-                                <div class="rejoin-sum__row">
-                                    <span class="rejoin-sum__operator" aria-hidden="true"></span>
-                                    <span class="rejoin-sum__label"><?php _e('From your net salary', TEXT_DOMAIN); ?></span>
-                                    <span class="rejoin-sum__amount" id="resNetSalary">94&nbsp;&euro;</span>
+                            <div class="px-3 pt-4 pb-3 calculator-sum" role="status" aria-live="polite">
+                                <div class="calculator-sum__row">
+                                    <span class="calculator-sum__operator" aria-hidden="true"></span>
+                                    <span class="calculator-sum__label"><?php _e('From your net salary', TEXT_DOMAIN); ?></span>
+                                    <span class="calculator-sum__amount" id="resNetSalary">94&nbsp;&euro;</span>
                                 </div>
-                                <div class="rejoin-sum__row rejoin-sum__row--tax-win">
-                                    <span class="rejoin-sum__operator" aria-hidden="true">+</span>
-                                    <span class="rejoin-sum__label"><?php _e('From your taxes', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
+                                <div class="calculator-sum__row calculator-sum__row--tax-win">
+                                    <span class="calculator-sum__operator" aria-hidden="true">+</span>
+                                    <span class="calculator-sum__label"><?php _e('From your taxes', TEXT_DOMAIN); ?><span class="inline-help d-inline-block" id="taxWinInfo" role="button" tabindex="0"
                                               aria-label="<?php echo esc_attr__('What this amount is made of', TEXT_DOMAIN); ?>"
                                               data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                               data-income-tax-label="<?php echo esc_attr__('From income tax', TEXT_DOMAIN); ?>"
                                               data-social-tax-label="<?php echo esc_attr__('From social tax', TEXT_DOMAIN); ?>"
                                               title=""></span>
                                     </span>
-                                    <span class="rejoin-sum__amount" id="resTaxWin">106&nbsp;&euro;</span>
+                                    <span class="calculator-sum__amount" id="resTaxWin">106&nbsp;&euro;</span>
                                 </div>
-                                <div class="rejoin-sum__row rejoin-sum__row--total">
-                                    <span class="rejoin-sum__operator" aria-hidden="true">=</span>
-                                    <span class="rejoin-sum__label"><?php _e('Into your II pillar each month', TEXT_DOMAIN); ?></span>
-                                    <span class="rejoin-sum__amount" id="resTotal">200&nbsp;&euro;</span>
+                                <div class="calculator-sum__row calculator-sum__row--total">
+                                    <span class="calculator-sum__operator" aria-hidden="true">=</span>
+                                    <span class="calculator-sum__label"><?php _e('Into your II pillar each month', TEXT_DOMAIN); ?></span>
+                                    <span class="calculator-sum__amount" id="resTotal">200&nbsp;&euro;</span>
                                 </div>
                                 <a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-primary btn-lg w-100 mt-4"><?php _e('Start saving again', TEXT_DOMAIN); ?></a>
                             </div>

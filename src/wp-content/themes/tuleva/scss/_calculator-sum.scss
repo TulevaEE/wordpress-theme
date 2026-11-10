@@ -1,0 +1,82 @@
+// A calculator whose result reads as a written sum: the parts, a line, and the
+// total, with the operators in their own column so the labels align.
+
+.calculator:has(.calculator-sum) {
+    // Labels in the grey input box start where the sum's labels do, past the + and = column
+    // (the box's row pulls back by half a gutter, which the column padding then has to cover).
+    // On a phone the label sits above its field instead, so it starts where the field does
+    @include media-breakpoint-up(sm) {
+        .bg-gray-2 .col-form-label {
+            padding-left: calc(1.75rem + var(--bs-gutter-x) * .5);
+        }
+    }
+}
+
+.calculator-sum {
+
+    &__row {
+        display: flex;
+        align-items: baseline;
+        gap: .25rem;
+        color: $navy-blue;
+        font-size: 1rem;
+        font-weight: $font-weight-normal;
+    }
+
+    &__row + &__row {
+        margin-top: .375rem;
+    }
+
+    &__operator {
+        flex-shrink: 0;
+        width: 1.5rem;
+        font-size: 1.125rem;
+        font-weight: $font-weight-medium;
+    }
+
+    &__label {
+        flex-grow: 1;
+    }
+
+    &__amount {
+        font-weight: $font-weight-medium;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+    }
+
+    &__row--tax-win {
+        color: $green;
+
+        .inline-help {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMzQgMTYiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgZmlsbD0iI2ZmZiIgcj0iNy40IiBzdHJva2U9IiMwMDgzMDAiIHN0cm9rZS13aWR0aD0iMS4yIi8+PGNpcmNsZSBjeD0iOCIgY3k9IjQuNiIgZmlsbD0iIzAwODMwMCIgcj0iMS4wNSIvPjxyZWN0IGZpbGw9IiMwMDgzMDAiIGhlaWdodD0iNS4yIiByeD0iLjciIHdpZHRoPSIxLjQiIHg9IjcuMyIgeT0iNi42Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI4IiBmaWxsPSIjMDA4MzAwIiByPSI4Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI0LjYiIGZpbGw9IiNmZmYiIHI9IjEuMDUiLz48cmVjdCBmaWxsPSIjZmZmIiBoZWlnaHQ9IjUuMiIgcng9Ii43IiB3aWR0aD0iMS40IiB4PSIyNS4zIiB5PSI2LjYiLz48L3N2Zz4=);
+        }
+    }
+
+    &__row--secondary {
+        color: $text-navy-secondary;
+
+        .inline-help {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMzQgMTYiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgZmlsbD0iI2ZmZiIgcj0iNy40IiBzdHJva2U9IiM1QzczOEMiIHN0cm9rZS13aWR0aD0iMS4yIi8+PGNpcmNsZSBjeD0iOCIgY3k9IjQuNiIgZmlsbD0iIzVDNzM4QyIgcj0iMS4wNSIvPjxyZWN0IGZpbGw9IiM1QzczOEMiIGhlaWdodD0iNS4yIiByeD0iLjciIHdpZHRoPSIxLjQiIHg9IjcuMyIgeT0iNi42Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI4IiBmaWxsPSIjNUM3MzhDIiByPSI4Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI0LjYiIGZpbGw9IiNmZmYiIHI9IjEuMDUiLz48cmVjdCBmaWxsPSIjZmZmIiBoZWlnaHQ9IjUuMiIgcng9Ii43IiB3aWR0aD0iMS40IiB4PSIyNS4zIiB5PSI2LjYiLz48L3N2Zz4=);
+        }
+    }
+
+    &__row + &__row--total {
+        margin-top: .75rem;
+    }
+
+    &__row--total {
+        padding-top: .75rem;
+        border-top: 1px solid $gray-border-3;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold;
+
+        .calculator-sum__operator {
+            font-weight: $font-weight-bold;
+        }
+
+        .calculator-sum__amount {
+            font-size: 1.5rem;
+            font-weight: $font-weight-bold;
+        }
+    }
+}
