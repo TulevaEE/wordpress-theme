@@ -4,8 +4,8 @@
  *
  * These fields let the text be edited in wp-admin without a theme deploy. The
  * template falls back to the original Estonian copy when a field is empty, so
- * the page always renders. The calculators, the hero lead and the slider hints
- * stay in the template because they carry markup (the yellow highlight).
+ * the page always renders. The calculators, the hero lead, the slider hints and
+ * the closing box stay in the template.
  */
 if ( function_exists( 'acf_add_local_field_group' ) ) :
 
@@ -39,33 +39,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'toolbar'       => 'full',
 				'media_upload'  => 0,
 				'default_value' => '<p>II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.</p>',
-			),
-			array(
-				'key'           => 'field_sp246_cta_title',
-				'label'         => 'Lõpuplokk — pealkiri',
-				'name'          => 'cta_title',
-				'type'          => 'text',
-				'default_value' => 'Kogu II sambasse rohkem',
-			),
-			array(
-				'key'           => 'field_sp246_cta_intro',
-				'label'         => 'Lõpuplokk — tekst enne pilti',
-				'name'          => 'cta_intro',
-				'type'          => 'wysiwyg',
-				'tabs'          => 'visual',
-				'toolbar'       => 'basic',
-				'media_upload'  => 0,
-				'default_value' => '<p>Me Tulevas oleme veendunud, et kõige kavalam on suunata II sambasse 6%. Ligi pool meiega koos kogujatest on sissemakset juba tõstnud.</p>',
-			),
-			array(
-				'key'           => 'field_sp246_cta_outro',
-				'label'         => 'Lõpuplokk — tekst pärast pilti',
-				'name'          => 'cta_outro',
-				'type'          => 'wysiwyg',
-				'tabs'          => 'visual',
-				'toolbar'       => 'basic',
-				'media_upload'  => 0,
-				'default_value' => '<p>Kui teed avalduse enne novembri lõppu, hakkab suurem tükike palgast sinu II sambasse liikuma juba uuest aastast. Kui tähtaeg mööda lasta, saad uue võimaluse alles aasta pärast.</p><p>Avalduse tegemine võtab paar minutit. Kui oled selle ära teinud, tunne õigustatult uhkust. Oled teinud oma tuleviku heaks midagi, mis töötab sinu kasuks edaspidi iseenesest.</p>',
 			),
 		),
 		'location' => array(
