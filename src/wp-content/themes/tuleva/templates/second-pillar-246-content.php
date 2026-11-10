@@ -144,32 +144,27 @@
 
     <div class="faq-list">
     <div class="qa__question-wrapper">
-      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-1" role="button" aria-expanded="false" aria-controls="kkk-1">Miks on kaval II sambasse rohkem koguda?</a>
+      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-1" role="button" aria-expanded="false" aria-controls="kkk-1">Miks tasub II sambasse rohkem koguda?</a>
       <div id="kkk-1" class="collapse">
-        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Tänu sellele saad iga <strong>78 sendi</strong> eest, mis sa oma netopalgast „ohverdad”, oma II sambasse <strong>terve euro</strong>. Kui investeeriksid sama raha mujale, alustaksid 22% miinusega.</p>
-        <div class="coin-card">
-          <div class="coins">
-            <div class="coin coin-net"><span class="coin-amt">0,78 €</span><span class="coin-lbl">vähem netopalka</span></div>
-            <span class="coin-arrow" aria-hidden="true">→</span>
-            <div class="coin coin-pil"><span class="coin-amt">1,00 €</span><span class="coin-lbl">rohkem tulevikuks</span></div>
-          </div>
-        </div>
+        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Kui paned palgast kõrvale <strong>100&nbsp;€</strong>, jõuab sinu II sambasse <strong>128&nbsp;€</strong>. Kui investeeriksid sama raha mujale, jõuaks sinna 100&nbsp;€.</p>
+        <p>Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast, sõltumata sellest, kas kogud ise 2, 4 või 6%. (<a class="inline" href="https://tuleva.ee/sotsmaks">Vaata, kuidas see mõjutab I sammast</a>)</p>
       </div>
     </div>
 
     <div class="qa__question-wrapper">
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-2" role="button" aria-expanded="false" aria-controls="kkk-2">Mida sissemakse tõstmine tähendab?</a>
       <div id="kkk-2" class="collapse">
-        <p>Su palgast liigub palgapäeval II sambasse vaikimisi <strong>2%</strong>. Riik suunab omalt poolt sinu II sambasse veel <strong>4% sinu brutopalga suurusest</strong>. (See tuleb sotsiaalmaksust – II sambasse kogumine on ainus viis suunata see enda isiklikule kontole.)</p>
-        <p>Sina saad üks kord aastas sissemakse suurust tõsta (või vajadusel langetada) – valikus on 2% kõrval 4% või 6%. Mina ise olen juba suunanud oma II sambasse 6% oma palgast – nagu ka juba ligi 50 000 Eesti inimest.</p>
+        <p>Praegu liigub sinu palgast II sambasse vaikimisi <strong>2%</strong>. Kord aastas saad seda muuta: valida 4% või 6% või minna hiljem tagasi väiksema sissemakse suuruse peale.</p>
+        <p>Kui teed avalduse hiljemalt 30. novembril, kehtib uus protsent 1. jaanuarist. See arvestatakse maha juba jaanuaris laekuvast palgast, ka siis, kui see on detsembri töö eest.</p>
+        <p>Meie Tulevas suuname ise II sambasse 6% palgast.</p>
       </div>
     </div>
 
     <div class="qa__question-wrapper">
-      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-3" role="button" aria-expanded="false" aria-controls="kkk-3">Aga kui mul ootamatult raha vaja on?</a>
+      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-3" role="button" aria-expanded="false" aria-controls="kkk-3">Aga kui mul on ootamatult raha vaja?</a>
       <div id="kkk-3" class="collapse">
-        <p>Tõsta sissemakset nii palju, kui saad mugavalt tulevikuks kõrvale panna – II sambasse kogud vara pikaks ajaks. Kuid tänane valik ei seo sind pöördumatult: sissemakse suurust saad vajadusel muuta igal aastal, nii üles kui ka alla.</p>
-        <p>Kogutud vara kasutamine muutub paindlikuks ja maksusoodsaks pensionieale lähenedes.</p>
+        <p>Ootamatuste jaoks on kõige parem meelerahufond: raha, mis on eraldi ja kohe kättesaadav. II sambasse kogud pikaks ajaks, seega vali sissemakse, mida saad mugavalt kõrvale panna.</p>
+        <p>Sinu valik ei ole lõplik: sissemakset saad igal aastal muuta. Ka II sambast saab vajadusel raha välja võtta, aga maksude mõttes ei ole see kõige mõistlikum.</p>
       </div>
     </div>
 
