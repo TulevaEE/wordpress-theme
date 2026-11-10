@@ -61,9 +61,9 @@
 
   <div class="article">
 
-    <?php echo get_field( 'intro_1' ) ?: '<p>See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.</p>'; ?>
+    <h2>Väike vahe palgas, suur vahe tulevikus</h2>
 
-    <?php echo get_field( 'intro_2' ) ?: '<p>II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.</p>'; ?>
+    <p>Vaata, kui palju rohkem kogud, kui valid suurema sissemakse.<br>See vara on sinu oma ja edasi pärandatav.</p>
 
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
