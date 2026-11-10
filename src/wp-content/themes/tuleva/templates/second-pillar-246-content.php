@@ -139,8 +139,8 @@
     </div>
   </section>
 
-  <div class="article article-faq">
-    <h2>Korduma kippuvad küsimused</h2>
+  <div class="article article-faq qa-block">
+    <h2>Hea teada</h2>
 
     <div class="faq-list">
     <div class="qa__question-wrapper">
