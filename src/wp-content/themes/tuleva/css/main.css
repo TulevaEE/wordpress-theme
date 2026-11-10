@@ -19487,7 +19487,7 @@ sup {
 }
 .second-pillar-246-page .vbar .vlbl {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--navy);
   margin-top: 8px;
 }
@@ -19716,6 +19716,9 @@ sup {
   margin: 52px auto 0;
   padding: 0 20px;
 }
+.second-pillar-246-page .closing h2, .second-pillar-246-page .closing .h2 {
+  text-wrap: balance;
+}
 .second-pillar-246-page .closing .lead {
   max-width: 38rem;
   color: #002f63;
@@ -19731,6 +19734,10 @@ sup {
 }
 .second-pillar-246-page .article-faq .faq-list {
   margin-top: 40px;
+}
+.second-pillar-246-page .article-faq .collapse {
+  font-size: 16px;
+  line-height: 1.5;
 }
 .second-pillar-246-page .legal {
   max-width: var(--maxw);

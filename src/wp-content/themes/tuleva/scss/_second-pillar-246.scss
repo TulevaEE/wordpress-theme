@@ -83,7 +83,7 @@ $growth-return: #52A560;
   .vbar .vtrack{flex:1 1 0;min-height:0;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-top:30px}
   .vbar .vcol{width:100%;max-width:96px;min-height:4px;flex-shrink:0;border-radius:7px 7px 0 0;background:$navy-blue;transition:height .55s ease}
   .vbar.dim .vcol{background:var(--gray-border-3)}
-  .vbar .vlbl{font-size:16px;font-weight:700;color:var(--navy);margin-top:8px}
+  .vbar .vlbl{font-size:16px;font-weight:400;color:var(--navy);margin-top:8px}
   .vbar.dim .vlbl{color:var(--text2)}
   @media(max-width:560px){.wealth-viz{flex-direction:column}.vbars{flex-basis:auto;width:100%;height:150px}}
 
@@ -120,12 +120,15 @@ $growth-return: #52A560;
 
 
   .closing{max-width:var(--maxw);margin:52px auto 0;padding:0 20px}
+  .closing h2{text-wrap:balance}
   .closing .lead{max-width:38rem;color:$navy-blue}
   .closing-note{font-size:16px;color:var(--text2);margin:12px 0 0}
 
   // FAQ: room above the heading, under it and before the footer
   .article-faq{padding-top:48px;padding-bottom:96px}
   .article-faq .faq-list{margin-top:40px}
+  // Answers in the size the FAQ has on the other pages, not the page's 20px
+  .article-faq .collapse{font-size:16px;line-height:1.5}
 
   // Legal notes
   .legal{max-width:var(--maxw);margin:40px auto 0;border-top:1px solid var(--border);padding:22px 20px 10px}

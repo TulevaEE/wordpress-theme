@@ -132,8 +132,8 @@
 
   <section class="closing" id="alusta">
     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
-      <h2><?php echo esc_html( get_field( 'cta_title' ) ?: 'Kogu uuest aastast rohkem' ); ?></h2>
-      <p class="lead mx-auto">Kui teed avalduse <strong>30.&nbsp;novembriks</strong>, võidad maksudelt ja kogud juba uuest aastast rohkem.</p>
+      <h2><?php echo esc_html( get_field( 'cta_title' ) ?: 'Kogu II sambasse rohkem' ); ?></h2>
+      <p class="lead mx-auto">Kui tõstad sissemakset <strong>30.&nbsp;novembriks</strong>, kogud juba uuest aastast rohkem ja saad suurema tulumaksuvõidu.</p>
       <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary">Tõstan sissemakset</a></p>
       <p class="closing-note">Valikut saad igal aastal muuta.</p>
     </div>
@@ -171,8 +171,8 @@
     <div class="qa__question-wrapper">
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-4" role="button" aria-expanded="false" aria-controls="kkk-4">Kas sissemakset tasub tõsta, kui olen juba üle 60?</a>
       <div id="kkk-4" class="collapse">
-        <p>Jah. Nüüd loeb iga aasta – kogumist edasi lükata enam ei saa. Hea uudis: <strong>maksuvõit ei sõltu east.</strong> Iga 78 sendi eest saad II sambasse kohe terve euro, ükskõik kui palju aastaid pensionini jäänud on.</p>
-        <p>Ja kui võtad II sambasse kogutud vara kasutusele vähehaaval, jääb ülejäänu fondi tulu teenima veel pikkadeks aastateks. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
+        <p>Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II sambasse 128&nbsp;€.</p>
+        <p>Alates 60. eluaastast saad II samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
       </div>
     </div>
     </div>
