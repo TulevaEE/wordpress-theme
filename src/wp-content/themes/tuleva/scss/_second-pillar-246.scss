@@ -127,8 +127,9 @@ $growth-return: #52A560;
   // FAQ: room above the heading, under it and before the footer
   .article-faq{padding-top:48px;padding-bottom:96px}
   .article-faq .faq-list{margin-top:40px}
-  // Answers in the size the FAQ has on the other pages, not the page's 20px
-  .article-faq .collapse{font-size:16px;line-height:1.5}
+  // Answers in the size the FAQ has on the other pages, not the page's 20px. Set on the
+  // wrapper: while an answer opens it is .collapsing, not .collapse, and would jump in size.
+  .article-faq .qa__question-wrapper > div{font-size:16px;line-height:1.5}
 
   // Legal notes
   .legal{max-width:var(--maxw);margin:40px auto 0;border-top:1px solid var(--border);padding:22px 20px 10px}
