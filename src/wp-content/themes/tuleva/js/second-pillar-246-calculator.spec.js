@@ -1,7 +1,6 @@
 const {
     computeContributions,
     projectWealth,
-    wealthByYear,
     MAX_GROSS_SALARY
 } = require('./second-pillar-246-calculator');
 const { computeRejoinContributions } = require('./second-pillar-rejoin-calculator');
@@ -12,7 +11,6 @@ describe('computeContributions', () => {
             ownContribution: 180,
             netSalaryCost: 140,
             incomeTaxSaved: 40,
-            yearlyIncomeTaxSaved: 480,
             state: 120,
             intoPillar: 300
         });
@@ -37,7 +35,6 @@ describe('computeContributions', () => {
             ownContribution: 42,
             netSalaryCost: 42,
             incomeTaxSaved: 0,
-            yearlyIncomeTaxSaved: 0,
             state: 28,
             intoPillar: 70
         });
@@ -92,20 +89,17 @@ describe('projectWealth', () => {
         );
     });
 
+    it('shows a loss as a negative return, so the money put in stays what it was', () => {
+        const atLoss = projectWealth(3000, 6, 35, -0.05);
+        const atZero = projectWealth(3000, 6, 35, 0);
+
+        expect([atLoss.fromNetSalary, atLoss.fromReturns < 0]).toEqual([atZero.fromNetSalary, true]);
+    });
+
     it('saves more at a higher payment rate', () => {
         const totals = [2, 4, 6].map((rate) => projectWealth(3000, rate, 35, 0).total);
 
         expect(totals).toEqual([...totals].sort((a, b) => a - b));
         expect(new Set(totals).size).toBe(3);
-    });
-});
-
-describe('wealthByYear', () => {
-    it('runs from nothing today to the projected total at 65', () => {
-        const years = wealthByYear(3000, 6, 35, 0.07);
-
-        expect(years).toHaveLength(31);
-        expect(years[0]).toBe(0);
-        expect(Math.round(years[30])).toBe(projectWealth(3000, 6, 35, 0.07).total);
     });
 });
