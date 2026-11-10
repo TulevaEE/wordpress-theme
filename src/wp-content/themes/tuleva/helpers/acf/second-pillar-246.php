@@ -45,7 +45,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'label'         => 'Lõpuplokk — pealkiri',
 				'name'          => 'cta_title',
 				'type'          => 'text',
-				'default_value' => 'Pane oma II sammas jõudsamalt kasvama',
+				'default_value' => 'Kogu II sambasse rohkem',
 			),
 			array(
 				'key'           => 'field_sp246_cta_intro',

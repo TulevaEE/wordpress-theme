@@ -19735,6 +19735,10 @@ sup {
 .second-pillar-246-page .article-faq .faq-list {
   margin-top: 40px;
 }
+.second-pillar-246-page .article-faq .collapse {
+  font-size: 16px;
+  line-height: 1.5;
+}
 .second-pillar-246-page .legal {
   max-width: var(--maxw);
   margin: 40px auto 0;
