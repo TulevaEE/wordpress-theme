@@ -19712,7 +19712,7 @@ sup {
   }
 }
 .second-pillar-246-page .closing {
-  max-width: 900px;
+  max-width: var(--maxw);
   margin: 52px auto 0;
   padding: 0 20px;
 }
@@ -19724,6 +19724,13 @@ sup {
   font-size: 16px;
   color: var(--text2);
   margin: 12px 0 0;
+}
+.second-pillar-246-page .article-faq {
+  padding-top: 48px;
+  padding-bottom: 96px;
+}
+.second-pillar-246-page .article-faq .faq-list {
+  margin-top: 40px;
 }
 .second-pillar-246-page .legal {
   max-width: var(--maxw);
@@ -19766,6 +19773,13 @@ sup {
   }
   .second-pillar-246-page .wealth {
     padding: 16px 14px;
+  }
+  .second-pillar-246-page .article-faq {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+  .second-pillar-246-page .article-faq .faq-list {
+    margin-top: 28px;
   }
 }
 @media (max-width: 430px) {
