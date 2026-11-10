@@ -172,7 +172,7 @@
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-4" role="button" aria-expanded="false" aria-controls="kkk-4">Kas sissemakset tasub tõsta, kui olen juba üle 60?</a>
       <div id="kkk-4" class="collapse">
         <p>Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II sambasse 128&nbsp;€.</p>
-        <p>Alates 60. eluaastast saad II samba vara ka soodsamalt kasutada: tulumaks on 10%, igakuiste väljamaksetega fondipensioni puhul 0%. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
+        <p>Alates 60. eluaastast saad II samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
       </div>
     </div>
     </div>
