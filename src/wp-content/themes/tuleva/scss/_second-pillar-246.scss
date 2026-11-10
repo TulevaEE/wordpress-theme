@@ -37,7 +37,7 @@ $growth-return: #52A560;
   @media(max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr);gap:28px;padding:34px 20px 40px}.hero-text{text-align:center}.hero-text h1{font-size:34px}.hero-text .dek{font-size:19px}}
 
   .article{max-width:var(--maxw);margin:0 auto;padding:16px 20px 24px}
-  .article > p{margin:0 0 30px;text-align:center}
+  .article > p{margin:0 0 30px;text-align:center;text-wrap:balance}
   .article h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:52px 0 22px;text-align:center}
   .article > h2:first-child{margin-top:24px}
   .article a.inline{color:var(--action);text-decoration:underline;text-underline-offset:2px}
@@ -127,8 +127,9 @@ $growth-return: #52A560;
   // FAQ: room above the heading, under it and before the footer
   .article-faq{padding-top:48px;padding-bottom:96px}
   .article-faq .faq-list{margin-top:40px}
-  // Answers in the size the FAQ has on the other pages, not the page's 20px
-  .article-faq .collapse{font-size:16px;line-height:1.5}
+  // Answers in the size the FAQ has on the other pages, not the page's 20px. Set on the
+  // wrapper: while an answer opens it is .collapsing, not .collapse, and would jump in size.
+  .article-faq .qa__question-wrapper > div{font-size:16px;line-height:1.5}
 
   // Legal notes
   .legal{max-width:var(--maxw);margin:40px auto 0;border-top:1px solid var(--border);padding:22px 20px 10px}

@@ -45,7 +45,7 @@
               </div>
               <div class="calculator-sum__row calculator-sum__row--total">
                 <span class="calculator-sum__operator" aria-hidden="true">=</span>
-                <span class="calculator-sum__label">II sambasse iga kuu</span>
+                <span class="calculator-sum__label">II&nbsp;sambasse iga kuu</span>
                 <span class="calculator-sum__amount" id="cInflow">300 €</span>
               </div>
             </div>
@@ -61,9 +61,9 @@
 
   <div class="article">
 
-    <?php echo get_field( 'intro_1' ) ?: '<p>See ei ole ühekordne, vaid läbi aastate püsiv ja kasvav maksuvõit.</p>'; ?>
+    <h2>Väike vahe palgas, suur vahe tulevikus</h2>
 
-    <?php echo get_field( 'intro_2' ) ?: '<p>II pensionisammas ei ole muud kui üks investeerimiskonto, kuhu sa kogud elu jooksul endale vara. See vara on sinu oma ja edasi pärandatav.</p>'; ?>
+    <p>Vaata, kui palju rohkem kogud, kui valid suurema sissemakse.<br>See vara on sinu oma ja edasi pärandatav.</p>
 
     <section class="calc" id="calc2" aria-label="II samba vara kasvu kalkulaator">
 
@@ -90,7 +90,7 @@
         </div>
 
         <div class="wealth" id="wealth">
-          <h4>Kogud 65. eluaastaks juurde</h4>
+          <h4>Kogud 65.&nbsp;eluaastaks juurde</h4>
           <div class="wealth-viz">
             <div class="vbars" id="vbars" role="group" aria-label="Kogunenud vara pensionieaks 2%, 4% või 6% määraga">
               <button type="button" class="vbar dim" data-r="2" aria-pressed="false"><span class="vtrack"><span class="vval" id="vv2"></span><span class="vcol" id="vc2"></span></span><span class="vlbl">2%</span></button>
@@ -118,9 +118,9 @@
       </div>
       <p class="calc-links"><a class="text-reset" data-bs-toggle="collapse" href="#arvutuse-eeldused" role="button" aria-expanded="false" aria-controls="arvutuse-eeldused">Kuidas me seda arvutame?</a></p>
       <div id="arvutuse-eeldused" class="collapse"><div class="calc-detail"><ul>
-          <li>Arvutus algab uuest aastast ja näitab, kui palju sa valitud sissemaksega II sambasse tulevikus juurde kogud, lisaks sellele, mis sul juba kogutud on.</li>
-          <li>Tulumaks 22%, maksuvaba tulu 700 € kuus, töötuskindlustusmakse 1,6%</li>
-          <li>Riik suunab lisaks 4% brutopalga suurusest, võttes selle sotsiaalmaksust. Sotsiaalmaksu osa vähendab veidi sinu <a class="text-reset" href="https://tuleva.ee/sotsmaks">I samba pensioni</a>.</li>
+          <li>Arvutus algab uuest aastast ja näitab, kui palju sa valitud sissemaksega II&nbsp;sambasse tulevikus juurde kogud, lisaks sellele, mis sul juba kogutud on.</li>
+          <li>Tulumaks 22%, maksuvaba tulu 700&nbsp;€ kuus, töötuskindlustusmakse 1,6%</li>
+          <li>Riik suunab lisaks 4% brutopalga suurusest, võttes selle sotsiaalmaksust. Sotsiaalmaksu osa vähendab veidi sinu <a class="text-reset" href="https://tuleva.ee/sotsmaks">I&nbsp;samba pensioni</a>.</li>
           <li>Arvutustes oleme eeldanud, et sinu palk võiks kasvada 3% aastas.</li>
           <li>Arvutame eeldatava tootlusega aastas, mille valid kalkulaatoris. Mineviku tootlus ei ütle, milliseks kujuneb tootlus tulevikus. Selle näite mõte pole ennustada su vara kasvu, vaid teha arusaadavaks, kuidas mõjutab tulevikuvara see, kui palju sa täna kõrvale paned.</li>
           <li>Tulumaksuvabastus kehtib sissemaksete puhul – vara kasutusel tuleb maksta maksu sõltuvalt sellest, millal ja kuidas vara kasutusele võtad. Eelpensionieast alates saad vara kasutada soodustingimustel – tasud vaid 10% tulumaksu. Kui valid fondipensioni (võtad raha välja vähehaaval, jättes ülejäänu kasvama), ei maksa tulumaksu üldse.</li>
@@ -132,7 +132,7 @@
 
   <section class="closing" id="alusta">
     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
-      <h2>Kogu II sambasse rohkem</h2>
+      <h2>Kogu II&nbsp;sambasse rohkem</h2>
       <p class="lead mx-auto">Kui tõstad sissemakset <strong>30.&nbsp;novembriks</strong>, kogud juba uuest aastast rohkem ja saad suurema tulumaksuvõidu.</p>
       <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary">Tõstan sissemakset</a></p>
       <p class="closing-note">Valikut saad igal aastal muuta.</p>
@@ -144,35 +144,35 @@
 
     <div class="faq-list">
     <div class="qa__question-wrapper">
-      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-1" role="button" aria-expanded="false" aria-controls="kkk-1">Miks tasub II sambasse rohkem koguda?</a>
+      <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-1" role="button" aria-expanded="false" aria-controls="kkk-1">Miks tasub II&nbsp;sambasse rohkem koguda?</a>
       <div id="kkk-1" class="collapse">
-        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II samba sissemaksed on tulumaksuvabad. Kui paned palgast kõrvale <strong>100&nbsp;€</strong>, jõuab sinu II sambasse <strong>128&nbsp;€</strong>. Kui investeeriksid sama raha mujale, jõuaks sinna 100&nbsp;€.</p>
-        <p>Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast, sõltumata sellest, kas kogud ise 2, 4 või 6%. (<a class="inline" href="https://tuleva.ee/sotsmaks">Vaata, kuidas see mõjutab I sammast</a>)</p>
+        <p>Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II&nbsp;samba sissemaksed on tulumaksuvabad. Kui paned palgast kõrvale <strong>100&nbsp;€</strong>, jõuab sinu II&nbsp;sambasse <strong>128&nbsp;€</strong>. Kui investeeriksid sama raha mujale, jõuaks sinna 100&nbsp;€.</p>
+        <p>Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast, sõltumata sellest, kas kogud ise 2, 4 või 6%. (<a class="inline" href="https://tuleva.ee/sotsmaks">Vaata, kuidas see mõjutab I&nbsp;sammast</a>)</p>
       </div>
     </div>
 
     <div class="qa__question-wrapper">
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-2" role="button" aria-expanded="false" aria-controls="kkk-2">Mida sissemakse tõstmine tähendab?</a>
       <div id="kkk-2" class="collapse">
-        <p>Praegu liigub sinu palgast II sambasse vaikimisi <strong>2%</strong>. Kord aastas saad seda muuta: valida 4% või 6% või minna hiljem tagasi väiksema sissemakse suuruse peale.</p>
-        <p>Kui teed avalduse hiljemalt 30. novembril, kehtib uus protsent 1. jaanuarist. See arvestatakse maha juba jaanuaris laekuvast palgast, ka siis, kui see on detsembri töö eest.</p>
-        <p>Meie Tulevas suuname ise II sambasse 6% palgast.</p>
+        <p>Praegu liigub sinu palgast II&nbsp;sambasse vaikimisi <strong>2%</strong>. Kord aastas saad seda muuta: valida 4% või 6% või minna hiljem tagasi väiksema sissemakse suuruse peale.</p>
+        <p>Kui teed avalduse hiljemalt 30.&nbsp;novembril, kehtib uus protsent 1.&nbsp;jaanuarist. See arvestatakse maha juba jaanuaris laekuvast palgast, ka siis, kui see on detsembri töö eest.</p>
+        <p>Meie Tulevas suuname ise II&nbsp;sambasse 6% palgast.</p>
       </div>
     </div>
 
     <div class="qa__question-wrapper">
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-3" role="button" aria-expanded="false" aria-controls="kkk-3">Aga kui mul on ootamatult raha vaja?</a>
       <div id="kkk-3" class="collapse">
-        <p>Ootamatuste jaoks on kõige parem meelerahufond: raha, mis on eraldi ja kohe kättesaadav. II sambasse kogud pikaks ajaks, seega vali sissemakse, mida saad mugavalt kõrvale panna.</p>
-        <p>Sinu valik ei ole lõplik: sissemakset saad igal aastal muuta. Ka II sambast saab vajadusel raha välja võtta, aga maksude mõttes ei ole see kõige mõistlikum.</p>
+        <p>Ootamatuste jaoks on kõige parem meelerahufond: raha, mis on eraldi ja kohe kättesaadav. II&nbsp;sambasse kogud pikaks ajaks, seega vali sissemakse, mida saad mugavalt kõrvale panna.</p>
+        <p>Sinu valik ei ole lõplik: sissemakset saad igal aastal muuta. Ka II&nbsp;sambast saab vajadusel raha välja võtta, aga maksude mõttes ei ole see kõige mõistlikum.</p>
       </div>
     </div>
 
     <div class="qa__question-wrapper">
       <a class="qa__question collapsed" data-bs-toggle="collapse" href="#kkk-4" role="button" aria-expanded="false" aria-controls="kkk-4">Kas sissemakset tasub tõsta, kui olen juba üle 60?</a>
       <div id="kkk-4" class="collapse">
-        <p>Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II sambasse 128&nbsp;€.</p>
-        <p>Alates 60. eluaastast saad II samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
+        <p>Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II&nbsp;sambasse 128&nbsp;€.</p>
+        <p>Alates 60.&nbsp;eluaastast saad II&nbsp;samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class="inline" href="https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/">Loe lähemalt kogumisest 60ndates →</a></p>
       </div>
     </div>
     </div>
