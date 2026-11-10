@@ -119,9 +119,13 @@ $growth-return: #52A560;
   @media(max-width:560px){.coin-card{padding:24px 16px}.coins{gap:14px}.coin-net{width:108px;height:108px}.coin-pil{width:122px;height:122px}.coin-amt{font-size:21px}.coin-pil .coin-amt{font-size:24px}.coin-lbl{font-size:12px;padding:0 8px}.coin-arrow{font-size:22px}}
 
 
-  .closing{max-width:900px;margin:52px auto 0;padding:0 20px}
+  .closing{max-width:var(--maxw);margin:52px auto 0;padding:0 20px}
   .closing .lead{max-width:38rem;color:$navy-blue}
   .closing-note{font-size:16px;color:var(--text2);margin:12px 0 0}
+
+  // FAQ: room above the heading, under it and before the footer
+  .article-faq{padding-top:48px;padding-bottom:96px}
+  .article-faq .faq-list{margin-top:40px}
 
   // Legal notes
   .legal{max-width:var(--maxw);margin:40px auto 0;border-top:1px solid var(--border);padding:22px 20px 10px}
@@ -137,6 +141,8 @@ $growth-return: #52A560;
     .article > p{font-size:17px;margin-bottom:22px}
     .article h2{font-size:25px;line-height:1.28;margin:40px 0 18px}
     .wealth{padding:16px 14px}
+    .article-faq{padding-top:28px;padding-bottom:56px}
+    .article-faq .faq-list{margin-top:28px}
   }
   // Narrowest phones
   @media(max-width:430px){
