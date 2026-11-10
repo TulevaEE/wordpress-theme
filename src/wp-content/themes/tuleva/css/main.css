@@ -19716,6 +19716,9 @@ sup {
   margin: 52px auto 0;
   padding: 0 20px;
 }
+.second-pillar-246-page .closing h2, .second-pillar-246-page .closing .h2 {
+  text-wrap: balance;
+}
 .second-pillar-246-page .closing .lead {
   max-width: 38rem;
   color: #002f63;

@@ -132,8 +132,8 @@
 
   <section class="closing" id="alusta">
     <div class="emphasis-box p-4 p-md-5 text-center text-navy">
-      <h2><?php echo esc_html( get_field( 'cta_title' ) ?: 'Kogu uuest aastast rohkem' ); ?></h2>
-      <p class="lead mx-auto">Kui teed avalduse <strong>30.&nbsp;novembriks</strong>, võidad maksudelt ja kogud juba uuest aastast rohkem.</p>
+      <h2><?php echo esc_html( get_field( 'cta_title' ) ?: 'Pane oma II sammas jõudsamalt kasvama' ); ?></h2>
+      <p class="lead mx-auto">Kui tõstad sissemakset <strong>30.&nbsp;novembriks</strong>, kogud juba uuest aastast rohkem ja saad suurema tulumaksuvõidu.</p>
       <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary">Tõstan sissemakset</a></p>
       <p class="closing-note">Valikut saad igal aastal muuta.</p>
     </div>

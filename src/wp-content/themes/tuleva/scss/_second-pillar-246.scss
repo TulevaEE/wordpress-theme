@@ -120,6 +120,7 @@ $growth-return: #52A560;
 
 
   .closing{max-width:var(--maxw);margin:52px auto 0;padding:0 20px}
+  .closing h2{text-wrap:balance}
   .closing .lead{max-width:38rem;color:$navy-blue}
   .closing-note{font-size:16px;color:var(--text2);margin:12px 0 0}
 
