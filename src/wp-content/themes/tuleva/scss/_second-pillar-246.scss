@@ -38,7 +38,7 @@ $growth-return: #52A560;
 
   .article{max-width:var(--maxw);margin:0 auto;padding:16px 20px 24px}
   .article > p{margin:0 0 30px;text-align:center;text-wrap:balance}
-  .article h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:52px 0 22px;text-align:center}
+  .article h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:30px;line-height:1.25;margin:52px 0 22px;text-align:center;text-wrap:balance}
   .article > h2:first-child{margin-top:24px}
   .article a.inline{color:var(--action);text-decoration:underline;text-underline-offset:2px}
   .article strong{color:var(--navy)}

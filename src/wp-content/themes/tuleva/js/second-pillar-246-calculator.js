@@ -146,8 +146,11 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
         page.querySelector('#' + id).textContent = text;
     }
 
+    // The English page formats amounts the English way; the page language is on <html lang>.
+    var locale = /^en/i.test(document.documentElement.lang || '') ? 'en-GB' : 'et-EE';
+
     function eur(value) {
-        return value.toLocaleString('et-EE') + ' €';
+        return value.toLocaleString(locale) + ' €';
     }
 
     function parseEuros(text) {

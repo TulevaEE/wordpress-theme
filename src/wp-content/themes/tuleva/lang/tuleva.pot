@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-09T11:57:53+00:00\n"
+"POT-Creation-Date: 2026-11-11T12:36:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -19,7 +19,7 @@ msgid "Tuleva"
 msgstr ""
 
 #: functions.php:31
-#: helpers/acf/init.php:22
+#: helpers/acf/init.php:21
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
 #, php-format
@@ -276,6 +276,8 @@ msgstr ""
 #: templates/child-savings-content.php:37
 #: templates/child-savings-content.php:46
 #: templates/company-savings-content.php:37
+#: templates/second-pillar-246-content.php:43
+#: templates/second-pillar-246-content.php:81
 msgid "More information"
 msgstr ""
 
@@ -1008,6 +1010,7 @@ msgid "Founding members"
 msgstr ""
 
 #: templates/components/front-hero/calculator.php:7
+#: templates/second-pillar-246-content.php:77
 msgid "Your age"
 msgstr ""
 
@@ -2768,6 +2771,208 @@ msgstr ""
 msgid "Blog posts about the Additional Investment Fund"
 msgstr ""
 
+#: templates/second-pillar-246-content.php:6
+msgid "Raise your II&nbsp;pillar contribution"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:7
+msgid "For every 100&nbsp;€ you set aside from your pay, 128&nbsp;€ goes into your II&nbsp;pillar."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:8
+msgid "The difference is your income tax benefit. <strong>The deadline is 30&nbsp;November.</strong>"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:11
+msgid "II pillar tax benefit calculator"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:15
+#: templates/second-pillar-246-content.php:73
+#: templates/second-pillar-rejoin-content.php:23
+msgid "Your gross salary"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:19
+msgid "Your contribution from gross salary"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:33
+#: templates/second-pillar-246-content.php:110
+msgctxt "II pillar 2-4-6 page"
+msgid "From your net salary"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:38
+#: templates/second-pillar-246-content.php:111
+#: templates/second-pillar-rejoin-content.php:54
+msgid "From income tax"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:43
+#: templates/second-pillar-246-content.php:112
+#: templates/second-pillar-rejoin-content.php:55
+msgid "From social tax"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:43
+msgid "The state adds 4% of your gross salary, funded from social tax."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:48
+#: templates/second-pillar-rejoin-content.php:62
+msgid "Into your II pillar each month"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:53
+#: templates/second-pillar-246-content.php:137
+msgid "Raise your contribution"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:55
+msgid "Log in and make your choice. You can change it every year."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:64
+msgid "A small difference in pay, a big difference in the future"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:66
+msgid "See how much more you save when you choose a higher contribution.<br>These savings are yours and can be inherited."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:68
+msgid "II pillar savings growth calculator"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:81
+msgid "Expected return per year"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:81
+msgid "What you end up with depends on actual returns, and neither we nor anyone else can guarantee a return."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:86
+msgid "historical return on shares 7%"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:93
+msgid "What you add by age&nbsp;65"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:95
+msgid "Savings by retirement age at a 2%, 4% or 6% contribution"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:106
+msgid "Where does this growth come from?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:113
+msgid "From returns"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:114
+msgid "Total"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:119
+msgid "How do we calculate this?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:121
+msgid "The calculation starts from the new year and shows how much you would add to your II&nbsp;pillar with the contribution you choose, on top of what you have already saved."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:122
+msgid "Income tax 22%, tax-free income 700&nbsp;€ a month, unemployment insurance contribution 1.6%."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:123
+msgid "The state adds an amount equal to 4% of your gross salary, taken from social tax. The social tax part slightly reduces your <a class=\"text-reset\" href=\"https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/\">I&nbsp;pillar pension</a>."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:124
+msgid "We have assumed that your salary grows by 3% a year."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:125
+msgid "We use the expected yearly return you pick in the calculator. Past returns do not tell you what future returns will be. This example is not meant to predict how your savings will grow, but to show how the amount you set aside today affects what you have in the future."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:126
+msgid "The income tax exemption applies to contributions. When you use the money, the tax depends on when and how you take it out. From early retirement age you can use it on favourable terms and pay only 10% income tax. If you choose a fund pension (taking the money out bit by bit and leaving the rest invested), you pay no income tax at all."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:127
+msgid "The calculations are illustrative and educational, not personal investment advice. Long-term amounts are illustrative projections, not a promise: the value of an investment can go up as well as down over time. Please note that raising your contribution reduces your monthly net salary."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:135
+msgid "Save more in your II&nbsp;pillar"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:136
+msgid "If you raise your contribution by <strong>30&nbsp;November</strong>, you save more from the new year and get a bigger income tax benefit."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:138
+msgid "You can change your choice every year."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:143
+msgid "Good to know"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:147
+msgid "Why is it worth saving more in the II&nbsp;pillar?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:149
+msgid "A basic rule of investing: use the tax-advantaged options first. II&nbsp;pillar contributions are free of income tax. If you set aside <strong>100&nbsp;€</strong> from your pay, <strong>128&nbsp;€</strong> goes into your II&nbsp;pillar. If you invested the same money elsewhere, 100&nbsp;€ would get there."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:150
+msgid "The state adds 4% of your gross salary, funded from social tax, whether you contribute 2, 4 or 6% yourself. (<a class=\"inline\" href=\"https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/\">See how this affects your I&nbsp;pillar</a>)"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:155
+msgid "What does raising your contribution mean?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:157
+msgid "Right now, <strong>2%</strong> of your pay goes into your II&nbsp;pillar by default. Once a year you can change this: choose 4% or 6%, or go back to a lower contribution later."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:158
+msgid "If you apply by 30&nbsp;November, the new rate applies from 1&nbsp;January. It is deducted from the salary you are paid in January, even if that salary is for work done in December."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:163
+msgid "What if I suddenly need the money?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:165
+msgid "For the unexpected, an emergency fund works best: money you keep separately and can reach straight away. The II&nbsp;pillar is for the long term, so choose a contribution you can comfortably set aside."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:166
+msgid "Your choice is not final: you can change your contribution every year. You can also take money out of the II&nbsp;pillar if you need to, but tax-wise it is not the wisest move."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:171
+msgid "Is it worth raising my contribution if I'm already over 60?"
+msgstr ""
+
+#: templates/second-pillar-246-content.php:173
+msgid "Yes. The tax benefit does not depend on your age: for every 100&nbsp;€ you set aside from your pay, 128&nbsp;€ goes into your II&nbsp;pillar."
+msgstr ""
+
+#: templates/second-pillar-246-content.php:174
+msgid "From the age of 60 you can also use your II&nbsp;pillar savings on better terms: income tax is 10%, or 0% with a fund pension paid out regularly."
+msgstr ""
+
 #: templates/second-pillar-rejoin-content.php:9
 msgid "Rejoin the <em>II pillar</em> and win on taxes"
 msgstr ""
@@ -2782,10 +2987,6 @@ msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:14
 msgid "Your part is free of income tax"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:23
-msgid "Your gross salary"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:31
@@ -2803,18 +3004,6 @@ msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:52
 msgid "What this amount is made of"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:54
-msgid "From income tax"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:55
-msgid "From social tax"
-msgstr ""
-
-#: templates/second-pillar-rejoin-content.php:62
-msgid "Into your II pillar each month"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:65
