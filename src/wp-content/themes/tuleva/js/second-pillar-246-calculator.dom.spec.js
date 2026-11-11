@@ -5,7 +5,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const template = fs.readFileSync(path.join(__dirname, '../templates/second-pillar-246-content.php'), 'utf8');
+const hero = fs.readFileSync(path.join(__dirname, '../templates/components/second-pillar-246-hero.php'), 'utf8');
+// The page template pulls the hero in as a component, as the front page layout does
+const template = fs
+    .readFileSync(path.join(__dirname, '../templates/second-pillar-246-content.php'), 'utf8')
+    .replace("<?php get_template_part('templates/components/second-pillar-246-hero'); ?>", hero);
+const heroOnly = `<div class="second-pillar-246-page second-pillar-246-hero-only">${hero}</div>`;
 
 function renderPage() {
     document.body.innerHTML = template;
@@ -62,6 +67,30 @@ function pickColumn(rate) {
 function dimmedRates() {
     return [...document.querySelectorAll('.vbar.dim')].map((bar) => bar.dataset.r);
 }
+
+describe('II pillar 2-4-6 hero on the front page', () => {
+    function renderHeroOnly() {
+        document.body.innerHTML = heroOnly;
+        jest.isolateModules(() => {
+            require('./second-pillar-246-calculator');
+        });
+    }
+
+    it('shows the 3000 € example at 6% without the growth calculator on the page', () => {
+        renderHeroOnly();
+
+        expect(card()).toEqual(['140 €', '40 €', '120 €', '300 €']);
+    });
+
+    it('recomputes the card when the salary and the rate change', () => {
+        renderHeroOnly();
+
+        type('gross', 2000);
+        pickRate(4);
+
+        expect(card()).toEqual(['62 €', '18 €', '80 €', '160 €']);
+    });
+});
 
 describe('II pillar 2-4-6 page calculators', () => {
     it('shows the 3000 € example at 6% on arrival', () => {
