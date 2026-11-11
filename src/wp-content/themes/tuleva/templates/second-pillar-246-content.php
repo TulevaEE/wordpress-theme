@@ -2,7 +2,7 @@
 
   <?php get_template_part('templates/components/second-pillar-246-hero'); ?>
 
-  <div class="article">
+  <div class="article" id="kalkulaator">
 
     <h2><?php _e('A small difference in pay, a big difference in the future', TEXT_DOMAIN); ?></h2>
 
