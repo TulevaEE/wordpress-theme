@@ -3489,7 +3489,7 @@ msgstr "Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast, sõltumata sellest
 
 #: templates/second-pillar-246-content.php:155
 msgid "What does raising your contribution mean?"
-msgstr "Mida sissemakse tõstmine tähendab?"
+msgstr "Mida II&nbsp;samba sissemakse suurendamine tähendab?"
 
 #: templates/second-pillar-246-content.php:157
 msgid "Right now, <strong>2%</strong> of your pay goes into your II&nbsp;pillar by default. Once a year you can change this: choose 4% or 6%, or go back to a lower contribution later."
