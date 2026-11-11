@@ -19232,6 +19232,7 @@ sup {
   line-height: 1.25;
   margin: 52px 0 22px;
   text-align: center;
+  text-wrap: balance;
 }
 .second-pillar-246-page .article > h2:first-child, .second-pillar-246-page .article > .h2:first-child {
   margin-top: 24px;

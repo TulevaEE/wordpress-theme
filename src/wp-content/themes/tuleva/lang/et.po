@@ -3343,3 +3343,182 @@ msgstr "Kuidas tulevane mina sündis?"
 #: templates/future-me-content.php:39
 msgid "Future Me was born as one of the winning ideas at the Tuleva members' hackathon in October 2026, with the help of more than 300 Tuleva members. Thank you Kadi, Dain, Meelis, Priit and Mirko for contributing to it."
 msgstr "Tulevane mina sündis rohkem kui 300 Tuleva liikme kaasabil Tuleva liikmete häkatonil oktoobris 2026 ühe võiduideena. Aitäh Kadi, Dain, Meelis, Priit ja Mirko, et lahendusse panustasite."
+
+#: templates/second-pillar-246-content.php:6
+msgid "Raise your II&nbsp;pillar contribution"
+msgstr "Tõsta II samba sissemakset"
+
+#: templates/second-pillar-246-content.php:7
+msgid "For every 100&nbsp;€ you set aside from your pay, 128&nbsp;€ goes into your II&nbsp;pillar."
+msgstr "Iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II&nbsp;sambasse 128&nbsp;€."
+
+#: templates/second-pillar-246-content.php:8
+msgid "The difference is your income tax benefit. <strong>The deadline is 30&nbsp;November.</strong>"
+msgstr "Vahe on sinu tulumaksuvõit. <strong>Tähtaeg 30.&nbsp;november.</strong>"
+
+#: templates/second-pillar-246-content.php:11
+msgid "II pillar tax benefit calculator"
+msgstr "II samba maksuvõidu kalkulaator"
+
+#: templates/second-pillar-246-content.php:19
+msgid "Your contribution from gross salary"
+msgstr "Sinu sissemakse brutopalgast"
+
+#: templates/second-pillar-246-content.php:33
+#: templates/second-pillar-246-content.php:110
+msgctxt "II pillar 2-4-6 page"
+msgid "From your net salary"
+msgstr "Netopalgast"
+
+#: templates/second-pillar-246-content.php:43
+msgid "The state adds 4% of your gross salary, funded from social tax."
+msgstr "Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast."
+
+#: templates/second-pillar-246-content.php:53
+#: templates/second-pillar-246-content.php:137
+msgid "Raise your contribution"
+msgstr "Tõstan sissemakset"
+
+#: templates/second-pillar-246-content.php:55
+msgid "Log in and make your choice. You can change it every year."
+msgstr "Logi sisse ja tee oma valik. Saad seda igal aastal muuta."
+
+#: templates/second-pillar-246-content.php:64
+msgid "A small difference in pay, a big difference in the future"
+msgstr "Väike vahe palgas, suur vahe tulevikus"
+
+#: templates/second-pillar-246-content.php:66
+msgid "See how much more you save when you choose a higher contribution.<br>These savings are yours and can be inherited."
+msgstr "Vaata, kui palju rohkem kogud, kui valid suurema sissemakse.<br>See vara on sinu oma ja edasi pärandatav."
+
+#: templates/second-pillar-246-content.php:68
+msgid "II pillar savings growth calculator"
+msgstr "II samba vara kasvu kalkulaator"
+
+#: templates/second-pillar-246-content.php:81
+msgid "Expected return per year"
+msgstr "Eeldatav tootlus aastas"
+
+#: templates/second-pillar-246-content.php:81
+msgid "What you end up with depends on actual returns, and neither we nor anyone else can guarantee a return."
+msgstr "Kogunev summa sõltub tegelikult kujunevast tootlusest ja meie ega keegi teine ei saa kindlat tootlust tagada."
+
+#: templates/second-pillar-246-content.php:86
+msgid "historical return on shares 7%"
+msgstr "aktsiate ajalooline tootlus 7%"
+
+#: templates/second-pillar-246-content.php:93
+msgid "What you add by age&nbsp;65"
+msgstr "Kogud 65.&nbsp;eluaastaks juurde"
+
+#: templates/second-pillar-246-content.php:95
+msgid "Savings by retirement age at a 2%, 4% or 6% contribution"
+msgstr "Kogunenud vara pensionieaks 2%, 4% või 6% määraga"
+
+#: templates/second-pillar-246-content.php:106
+msgid "Where does this growth come from?"
+msgstr "Kust see vara kasv tuleb?"
+
+#: templates/second-pillar-246-content.php:113
+msgid "From returns"
+msgstr "Tootlusest"
+
+#: templates/second-pillar-246-content.php:114
+msgid "Total"
+msgstr "Kokku"
+
+#: templates/second-pillar-246-content.php:119
+msgid "How do we calculate this?"
+msgstr "Kuidas me seda arvutame?"
+
+#: templates/second-pillar-246-content.php:121
+msgid "The calculation starts from the new year and shows how much you would add to your II&nbsp;pillar with the contribution you choose, on top of what you have already saved."
+msgstr "Arvutus algab uuest aastast ja näitab, kui palju sa valitud sissemaksega II&nbsp;sambasse tulevikus juurde kogud, lisaks sellele, mis sul juba kogutud on."
+
+#: templates/second-pillar-246-content.php:122
+msgid "Income tax 22%, tax-free income 700&nbsp;€ a month, unemployment insurance contribution 1.6%."
+msgstr "Tulumaks 22%, maksuvaba tulu 700&nbsp;€ kuus, töötuskindlustusmakse 1,6%"
+
+#: templates/second-pillar-246-content.php:123
+msgid "The state adds an amount equal to 4% of your gross salary, taken from social tax. The social tax part slightly reduces your <a class=\"text-reset\" href=\"https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/\">I&nbsp;pillar pension</a>."
+msgstr "Riik suunab lisaks 4% brutopalga suurusest, võttes selle sotsiaalmaksust. Sotsiaalmaksu osa vähendab veidi sinu <a class=\"text-reset\" href=\"https://tuleva.ee/sotsmaks\">I&nbsp;samba pensioni</a>."
+
+#: templates/second-pillar-246-content.php:124
+msgid "We have assumed that your salary grows by 3% a year."
+msgstr "Arvutustes oleme eeldanud, et sinu palk võiks kasvada 3% aastas."
+
+#: templates/second-pillar-246-content.php:125
+msgid "We use the expected yearly return you pick in the calculator. Past returns do not tell you what future returns will be. This example is not meant to predict how your savings will grow, but to show how the amount you set aside today affects what you have in the future."
+msgstr "Arvutame eeldatava tootlusega aastas, mille valid kalkulaatoris. Mineviku tootlus ei ütle, milliseks kujuneb tootlus tulevikus. Selle näite mõte pole ennustada su vara kasvu, vaid teha arusaadavaks, kuidas mõjutab tulevikuvara see, kui palju sa täna kõrvale paned."
+
+#: templates/second-pillar-246-content.php:126
+msgid "The income tax exemption applies to contributions. When you use the money, the tax depends on when and how you take it out. From early retirement age you can use it on favourable terms and pay only 10% income tax. If you choose a fund pension (taking the money out bit by bit and leaving the rest invested), you pay no income tax at all."
+msgstr "Tulumaksuvabastus kehtib sissemaksete puhul – vara kasutusel tuleb maksta maksu sõltuvalt sellest, millal ja kuidas vara kasutusele võtad. Eelpensionieast alates saad vara kasutada soodustingimustel – tasud vaid 10% tulumaksu. Kui valid fondipensioni (võtad raha välja vähehaaval, jättes ülejäänu kasvama), ei maksa tulumaksu üldse."
+
+#: templates/second-pillar-246-content.php:127
+msgid "The calculations are illustrative and educational, not personal investment advice. Long-term amounts are illustrative projections, not a promise: the value of an investment can go up as well as down over time. Please note that raising your contribution reduces your monthly net salary."
+msgstr "Arvutused on näitlikud ja üldharivad, mitte personaalne investeerimissoovitus. Pikaajalised summad on näitlikud prognoosid, mitte lubadus – investeeringu väärtus võib aja jooksul nii kasvada kui kahaneda. Pane tähele, et sissemakse tõstmine vähendab sinu igakuist netopalka."
+
+#: templates/second-pillar-246-content.php:135
+msgid "Save more in your II&nbsp;pillar"
+msgstr "Kogu II&nbsp;sambasse rohkem"
+
+#: templates/second-pillar-246-content.php:136
+msgid "If you raise your contribution by <strong>30&nbsp;November</strong>, you save more from the new year and get a bigger income tax benefit."
+msgstr "Kui tõstad sissemakset <strong>30.&nbsp;novembriks</strong>, kogud juba uuest aastast rohkem ja saad suurema tulumaksuvõidu."
+
+#: templates/second-pillar-246-content.php:138
+msgid "You can change your choice every year."
+msgstr "Valikut saad igal aastal muuta."
+
+#: templates/second-pillar-246-content.php:143
+msgid "Good to know"
+msgstr "Hea teada"
+
+#: templates/second-pillar-246-content.php:147
+msgid "Why is it worth saving more in the II&nbsp;pillar?"
+msgstr "Miks tasub II&nbsp;sambasse rohkem koguda?"
+
+#: templates/second-pillar-246-content.php:149
+msgid "A basic rule of investing: use the tax-advantaged options first. II&nbsp;pillar contributions are free of income tax. If you set aside <strong>100&nbsp;€</strong> from your pay, <strong>128&nbsp;€</strong> goes into your II&nbsp;pillar. If you invested the same money elsewhere, 100&nbsp;€ would get there."
+msgstr "Investeerimises kehtib põhimõte: kasuta alati kõigepealt ära maksueelisega võimalused. II&nbsp;samba sissemaksed on tulumaksuvabad. Kui paned palgast kõrvale <strong>100&nbsp;€</strong>, jõuab sinu II&nbsp;sambasse <strong>128&nbsp;€</strong>. Kui investeeriksid sama raha mujale, jõuaks sinna 100&nbsp;€."
+
+#: templates/second-pillar-246-content.php:150
+msgid "The state adds 4% of your gross salary, funded from social tax, whether you contribute 2, 4 or 6% yourself. (<a class=\"inline\" href=\"https://tuleva.ee/en/analysis/which-is-more-beneficial-pillar-i-or-pillar-ii/\">See how this affects your I&nbsp;pillar</a>)"
+msgstr "Riik lisab sotsiaalmaksu arvelt 4% sinu brutopalgast, sõltumata sellest, kas kogud ise 2, 4 või 6%. (<a class=\"inline\" href=\"https://tuleva.ee/sotsmaks\">Vaata, kuidas see mõjutab I&nbsp;sammast</a>)"
+
+#: templates/second-pillar-246-content.php:155
+msgid "What does raising your contribution mean?"
+msgstr "Mida sissemakse tõstmine tähendab?"
+
+#: templates/second-pillar-246-content.php:157
+msgid "Right now, <strong>2%</strong> of your pay goes into your II&nbsp;pillar by default. Once a year you can change this: choose 4% or 6%, or go back to a lower contribution later."
+msgstr "Praegu liigub sinu palgast II&nbsp;sambasse vaikimisi <strong>2%</strong>. Kord aastas saad seda muuta: valida 4% või 6% või minna hiljem tagasi väiksema sissemakse suuruse peale."
+
+#: templates/second-pillar-246-content.php:158
+msgid "If you apply by 30&nbsp;November, the new rate applies from 1&nbsp;January. It is deducted from the salary you are paid in January, even if that salary is for work done in December."
+msgstr "Kui teed avalduse hiljemalt 30.&nbsp;novembril, kehtib uus protsent 1.&nbsp;jaanuarist. See arvestatakse maha juba jaanuaris laekuvast palgast, ka siis, kui see on detsembri töö eest."
+
+#: templates/second-pillar-246-content.php:163
+msgid "What if I suddenly need the money?"
+msgstr "Aga kui mul on ootamatult raha vaja?"
+
+#: templates/second-pillar-246-content.php:165
+msgid "For the unexpected, an emergency fund works best: money you keep separately and can reach straight away. The II&nbsp;pillar is for the long term, so choose a contribution you can comfortably set aside."
+msgstr "Ootamatuste jaoks on kõige parem meelerahufond: raha, mis on eraldi ja kohe kättesaadav. II&nbsp;sambasse kogud pikaks ajaks, seega vali sissemakse, mida saad mugavalt kõrvale panna."
+
+#: templates/second-pillar-246-content.php:166
+msgid "Your choice is not final: you can change your contribution every year. You can also take money out of the II&nbsp;pillar if you need to, but tax-wise it is not the wisest move."
+msgstr "Sinu valik ei ole lõplik: sissemakset saad igal aastal muuta. Ka II&nbsp;sambast saab vajadusel raha välja võtta, aga maksude mõttes ei ole see kõige mõistlikum."
+
+#: templates/second-pillar-246-content.php:171
+msgid "Is it worth raising my contribution if I'm already over 60?"
+msgstr "Kas sissemakset tasub tõsta, kui olen juba üle 60?"
+
+#: templates/second-pillar-246-content.php:173
+msgid "Yes. The tax benefit does not depend on your age: for every 100&nbsp;€ you set aside from your pay, 128&nbsp;€ goes into your II&nbsp;pillar."
+msgstr "Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast kõrvale paned, jõuab II&nbsp;sambasse 128&nbsp;€."
+
+#: templates/second-pillar-246-content.php:174
+msgid "From the age of 60 you can also use your II&nbsp;pillar savings on better terms: income tax is 10%, or 0% with a fund pension paid out regularly."
+msgstr "Alates 60.&nbsp;eluaastast saad II&nbsp;samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class=\"inline\" href=\"https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/\">Loe lähemalt kogumisest 60ndates →</a>"
