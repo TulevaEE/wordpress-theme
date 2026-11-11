@@ -165,7 +165,8 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
         return Math.min(raw, MAX_GROSS_SALARY);
     }
 
-    var lastFullAge = clampAge(Number(age.value));
+    // The front page shows the hero alone, without the growth calculator below it.
+    var lastFullAge = age ? clampAge(Number(age.value)) : 0;
     var growthRate = DEFAULT_PAYMENT_RATE_PERCENT;
 
     function clampAge(value) {
@@ -202,8 +203,8 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
         return {
             salary: readSalary(),
             rate: selectedRate(),
-            age: readAge(),
-            annualReturn: Number(annualReturn.value) / 100
+            age: age ? readAge() : 0,
+            annualReturn: annualReturn ? Number(annualReturn.value) / 100 : 0
         };
     }
 
@@ -255,8 +256,10 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
     function update() {
         var input = inputs();
         showCard(input);
-        showColumns(input);
-        showBreakdown(input);
+        if (age) {
+            showColumns(input);
+            showBreakdown(input);
+        }
     }
 
     rateOptions.forEach(function (option) {
@@ -286,7 +289,9 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
         });
     });
     [age, annualReturn].forEach(function (field) {
-        field.addEventListener('input', update);
+        if (field) {
+            field.addEventListener('input', update);
+        }
     });
     page.querySelectorAll('.vbar').forEach(function (bar) {
         bar.addEventListener('click', function () {
@@ -294,21 +299,25 @@ function projectWealth(grossSalary, paymentRatePercent, age, annualReturn) {
             update();
         });
     });
-    age.addEventListener('change', function () {
-        settleAge();
-        update();
-    });
-    page.querySelector('.historic-return-rate').addEventListener('click', function () {
-        annualReturn.value = HISTORIC_STOCK_RETURN_PERCENT;
-        annualReturn.dispatchEvent(new Event('input', { bubbles: true }));
-    });
+    if (age) {
+        age.addEventListener('change', function () {
+            settleAge();
+            update();
+        });
+        page.querySelector('.historic-return-rate').addEventListener('click', function () {
+            annualReturn.value = HISTORIC_STOCK_RETURN_PERCENT;
+            annualReturn.dispatchEvent(new Event('input', { bubbles: true }));
+        });
+    }
     if (salary2) {
         salary2.value = salary.value;
     }
     window.addEventListener('pageshow', update);
     update();
 
-    window.initSalaryArrivalFocus(salary);
+    if (window.initSalaryArrivalFocus) {
+        window.initSalaryArrivalFocus(salary);
+    }
 })();
 
 if (typeof module !== 'undefined' && module.exports) {

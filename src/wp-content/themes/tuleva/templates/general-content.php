@@ -44,7 +44,6 @@
                     get_template_part('templates/components/third-pillar-hero');
                 } else if (get_row_layout() === 'second_pillar_payment_rate_hero') {
                     get_template_part('templates/components/second-pillar-payment-rate-hero');
-                    get_template_part('templates/components/modal-second-pillar-payment-rate');
                 } else if (get_row_layout() === 'featured_articles') {
                     get_template_part('templates/components/featured-articles');
                 } else if (get_row_layout() === 'media_block_with_cta') {
