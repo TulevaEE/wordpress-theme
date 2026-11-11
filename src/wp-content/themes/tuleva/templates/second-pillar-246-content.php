@@ -156,7 +156,6 @@
       <div id="kkk-2" class="collapse">
         <p>Praegu liigub sinu palgast II&nbsp;sambasse vaikimisi <strong>2%</strong>. Kord aastas saad seda muuta: valida 4% või 6% või minna hiljem tagasi väiksema sissemakse suuruse peale.</p>
         <p>Kui teed avalduse hiljemalt 30.&nbsp;novembril, kehtib uus protsent 1.&nbsp;jaanuarist. See arvestatakse maha juba jaanuaris laekuvast palgast, ka siis, kui see on detsembri töö eest.</p>
-        <p>Meie Tulevas suuname ise II&nbsp;sambasse 6% palgast.</p>
       </div>
     </div>
 
