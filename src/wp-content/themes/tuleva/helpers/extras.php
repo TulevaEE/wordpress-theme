@@ -351,51 +351,30 @@ function print_funds_js()
 }
 
 // The documents every fund page links come from the shared documents page
-// (tuleva_shared_document_url()). The path here renders while that page's field is empty.
+// (tuleva_shared_document_url()). An empty field returns '', and the fund page shows no row.
 function get_esg_document_url() {
-    $esg_document_path = '/wp-content/uploads/2025/08/Jatkusuutlikkusriskide-arvesse-votmise-pohimotted-13.08.2025.pdf';
-
-    return tuleva_shared_document_url('sustainability_risks_file', get_site_url() . $esg_document_path);
+    return tuleva_shared_document_url('sustainability_risks_file');
 }
 
 /**
- * The pension funds' NAV procedure, current and upcoming: the shared page's fields over the path
- * here, by the same rule as a fund page's documents (tuleva_document_versions_on_page()).
+ * The pension funds' NAV procedure, current and upcoming: the shared page's two fields switched
+ * by date, as a fund page's documents are (tuleva_document_versions()).
  *
  * @return array{0: string, 1: string}
  */
 function get_nav_procedure_documents() {
-    $nav_procedure_document_path = '/wp-content/uploads/2026/08/Pensionifondide-vara-puhasvaartuse-maaramise-sisekord-kehtib-alates-18.09.2026.pdf';
-
-    return tuleva_document_versions_on_page(
+    return tuleva_document_versions(
         tuleva_shared_document_url('nav_procedure_file'),
-        tuleva_shared_document_url('nav_procedure_upcoming_file'),
-        get_site_url() . $nav_procedure_document_path
+        tuleva_shared_document_url('nav_procedure_upcoming_file')
     );
 }
 
-function get_nav_procedure_document_url() {
-    return get_nav_procedure_documents()[0];
-}
-
-function get_nav_procedure_upcoming_document_url() {
-    return get_nav_procedure_documents()[1];
-}
-
-function get_nav_procedure_upcoming_effective_date() {
-    return tuleva_document_effective_date(get_nav_procedure_upcoming_document_url());
-}
-
 function get_esg_factors_document_url() {
-    $esg_factors_document_path = '/wp-content/uploads/2026/06/Investeerimisotsuste-poolt-kestlikkusteguritele-avaldatava-negatiivse-moju-mittearvestamine_16.06.2026-1.pdf';
-
-    return tuleva_shared_document_url('adverse_impacts_file', get_site_url() . $esg_factors_document_path);
+    return tuleva_shared_document_url('adverse_impacts_file');
 }
 
 function get_remuneration_document_url() {
-    $remuneration_document_path = '/wp-content/uploads/2026/06/Tuleva-Fondid-AS-tasustamise-pohimotted-11.06.2026.pdf';
-
-    return tuleva_shared_document_url('remuneration_policy_file', get_site_url() . $remuneration_document_path);
+    return tuleva_shared_document_url('remuneration_policy_file');
 }
 
 function hyphenate_string($string) {

@@ -19,8 +19,8 @@ Theme templates live in:
 Tuleva has four funds. Their documents — prospectus, terms, key investor information,
 model portfolio, monthly investment report — plus the CO2 intensity figure published
 beside them are each an ACF field on that fund's page. Setting the field is the whole
-update: no commit, no deploy. Taking a document off the page is not, while its template
-still carries a fallback URL — see *Fallbacks still in place*.
+update, and clearing it takes the document off the page: no commit, no deploy. No template
+carries a document URL of its own, so an empty field shows no row.
 
 Field names are identical on every fund page that carries the field, so nothing
 downstream branches per fund: fund → page slug, document → field name.
@@ -149,38 +149,14 @@ uploads as `Pohiteave-TUK75-kehtib-alates-27.02.2026.pdf`.
 From the date in its filename an upcoming prospectus, terms or NAV procedure renders as the
 current document and its upcoming row goes (`tuleva_document_versions()`); an hourly WP-Cron
 job then moves it into the current field and empties the upcoming one
-(`tuleva_promote_due_documents()`). Nothing is done on the day: the switch was approved when
-the upcoming document was set. A document is scheduled only in its upcoming field: no template
-carries an upcoming URL. The fields go over the template's current URL (`tuleva_fund_document()`),
-and a filled field beats it whatever the dates: an upcoming field takes over on its date even if
-the template's document is newer, and the job then moves it into the current field, empty or not,
-so the page does not change when it runs. That includes a date already past: an upcoming field
-holding a document older than the one on the page replaces it at once and is promoted within the
-hour. Put only a document not yet in force into an upcoming field. Between two fields, an
-upcoming document dated on or before the current one is dropped instead of promoted, and the job
-empties its field. The job empties an upcoming field only after the current field reads back as
+(`tuleva_promote_due_documents()`), so the page does not change when it runs. Nothing is done on
+the day: the switch was approved when the upcoming document was set. A document is scheduled
+only in its upcoming field. An upcoming document dated on or before the current one is dropped
+instead of promoted, and the job empties its field; with the current field empty, a due upcoming
+document is the current one whatever its date. Put only a document not yet in force into an
+upcoming field. The job empties an upcoming field only after the current field reads back as
 the promoted document, and only while it still holds the document the job read (one saved there
 meanwhile stays).
-
-**Before this deploys**, these upcoming fields on the Estonian pages are filled, through
-agent-gateway's `fund_pages` or by an Administrator in wp-admin, with the attachments the URLs
-already point at (pick them in the media library; uploading again gives a `-1` name and a new
-link). They were the templates' upcoming URLs, after `get_site_url()`, and
-the templates no longer carry them, so without the fields the 01.01.2027 and 06.12.2026 documents
-never show.
-On master a filled upcoming field already wins over the URL (`helpers/acf/fund-disclosures.php:252`,
-called from `fund-stocks-details.php:21-22`, `fund-bonds-details.php:21-22` and
-`fund-third-details.php:21-22`), so filling them early changes nothing visible. TKF100 had no
-upcoming URL; TUV100's came with #151.
-
-| Page | Field | Document |
-|---|---|---|
-| TUK75, 17533 `tuleva-maailma-aktsiate-pensionifond` | `prospectus_upcoming_file` | `/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf` |
-| TUK75, 17533 `tuleva-maailma-aktsiate-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/08/TUK75-tingimused-kehtivad-alates-01.01.2027-1.pdf` |
-| TUK00, 17537 `tuleva-maailma-volakirjade-pensionifond` | `prospectus_upcoming_file` | `/wp-content/uploads/2026/08/TUK75-ja-TUK00-Prospekt-kehtib-alates-01.01.2027.pdf` |
-| TUK00, 17537 `tuleva-maailma-volakirjade-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/08/TUK00-tingimused-kehtivad-alates-01.01.2027.pdf` |
-| TUV100, 20938 `tuleva-iii-samba-pensionifond` | `prospectus_upcoming_file` | `/wp-content/uploads/2026/11/TUV100-Prospekt-kehtib-alates-06.12.2026.pdf` |
-| TUV100, 20938 `tuleva-iii-samba-pensionifond` | `terms_upcoming_file` | `/wp-content/uploads/2026/11/TUV100-tingimused-kehtivad-alates-06.12.2026.pdf` |
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. A 403 `tuleva_fund_document_locked` means
@@ -213,36 +189,10 @@ Create it as a new page, not as a copy of a fund page: a copy carries that fund'
 and a copied TKF100 NAV procedure would show on the pension pages. The theme saves a page on that
 template as **Private** whatever status it is given (a draft would not be read), and the template
 answers 404 to everyone. The theme finds the page by its template; one page is meant to be on it.
-Until it is, and while one of its fields is empty, the URL in `helpers/extras.php` renders
-instead; a due upcoming NAV procedure beats that URL whatever the dates, as on a fund page. If
-there is more than one page on the template, the edit screens of the fund pages and of the shared
-page say so. To change nothing visible when first filling it, pick the attachments the URLs
-already point at; uploading the same PDF again gives it a `-1` name and a new link.
-
-### Fallbacks still in place
-
-Most per-fund documents also have a hardcoded URL in their template, which renders while
-the field is empty. The pension pages' current fields are empty, so they show the code URLs;
-no upcoming document has one.
-On TKF100 the prospectus, terms, key information document and NAV procedure have a code
-URL; the model portfolio, summary of investor rights, investment report, report archive and
-the three upcoming documents do not — empty field, no row.
-
-The field wins over its literal, and an empty field falls back to it. So:
-
-- **To change a document, set the field.** Once it is set, editing the literal changes
-  nothing visible.
-- **To take a document off the page, remove its literal.** Clearing the field brings the
-  literal back, so wp-admin alone cannot do it. Promoting an upcoming document is not this
-  case: it switches itself on its date (see *Upcoming documents switch themselves*).
-- **A new document goes into the field, not into a new literal.** A literal added now is
-  one more row that needs a deploy to retire.
-- The three pension pages' `investment_report_file` is written by the monthly report job.
-  Leave its literal alone.
-
-Removing the fallbacks and replacing `scripts/update_acf.py` with one manifest-driven publisher are steps in
-`TODO — Fund page document publishing.md`, in the private tuleva repo under
-`work/investeerimistegevus/docs/`.
+While no page is on it, or one of its fields is empty, that document has no row on the fund
+pages. If there is no page on the template, the edit screens of the fund pages say so; if there
+is more than one, they and the shared page's do. To point a field at a PDF already in the media library, pick that
+attachment; uploading the same PDF again gives it a `-1` name and a new link.
 
 ---
 

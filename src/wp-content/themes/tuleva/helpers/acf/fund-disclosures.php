@@ -276,24 +276,20 @@ function tuleva_disclosure_source_post($post_id = null)
 }
 
 /**
- * The URL to render for a document, or '' when there is nothing to render.
- *
- * A document outside this fund's scope returns '' and never reaches $fallback: an
- * empty TKF100 CO2 figure must not borrow a pension fund's, and a pension fund with
- * no summary of investor rights must not borrow TKF100's.
+ * The URL or figure to render for a disclosure, or '' when there is nothing to render: its field
+ * is empty, or it is outside this fund's scope. The field is the only source, so an empty one
+ * takes its row off the page, and a TKF100 page never shows a pension fund's CO2 figure.
  *
  * A document with an upcoming version is read with tuleva_fund_document() instead, which reads
  * both versions.
  */
-function tuleva_fund_disclosure_value(string $name, string $fallback = '', ?string $template = null): string
+function tuleva_fund_disclosure_value(string $name, ?string $template = null): string
 {
     if (!tuleva_fund_disclosure_applies($name, $template)) {
         return '';
     }
 
-    $value = tuleva_disclosure_stored_value($name);
-
-    return $value !== '' ? $value : $fallback;
+    return tuleva_disclosure_stored_value($name);
 }
 
 /**
@@ -370,8 +366,7 @@ const TULEVA_UPCOMING_DISCLOSURES = [
  * From its effective date an upcoming document is the current one, so the page switches on
  * that day with nobody acting: the switch was approved when the upcoming document was set.
  * An upcoming document no newer than the current one is a leftover and is dropped, not
- * promoted: an upcoming field left behind once the current field moved past it. How the fields go
- * over a template's URL is tuleva_document_versions_on_page().
+ * promoted: an upcoming field left behind once the current field moved past it.
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
@@ -389,36 +384,14 @@ function tuleva_document_versions(string $current, string $upcoming, ?string $to
 }
 
 /**
- * The current and upcoming URL a page shows for a document, from its two fields and the URL its
- * template falls back to for the current one.
- *
- * The fields switch by date as the hourly job switches them (tuleva_document_versions()), and the
- * template's URL fills in only where they leave no current document: a filled field beats a
- * template URL whatever the dates, so a due upcoming field takes over from it even if the URL is
- * newer. A template has no upcoming URL: a document is scheduled only in its upcoming field. The
- * job writes only what this already shows, so the page does not change when it runs.
+ * A fund page's current and upcoming URL for a document, from this page's two fields switched by
+ * date (tuleva_document_versions()), as the hourly job switches them, so the page does not change
+ * when it runs. A document with no upcoming version resolves on its own, and one outside the fund's
+ * scope to nothing.
  *
  * @return array{0: string, 1: string} the current URL and the upcoming URL
  */
-function tuleva_document_versions_on_page(
-    string $current_field,
-    string $upcoming_field,
-    string $current_fallback = '',
-    ?string $today = null
-): array {
-    [$current, $upcoming] = tuleva_document_versions($current_field, $upcoming_field, $today);
-
-    return [$current !== '' ? $current : $current_fallback, $upcoming];
-}
-
-/**
- * A fund page's current and upcoming URL for a document (tuleva_document_versions_on_page()), from
- * this page's fields and the template's fallback for the current one. A document with no upcoming
- * version resolves on its own, and one outside the fund's scope to nothing, fallback included.
- *
- * @return array{0: string, 1: string} the current URL and the upcoming URL
- */
-function tuleva_fund_document(string $name, string $current_fallback = '', ?string $template = null): array
+function tuleva_fund_document(string $name, ?string $template = null): array
 {
     if (!tuleva_fund_disclosure_applies($name, $template)) {
         return ['', ''];
@@ -427,10 +400,9 @@ function tuleva_fund_document(string $name, string $current_fallback = '', ?stri
     $upcoming_name = TULEVA_UPCOMING_DISCLOSURES[$name] ?? null;
     $has_upcoming = $upcoming_name !== null && tuleva_fund_disclosure_applies($upcoming_name, $template);
 
-    return tuleva_document_versions_on_page(
+    return tuleva_document_versions(
         tuleva_disclosure_stored_value($name),
-        $has_upcoming ? tuleva_disclosure_stored_value($upcoming_name) : '',
-        $current_fallback
+        $has_upcoming ? tuleva_disclosure_stored_value($upcoming_name) : ''
     );
 }
 
@@ -468,15 +440,14 @@ function tuleva_fund_pages_on(string $template): array
 }
 
 /**
- * The URL of a document every fund links, from the shared documents page, or $fallback while
- * its field is empty or no page is on that template yet.
+ * The URL of a document every fund links, from the shared documents page, or '' while its field
+ * is empty or no page is on that template.
  */
-function tuleva_shared_document_url(string $name, string $fallback = ''): string
+function tuleva_shared_document_url(string $name): string
 {
     $page = tuleva_shared_documents_page();
-    $value = $page === null ? '' : tuleva_disclosure_stored_value($name, $page);
 
-    return $value !== '' ? $value : $fallback;
+    return $page === null ? '' : tuleva_disclosure_stored_value($name, $page);
 }
 
 /**
@@ -584,15 +555,19 @@ add_filter('rest_pre_insert_page', 'tuleva_shared_documents_page_status_over_res
 
 /**
  * What keeps the fund pages from reading the shared documents page as meant, for wp-admin, or ''.
- * Of several pages on the template only the oldest is read, so an edit to another one changes
- * nothing on the fund pages and nothing on them says so. No page yet is not a problem: the URLs in
- * the theme are meant.
+ * With no page on the template, trashed or moved to another one, the fund pages show none of the
+ * documents it holds. Of several pages on the template only the oldest is read, so an edit to
+ * another one changes nothing on the fund pages and nothing on them says so.
  */
 function tuleva_shared_documents_page_problem(): string
 {
     // The pages the fund pages could read, as they choose among them; pages on the template are
     // saved as private, so no other status is left to count.
     $pages = tuleva_fund_pages_on(TULEVA_SHARED_DOCUMENTS_TEMPLATE);
+
+    if ($pages === []) {
+        return 'No page is on the Fund shared documents template, so the fund pages show no sustainability, adverse impacts, remuneration policy or pension funds\' NAV procedure document. Keep one page in Estonian on that template, saved as Private: create it, restore it from the trash, or set its template back.';
+    }
 
     if (count($pages) < 2) {
         return '';
@@ -675,9 +650,8 @@ add_action('enqueue_block_editor_assets', 'tuleva_shared_documents_page_block_ed
  * document has an empty field to go into. The page itself switches at midnight whether or
  * not this has run.
  *
- * A page whose current field is empty is no exception: it shows the template's URL, which this
- * job cannot see, but a due upcoming field beats that whatever its date
- * (tuleva_document_versions_on_page()), so promoting it there changes nothing on the page either.
+ * A page whose current field is empty is no exception: the page already shows a due upcoming
+ * document as the current one, so promoting it there changes nothing on the page either.
  * The upcoming field is emptied only once the current field reads back as the promoted document,
  * so a write that did not land is tried again the next hour, and only while it still holds the
  * document the job read: one saved there meanwhile is the next upcoming document and stays.
