@@ -3522,3 +3522,11 @@ msgstr "Jah. Maksuvõit ei sõltu east: iga 100&nbsp;€ kohta, mille palgast k�
 #: templates/second-pillar-246-content.php:174
 msgid "From the age of 60 you can also use your II&nbsp;pillar savings on better terms: income tax is 10%, or 0% with a fund pension paid out regularly."
 msgstr "Alates 60.&nbsp;eluaastast saad II&nbsp;samba vara ka soodsamalt kasutada: tulumaks on 10%, regulaarsete väljamaksetega fondipensioni puhul 0%. <a class=\"inline\" href=\"https://tuleva.ee/soovitused/retsept-60ndates-kogumiseks/\">Loe lähemalt kogumisest 60ndates →</a>"
+
+#: templates/components/second-pillar-246-hero.php:62
+msgid "https://tuleva.ee/en/increase-ii-pillar-payments-2/#kalkulaator"
+msgstr "https://tuleva.ee/ii-samba-sissemakse-suurendamine-2-4-6/#kalkulaator"
+
+#: templates/components/second-pillar-246-hero.php:62
+msgid "Find out more"
+msgstr "Uurin lähemalt"
