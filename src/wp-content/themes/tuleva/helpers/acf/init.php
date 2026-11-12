@@ -12,6 +12,7 @@ $acf_includes = [
     'helpers/acf/fund-savings.php', // Savings fund page
     'helpers/acf/fund-disclosures.php', // Documents and disclosures on every fund page
     'helpers/acf/fund-disclosure-log.php', // Who may change them, and every change
+    'helpers/acf/fund-disclosure-gaps.php', // What a fund page is missing, for wp-admin and the morning check
     'helpers/acf/fund-choosing.php', // Instructions — Step 1 page fields
     'helpers/acf/jobs.php' // Jobs page fields
 ];
