@@ -1,13 +1,16 @@
 // A calculator whose result reads as a written sum: the parts, a line, and the
 // total, with the operators in their own column so the labels align.
 
+$calculator-sum-operator-width: 1rem;
+$calculator-sum-gap: .25rem;
+
 .calculator:has(.calculator-sum) {
     // Labels in the grey input box start where the sum's labels do, past the + and = column
     // (the box's row pulls back by half a gutter, which the column padding then has to cover).
     // On a phone the label sits above its field instead, so it starts where the field does
     @include media-breakpoint-up(sm) {
         .bg-gray-2 .col-form-label {
-            padding-left: calc(1.75rem + var(--bs-gutter-x) * .5);
+            padding-left: calc(#{$calculator-sum-operator-width + $calculator-sum-gap} + var(--bs-gutter-x) * .5);
         }
     }
 }
@@ -17,7 +20,7 @@
     &__row {
         display: flex;
         align-items: baseline;
-        gap: .25rem;
+        gap: $calculator-sum-gap;
         color: $navy-blue;
         font-size: 1rem;
         font-weight: $font-weight-normal;
@@ -29,7 +32,7 @@
 
     &__operator {
         flex-shrink: 0;
-        width: 1.5rem;
+        width: $calculator-sum-operator-width;
         font-size: 1.125rem;
         font-weight: $font-weight-medium;
     }

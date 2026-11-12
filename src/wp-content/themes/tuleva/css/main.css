@@ -18763,7 +18763,7 @@ sup {
 
 @media (min-width: 576px) {
   .calculator:has(.calculator-sum) .bg-gray-2 .col-form-label {
-    padding-left: calc(1.75rem + var(--bs-gutter-x) * 0.5);
+    padding-left: calc(1.25rem + var(--bs-gutter-x) * 0.5);
   }
 }
 
@@ -18788,7 +18788,7 @@ sup {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 1.5rem;
+  width: 1rem;
   font-size: 1.125rem;
   font-weight: 500;
 }
