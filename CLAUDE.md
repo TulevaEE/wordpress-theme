@@ -58,6 +58,14 @@ fund.
 Adding or removing a disclosure for a fund is an edit to the scope table, not to a
 template.
 
+**Gaps.** A required document or figure whose field is empty, and a prospectus, terms or NAV
+procedure (current or upcoming) whose filename carries no readable effective date, are a page's
+gaps (`helpers/acf/fund-disclosure-gaps.php`). The page's edit screen lists them, and its REST
+answer carries them as `tuleva_disclosure_gaps` (null on a page that is not a fund page), which
+onboarding-service checks every morning and reports in Slack. A fund page's gaps include those of
+the shared documents page that it shows, marked `"page": "shared"`. TKF100's investment report is
+optional: it has no monthly report duty.
+
 ### Updating a document
 
 **Through agent-gateway (`fund_pages`):** the normal route. A second person approves in
