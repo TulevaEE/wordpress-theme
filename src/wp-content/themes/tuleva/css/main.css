@@ -19198,6 +19198,35 @@ sup {
   font-weight: 700;
   white-space: nowrap;
 }
+.second-pillar-246-page .hero-text .hero-more {
+  margin: 28px 0 0;
+}
+.second-pillar-246-page .hero-text .hero-more a {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  padding: 11px 22px;
+}
+.second-pillar-246-page .hero-text .hero-more a:hover, .second-pillar-246-page .hero-text .hero-more a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+.second-pillar-246-page .card-more {
+  display: none;
+}
+@media (max-width: 900px) {
+  .second-pillar-246-page .hero-text .hero-more {
+    display: none;
+  }
+  .second-pillar-246-page .card-more {
+    display: block;
+  }
+}
 @media (max-width: 900px) {
   .second-pillar-246-page .hero-in {
     grid-template-columns: minmax(0, 1fr);

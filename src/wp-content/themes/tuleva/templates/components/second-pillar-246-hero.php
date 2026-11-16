@@ -11,6 +11,9 @@
       <h1><?php _e('Raise your II&nbsp;pillar contribution', TEXT_DOMAIN); ?></h1>
       <p class="dek"><?php _e('For every 100&nbsp;€ you set aside from your pay, 128&nbsp;€ goes into your II&nbsp;pillar.', TEXT_DOMAIN); ?></p>
       <p class="dek-note"><?php _e('The difference is your income tax benefit. <strong>The deadline is 30&nbsp;November.</strong>', TEXT_DOMAIN); ?></p>
+      <?php if (!is_page_template('page_second-pillar-246.php')) : // Elsewhere the landing page's detail is one click away ?>
+        <p class="hero-more"><a href="<?php echo esc_url(__('https://tuleva.ee/en/increase-ii-pillar-payments-2/#kalkulaator', TEXT_DOMAIN)); ?>"><?php _e('Find out more', TEXT_DOMAIN); ?></a></p>
+      <?php endif; ?>
     </div>
     <div class="hero-card">
       <section class="card calculator rounded-4" id="calc" aria-label="<?php esc_attr_e('II pillar tax benefit calculator', TEXT_DOMAIN); ?>">
@@ -58,8 +61,8 @@
             <a class="btn btn-primary btn-lg mt-2" href="<?php echo get_app_url('/2nd-pillar-payment-rate'); ?>"><?php _e('Raise your contribution', TEXT_DOMAIN); ?></a>
           </div>
           <p class="mt-2 mb-0 py-2 text-secondary text-center small"><?php _e('Log in and make your choice. You can change it every year.', TEXT_DOMAIN); ?></p>
-          <?php if (!is_page_template('page_second-pillar-246.php')) : // Elsewhere the landing page's detail is one click away ?>
-            <p class="mb-0 pb-2 text-center"><a href="<?php echo esc_url(__('https://tuleva.ee/en/increase-ii-pillar-payments-2/#kalkulaator', TEXT_DOMAIN)); ?>"><?php _e('Find out more', TEXT_DOMAIN); ?></a></p>
+          <?php if (!is_page_template('page_second-pillar-246.php')) : // On a phone the link sits under the button instead of above the calculator ?>
+            <p class="mb-0 pb-2 text-center card-more"><a href="<?php echo esc_url(__('https://tuleva.ee/en/increase-ii-pillar-payments-2/#kalkulaator', TEXT_DOMAIN)); ?>"><?php _e('Find out more', TEXT_DOMAIN); ?></a></p>
           <?php endif; ?>
         </div>
       </section>
