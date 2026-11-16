@@ -114,32 +114,26 @@ $remuneration_policy_url = get_remuneration_document_url();
                             <?php if ($prospectus_url || $terms_url): ?>
                                 <li>
                                     <?php if ($prospectus_url): ?>
-                                        <a href="<?php echo esc_url($prospectus_url); ?>"
-                                           target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
+                                        <a href="<?php echo esc_url($prospectus_url); ?>"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>
                                     <?php if ($prospectus_url && $terms_url): _e(' and ', TEXT_DOMAIN); endif; ?>
                                     <?php if ($terms_url): ?>
-                                        <a href="<?php echo esc_url($terms_url); ?>"
-                                           target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
+                                        <a href="<?php echo esc_url($terms_url); ?>"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                     <?php if ($prospectus_upcoming_url || $terms_upcoming_url): ?>
                                         <br>
                                         <?php if ($upcoming_dates_differ): ?>
-                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
-                                               target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php if ($prospectus_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"><?php _e('Prospectus', TEXT_DOMAIN) ?></a><?php if ($prospectus_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($prospectus_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                             <br>
-                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"
-                                               target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php if ($terms_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
+                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a><?php if ($terms_upcoming_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($terms_upcoming_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                         <?php else: ?>
                                         <?php if ($prospectus_upcoming_url): ?>
-                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"
-                                               target="_blank"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
+                                            <a href="<?php echo esc_url($prospectus_upcoming_url); ?>"><?php _e('Prospectus', TEXT_DOMAIN) ?></a>
                                         <?php endif; ?>
                                         <?php if ($prospectus_upcoming_url && $terms_upcoming_url): _e(' and ', TEXT_DOMAIN); endif; ?>
                                         <?php if ($terms_upcoming_url): ?>
-                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"
-                                               target="_blank"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
+                                            <a href="<?php echo esc_url($terms_upcoming_url); ?>"><?php _e('Terms and conditions', TEXT_DOMAIN) ?></a>
                                         <?php endif; ?>
                                         <?php if ($upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                         <?php endif; ?>
@@ -148,56 +142,48 @@ $remuneration_policy_url = get_remuneration_document_url();
                             <?php endif; ?>
                             <?php if ($model_portfolio_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($model_portfolio_url); ?>"
-                                       target="_blank"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($model_portfolio_url); ?>"><?php _e('Model portfolio', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($key_investor_info_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($key_investor_info_url); ?>"
-                                       target="_blank"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($key_investor_info_url); ?>"><?php _e('Key Investor Information', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($nav_procedure_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($nav_procedure_url); ?>"
-                                       target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($nav_procedure_url); ?>"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                     <?php if ($nav_procedure_upcoming_url): ?>
                                         <br>
-                                        <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"
-                                           target="_blank"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
+                                        <a href="<?php echo esc_url($nav_procedure_upcoming_url); ?>"><?php _e('Procedure for determining net worth of fund', TEXT_DOMAIN) ?></a>
                                         <?php if ($nav_procedure_upcoming_effective_date): printf(__(' (in Estonian, effective from %s)', TEXT_DOMAIN), esc_html($nav_procedure_upcoming_effective_date)); else: _e(' (in Estonian)', TEXT_DOMAIN); endif; ?>
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($sustainability_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($sustainability_url); ?>"
-                                       target="_blank"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($sustainability_url); ?>"><?php _e('Sustainability', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($adverse_impacts_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($adverse_impacts_url); ?>"
-                                       target="_blank"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($adverse_impacts_url); ?>"><?php _e('Non-consideration of adverse impacts of investment decisions on sustainability factors', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($remuneration_policy_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($remuneration_policy_url); ?>"
-                                       target="_blank"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($remuneration_policy_url); ?>"><?php _e('Remuneration Policy of Tuleva Fondid AS', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
                             <?php if ($investor_rights_url): ?>
                                 <li>
-                                    <a href="<?php echo esc_url($investor_rights_url); ?>"
-                                       target="_blank"><?php _e('Summary of Investor Rights', TEXT_DOMAIN) ?></a>
+                                    <a href="<?php echo esc_url($investor_rights_url); ?>"><?php _e('Summary of Investor Rights', TEXT_DOMAIN) ?></a>
                                     <?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                                 </li>
                             <?php endif; ?>
@@ -215,8 +201,7 @@ $remuneration_policy_url = get_remuneration_document_url();
                                         <br>
                                     <?php endif; ?>
                                     <?php if ($previous_reports_url): ?>
-                                        <a href="<?php echo esc_url($previous_reports_url); ?>"
-                                           target="_blank"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
+                                        <a href="<?php echo esc_url($previous_reports_url); ?>"><?php _e('Previous reports', TEXT_DOMAIN) ?></a>
                                     <?php endif; ?>
                                 </li>
                             <?php endif; ?>

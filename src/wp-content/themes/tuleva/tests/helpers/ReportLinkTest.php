@@ -166,12 +166,12 @@ final class ReportLinkTest extends TestCase
     public function noPayloadQuoteEscapesItsAttribute(): void
     {
         // The one assertion that fails if esc_url()/esc_html() stop being called at all, whichever
-        // encoding they use: a double quote reaching the output raw would close href="..." or
-        // target="..." early. The markup has exactly two quoted attributes, so four delimiters is
-        // the whole budget -- a fifth quote is a payload that escaped its attribute.
+        // encoding they use: a double quote reaching the output raw would close href="..." early.
+        // The markup has exactly one quoted attribute, so two delimiters is the whole budget -- a
+        // third quote is a payload that escaped its attribute.
         $link = generate_report_link('https://tuleva.ee/files/a".pdf', 'Reports " onmouseover=x');
 
-        $this->assertSame(4, substr_count($link, '"'), 'only the attribute delimiters may survive');
+        $this->assertSame(2, substr_count($link, '"'), 'only the attribute delimiters may survive');
         $this->assertStringNotContainsString('onmouseover=x"', $link);
     }
 }

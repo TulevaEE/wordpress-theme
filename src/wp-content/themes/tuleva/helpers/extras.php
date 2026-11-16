@@ -427,7 +427,7 @@ function generate_report_link($url, $link_text = null) {
     $href = $is_absolute ? $url : get_site_url() . $url;
 
     $output = sprintf(
-        '<a href="%s" target="_blank">%s</a>',
+        '<a href="%s">%s</a>',
         esc_url($href),
         esc_html($link_text)
     );
@@ -451,7 +451,7 @@ function generate_filename_dated_link($url, $link_text_prefix = '') {
     $link_text = trim($link_text_prefix . (empty($date) ? '' : ' ' . $date));
 
     $output = sprintf(
-        '<a href="%s%s" target="_blank">%s</a>',
+        '<a href="%s%s">%s</a>',
         get_site_url(),
         $path,
         $link_text
