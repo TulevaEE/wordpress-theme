@@ -56,6 +56,42 @@ final class SecondPillarRejoinTest extends TestCase
     }
 
     #[Test]
+    #[DataProvider('deadlineLabelProvider')]
+    public function deadlineLabelNamesTheDeadlineStillOpenInTallinn(string $now, string $expectedLabel): void
+    {
+        $label = get_second_pillar_rejoin_deadline_label(new DateTimeImmutable($now, new DateTimeZone('Europe/Tallinn')));
+
+        $this->assertSame($expectedLabel, $label);
+    }
+
+    public static function deadlineLabelProvider(): array
+    {
+        return [
+            'last minute of 31 March' => ['2026-03-31 23:59:00', '31&nbsp;March'],
+            '1 April' => ['2026-04-01 00:00:00', '31&nbsp;July'],
+            '1 August' => ['2026-08-01 00:00:00', '30&nbsp;November'],
+            '1 December' => ['2026-12-01 00:00:00', '31&nbsp;March'],
+        ];
+    }
+
+    #[Test]
+    public function fillsTheDeadlinePlaceholderSoTextNeverNamesAPassedDeadline(): void
+    {
+        $now = new DateTimeImmutable('2026-12-01 00:00:00', new DateTimeZone('Europe/Tallinn'));
+
+        $this->assertSame(', deadline 31&nbsp;March', with_second_pillar_rejoin_deadline(', deadline {deadline}', $now));
+    }
+
+    #[Test]
+    public function leavesTextWithoutThePlaceholderAsItIs(): void
+    {
+        $now = new DateTimeImmutable('2026-11-16 12:00:00', new DateTimeZone('Europe/Tallinn'));
+
+        $this->assertSame('', with_second_pillar_rejoin_deadline('', $now));
+        $this->assertSame('. Read more', with_second_pillar_rejoin_deadline('. Read more', $now));
+    }
+
+    #[Test]
     #[DataProvider('closingLeadProvider')]
     public function closingLeadNamesTheSameDeadlineAsTheHeroAndTheMonthTheIiPillarStartsGrowing(
         string $now,
