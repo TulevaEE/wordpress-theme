@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-16T08:46:10+00:00\n"
+"POT-Creation-Date: 2026-11-16T11:28:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -19,7 +19,7 @@ msgid "Tuleva"
 msgstr ""
 
 #: functions.php:31
-#: helpers/acf/init.php:21
+#: helpers/acf/init.php:22
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
 #, php-format
@@ -140,6 +140,18 @@ msgstr ""
 
 #: helpers/second-pillar-rejoin.php:25
 msgid "<span class=\"rejoin-cta-line\">If you submitted your withdrawal application by November 2021, you can start saving again from next May.</span><br><span class=\"rejoin-cta-line\">To do that, apply by <b>30&nbsp;November</b>.</span>"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:34
+msgid "31&nbsp;March"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:35
+msgid "31&nbsp;July"
+msgstr ""
+
+#: helpers/second-pillar-rejoin.php:36
+msgid "30&nbsp;November"
 msgstr ""
 
 #: helpers/setup.php:25

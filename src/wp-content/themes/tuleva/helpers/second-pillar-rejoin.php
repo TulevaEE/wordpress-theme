@@ -25,3 +25,22 @@ function get_second_pillar_rejoin_closing_lead(DateTimeInterface $now) {
         11 => __('<span class="rejoin-cta-line">If you submitted your withdrawal application by November 2021, you can start saving again from next May.</span><br><span class="rejoin-cta-line">To do that, apply by <b>30&nbsp;November</b>.</span>', TEXT_DOMAIN),
     };
 }
+
+/**
+ * Returns the day of the rejoin deadline still open at $now, for text that names it on its own.
+ */
+function get_second_pillar_rejoin_deadline_label(DateTimeInterface $now) {
+    return match ((int) get_next_second_pillar_deadline($now)->format('n')) {
+        3 => __('31&nbsp;March', TEXT_DOMAIN),
+        7 => __('31&nbsp;July', TEXT_DOMAIN),
+        11 => __('30&nbsp;November', TEXT_DOMAIN),
+    };
+}
+
+/**
+ * Replaces {deadline} in editor-written text with the rejoin deadline still open at $now, so the
+ * text moves on to the next window by itself.
+ */
+function with_second_pillar_rejoin_deadline(string $text, DateTimeInterface $now) {
+    return str_replace('{deadline}', get_second_pillar_rejoin_deadline_label($now), $text);
+}

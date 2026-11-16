@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 
 #: functions.php:31
-#: helpers/acf/init.php:21
+#: helpers/acf/init.php:22
 #: helpers/post-types/init.php:9
 #: widgets/init.php:15
 #, php-format
@@ -3540,3 +3540,15 @@ msgstr "Vaata, kui palju oma maksudest saad taas suunata enda II&nbsp;samba kont
 #: templates/second-pillar-rejoin-content.php:324
 msgid "Each deadline sets when contributions start: apply by the end of November and they start in May, by the end of March and they start in September, by the end of July and they start in January. If a deadline passes, you can still apply, but contributions start later."
 msgstr "Iga tähtaeg määrab, millal sissemaksed algavad: novembri lõpuks esitatud avalduse järel mais, märtsi lõpuks esitatud avalduse järel septembris ja juuli lõpuks esitatud avalduse järel jaanuaris. Kui tähtaeg möödub, saad avalduse ikka esitada, aga sissemaksed algavad siis hiljem."
+
+#: helpers/second-pillar-rejoin.php:34
+msgid "31&nbsp;March"
+msgstr "31.&nbsp;märts"
+
+#: helpers/second-pillar-rejoin.php:35
+msgid "31&nbsp;July"
+msgstr "31.&nbsp;juuli"
+
+#: helpers/second-pillar-rejoin.php:36
+msgid "30&nbsp;November"
+msgstr "30.&nbsp;november"
