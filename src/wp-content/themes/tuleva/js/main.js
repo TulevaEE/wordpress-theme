@@ -406,10 +406,7 @@ $(document).ready(function ($) {
                 const targetElement = document.querySelector(`.toggle-parent a[href="#${hash}"]`);
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    targetElement.scrollIntoView({ block: 'start' });
 
                     targetElement.click();
                 }
@@ -432,7 +429,7 @@ $(document).ready(function ($) {
                     }
                     qaToggle.click();
                     setTimeout(() => {
-                        qaToggle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        qaToggle.scrollIntoView({ block: 'start' });
                     }, 200);
                 }
             }
@@ -532,6 +529,20 @@ $(document).ready(function ($) {
                 setSwitchState(getInitialCookieState())
             }
             applyContrastState();
+        },
+        initBottomScrollPaddingForCookieYes = function () {
+            const reserveRoomForShownCookieYesBar = () => {
+                const shownBar = document.querySelector('.cky-consent-container:not(.cky-hide)');
+                document.documentElement.style.setProperty(
+                    '--fixed-bottom-height',
+                    shownBar ? `${shownBar.offsetHeight}px` : '0px'
+                );
+            };
+
+            reserveRoomForShownCookieYesBar();
+            document.addEventListener('cookieyes_banner_load', reserveRoomForShownCookieYesBar);
+            document.addEventListener('cookieyes_consent_update', reserveRoomForShownCookieYesBar);
+            window.addEventListener('resize', reserveRoomForShownCookieYesBar);
         },
         initCountdownTimerFull = function () {
             // Get the countdown end date from the data attribute (dynamically set in PHP)
@@ -638,6 +649,9 @@ $(document).ready(function ($) {
         function () {
             initHighContrast();
         },
+        function () {
+            initBottomScrollPaddingForCookieYes();
+        },
     ]
 
     setupFunctions.forEach(function (func) {
@@ -716,8 +730,7 @@ $(document).ready(function ($) {
                     // Prevent default scroll behavior
                     ev.preventDefault();
 
-                    // Use scrollIntoView API for smooth scrolling
-                    target.get(0).scrollIntoView({behavior: 'smooth'});
+                    target.get(0).scrollIntoView();
 
                     // Update the URL hash without jumping
                     history.pushState(null, null, this.hash);
