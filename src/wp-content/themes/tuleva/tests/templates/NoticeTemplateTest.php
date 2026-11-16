@@ -15,6 +15,13 @@ if (!function_exists('__')) {
     }
 }
 
+if (!function_exists('_x')) {
+    function _x($text, $context, $domain = null)
+    {
+        return $text;
+    }
+}
+
 function get_sub_field(string $name): string
 {
     return NoticeTemplateTest::$subFields[$name];
@@ -32,7 +39,6 @@ final class NoticeTemplateTest extends TestCase
         'text' => 'Took money out of your II pillar? You can now start saving again.',
         'url' => '/en/rejoining-the-second-pillar/',
         'link_text' => 'Read more',
-        'text_after_link' => '',
     ];
 
     public static array $subFields = self::SUB_FIELDS;
@@ -58,21 +64,21 @@ final class NoticeTemplateTest extends TestCase
     }
 
     #[Test]
-    public function continuesAfterTheLinkWithTheNextFilingDeadline(): void
+    public function namesTheNextFilingDeadlineBeforeTheLinkSoTheSentenceEndsOnIt(): void
     {
         self::$subFields = [
             ...self::SUB_FIELDS,
-            'text' => 'Took money out of your II pillar? You can now',
+            'text' => 'Took money out of your II pillar? By {deadline} you can',
             'link_text' => 'rejoin the II pillar',
-            'text_after_link' => ', deadline {deadline}',
         ];
 
         $html = $this->renderNotice();
 
         $this->assertStringContainsString(
-            'rejoin the II pillar</a>, deadline ' . get_second_pillar_rejoin_deadline_label(get_current_time_tallinn()),
+            'By ' . get_second_pillar_rejoin_deadline_label(get_current_time_tallinn()) . ' you can',
             $html
         );
+        $this->assertStringEndsWith('rejoin the II pillar</a>', trim(strip_tags($html, '<a>')));
     }
 
     #[Test]

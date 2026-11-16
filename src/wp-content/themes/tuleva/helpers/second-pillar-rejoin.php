@@ -38,9 +38,24 @@ function get_second_pillar_rejoin_deadline_label(DateTimeInterface $now) {
 }
 
 /**
- * Replaces {deadline} in editor-written text with the rejoin deadline still open at $now, so the
- * text moves on to the next window by itself.
+ * Returns the same deadline as get_second_pillar_rejoin_deadline_label() in the form text leads
+ * with when it names the day before what can be done by then: Estonian "30. novembrini saad".
+ */
+function get_second_pillar_rejoin_deadline_until_label(DateTimeInterface $now) {
+    return match ((int) get_next_second_pillar_deadline($now)->format('n')) {
+        3 => _x('31&nbsp;March', 'until the rejoin deadline', TEXT_DOMAIN),
+        7 => _x('31&nbsp;July', 'until the rejoin deadline', TEXT_DOMAIN),
+        11 => _x('30&nbsp;November', 'until the rejoin deadline', TEXT_DOMAIN),
+    };
+}
+
+/**
+ * Replaces {deadline} and {deadline_until} in editor-written text with the rejoin deadline still
+ * open at $now, so the text moves on to the next window by itself.
  */
 function with_second_pillar_rejoin_deadline(string $text, DateTimeInterface $now) {
-    return str_replace('{deadline}', get_second_pillar_rejoin_deadline_label($now), $text);
+    return strtr($text, [
+        '{deadline}' => get_second_pillar_rejoin_deadline_label($now),
+        '{deadline_until}' => get_second_pillar_rejoin_deadline_until_label($now),
+    ]);
 }

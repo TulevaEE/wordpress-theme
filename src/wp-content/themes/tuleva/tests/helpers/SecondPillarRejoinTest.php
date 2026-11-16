@@ -16,6 +16,13 @@ if (!function_exists('__')) {
     }
 }
 
+if (!function_exists('_x')) {
+    function _x($text, $context, $domain = null)
+    {
+        return $text;
+    }
+}
+
 require_once __DIR__ . '/../../helpers/second-pillar-rejoin.php';
 
 final class SecondPillarRejoinTest extends TestCase
@@ -80,6 +87,23 @@ final class SecondPillarRejoinTest extends TestCase
         $now = new DateTimeImmutable('2026-12-01 00:00:00', new DateTimeZone('Europe/Tallinn'));
 
         $this->assertSame(', deadline 31&nbsp;March', with_second_pillar_rejoin_deadline(', deadline {deadline}', $now));
+    }
+
+    #[Test]
+    #[DataProvider('deadlineLabelProvider')]
+    public function untilFormNamesTheSameDeadlineSoTextCanLeadWithIt(string $now, string $expectedLabel): void
+    {
+        $label = get_second_pillar_rejoin_deadline_until_label(new DateTimeImmutable($now, new DateTimeZone('Europe/Tallinn')));
+
+        $this->assertSame($expectedLabel, $label);
+    }
+
+    #[Test]
+    public function fillsTheUntilPlaceholderSoTextCanNameTheDeadlineBeforeTheLink(): void
+    {
+        $now = new DateTimeImmutable('2026-12-01 00:00:00', new DateTimeZone('Europe/Tallinn'));
+
+        $this->assertSame('31&nbsp;March you can', with_second_pillar_rejoin_deadline('{deadline_until} you can', $now));
     }
 
     #[Test]
