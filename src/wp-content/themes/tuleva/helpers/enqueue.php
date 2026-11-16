@@ -12,23 +12,6 @@ class ThemeEnqueue
         $this->init();
     }
 
-    private function has_page_component($layout)
-    {
-        if (!function_exists('get_field') || !is_singular()) {
-            return false;
-        }
-        $components = get_field('page_components', get_queried_object_id());
-        if (!is_array($components)) {
-            return false;
-        }
-        foreach ($components as $component) {
-            if (($component['acf_fc_layout'] ?? '') === $layout) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public function enqueue_assets()
     {
         include_once 'enqueue_versions.php';
@@ -200,7 +183,7 @@ class ThemeEnqueue
         }
         // The front page shows the 2-4-6 hero through an ACF layout, without the growth
         // calculator and without taking the focus into the salary field on arrival
-        if (!is_page_template('page_second-pillar-246.php') && $this->has_page_component('second_pillar_payment_rate_hero')) {
+        if (!is_page_template('page_second-pillar-246.php') && current_page_has_component('second_pillar_payment_rate_hero')) {
             array_push(
                 $assets,
                 [
