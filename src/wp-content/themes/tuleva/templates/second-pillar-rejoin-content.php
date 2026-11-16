@@ -321,7 +321,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p><?php _e('There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('Each deadline sets when contributions start: apply by the end of November and they start in May, by the end of March and they start in September, by the end of July and they start in January. If a deadline passes, you can still apply, but contributions start later.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>

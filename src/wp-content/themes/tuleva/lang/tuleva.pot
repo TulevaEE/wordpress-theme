@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-12T12:26:51+00:00\n"
+"POT-Creation-Date: 2026-11-16T08:46:10+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -119,15 +119,15 @@ msgid "Comparison index"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:11
-msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;March</b>."
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. <b class=\"text-highlight text-nowrap\">Deadline 31&nbsp;March.</b>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:12
-msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>31&nbsp;July</b>."
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. <b class=\"text-highlight text-nowrap\">Deadline 31&nbsp;July.</b>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:13
-msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. Apply by <b>30&nbsp;November</b>."
+msgid "See how much of your taxes you can direct into your own II&nbsp;pillar&nbsp;account. <b class=\"text-highlight text-nowrap\">Deadline 30&nbsp;November.</b>"
 msgstr ""
 
 #: helpers/second-pillar-rejoin.php:23
@@ -3266,7 +3266,7 @@ msgid "Five years after your application"
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:324
-msgid "There is no final deadline. If you apply by the end of November, contributions start in May; by the end of March, in September; and by the end of July, in January."
+msgid "Each deadline sets when contributions start: apply by the end of November and they start in May, by the end of March and they start in September, by the end of July and they start in January. If a deadline passes, you can still apply, but contributions start later."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:325
