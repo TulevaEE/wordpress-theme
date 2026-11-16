@@ -37,6 +37,7 @@ const updateEnqueueVersion = async function (name) {
     const companySavingsEnqueueRegex = /\$COMPANY_SAVINGS_JS_ENQUEUE_VERSION.+\n/;
     const secondPillarRejoinEnqueueRegex = /\$SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION.+\n/;
     const secondPillar246EnqueueRegex = /\$SECOND_PILLAR_246_JS_ENQUEUE_VERSION.+\n/;
+    const salaryArrivalFocusEnqueueRegex = /\$SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION.+\n/;
     const readerViewEnqueueRegex = /\$READER_VIEW_JS_ENQUEUE_VERSION.+\n/;
 
     const getDateString = () => new Date().toISOString().split("T")[0];
@@ -91,6 +92,12 @@ const updateEnqueueVersion = async function (name) {
             secondPillar246EnqueueRegex,
             `$SECOND_PILLAR_246_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
                 "js/second-pillar-246-calculator.js"
+            )}";\n`
+        )
+        .replace(
+            salaryArrivalFocusEnqueueRegex,
+            `$SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION="${getDateString()}-${await getFileHash(
+                "js/salary-arrival-focus.js"
             )}";\n`
         )
         .replace(

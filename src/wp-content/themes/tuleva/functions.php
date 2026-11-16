@@ -14,6 +14,7 @@ $theme_includes = [
     'helpers/funds-api.php', // Reads the fund list from the onboarding service
     'helpers/average-fund-fee.php', // The calculator's monthly average II pillar fund fee
     'helpers/cleanup.php', // Cleans wordpress output
+    'helpers/page-components.php', // Which ACF page components a page uses
     'helpers/enqueue.php', // Enqueue scripts & styles
     'helpers/nav.php', // Nav menu customizations
     'helpers/acf/init.php', // Init Advanced Custom Fields

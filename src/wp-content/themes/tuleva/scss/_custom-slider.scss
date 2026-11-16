@@ -57,6 +57,16 @@
         text-align: right;
     }
 
+    button.historic-return-rate {
+        width: 100%;
+        padding: 2px 0 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .historic-return-rate::after {
         position: absolute;
         top: calc(($form-range-thumb-height - $form-range-track-height) / 2 + $form-range-track-height);

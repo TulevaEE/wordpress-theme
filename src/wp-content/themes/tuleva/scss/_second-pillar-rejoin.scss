@@ -141,68 +141,11 @@
         outline: none;
     }
 }
-//
-// The calculator reads as a written sum: the two parts, a line, and the
-// total, with the operators in their own column so the labels align.
-
 .second-pillar-rejoin-page {
-
-    // Labels in the grey input box start where the sum's labels do, past the + and = column
-    // (the box's row pulls back by half a gutter, which the column padding then has to cover).
-    // On a phone the label sits above its field instead, so it starts where the field does
-    @include media-breakpoint-up(sm) {
-        .bg-gray-2 .col-form-label {
-            padding-left: calc(1.75rem + var(--bs-gutter-x) * .5);
-        }
-    }
 
     .rejoin-rate .btn {
         flex: 1 0 0;
     }
-
-    .rejoin-sum__row {
-        display: flex;
-        align-items: baseline;
-        gap: .25rem;
-        color: $navy-blue;
-        font-size: 1.125rem;
-        font-weight: $font-weight-medium;
-    }
-
-    .rejoin-sum__row + .rejoin-sum__row {
-        margin-top: .5rem;
-    }
-
-    .rejoin-sum__operator {
-        flex-shrink: 0;
-        width: 1.5rem;
-        font-size: 1.25rem;
-        font-weight: $font-weight-bold;
-    }
-
-    .rejoin-sum__label {
-        flex-grow: 1;
-    }
-
-    .rejoin-sum__amount {
-        font-size: 1.25rem;
-        font-weight: $font-weight-bold;
-        white-space: nowrap;
-    }
-
-    .rejoin-sum__row--tax-win {
-        color: $green;
-
-        .inline-help {
-            background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMzQgMTYiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgZmlsbD0iI2ZmZiIgcj0iNy40IiBzdHJva2U9IiMwMDgzMDAiIHN0cm9rZS13aWR0aD0iMS4yIi8+PGNpcmNsZSBjeD0iOCIgY3k9IjQuNiIgZmlsbD0iIzAwODMwMCIgcj0iMS4wNSIvPjxyZWN0IGZpbGw9IiMwMDgzMDAiIGhlaWdodD0iNS4yIiByeD0iLjciIHdpZHRoPSIxLjQiIHg9IjcuMyIgeT0iNi42Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI4IiBmaWxsPSIjMDA4MzAwIiByPSI4Ii8+PGNpcmNsZSBjeD0iMjYiIGN5PSI0LjYiIGZpbGw9IiNmZmYiIHI9IjEuMDUiLz48cmVjdCBmaWxsPSIjZmZmIiBoZWlnaHQ9IjUuMiIgcng9Ii43IiB3aWR0aD0iMS40IiB4PSIyNS4zIiB5PSI2LjYiLz48L3N2Zz4=);
-        }
-    }
-
-    .rejoin-sum__row--total {
-        padding-top: .5rem;
-        border-top: 1px solid $gray-border-3;
-    }
-
 }
 
 // The rest of the page reuses the savings fund landing page's components; these

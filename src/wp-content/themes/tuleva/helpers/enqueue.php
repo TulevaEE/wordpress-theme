@@ -152,9 +152,16 @@ class ThemeEnqueue
             array_push(
                 $assets,
                 [
+                    'handle' => 'salary-arrival-focus',
+                    'src' => $js_path . 'salary-arrival-focus.js',
+                    'ver' => $SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ],
+                [
                     'handle' => 'second-pillar-rejoin-calculator',
                     'src' => $js_path . 'second-pillar-rejoin-calculator.js',
-                    'deps' => 'bootstrap',
+                    'deps' => ['bootstrap', 'salary-arrival-focus'],
                     'ver' => $SECOND_PILLAR_REJOIN_JS_ENQUEUE_VERSION,
                     'js_in_header' => false,
                     'enqueue' => true
@@ -174,12 +181,34 @@ class ThemeEnqueue
                 ]
             );
         }
-        if (is_page_template('page_second-pillar-246.php')) {
+        // The front page shows the 2-4-6 hero through an ACF layout, without the growth
+        // calculator and without taking the focus into the salary field on arrival
+        if (!is_page_template('page_second-pillar-246.php') && current_page_has_component('second_pillar_payment_rate_hero')) {
             array_push(
                 $assets,
                 [
                     'handle' => 'second-pillar-246-calculator',
                     'src' => $js_path . 'second-pillar-246-calculator.js',
+                    'ver' => $SECOND_PILLAR_246_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ]
+            );
+        }
+        if (is_page_template('page_second-pillar-246.php')) {
+            array_push(
+                $assets,
+                [
+                    'handle' => 'salary-arrival-focus',
+                    'src' => $js_path . 'salary-arrival-focus.js',
+                    'ver' => $SALARY_ARRIVAL_FOCUS_JS_ENQUEUE_VERSION,
+                    'js_in_header' => false,
+                    'enqueue' => true
+                ],
+                [
+                    'handle' => 'second-pillar-246-calculator',
+                    'src' => $js_path . 'second-pillar-246-calculator.js',
+                    'deps' => ['salary-arrival-focus'],
                     'ver' => $SECOND_PILLAR_246_JS_ENQUEUE_VERSION,
                     'js_in_header' => false,
                     'enqueue' => true
