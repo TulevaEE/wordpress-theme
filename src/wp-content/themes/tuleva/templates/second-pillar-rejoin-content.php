@@ -194,6 +194,10 @@
                             <p><?php _e('All the applications with one signature.', TEXT_DOMAIN); ?></p>
                         </li>
                     </ol>
+                    <div class="mt-5 pt-3">
+                        <p class="text-secondary mb-3"><?php _e('Not sure whether you can rejoin yet?', TEXT_DOMAIN); ?></p>
+                        <a href="<?php echo get_app_url('/2nd-pillar-rejoin'); ?>" class="btn btn-outline-primary"><?php _e('Check when you can rejoin', TEXT_DOMAIN); ?></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,8 +333,8 @@
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-8"><?php _e('I don\'t remember when I took money out of the II pillar. Where can I check?', TEXT_DOMAIN); ?></a>
                             <div id="answer-8" class="collapse">
                                 <p><?php printf(
-                                    __('%s and look at the Your choices box. The II pillar row shows whether you can already rejoin or from which date you can.', TEXT_DOMAIN),
-                                    '<a href="' . get_app_url('/') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>'
+                                    __('%s. If you can already rejoin, you will see the application. If not yet, you will see when your contributions ended and from which date you can rejoin.', TEXT_DOMAIN),
+                                    '<a href="' . get_app_url('/2nd-pillar-rejoin') . '">' . __('Log in to Tuleva', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
                             </div>
                         </div>
