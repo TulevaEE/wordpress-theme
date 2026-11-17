@@ -14703,7 +14703,6 @@ html {
   min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
 }
 
 hr {
@@ -17535,8 +17534,13 @@ sup {
   }
 }
 
-[id] {
-  scroll-margin-top: 78px;
+html {
+  scroll-padding-top: 78px;
+  scroll-padding-bottom: var(--fixed-bottom-height, 0px);
+}
+
+body {
+  padding-bottom: var(--fixed-bottom-height, 0px);
 }
 
 .footer {
@@ -18898,7 +18902,7 @@ sup {
   color: #6B7074;
 }
 .second-pillar-rejoin-page #sotsiaalmaks {
-  scroll-margin-top: calc(78px + 2rem);
+  scroll-margin-top: 2rem;
 }
 .second-pillar-rejoin-page .rejoin-choice--second-pillar {
   border-color: #008300;

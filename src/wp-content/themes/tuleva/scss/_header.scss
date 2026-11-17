@@ -285,6 +285,11 @@
     }
 }
 
-[id] {
-    scroll-margin-top: $navbar-height;
+html {
+    scroll-padding-top: $navbar-height;
+    scroll-padding-bottom: var(--fixed-bottom-height, 0px);
+}
+
+body {
+    padding-bottom: var(--fixed-bottom-height, 0px);
 }
