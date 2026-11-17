@@ -223,7 +223,7 @@ Promise.all([
   ETF_SOURCES.forEach(function(etf) {
     var tr = document.createElement('tr');
     var srcHtml = etf.url
-      ? '<a href="'+etf.url+'" target="_blank" style="color:var(--blue);font-weight:600;">'+etf.source+'</a>'
+      ? '<a href="'+etf.url+'" style="color:var(--blue);font-weight:600;">'+etf.source+'</a>'
       : etf.source;
     tr.innerHTML = '<td>'+etf.name+'</td>'+
       '<td style="font-family:monospace;font-size:0.8rem;">'+etf.isin+'</td>'+
