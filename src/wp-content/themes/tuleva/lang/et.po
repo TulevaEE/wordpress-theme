@@ -3581,7 +3581,7 @@ msgstr "%s. Kui saad juba liituda, näed kohe avaldust. Kui veel mitte, näed, m
 #: templates/second-pillar-rejoin-content.php:329
 #, php-format
 msgid "You can see your exact date when you %s."
-msgstr "Oma täpse kuupäeva näed, kui %s."
+msgstr "Oma täpset kuupäeva näed, kui %s."
 
 #: templates/second-pillar-rejoin-content.php:330
 msgid "log in to Tuleva"
