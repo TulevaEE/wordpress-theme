@@ -2346,6 +2346,68 @@ msgid "guide to inheriting Additional Investment Fund units"
 msgstr "Täiendava Kogumisfondi osakute pärimise juhendist"
 
 #: templates/savings-fund-landing-content.php:270
+msgid "What is an index fund and where can you invest in one in Estonia?"
+msgstr "Mis on indeksfond ja kust Eestis sellesse investeerida saab?"
+
+#: templates/savings-fund-landing-content.php:272
+msgid "An index fund buys a small piece of every company in an index and simply holds it. Nobody picks individual stocks or tries to time the market. That is why an index fund's fee is low and your assets are spread across thousands of companies."
+msgstr "Indeksfond ostab väikese tüki igast ettevõttest, mis indeksisse kuulub, ja lihtsalt hoiab seda. Keegi ei vali üksikuid aktsiaid ega püüa turgu ajastada. Seetõttu on indeksfondi tasu madal ja sinu vara on hajutatud tuhandete ettevõtete vahel."
+
+#: templates/savings-fund-landing-content.php:273
+msgid "In Estonia you can invest in an index fund in four ways."
+msgstr "Eestis saad indeksfondi investeerida neljal viisil."
+
+#: templates/savings-fund-landing-content.php:275
+msgid "II pillar."
+msgstr "II&nbsp;sammas."
+
+#: templates/savings-fund-landing-content.php:275
+msgid "The contribution goes straight from your salary and part of your social tax is added to it."
+msgstr "Sissemakse läheb otse palgast ja sellele lisandub osa sinu sotsiaalmaksust."
+
+#: templates/savings-fund-landing-content.php:276
+msgid "III pillar."
+msgstr "III&nbsp;sammas."
+
+#: templates/savings-fund-landing-content.php:276
+msgid "You get income tax back on your contributions: up to 15% of your annual income and up to 6000 euros a year."
+msgstr "Sissemaksetelt saad tulumaksu tagasi: kuni 15% oma aastatulust ja kuni 6000 eurot aastas."
+
+#: templates/savings-fund-landing-content.php:277
+msgid "Tuleva Additional Investment Fund."
+msgstr "Tuleva Täiendav Kogumisfond."
+
+#: templates/savings-fund-landing-content.php:278
+#, php-format
+msgid "A good fit if you want to invest on top of the pillars, %1$s or %2$s. You can start from one euro, there are no transaction fees and you can sell units at any time."
+msgstr "Sobib, kui tahad koguda lisaks sammastele, %1$s või oma %2$s. Alustada saad ühest eurost, tehingutasusid ei ole ja osakuid saad müüa igal ajal."
+
+#: templates/savings-fund-landing-content.php:279
+msgid "in your child's name"
+msgstr "lapse nimel"
+
+#: templates/savings-fund-landing-content.php:280
+msgid "through your own company"
+msgstr "osaühingu kaudu"
+
+#: templates/savings-fund-landing-content.php:282
+msgid "An ETF through a bank or broker."
+msgstr "ETF panga või maakleri kaudu."
+
+#: templates/savings-fund-landing-content.php:282
+msgid "An ETF is an index fund traded on an exchange. You choose the fund yourself and place the orders yourself. Depending on the provider there may be transaction fees, and a company needs an LEI code to trade on an exchange."
+msgstr "ETF on börsil kaubeldav indeksfond. Valid fondi ise ja teed ka ostud ise. Sõltuvalt pakkujast võivad lisanduda tehingutasud ja osaühing vajab börsil kauplemiseks LEI-koodi."
+
+#: templates/savings-fund-landing-content.php:285
+#, php-format
+msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s."
+msgstr "Enamasti tasub alustada II ja III&nbsp;sambast, sest seal lisandub maksuvõit. Tuleva kõigi fondide tasu on 0,28% aastas. Teiste fondide tasusid saad võrrelda %s."
+
+#: templates/savings-fund-landing-content.php:286
+msgid "on the Pensionikeskus website"
+msgstr "Pensionikeskuse lehel"
+
+#: templates/savings-fund-landing-content.php:270
 msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
 msgstr "Mille poolest erineb Täiendav Kogumisfond LHV Kasvukontost, Swedbanki Robur fondidest või Lightyearist?"
 
@@ -2471,6 +2533,18 @@ msgid "Look at where your income arrives. If the income arrives in the company, 
 msgstr "Vaata, kuhu sinu tulu laekub. Kui tulu laekub osaühingusse, investeeri osaühingu kaudu. Kui see laekub isiklikule kontole, on eraisikuna investeerimiskonto kaudu lihtsam. Maksude poolest üldjuhul suurt vahet ei ole, seega ära loo osaühingut ainult investeerimiseks."
 
 #: templates/company-savings-content.php:157
+msgid "How is this different from buying an ETF through a bank or broker?"
+msgstr "Kuidas see erineb ETF-i ostmisest panga või maakleri kaudu?"
+
+#: templates/company-savings-content.php:159
+msgid "With a bank or broker, you choose the ETF yourself and place the orders yourself. To trade on an exchange, a company needs an LEI code, which costs 50–100 euros a year. Some providers also charge transaction or custody fees. The ETF's own fee may be lower than our fund's."
+msgstr "Panga või maakleri juures valid ETF-i ise ja teed ka ostud ise. Börsil kauplemiseks peab osaühingul olema LEI-kood, mis maksab 50–100 eurot aastas. Mõni pakkuja võtab lisaks tehingu- või hoidmistasu. ETF-i enda tasu võib olla meie fondi omast madalam."
+
+#: templates/company-savings-content.php:160
+msgid "The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of 0.28% a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is 28 euros a year, which is less than the LEI code alone."
+msgstr "Tuleva Täiendav Kogumisfond on üks laiapõhjaline indeksfond, mille tasu on 0,28% aastas. Osakud ostad otse meilt, seega LEI-koodi sul vaja ei ole. Ostu, müügi ega hoidmise eest me tasu ei võta. Näiteks 10&nbsp;000 euro pealt on fondi tasu 28 eurot aastas ehk vähem kui LEI-kood üksi."
+
+#: templates/company-savings-content.php:165
 msgid "How do I account for this in bookkeeping?"
 msgstr "Kuidas ma seda raamatupidamises kajastan?"
 

@@ -266,6 +266,28 @@
                         </div>
                         <?php endif; ?>
 
+                        <div class="qa__question-wrapper" id="kkk-indeksfond">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-indeksfond"><?php _e('What is an index fund and where can you invest in one in Estonia?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-indeksfond" class="collapse">
+                                <p><?php _e('An index fund buys a small piece of every company in an index and simply holds it. Nobody picks individual stocks or tries to time the market. That is why an index fund\'s fee is low and your assets are spread across thousands of companies.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('In Estonia you can invest in an index fund in four ways.', TEXT_DOMAIN); ?></p>
+                                <ul>
+                                    <li><b><a href="https://tuleva.ee/kuidas-tuua-pension-tulevasse/"><?php _e('II pillar.', TEXT_DOMAIN); ?></a></b> <?php _e('The contribution goes straight from your salary and part of your social tax is added to it.', TEXT_DOMAIN); ?></li>
+                                    <li><b><a href="https://tuleva.ee/iii-sammas/"><?php _e('III pillar.', TEXT_DOMAIN); ?></a></b> <?php _e('You get income tax back on your contributions: up to 15% of your annual income and up to 6000 euros a year.', TEXT_DOMAIN); ?></li>
+                                    <li><b><?php _e('Tuleva Additional Investment Fund.', TEXT_DOMAIN); ?></b> <?php printf(
+                                        __('A good fit if you want to invest on top of the pillars, %1$s or %2$s. You can start from one euro, there are no transaction fees and you can sell units at any time.', TEXT_DOMAIN),
+                                        '<a href="https://tuleva.ee/lapsele-kogumine/">' . __('in your child\'s name', TEXT_DOMAIN) . '</a>',
+                                        '<a href="https://tuleva.ee/osauhingule-kogumine/">' . __('through your own company', TEXT_DOMAIN) . '</a>'
+                                    ); ?></li>
+                                    <li><b><?php _e('An ETF through a bank or broker.', TEXT_DOMAIN); ?></b> <?php _e('An ETF is an index fund traded on an exchange. You choose the fund yourself and place the orders yourself. Depending on the provider there may be transaction fees, and a company needs an LEI code to trade on an exchange.', TEXT_DOMAIN); ?></li>
+                                </ul>
+                                <p><?php printf(
+                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s.', TEXT_DOMAIN),
+                                    '<a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/jooksvate-tasude-vordlus/">' . __('on the Pensionikeskus website', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
+                            </div>
+                        </div>
+
                         <div class="qa__question-wrapper" id="kkk-vordlus">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-vordlus"><?php _e('How is the Additional Investment Fund different from LHV\'s Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?', TEXT_DOMAIN); ?></a>
                             <div id="answer-vordlus" class="collapse">
