@@ -325,6 +325,10 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <p><?php printf(
+                                    __('You can see your exact date when you %s.', TEXT_DOMAIN),
+                                    '<a href="' . get_app_url('/2nd-pillar-rejoin') . '">' . __('log in to Tuleva', TEXT_DOMAIN) . '</a>'
+                                ); ?></p>
                                 <p><?php _e('Each deadline sets when contributions start: apply by the end of November and they start in May, by the end of March and they start in September, by the end of July and they start in January. If a deadline passes, you can still apply, but contributions start later.', TEXT_DOMAIN); ?></p>
                                 <p><?php _e('The sooner you start, the longer you gain from the tax win.', TEXT_DOMAIN); ?></p>
                             </div>
