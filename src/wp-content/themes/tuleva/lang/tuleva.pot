@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-17T11:48:55+00:00\n"
+"POT-Creation-Date: 2026-11-17T12:24:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -504,8 +504,8 @@ msgid "Once your child starts earning income themselves, they should consider th
 msgstr ""
 
 #: templates/child-savings-content.php:172
-#: templates/company-savings-content.php:200
-#: templates/company-savings-content.php:205
+#: templates/company-savings-content.php:208
+#: templates/company-savings-content.php:213
 #: templates/savings-fund-landing-content.php:272
 #: templates/savings-fund-landing-content.php:273
 #: templates/savings-fund-landing-content.php:274
@@ -769,7 +769,7 @@ msgid "A child's third pillar doesn't give an income tax refund, because a child
 msgstr ""
 
 #: templates/child-savings-content.php:311
-#: templates/company-savings-content.php:195
+#: templates/company-savings-content.php:203
 #: templates/savings-fund-landing-content.php:326
 msgid "Learn more"
 msgstr ""
@@ -796,12 +796,12 @@ msgid "Two approaches to choose between."
 msgstr ""
 
 #: templates/child-savings-content.php:325
-#: templates/company-savings-content.php:209
+#: templates/company-savings-content.php:217
 msgid "More about the Tuleva Additional Investment Fund →"
 msgstr ""
 
 #: templates/child-savings-content.php:326
-#: templates/company-savings-content.php:210
+#: templates/company-savings-content.php:218
 msgid "Fund documents →"
 msgstr ""
 
@@ -916,75 +916,87 @@ msgid "Look at where your income arrives. If the income arrives in the company, 
 msgstr ""
 
 #: templates/company-savings-content.php:157
-msgid "How do I account for this in bookkeeping?"
+msgid "How is this different from buying an ETF through a bank or broker?"
 msgstr ""
 
 #: templates/company-savings-content.php:159
-msgid "The fund does not pay out dividends, so there is usually nothing to declare on an ongoing basis. The units are recorded as a financial investment, and your accountant decides the exact treatment."
+msgid "With a bank or broker, you choose the ETF yourself and place the orders yourself. To trade on an exchange, a company needs an LEI code, which costs 50–100 euros a year. Some providers also charge transaction or custody fees. The ETF's own fee may be lower than our fund's."
 msgstr ""
 
 #: templates/company-savings-content.php:160
-msgid "We make reporting easy: you get the information needed for the annual report (the acquisition cost of the units and their value on the balance sheet date) from Tuleva in ready-made form."
+msgid "The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of 0.28% a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is 28 euros a year, which is less than the LEI code alone."
 msgstr ""
 
 #: templates/company-savings-content.php:165
-msgid "How quickly can I sell the units?"
+msgid "How do I account for this in bookkeeping?"
 msgstr ""
 
 #: templates/company-savings-content.php:167
+msgid "The fund does not pay out dividends, so there is usually nothing to declare on an ongoing basis. The units are recorded as a financial investment, and your accountant decides the exact treatment."
+msgstr ""
+
+#: templates/company-savings-content.php:168
+msgid "We make reporting easy: you get the information needed for the annual report (the acquisition cost of the units and their value on the balance sheet date) from Tuleva in ready-made form."
+msgstr ""
+
+#: templates/company-savings-content.php:173
+msgid "How quickly can I sell the units?"
+msgstr ""
+
+#: templates/company-savings-content.php:175
 msgid "You can sell units at any time and the money arrives in the company's account within three business days."
 msgstr ""
 
-#: templates/company-savings-content.php:172
+#: templates/company-savings-content.php:180
 #: templates/savings-fund-landing-content.php:304
 msgid "What happens if the company's structure changes?"
 msgstr ""
 
-#: templates/company-savings-content.php:174
+#: templates/company-savings-content.php:182
 msgid "If the company no longer meets the conditions (for example a third shareholder joins), the company cannot acquire further units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
 msgstr ""
 
-#: templates/company-savings-content.php:179
+#: templates/company-savings-content.php:187
 msgid "Do Tuleva members earn the member bonus when investing through a company?"
 msgstr ""
 
-#: templates/company-savings-content.php:181
+#: templates/company-savings-content.php:189
 msgid "No. When investing in the Additional Investment Fund through a company, the company cannot earn the member bonus, because the articles of association of the Tuleva cooperative do not allow it."
 msgstr ""
 
-#: templates/company-savings-content.php:182
+#: templates/company-savings-content.php:190
 msgid "If you are a member of the Tuleva cooperative and you invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
 msgstr ""
 
-#: templates/company-savings-content.php:197
+#: templates/company-savings-content.php:205
 msgid "https://tuleva.ee/taiendav-kogumisfond/kas-investeerida-oma-ou-kaudu-kellele-see-sobib-ja-kellele-mitte/"
 msgstr ""
 
-#: templates/company-savings-content.php:198
+#: templates/company-savings-content.php:206
 msgid "Should you invest through your own company?"
 msgstr ""
 
-#: templates/company-savings-content.php:199
+#: templates/company-savings-content.php:207
 msgid "Who it suits and who it does not."
 msgstr ""
 
-#: templates/company-savings-content.php:202
+#: templates/company-savings-content.php:210
 msgid "https://tuleva.ee/taiendav-kogumisfond/kuidas-teha-raamatupidamist-kui-su-ou-on-taiendavasse-kogumisfondi-investeerinud/"
 msgstr ""
 
-#: templates/company-savings-content.php:203
+#: templates/company-savings-content.php:211
 msgid "How does the bookkeeping work?"
 msgstr ""
 
-#: templates/company-savings-content.php:204
+#: templates/company-savings-content.php:212
 msgid "An accountant explains why it is simpler than you think."
 msgstr ""
 
-#: templates/company-savings-content.php:209
+#: templates/company-savings-content.php:217
 msgid "https://tuleva.ee/taiendav-kogumisfond/"
 msgstr ""
 
-#: templates/company-savings-content.php:210
+#: templates/company-savings-content.php:218
 msgid "https://tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/"
 msgstr ""
 

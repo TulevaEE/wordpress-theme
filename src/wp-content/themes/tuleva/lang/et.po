@@ -2471,6 +2471,18 @@ msgid "Look at where your income arrives. If the income arrives in the company, 
 msgstr "Vaata, kuhu sinu tulu laekub. Kui tulu laekub osaühingusse, investeeri osaühingu kaudu. Kui see laekub isiklikule kontole, on eraisikuna investeerimiskonto kaudu lihtsam. Maksude poolest üldjuhul suurt vahet ei ole, seega ära loo osaühingut ainult investeerimiseks."
 
 #: templates/company-savings-content.php:157
+msgid "How is this different from buying an ETF through a bank or broker?"
+msgstr "Kuidas see erineb ETF-i ostmisest panga või maakleri kaudu?"
+
+#: templates/company-savings-content.php:159
+msgid "With a bank or broker, you choose the ETF yourself and place the orders yourself. To trade on an exchange, a company needs an LEI code, which costs 50–100 euros a year. Some providers also charge transaction or custody fees. The ETF's own fee may be lower than our fund's."
+msgstr "Panga või maakleri juures valid ETF-i ise ja teed ka ostud ise. Börsil kauplemiseks peab osaühingul olema LEI-kood, mis maksab 50–100 eurot aastas. Mõni pakkuja võtab lisaks tehingu- või hoidmistasu. ETF-i enda tasu võib olla meie fondi omast madalam."
+
+#: templates/company-savings-content.php:160
+msgid "The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of 0.28% a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is 28 euros a year, which is less than the LEI code alone."
+msgstr "Tuleva Täiendav Kogumisfond on üks laiapõhjaline indeksfond, mille tasu on 0,28% aastas. Osakud ostad otse meilt, seega LEI-koodi sul vaja ei ole. Ostu, müügi ega hoidmise eest me tasu ei võta. Näiteks 10&nbsp;000 euro pealt on fondi tasu 28 eurot aastas ehk vähem kui LEI-kood üksi."
+
+#: templates/company-savings-content.php:165
 msgid "How do I account for this in bookkeeping?"
 msgstr "Kuidas ma seda raamatupidamises kajastan?"
 

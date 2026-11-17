@@ -153,6 +153,14 @@
                             </div>
                         </div>
 
+                        <div class="qa__question-wrapper" id="kuidas-erineb-etfi-ostmisest">
+                            <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-etf"><?php _e('How is this different from buying an ETF through a bank or broker?', TEXT_DOMAIN); ?></a>
+                            <div id="answer-etf" class="collapse">
+                                <p><?php _e('With a bank or broker, you choose the ETF yourself and place the orders yourself. To trade on an exchange, a company needs an LEI code, which costs 50–100 euros a year. Some providers also charge transaction or custody fees. The ETF\'s own fee may be lower than our fund\'s.', TEXT_DOMAIN); ?></p>
+                                <p><?php _e('The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of 0.28% a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is 28 euros a year, which is less than the LEI code alone.', TEXT_DOMAIN); ?></p>
+                            </div>
+                        </div>
+
                         <div class="qa__question-wrapper" id="kuidas-raamatupidamises-kajastada">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('How do I account for this in bookkeeping?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
