@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-17T12:24:26+00:00\n"
+"POT-Creation-Date: 2026-11-17T12:46:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -342,7 +342,7 @@ msgstr ""
 
 #: templates/child-savings-content.php:52
 #: templates/company-savings-content.php:52
-#: templates/savings-fund-landing-content.php:343
+#: templates/savings-fund-landing-content.php:365
 msgid "Opening an account is free and takes only a few minutes."
 msgstr ""
 
@@ -506,9 +506,9 @@ msgstr ""
 #: templates/child-savings-content.php:172
 #: templates/company-savings-content.php:208
 #: templates/company-savings-content.php:213
-#: templates/savings-fund-landing-content.php:272
-#: templates/savings-fund-landing-content.php:273
-#: templates/savings-fund-landing-content.php:274
+#: templates/savings-fund-landing-content.php:294
+#: templates/savings-fund-landing-content.php:295
+#: templates/savings-fund-landing-content.php:296
 msgid "Read more →"
 msgstr ""
 
@@ -770,7 +770,7 @@ msgstr ""
 
 #: templates/child-savings-content.php:311
 #: templates/company-savings-content.php:203
-#: templates/savings-fund-landing-content.php:326
+#: templates/savings-fund-landing-content.php:348
 msgid "Learn more"
 msgstr ""
 
@@ -948,7 +948,7 @@ msgid "You can sell units at any time and the money arrives in the company's acc
 msgstr ""
 
 #: templates/company-savings-content.php:180
-#: templates/savings-fund-landing-content.php:304
+#: templates/savings-fund-landing-content.php:326
 msgid "What happens if the company's structure changes?"
 msgstr ""
 
@@ -2413,7 +2413,7 @@ msgstr ""
 
 #: templates/savings-fund-landing-content.php:10
 #: templates/savings-fund-landing-content.php:148
-#: templates/savings-fund-landing-content.php:342
+#: templates/savings-fund-landing-content.php:364
 msgid "Start investing"
 msgstr ""
 
@@ -2799,86 +2799,148 @@ msgid "guide to inheriting Additional Investment Fund units"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:270
-msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
+msgid "What is an index fund and where can you invest in one in Estonia?"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:272
-msgid "For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV's Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none."
+msgid "An index fund buys a small piece of every company in an index and simply holds it. Nobody picks individual stocks or tries to time the market. That is why an index fund's fee is low and your assets are spread across thousands of companies."
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:273
-msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
+msgid "In Estonia you can invest in an index fund in four ways."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:274
-msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
+#: templates/savings-fund-landing-content.php:275
+msgid "II pillar."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:275
+msgid "The contribution goes straight from your salary and part of your social tax is added to it."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:276
+msgid "III pillar."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:276
+msgid "You get income tax back on your contributions: up to 15% of your annual income and up to 6000 euros a year."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:277
+msgid "Tuleva Additional Investment Fund."
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:278
-msgid "For companies"
+#, php-format
+msgid "A good fit if you want to invest on top of the pillars, %1$s or %2$s. You can start from one euro, there are no transaction fees and you can sell units at any time."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:281
-msgid "Can a company invest in the Additional Investment Fund?"
+#: templates/savings-fund-landing-content.php:279
+msgid "in your child's name"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:283
-msgid "Yes. From June 15, 2026, an Estonian-registered private limited company with up to two shareholders, whose shareholders are at the same time board members and beneficial owners, can also invest in the fund. The same fund and the same fee as for a private person."
+#: templates/savings-fund-landing-content.php:280
+msgid "through your own company"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:287
-msgid "How do I open an Additional Investment Fund account for a company?"
+#: templates/savings-fund-landing-content.php:282
+msgid "An ETF through a bank or broker."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:289
-msgid "It works like this:"
+#: templates/savings-fund-landing-content.php:282
+msgid "An ETF is an index fund traded on an exchange. You choose the fund yourself and place the orders yourself. Depending on the provider there may be transaction fees, and a company needs an LEI code to trade on an exchange."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:291
-msgid "Log in to Tuleva's website. Fill in the questionnaire both about yourself and about the company. If the company has two shareholders, both must complete this step."
+#: templates/savings-fund-landing-content.php:285
+#, php-format
+msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:286
+msgid "on the Pensionikeskus website"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:292
-msgid "You now have two profiles in Tuleva: one in your name and another in the company's name."
+msgid "How is the Additional Investment Fund different from LHV's Growth Account (Kasvukonto), Swedbank Robur funds, or Lightyear?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:293
-msgid "Make the first contribution from the company's bank account. You can set up contributions and a recurring payment the same way as a private person."
+#: templates/savings-fund-landing-content.php:294
+msgid "For investing in an index fund, the Tuleva Additional Investment Fund is cheaper than LHV's Growth Account (Kasvukonto) and Securities Account (Väärtpaberikonto). In LHV you pay fees when buying and selling investments; in Tuleva there are none."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:298
-msgid "Do both shareholders have to take part in creating the account?"
+#: templates/savings-fund-landing-content.php:295
+msgid "Lightyear offers a wide selection of stocks and funds, some cheaper and some more expensive than the Tuleva Additional Investment Fund. Many of them are good alternatives. Tuleva's advantage over Lightyear is the simplicity of choice."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:296
+msgid "Swedbank offers 22 different Robur funds with fees ranging from 0.26% (Access Edge Japan) to 1.66% (Emerging Europe). The fund most similar to the Tuleva Additional Investment Fund is Robur Access Edge Global with a 0.29% fee. Unlike the Tuleva Additional Investment Fund, it invests only in developed markets. Robur Access Edge Emerging Markets, with a fee of 0.45% per year, invests only in emerging markets."
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:300
-msgid "Yes. If the company has two shareholders, you both have to go through verification, which means filling in a short questionnaire."
+msgid "For companies"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:306
-msgid "If the company's structure no longer meets the conditions, for example a third shareholder joins, the company cannot acquire new fund units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
+#: templates/savings-fund-landing-content.php:303
+msgid "Can a company invest in the Additional Investment Fund?"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:310
-msgid "Do Tuleva members also earn a member bonus when investing through a company?"
+#: templates/savings-fund-landing-content.php:305
+msgid "Yes. From June 15, 2026, an Estonian-registered private limited company with up to two shareholders, whose shareholders are at the same time board members and beneficial owners, can also invest in the fund. The same fund and the same fee as for a private person."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:312
-msgid "No, when investing in the Additional Investment Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+#: templates/savings-fund-landing-content.php:309
+msgid "How do I open an Additional Investment Fund account for a company?"
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:311
+msgid "It works like this:"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:313
-msgid "If you are a member of the Tuleva cooperative and invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgid "Log in to Tuleva's website. Fill in the questionnaire both about yourself and about the company. If the company has two shareholders, both must complete this step."
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:330
-msgid "Podcast: the Additional Investment Fund opens"
+#: templates/savings-fund-landing-content.php:314
+msgid "You now have two profiles in Tuleva: one in your name and another in the company's name."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:315
+msgid "Make the first contribution from the company's bank account. You can set up contributions and a recurring payment the same way as a private person."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:320
+msgid "Do both shareholders have to take part in creating the account?"
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:322
+msgid "Yes. If the company has two shareholders, you both have to go through verification, which means filling in a short questionnaire."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:328
+msgid "If the company's structure no longer meets the conditions, for example a third shareholder joins, the company cannot acquire new fund units. In certain cases we have the right to redeem the fund units unilaterally. The value of the existing units is preserved."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:332
+msgid "Do Tuleva members also earn a member bonus when investing through a company?"
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:334
+msgid "No, when investing in the Additional Investment Fund through a company, the company cannot earn a member bonus, because the articles of association of the Tuleva cooperative do not allow it."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:335
+msgid "If you are a member of the Tuleva cooperative and invest in the Additional Investment Fund as a private person, you earn a member bonus of 0.05% of the value of your assets every year."
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:352
+msgid "Podcast: the Additional Investment Fund opens"
+msgstr ""
+
+#: templates/savings-fund-landing-content.php:356
 msgid "Fund terms, prospectus, and key information"
 msgstr ""
 
-#: templates/savings-fund-landing-content.php:338
+#: templates/savings-fund-landing-content.php:360
 msgid "Blog posts about the Additional Investment Fund"
 msgstr ""
 
