@@ -1074,8 +1074,9 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The page switches a prospectus, terms or NAV procedure on the date in its filename, and leaves
-     * one with no readable date where it is for ever. A key information document's date is never read.
+     * The page switches a prospectus, terms, NAV procedure or key information document on the date
+     * in its filename, and leaves one with no readable date where it is for ever. A model portfolio's
+     * date is never read.
      */
     #[Test]
     public function a_document_that_switches_on_its_date_needs_a_readable_one_in_its_filename(): void
@@ -1084,10 +1085,14 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.3026.pdf';
         FakeFundPage::$fields['terms_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-uued.pdf';
         FakeFundPage::$fields['key_investor_info_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUK75.pdf';
+        FakeFundPage::$fields['key_investor_info_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/Pohiteave-TUK75-uus.pdf';
+        FakeFundPage::$fields['model_portfolio_file'] = 'https://tuleva.ee/wp-content/uploads/2026/08/Mudelportfell.pdf';
 
         $this->assertSame([
             ['field' => 'prospectus_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
             ['field' => 'terms_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'key_investor_info_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'key_investor_info_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
         ], tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533));
     }
 
@@ -1452,6 +1457,89 @@ final class FundDisclosuresTest extends TestCase
             $this->assertStringNotContainsString($upcoming_terms, $html);
             $this->assertStringNotContainsString('01.01.2027', $html);
         }
+    }
+
+    /**
+     * @return array<string, array{string, string, string}>
+     */
+    public static function fundPagesWithTheirKeyInformation(): array
+    {
+        return [
+            'TUK75' => ['page_fund-stocks.php', 'Pohiteave-TUK75-kehtib-alates-19.03.2026-.pdf', 'TUK75-pohiteave-kehtib-alates-01.04.2027.pdf'],
+            'TUK00' => ['page_fund-bonds.php', 'Pohiteave-TUK00-kehtib-alates-19.03.2026.pdf', 'TUK00-pohiteave-kehtib-alates-01.04.2027.pdf'],
+            'TUV100' => ['page_fund-third.php', 'Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf', 'TUV100-pohiteave-kehtib-alates-05.12.2026.pdf'],
+            'TKF100' => [self::SAVINGS_TEMPLATE, 'TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf', 'TKF100-Pohiteave-kehtib-alates-12.01.2027.pdf'],
+        ];
+    }
+
+    /**
+     * A key information document is published on the day it applies, never announced: the page links
+     * the one in force, and from the upcoming one's date that one, with nobody acting that day
+     * (TUV100's of 05.12.2026 is a Saturday).
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundPagesWithTheirKeyInformation')]
+    public function the_key_information_switches_on_its_date_and_is_never_listed_before_it(
+        string $template,
+        string $current,
+        string $upcoming
+    ): void {
+        FakeFundPage::$fields = [
+            'key_investor_info_file' => "https://tuleva.ee/wp-content/uploads/2026/03/$current",
+            'key_investor_info_upcoming_file' => "https://tuleva.ee/wp-content/uploads/2026/11/$upcoming",
+        ];
+        $takes_effect = tuleva_document_effective_day("https://tuleva.ee/$upcoming");
+
+        FakeFundPage::$today = (new DateTimeImmutable($takes_effect))->modify('-1 day')->format('Y-m-d');
+        $before = $this->renderFundPage($template);
+        FakeFundPage::$today = $takes_effect;
+        $after = $this->renderFundPage($template);
+
+        $this->assertStringContainsString($current, $before);
+        $this->assertStringNotContainsString($upcoming, $before);
+        $this->assertStringNotContainsString('effective from', $before);
+        $this->assertStringContainsString($upcoming, $after);
+        $this->assertStringNotContainsString($current, $after);
+        $this->assertSame(1, substr_count($after, 'Key Investor Information'));
+    }
+
+    /**
+     * The upcoming key information document is a field of every fund page and of no other page, so
+     * agent-gateway can set it ahead for each fund.
+     */
+    #[Test]
+    public function every_fund_page_and_only_a_fund_page_has_an_upcoming_key_information_field(): void
+    {
+        foreach (array_keys(self::fundPagesWithTheirKeyInformation()) as $fund) {
+            $template = self::fundPagesWithTheirKeyInformation()[$fund][0];
+            $this->assertTrue(tuleva_fund_disclosure_applies('key_investor_info_upcoming_file', $template), $fund);
+            $this->assertSame(TULEVA_DISCLOSURE_OPTIONAL, tuleva_fund_disclosure_requirement('key_investor_info_upcoming_file', $template), $fund);
+        }
+        $this->assertFalse(tuleva_fund_disclosure_applies('key_investor_info_upcoming_file', TULEVA_SHARED_DOCUMENTS_TEMPLATE));
+    }
+
+    /**
+     * The REST `acf` values that onboarding-client and agent-gateway read follow the page once the
+     * hourly job has run, and the next key information document has an empty field to go into.
+     */
+    #[Test]
+    public function the_hourly_job_moves_a_due_key_information_document_into_the_current_field(): void
+    {
+        FakeFundPage::$pages['page_fund-third.php'] = [20938];
+        FakeFundPage::$stored[20938] = ['key_investor_info_file' => 301, 'key_investor_info_upcoming_file' => 302];
+        FakeAttachments::$urls = [
+            301 => 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf',
+            302 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-pohiteave-kehtib-alates-05.12.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-12-04'));
+        $this->assertSame([], FakeFundPage::$updates);
+
+        $this->assertSame([['post' => 20938, 'field' => 'key_investor_info_file']], tuleva_promote_due_documents('2026-12-05'));
+        $this->assertSame([
+            ['field_fund_disclosure_third_key_investor_info_file', 302, 20938],
+            ['field_fund_disclosure_third_key_investor_info_upcoming_file', '', 20938],
+        ], FakeFundPage::$updates);
     }
 
     #[Test]
@@ -2236,20 +2324,21 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * Only the prospectus, the terms and the NAV procedure have an upcoming version; any other
-     * document resolves on its own, and one outside the fund's scope to nothing.
+     * Only the prospectus, the terms, the NAV procedure and the key information document have an
+     * upcoming version; any other document resolves on its own, and one outside the fund's scope to
+     * nothing.
      */
     #[Test]
     public function a_document_with_no_upcoming_version_resolves_on_its_own(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
         FakeFundPage::$fields = [
-            'key_investor_info_file' => 'https://tuleva.ee/kid.pdf',
+            'model_portfolio_file' => 'https://tuleva.ee/model.pdf',
             'investor_rights_file' => 'https://tuleva.ee/rights.pdf',
             'nav_procedure_file' => 'https://tuleva.ee/nav.pdf',
         ];
 
-        $this->assertSame(['https://tuleva.ee/kid.pdf', ''], tuleva_fund_document('key_investor_info_file'));
+        $this->assertSame(['https://tuleva.ee/model.pdf', ''], tuleva_fund_document('model_portfolio_file'));
         $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file'));
         $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file'));
     }

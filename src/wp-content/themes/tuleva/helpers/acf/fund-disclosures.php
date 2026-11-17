@@ -97,6 +97,11 @@ function tuleva_fund_disclosure_catalogue(): array
             'instructions' => 'Põhiteave for the pension funds, PRIIPs KID for TKF100.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_key_investor_info'],
         ],
+        'key_investor_info_upcoming_file' => [
+            'label' => 'Key Investor Information (Upcoming)',
+            'type' => 'file',
+            'instructions' => 'Approved but not yet effective. Not shown on the page: from the date in its filename ("kehtib alates DD.MM.YYYY") it is the Key Investor Information, and until then nothing links it.',
+        ],
         'nav_procedure_file' => [
             'label' => 'NAV Procedure',
             'type' => 'file',
@@ -171,6 +176,7 @@ function tuleva_fund_disclosure_scope(): array
         'terms_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
         'model_portfolio_file' => TULEVA_DISCLOSURE_REQUIRED,
         'key_investor_info_file' => TULEVA_DISCLOSURE_REQUIRED,
+        'key_investor_info_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
         'investment_report_file' => TULEVA_DISCLOSURE_REQUIRED,
         'previous_reports_url' => TULEVA_DISCLOSURE_OPTIONAL,
         'fund_co2_intensity' => TULEVA_DISCLOSURE_REQUIRED,
@@ -187,6 +193,7 @@ function tuleva_fund_disclosure_scope(): array
             'terms_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'model_portfolio_file' => TULEVA_DISCLOSURE_REQUIRED,
             'key_investor_info_file' => TULEVA_DISCLOSURE_REQUIRED,
+            'key_investor_info_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'nav_procedure_file' => TULEVA_DISCLOSURE_REQUIRED,
             'nav_procedure_upcoming_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'investor_rights_file' => TULEVA_DISCLOSURE_REQUIRED,
@@ -336,11 +343,16 @@ function tuleva_today(): string
 
 /**
  * Each document that has an upcoming version, by its current field.
+ *
+ * The Key Investor Information's upcoming version is never shown: the KID is published on the day
+ * it applies, not announced, so the fund pages link only the one in force. It is set ahead so that
+ * the page switches on a weekend or a holiday with nobody acting.
  */
 const TULEVA_UPCOMING_DISCLOSURES = [
     'prospectus_file' => 'prospectus_upcoming_file',
     'terms_file' => 'terms_upcoming_file',
     'nav_procedure_file' => 'nav_procedure_upcoming_file',
+    'key_investor_info_file' => 'key_investor_info_upcoming_file',
 ];
 
 /**
