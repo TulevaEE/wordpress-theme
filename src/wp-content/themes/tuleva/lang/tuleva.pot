@@ -2853,7 +2853,7 @@ msgstr ""
 
 #: templates/savings-fund-landing-content.php:285
 #, php-format
-msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s."
+msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28%% a year. You can compare the fees of other funds %s."
 msgstr ""
 
 #: templates/savings-fund-landing-content.php:286

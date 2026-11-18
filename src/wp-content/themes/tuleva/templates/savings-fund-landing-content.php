@@ -282,7 +282,7 @@
                                     <li><b><?php _e('An ETF through a bank or broker.', TEXT_DOMAIN); ?></b> <?php _e('An ETF is an index fund traded on an exchange. You choose the fund yourself and place the orders yourself. Depending on the provider there may be transaction fees, and a company needs an LEI code to trade on an exchange.', TEXT_DOMAIN); ?></li>
                                 </ul>
                                 <p><?php printf(
-                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s.', TEXT_DOMAIN),
+                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28%% a year. You can compare the fees of other funds %s.', TEXT_DOMAIN),
                                     '<a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/jooksvate-tasude-vordlus/">' . __('on the Pensionikeskus website', TEXT_DOMAIN) . '</a>'
                                 ); ?></p>
                             </div>

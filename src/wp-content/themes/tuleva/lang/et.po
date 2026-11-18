@@ -2400,8 +2400,8 @@ msgstr "ETF on börsil kaubeldav indeksfond. Valid fondi ise ja teed ka ostud is
 
 #: templates/savings-fund-landing-content.php:285
 #, php-format
-msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28% a year. You can compare the fees of other funds %s."
-msgstr "Enamasti tasub alustada II ja III&nbsp;sambast, sest seal lisandub maksuvõit. Tuleva kõigi fondide tasu on 0,28% aastas. Teiste fondide tasusid saad võrrelda %s."
+msgid "It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28%% a year. You can compare the fees of other funds %s."
+msgstr "Enamasti tasub alustada II ja III&nbsp;sambast, sest seal lisandub maksuvõit. Tuleva kõigi fondide tasu on 0,28%% aastas. Teiste fondide tasusid saad võrrelda %s."
 
 #: templates/savings-fund-landing-content.php:286
 msgid "on the Pensionikeskus website"
