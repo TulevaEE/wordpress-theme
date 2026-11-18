@@ -27,8 +27,9 @@ $terms_upcoming_date = tuleva_document_effective_date($terms_upcoming_url);
 $upcoming_dates_differ = $prospectus_upcoming_url !== '' && $terms_upcoming_url !== ''
     && $prospectus_upcoming_date !== $terms_upcoming_date;
 $upcoming_effective_date = $upcoming_dates_differ ? '' : ($prospectus_upcoming_date ?: $terms_upcoming_date);
-$model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
-// The KID in force on the day, its upcoming version included once due; an upcoming one is never listed.
+// The KID and model portfolio in force on the day, an upcoming one included once due; an upcoming
+// one is never listed.
+[$model_portfolio_url] = tuleva_fund_document('model_portfolio_file');
 [$key_investor_info_url] = tuleva_fund_document('key_investor_info_file');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
