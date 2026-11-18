@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section class="section-spacing" id="turvalisus">
+    <section class="section-spacing-bottom" id="turvalisus">
         <div class="container">
             <div class="row">
                 <div class="mx-auto col-lg-11 col-xl-10 text-center">
