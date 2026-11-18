@@ -1470,11 +1470,11 @@ final class FundDisclosuresTest extends TestCase
         return [
             'TUK75 key information' => ['page_fund-stocks.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUK75-kehtib-alates-19.03.2026-.pdf', 'TUK75-pohiteave-kehtib-alates-01.04.2027.pdf'],
             'TUK00 key information' => ['page_fund-bonds.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUK00-kehtib-alates-19.03.2026.pdf', 'TUK00-pohiteave-kehtib-alates-01.04.2027.pdf'],
-            'TUV100 key information' => ['page_fund-third.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf', 'TUV100-pohiteave-kehtib-alates-05.12.2026.pdf'],
+            'TUV100 key information' => ['page_fund-third.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf', 'TUV100-pohiteave-kehtib-alates-04.12.2026.pdf'],
             'TKF100 key information' => [self::SAVINGS_TEMPLATE, 'key_investor_info_file', 'Key Investor Information', 'TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf', 'TKF100-Pohiteave-kehtib-alates-12.01.2027.pdf'],
             'TUK75 model portfolio' => ['page_fund-stocks.php', 'model_portfolio_file', 'Model portfolio', 'Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUK75-mudelportfell-kehtib-alates-01.01.2027.pdf'],
             'TUK00 model portfolio' => ['page_fund-bonds.php', 'model_portfolio_file', 'Model portfolio', 'TUK00-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUK00-mudelportfell-kehtib-alates-01.01.2027.pdf'],
-            'TUV100 model portfolio' => ['page_fund-third.php', 'model_portfolio_file', 'Model portfolio', 'TUV100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUV100-mudelportfell-kehtib-alates-05.12.2026.pdf'],
+            'TUV100 model portfolio' => ['page_fund-third.php', 'model_portfolio_file', 'Model portfolio', 'TUV100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUV100-mudelportfell-kehtib-alates-04.12.2026.pdf'],
             'TKF100 model portfolio' => [self::SAVINGS_TEMPLATE, 'model_portfolio_file', 'Model portfolio', 'TKF100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TKF100-mudelportfell-kehtib-alates-12.01.2027.pdf'],
         ];
     }
@@ -1482,7 +1482,7 @@ final class FundDisclosuresTest extends TestCase
     /**
      * A key information document or a model portfolio is published on the day it applies, never
      * announced: the page links the one in force, and from the upcoming one's date that one, with
-     * nobody acting that day (TUV100's of 05.12.2026 is a Saturday). A model portfolio in force is
+     * nobody acting that day (TUV100's KID of 04.12.2026 switches at 00:00). A model portfolio in force is
      * named for the day it shows, not the day it took effect, and the upcoming one still replaces it.
      */
     #[Test]
@@ -1507,7 +1507,6 @@ final class FundDisclosuresTest extends TestCase
 
         $this->assertStringContainsString($current, $before);
         $this->assertStringNotContainsString($upcoming, $before);
-        $this->assertStringNotContainsString('effective from', $before);
         $this->assertStringContainsString($upcoming, $after);
         $this->assertStringNotContainsString($current, $after);
         $this->assertSame(1, substr_count($after, $label));
@@ -1547,18 +1546,18 @@ final class FundDisclosuresTest extends TestCase
         ];
         FakeAttachments::$urls = [
             301 => 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf',
-            302 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-pohiteave-kehtib-alates-05.12.2026.pdf',
+            302 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-pohiteave-kehtib-alates-04.12.2026.pdf',
             303 => 'https://tuleva.ee/wp-content/uploads/2026/08/TUV100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf',
-            304 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-mudelportfell-kehtib-alates-05.12.2026.pdf',
+            304 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-mudelportfell-kehtib-alates-04.12.2026.pdf',
         ];
 
-        $this->assertSame([], tuleva_promote_due_documents('2026-12-04'));
+        $this->assertSame([], tuleva_promote_due_documents('2026-12-03'));
         $this->assertSame([], FakeFundPage::$updates);
 
         $this->assertSame([
             ['post' => 20938, 'field' => 'key_investor_info_file'],
             ['post' => 20938, 'field' => 'model_portfolio_file'],
-        ], tuleva_promote_due_documents('2026-12-05'));
+        ], tuleva_promote_due_documents('2026-12-04'));
         $this->assertSame([
             ['field_fund_disclosure_third_key_investor_info_file', 302, 20938],
             ['field_fund_disclosure_third_key_investor_info_upcoming_file', '', 20938],

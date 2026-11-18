@@ -171,8 +171,10 @@ The key investor information and the model portfolio switch the same way, from
 `key_investor_info_upcoming_file` and `model_portfolio_upcoming_file` on every fund page, but the
 page **never shows either before its date**: each is published on the day it applies, not
 announced, so there is no upcoming row and no "effective from". The fields exist so that a document
-approved ahead can be set on a working day and switch on a weekend or a holiday with nobody acting
-(TUV100's KID of 05.12.2026, a Saturday). A model portfolio in force is named for the day it shows
+approved ahead can be set on a working day and switch at 00:00 on its date, a weekend or a holiday
+too, with nobody acting (TUV100's KID of 04.12.2026). Until the hourly job has run, the REST `acf`
+answer still holds the old document in the current field, and onboarding-client reads TKF100's KID
+from there. A model portfolio in force is named for the day it shows
 (`… 19.08.2026 seisuga`), so an upcoming one needs `kehtib alates DD.MM.YYYY` in its filename, and the
 one in force, carrying no such date, gives way to it on that date. Not shown is not hidden: like any upload,
 the PDF is in the media library, and the field's value is in the page's REST answer.
