@@ -1368,26 +1368,16 @@ msgstr ""
 msgid "Financial reports of fund and fund manager"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:173
-#: templates/components/fund-savings-details.php:222
-#: templates/components/fund-stocks-details.php:173
-#: templates/components/fund-third-details.php:173
+#: templates/components/fund-savings-details.php:219
+#: templates/components/fund-stocks-details.php:171
+#: templates/components/fund-third-details.php:171
 msgid "Sustainability information"
 msgstr ""
 
-#: templates/components/fund-bonds-details.php:175
-#: templates/components/fund-savings-details.php:224
-#: templates/components/fund-stocks-details.php:175
-#: templates/components/fund-third-details.php:175
-msgid "CO2 intensity"
-msgstr ""
-
-#: templates/components/fund-bonds-details.php:176
-#: templates/components/fund-savings-details.php:225
-#: templates/components/fund-stocks-details.php:176
-#: templates/components/fund-third-details.php:176
-#, php-format
-msgid "%s tons / $1M turnover per year"
+#: templates/components/fund-savings-details.php:220
+#: templates/components/fund-stocks-details.php:172
+#: templates/components/fund-third-details.php:172
+msgid "The fund's underlying funds apply an ESG filter: they exclude companies that conflict with environmental, social and good governance criteria."
 msgstr ""
 
 #: templates/components/fund-bonds-header.php:5
