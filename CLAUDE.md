@@ -58,8 +58,9 @@ fund.
 Adding or removing a disclosure for a fund is an edit to the scope table, not to a
 template.
 
-**Gaps.** A required document or figure whose field is empty, and a prospectus, terms or NAV
-procedure (current or upcoming) whose filename carries no readable effective date, are a page's
+**Gaps.** A required document or figure whose field is empty, and a prospectus, terms, NAV
+procedure or key investor information (current or upcoming), or an upcoming model portfolio, whose
+filename carries no readable effective date, are a page's
 gaps (`helpers/acf/fund-disclosure-gaps.php`). The page's edit screen lists them, and its REST
 answer carries them as `tuleva_disclosure_gaps` (null on a page that is not a fund page), which
 onboarding-service checks every morning and reports in Slack. A fund page's gaps include those of
@@ -165,6 +166,18 @@ document is the current one whatever its date. Put only a document not yet in fo
 upcoming field. The job empties an upcoming field only after the current field reads back as
 the promoted document, and only while it still holds the document the job read (one saved there
 meanwhile stays).
+
+The key investor information and the model portfolio switch the same way, from
+`key_investor_info_upcoming_file` and `model_portfolio_upcoming_file` on every fund page, but the
+page **never shows either before its date**: each is published on the day it applies, not
+announced, so there is no upcoming row and no "effective from". The fields exist so that a document
+approved ahead can be set on a working day and switch at 00:00 on its date, a weekend or a holiday
+too, with nobody acting (TUV100's KID of 04.12.2026). Until the hourly job has run, the REST `acf`
+answer still holds the old document in the current field, and onboarding-client reads TKF100's KID
+from there. A model portfolio in force is named for the day it shows
+(`… 19.08.2026 seisuga`), so an upcoming one needs `kehtib alates DD.MM.YYYY` in its filename, and the
+one in force, carrying no such date, gives way to it on that date. Not shown is not hidden: like any upload,
+the PDF is in the media library, and the field's value is in the page's REST answer.
 
 Verify the write: `GET /wp-json/wp/v2/pages/{id}` should come back with the new value
 under `acf`, and the public page should show it. A 403 `tuleva_fund_document_locked` means
