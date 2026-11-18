@@ -55,8 +55,8 @@ nothing rendered, and no fallback to another fund's value.
   its place TUK75, TUV100 and TKF100 say that their underlying funds apply an ESG filter, a
   sentence in their templates; TUK00 says nothing, as no ESG filter is applied to it.
 
-The catalogue covers the CO2 figure alongside the documents because it has the same
-problem: published on the fund page, updated on a cadence, and not the same set for every
+The catalogue covers the CO2 figure alongside the documents because, while the fund pages
+showed it, it had the same problem: published on a cadence, and not the same set for every
 fund.
 
 Adding or removing a disclosure for a fund is an edit to the scope table, not to a

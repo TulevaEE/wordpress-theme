@@ -130,10 +130,10 @@ function tuleva_fund_disclosure_catalogue(): array
         // field and its stored values stay until it is taken out of the scope table.
         'fund_co2_intensity' => [
             'label' => 'CO2 Intensity',
-            // Text, not number: the figure is rendered verbatim and trailing zeros are
+            // Text, not number: the figure is kept verbatim and trailing zeros are
             // significant — "133.80" must not collapse to "133.8".
             'type' => 'text',
-            'instructions' => 'Weighted average carbon intensity, number only (e.g. "83.68"). Quarterly.',
+            'instructions' => 'Weighted average carbon intensity, number only (e.g. "83.68"). Quarterly. Not shown on the fund pages.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_co2_intensity'],
         ],
         'sustainability_risks_file' => [

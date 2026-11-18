@@ -547,7 +547,7 @@ final class FundDisclosuresTest extends TestCase
      * A pension fund's figure is never read on the TKF100 page.
      */
     #[Test]
-    public function the_savings_page_renders_no_co2_figure_while_it_is_out_of_scope(): void
+    public function the_savings_page_reads_no_co2_figure_while_it_is_out_of_scope(): void
     {
         FakeFundPage::$template = self::SAVINGS_TEMPLATE;
         FakeFundPage::$fields['fund_co2_intensity'] = '83.68';
@@ -592,34 +592,41 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * No template reads the CO2 figure, so setting the field cannot put it back on a page.
+     * Nothing in the theme's PHP or JavaScript but the field catalogue names the CO2 figure, so
+     * setting the field cannot put it back on a page.
      */
     #[Test]
-    public function no_template_reads_the_co2_figure(): void
+    public function nothing_but_the_field_catalogue_reads_the_co2_figure(): void
     {
         $theme = realpath(__DIR__ . '/../..');
-        $files = glob("$theme/*.php");
-        foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator("$theme/templates", FilesystemIterator::SKIP_DOTS)) as $file) {
-            if ($file->getExtension() === 'php') {
-                $files[] = $file->getPathname();
+        $skipped = ['tests', 'vendor', 'node_modules', 'helpers/acf'];
+        $tree = new RecursiveCallbackFilterIterator(
+            new RecursiveDirectoryIterator($theme, FilesystemIterator::SKIP_DOTS),
+            fn(SplFileInfo $file) => !in_array(substr($file->getPathname(), strlen($theme) + 1), $skipped, true)
+        );
+        $files = [];
+        foreach (new RecursiveIteratorIterator($tree) as $file) {
+            if (in_array($file->getExtension(), ['php', 'js'], true)) {
+                $files[] = substr($file->getPathname(), strlen($theme) + 1);
             }
         }
 
-        $this->assertContains("$theme/templates/components/fund-bonds-details.php", $files);
+        $this->assertContains('templates/components/fund-bonds-details.php', $files);
+        $this->assertContains('functions.php', $files);
         foreach ($files as $file) {
-            $code = (string) file_get_contents($file);
+            $code = (string) file_get_contents("$theme/$file");
             $this->assertStringNotContainsString('fund_co2_intensity', $code, $file);
             $this->assertStringNotContainsString('CO2 intensity', $code, $file);
         }
     }
 
     /**
-     * The Estonian pages show the sentence decided with the policy. WordPress looks the template's
-     * English text up in lang/et.mo byte for byte, so one differing character there would put the
-     * English sentence on the Estonian page.
+     * The Estonian pages show the sentence in the wording decided for them. WordPress looks the
+     * template's English text up in lang/et.mo byte for byte, so one differing character there
+     * would put the English sentence on the Estonian page.
      */
     #[Test]
-    public function the_estonian_pages_name_the_esg_filter_in_the_wording_decided_with_the_policy(): void
+    public function the_estonian_pages_name_the_esg_filter_in_the_decided_wording(): void
     {
         $this->assertSame(
             'Fondi alusfondid rakendavad ESG-filtrit: nad välistavad ettevõtted, mis on vastuolus keskkonnaalaste, sotsiaalsete ja heade juhtimistavade kriteeriumidega.',
