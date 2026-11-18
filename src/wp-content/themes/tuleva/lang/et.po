@@ -512,27 +512,17 @@ msgstr "Fondi osakuhinna muutus"
 msgid "Download NAV history"
 msgstr "Lae alla NAV-i ajalugu"
 
-#: templates/components/fund-bonds-details.php:173
-#: templates/components/fund-savings-details.php:222
-#: templates/components/fund-stocks-details.php:173
-#: templates/components/fund-third-details.php:173
+#: templates/components/fund-savings-details.php:219
+#: templates/components/fund-stocks-details.php:171
+#: templates/components/fund-third-details.php:171
 msgid "Sustainability information"
 msgstr "Jätkusuutlikkuse info"
 
-#: templates/components/fund-bonds-details.php:175
-#: templates/components/fund-savings-details.php:224
-#: templates/components/fund-stocks-details.php:175
-#: templates/components/fund-third-details.php:175
-msgid "CO2 intensity"
-msgstr "CO2 intensiivsus"
-
-#: templates/components/fund-bonds-details.php:176
-#: templates/components/fund-savings-details.php:225
-#: templates/components/fund-stocks-details.php:176
-#: templates/components/fund-third-details.php:176
-#, php-format
-msgid "%s tons / $1M turnover per year"
-msgstr "%s tonni / $1M käibe kohta aastas"
+#: templates/components/fund-savings-details.php:220
+#: templates/components/fund-stocks-details.php:172
+#: templates/components/fund-third-details.php:172
+msgid "The fund's underlying funds apply an ESG filter: they exclude companies that conflict with environmental, social and good governance criteria."
+msgstr "Fondi alusfondid rakendavad ESG-filtrit: nad välistavad ettevõtted, mis on vastuolus keskkonnaalaste, sotsiaalsete ja heade juhtimistavade kriteeriumidega."
 
 #: templates/components/fund-bonds-header.php:5
 msgid "Tuleva World Bonds Pension Fund"

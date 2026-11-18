@@ -12,7 +12,7 @@ $fund['management_fee'] = $figures['management_fee'];
 $fund['manager_participation'] = $figures['manager_units'];
 $fund['manager_participation_date'] = $figures['manager_units_date'];
 
-// Documents and the CO2 figure, from the ACF fields on this page: an empty field shows no row.
+// Documents, from the ACF fields on this page: an empty field shows no row.
 // The prospectus and terms come with their upcoming version (tuleva_fund_document()).
 [$prospectus_url, $prospectus_upcoming_url] = tuleva_fund_document('prospectus_file');
 [$terms_url, $terms_upcoming_url] = tuleva_fund_document('terms_file');
@@ -29,7 +29,6 @@ $model_portfolio_url = tuleva_fund_disclosure_value('model_portfolio_file');
 $key_investor_info_url = tuleva_fund_disclosure_value('key_investor_info_file');
 $investment_report_url = tuleva_fund_disclosure_value('investment_report_file');
 $previous_reports_url = tuleva_fund_disclosure_value('previous_reports_url');
-$fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 // The documents every fund links, from the shared documents page (helpers/extras.php).
 [$nav_procedure_url, $nav_procedure_upcoming_url] = get_nav_procedure_documents();
 $nav_procedure_upcoming_effective_date = tuleva_document_effective_date($nav_procedure_upcoming_url);
@@ -168,14 +167,6 @@ $remuneration_policy_url = get_remuneration_document_url();
                                 <a href="<?php echo get_site_url(); ?>/aruanded/ "><?php _e('Financial reports of fund and fund manager', TEXT_DOMAIN) ?></a><?php _e(' (in Estonian)', TEXT_DOMAIN) ?>
                             </li>
                         </ul>
-
-                        <?php if ($fund_co2_intensity !== ''): ?>
-                        <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
-                        <p class="fund-info__item">
-                            <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
-                            <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), esc_html($fund_co2_intensity)) ?></span>
-                        </p>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>

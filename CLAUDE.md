@@ -17,8 +17,8 @@ Theme templates live in:
 ## Fund document updates (main recurring task)
 
 Tuleva has four funds. Their documents — prospectus, terms, key investor information,
-model portfolio, monthly investment report — plus the CO2 intensity figure published
-beside them are each an ACF field on that fund's page. Setting the field is the whole
+model portfolio, monthly investment report — plus the CO2 intensity figure (no longer shown,
+see below) are each an ACF field on that fund's page. Setting the field is the whole
 update, and clearing it takes the document off the page: no commit, no deploy. No template
 carries a document URL of its own, so an empty field shows no row.
 
@@ -49,7 +49,11 @@ nothing rendered, and no fallback to another fund's value.
 - TKF100 is a UCITS fund and carries a summary of investor rights and its own NAV
   procedure; the pension funds carry neither and share one NAV procedure document.
 - The pension funds carry `fund_co2_intensity`; TKF100 does not, because no CO2 intensity
-  is calculated for it. The markup is there, so publishing one becomes a scope-table edit.
+  is calculated for it. No page shows the figure any more (the SFDR art 3 policy,
+  TulevaEE/tuleva#1162). The field and its stored values stay until it is taken out of the
+  scope table, and until then it is still required, so emptying it is reported as a gap. In
+  its place TUK75, TUV100 and TKF100 say that their underlying funds apply an ESG filter, a
+  sentence in their templates; TUK00 says nothing, as no ESG filter is applied to it.
 
 The catalogue covers the CO2 figure alongside the documents because it has the same
 problem: published on the fund page, updated on a cadence, and not the same set for every

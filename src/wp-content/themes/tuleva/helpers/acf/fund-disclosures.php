@@ -126,6 +126,8 @@ function tuleva_fund_disclosure_catalogue(): array
             'instructions' => 'Archive of earlier investment reports, usually on pensionikeskus.ee.',
             'keys' => ['page_fund-savings.php' => 'field_fund_savings_previous_reports_url'],
         ],
+        // No fund page shows this figure any more (the SFDR art 3 policy, tuleva #1162); the
+        // field and its stored values stay until it is taken out of the scope table.
         'fund_co2_intensity' => [
             'label' => 'CO2 Intensity',
             // Text, not number: the figure is rendered verbatim and trailing zeros are
@@ -194,8 +196,7 @@ function tuleva_fund_disclosure_scope(): array
             'investment_report_file' => TULEVA_DISCLOSURE_OPTIONAL,
             'previous_reports_url' => TULEVA_DISCLOSURE_OPTIONAL,
             // fund_co2_intensity is deliberately absent: no CO2 intensity is calculated
-            // for TKF100. The savings template renders the block the moment this line
-            // exists, so starting to publish one is an edit here and nothing else.
+            // for TKF100.
         ],
         // Not a fund: the documents every fund page links, on one page so one update
         // reaches all four. nav_procedure_* here is the pension funds' shared procedure.
