@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-19T11:11:09+00:00\n"
+"POT-Creation-Date: 2026-11-19T11:21:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -3292,7 +3292,7 @@ msgid "<strong>II&nbsp;pillar, %1$s&nbsp;a year:</strong> %2$s comes from social
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:255
-msgid "The amounts are in today's money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund's returns and can also fall."
+msgid "The amounts are in today's money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund's returns and can also fall. Sources: Social Insurance Board, Statistics Estonia."
 msgstr ""
 
 #: templates/second-pillar-rejoin-content.php:269

@@ -3641,5 +3641,5 @@ msgid "<strong>II&nbsp;pillar, %1$s&nbsp;a year:</strong> %2$s comes from social
 msgstr "<strong>II&nbsp;sammas, %1$s&nbsp;aastas:</strong> %2$s tuleb sotsiaalmaksust, mis on 4%%&nbsp;sinu brutopalgast, ja %3$s on tulumaks, mida sa oma %4$s&nbsp;panuselt ei maksa. See on umbes %5$s&nbsp;korda rohkem, kui riik lubab sulle selle palga juures I&nbsp;sambast sama kogumisaasta eest 19&nbsp;pensioniaasta jooksul maksta."
 
 #: templates/second-pillar-rejoin-content.php:255
-msgid "The amounts are in today's money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund's returns and can also fall."
-msgstr "Summad on tänases rahas. I&nbsp;sammas on riigi lubadus: selle suurus ja indekseerimine sõltuvad tulevastest seadustest. II&nbsp;samba vara on sinu oma, aga selle väärtus sõltub fondi tootlusest ja võib ka langeda."
+msgid "The amounts are in today's money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund's returns and can also fall. Sources: Social Insurance Board, Statistics Estonia."
+msgstr "Summad on tänases rahas. I&nbsp;sammas on riigi lubadus: selle suurus ja indekseerimine sõltuvad tulevastest seadustest. II&nbsp;samba vara on sinu oma, aga selle väärtus sõltub fondi tootlusest ja võib ka langeda. Allikad: Sotsiaalkindlustusamet, Statistikaamet."
