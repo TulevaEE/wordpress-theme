@@ -252,7 +252,7 @@
                                     '<span data-pillar-value="rate">6%</span>',
                                     '<span data-pillar-value="secondPillarTimesFirst">3</span>'
                                 ); ?></p>
-                                <p class="mb-0"><?php _e('The amounts are in today\'s money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund\'s returns and can also fall.', TEXT_DOMAIN); ?></p>
+                                <p class="mb-0"><?php _e('The amounts are in today\'s money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund\'s returns and can also fall. Sources: Social Insurance Board, Statistics Estonia.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
