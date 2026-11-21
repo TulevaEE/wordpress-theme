@@ -1,5 +1,5 @@
 var averageFundFee = typeof calculatorAverageFee === 'number' ? calculatorAverageFee : 0.77 / 100;
-var tulevaFee = 0.0028;
+var tulevaFee = typeof calculatorTulevaFee === 'number' ? calculatorTulevaFee : 0.0028;
 
 var format = function (num) {
     if (!window.LANGCODE) {

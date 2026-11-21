@@ -1,3 +1,10 @@
+<?php
+// Read once, so the example on 10,000 euros is worked out from the percentage the page prints.
+$savings_fund_charges = tuleva_fund_printed_ongoing_charges(TULEVA_FUND_ISINS['TKF100']);
+$savings_fund_fee = $savings_fund_charges === null
+    ? null
+    : tuleva_format_percent($savings_fund_charges, tuleva_figures_language());
+?>
 <main id="main" class="page-container landing-page savings-fund-landing-page company-savings-page">
 
     <section class="hero">
@@ -70,7 +77,9 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
                             </div>
                             <h3><?php _e('A low fee', TEXT_DOMAIN); ?></h3>
-                            <p><?php _e('A fund fee of 0.28% a year, with no purchase, sale or other extra fees.', TEXT_DOMAIN); ?></p>
+                            <?php if ($savings_fund_fee !== null): ?>
+                            <p><?php printf(__('A fund fee of %s a year, with no purchase, sale or other extra fees.', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></p>
+                            <?php endif; ?>
                         </article>
                         <article class="who-card">
                             <div class="icon" aria-hidden="true">
@@ -124,7 +133,9 @@
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding/company'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Open an account', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('More than <strong>300</strong> companies already invest in Tuleva', TEXT_DOMAIN); ?></span></li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
+                            <?php if ($savings_fund_fee !== null): ?>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Fee <strong>%s</strong> per year, no extra charges', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></span></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -157,7 +168,9 @@
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-etf"><?php _e('How is this different from buying an ETF through a bank or broker?', TEXT_DOMAIN); ?></a>
                             <div id="answer-etf" class="collapse">
                                 <p><?php _e('With a bank or broker, you choose the ETF yourself and place the orders yourself. To trade on an exchange, a company needs an LEI code, which costs 50–100 euros a year. Some providers also charge transaction or custody fees. The ETF\'s own fee may be lower than our fund\'s.', TEXT_DOMAIN); ?></p>
-                                <p><?php _e('The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of 0.28% a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is 28 euros a year, which is less than the LEI code alone.', TEXT_DOMAIN); ?></p>
+                                <?php if ($savings_fund_fee !== null): ?>
+                                <p><?php printf(__('The Tuleva Additional Investment Fund is a single broad-based index fund with a fee of %1$s a year. You buy units directly from us, so you do not need an LEI code. We charge no fees for buying, selling or holding units. For example, on 10,000 euros the fund fee is %2$s euros a year, which is less than the LEI code alone.', TEXT_DOMAIN), esc_html($savings_fund_fee), tuleva_euros_at_percent($savings_fund_charges, 10000)); ?></p>
+                                <?php endif; ?>
                             </div>
                         </div>
 

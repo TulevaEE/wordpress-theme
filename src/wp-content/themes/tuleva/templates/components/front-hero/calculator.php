@@ -136,7 +136,10 @@
                 <div class="me-3">
                     <?php _e('You pay in fees', TEXT_DOMAIN); ?>
                 </div>
-                <div class="text-nowrap"><?php _e('0.28% per year', TEXT_DOMAIN); ?></div>
+                <div class="text-nowrap"><?php
+                    $tuleva_fee = tuleva_fund_ongoing_charges(TULEVA_FUND_ISINS['TUK75']);
+                    printf(esc_html__('%s per year', TEXT_DOMAIN), $tuleva_fee === null ? '-' : esc_html($tuleva_fee));
+                    ?></div>
             </div>
         </div>
     </div>

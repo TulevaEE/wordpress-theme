@@ -47,8 +47,9 @@ function faq_schema_json(array $questions): string
 /**
  * Builds InvestmentFund JSON-LD so the fee figures shown on a fund page are also
  * machine-readable on that same page
- * @param  array $fund name, url, isin, provider, fees (one sentence) and
- *                     description (one sentence with the other fund details)
+ * @param  array $fund name, url, isin, provider, fees (one sentence, left out
+ *                     when empty) and description (one sentence with the
+ *                     other fund details)
  * @return string      JSON-LD, or an empty string without an ISIN
  */
 function fund_schema_json(array $fund): string
@@ -57,26 +58,31 @@ function fund_schema_json(array $fund): string
         return '';
     }
 
-    return json_encode([
+    $schema = [
         '@context' => 'https://schema.org',
         '@type' => 'InvestmentFund',
         'name' => $fund['name'],
         'url' => $fund['url'],
         'identifier' => ['@type' => 'PropertyValue', 'propertyID' => 'ISIN', 'value' => $fund['isin']],
         'provider' => ['@type' => 'Organization', 'name' => $fund['provider']],
-        'feesAndCommissionsSpecification' => $fund['fees'],
-        'description' => $fund['description'],
-    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP);
+    ];
+    if (!empty($fund['fees'])) {
+        $schema['feesAndCommissionsSpecification'] = $fund['fees'];
+    }
+    $schema['description'] = $fund['description'];
+
+    return json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP);
 }
 
 /**
  * Words the fund facts for structured data: the ongoing charges figure is the one
  * number that matters to a saver, so it headlines alone as an annual figure and
- * the other details follow as a description
+ * the other details follow as a description. Without the figure there is no
+ * fees sentence, rather than one with a gap where the figure goes
  * @param  array $labels Display labels keyed like $fund, plus per_year
  * @param  array $fund   ongoing_charges, management_fee, redemption_fee,
  *                       inception_date, risk_profile, comparison_index
- * @return array         fees and description sentences
+ * @return array         fees ('' without ongoing charges) and description sentences
  */
 function fund_schema_fields(array $labels, array $fund): array
 {
@@ -92,7 +98,9 @@ function fund_schema_fields(array $labels, array $fund): array
     }, array_keys($details), $details);
 
     return [
-        'fees' => $labels['ongoing_charges'] . ' ' . $fund['ongoing_charges'] . ' ' . $labels['per_year'],
+        'fees' => empty($fund['ongoing_charges'])
+            ? ''
+            : $labels['ongoing_charges'] . ' ' . $fund['ongoing_charges'] . ' ' . $labels['per_year'],
         'description' => implode(' ', $sentences),
     ];
 }

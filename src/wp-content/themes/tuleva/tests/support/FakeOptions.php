@@ -10,9 +10,13 @@ final class FakeOptions
 {
     public static array $options = [];
 
+    /** @var list<string> the options written, in order, one entry per update_option() call */
+    public static array $updated = [];
+
     public static function reset(): void
     {
         self::$options = [];
+        self::$updated = [];
     }
 }
 
@@ -24,6 +28,7 @@ function get_option($name, $default = false)
 function update_option($name, $value, $autoload = null)
 {
     FakeOptions::$options[$name] = $value;
+    FakeOptions::$updated[] = $name;
 
     return true;
 }

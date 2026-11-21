@@ -8,19 +8,7 @@ if (!defined('TEXT_DOMAIN')) {
     define('TEXT_DOMAIN', 'tuleva');
 }
 
-if (!function_exists('__')) {
-    function __($text, $domain = null)
-    {
-        return $text;
-    }
-}
-
-if (!function_exists('_x')) {
-    function _x($text, $context, $domain = null)
-    {
-        return $text;
-    }
-}
+require_once __DIR__ . '/../support/FakeTranslations.php';
 
 function get_sub_field(string $name): string
 {

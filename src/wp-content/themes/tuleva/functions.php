@@ -23,7 +23,7 @@ $theme_includes = [
     'helpers/editor.php', // Editor customizations
     'helpers/setup.php', // Enqueue scripts & styles
     'helpers/schema.php', // Organization and FAQ structured data
-    'helpers/fund-figures.php', // Management fee and fund manager's units on the fund pages
+    'helpers/fund-figures.php', // Management fee, fund manager's units and ongoing charges from the fund list
     'helpers/access-reviewer.php', // Read-only role for the access review's user listing
 ];
 

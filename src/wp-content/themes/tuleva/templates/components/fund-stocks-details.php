@@ -2,13 +2,13 @@
 $fund = [
     'isin' => 'EE3600109435',
     'inception_date' => __('27 March 2017', TEXT_DOMAIN),
-    'ongoing_charges' => '0,28%',
     'redemption_fee' => '0%',
     'risk_profile' => __('Aggressive', TEXT_DOMAIN),
     'comparison_index' => ['100% MSCI ACWI (EUR)'],
 ];
 $figures = tuleva_fund_page_figures($fund['isin']);
 $fund['management_fee'] = $figures['management_fee'];
+$fund['ongoing_charges'] = $figures['ongoing_charges'];
 $fund['manager_participation'] = $figures['manager_units'];
 $fund['manager_participation_date'] = $figures['manager_units_date'];
 
@@ -72,10 +72,12 @@ $remuneration_policy_url = get_remuneration_document_url();
                             <span><?php echo esc_html($fund['management_fee']); ?></span>
                         </p>
                         <?php endif; ?>
+                        <?php if ($fund['ongoing_charges'] !== null): ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
-                            <span><?php echo $fund['ongoing_charges']; ?></span>
+                            <span><?php echo esc_html($fund['ongoing_charges']); ?></span>
                         </p>
+                        <?php endif; ?>
                         <p class="fund-info__item">
                             <span class="small text-bold"><?php _e('Redemption fee and issue fee', TEXT_DOMAIN) ?></span>
                             <span><?php echo $fund['redemption_fee']; ?></span>

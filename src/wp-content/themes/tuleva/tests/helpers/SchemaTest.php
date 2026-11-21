@@ -163,6 +163,48 @@ final class SchemaTest extends TestCase
         ], $fields);
     }
 
+    /**
+     * Before the fund list has ever given a fund's ongoing charges, the page shows no row for
+     * them, and the structured data states no fees rather than "Ongoing charges  per year".
+     */
+    #[Test]
+    public function fundSchemaHasNoFeesWithoutOngoingCharges(): void
+    {
+        $fields = fund_schema_fields([
+            'ongoing_charges' => 'Ongoing charges',
+            'per_year' => 'per year',
+            'management_fee' => 'Management fee',
+            'redemption_fee' => 'Redemption fee and issue fee',
+            'inception_date' => 'Date of inception',
+            'risk_profile' => 'Risk profile',
+            'comparison_index' => 'Comparison index',
+        ], [
+            'ongoing_charges' => null,
+            'management_fee' => '0.205%',
+            'redemption_fee' => '0%',
+            'inception_date' => '',
+            'risk_profile' => '',
+            'comparison_index' => '',
+        ]);
+
+        $this->assertSame([
+            'fees' => '',
+            'description' => 'Management fee: 0.205%. Redemption fee and issue fee: 0%.',
+        ], $fields);
+
+        $schema = json_decode(fund_schema_json([
+            'name' => 'Tuleva World Stocks Pension Fund',
+            'url' => 'https://tuleva.ee/en/tuleva-world-stocks-pension-fund/',
+            'isin' => 'EE3600109435',
+            'provider' => 'Tuleva Fondid AS',
+            'fees' => $fields['fees'],
+            'description' => $fields['description'],
+        ]), true);
+
+        $this->assertArrayNotHasKey('feesAndCommissionsSpecification', $schema);
+        $this->assertSame('Management fee: 0.205%. Redemption fee and issue fee: 0%.', $schema['description']);
+    }
+
     #[Test]
     public function fundSchemaIsEmptyWithoutAnIsin(): void
     {

@@ -39,12 +39,7 @@ if (!function_exists('get_site_url')) {
     }
 }
 
-if (!function_exists('__')) {
-    function __($text, $domain = null)
-    {
-        return $text;
-    }
-}
+require_once __DIR__ . '/../support/FakeTranslations.php';
 
 if (!function_exists('esc_html')) {
     function esc_html($text)

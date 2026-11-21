@@ -27,6 +27,7 @@
                 'managementFeeRate' => 0.00163,
                 'pillar' => 2,
                 'ongoingChargesFigure' => 0.0028,
+                'ongoingChargesPercentDecimals' => 2,
                 'nav' => 0.61602,
                 'volume' => 12448203.1277,
             ],

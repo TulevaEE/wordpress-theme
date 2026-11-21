@@ -1,4 +1,5 @@
 <?php $investor_count_over = tuleva_investor_count_over(ICL_LANGUAGE_CODE); ?>
+<?php $savings_fund_fee = tuleva_fund_ongoing_charges(TULEVA_FUND_ISINS['TKF100']); ?>
 <main id="main" class="page-container landing-page child-savings-page">
     <script>
         var LANGCODE = '<?php echo apply_filters( "wpml_current_language", NULL );  ?>'; // eslint-disable-line
@@ -139,7 +140,9 @@
                             <?php if ($investor_count_over) { ?>
                                 <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Over <strong>%s</strong> people save with Tuleva', TEXT_DOMAIN), $investor_count_over); ?></span></li>
                             <?php } ?>
-                            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
+                            <?php if ($savings_fund_fee !== null) { ?>
+                            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Fee <strong>%s</strong> per year, no extra charges', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></span></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -198,14 +201,18 @@
                         <div class="qa__question-wrapper" id="kkk-11">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-11"><?php _e('How much does saving cost and what amount can I start with?', TEXT_DOMAIN); ?></a>
                             <div id="answer-11" class="collapse">
-                                <p><?php _e('The fund\'s ongoing charges are 0.28% per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free.', TEXT_DOMAIN); ?></p>
+                                <?php if ($savings_fund_fee !== null) { ?>
+                                <p><?php printf(__('The fund\'s ongoing charges are %s per year. There are no entry, exit, performance, management, currency exchange or other fees on top of that. Opening an account is free.', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></p>
+                                <?php } ?>
                                 <p><?php _e('You can start with as little as one euro. If you like, you can set up a recurring payment, for example the size of the monthly child benefit. You can change or stop it at any time.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
 <div class="qa__question-wrapper" id="kkk-3">
                             <a class="qa__question collapsed" data-bs-toggle="collapse" href="#answer-3"><?php _e('How does this differ from LHV\'s Kasvukonto and Swedbank\'s child products?', TEXT_DOMAIN); ?></a>
                             <div id="answer-3" class="collapse">
-                                <p><?php _e('LHV\'s Kasvukonto is a platform where you choose yourself which fund your child\'s money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva\'s Additional Investment Fund has just one fund, a broad-based index fund with a fee of 0.28% per year, and we stand behind it.', TEXT_DOMAIN); ?></p>
+                                <?php if ($savings_fund_fee !== null) { ?>
+                                <p><?php printf(__('LHV\'s Kasvukonto is a platform where you choose yourself which fund your child\'s money is invested in. There are many options, both good and worse ones, and you have to pick the right fund yourself. Tuleva\'s Additional Investment Fund has just one fund, a broad-based index fund with a fee of %s per year, and we stand behind it.', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></p>
+                                <?php } ?>
                                 <p><?php _e('Swedbank\'s child products (Koolifond and its successor, the Lapse Tuleviku fund) mix investing with insurance. The total cost of such products is estimated at around 1.5% per year, and the exact amount depends on the contract. Tuleva\'s fund is meant for investing only. If you need insurance, that is a separate purchase.', TEXT_DOMAIN); ?></p>
                                 <p><a href="https://tuleva.ee/vastused/miks-koolifondidest-eemale-hoida/"><?php _e('Read more: 3 reasons to avoid child-labeled savings products', TEXT_DOMAIN); ?></a></p>
                             </div>
