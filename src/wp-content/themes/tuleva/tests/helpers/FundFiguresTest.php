@@ -375,6 +375,19 @@ final class FundFiguresTest extends TestCase
         $this->assertSame(['0,3%'], tuleva_ongoing_charges_range(array_reverse($charges), 'et'));
     }
 
+    #[Test]
+    public function writesTheHighestInItsShorterFormWhenItIsPrintedWithDifferentDecimals(): void
+    {
+        $charges = [
+            ['figure' => 0.0025, 'decimals' => 2],
+            ['figure' => 0.003, 'decimals' => 2],
+            ['figure' => 0.003, 'decimals' => 1],
+        ];
+
+        $this->assertSame(['0,25%', '0,3%'], tuleva_ongoing_charges_range($charges, 'et'));
+        $this->assertSame(['0,25%', '0,3%'], tuleva_ongoing_charges_range(array_reverse($charges), 'et'));
+    }
+
     /**
      * Ordered by the printed percentage, not by the figure behind it: 0.00284 prints as 0,3%
      * with one decimal, above 0.00285 printed as 0,29% with two.

@@ -1405,6 +1405,17 @@ final class FundDisclosuresTest extends TestCase
     }
 
     #[Test]
+    public function the_calculator_computes_with_the_key_information_documents_own_decimals(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([self::listedFund('EE3600109435', 0.0028, 1)]));
+
+        $html = $this->renderCalculator();
+
+        $this->assertStringContainsString('var calculatorTulevaFee = 0.003;', $html);
+        $this->assertStringContainsString('<div class="text-nowrap">0,3% per year</div>', $html);
+    }
+
+    #[Test]
     public function the_calculator_keeps_its_own_fee_and_shows_a_dash_before_the_fund_list_has_given_one(): void
     {
         FakeWordPress::respondWith(503, '');
