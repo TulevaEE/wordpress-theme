@@ -1179,8 +1179,10 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The page switches a prospectus, terms or NAV procedure on the date in its filename, and leaves
-     * one with no readable date where it is for ever. A key information document's date is never read.
+     * The page switches a prospectus, terms, NAV procedure, key information document or model
+     * portfolio on the date in its filename, and leaves one with no readable date where it is for
+     * ever. A model portfolio in force is named for the day it shows, so only an upcoming one's date
+     * is read.
      */
     #[Test]
     public function a_document_that_switches_on_its_date_needs_a_readable_one_in_its_filename(): void
@@ -1189,10 +1191,16 @@ final class FundDisclosuresTest extends TestCase
         FakeFundPage::$fields['prospectus_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Prospekt-kehtib-alates-02.03.3026.pdf';
         FakeFundPage::$fields['terms_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/TUK75-tingimused-uued.pdf';
         FakeFundPage::$fields['key_investor_info_file'] = 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUK75.pdf';
+        FakeFundPage::$fields['key_investor_info_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/Pohiteave-TUK75-uus.pdf';
+        FakeFundPage::$fields['model_portfolio_file'] = 'https://tuleva.ee/wp-content/uploads/2026/08/Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf';
+        FakeFundPage::$fields['model_portfolio_upcoming_file'] = 'https://tuleva.ee/wp-content/uploads/2026/12/Mudelportfell-avalikustamiseks-01.01.2027-seisuga.pdf';
 
         $this->assertSame([
             ['field' => 'prospectus_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
             ['field' => 'terms_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'model_portfolio_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'key_investor_info_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
+            ['field' => 'key_investor_info_upcoming_file', 'problem' => 'no_effective_date', 'page' => 'fund'],
         ], tuleva_fund_disclosure_gaps('page_fund-stocks.php', 17533));
     }
 
@@ -1557,6 +1565,110 @@ final class FundDisclosuresTest extends TestCase
             $this->assertStringNotContainsString($upcoming_terms, $html);
             $this->assertStringNotContainsString('01.01.2027', $html);
         }
+    }
+
+    /**
+     * @return array<string, array{string, string, string, string, string}>
+     */
+    public static function fundDocumentsSetAhead(): array
+    {
+        return [
+            'TUK75 key information' => ['page_fund-stocks.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUK75-kehtib-alates-19.03.2026-.pdf', 'TUK75-pohiteave-kehtib-alates-01.04.2027.pdf'],
+            'TUK00 key information' => ['page_fund-bonds.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUK00-kehtib-alates-19.03.2026.pdf', 'TUK00-pohiteave-kehtib-alates-01.04.2027.pdf'],
+            'TUV100 key information' => ['page_fund-third.php', 'key_investor_info_file', 'Key Investor Information', 'Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf', 'TUV100-pohiteave-kehtib-alates-04.12.2026.pdf'],
+            'TKF100 key information' => [self::SAVINGS_TEMPLATE, 'key_investor_info_file', 'Key Investor Information', 'TKF100-Pohiteave-kehtib-alates-29.10.2026.pdf', 'TKF100-Pohiteave-kehtib-alates-12.01.2027.pdf'],
+            'TUK75 model portfolio' => ['page_fund-stocks.php', 'model_portfolio_file', 'Model portfolio', 'Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUK75-mudelportfell-kehtib-alates-01.01.2027.pdf'],
+            'TUK00 model portfolio' => ['page_fund-bonds.php', 'model_portfolio_file', 'Model portfolio', 'TUK00-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUK00-mudelportfell-kehtib-alates-01.01.2027.pdf'],
+            'TUV100 model portfolio' => ['page_fund-third.php', 'model_portfolio_file', 'Model portfolio', 'TUV100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TUV100-mudelportfell-kehtib-alates-04.12.2026.pdf'],
+            'TKF100 model portfolio' => [self::SAVINGS_TEMPLATE, 'model_portfolio_file', 'Model portfolio', 'TKF100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf', 'TKF100-mudelportfell-kehtib-alates-12.01.2027.pdf'],
+        ];
+    }
+
+    /**
+     * A key information document or a model portfolio is published on the day it applies, never
+     * announced: the page links the one in force, and from the upcoming one's date that one, with
+     * nobody acting that day (TUV100's KID of 04.12.2026 switches at 00:00). A model portfolio in force is
+     * named for the day it shows, not the day it took effect, and the upcoming one still replaces it.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundDocumentsSetAhead')]
+    public function a_document_set_ahead_switches_on_its_date_and_is_never_listed_before_it(
+        string $template,
+        string $field,
+        string $label,
+        string $current,
+        string $upcoming
+    ): void {
+        FakeFundPage::$fields = [
+            $field => "https://tuleva.ee/wp-content/uploads/2026/03/$current",
+            TULEVA_UPCOMING_DISCLOSURES[$field] => "https://tuleva.ee/wp-content/uploads/2026/11/$upcoming",
+        ];
+        $takes_effect = tuleva_document_effective_day("https://tuleva.ee/$upcoming");
+
+        FakeFundPage::$today = (new DateTimeImmutable($takes_effect))->modify('-1 day')->format('Y-m-d');
+        $before = $this->renderFundPage($template);
+        FakeFundPage::$today = $takes_effect;
+        $after = $this->renderFundPage($template);
+
+        $this->assertStringContainsString($current, $before);
+        $this->assertStringNotContainsString($upcoming, $before);
+        $this->assertStringContainsString($upcoming, $after);
+        $this->assertStringNotContainsString($current, $after);
+        $this->assertSame(1, substr_count($after, $label));
+    }
+
+    /**
+     * The upcoming key information document and model portfolio are fields of every fund page and of
+     * no other page, so agent-gateway can set them ahead for each fund.
+     */
+    #[Test]
+    public function every_fund_page_and_only_a_fund_page_has_the_upcoming_fields_never_shown(): void
+    {
+        foreach (['key_investor_info_upcoming_file', 'model_portfolio_upcoming_file'] as $upcoming) {
+            foreach (self::fundDocumentsSetAhead() as $fund => [$template]) {
+                $this->assertTrue(tuleva_fund_disclosure_applies($upcoming, $template), "$fund $upcoming");
+                $this->assertSame(TULEVA_DISCLOSURE_OPTIONAL, tuleva_fund_disclosure_requirement($upcoming, $template), "$fund $upcoming");
+            }
+            $this->assertFalse(tuleva_fund_disclosure_applies($upcoming, TULEVA_SHARED_DOCUMENTS_TEMPLATE), $upcoming);
+        }
+    }
+
+    /**
+     * The REST `acf` values that onboarding-client and agent-gateway read follow the page once the
+     * hourly job has run, and the next key information document and model portfolio have an empty
+     * field to go into. The model portfolio in force carries no effective date, and the due one
+     * replaces it all the same.
+     */
+    #[Test]
+    public function the_hourly_job_moves_a_due_key_information_document_and_model_portfolio_into_their_current_fields(): void
+    {
+        FakeFundPage::$pages['page_fund-third.php'] = [20938];
+        FakeFundPage::$stored[20938] = [
+            'key_investor_info_file' => 301,
+            'key_investor_info_upcoming_file' => 302,
+            'model_portfolio_file' => 303,
+            'model_portfolio_upcoming_file' => 304,
+        ];
+        FakeAttachments::$urls = [
+            301 => 'https://tuleva.ee/wp-content/uploads/2026/03/Pohiteave-TUV100-kehtib-alates-19.03.2026.pdf',
+            302 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-pohiteave-kehtib-alates-04.12.2026.pdf',
+            303 => 'https://tuleva.ee/wp-content/uploads/2026/08/TUV100-Mudelportfell-avalikustamiseks-19.08.2026-seisuga.pdf',
+            304 => 'https://tuleva.ee/wp-content/uploads/2026/11/TUV100-mudelportfell-kehtib-alates-04.12.2026.pdf',
+        ];
+
+        $this->assertSame([], tuleva_promote_due_documents('2026-12-03'));
+        $this->assertSame([], FakeFundPage::$updates);
+
+        $this->assertSame([
+            ['post' => 20938, 'field' => 'key_investor_info_file'],
+            ['post' => 20938, 'field' => 'model_portfolio_file'],
+        ], tuleva_promote_due_documents('2026-12-04'));
+        $this->assertSame([
+            ['field_fund_disclosure_third_key_investor_info_file', 302, 20938],
+            ['field_fund_disclosure_third_key_investor_info_upcoming_file', '', 20938],
+            ['field_fund_disclosure_third_model_portfolio_file', 304, 20938],
+            ['field_fund_disclosure_third_model_portfolio_upcoming_file', '', 20938],
+        ], FakeFundPage::$updates);
     }
 
     #[Test]
@@ -2341,20 +2453,21 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * Only the prospectus, the terms and the NAV procedure have an upcoming version; any other
-     * document resolves on its own, and one outside the fund's scope to nothing.
+     * Only the prospectus, the terms, the NAV procedure, the key information document and the model
+     * portfolio have an upcoming version; any other document resolves on its own, and one outside the
+     * fund's scope to nothing.
      */
     #[Test]
     public function a_document_with_no_upcoming_version_resolves_on_its_own(): void
     {
         FakeFundPage::$template = 'page_fund-stocks.php';
         FakeFundPage::$fields = [
-            'key_investor_info_file' => 'https://tuleva.ee/kid.pdf',
+            'investment_report_file' => 'https://tuleva.ee/report.pdf',
             'investor_rights_file' => 'https://tuleva.ee/rights.pdf',
             'nav_procedure_file' => 'https://tuleva.ee/nav.pdf',
         ];
 
-        $this->assertSame(['https://tuleva.ee/kid.pdf', ''], tuleva_fund_document('key_investor_info_file'));
+        $this->assertSame(['https://tuleva.ee/report.pdf', ''], tuleva_fund_document('investment_report_file'));
         $this->assertSame(['', ''], tuleva_fund_document('investor_rights_file'));
         $this->assertSame(['', ''], tuleva_fund_document('nav_procedure_file'));
     }

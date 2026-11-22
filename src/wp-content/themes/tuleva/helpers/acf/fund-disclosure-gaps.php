@@ -61,8 +61,13 @@ function tuleva_fund_disclosure_gaps(string $template, $post_id = null): array
  */
 function tuleva_disclosure_gaps_in(array $scope, callable $stored_value, string $page): array
 {
-    // The documents that switch on the date in their filename, current and upcoming.
-    $dated = [...array_keys(TULEVA_UPCOMING_DISCLOSURES), ...array_values(TULEVA_UPCOMING_DISCLOSURES)];
+    // The documents that switch on the date in their filename, current and upcoming. A model
+    // portfolio in force is named for the day it shows ("… 19.08.2026 seisuga"), and only an
+    // upcoming one carries the day it takes effect.
+    $dated = array_diff(
+        [...array_keys(TULEVA_UPCOMING_DISCLOSURES), ...array_values(TULEVA_UPCOMING_DISCLOSURES)],
+        ['model_portfolio_file']
+    );
     $gaps = [];
 
     foreach ($scope as $name => $requirement) {

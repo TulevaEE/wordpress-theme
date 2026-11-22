@@ -245,18 +245,14 @@
                                     '<span data-pillar-value="firstPillarInRetirement">464&nbsp;€</span>'
                                 ); ?></p>
                                 <p><?php printf(
-                                    __('<strong>II&nbsp;pillar, %1$s&nbsp;a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don\'t pay on your %4$s contribution. That is about %5$s&nbsp;times what the state promises an average person from the I&nbsp;pillar for the same year of saving over their retirement.', TEXT_DOMAIN),
+                                    __('<strong>II&nbsp;pillar, %1$s&nbsp;a year:</strong> %2$s comes from social tax, which is 4%% of your gross pay, and %3$s is the income tax you don\'t pay on your %4$s contribution. That is about %5$s&nbsp;times what the state promises you from the I&nbsp;pillar for the same year of saving at this pay, over 19&nbsp;years of retirement.', TEXT_DOMAIN),
                                     '<span data-pillar-value="secondPillarYearly">1277&nbsp;€</span>',
                                     '<span data-pillar-value="socialTaxYearly">960&nbsp;€</span>',
                                     '<span data-pillar-value="incomeTaxYearly">317&nbsp;€</span>',
                                     '<span data-pillar-value="rate">6%</span>',
                                     '<span data-pillar-value="secondPillarTimesFirst">3</span>'
                                 ); ?></p>
-                                <p class="mb-0"><?php printf(
-                                    __('The amounts are in today\'s money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund\'s returns and can also fall. Sources: %1$s, %2$s.', TEXT_DOMAIN),
-                                    '<a class="text-reset" href="' . esc_url(__('https://sotsiaalkindlustusamet.ee/en/pension-and-benefits/pension-amount/pension-calculation', TEXT_DOMAIN)) . '">' . __('Social Insurance Board', TEXT_DOMAIN) . '</a>',
-                                    '<a class="text-reset" href="' . esc_url(__('https://stat.ee/en/news/life-expectancy-in-estonia-is-798-years-healthy-life-expectancy-is-573-years', TEXT_DOMAIN)) . '">' . __('Statistics Estonia', TEXT_DOMAIN) . '</a>'
-                                ); ?></p>
+                                <p class="mb-0"><?php _e('The amounts are in today\'s money. The I&nbsp;pillar is a promise from the state: its size and indexation depend on future laws. Your II&nbsp;pillar assets are yours, but their value depends on the fund\'s returns and can also fall. Sources: Social Insurance Board, Statistics Estonia.', TEXT_DOMAIN); ?></p>
                             </div>
                         </div>
                     </div>
