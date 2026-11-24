@@ -2,6 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <?php // The submenu shows which list this is; the heading names it for search engines and screen readers ?>
+                <h1 class="visually-hidden"><?php
+                    if (is_search()) {
+                        echo esc_html(get_search_query());
+                    } elseif (is_category()) {
+                        single_cat_title();
+                    } else {
+                        single_post_title();
+                    }
+                ?></h1>
                 <?php get_template_part('templates/blog/submenu'); ?>
             </div>
         </div>

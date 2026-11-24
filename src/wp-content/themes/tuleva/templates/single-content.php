@@ -55,7 +55,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 content-area">
-                <img class="post-image" src="<?php echo the_post_thumbnail_url('full'); ?>" alt="">
+                <img class="post-image" src="<?php echo the_post_thumbnail_url('max-width-1000'); ?>" alt="">
                 <?php if (get_the_content()) { ?>
                 <div class="content">
                     <?php the_content(); ?>

@@ -42,7 +42,7 @@
             <a class="post-list__item__title<?php echo ($is_featured ? ' h3' : ' h4'); ?>" href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()) { ?>
                     <div class="post-list__item__image">
-                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
+                        <img src="<?php the_post_thumbnail_url('max-width-1000'); ?>" alt=""<?php if (!$is_featured) { echo ' loading="lazy" decoding="async"'; } ?>>
                     </div>
                 <?php } ?>
                 <h2 class="text-serif<?php echo ($is_featured ? ' h3' : ' h4'); ?>"><?php the_title(); ?></h2>

@@ -8,7 +8,7 @@
             <div class="modal-full-content">
                 <div class="row">
                     <div class="col">
-                        <h1 class="text-center mb-6"><?php _e('Founding members', TEXT_DOMAIN); ?></h1>
+                        <h2 class="h1 text-center mb-6"><?php _e('Founding members', TEXT_DOMAIN); ?></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -17,7 +17,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="Tõnu Pekk">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="<?php echo get_template_directory_uri() ?>/img/tonu-pekk.png" alt="Tõnu Pekk">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Tõnu Pekk</h4>
@@ -27,7 +27,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2017/04/priit-lepasepp.png" alt="Priit Lepasepp">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2017/04/priit-lepasepp.png" alt="Priit Lepasepp">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Priit Lepasepp</h4>
@@ -37,7 +37,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/14.jpg" alt="Indrek Neivelt">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/14.jpg" alt="Indrek Neivelt">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Indrek Neivelt</h4>
@@ -47,7 +47,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2017/04/daniel-vaarik.jpg" alt="Daniel Vaarik">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2017/04/daniel-vaarik.jpg" alt="Daniel Vaarik">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Daniel Vaarik</h4>
@@ -57,7 +57,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/10.jpg" alt="Kristo Käärmann">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/10.jpg" alt="Kristo Käärmann">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Kristo Käärmann</h4>
@@ -67,7 +67,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/8.jpg" alt="Mall Hellam">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/8.jpg" alt="Mall Hellam">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Mall Hellam</h4>
@@ -77,7 +77,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/11.jpg" alt="Kirsti Pent">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/11.jpg" alt="Kirsti Pent">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Kirsti Pent</h4>
@@ -87,7 +87,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/15.jpg" alt="Indrek Kasela">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/15.jpg" alt="Indrek Kasela">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Indrek Kasela</h4>
@@ -97,7 +97,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2017/04/annika-uudelepp.png" alt="Annika Uudelepp">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2017/04/annika-uudelepp.png" alt="Annika Uudelepp">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Annika Uudelepp</h4>
@@ -107,7 +107,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2017/04/henrik-karmo.jpg" alt="Henrik Karmo">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2017/04/henrik-karmo.jpg" alt="Henrik Karmo">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Henrik Karmo</h4>
@@ -117,7 +117,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/21-1-e1474894484759.jpg" alt="Taavi Lepmets">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/21-1-e1474894484759.jpg" alt="Taavi Lepmets">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Taavi Lepmets</h4>
@@ -127,7 +127,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/4.jpg" alt="Taavet Hinrikus">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/4.jpg" alt="Taavet Hinrikus">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Taavet Hinrikus</h4>
@@ -137,7 +137,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/9.jpg" alt="Loit Linnupõld">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/9.jpg" alt="Loit Linnupõld">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Loit Linnupõld</h4>
@@ -147,7 +147,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/1.jpg" alt="Veljo Otsason">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/1.jpg" alt="Veljo Otsason">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Veljo Otsason</h4>
@@ -157,7 +157,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/6.jpg" alt="Rain Rannu">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/6.jpg" alt="Rain Rannu">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Rain Rannu</h4>
@@ -167,7 +167,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/5.jpg" alt="Sandor Liive">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/5.jpg" alt="Sandor Liive">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Sandor Liive</h4>
@@ -177,7 +177,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2017/04/heikko-mae.png" alt="Heikko Mäe">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2017/04/heikko-mae.png" alt="Heikko Mäe">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Heikko Mäe</h4>
@@ -187,7 +187,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/17.jpg" alt="Gerd Laub">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/17.jpg" alt="Gerd Laub">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Gerd Laub</h4>
@@ -197,7 +197,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/3.jpg" alt="Triinu Tombak">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/3.jpg" alt="Triinu Tombak">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Triinu Tombak</h4>
@@ -207,7 +207,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/12.jpg" alt="Kadi Lambot">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/12.jpg" alt="Kadi Lambot">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Kadi Lambot</h4>
@@ -217,7 +217,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/20.jpg" alt="Allan Kaldoja">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/20.jpg" alt="Allan Kaldoja">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Allan Kaldoja</h4>
@@ -227,7 +227,7 @@
 
                             <div class="media-box">
                                 <div class="media-box__media">
-                                    <img class="media-box__image" src="https://tuleva.ee/wp-content/uploads/2014/11/13.jpg" alt="Jaak Roosaare">
+                                    <img class="media-box__image" loading="lazy" decoding="async" src="https://tuleva.ee/wp-content/uploads/2014/11/13.jpg" alt="Jaak Roosaare">
                                 </div>
                                 <div class="media-box__body">
                                     <h4 class="media-box__title">Jaak Roosaare</h4>

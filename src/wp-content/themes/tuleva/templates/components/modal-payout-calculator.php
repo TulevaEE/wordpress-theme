@@ -8,7 +8,7 @@
             <div class="modal-full__content">
                 <div class="row">
                     <div class="col">
-                        <h1 class="text-center mb-1 mb-md-6"><?php _e('How does the calculator work?', TEXT_DOMAIN) ?></h1>
+                        <h2 class="h1 text-center mb-1 mb-md-6"><?php _e('How does the calculator work?', TEXT_DOMAIN) ?></h2>
                     </div>
                 </div>
                 <div class="row mb-5">

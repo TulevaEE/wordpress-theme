@@ -8,7 +8,7 @@
     </div>
     <div class="row section-spacing text-center">
       <div class="mx-auto col-lg-11 col-xl-9">
-        <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid">
+        <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid" loading="lazy" decoding="async">
       </div>
     </div>
     <div class="row">

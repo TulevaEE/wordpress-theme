@@ -101,7 +101,7 @@
                                             <?php while (have_rows('contacts')) { the_row(); ?>
                                                 <div class="contacts-block__item px-4">
                                                     <?php if(get_sub_field('image')) { ?>
-                                                        <img class="contacts-block__image" src="<?php the_sub_field('image'); ?>" alt="">
+                                                        <img class="contacts-block__image" loading="lazy" decoding="async" src="<?php the_sub_field('image'); ?>" alt="">
                                                     <?php } ?>
 
                                                     <h4 class="contacts-block__title">
