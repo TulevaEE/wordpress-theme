@@ -43,7 +43,7 @@ class CleanUp {
 			remove_action('wp_head', [$wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style']);
 		}
 
-		if (!class_exists('WPSEO_Frontend')) {
+		if (!defined('WPSEO_VERSION')) { // Yoast prints its own canonical; WPSEO_Frontend is gone since Yoast 28
 			remove_action('wp_head', 'rel_canonical');
 			add_action('wp_head', [$this, 'rel_canonical']);
 		}
