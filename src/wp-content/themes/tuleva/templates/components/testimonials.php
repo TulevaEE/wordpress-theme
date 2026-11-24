@@ -15,7 +15,7 @@
                                     <p class="blockquote text-start mb-5"><?php echo get_sub_field('text'); ?></p>
                                     <div class="d-flex align-items-center">
                                         <?php if (get_sub_field('image')) { ?>
-                                            <img src="<?php the_sub_field('image'); ?>" alt="" width="80" height="80" class="rounded-circle me-3">
+                                            <?php echo tuleva_upload_image(get_sub_field('image'), 'max-height-width-100', ['width' => 80, 'height' => 80, 'sizes' => '80px', 'class' => 'rounded-circle me-3']); ?>
                                         <?php } ?>
                                         <div class="text-start"><?php the_sub_field('source'); ?>
                                             <?php if (get_sub_field('description')) { ?>

@@ -22,9 +22,25 @@ class ThemeEnqueue
             // CSS assets
             [
                 'handle' => 'font-style',
-                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i|Material+Symbols+Rounded&amp;subset=latin-ext',
+                // display=swap shows text in a fallback font until these load,
+                // instead of hiding it. The css2 API needs one family= per font,
+                // and WordPress keeps only one of them when it adds ?ver=, so
+                // this stays on the older API.
+                'src' => 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i&amp;subset=latin-ext&amp;display=swap',
                 'deps' => 'normalize',
-                'ver' => '1.0.1',
+                'ver' => '1.0.2',
+                'media' => 'all',
+                'enqueue' => true
+            ],
+            [
+                'handle' => 'icon-font-style',
+                // Only the icons named in icon_names are in the font (about 1 kB
+                // instead of 375 kB for all of them). Page content uses `chair`
+                // (pensioni-elustandard); an icon not listed here renders as its
+                // name, so add it to the list when content starts using one.
+                'src' => 'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&amp;icon_names=chair&amp;display=block',
+                'deps' => 'normalize',
+                'ver' => '1.0.0',
                 'media' => 'all',
                 'enqueue' => true
             ],
