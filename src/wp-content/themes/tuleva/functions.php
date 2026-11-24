@@ -23,7 +23,7 @@ $theme_includes = [
     'helpers/editor.php', // Editor customizations
     'helpers/setup.php', // Enqueue scripts & styles
     'helpers/schema.php', // Organization and FAQ structured data
-    'helpers/seo.php', // Sitemap order, font preconnect, sized upload images
+    'helpers/seo.php', // Font preconnect, sized upload images
     'helpers/fund-figures.php', // Management fee and fund manager's units on the fund pages
     'helpers/access-reviewer.php', // Read-only role for the access review's user listing
 ];

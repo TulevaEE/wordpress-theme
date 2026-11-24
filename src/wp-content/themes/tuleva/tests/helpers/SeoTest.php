@@ -47,46 +47,6 @@ final class SeoTest extends TestCase
         FakeUploads::reset();
     }
 
-    private const YOAST_SITEMAP_QUERY = "
-			SELECT l.ID, post_title, post_content, post_name, post_parent, post_author, post_status, post_modified_gmt, post_date, post_date_gmt
-			FROM (
-				SELECT wp_posts.ID
-				FROM wp_posts
-				WHERE wp_posts.post_status = 'publish' AND wp_posts.post_type = 'post'
-				ORDER BY wp_posts.post_modified ASC LIMIT 100 OFFSET 200
-			)
-			o JOIN wp_posts l ON l.ID = o.ID
-		";
-
-    #[Test]
-    public function breaksTiesInTheSitemapBatchOrderByPostId(): void
-    {
-        $sql = tuleva_sitemap_stable_order(self::YOAST_SITEMAP_QUERY);
-
-        $this->assertStringContainsString(
-            'ORDER BY wp_posts.post_modified ASC, wp_posts.ID ASC LIMIT 100 OFFSET 200',
-            $sql
-        );
-        $this->assertSame(
-            self::YOAST_SITEMAP_QUERY,
-            str_replace(', wp_posts.ID ASC', '', $sql)
-        );
-    }
-
-    #[Test]
-    public function leavesOtherQueriesAsTheyAre(): void
-    {
-        $queries = [
-            "SELECT * FROM wp_posts WHERE ID = 5",
-            "SELECT ID FROM wp_posts ORDER BY wp_posts.post_date DESC LIMIT 10",
-            "SELECT ID FROM wp_posts ORDER BY wp_posts.post_modified DESC LIMIT 10",
-        ];
-
-        foreach ($queries as $sql) {
-            $this->assertSame($sql, tuleva_sitemap_stable_order($sql));
-        }
-    }
-
     #[Test]
     public function preconnectsToTheFontFileHost(): void
     {
