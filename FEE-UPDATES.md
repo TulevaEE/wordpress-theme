@@ -39,26 +39,49 @@ within 10 minutes of the date.
 The plan behind this is "TODO — Fund page figures from the database", in the private tuleva
 repo.
 
-## What stays manual: WordPress Admin
+## Text typed in WordPress Admin: shortcodes and Yoast variables
 
-These places state the ongoing charges in text typed in WP Admin. Edit them on the KID's
-effective date; the change is live as soon as it is saved. Found on 22.11.2026 in the
-rendered HTML of every page and in every post's text and Yoast description; which of them
-should follow the fund list is being decided in tuleva #1239.
+Text typed in WP Admin follows the fund list through a shortcode or a Yoast variable
+(`helpers/fund-figure-shortcodes.php`), which print the figure exactly as the fund pages do:
+
+- `[tuleva_ongoing_charges fund="TKF100" fallback="0,28%"]` — a fund's ongoing charges
+  (`TUK75`, `TUK00`, `TUV100`, `TKF100`; the code in any case). `fund="all"` prints all four:
+  one value when they are the same, `0,28%–0,3%` when they are not.
+- `[tuleva_management_fee fund="TUK75" fallback="0,16%"]` — a fund's management fee.
+- `%%tuleva_ongoing_charges_tkf100%%` (and `_tuk75`, `_tuk00`, `_tuv100`) in a Yoast description.
+
+With no figure ever read, or a fund code the theme does not know, a shortcode prints its
+`fallback`, so the sentence never has a gap; always give one. A logged-in editor sees a warning
+beside a shortcode with an unknown fund code or no fallback; readers never do. A Yoast variable
+has no fallback and is empty before any figure is read. Shortcodes work in a post's or page's
+content (its headings included) and in ACF WYSIWYG fields such as a page's `rich_text` and a
+question's answer; not in a post title, a menu or a plain-text field such as a question.
+
+Decided in tuleva #1239 (24.11.2026): these places get the shortcode or the variable, and the
+communications lead replaces the typed figure in WP Admin once this is deployed:
 
 - `tuleva.ee/kuidas-tuua-pension-tulevasse/` and `tuleva.ee/en/transfer-pension-tuleva/` —
-  "Tasud 0,28% aastas" / "Fees 0.28% per year" on both fund cards (the page's `rich_text`
-  field).
+  both fund cards (the page's `rich_text` field).
 - `tuleva.ee/iii-sammas-juhend/` — the III pillar fund's fee in the page text.
 - `tuleva.ee/tuleva-taiendav-kogumisfond-dokumendid/` — the questions and answers (the
   page's `fund_components`).
 - The Yoast description of `tuleva.ee/taiendav-kogumisfond/`, `tuleva.ee/lapsele-kogumine/`,
   `tuleva.ee/osauhingule-kogumine/`, `tuleva.ee/en/additional-investment-fund/` and
-  `tuleva.ee/en/child-savings/`, in the Yoast box on each.
-- Blog posts that state the current fee: guides and overviews such as
-  `analuusid/tuleva-pensionifondid/` and `oluline/mis-on-tuleva-iii-samba-pensionifondi-sees/`
-  and their English versions. tuleva #1239 lists them all. News posts describe the fee on
-  their own date and stay as they are.
+  `tuleva.ee/en/child-savings/`.
+- The blog posts listed in tuleva #1239: the II pillar funds and III pillar fund overviews
+  (Estonian and English), "Seitse küsimust", the child savings guide and the company
+  savings guide. The II pillar funds post also takes both management fees through
+  `tuleva_management_fee`.
+
+## What stays manual: WordPress Admin
+
+Edit these on the KID's effective date; the change is live as soon as it is saved.
+
+- Posts where Tuleva's figure is part of a comparison or a calculation: the LHV and Robur
+  comparison and the Vanguard ETF story. When the fee changes, the whole passage needs
+  rereading.
+- News and stories, which describe the fee on their own date.
+- Any place where a shortcode or variable has not replaced the typed figure yet.
 
 Two places in this repo type a fee instead of reading the fund list:
 
