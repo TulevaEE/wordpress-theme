@@ -8,7 +8,7 @@
     </div>
     <div class="row section-spacing text-center">
       <div class="mx-auto col-lg-11 col-xl-9">
-        <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid" loading="lazy" decoding="async">
+        <?php echo tuleva_hidpi_image((string) get_sub_field('image'), ['class' => 'img-fluid']); ?>
       </div>
     </div>
     <div class="row">

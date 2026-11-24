@@ -45,6 +45,42 @@ function tuleva_upload_image(string $url, string $size, array $attributes): stri
         }
     }
 
+    return tuleva_plain_image($url, $attributes);
+}
+
+/**
+ * Renders an upload made at twice its display size (its file name ends in -2x)
+ * at half its pixel size, with a srcset, so a Retina screen gets the full file
+ * and the layout stays as it was. Any other URL renders as a plain <img>, as
+ * the templates did before.
+ *
+ * @param  string $url        The upload's URL
+ * @param  array  $attributes Further attributes: class, alt
+ * @return string             The <img> element, lazily loaded
+ */
+function tuleva_hidpi_image(string $url, array $attributes): string
+{
+    $attributes += ['alt' => '', 'loading' => 'lazy', 'decoding' => 'async'];
+    $id = preg_match('/-2x\.[a-z]+$/i', $url) ? attachment_url_to_postid($url) : 0;
+    $meta = $id ? wp_get_attachment_metadata($id) : false;
+    if (!$meta || empty($meta['width']) || empty($meta['height'])) {
+        return tuleva_plain_image($url, $attributes);
+    }
+
+    $width = intdiv((int) $meta['width'], 2);
+    $height = intdiv((int) $meta['height'], 2);
+    $attributes += ['sizes' => "(min-width: {$width}px) {$width}px, 100vw"];
+    $html = wp_get_attachment_image($id, 'full', false, $attributes);
+    return (string) preg_replace('/ width="\d+" height="\d+"/', " width=\"$width\" height=\"$height\"", $html, 1);
+}
+
+/**
+ * @param  string $url
+ * @param  array  $attributes
+ * @return string An <img> with only the given attributes
+ */
+function tuleva_plain_image(string $url, array $attributes): string
+{
     $html = '<img src="' . esc_url($url) . '"';
     foreach ($attributes as $name => $value) {
         $html .= ' ' . $name . '="' . esc_attr((string) $value) . '"';
