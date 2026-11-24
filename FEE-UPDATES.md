@@ -54,8 +54,9 @@ With no figure ever read, or a fund code the theme does not know, a shortcode pr
 `fallback`, so the sentence never has a gap; always give one. A logged-in editor sees a warning
 beside a shortcode with an unknown fund code or no fallback; readers never do. A Yoast variable
 has no fallback and is empty before any figure is read. Shortcodes work in a post's or page's
-content (its headings included) and in ACF WYSIWYG fields such as a page's `rich_text` and a
-question's answer; not in a post title, a menu or a plain-text field such as a question.
+content (its headings included), in a post's automatic excerpt on the blog listing, and in ACF
+WYSIWYG fields such as a page's `rich_text` and a question's answer; not in a post title, a
+menu or a plain-text field such as a question.
 
 Decided in tuleva #1239 (24.11.2026): these places get the shortcode or the variable, and the
 communications lead replaces the typed figure in WP Admin once this is deployed:

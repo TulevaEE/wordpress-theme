@@ -21,10 +21,31 @@ if (!function_exists('wpseo_register_var_replacement')) {
 }
 
 /**
+ * The filter WordPress is running, as doing_filter() answers it.
+ */
+final class FakeRunningFilter
+{
+    public static ?string $hook = null;
+}
+
+if (!function_exists('doing_filter')) {
+    function doing_filter($hook_name = null)
+    {
+        return $hook_name !== null && $hook_name === FakeRunningFilter::$hook;
+    }
+}
+
+/**
  * The rest of WordPress the shortcodes call. Guarded because other test files stand the same
  * ones up and PHPUnit runs them all in one process. Whichever current_user_can() loads first,
  * it does not grant edit_posts, so the registered shortcodes render as for a reader.
  */
+if (!function_exists('add_filter')) {
+    function add_filter($hook, $callback, $priority = 10, $args = 1)
+    {
+    }
+}
+
 if (!function_exists('add_action')) {
     function add_action($hook, $callback, $priority = 10, $args = 1)
     {
@@ -73,11 +94,13 @@ final class FundFigureShortcodesTest extends TestCase
         FakeOptions::reset();
         FakeWordPress::reset();
         FakeYoastVariables::$variables = [];
+        FakeRunningFilter::$hook = null;
         unset(FakeFilters::$filters['wpml_current_language']);
     }
 
     protected function tearDown(): void
     {
+        FakeRunningFilter::$hook = null;
         unset(FakeFilters::$filters['wpml_current_language']);
     }
 
@@ -192,6 +215,18 @@ final class FundFigureShortcodesTest extends TestCase
         $this->assertSame('0,28%', tuleva_ongoing_charges_shortcode(['fund' => 'TKF100', 'fallback' => '0,3%']));
         $this->assertSame('0,49%', tuleva_management_fee_shortcode(['fund' => 'TKF100', 'fallback' => '0,5%']));
         $this->assertSame('0,3%', tuleva_ongoing_charges_shortcode(['fund' => 'TKF', 'fallback' => '0,3%']));
+    }
+
+    #[Test]
+    public function an_automatic_excerpt_keeps_the_figure_shortcodes_and_anywhere_else_they_are_stripped(): void
+    {
+        $tags = ['gallery', 'tuleva_ongoing_charges', 'caption', 'tuleva_management_fee'];
+
+        FakeRunningFilter::$hook = 'get_the_excerpt';
+        $this->assertSame(['gallery', 'caption'], tuleva_keep_fund_figure_shortcodes_in_excerpts($tags));
+
+        FakeRunningFilter::$hook = null;
+        $this->assertSame($tags, tuleva_keep_fund_figure_shortcodes_in_excerpts($tags));
     }
 
     #[Test]

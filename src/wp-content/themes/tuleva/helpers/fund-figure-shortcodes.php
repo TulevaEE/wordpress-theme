@@ -97,6 +97,22 @@ function tuleva_management_fee_shortcode($atts): string
 add_shortcode('tuleva_management_fee', 'tuleva_management_fee_shortcode');
 
 /*
+ * A post's automatic excerpt on the blog listing strips shortcodes before it renders the text
+ * (wp_trim_excerpt), which would leave a gap where the figure was. While the excerpt is being
+ * made, these two are kept, and the excerpt's own the_content pass prints them. Elsewhere they
+ * are stripped as WordPress strips any shortcode, so their raw text never shows.
+ */
+function tuleva_keep_fund_figure_shortcodes_in_excerpts($tags)
+{
+    if (!is_array($tags) || !doing_filter('get_the_excerpt')) {
+        return $tags;
+    }
+
+    return array_values(array_diff($tags, array_keys(TULEVA_FUND_FIGURE_SHORTCODES)));
+}
+add_filter('strip_shortcodes_tagnames', 'tuleva_keep_fund_figure_shortcodes_in_excerpts');
+
+/*
  * One Yoast SEO variable per fund for its ongoing charges, %%tuleva_ongoing_charges_tkf100%%
  * and so on. Yoast has no fallback for a variable, so with no figure ever read it is empty.
  * The hook fires only while Yoast is active.
