@@ -1,32 +1,9 @@
 <?php
 /**
- * Search engine fixes that are not page content: the XML sitemap's post order,
- * the font host's connection hint, and serving small images where a template
- * holds only an upload's full-size URL.
+ * Search engine and page speed fixes that are not page content: the font host's
+ * connection hint, and serving small images where a template holds only an
+ * upload's full-size URL.
  */
-
-/**
- * Gives Yoast's sitemap query a unique order.
- *
- * Yoast reads posts for the sitemap 100 at a time, ordered by post_modified
- * alone. Many posts share one post_modified (a bulk update saved them in the
- * same second), and MySQL may order ties differently in each batch, so some
- * posts were listed twice and as many were left out. Adding the ID as a
- * tie-breaker makes every batch continue where the last one stopped.
- *
- * @param  string $sql A query WordPress is about to run
- * @return string      The same query, with ID added after post_modified when it
- *                     is Yoast's sitemap batch query
- */
-function tuleva_sitemap_stable_order(string $sql): string
-{
-    return preg_replace(
-        '/ORDER BY (\S+)\.post_modified ASC LIMIT/',
-        'ORDER BY $1.post_modified ASC, $1.ID ASC LIMIT',
-        $sql,
-        1
-    );
-}
 
 /**
  * Adds a preconnect to the Google Fonts file host, which the stylesheet from
@@ -76,11 +53,5 @@ function tuleva_upload_image(string $url, string $size, array $attributes): stri
 }
 
 if (function_exists('add_filter')) {
-    // wpseo_posts_join runs only when Yoast builds a post type's sitemap, so the
-    // query filter is added for those requests alone.
-    add_filter('wpseo_posts_join', function ($join) {
-        add_filter('query', 'tuleva_sitemap_stable_order');
-        return $join;
-    });
     add_filter('wp_resource_hints', 'tuleva_font_resource_hints', 10, 2);
 }
