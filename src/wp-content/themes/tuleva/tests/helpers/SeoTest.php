@@ -21,11 +21,14 @@ final class FakeUploads
     public static array $ids = [];
     /** @var array<int, array{string, array}> */
     public static array $rendered = [];
+    /** @var array<int, array> */
+    public static array $meta = [];
 
     public static function reset(): void
     {
         self::$ids = [];
         self::$rendered = [];
+        self::$meta = [];
     }
 }
 
@@ -37,7 +40,12 @@ function attachment_url_to_postid($url)
 function wp_get_attachment_image($id, $size, $icon, $attributes)
 {
     FakeUploads::$rendered[] = [$size, $attributes];
-    return '<img data-id="' . $id . '">';
+    return '<img width="1632" height="816" data-id="' . $id . '">';
+}
+
+function wp_get_attachment_metadata($id)
+{
+    return FakeUploads::$meta[$id] ?? false;
 }
 
 final class SeoTest extends TestCase
@@ -71,7 +79,7 @@ final class SeoTest extends TestCase
             ['width' => 80, 'height' => 80, 'sizes' => '80px', 'class' => 'rounded-circle']
         );
 
-        $this->assertSame('<img data-id="42">', $html);
+        $this->assertSame('<img width="1632" height="816" data-id="42">', $html);
         $this->assertSame([['max-height-width-100', [
             'width' => 80, 'height' => 80, 'sizes' => '80px', 'class' => 'rounded-circle',
             'alt' => '', 'loading' => 'lazy', 'decoding' => 'async',
@@ -87,5 +95,35 @@ final class SeoTest extends TestCase
             '<img src="https://example.test/a.png?x=1&#038;y=2" class="c" alt="" loading="lazy" decoding="async">',
             $html
         );
+    }
+
+    #[Test]
+    public function rendersATwiceSizeUploadAtHalfItsPixelSize(): void
+    {
+        $url = 'https://tuleva.ee/wp-content/uploads/2026/11/founding-members-2x.jpg';
+        FakeUploads::$ids[$url] = 38102;
+        FakeUploads::$meta[38102] = ['width' => 1632, 'height' => 816];
+
+        $html = tuleva_hidpi_image($url, ['class' => 'img-fluid']);
+
+        $this->assertSame('<img width="816" height="408" data-id="38102">', $html);
+        $this->assertSame([['full', [
+            'class' => 'img-fluid', 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async',
+            'sizes' => '(min-width: 816px) 816px, 100vw',
+        ]]], FakeUploads::$rendered);
+    }
+
+    #[Test]
+    public function rendersAnyOtherImageAsBefore(): void
+    {
+        $url = 'https://tuleva.ee/wp-content/uploads/2018/04/founding-members@2x.jpg';
+        FakeUploads::$ids[$url] = 18699;
+        FakeUploads::$meta[18699] = ['width' => 816, 'height' => 408];
+
+        $this->assertSame(
+            '<img src="' . $url . '" class="img-fluid" alt="" loading="lazy" decoding="async">',
+            tuleva_hidpi_image($url, ['class' => 'img-fluid'])
+        );
+        $this->assertSame([], FakeUploads::$rendered);
     }
 }
