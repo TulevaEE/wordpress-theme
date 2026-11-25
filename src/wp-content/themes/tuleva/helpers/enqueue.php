@@ -125,6 +125,13 @@ class ThemeEnqueue
                 'enqueue' => true
             ],
             [
+                'handle' => 'attribution',
+                'src' => $js_path . 'attribution.js',
+                'ver' => '1.0.0',
+                'js_in_header' => false,
+                'enqueue' => true
+            ],
+            [
                 'handle' => 'main-script',
                 'src' => $js_path . 'main.js',
                 'deps' => 'jquery',
