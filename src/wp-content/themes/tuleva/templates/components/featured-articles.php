@@ -6,7 +6,14 @@
     <?php for( $i = 1; $i <= 3; $i++ ) { ?>
         <?php if (get_sub_field('article_' . $i)) { ?>
         <a class="card shadow-sm" href="<?php the_permalink(get_sub_field('article_' . $i)); ?>">
-            <img src="<?php echo get_the_post_thumbnail_url(get_sub_field('article_' . $i), 'max-width-500'); ?>" alt="" class="card-img-top rounded-top">
+            <?php // srcset up to the original upload, so the card is sharp on Retina screens, not just the 500px size ?>
+            <?php echo get_the_post_thumbnail(get_sub_field('article_' . $i), 'max-width-500', [
+                'class' => 'card-img-top rounded-top',
+                'alt' => '',
+                'sizes' => '(min-width: 992px) 420px, (min-width: 768px) 720px, 100vw',
+                'loading' => 'lazy',
+                'decoding' => 'async',
+            ]); ?>
             <div class="card-body text-navy fw-medium">
               <p class="m-0 card-text">
                 <?php echo get_the_title(get_sub_field('article_' . $i)); ?>
