@@ -5,7 +5,7 @@ $fund_currency = get_field('fund_currency') ?: 'EUR';
 $fund_inception_date = get_field('fund_inception_date');
 $figures = tuleva_fund_page_figures((string) $fund_isin);
 $fund_management_fee = $figures['management_fee'];
-$fund_ongoing_charges = get_field('fund_ongoing_charges');
+$fund_ongoing_charges = $figures['ongoing_charges'];
 $fund_redemption_fee = get_field('fund_redemption_fee') ?: '0%';
 $fund_manager_participation = $figures['manager_units'];
 $fund_manager_participation_date = $figures['manager_units_date'];
@@ -79,7 +79,7 @@ $remuneration_policy_url = get_remuneration_document_url();
                                 <span><?php echo esc_html($fund_management_fee); ?></span>
                             </p>
                         <?php endif; ?>
-                        <?php if ($fund_ongoing_charges): ?>
+                        <?php if ($fund_ongoing_charges !== null): ?>
                             <p class="fund-info__item">
                                 <span class="small text-bold"><?php _e('Ongoing charges', TEXT_DOMAIN) ?></span>
                                 <span><?php echo esc_html($fund_ongoing_charges); ?></span>

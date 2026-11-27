@@ -322,6 +322,15 @@ function print_funds_js()
         echo '</script>';
     }
 
+    // The calculator models the II pillar stocks fund, so it compares with that fund's ongoing
+    // charges, as the percentage it shows beside the result: ten-thousandths of a percent to a fraction.
+    $tuleva_fee = tuleva_fund_printed_ongoing_charges(TULEVA_FUND_ISINS['TUK75']);
+    if ($tuleva_fee !== null) {
+        echo '<script type="text/javascript">';
+        echo 'var calculatorTulevaFee = ' . json_encode($tuleva_fee['tenThousandths'] / 1000000) . ';';
+        echo '</script>';
+    }
+
     $data = get_funds_from_api();
 
     if (empty($data)) {

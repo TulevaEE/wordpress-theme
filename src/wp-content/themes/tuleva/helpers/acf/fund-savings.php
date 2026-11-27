@@ -103,14 +103,6 @@ acf_add_local_field_group(array (
             'required' => 0,
         ),
         array (
-            'key' => 'field_fund_savings_ongoing_charges',
-            'label' => 'Ongoing Charges',
-            'name' => 'fund_ongoing_charges',
-            'type' => 'text',
-            'instructions' => 'Ongoing charges percentage (e.g., "0,29%")',
-            'required' => 0,
-        ),
-        array (
             'key' => 'field_fund_savings_redemption_fee',
             'label' => 'Redemption Fee and Issue Fee',
             'name' => 'fund_redemption_fee',

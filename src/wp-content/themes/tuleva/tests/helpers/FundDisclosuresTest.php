@@ -197,26 +197,25 @@ function get_the_ID()
     return FakeFundPage::$post_id;
 }
 
+require_once __DIR__ . '/../support/FakeFilters.php';
+
 /**
  * WPML's answer on production: the English page is a translation of the Estonian one. A page with
  * no Estonian original answers itself only when asked to fall back to it, and null otherwise.
  */
-function apply_filters($hook, $value, ...$args)
-{
-    if ($hook === 'wpml_object_id' && $value === FakeFundPage::ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
+FakeFilters::$filters['wpml_object_id'] = function ($value, ...$args) {
+    if ($value === FakeFundPage::ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
         return FakeFundPage::ESTONIAN_PAGE;
     }
 
-    if ($hook === 'wpml_object_id' && $value === FakeFundPage::UNTRANSLATED_ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
+    if ($value === FakeFundPage::UNTRANSLATED_ENGLISH_PAGE && ($args[2] ?? null) === 'et') {
         return ($args[1] ?? false) ? $value : null;
     }
 
-    if ($hook === 'tuleva_today') {
-        return FakeFundPage::$today;
-    }
-
     return $value;
-}
+};
+
+FakeFilters::$filters['tuleva_today'] = fn($value) => FakeFundPage::$today;
 
 /**
  * The rendered page's template, or a listed page's. WordPress reads a missing ID, 0 included, as
@@ -290,31 +289,12 @@ if (!function_exists('get_site_url')) {
     }
 }
 
-if (!function_exists('__')) {
-    function __($text, $domain = null)
-    {
-        return $text;
-    }
-}
-
-if (!function_exists('_e')) {
-    function _e($text, $domain = null)
-    {
-        echo $text;
-    }
-}
+require_once __DIR__ . '/../support/FakeTranslations.php';
 
 if (!function_exists('esc_html')) {
     function esc_html($value)
     {
         return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-    }
-}
-
-if (!function_exists('esc_html__')) {
-    function esc_html__($text, $domain = null)
-    {
-        return htmlspecialchars((string) $text, ENT_QUOTES, 'UTF-8');
     }
 }
 
@@ -353,12 +333,23 @@ if (!function_exists('get_the_title')) {
     }
 }
 
+/**
+ * The date as WordPress gives it in the site's time zone, on the day the fake site is at.
+ */
+if (!function_exists('wp_date')) {
+    function wp_date($format, $timestamp = null)
+    {
+        return (new DateTimeImmutable(FakeFundPage::$today))->format($format);
+    }
+}
+
 require_once __DIR__ . '/../support/FakeOptions.php';
 require_once __DIR__ . '/../support/FakeAttachments.php';
 require_once __DIR__ . '/../support/FakeEscaping.php';
 require_once __DIR__ . '/../support/FakeWordPress.php';
 require_once __DIR__ . '/../../helpers/funds-api.php';
 require_once __DIR__ . '/../../helpers/fund-figures.php';
+require_once __DIR__ . '/../../helpers/average-fund-fee.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosures.php';
 require_once __DIR__ . '/../../helpers/acf/fund-disclosure-gaps.php';
 require_once __DIR__ . '/../../helpers/extras.php';
@@ -1306,7 +1297,7 @@ final class FundDisclosuresTest extends TestCase
 
     #[Test]
     #[PHPUnit\Framework\Attributes\DataProvider('fundPagesWithTheirIsin')]
-    public function a_fund_page_shows_its_own_funds_management_fee_and_managers_units_from_the_fund_list(string $template, string $isin): void
+    public function a_fund_page_shows_its_own_funds_management_fee_ongoing_charges_and_managers_units_from_the_fund_list(string $template, string $isin): void
     {
         FakeFundPage::$fields['fund_isin'] = $isin;
         FakeWordPress::respondWith(200, json_encode(array_map(fn ($listed) => [
@@ -1314,11 +1305,15 @@ final class FundDisclosuresTest extends TestCase
             'managementFeeRate' => $listed === $isin ? 0.00205 : 0.009,
             'fundManagerUnits' => $listed === $isin ? 202901.49203 : 1,
             'fundManagerUnitsDate' => '2026-09-30',
+            'ongoingChargesFigure' => $listed === $isin ? 0.0031 : 0.009,
+            'ongoingChargesPercentDecimals' => 2,
         ], array_column(self::fundPagesWithTheirIsin(), 1))));
 
         $html = $this->renderFundPage($template);
 
         $this->assertMatchesRegularExpression('/Management fee<\/span>\s*<span>0,205%<\/span>/', $html);
+        $this->assertMatchesRegularExpression('/Ongoing charges<\/span>\s*<span>0,31%<\/span>/', $html);
+        $this->assertStringContainsString('"feesAndCommissionsSpecification":"Ongoing charges 0,31% per year"', $html);
         $this->assertStringContainsString('202 901,492 units (as of 30.09.2026)', $html);
     }
 
@@ -1330,6 +1325,8 @@ final class FundDisclosuresTest extends TestCase
             'managementFeeRate' => 0.00205,
             'fundManagerUnits' => 5747351,
             'fundManagerUnitsDate' => '2026-09-30',
+            'ongoingChargesFigure' => 0.0028,
+            'ongoingChargesPercentDecimals' => 2,
         ]]));
         $this->renderFundPage('page_fund-stocks.php');
         FakeWordPress::reset();
@@ -1338,6 +1335,7 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderFundPage('page_fund-stocks.php');
 
         $this->assertMatchesRegularExpression('/Management fee<\/span>\s*<span>0,205%<\/span>/', $html);
+        $this->assertMatchesRegularExpression('/Ongoing charges<\/span>\s*<span>0,28%<\/span>/', $html);
         $this->assertStringContainsString('5 747 351 units (as of 30.09.2026)', $html);
     }
 
@@ -1351,7 +1349,142 @@ final class FundDisclosuresTest extends TestCase
         $html = $this->renderFundPage($template);
 
         $this->assertStringNotContainsString('Management fee', $html);
+        $this->assertStringNotContainsString('Ongoing charges', $html);
+        $this->assertStringNotContainsString('feesAndCommissionsSpecification', $html);
         $this->assertStringNotContainsString("Fund manager's participation rate in fund", $html);
+    }
+
+    /**
+     * The savings fund page used to read the figure from an ACF field on the page being
+     * viewed. A value left in that field is no longer read.
+     */
+    #[Test]
+    public function the_savings_fund_page_shows_the_ongoing_charges_from_the_fund_list_not_from_its_old_field(): void
+    {
+        FakeFundPage::$fields['fund_isin'] = 'EE0000003283';
+        FakeFundPage::$fields['fund_ongoing_charges'] = '0,99%';
+        FakeWordPress::respondWith(200, json_encode([self::listedFund('EE0000003283', 0.0028, 2)]));
+
+        $html = $this->renderSavingsPage();
+
+        $this->assertMatchesRegularExpression('/Ongoing charges<\/span>\s*<span>0,28%<\/span>/', $html);
+        $this->assertStringNotContainsString('0,99%', $html);
+    }
+
+    /**
+     * The calculator models the II pillar stocks fund (TUK75), so its script and the fee it
+     * shows for Tuleva are that fund's ongoing charges, not another fund's.
+     */
+    #[Test]
+    public function the_calculator_compares_with_the_stocks_funds_ongoing_charges_from_the_fund_list(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([
+            self::listedFund('EE3600109443', 0.0031, 2),
+            self::listedFund('EE3600109435', 0.0028, 2),
+        ]));
+
+        $html = $this->renderCalculator();
+
+        $this->assertStringContainsString('var calculatorTulevaFee = 0.0028;', $html);
+        $this->assertStringContainsString('<div class="text-nowrap">0,28% per year</div>', $html);
+    }
+
+    /**
+     * The calculator works out the savings from the fee it shows beside them: the figure as
+     * the key information document prints it, not the more precise one behind it.
+     */
+    #[Test]
+    public function the_calculator_computes_with_the_ongoing_charges_it_shows(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([self::listedFund('EE3600109435', 0.00283, 2)]));
+
+        $html = $this->renderCalculator();
+
+        $this->assertStringContainsString('var calculatorTulevaFee = 0.0028;', $html);
+        $this->assertStringContainsString('<div class="text-nowrap">0,28% per year</div>', $html);
+    }
+
+    #[Test]
+    public function the_calculator_computes_with_the_key_information_documents_own_decimals(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([self::listedFund('EE3600109435', 0.0028, 1)]));
+
+        $html = $this->renderCalculator();
+
+        $this->assertStringContainsString('var calculatorTulevaFee = 0.003;', $html);
+        $this->assertStringContainsString('<div class="text-nowrap">0,3% per year</div>', $html);
+    }
+
+    #[Test]
+    public function the_calculator_keeps_its_own_fee_and_shows_a_dash_before_the_fund_list_has_given_one(): void
+    {
+        FakeWordPress::respondWith(503, '');
+
+        $html = $this->renderCalculator();
+
+        $this->assertStringNotContainsString('calculatorTulevaFee', $html);
+        $this->assertStringContainsString('<div class="text-nowrap">- per year</div>', $html);
+    }
+
+    #[Test]
+    public function the_sentence_about_all_funds_has_one_fee_when_they_are_the_same(): void
+    {
+        FakeWordPress::respondWith(200, json_encode(array_map(
+            fn ($isin) => self::listedFund($isin, 0.0028, 2),
+            array_values(TULEVA_FUND_ISINS)
+        )));
+
+        $this->assertSame(['0,28%'], tuleva_all_funds_ongoing_charges());
+    }
+
+    #[Test]
+    public function the_sentence_about_all_funds_has_the_lowest_and_the_highest_fee_when_they_differ(): void
+    {
+        FakeWordPress::respondWith(200, json_encode([
+            self::listedFund(TULEVA_FUND_ISINS['TUK75'], 0.0028, 2),
+            self::listedFund(TULEVA_FUND_ISINS['TUK00'], 0.0025, 2),
+            self::listedFund(TULEVA_FUND_ISINS['TUV100'], 0.0028, 2),
+            self::listedFund(TULEVA_FUND_ISINS['TKF100'], 0.003, 1),
+        ]));
+
+        $this->assertSame(['0,25%', '0,3%'], tuleva_all_funds_ongoing_charges());
+    }
+
+    /**
+     * A fund the list carries no ongoing charges for, with none remembered, is logged, and
+     * the sentence about all funds is left out rather than stated for the others.
+     */
+    #[Test]
+    public function the_sentence_about_all_funds_is_left_out_while_one_funds_fee_is_unknown(): void
+    {
+        $this->expectErrorLog();
+        FakeWordPress::respondWith(200, json_encode([
+            self::listedFund(TULEVA_FUND_ISINS['TUK75'], 0.0028, 2),
+            self::listedFund(TULEVA_FUND_ISINS['TUK00'], 0.0028, 2),
+            self::listedFund(TULEVA_FUND_ISINS['TUV100'], 0.0028, 2),
+        ]));
+
+        $this->assertNull(tuleva_all_funds_ongoing_charges());
+    }
+
+    /**
+     * A Tuleva fund as the fund list carries it, every figure included, so the homepage
+     * calculator's own reading of the list finds the fields it filters on.
+     */
+    private static function listedFund(string $isin, float $ongoingCharges, int $decimals): array
+    {
+        return [
+            'isin' => $isin,
+            'name' => 'Tuleva fund ' . $isin,
+            'status' => 'ACTIVE',
+            'pillar' => 2,
+            'fundManager' => ['name' => 'Tuleva'],
+            'managementFeeRate' => 0.00205,
+            'fundManagerUnits' => 5747351,
+            'fundManagerUnitsDate' => '2026-09-30',
+            'ongoingChargesFigure' => $ongoingCharges,
+            'ongoingChargesPercentDecimals' => $decimals,
+        ];
     }
 
     /**
@@ -2390,6 +2523,25 @@ final class FundDisclosuresTest extends TestCase
 
         try {
             include __DIR__ . '/../../templates/components/fund-' . tuleva_fund_template_slug($template) . '-details.php';
+        } finally {
+            $html = (string) ob_get_clean();
+        }
+
+        return $html;
+    }
+
+    /**
+     * The homepage calculator, with this month's average II pillar fee already worked out so
+     * that rendering it reads the fund list only for Tuleva's own fee.
+     */
+    private function renderCalculator(): string
+    {
+        FakeOptions::$options[TULEVA_AVERAGE_FUND_FEE_OPTION] = ['month' => wp_date('Y-m'), 'fee' => 0.0074];
+
+        ob_start();
+
+        try {
+            include __DIR__ . '/../../templates/components/front-hero/calculator.php';
         } finally {
             $html = (string) ob_get_clean();
         }

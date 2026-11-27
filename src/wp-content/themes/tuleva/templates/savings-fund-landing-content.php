@@ -1,3 +1,4 @@
+<?php $savings_fund_fee = tuleva_fund_ongoing_charges(TULEVA_FUND_ISINS['TKF100']); ?>
 <main id="main" class="page-container landing-page savings-fund-landing-page">
     <section class="hero text-center">
         <div class="container">
@@ -34,7 +35,9 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
                             </div>
                             <h3><?php _e('Low fee', TEXT_DOMAIN); ?></h3>
-                            <p><?php _e('The fund\'s fee is 0.28% per year, with no purchase, sale, or other extra charges.', TEXT_DOMAIN); ?></p>
+                            <?php if ($savings_fund_fee !== null): ?>
+                            <p><?php printf(__('The fund\'s fee is %s per year, with no purchase, sale, or other extra charges.', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></p>
+                            <?php endif; ?>
                             <a class="card-link" href="#kkk-vordlus"><?php _e('How Tuleva differs →', TEXT_DOMAIN); ?></a>
                         </article>
                         <article class="who-card">
@@ -147,7 +150,9 @@
                         <p class="lead mx-auto"><?php _e('Open an account in just a couple of minutes. Choose whether you invest in your own name, through your company, or for your child.', TEXT_DOMAIN); ?></p>
                         <p class="m-0 mt-4 pt-2"><a href="<?php echo get_app_url('/savings-fund/onboarding'); ?>" class="btn btn-lg d-block d-md-inline-block m-0 btn-primary"><?php _e('Start investing', TEXT_DOMAIN); ?></a></p>
                         <ul class="ts-trust">
-                            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('Fee <strong>0.28%</strong> per year, no extra charges', TEXT_DOMAIN); ?></span></li>
+                            <?php if ($savings_fund_fee !== null): ?>
+                            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php printf(__('Fee <strong>%s</strong> per year, no extra charges', TEXT_DOMAIN), esc_html($savings_fund_fee)); ?></span></li>
+                            <?php endif; ?>
                             <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><?php _e('<strong>Flexible</strong> withdrawals', TEXT_DOMAIN); ?></span></li>
                         </ul>
                     </div>
@@ -281,10 +286,24 @@
                                     ); ?></li>
                                     <li><b><?php _e('An ETF through a bank or broker.', TEXT_DOMAIN); ?></b> <?php _e('An ETF is an index fund traded on an exchange. You choose the fund yourself and place the orders yourself. Depending on the provider there may be transaction fees, and a company needs an LEI code to trade on an exchange.', TEXT_DOMAIN); ?></li>
                                 </ul>
+                                <?php
+                                $all_funds_fees = tuleva_all_funds_ongoing_charges();
+                                $fee_comparison_link = '<a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/jooksvate-tasude-vordlus/">' . __('on the Pensionikeskus website', TEXT_DOMAIN) . '</a>';
+                                ?>
+                                <?php if ($all_funds_fees !== null && count($all_funds_fees) === 1): ?>
                                 <p><?php printf(
-                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is 0.28%% a year. You can compare the fees of other funds %s.', TEXT_DOMAIN),
-                                    '<a href="https://www.pensionikeskus.ee/ii-sammas/kohustuslikud-pensionifondid/jooksvate-tasude-vordlus/">' . __('on the Pensionikeskus website', TEXT_DOMAIN) . '</a>'
+                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fee of all Tuleva funds is %1$s a year. You can compare the fees of other funds %2$s.', TEXT_DOMAIN),
+                                    esc_html($all_funds_fees[0]),
+                                    $fee_comparison_link
                                 ); ?></p>
+                                <?php elseif ($all_funds_fees !== null): ?>
+                                <p><?php printf(
+                                    __('It usually makes sense to start with the II and III pillar, because there you also gain on taxes. The fees of Tuleva funds are %1$s–%2$s a year. You can compare the fees of other funds %3$s.', TEXT_DOMAIN),
+                                    esc_html($all_funds_fees[0]),
+                                    esc_html($all_funds_fees[1]),
+                                    $fee_comparison_link
+                                ); ?></p>
+                                <?php endif; ?>
                             </div>
                         </div>
 
