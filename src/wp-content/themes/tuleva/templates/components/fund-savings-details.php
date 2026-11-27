@@ -11,8 +11,6 @@ $fund_manager_participation = $figures['manager_units'];
 $fund_manager_participation_date = $figures['manager_units_date'];
 $fund_risk_profile = get_field('fund_risk_profile');
 $fund_comparison_index = get_field('fund_comparison_index');
-// Out of scope for TKF100 today, so this is '' and the block below stays hidden.
-$fund_co2_intensity = tuleva_fund_disclosure_value('fund_co2_intensity');
 
 // Documents, from the ACF fields on this page: an empty field shows no row.
 // The prospectus and terms come with their upcoming version (tuleva_fund_document()).
@@ -220,13 +218,8 @@ $remuneration_policy_url = get_remuneration_document_url();
                             </li>
                         </ul>
 
-                        <?php if ($fund_co2_intensity !== ''): ?>
-                            <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
-                            <p class="fund-info__item">
-                                <span class="small text-bold"><?php _e('CO2 intensity', TEXT_DOMAIN) ?></span>
-                                <span><?php echo sprintf(__('%s tons / $1M turnover per year', TEXT_DOMAIN), esc_html($fund_co2_intensity)) ?></span>
-                            </p>
-                        <?php endif; ?>
+                        <h2 class="mt-5 mb-4 h4"><?php _e('Sustainability information', TEXT_DOMAIN) ?></h2>
+                        <p class="fund-info__item"><?php _e("The fund's underlying funds apply an ESG filter: they exclude companies that conflict with environmental, social and good governance criteria.", TEXT_DOMAIN) ?></p>
                     </div>
                 </div>
             </div>

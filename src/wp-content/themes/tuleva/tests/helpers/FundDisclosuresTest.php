@@ -376,6 +376,9 @@ final class FundDisclosuresTest extends TestCase
 
     private const SHARED_PAGE = 41000;
 
+    /** What TUK75, TUV100 and TKF100 say in place of the CO2 figure, as the templates' text. */
+    private const ESG_FILTER_SENTENCE = "The fund's underlying funds apply an ESG filter: they exclude companies that conflict with environmental, social and good governance criteria.";
+
     protected function setUp(): void
     {
         FakeFundPage::reset();
@@ -541,16 +544,118 @@ final class FundDisclosuresTest extends TestCase
     }
 
     /**
-     * The savings template still carries the markup, so publishing a TKF100 figure one day
-     * is an edit to the scope table and nothing else. Until then it renders nothing.
+     * A pension fund's figure is never read on the TKF100 page.
      */
     #[Test]
-    public function the_savings_page_renders_no_co2_figure_while_it_is_out_of_scope(): void
+    public function the_savings_page_reads_no_co2_figure_while_it_is_out_of_scope(): void
     {
         FakeFundPage::$template = self::SAVINGS_TEMPLATE;
         FakeFundPage::$fields['fund_co2_intensity'] = '83.68';
 
         $this->assertSame('', tuleva_fund_disclosure_value('fund_co2_intensity'));
+    }
+
+    /**
+     * @return array<string, array{string, bool}>
+     */
+    public static function fundTemplatesWithTheirEsgFilter(): array
+    {
+        return [
+            'TUK75' => ['page_fund-stocks.php', true],
+            'TUK00' => ['page_fund-bonds.php', false],
+            'TUV100' => ['page_fund-third.php', true],
+            'TKF100' => [self::SAVINGS_TEMPLATE, true],
+        ];
+    }
+
+    /**
+     * The SFDR art 3 policy (tuleva #1162) takes the CO2 intensity off every fund page, while the
+     * pension funds' fields keep their figures. TUK75, TUV100 and TKF100 say instead that their
+     * underlying funds apply an ESG filter; no ESG filter is applied to TUK00, so its page says
+     * nothing, and has no sustainability heading over an empty section.
+     */
+    #[Test]
+    #[PHPUnit\Framework\Attributes\DataProvider('fundTemplatesWithTheirEsgFilter')]
+    public function a_fund_page_shows_no_co2_figure_and_names_the_esg_filter_only_where_one_is_applied(
+        string $template,
+        bool $esg_filter
+    ): void {
+        FakeFundPage::$fields['fund_co2_intensity'] = '83.68';
+
+        $html = $this->renderFundPage($template);
+
+        $this->assertStringNotContainsString('83.68', $html);
+        $this->assertStringNotContainsString('CO2', $html);
+        $this->assertStringNotContainsString('tons / $1M', $html);
+        $this->assertSame($esg_filter ? 1 : 0, substr_count($html, self::ESG_FILTER_SENTENCE));
+        $this->assertSame($esg_filter ? 1 : 0, substr_count($html, 'Sustainability information'));
+    }
+
+    /**
+     * Nothing in the theme's PHP or JavaScript but the field catalogue names the CO2 figure, so
+     * setting the field cannot put it back on a page.
+     */
+    #[Test]
+    public function nothing_but_the_field_catalogue_reads_the_co2_figure(): void
+    {
+        $theme = realpath(__DIR__ . '/../..');
+        $skipped = ['tests', 'vendor', 'node_modules', 'helpers/acf'];
+        $tree = new RecursiveCallbackFilterIterator(
+            new RecursiveDirectoryIterator($theme, FilesystemIterator::SKIP_DOTS),
+            fn(SplFileInfo $file) => !in_array(substr($file->getPathname(), strlen($theme) + 1), $skipped, true)
+        );
+        $files = [];
+        foreach (new RecursiveIteratorIterator($tree) as $file) {
+            if (in_array($file->getExtension(), ['php', 'js'], true)) {
+                $files[] = substr($file->getPathname(), strlen($theme) + 1);
+            }
+        }
+
+        $this->assertContains('templates/components/fund-bonds-details.php', $files);
+        $this->assertContains('functions.php', $files);
+        foreach ($files as $file) {
+            $code = (string) file_get_contents("$theme/$file");
+            $this->assertStringNotContainsString('fund_co2_intensity', $code, $file);
+            $this->assertStringNotContainsString('CO2 intensity', $code, $file);
+        }
+    }
+
+    /**
+     * The Estonian pages show the sentence in the wording decided for them. WordPress looks the
+     * template's English text up in lang/et.mo byte for byte, so one differing character there
+     * would put the English sentence on the Estonian page.
+     */
+    #[Test]
+    public function the_estonian_pages_name_the_esg_filter_in_the_decided_wording(): void
+    {
+        $this->assertSame(
+            'Fondi alusfondid rakendavad ESG-filtrit: nad välistavad ettevõtted, mis on vastuolus keskkonnaalaste, sotsiaalsete ja heade juhtimistavade kriteeriumidega.',
+            $this->estonianTranslations()[self::ESG_FILTER_SENTENCE] ?? null
+        );
+    }
+
+    /**
+     * lang/et.mo as WordPress reads it: each English text with its Estonian translation.
+     *
+     * @return array<string, string>
+     */
+    private function estonianTranslations(): array
+    {
+        $mo = (string) file_get_contents(__DIR__ . '/../../lang/et.mo');
+        $header = unpack('Vmagic/Vrevision/Vcount/Voriginals/Vtranslations', $mo);
+        $this->assertSame(0x950412de, $header['magic']);
+        $string = function (int $table, int $i) use ($mo): string {
+            ['length' => $length, 'offset' => $offset] = unpack('Vlength/Voffset', $mo, $table + 8 * $i);
+
+            return substr($mo, $offset, $length);
+        };
+
+        $translations = [];
+        for ($i = 0; $i < $header['count']; $i++) {
+            $translations[$string($header['originals'], $i)] = $string($header['translations'], $i);
+        }
+
+        return $translations;
     }
 
     #[Test]
